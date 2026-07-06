@@ -1,0 +1,64 @@
+[graphdta] device=mps | 학습레시피=A_wd(focal γ2+sqrt pw+wd 1e-4, lr 0.001, ep 200) | seeds [1, 2, 3, 4, 42]
+[data] 분자 1092 × PT 370 | train 873 / valid 109 / test 110 (실패 0)
+  === valid 선택: graphdta_gin (seed 42) ===
+    [gin s42] ep   1 loss 0.2524 validMacro 0.0935 best 0.0935@1
+    [gin s42] ep  20 loss 0.1161 validMacro 0.1195 best 0.1215@14
+    [gin s42] ep  40 loss 0.0987 validMacro 0.1344 best 0.1473@37
+    [gin s42] ep  60 loss 0.0911 validMacro 0.1402 best 0.1617@53
+    [gin s42] ep  80 loss 0.0821 validMacro 0.1392 best 0.1617@53
+    [gin s42] early stop @ep83 (best 0.1617@53)
+  → graphdta_gin valid macroPR 0.1617 @ep53
+  === valid 선택: graphdta_gatgcn (seed 42) ===
+    [gatgcn s42] ep   1 loss 0.1535 validMacro 0.1013 best 0.1013@1
+    [gatgcn s42] ep  20 loss 0.1237 validMacro 0.0996 best 0.1066@2
+    [gatgcn s42] early stop @ep32 (best 0.1066@2)
+  → graphdta_gatgcn valid macroPR 0.1066 @ep2
+[select] valid 최적 = graphdta_gin (test 미사용)
+  === graphdta_gin 5시드 재학습: seed 1 ===
+    [gin s1] ep   1 loss 0.2388 validMacro 0.0940 best 0.0940@1
+    [gin s1] ep  20 loss 0.1120 validMacro 0.1177 best 0.1177@20
+    [gin s1] ep  40 loss 0.1005 validMacro 0.1247 best 0.1356@37
+    [gin s1] ep  60 loss 0.0871 validMacro 0.1264 best 0.1402@56
+    [gin s1] ep  80 loss 0.0782 validMacro 0.1310 best 0.1402@69
+    [gin s1] ep 100 loss 0.0746 validMacro 0.1486 best 0.1539@85
+    [gin s1] early stop @ep115 (best 0.1539@85)
+[seed 1] graphdta_gin macroPR 0.1178 microPR 0.1467 → seed_1.csv
+  === graphdta_gin 5시드 재학습: seed 2 ===
+    [gin s2] ep   1 loss 0.2463 validMacro 0.0855 best 0.0855@1
+    [gin s2] ep  20 loss 0.1159 validMacro 0.1142 best 0.1246@19
+    [gin s2] ep  40 loss 0.1017 validMacro 0.1414 best 0.1471@38
+    [gin s2] ep  60 loss 0.0880 validMacro 0.1531 best 0.1600@53
+    [gin s2] ep  80 loss 0.0806 validMacro 0.1526 best 0.1700@68
+    [gin s2] ep 100 loss 0.0780 validMacro 0.1574 best 0.1738@87
+    [gin s2] early stop @ep117 (best 0.1738@87)
+[seed 2] graphdta_gin macroPR 0.1506 microPR 0.1565 → seed_2.csv
+  === graphdta_gin 5시드 재학습: seed 3 ===
+    [gin s3] ep   1 loss 0.2285 validMacro 0.0975 best 0.0975@1
+    [gin s3] ep  20 loss 0.1149 validMacro 0.1303 best 0.1338@19
+    [gin s3] ep  40 loss 0.1036 validMacro 0.1510 best 0.1535@36
+    [gin s3] ep  60 loss 0.0891 validMacro 0.1550 best 0.1671@59
+    [gin s3] ep  80 loss 0.0845 validMacro 0.1321 best 0.1671@59
+    [gin s3] early stop @ep89 (best 0.1671@59)
+[seed 3] graphdta_gin macroPR 0.1430 microPR 0.1745 → seed_3.csv
+  === graphdta_gin 5시드 재학습: seed 4 ===
+    [gin s4] ep   1 loss 0.2458 validMacro 0.1040 best 0.1040@1
+    [gin s4] ep  20 loss 0.1133 validMacro 0.1286 best 0.1286@20
+    [gin s4] ep  40 loss 0.0978 validMacro 0.1264 best 0.1379@37
+    [gin s4] ep  60 loss 0.0858 validMacro 0.1326 best 0.1458@53
+    [gin s4] ep  80 loss 0.0802 validMacro 0.1540 best 0.1540@80
+    [gin s4] ep 100 loss 0.0746 validMacro 0.1446 best 0.1556@88
+    [gin s4] ep 120 loss 0.0713 validMacro 0.1390 best 0.1621@104
+    [gin s4] early stop @ep134 (best 0.1621@104)
+[seed 4] graphdta_gin macroPR 0.1461 microPR 0.1710 → seed_4.csv
+  === graphdta_gin 5시드 재학습: seed 42 ===
+    [gin s42] ep   1 loss 0.2524 validMacro 0.0941 best 0.0941@1
+    [gin s42] ep  20 loss 0.1151 validMacro 0.1260 best 0.1260@20
+    [gin s42] ep  40 loss 0.1006 validMacro 0.1367 best 0.1466@38
+    [gin s42] ep  60 loss 0.0943 validMacro 0.1464 best 0.1466@38
+    [gin s42] ep  80 loss 0.0848 validMacro 0.1522 best 0.1526@66
+    [gin s42] ep 100 loss 0.0790 validMacro 0.1558 best 0.1633@95
+    [gin s42] ep 120 loss 0.0733 validMacro 0.1590 best 0.1684@119
+    [gin s42] ep 140 loss 0.0691 validMacro 0.1546 best 0.1684@119
+    [gin s42] early stop @ep149 (best 0.1684@119)
+[seed 42] graphdta_gin macroPR 0.1408 microPR 0.1681 → seed_42.csv
+[완료] graphdta_baseline/ 산출 완료

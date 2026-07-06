@@ -1,0 +1,42 @@
+# v2_GNN 설정 (재현성: seed 고정). v1과 동일 데이터·split·지표로 직접 비교(RQ2).
+# 명세: docs/09_v2_gnn_spec.md
+seed: 42
+device: auto            # auto → MPS 가능시 mps, 아니면 cpu
+
+data:
+  master_x: data/processed/master_X.parquet
+  master_y: data/processed/master_Y.parquet
+  split:    data/processed/scaffold_split.json
+  v1_overall: v1_RF/results/metrics_overall.csv   # metrics_overall.csv 에 v1 행 병기용
+  v1_per_pt:  v1_RF/results/metrics_per_pt.csv     # stats.py 대응표본 검정 입력
+
+model:                  # 공통 골격: [GNN×n_layers] → global pool → MLP head → 370 logits
+  convs: [gcn, gin, gat]   # B1: 3종 비교(주 후보 GIN)
+  hidden: 128              # B2: 3종 통제(동일 hidden/깊이)
+  n_layers: 3
+  dropout: 0.2
+  pool: mean              # B3: global mean (add 는 ablation 1건)
+  gat_heads: 4            # GAT: hidden(128) % heads(4) == 0
+
+train:
+  epochs: 150
+  batch_size: 32          # B6
+  lr: 0.001               # B6 (Adam)
+  weight_decay: 0.0
+  loss: bce               # B4: bce(BCEWithLogits) | focal
+  pos_weight: true        # 라벨별 neg/pos 가중(불균형 보정)
+  focal_gamma: 2.0        # loss=focal 일 때만 사용
+  early_stop_patience: 20 # B5: valid macro PR-AUC 기준
+  monitor: macro_pr_auc   # valid 기준 (test 로 모델 선택 금지)
+
+eval:
+  threshold: 0.5          # F1 이진화 임계값
+  n_repr_pt: 3
+  expected_eval_pt: 301   # B8: v1과 동일(370-69). 불일치 시 멈추고 보고.
+
+ablation:
+  pooling_variant: add    # 최적(valid) conv 에 대해 pooling add 1건 추가 학습
+  run_pooling: true
+
+stats:                    # F단계 — RQ2 판정
+  alpha: 0.05             # B7: Wilcoxon(주) + paired t(보조)

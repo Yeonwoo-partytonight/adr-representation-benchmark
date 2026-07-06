@@ -1,0 +1,12 @@
+selected_by: valid_macro_pr
+config:
+  n_estimators: 1000
+  max_depth: 40
+  max_features: sqrt
+  min_samples_leaf: 2
+  class_weight: balanced
+  fp_radius: 3
+  fp_bits: 2048
+valid_macro_pr: 0.2059478855821827
+search_budget: 16
+sample_seed: 42

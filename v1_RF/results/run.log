@@ -1,0 +1,43 @@
+=== v1_RF run 2026-06-24T14:11:16Z | python=Python 3.14.4 ===
+[data] 분자 1092 × PT 370 | split train 873 / valid 109 / test 110
+[features] Morgan FP r=2 bits=2048 → (1092, 2048) (밀도 0.0230)
+[train] RandomForest {'n_estimators': 300, 'max_depth': None, 'n_jobs': -1, 'class_weight': 'balanced_subsample'}
+[train] RandomForest {'n_estimators': 300, 'max_depth': None, 'n_jobs': -1, 'class_weight': 'balanced_subsample'}
+[valid] RandomForest micro PR-AUC(점검용) 0.3094
+[train] XGBoost OvR 라벨 370/370 학습(양성>0), 라벨별 scale_pos_weight 적용
+[train] XGBoost OvR 라벨 370/370 학습(양성>0), 라벨별 scale_pos_weight 적용
+[valid] XGBoost micro PR-AUC(점검용) 0.2321
+[저장] /Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v1_RF/results/_preds.npz (모델: ['RandomForest', 'XGBoost'])
+Matplotlib is building the font cache; this may take a moment.
+[eval] RandomForest: macro PR-AUC 0.188 | micro PR-AUC 0.320 | macro ROC-AUC 0.617 | macro F1 0.025
+[eval] XGBoost: macro PR-AUC 0.158 | micro PR-AUC 0.251 | macro ROC-AUC 0.579 | macro F1 0.094
+[저장] metrics_overall.csv, metrics_per_pt.csv, pr_curves.png, summary.md
+{
+  "RandomForest": {
+    "macro_pr_auc": 0.18819341304550044,
+    "micro_pr_auc": 0.3197296459557145,
+    "macro_roc_auc": 0.6168380928983878,
+    "micro_roc_auc": 0.8443716787291727,
+    "macro_f1@0.5": 0.025494562007896193,
+    "micro_f1@0.5": 0.23540063377093706,
+    "hamming_accuracy": 0.9585012285012285,
+    "subset_accuracy": 0.0,
+    "n_pt_evaluated": 301,
+    "n_pt_excluded_0pos": 69,
+    "random_baseline_pr_auc(mean_prevalence)": 0.05261250377529447
+  },
+  "XGBoost": {
+    "macro_pr_auc": 0.15828939330472094,
+    "micro_pr_auc": 0.2506034333899202,
+    "macro_roc_auc": 0.5787704633646781,
+    "micro_roc_auc": 0.8178279101713293,
+    "macro_f1@0.5": 0.0938819997658676,
+    "micro_f1@0.5": 0.30360148098283407,
+    "hamming_accuracy": 0.9491646191646191,
+    "subset_accuracy": 0.0,
+    "n_pt_evaluated": 301,
+    "n_pt_excluded_0pos": 69,
+    "random_baseline_pr_auc(mean_prevalence)": 0.05261250377529447
+  }
+}
+=== done 2026-06-24T14:26:57Z ===

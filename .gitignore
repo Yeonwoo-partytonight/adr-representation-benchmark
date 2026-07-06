@@ -1,0 +1,63 @@
+# =====================================================================
+#  공개 리포(adr-representation-benchmark) 화이트리스트 정책
+#  - 코드·재현 파일만 공개. 내부/민감 문서는 전부 제외.
+#  - push 전 반드시 `git status`로 아래가 안 올라가는지 눈으로 확인.
+# =====================================================================
+
+# --- 내부/민감 문서 (공개 절대 금지: 교수님 이메일·게재료·공저자 협의·학번 등) ---
+docs/
+paper/
+email_to_professor.md
+AGENTS.md
+CLAUDE.md
+*.hwp
+*.hwpx
+naturalbiologics_ade_progress_vs_plan.pdf
+KCI*.docx
+KCI*.pdf
+
+# --- 데이터 (용량/라이선스): 원칙 제외, 공개 대상 재현 파일만 예외 허용 ---
+data/raw/
+data/processed/*
+*.csv
+*.tsv
+*.xml
+*.parquet
+*.feather
+# 공개 대상(원고 '데이터 및 코드 공개'란과 일치): split + 전처리 산출물
+!data/processed/
+!data/processed/scaffold_split.json
+!data/processed/master_X.parquet
+!data/processed/master_Y.parquet
+
+# --- 모델 weight / 체크포인트 ---
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+model/
+checkpoints/
+results/*.pkl
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+.venv-1/
+venv/
+env/
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- 환경 / 비밀 ---
+.env
+*.key
+
+# --- OS / IDE ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- transformers / huggingface 캐시 ---
+.cache/

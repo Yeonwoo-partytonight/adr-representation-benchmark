@@ -1,0 +1,51 @@
+[diag] device=mps seed=42 | GIN 재학습 250ep (no early stop)
+[data] 분자 1092 × PT 370 | train 873 / valid 109 / test 110 (실패 0)
+[diag] ep   1 loss 1.3220 validMacro 0.0953 validMicro 0.0573 | best 0.0953@1
+[diag] ep  10 loss 1.1288 validMacro 0.1212 validMicro 0.0737 | best 0.1324@8
+[diag] ep  20 loss 1.0242 validMacro 0.1370 validMicro 0.0764 | best 0.1394@18
+[diag] ep  30 loss 0.9312 validMacro 0.1522 validMicro 0.0837 | best 0.1522@30
+[diag] ep  40 loss 0.8833 validMacro 0.1416 validMicro 0.0793 | best 0.1522@30
+[diag] ep  50 loss 0.8073 validMacro 0.1463 validMicro 0.0871 | best 0.1522@30
+[diag] ep  60 loss 0.7333 validMacro 0.1569 validMicro 0.0959 | best 0.1600@59
+[diag] ep  70 loss 0.7074 validMacro 0.1605 validMicro 0.0964 | best 0.1615@63
+[diag] ep  80 loss 0.6534 validMacro 0.1470 validMicro 0.1043 | best 0.1648@75
+[diag] ep  90 loss 0.6308 validMacro 0.1573 validMicro 0.1056 | best 0.1648@75
+[diag] ep 100 loss 0.6104 validMacro 0.1626 validMicro 0.1107 | best 0.1667@95
+[diag] ep 110 loss 0.5700 validMacro 0.1571 validMicro 0.1098 | best 0.1690@109
+[diag] ep 120 loss 0.5623 validMacro 0.1567 validMicro 0.1123 | best 0.1690@109
+[diag] ep 130 loss 0.5354 validMacro 0.1544 validMicro 0.1149 | best 0.1690@109
+[diag] ep 140 loss 0.5249 validMacro 0.1598 validMicro 0.1159 | best 0.1690@109
+[diag] ep 150 loss 0.5390 validMacro 0.1544 validMicro 0.1111 | best 0.1690@109
+[diag] ep 160 loss 0.5093 validMacro 0.1612 validMicro 0.1188 | best 0.1690@109
+[diag] ep 170 loss 0.4838 validMacro 0.1591 validMicro 0.1248 | best 0.1703@164
+[diag] ep 180 loss 0.4643 validMacro 0.1574 validMicro 0.1245 | best 0.1703@164
+[diag] ep 190 loss 0.4647 validMacro 0.1662 validMicro 0.1312 | best 0.1703@164
+[diag] ep 200 loss 0.4621 validMacro 0.1658 validMicro 0.1276 | best 0.1703@164
+[diag] ep 210 loss 0.4455 validMacro 0.1661 validMicro 0.1329 | best 0.1710@209
+[diag] ep 220 loss 0.4687 validMacro 0.1640 validMicro 0.1208 | best 0.1710@209
+[diag] ep 230 loss 0.4299 validMacro 0.1636 validMicro 0.1288 | best 0.1720@222
+[diag] ep 240 loss 0.4318 validMacro 0.1634 validMicro 0.1302 | best 0.1720@222
+[diag] ep 250 loss 0.4358 validMacro 0.1668 validMicro 0.1279 | best 0.1720@222
+Traceback (most recent call last):
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/diagnose.py", line 173, in <module>
+    main()
+    ~~~~^^
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/diagnose.py", line 115, in main
+    m["tertile"] = pd.qcut(m["pos_total"], 3, labels=["저빈도", "중빈도", "고빈도"])
+                   ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/tile.py", line 384, in qcut
+    fac, bins = _bins_to_cuts(
+                ~~~~~~~~~~~~~^
+        x_idx,
+        ^^^^^^
+    ...<4 lines>...
+        duplicates=duplicates,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/tile.py", line 487, in _bins_to_cuts
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Bin edges must be unique: Index([nan, nan, nan, nan], dtype='float64', name='pos_total').
+You can drop duplicate edges by setting the 'duplicates' kwarg

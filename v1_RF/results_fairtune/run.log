@@ -1,0 +1,9 @@
+[data] 분자 1092 × PT 370 | split train 873 / valid 109 / test 110
+[data] 분자 1092 × PT 370 | train 873 / valid 109 / test 110
+[search] 기존 결과 재사용(재탐색 생략): best config_id=6, valid macroPR 0.2059
+[seed 1] 기존 seed_1.csv 재사용(재학습 생략)
+[seed 2] 기존 seed_2.csv 재사용(재학습 생략)
+[seed 3] 기존 seed_3.csv 재사용(재학습 생략)
+[seed 4] 기존 seed_4.csv 재사용(재학습 생략)
+[seed 42] 기존 seed_42.csv 재사용(재학습 생략)
+[완료] results_fairtune/ 산출 완료

@@ -1,0 +1,74 @@
+[round 1a] device=mps | 변형 5개 | epochs 150 patience 20
+[data] 분자 1092 × PT 370 | train 873 / valid 109 / test 110 (실패 0)
+=== raw (loss=bce pw=raw) ===
+  [raw] ep   1 loss 1.3220 validMacro 0.0956 best 0.0956@1
+  [raw] ep  20 loss 1.0216 validMacro 0.1507 best 0.1507@20
+  [raw] ep  40 loss 0.8502 validMacro 0.1528 best 0.1652@29
+  [raw] ep  60 loss 0.7409 validMacro 0.1602 best 0.1707@45
+  [raw] early stop @ ep 65 (best 0.1707@45)
+  → valid macroPR 0.1707 @ep45
+=== sqrt (loss=bce pw=sqrt) ===
+  [sqrt] ep   1 loss 0.6066 validMacro 0.1042 best 0.1042@1
+  [sqrt] ep  20 loss 0.4188 validMacro 0.1489 best 0.1538@12
+  [sqrt] early stop @ ep 32 (best 0.1538@12)
+  → valid macroPR 0.1538 @ep12
+=== clip10 (loss=bce pw=clip) ===
+  [clip10] ep   1 loss 0.7605 validMacro 0.1090 best 0.1090@1
+  [clip10] ep  20 loss 0.5679 validMacro 0.1376 best 0.1526@18
+  [clip10] ep  40 loss 0.5052 validMacro 0.1523 best 0.1607@31
+  [clip10] early stop @ ep 51 (best 0.1607@31)
+  → valid macroPR 0.1607 @ep31
+=== focal_g2 (loss=focal pw=none γ=2.0) ===
+  [focal_g2] ep   1 loss 0.0921 validMacro 0.1110 best 0.1110@1
+  [focal_g2] ep  20 loss 0.0413 validMacro 0.1483 best 0.1483@20
+  [focal_g2] ep  40 loss 0.0380 validMacro 0.1527 best 0.1591@31
+  [focal_g2] early stop @ ep 51 (best 0.1591@31)
+  → valid macroPR 0.1591 @ep31
+=== focal_g2_sqrt (loss=focal pw=sqrt γ=2.0) ===
+  [focal_g2_sqrt] ep   1 loss 0.1504 validMacro 0.1019 best 0.1019@1
+  [focal_g2_sqrt] ep  20 loss 0.1046 validMacro 0.1509 best 0.1509@20
+  [focal_g2_sqrt] ep  40 loss 0.0913 validMacro 0.1587 best 0.1690@39
+  [focal_g2_sqrt] ep  60 loss 0.0800 validMacro 0.1652 best 0.1710@59
+  [focal_g2_sqrt] ep  80 loss 0.0739 validMacro 0.1689 best 0.1715@75
+  [focal_g2_sqrt] ep 100 loss 0.0666 validMacro 0.1696 best 0.1776@92
+  [focal_g2_sqrt] early stop @ ep 112 (best 0.1776@92)
+  → valid macroPR 0.1776 @ep92
+Traceback (most recent call last):
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train_improve.py", line 147, in <module>
+    main()
+    ~~~~^^
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train_improve.py", line 138, in main
+    run_round("1a", ROUND1A, epochs=150, patience=20, label="1a",
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              title="v2_GNN 개선 Round 1a — (다) 손실/불균형 단독")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train_improve.py", line 122, in run_round
+    res = evaluate_round(preds, valids, Yte, ycols, outdir, label,
+                         thr=cfg["eval"]["threshold"], expected_pt=cfg["eval"]["expected_eval_pt"],
+                         alpha=cfg["stats"]["alpha"])
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/eval_improve.py", line 59, in evaluate_round
+    m = per_pt[best][["meddra_pt", "n_pos_test", "pr_auc"]].rename(columns={"pr_auc": "gnn"}).merge(
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        v1pp[["meddra_pt", "RandomForest_pr_auc"]].rename(columns={"RandomForest_pr_auc": "rf"}),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        on="meddra_pt").dropna(subset=["gnn", "rf"])
+        ^^^^^^^^^^^^^^^
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/frame.py", line 12900, in merge
+    return merge(
+        self,
+    ...<10 lines>...
+        validate=validate,
+    )
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/merge.py", line 385, in merge
+    op = _MergeOperation(
+        left_df,
+    ...<10 lines>...
+        validate=validate,
+    )
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/merge.py", line 1031, in __init__
+    self._maybe_coerce_merge_keys()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/merge.py", line 1835, in _maybe_coerce_merge_keys
+    raise ValueError(msg)
+ValueError: You are trying to merge on str and int64 columns for key 'meddra_pt'. If you wish to proceed you should use pd.concat
+EXIT=1

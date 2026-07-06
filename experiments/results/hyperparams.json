@@ -1,0 +1,53 @@
+{
+  "fractions": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_train_full": 873,
+  "n_valid": 109,
+  "n_test": 110,
+  "n_pt": 370,
+  "eval_threshold": 0.5,
+  "device": "mps",
+  "rf": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "n_jobs": -1,
+    "class_weight": "balanced_subsample",
+    "fingerprint": {
+      "type": "morgan_ecfp4",
+      "radius": 2,
+      "n_bits": 2048
+    }
+  },
+  "gnn": {
+    "model": "GIN",
+    "fairness_condition": "A_wd",
+    "name": "A_wd",
+    "loss": "focal",
+    "pw_mode": "sqrt",
+    "gamma": 2.0,
+    "overrides": {
+      "weight_decay": 0.0001
+    },
+    "epochs": 200,
+    "patience": 30,
+    "hidden": 128,
+    "n_layers": 3,
+    "pool": "mean",
+    "lr": 0.001,
+    "batch_size": 32
+  },
+  "stratification": "iterative (Sechidis et al. 2011), self-implemented, multilabel-preserving",
+  "eval_protocol": "test 양성>0 PT 만 macro 평균 (v2 evaluate.py 동일)"
+}

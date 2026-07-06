@@ -1,0 +1,33 @@
+# v1_RF 베이스라인 설정 (재현성: 모든 난수 seed 고정)
+# 명세: docs/08_v1_rf_spec.md — Morgan FP + RandomForest / XGBoost 멀티라벨 베이스라인
+seed: 42
+
+data:
+  master_x: data/processed/master_X.parquet
+  master_y: data/processed/master_Y.parquet
+  split:    data/processed/scaffold_split.json   # 그대로 로드(재계산 금지)
+
+fingerprint:          # Morgan / ECFP4 (A1: radius 2 / 2048 bits)
+  radius: 2
+  n_bits: 2048
+
+models:
+  random_forest:
+    n_estimators: 300
+    max_depth: null            # None
+    n_jobs: -1
+    class_weight: balanced_subsample   # 불균형 보정(명세 STEP C)
+  xgboost:                     # A3: MultiOutputClassifier(OvR), n_estimators 300 내외
+    n_estimators: 300
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+    n_jobs: -1
+    # scale_pos_weight 는 라벨별 neg/pos 로 train.py 에서 동적 주입(불균형 보정)
+
+eval:
+  threshold: 0.5        # A2: F1 계산용 이진화 임계값(기본 0.5)
+  primary_metric: pr_auc
+  # 대표 PT(빈도 상위) PR curve 개수
+  n_repr_pt: 3

@@ -1,0 +1,41 @@
+{
+  "valids": {
+    "A_wd": 0.18628174483484225,
+    "B_wd_drop": 0.15183041749131,
+    "C_wd_drop_jk": 0.15419120936727562,
+    "D_wd_drop_res": 0.16947193410874645
+  },
+  "best_ep": {
+    "A_wd": 67,
+    "B_wd_drop": 70,
+    "C_wd_drop_jk": 53,
+    "D_wd_drop_res": 84
+  },
+  "train_macros": {
+    "A_wd": 0.25830117270617536,
+    "B_wd_drop": 0.2003028302700178,
+    "C_wd_drop_jk": 0.20817195581338027,
+    "D_wd_drop_res": 0.28971676305720373
+  },
+  "gap": {
+    "A_wd": 0.07201942787133311,
+    "B_wd_drop": 0.04847241277870781,
+    "C_wd_drop_jk": 0.05398074644610465,
+    "D_wd_drop_res": 0.12024482894845728
+  },
+  "best": "A_wd",
+  "significance": {
+    "comparison": "1b-A_wd vs v1 RandomForest (PT별 PR-AUC)",
+    "n_pt": 301,
+    "gnn_mean_pr": 0.15140209768406732,
+    "rf_mean_pr": 0.1881934130455004,
+    "mean_diff(gnn-rf)": -0.03679131536143312,
+    "median_diff": -0.003131313131313051,
+    "n_pt_gnn_higher": 139,
+    "wilcoxon_p": 0.0019434022043306955,
+    "paired_t_p": 0.000488969035861268,
+    "alpha": 0.05,
+    "significant": true,
+    "direction": "gnn<=rf"
+  }
+}

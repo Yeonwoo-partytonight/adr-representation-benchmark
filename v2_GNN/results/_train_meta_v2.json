@@ -1,0 +1,27 @@
+{
+  "seed": 42,
+  "device": "mps",
+  "loss": "bce",
+  "convs": [
+    "gcn",
+    "gin",
+    "gat"
+  ],
+  "hidden": 128,
+  "n_layers": 3,
+  "pool": "mean",
+  "n_failed_graph": 0,
+  "valid_macro_pr_auc": {
+    "GCN": 0.1640064007536013,
+    "GIN": 0.17381569988166085,
+    "GAT": 0.16795199202313166,
+    "GIN_addpool": 0.14826273381009375
+  },
+  "best_by_valid": "GIN",
+  "best_epoch": {
+    "GCN": 66,
+    "GIN": 111,
+    "GAT": 110,
+    "GIN_addpool": 58
+  }
+}

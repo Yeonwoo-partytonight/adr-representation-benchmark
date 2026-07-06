@@ -1,0 +1,23 @@
+{
+  "best": "focal_g2_sqrt",
+  "valids": {
+    "raw": 0.1707,
+    "sqrt": 0.1538,
+    "clip10": 0.1607,
+    "focal_g2": 0.1591,
+    "focal_g2_sqrt": 0.1776
+  },
+  "significance": {
+    "comparison": "1a-focal_g2_sqrt vs v1 RF",
+    "n_pt": 301,
+    "gnn_mean": 0.17054575994914206,
+    "rf_mean": 0.1881934130455004,
+    "mean_diff": -0.017647653096358375,
+    "median_diff": -0.0005376027175953979,
+    "n_gnn_higher": 142,
+    "wilcoxon_p": 0.08582544349323053,
+    "paired_t_p": 0.08475950093811477,
+    "significant": false,
+    "direction": "gnn<=rf"
+  }
+}

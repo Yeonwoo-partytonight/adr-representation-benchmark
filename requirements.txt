@@ -1,0 +1,50 @@
+# 천연물 부작용 예측 프로젝트 의존성
+# Apple M5 Pro / MPS / Python 3.14.4
+# 설치: pip install -r requirements.txt
+# ---
+# 주의: torch-geometric 및 일부 패키지가 Python 3.14를 아직 미지원할 수 있음.
+#       agent는 설치 실패 시 호환 버전을 점검하고, 필요하면 3.11~3.12 가상환경
+#       대안을 연구자에게 보고할 것.
+
+# --- 코어 ML / DL ---
+torch>=2.4
+torchvision
+numpy
+pandas
+scikit-learn
+scipy
+xgboost
+
+# --- 그래프 신경망 (2단계/3단계) ---
+torch-geometric
+networkx      # RDKit mol -> graph 변환 (GraphDTA 표준 경로). 환경점검 단계에서 누락 발견해 추가.
+# torch-scatter / torch-sparse 는 torch 버전에 맞춰 별도 설치 필요할 수 있음
+# (최신 PyG 2.5+ 는 내장 scatter로 GCN/GAT/GIN 동작 → 필수 아님. Py3.14는 이 확장 휠 부재 가능)
+
+# --- 케모인포매틱스 (SMILES, Morgan FP, scaffold) ---
+rdkit
+
+# --- 단백질 언어모델 (3단계 ProtBERT) ---
+transformers
+sentencepiece
+tokenizers
+
+# --- 데이터 처리 / 파싱 ---
+lxml          # DrugBank XML 파싱
+requests      # 데이터 다운로드 / PubChem PUG-REST 호출
+tqdm
+pyarrow       # parquet 입출력 (data/processed 산출물 형식 — 파이프라인 필수)
+duckdb        # OnSIDES 대용량 CSV(6.9M행) 조인/쿼리 (선택이나 권장; pandas 대비 빠르고 메모리 안전)
+pubchempy     # SIDER PubChem CID -> SMILES 취득 (PUG-REST 래퍼). requests로 직접 호출도 가능.
+
+# --- 시각화 / XAI ---
+matplotlib
+seaborn
+
+# --- 실험 관리 / 재현성 ---
+pyyaml        # config 분리
+# 선택: wandb, mlflow (실험 추적이 필요하면)
+
+# --- 노트북 ---
+jupyter
+ipykernel

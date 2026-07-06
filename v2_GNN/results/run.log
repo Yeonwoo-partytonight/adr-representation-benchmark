@@ -1,0 +1,73 @@
+=== v2_GNN run 2026-06-25T01:23:57Z | python=Python 3.14.4 | MPS_FALLBACK=1 ===
+/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train.py:122: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:839.)
+  tot += float(loss) * batch.num_graphs
+[env] device=mps | seed=42 | loss=bce | fallback=1
+[data] 분자 1092 × PT 370 | train 873 / valid 109 / test 110 (실패 0)
+=== 학습 GCN (pool=mean) ===
+[gcn/mean] epoch   1 | train loss 1.3244 | valid macroPR 0.1008 | best 0.1008@1
+[gcn/mean] epoch  10 | train loss 1.1276 | valid macroPR 0.1283 | best 0.1326@4
+[gcn/mean] epoch  20 | train loss 1.0037 | valid macroPR 0.1352 | best 0.1407@19
+[gcn/mean] epoch  30 | train loss 0.9163 | valid macroPR 0.1518 | best 0.1518@30
+[gcn/mean] epoch  40 | train loss 0.8456 | valid macroPR 0.1560 | best 0.1560@40
+[gcn/mean] epoch  50 | train loss 0.7972 | valid macroPR 0.1551 | best 0.1568@46
+[gcn/mean] epoch  60 | train loss 0.7430 | valid macroPR 0.1539 | best 0.1597@56
+[gcn/mean] epoch  70 | train loss 0.7192 | valid macroPR 0.1529 | best 0.1640@66
+[gcn/mean] epoch  80 | train loss 0.6713 | valid macroPR 0.1580 | best 0.1640@66
+[gcn/mean] early stop @ epoch 86 (best valid macroPR 0.1640@66)
+  GCN: valid macroPR 0.1640
+=== 학습 GIN (pool=mean) ===
+[gin/mean] epoch   1 | train loss 1.3220 | valid macroPR 0.0953 | best 0.0953@1
+[gin/mean] epoch  10 | train loss 1.1542 | valid macroPR 0.1153 | best 0.1301@9
+[gin/mean] epoch  20 | train loss 1.0215 | valid macroPR 0.1519 | best 0.1519@20
+[gin/mean] epoch  30 | train loss 0.9331 | valid macroPR 0.1586 | best 0.1592@29
+[gin/mean] epoch  40 | train loss 0.8433 | valid macroPR 0.1600 | best 0.1600@40
+[gin/mean] epoch  50 | train loss 0.8311 | valid macroPR 0.1498 | best 0.1613@45
+[gin/mean] epoch  60 | train loss 0.7363 | valid macroPR 0.1587 | best 0.1616@52
+[gin/mean] epoch  70 | train loss 0.7141 | valid macroPR 0.1626 | best 0.1626@70
+[gin/mean] epoch  80 | train loss 0.6643 | valid macroPR 0.1607 | best 0.1705@73
+[gin/mean] epoch  90 | train loss 0.6425 | valid macroPR 0.1442 | best 0.1706@84
+[gin/mean] epoch 100 | train loss 0.5955 | valid macroPR 0.1613 | best 0.1717@98
+[gin/mean] epoch 110 | train loss 0.5884 | valid macroPR 0.1531 | best 0.1718@107
+[gin/mean] epoch 120 | train loss 0.6088 | valid macroPR 0.1636 | best 0.1738@111
+[gin/mean] epoch 130 | train loss 0.5326 | valid macroPR 0.1727 | best 0.1738@111
+[gin/mean] early stop @ epoch 131 (best valid macroPR 0.1738@111)
+  GIN: valid macroPR 0.1738
+=== 학습 GAT (pool=mean) ===
+[gat/mean] epoch   1 | train loss 1.3244 | valid macroPR 0.1032 | best 0.1032@1
+[gat/mean] epoch  10 | train loss 1.1363 | valid macroPR 0.1267 | best 0.1267@10
+[gat/mean] epoch  20 | train loss 0.9972 | valid macroPR 0.1372 | best 0.1374@14
+[gat/mean] epoch  30 | train loss 0.8912 | valid macroPR 0.1524 | best 0.1524@30
+[gat/mean] epoch  40 | train loss 0.8266 | valid macroPR 0.1430 | best 0.1530@35
+[gat/mean] epoch  50 | train loss 0.7801 | valid macroPR 0.1498 | best 0.1575@47
+[gat/mean] epoch  60 | train loss 0.7272 | valid macroPR 0.1543 | best 0.1580@57
+[gat/mean] epoch  70 | train loss 0.6762 | valid macroPR 0.1579 | best 0.1589@66
+[gat/mean] epoch  80 | train loss 0.6499 | valid macroPR 0.1624 | best 0.1624@80
+[gat/mean] epoch  90 | train loss 0.6155 | valid macroPR 0.1609 | best 0.1655@86
+[gat/mean] epoch 100 | train loss 0.6166 | valid macroPR 0.1612 | best 0.1663@96
+[gat/mean] epoch 110 | train loss 0.5666 | valid macroPR 0.1680 | best 0.1680@110
+[gat/mean] epoch 120 | train loss 0.5644 | valid macroPR 0.1653 | best 0.1680@110
+[gat/mean] epoch 130 | train loss 0.5431 | valid macroPR 0.1672 | best 0.1680@110
+[gat/mean] early stop @ epoch 130 (best valid macroPR 0.1680@110)
+  GAT: valid macroPR 0.1680
+[선택] valid 기준 최적 conv = GIN (valid macroPR 0.1738)
+=== ablation GIN_addpool ===
+[gin/add] epoch   1 | train loss 1.7022 | valid macroPR 0.0930 | best 0.0930@1
+[gin/add] epoch  10 | train loss 1.2388 | valid macroPR 0.1055 | best 0.1090@8
+[gin/add] epoch  20 | train loss 1.1557 | valid macroPR 0.1269 | best 0.1269@20
+[gin/add] epoch  30 | train loss 1.0906 | valid macroPR 0.1216 | best 0.1315@26
+[gin/add] epoch  40 | train loss 1.0228 | valid macroPR 0.1235 | best 0.1315@26
+[gin/add] epoch  50 | train loss 0.9966 | valid macroPR 0.1266 | best 0.1439@45
+[gin/add] epoch  60 | train loss 0.9554 | valid macroPR 0.1410 | best 0.1483@58
+[gin/add] epoch  70 | train loss 0.9187 | valid macroPR 0.1379 | best 0.1483@58
+[gin/add] early stop @ epoch 78 (best valid macroPR 0.1483@58)
+[저장] _preds_v2.npz | 변형 ['GCN', 'GIN', 'GAT', 'GIN_addpool'] | best(valid)=GIN
+[eval] GCN: test macroPR 0.153 microPR 0.087 macroROC 0.615 | valid macroPR 0.164 | evalPT 301
+[eval] GIN: test macroPR 0.167 microPR 0.106 macroROC 0.617 | valid macroPR 0.174 | evalPT 301
+[eval] GAT: test macroPR 0.188 microPR 0.110 macroROC 0.636 | valid macroPR 0.168 | evalPT 301
+[eval] GIN_addpool: test macroPR 0.137 microPR 0.067 macroROC 0.602 | valid macroPR 0.148 | evalPT 301
+[저장] metrics_overall.csv, metrics_per_pt.csv, pr_curves.png, summary.md | best(valid)=GIN
+[stats] RQ2: GNN-GIN vs v1 RF | n=301 PT | mean PR-AUC 0.167 vs 0.188 (Δ-0.021, 141/301 PT 우위)
+        Wilcoxon p=5.14e-02 (비유의, α=0.05) | paired t p=4.91e-02 | 방향 저하/동등
+[저장] significance_v1_vs_v2.csv
+=== done 2026-06-25T02:07:51Z ===

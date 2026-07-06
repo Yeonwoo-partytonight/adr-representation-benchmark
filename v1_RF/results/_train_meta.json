@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "n_train": 873,
+  "n_valid": 109,
+  "n_test": 110,
+  "n_pt": 370,
+  "fp_radius": 2,
+  "fp_bits": 2048,
+  "n_failed_mol": 0,
+  "has_xgb": true
+}
