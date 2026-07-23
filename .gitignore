@@ -16,6 +16,9 @@ naturalbiologics_ade_progress_vs_plan.pdf
 KCI*.docx
 KCI*.pdf
 
+# --- 아카이브(동결 KCI 2026 투고본·드래프트 + 무관 논문) — 내용·매니페스트 모두 비공개 ---
+archive/
+
 # --- 데이터 (용량/라이선스): 원칙 제외, 공개 대상 재현 파일만 예외 허용 ---
 data/raw/
 data/processed/*
