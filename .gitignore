@@ -6,6 +6,8 @@
 
 # --- 내부/민감 문서 (공개 절대 금지: 교수님 이메일·게재료·공저자 협의·학번 등) ---
 docs/
+# 예외: docs/24_v3_preregistration.md는 ed7d9a9로 의도적 추적 중(사전등록 공개가 목적).
+#       푸시 전 검증에서 "docs/ 1건"으로 잡히는 것은 정상이며 제거하지 말 것.
 paper/
 email_to_professor.md
 AGENTS.md
