@@ -1,0 +1,39 @@
+[chunk] 절단 단백질 940개 중 재임베딩 필요 940 (캐시 0)
+Loading weights:   0%|          | 0/487 [00:00<?, ?it/s]Loading weights: 100%|██████████| 487/487 [00:00<00:00, 42128.16it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: Rostlab/prot_bert
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.decoder.weight             | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.decoder.bias               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[chunk] ProtBERT(mps) 로드 완료 — 청크 mean-pool 재임베딩 시작
+    [chunk] 50/940  (O15254: 700aa, 2청크)
+    [chunk] 100/940  (O75604: 605aa, 2청크)
+    [chunk] 150/940  (P02545: 664aa, 2청크)
+    [chunk] 200/940  (P07900: 732aa, 2청크)
+    [chunk] 250/940  (P11799: 1906aa, 4청크)
+    [chunk] 300/940  (P19634: 815aa, 2청크)
+    [chunk] 350/940  (P26358: 1616aa, 4청크)
+    [chunk] 400/940  (P35355: 604aa, 2청크)
+    [chunk] 450/940  (P47820: 1313aa, 3청크)
+    [chunk] 500/940  (P57059: 783aa, 2청크)
+    [chunk] 550/940  (Q04609: 750aa, 2청크)
+    [chunk] 600/940  (Q13464: 1354aa, 3청크)
+    [chunk] 650/940  (Q16832: 855aa, 2청크)
+    [chunk] 700/940  (Q63449: 923aa, 2청크)
+    [chunk] 750/940  (Q8IWQ3: 736aa, 2청크)
+    [chunk] 800/940  (Q969S8: 669aa, 2청크)
+    [chunk] 850/940  (Q9JHG7: 1102aa, 3청크)
+    [chunk] 900/940  (Q9UKV0: 1011aa, 2청크)
+    [chunk] 940/940  (Q9Z2V5: 1149aa, 3청크)
+[chunk] 임베딩 교체 940/940 (절단 단백질)
+[chunk] drug_target_emb_chunk.npy 저장. 원본과 달라진 약물 688/847
