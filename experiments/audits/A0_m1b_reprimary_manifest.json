@@ -1,0 +1,249 @@
+{
+  "task": "A0 — M1b primary 재지정(pChEMBL 제외 10차원 = 사전등록 §4 일치) 재조립·재동결",
+  "amendment": "docs/33 항목6 (2026-07-24 19:45 KST, 안 B). 확증 OOF 미조회(N).",
+  "prereg_ref": "docs/30 §4 M1b 공변량 열거(닫힌 목록, pChEMBL 미포함)",
+  "primary_B_m1b": {
+    "dim": 10,
+    "cont_features": [
+      "log1p_evidence_count",
+      "log1p_mechanism_target_n",
+      "log1p_binding_target_n",
+      "mechanism_vs_binding_ratio",
+      "confidence_mean",
+      "confidence_max",
+      "first_approval_year"
+    ],
+    "ind_features": [
+      "confidence_missing",
+      "year_missing",
+      "chembl_unmapped"
+    ],
+    "prereg_covariates_matched": [
+      "chembl_target_evidence_count",
+      "mechanism_vs_binding_ratio",
+      "confidence_mean",
+      "confidence_max",
+      "approval_or_first_label_year"
+    ],
+    "pchembl_removed": [
+      "pchembl_mean",
+      "pchembl_max",
+      "pchembl_missing"
+    ]
+  },
+  "sensitivity_B_m1b_pchembl": {
+    "dim": 13,
+    "cont_features": [
+      "log1p_evidence_count",
+      "log1p_mechanism_target_n",
+      "log1p_binding_target_n",
+      "mechanism_vs_binding_ratio",
+      "confidence_mean",
+      "confidence_max",
+      "first_approval_year",
+      "pchembl_mean",
+      "pchembl_max"
+    ],
+    "ind_features": [
+      "confidence_missing",
+      "year_missing",
+      "pchembl_missing",
+      "chembl_unmapped"
+    ]
+  },
+  "reprimary_models_refrozen": {
+    "M1b": {
+      "blocks": [
+        "B0",
+        "B1",
+        "B_m1b"
+      ],
+      "side_dim": 2060,
+      "leak_rows": 0
+    },
+    "M2b": {
+      "blocks": [
+        "B0",
+        "B1",
+        "B_m1b",
+        "B_seq"
+      ],
+      "side_dim": 2124,
+      "leak_rows": 0
+    },
+    "P-ID": {
+      "blocks": [
+        "B0",
+        "B1",
+        "B_m1b",
+        "B_pid"
+      ],
+      "side_dim": 3159,
+      "leak_rows": 0
+    },
+    "P-FAM": {
+      "blocks": [
+        "B0",
+        "B1",
+        "B_m1b",
+        "B_fam"
+      ],
+      "side_dim": 2102,
+      "leak_rows": 0
+    },
+    "C-CAP": {
+      "blocks": [
+        "B0",
+        "B1",
+        "B_m1b",
+        "C_ccap"
+      ],
+      "side_dim": 2124,
+      "leak_rows": 0
+    }
+  },
+  "sensitivity_models": {
+    "M1b_pchembl": {
+      "blocks": [
+        "B0",
+        "B1",
+        "B_m1b_pchembl"
+      ],
+      "side_dim": 2063,
+      "leak_rows": 0
+    },
+    "M2b_pchembl": {
+      "blocks": [
+        "B0",
+        "B1",
+        "B_m1b_pchembl",
+        "B_seq"
+      ],
+      "side_dim": 2127,
+      "leak_rows": 0
+    }
+  },
+  "leak_assert": {
+    "B0": 0,
+    "B1": 0,
+    "B_seq": 0,
+    "C_ccap": 0,
+    "B_pid": 0,
+    "B_m1b": 0,
+    "B_m1b_pchembl": 0,
+    "B_fam": 0,
+    "B_fam_selfclust": 0
+  },
+  "byte_invariance": {
+    "invariant_blocks": [
+      "B0_morgan",
+      "B1_count_mask",
+      "B_seq",
+      "B_pid",
+      "C_ccap",
+      "B_fam",
+      "B_fam_selfclust"
+    ],
+    "invariant_models": [
+      "M0",
+      "M1",
+      "M2"
+    ],
+    "models_frozen_identical": true,
+    "intended_recompute_blocks": [
+      "B_m1b(13→10)",
+      "(new)B_m1b_pchembl"
+    ],
+    "intended_recompute_models": [
+      "M1b",
+      "M2b",
+      "P-ID",
+      "P-FAM",
+      "C-CAP"
+    ],
+    "m1b_dependent_changed_vs_prior": [
+      "M1b",
+      "M2b",
+      "P-ID",
+      "P-FAM",
+      "C-CAP"
+    ]
+  },
+  "invariant_models_preserved": {
+    "M0": true,
+    "M1": true,
+    "M2": true
+  },
+  "m1b_coverage_seed42_dev": {
+    "chembl_unmapped": 149,
+    "confidence_missing": 215,
+    "year_missing": 229,
+    "pchembl_missing": 241,
+    "n_total": 1092
+  },
+  "integrity": {
+    "confirmatory_split_accessed": false,
+    "confirmatory_split_generated": false,
+    "smoke_split": "scaffold_split.json (seed-42 dev, train/valid/test)",
+    "ladder_network_calls": 0,
+    "data_source_network": "§4-A: fetch_m1b_covariates.py(mechanism/confidence/first_approval, 기존 943 chembl_id); cluster_target_families.py(mmseqs2, 서열=_cache/ 재사용 네트워크 0); §3-A: fetch_target_family_biological.py(기존 표적 protein_classification/target_component class + 전체 class 트리; Pfam/InterPro=캐시 xref 네트워크 0)",
+    "redownload": false,
+    "mock": false,
+    "drugbank": false,
+    "labels_molset_structure_changed": false,
+    "new_targets_or_molecules_added": false,
+    "remapping": false,
+    "existing_npy_overwritten": false,
+    "selfcluster_09_overwritten": false,
+    "meanpool_morgan_split_changed": false,
+    "invariant_models_recomputed": false,
+    "m1b_primary_pchembl_excluded": true,
+    "m1b_dependent_models_recomputed": true,
+    "labels_structure_meanpool_morgan_split_invariant": true,
+    "fabricated_values": {
+      "confidence": 0,
+      "year": 0,
+      "family": 0,
+      "note": "결측=missing 지시자/SINGLETON fallback+0 대치(날조 0). 커버리지=_m1b_covariate_stats.json·_target_family_biological_stats.json"
+    }
+  },
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "rdkit": "2026.03.3"
+  },
+  "inputs_sha16": {
+    "data/processed/master_X.parquet": {
+      "sha16": "788c8a64d19e8c3c"
+    },
+    "data/processed/master_Y.parquet": {
+      "sha16": "bd23584342de6482"
+    },
+    "data/processed/scaffold_split.json": {
+      "sha16": "88369dba24449770"
+    },
+    "data/processed/drug_target_emb_meanpool.npy": {
+      "sha16": "052a901f7c2bb91f"
+    },
+    "data/processed/drug_target_mask_meanpool.npy": {
+      "sha16": "577acfffa7d8df1e"
+    },
+    "data/processed/drug_n_targets_meanpool.npy": {
+      "sha16": "52f8fc8065d43406"
+    },
+    "data/processed/target_mapping/06_targets_human.csv": {
+      "sha16": "2784c1bd0fb8df3b"
+    },
+    "data/processed/target_mapping/08_m1b_covariates.csv": {
+      "sha16": "c302399f32c71083"
+    },
+    "data/processed/target_mapping/10_target_family_biological.csv": {
+      "sha16": "6c8da361a1f689b2"
+    },
+    "data/processed/target_mapping/09_target_family_clusters.csv": {
+      "sha16": "7f938d036edefdbc"
+    }
+  }
+}

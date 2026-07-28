@@ -1,0 +1,28 @@
+{
+  "task": "A5 — target count 정의 일관성 (B1 표적수·mask·M1↔M1b 중복성)",
+  "b1_target_count_definition": "drug_n_targets_meanpool.npy = 약물별 unique human single-protein UniProt accession(임베딩 보유) 수(중복 제거)",
+  "independent_recompute_mismatch": 0,
+  "recompute_note": "cid2targets(06_targets_human) ∩ embedded(protbert_index) 로 재계산 → drug_n_targets_meanpool.npy와 비교",
+  "n_total": 1092,
+  "n_unmapped": 245,
+  "unmapped_rule": {
+    "n_targets_zero": true,
+    "log1p_zero_equals_0": true,
+    "mask_convention": "B1 mask = present-indicator(1=표적有). 245 unmapped → mask=0, n_targets=0, log1p(0)=0.",
+    "missing_indicator_is_complement": "‘missing’ 지시자는 (1 − mask). docs/38 §7의 'mask=1' 표현은 missing-지시자 관점이며, 구현 저장값은 present-mask(unmapped=0). 두 표기 모두 동일 정보(상보).",
+    "mask_iff_present": true
+  },
+  "m1_vs_m1b_redundancy": {
+    "note": "B1 log1p(표적수)와 B_m1b log1p(evidence_count)는 둘 다 연구량/폴리파마콜로지 규모의 대리변수라 부분 중복 가능. M1b(=M1+study-intensity)에서 이미 함께 통제되며, primary contrast는 M2b−M1b(서열 순증분)라 중복이 처치효과를 부풀리지 않음.",
+    "spearman_log_ntgt_vs_log_evidence": {
+      "rho": 0.7454735038167839,
+      "p": 4.966915523874455e-151,
+      "n_pairs": 847,
+      "scope": "양쪽 매핑 존재 약물"
+    }
+  },
+  "integrity": {
+    "network_calls": 0,
+    "reused_frozen_npy": true
+  }
+}

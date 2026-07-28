@@ -1,0 +1,23 @@
+2026-07-24 20:28:51 KST | ==============================================================================
+2026-07-24 20:28:51 KST | [하드닝] A1~A5 (docs/38 §3~§7) — A0 재동결 상태 대상. 확증 OOF 미조회·확증 split 미생성.
+2026-07-24 20:28:51 KST | [A1] 전처리 fold-only fit assert (B_seq PCA fit 범위 포함)
+2026-07-24 20:28:52 KST | [A1] B_seq PCA fit rows(train∩mapped)=671 EVR64=0.9300 | fit 대상 표적수(train)=1099 / 전체 pool=1191 | 표현누수=none(수정 불요)
+2026-07-24 20:28:52 KST | [A1] 전처리 fold-only fit assert PASS (전 블록 leak_rows=0, non-train fit rows=0) = True
+2026-07-24 20:28:52 KST | [산출] experiments/audits/A1_nested_fit_assert.json 저장
+2026-07-24 20:28:52 KST | [A2] split 진단 사전 동결 (결과 무참조 — 확증 split 미생성)
+2026-07-24 20:28:52 KST | [A2] scaffold group(빈값 포함) n=732 N_eff=85.3 max_group=78(7.1%) | 빈 scaffold group size=77
+2026-07-24 20:28:52 KST | [A2] PT positive-scaffold: median=19 min=6 PT중 >0 scaffold 비율=100.0%
+2026-07-24 20:28:52 KST | [산출] experiments/audits/A2_split_diagnostics.json 저장
+2026-07-24 20:28:52 KST | [산출] experiments/audits/A2_split_diagnostics_summary.md 저장
+2026-07-24 20:28:52 KST | [A3] RF max_features 감사(설정 변경 금지·문서화)
+2026-07-24 20:28:52 KST | [A3] RF max_features 기본값='sqrt' | M1b 45/2060 → M2b 46/2124 (설정 불변)
+2026-07-24 20:28:52 KST | [산출] experiments/audits/A3_rf_maxfeatures_note.md 저장
+2026-07-24 20:28:52 KST | [A4] B_seq truncation/pooling/isoform 감사
+2026-07-24 20:28:52 KST | [산출] experiments/audits/A4_bseq_truncation_audit.csv 저장 (1920 targets)
+2026-07-24 20:28:52 KST | [산출] experiments/audits/A4_bseq_truncation_audit_summary.json 저장
+2026-07-24 20:28:52 KST | [A4] 절단(embedded) 940/1920=49.0% (사전등록 49% 정합=True) | human primary 619/1191=52.0% | pooling 제외 검증 PASS | isoform suffix 0 · dup base 0
+2026-07-24 20:28:52 KST | [A5] target count 정의 일관성
+2026-07-24 20:28:52 KST | [산출] experiments/audits/A5_target_count_check.json 저장
+2026-07-24 20:28:52 KST | [A5] B1 표적수 재계산 mismatch=0 | unmapped=245(n_tgt=0·mask=0) | mask⟺present=True | Spearman(log표적수,log evidence)=0.745(n=847)
+2026-07-24 20:28:52 KST | [하드닝] A1~A5 완료. 무결성: 확증 split 미생성·OOF 미조회, 네트워크 0.
+2026-07-24 20:28:52 KST | ==============================================================================

@@ -1,0 +1,121 @@
+{
+  "task": "A1 — nested outer-train-only fit assert (fold별 재생성 원칙; 확증 하네스가 재사용하는 레시피)",
+  "split_used": "seed-42 dev split (레시피 검증용; 확증 split 미생성)",
+  "split_counts": {
+    "train": 873,
+    "valid": 109,
+    "test": 110
+  },
+  "per_block_fit_scope": {
+    "B0": {
+      "fit_objects": [
+        "none(deterministic)"
+      ],
+      "n_fit_rows": 0,
+      "fit_rows_subset_of_train": true,
+      "n_non_train_fit_rows": 0,
+      "leak_rows": 0,
+      "dim": 2048
+    },
+    "B1": {
+      "fit_objects": [
+        "StandardScaler"
+      ],
+      "n_fit_rows": 873,
+      "fit_rows_subset_of_train": true,
+      "n_non_train_fit_rows": 0,
+      "leak_rows": 0,
+      "dim": 2
+    },
+    "B_seq": {
+      "fit_objects": [
+        "StandardScaler",
+        "PCA"
+      ],
+      "n_fit_rows": 671,
+      "fit_rows_subset_of_train": true,
+      "n_non_train_fit_rows": 0,
+      "leak_rows": 0,
+      "dim": 64
+    },
+    "B_pid": {
+      "fit_objects": [
+        "vocab(dim=1099)"
+      ],
+      "n_fit_rows": 873,
+      "fit_rows_subset_of_train": true,
+      "n_non_train_fit_rows": 0,
+      "leak_rows": 0,
+      "dim": 1099
+    },
+    "C_ccap": {
+      "fit_objects": [
+        "mean/cov(chol)"
+      ],
+      "n_fit_rows": 671,
+      "fit_rows_subset_of_train": true,
+      "n_non_train_fit_rows": 0,
+      "leak_rows": 0,
+      "dim": 64
+    },
+    "B_m1b": {
+      "fit_objects": [
+        "StandardScaler"
+      ],
+      "n_fit_rows": 873,
+      "fit_rows_subset_of_train": true,
+      "n_non_train_fit_rows": 0,
+      "leak_rows": 0,
+      "dim": 10
+    },
+    "B_m1b_pchembl": {
+      "fit_objects": [
+        "StandardScaler"
+      ],
+      "n_fit_rows": 873,
+      "fit_rows_subset_of_train": true,
+      "n_non_train_fit_rows": 0,
+      "leak_rows": 0,
+      "dim": 13
+    },
+    "B_fam": {
+      "fit_objects": [
+        "vocab(dim=42)"
+      ],
+      "n_fit_rows": 873,
+      "fit_rows_subset_of_train": true,
+      "n_non_train_fit_rows": 0,
+      "leak_rows": 0,
+      "dim": 42
+    },
+    "B_fam_selfclust": {
+      "fit_objects": [
+        "vocab(dim=835)"
+      ],
+      "n_fit_rows": 873,
+      "fit_rows_subset_of_train": true,
+      "n_non_train_fit_rows": 0,
+      "leak_rows": 0,
+      "dim": 835
+    }
+  },
+  "all_blocks_train_only_fit": true,
+  "b_seq_pca": {
+    "fit_population": "train ∩ 매핑 약물의 drug-level mean-pool 벡터(비매핑 zero 제외)",
+    "n_fit_drug_rows": 671,
+    "pca_evr_64": 0.9300198553190403,
+    "pca_fit_scope_check": "z-score(StandardScaler) + PCA-64 모두 emb[train∩mapped] 행으로만 fit",
+    "representation_leakage": "none — 전체 per-target UniProt pool·test-drug 표적으로 fit하지 않음",
+    "correction_applied": false,
+    "correction_reason": "현 구현이 이미 outer-train-drug mean-pool 한정(전체 pool fit 아님) → 수정 불요",
+    "b_seq_pca_fit_target_count_train": 1099,
+    "b_seq_target_pool_all_drugs": 1191,
+    "note": "drug_target_emb_meanpool.npy는 약물별 mean-pool(표적 임베딩의 약물수준 평균). 표적 임베딩 자체는 split-무관 서열 특징이며, PCA basis는 train-drug 벡터로만 적합 → test-drug 표적이 공유되어도 PCA fit 모집단에 raw로 들어가지 않음."
+  },
+  "fold_regeneration_principle": "확증 outer-fold마다 StandardScaler·PCA·vocab(B_pid/B_fam)·C-CAP mean/cov·imputation 통계를 해당 fold train에서만 새로 생성(fit) — 본 레시피가 fold마다 재호출됨. seed-42 dev에서 fit-scope·누수 assert로 구조 검증.",
+  "integrity": {
+    "confirmatory_split_generated": false,
+    "confirmatory_split_accessed": false,
+    "network_calls": 0
+  }
+}

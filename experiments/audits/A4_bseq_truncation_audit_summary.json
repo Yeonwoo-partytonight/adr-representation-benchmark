@@ -1,0 +1,300 @@
+{
+  "task": "A4 — B_seq truncation/pooling/isoform 감사",
+  "max_residues": 510,
+  "all_embedded_targets": {
+    "n": 1920,
+    "n_truncated": 940,
+    "trunc_rate": 0.4895833333333333,
+    "prereg_49pct_match": true
+  },
+  "human_primary_targets": {
+    "n": 1191,
+    "n_truncated": 619,
+    "trunc_rate": 0.5197313182199832
+  },
+  "seq_len_stats_embedded": {
+    "median": 505.0,
+    "p95": 1462.8999999999992,
+    "max": 7096
+  },
+  "family_truncation_human_primary": [
+    {
+      "family_name": "Kinase",
+      "n_targets": 376,
+      "n_truncated": 258,
+      "trunc_rate": 0.6861702127659575
+    },
+    {
+      "family_name": "Family A G protein-coupled receptor",
+      "n_targets": 132,
+      "n_truncated": 6,
+      "trunc_rate": 0.045454545454545456
+    },
+    {
+      "family_name": "Transferase",
+      "n_targets": 71,
+      "n_truncated": 44,
+      "trunc_rate": 0.6197183098591549
+    },
+    {
+      "family_name": "Oxidoreductase",
+      "n_targets": 65,
+      "n_truncated": 31,
+      "trunc_rate": 0.47692307692307695
+    },
+    {
+      "family_name": "Protease",
+      "n_targets": 56,
+      "n_truncated": 21,
+      "trunc_rate": 0.375
+    },
+    {
+      "family_name": "Unclassified protein",
+      "n_targets": 45,
+      "n_truncated": 16,
+      "trunc_rate": 0.35555555555555557
+    },
+    {
+      "family_name": "Electrochemical transporter",
+      "n_targets": 39,
+      "n_truncated": 31,
+      "trunc_rate": 0.7948717948717948
+    },
+    {
+      "family_name": "Hydrolase",
+      "n_targets": 38,
+      "n_truncated": 24,
+      "trunc_rate": 0.631578947368421
+    },
+    {
+      "family_name": "Enzyme",
+      "n_targets": 34,
+      "n_truncated": 19,
+      "trunc_rate": 0.5588235294117647
+    },
+    {
+      "family_name": "Nuclear receptor",
+      "n_targets": 34,
+      "n_truncated": 12,
+      "trunc_rate": 0.35294117647058826
+    },
+    {
+      "family_name": "Voltage-gated ion channel",
+      "n_targets": 30,
+      "n_truncated": 22,
+      "trunc_rate": 0.7333333333333333
+    },
+    {
+      "family_name": "Ligand-gated ion channel",
+      "n_targets": 23,
+      "n_truncated": 7,
+      "trunc_rate": 0.30434782608695654
+    },
+    {
+      "family_name": "Cytochrome P450",
+      "n_targets": 22,
+      "n_truncated": 6,
+      "trunc_rate": 0.2727272727272727
+    },
+    {
+      "family_name": "Phosphodiesterase",
+      "n_targets": 20,
+      "n_truncated": 18,
+      "trunc_rate": 0.9
+    },
+    {
+      "family_name": "Transcription factor",
+      "n_targets": 20,
+      "n_truncated": 13,
+      "trunc_rate": 0.65
+    },
+    {
+      "family_name": "Eraser",
+      "n_targets": 19,
+      "n_truncated": 10,
+      "trunc_rate": 0.5263157894736842
+    },
+    {
+      "family_name": "Lyase",
+      "n_targets": 17,
+      "n_truncated": 2,
+      "trunc_rate": 0.11764705882352941
+    },
+    {
+      "family_name": "Reader",
+      "n_targets": 16,
+      "n_truncated": 15,
+      "trunc_rate": 0.9375
+    },
+    {
+      "family_name": "Phosphatase",
+      "n_targets": 15,
+      "n_truncated": 4,
+      "trunc_rate": 0.26666666666666666
+    },
+    {
+      "family_name": "Secreted protein",
+      "n_targets": 15,
+      "n_truncated": 2,
+      "trunc_rate": 0.13333333333333333
+    },
+    {
+      "family_name": "Isomerase",
+      "n_targets": 14,
+      "n_truncated": 3,
+      "trunc_rate": 0.21428571428571427
+    },
+    {
+      "family_name": "Other cytosolic protein",
+      "n_targets": 12,
+      "n_truncated": 4,
+      "trunc_rate": 0.3333333333333333
+    },
+    {
+      "family_name": "Primary active transporter",
+      "n_targets": 12,
+      "n_truncated": 11,
+      "trunc_rate": 0.9166666666666666
+    },
+    {
+      "family_name": "Membrane receptor",
+      "n_targets": 11,
+      "n_truncated": 4,
+      "trunc_rate": 0.36363636363636365
+    },
+    {
+      "family_name": "Writer",
+      "n_targets": 11,
+      "n_truncated": 9,
+      "trunc_rate": 0.8181818181818182
+    },
+    {
+      "family_name": "Ligase",
+      "n_targets": 10,
+      "n_truncated": 9,
+      "trunc_rate": 0.9
+    },
+    {
+      "family_name": "Other nuclear protein",
+      "n_targets": 6,
+      "n_truncated": 1,
+      "trunc_rate": 0.16666666666666666
+    },
+    {
+      "family_name": "Other ion channel",
+      "n_targets": 5,
+      "n_truncated": 3,
+      "trunc_rate": 0.6
+    },
+    {
+      "family_name": "Family B G protein-coupled receptor",
+      "n_targets": 4,
+      "n_truncated": 1,
+      "trunc_rate": 0.25
+    },
+    {
+      "family_name": "Structural protein",
+      "n_targets": 3,
+      "n_truncated": 1,
+      "trunc_rate": 0.3333333333333333
+    },
+    {
+      "family_name": "Toll-like and Il-1 receptors",
+      "n_targets": 3,
+      "n_truncated": 3,
+      "trunc_rate": 1.0
+    },
+    {
+      "family_name": "Calcium channel auxiliary subunit alpha2delta family",
+      "n_targets": 2,
+      "n_truncated": 2,
+      "trunc_rate": 1.0
+    },
+    {
+      "family_name": "Family C G protein-coupled receptor",
+      "n_targets": 2,
+      "n_truncated": 2,
+      "trunc_rate": 1.0
+    },
+    {
+      "family_name": "Adhesion",
+      "n_targets": 1,
+      "n_truncated": 1,
+      "trunc_rate": 1.0
+    },
+    {
+      "family_name": "Aminoacyltransferase",
+      "n_targets": 1,
+      "n_truncated": 0,
+      "trunc_rate": 0.0
+    },
+    {
+      "family_name": "Fatty acid binding protein family",
+      "n_targets": 1,
+      "n_truncated": 0,
+      "trunc_rate": 0.0
+    },
+    {
+      "family_name": "Frizzled family G protein-coupled receptor",
+      "n_targets": 1,
+      "n_truncated": 1,
+      "trunc_rate": 1.0
+    },
+    {
+      "family_name": "Other membrane protein",
+      "n_targets": 1,
+      "n_truncated": 1,
+      "trunc_rate": 1.0
+    },
+    {
+      "family_name": "Surface antigen",
+      "n_targets": 1,
+      "n_truncated": 0,
+      "trunc_rate": 0.0
+    },
+    {
+      "family_name": "Taste family G protein-coupled receptor",
+      "n_targets": 1,
+      "n_truncated": 0,
+      "trunc_rate": 0.0
+    },
+    {
+      "family_name": "Transmembrane 1-electron transfer carriers",
+      "n_targets": 1,
+      "n_truncated": 1,
+      "trunc_rate": 1.0
+    },
+    {
+      "family_name": "Transporter",
+      "n_targets": 1,
+      "n_truncated": 1,
+      "trunc_rate": 1.0
+    }
+  ],
+  "isoform_audit": {
+    "isoform_suffixed_accessions": [],
+    "n_isoform_suffixed": 0,
+    "duplicate_base_accessions": [],
+    "n_duplicate_base": 0,
+    "note": "isoform suffix(-N) 및 동일 base accession 중복 없음이면 canonical accession 단일 매핑 확인."
+  },
+  "mean_pool_special_token_exclusion": {
+    "code_source": "v3_Multimodal/src/target_pipeline.py step3.flush()",
+    "checks": {
+      "cls_excluded (mask[:, 0] = 0)": true,
+      "sep_excluded (mask[i, L-1] = 0)": true,
+      "padding_excluded (attention_mask)": true,
+      "truncation_maxlen_512 (max_length=MAX_LEN)": true,
+      "mean_over_residues (summed / cnt)": true
+    },
+    "all_pass": true,
+    "detail": "잔기 mean-pool = Σ(last_hidden * mask)/Σmask, mask는 CLS(pos0)·SEP(마지막 유효토큰)·padding(attention_mask=0) 제외."
+  },
+  "seen_unseen_split_truncation": {
+    "status": "DEFERRED — seen/unseen별 절단율은 확증 split(seed 201) 생성 후 산출(무결성상 미생성)."
+  },
+  "integrity": {
+    "network_calls": 0,
+    "reused_frozen_protbert_index": true
+  }
+}

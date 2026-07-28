@@ -1,0 +1,63 @@
+{
+  "task": "A2 — split 진단 사전 동결(결과 무참조; 확증 split 미생성)",
+  "scaffold_definition": "RDKit MurckoScaffold.MurckoScaffoldSmiles(includeChirality=False) — step6과 동일",
+  "scaffold_groups": {
+    "n_drugs": 1092,
+    "including_empty_scaffold": {
+      "n_groups": 732,
+      "median": 1.0,
+      "p90": 2.0,
+      "p95": 3.0,
+      "p99": 6.0,
+      "max": 78,
+      "max_group_frac_of_all": 0.07142857142857142,
+      "N_eff": 85.34669338677355,
+      "empty_scaffold_group_size": 77,
+      "note": "빈 scaffold('' = 무고리/파싱불가)는 step6에서 단일 그룹으로 묶임 — 포함 통계"
+    },
+    "excluding_empty_scaffold": {
+      "n_groups": 731,
+      "median": 1.0,
+      "p90": 2.0,
+      "p95": 3.0,
+      "p99": 5.7000000000000455,
+      "max": 78,
+      "max_group_frac_of_all": 0.07142857142857142,
+      "N_eff": 128.08964316797216,
+      "note": "빈 scaffold 그룹 제외(실질 ring-scaffold 그룹만)"
+    }
+  },
+  "pt_positive_scaffold": {
+    "n_pt": 370,
+    "positive_scaffold_count": {
+      "median": 19.0,
+      "min": 6,
+      "max": 493,
+      "frac_pt_gt0": 1.0,
+      "frac_pt_ge3": 1.0
+    },
+    "max_single_scaffold_positive_concentration": {
+      "median": 0.10344827586206896,
+      "p90": 0.22272727272727283,
+      "max": 0.5384615384615384,
+      "note": "PT별 (최대 단일 scaffold의 양성 수)/(PT 총 양성 수) — 1.0에 가까울수록 한 scaffold에 양성 집중"
+    },
+    "pt_positive_total": {
+      "median": 21.0,
+      "min": 10
+    }
+  },
+  "undefined_ap_rule": {
+    "rule": "bootstrap/OOF 평가에서 특정 draw·fold의 test-positive가 0인 PT는 그 draw·fold의 macro 평균에서 제외(average_precision_score 미정의). 제외율(draw별 제외 PT 비율)을 확증 단계에서 보고.",
+    "smoke_metric_consistency": "ladder_confirmatory.macro_ap()도 fold test 양성>0 PT만 평균(동일 규칙).",
+    "frozen_before_oof": true
+  },
+  "confirmatory_fold_level_diagnostics": {
+    "status": "DEFERRED — 확증 split(seed 201) 미생성(무결성). fold별 PT 양성 0/1/2/≥3 분포·fold 간 label density·train/test 표적 Jaccard·rare-PT 제약 충족 여부는 docs/36 실행 시 split 생성 후 산출.",
+    "reason": "본 하드닝은 확증 OOF 조회 전 = 확증 split 생성/조회 금지(docs/38 §8)."
+  },
+  "integrity": {
+    "confirmatory_split_generated": false,
+    "labels_are_fixed_input_not_result": true
+  }
+}

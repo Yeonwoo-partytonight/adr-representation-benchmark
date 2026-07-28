@@ -1,0 +1,30 @@
+[ladder_conf] v3 RF-family 확증 사다리 — A0: M1b primary 재지정(pChEMBL 제외 10차원, 등록 §4 일치) 재조립·재동결
+[A0] amendment 2026-07-24 19:45 KST(안 B): primary B_m1b=10차원; sensitivity B_m1b_pchembl=13차원 강등·보존.
+[무결성] 확증 split(seed 201~205) 미조회. smoke=seed-42 dev split 전용(탐색적). 본 스크립트 네트워크 0(08/09/10 CSV 재사용).
+[data] N=1092 PT=370 | split train 873/valid 109/test 110
+[fit] seed-42 dev train(873) 전용 fit — 모든 스케일러·PCA·vocab train-only
+[leakage] 전 블록 train-only fit assert 통과(leak_rows=0): ['B0_morgan', 'B1_count_mask', 'B_seq', 'C_ccap', 'B_pid', 'B_m1b', 'B_m1b_pchembl', 'B_fam', 'B_fam_selfclust']
+[dims] {'B0_morgan': 2048, 'B1_count_mask': 2, 'B_seq': 64, 'B_pid': 1099, 'C_ccap': 64, 'B_m1b': 10, 'B_m1b_pchembl': 13, 'B_fam': 42, 'B_fam_selfclust': 835} | B_seq PCA-64 EVR=0.930 (fit 매핑 671/train 873)
+[B_m1b] primary dim=10 cont=['log1p_evidence_count', 'log1p_mechanism_target_n', 'log1p_binding_target_n', 'mechanism_vs_binding_ratio', 'confidence_mean', 'confidence_max', 'first_approval_year'] ind=['confidence_missing', 'year_missing', 'chembl_unmapped']
+[B_m1b_pchembl] sensitivity dim=13 (pChEMBL 포함 13차원)
+[B_pid] vocab(train 표적) = 1099 | [B_fam(생물학)] vocab = 42/전체 42 | [B_fam_selfclust] vocab = 835/전체 902
+[B_m1b] chembl 미매칭 149/1092 · confidence 결측 215 · 연도 결측 229 · pchembl 결측 241
+[C-CAP 매칭] dim 64=64 | effrank seq(tr 24.11/va 14.96) cap(tr 23.21/va 21.14) | featnorm seq 20.82 cap 23.49
+[동결] 보류 블록/모델 없음 — primary 8 + sensitivity 2모델 전부 조립 가능(deferred_blocks=[]).
+[smoke:보존] M0 test macro_AP=0.1882 (기존값, 재계산 없음 — byte-invariant)
+[smoke:보존] M1 test macro_AP=0.1957 (기존값, 재계산 없음 — byte-invariant)
+[smoke:보존] M2 test macro_AP=0.2091 (기존값, 재계산 없음 — byte-invariant)
+[smoke:재계산] M1b(B_m1b 10차원) feat_dim=2060 test macro_AP=0.2052 (evalPT 301) — sanity
+[smoke:재계산] M2b(B_m1b 10차원) feat_dim=2124 test macro_AP=0.2099 (evalPT 301) — sanity
+[smoke:재계산] P-ID(B_m1b 10차원) feat_dim=3159 test macro_AP=0.2506 (evalPT 301) — sanity
+[smoke:재계산] P-FAM(B_m1b 10차원) feat_dim=2102 test macro_AP=0.2069 (evalPT 301) — sanity
+[smoke:재계산] C-CAP(B_m1b 10차원) feat_dim=2124 test macro_AP=0.1713 (evalPT 301) — sanity
+[sensitivity:재계산] M1b_pchembl(B_m1b_pchembl 13차원) feat_dim=2063 test macro_AP=0.2123 (evalPT 301)
+[sensitivity:재계산] M2b_pchembl(B_m1b_pchembl 13차원) feat_dim=2127 test macro_AP=0.2220 (evalPT 301)
+[sensitivity] P-FAM_selfclust feat_dim=2895 test macro_AP=0.2318 (evalPT 301) — 자체클러스터 블록 보존 확인
+[smoke] M0 sanity 참조 = v2_GNN robustness seed_42 rf_macro 0.18819 (Morgan-only RF, 불변 보존)
+[byte-invariance] 불변 블록 ['B0_morgan', 'B1_count_mask', 'B_seq', 'B_pid', 'C_ccap', 'B_fam', 'B_fam_selfclust'] + models_frozen + 불변 모델 ['M0', 'M1', 'M2'] 불변 확인 통과. 의도된 재계산(변화) 모델 = ['M1b', 'M2b', 'P-ID', 'P-FAM', 'C-CAP'].
+[동결] v3_Multimodal/config/ladder_freeze.json 저장
+[smoke stats] data/processed/_ladder_smoke_stats.json 저장 (gitignore)
+[A0 manifest] experiments/audits/A0_m1b_reprimary_manifest.json 저장
+[완료] A0 — primary B_m1b 10차원(§4 일치) 재조립·재동결 완료. M0·M1·M2·불변 블록 byte-invariant, sensitivity B_m1b_pchembl(13차원)·M1b_pchembl·M2b_pchembl 동결.
