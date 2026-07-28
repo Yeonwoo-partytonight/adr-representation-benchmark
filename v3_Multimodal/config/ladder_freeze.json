@@ -1,0 +1,423 @@
+{
+  "_doc": "v3 RF-family 확증 사다리(부분) 동결 스펙 — 사전등록 §4/§6/§7/§8/§13. 설계 변경 금지.",
+  "seed": 42,
+  "pca_k": 64,
+  "morgan": {
+    "radius": 2,
+    "n_bits": 2048,
+    "source": "v1_RF pilot 정의 그대로"
+  },
+  "rf_hyperparameters": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "n_jobs": -1,
+    "class_weight": "balanced_subsample",
+    "provenance": "pilot default RF(macro AP≈0.191): v1_RF/src/config.yaml + v2_GNN/src/robustness.py rf_proba",
+    "retuned": false,
+    "note": "재탐색·재튜닝 금지(사전등록 §13 예산). fairtune tuned RF는 미사용."
+  },
+  "blocks_frozen": {
+    "B0_morgan": {
+      "dim": 2048,
+      "fit": "none(결정적)",
+      "def": "Morgan ECFP r=2 2048bit, cid 정렬"
+    },
+    "B1_count_mask": {
+      "dim": 2,
+      "fit": "log1p(n_targets) StandardScaler on train; mask 0/1 원본",
+      "def": "coverage 제외(docs/31: mapped coverage 상수 1.0 → mask 중복)"
+    },
+    "B_seq": {
+      "dim": 64,
+      "evr": 0.9300198553190403,
+      "fit": "train∩매핑에서 z-score→PCA-64(svd_solver=full, random_state=42); transform 후 비매핑 재-0",
+      "input": "drug_target_emb_meanpool.npy(primary, human mean-pool)"
+    },
+    "B_pid": {
+      "dim_seed42_dev": 1099,
+      "fit": "vocab=train 매핑 약물 표적만(train-fit); test OOV 표적 드롭; multi-hot",
+      "input": "target_mapping/06_targets_human.csv (cid→uniprot)",
+      "note": "블록만 동결 — 모델 조립은 M1b 확정 후"
+    },
+    "C_ccap": {
+      "dim": 64,
+      "fit": "B_seq train 출력의 mean·cov만(train-only) → chol; z~N(0,I) 행-시드(표적무관) → mean+z·Lᵀ",
+      "match": "차원·feature norm·effective rank(=B_seq train 공분산 표집), 표적신호 0",
+      "held_out_rank_caveat": "held-out(seed-42 valid) effective rank 갈림: B_seq 14.96 vs C_ccap 21.14 (docs/32 §3). 실측 서열임베딩이 held-out에서 유효차원 더 감소(train–val gap 9.15) vs 매칭 노이즈 유지(2.07) — 규정준수·M2b>C-CAP에 보수적. 인위은폐 아님(실측).",
+      "note": "블록 동결(docs/32); 모델 C-CAP=[B0,B1,B_m1b,C_ccap] 조립·동결(2026-07-24)"
+    },
+    "B_m1b": {
+      "dim": 10,
+      "status": "primary — pChEMBL 제외(10차원) = 사전등록 §4 열거 정확 일치 (2026-07-24 19:45 재지정, 안 B)",
+      "fit": "연속형 7(log1p evidence·mech_n·bind_n, mech/bind ratio, confidence mean/max, first_approval_year) StandardScaler on train(결측 0 대치) + 지시자 3(confidence_missing, year_missing, chembl_unmapped)",
+      "input": "target_mapping/08_m1b_covariates.csv (fetch_m1b_covariates.py; §4-A ChEMBL 1회 캐시 확장; 컬럼 선택만 변경·재수집 없음)",
+      "prereg_covariates": [
+        "chembl_target_evidence_count",
+        "mechanism_vs_binding_ratio",
+        "confidence_mean",
+        "confidence_max",
+        "approval_or_first_label_year"
+      ],
+      "source_status": {
+        "chembl_target_evidence_count": "08_m1b_covariates.csv:evidence_count (pchembl activity 레코드 수)",
+        "mechanism_vs_binding_ratio": "08_m1b_covariates.csv:mechanism_target_n/binding_target_n (mechanism endpoint 실측)",
+        "confidence_mean": "08_m1b_covariates.csv:confidence_mean (assay confidence_score 0–9, §4-A 수집)",
+        "confidence_max": "08_m1b_covariates.csv:confidence_max (assay confidence_score 0–9, §4-A 수집)",
+        "approval_or_first_label_year": "08_m1b_covariates.csv:first_approval_year (ChEMBL first_approval, §4-A 수집)"
+      },
+      "cont_features": [
+        "log1p_evidence_count",
+        "log1p_mechanism_target_n",
+        "log1p_binding_target_n",
+        "mechanism_vs_binding_ratio",
+        "confidence_mean",
+        "confidence_max",
+        "first_approval_year"
+      ],
+      "indicators": [
+        "confidence_missing",
+        "year_missing",
+        "chembl_unmapped"
+      ],
+      "amendment": "docs/33 항목6(2026-07-24 19:45 KST) — pChEMBL은 §4 닫힌 열거 미포함이라 primary에서 제외; pChEMBL 포함판은 B_m1b_pchembl(sensitivity)로 강등. 확증 OOF 미조회 시점 정정(결과-의존 아님).",
+      "note": "적응증·ATC는 leakage로 제외(sensitivity만·본 블록 미포함, 사전등록 §4)"
+    },
+    "B_m1b_pchembl": {
+      "dim": 13,
+      "status": "sensitivity — pChEMBL 포함(13차원). primary(제외) 결론의 pChEMBL 포함/제외 robustness 보고용.",
+      "fit": "연속형 9(primary 7 + pchembl_mean·pchembl_max) StandardScaler on train(결측 0 대치) + 지시자 4(confidence/year/pchembl missing, chembl_unmapped)",
+      "input": "target_mapping/08_m1b_covariates.csv (동일 소스, 컬럼 선택만 상이)",
+      "prereg_covariates": [
+        "chembl_target_evidence_count",
+        "mechanism_vs_binding_ratio",
+        "confidence_mean",
+        "confidence_max",
+        "approval_or_first_label_year",
+        "pchembl_strength_mean",
+        "pchembl_strength_max"
+      ],
+      "source_status": {
+        "chembl_target_evidence_count": "08_m1b_covariates.csv:evidence_count (pchembl activity 레코드 수)",
+        "mechanism_vs_binding_ratio": "08_m1b_covariates.csv:mechanism_target_n/binding_target_n (mechanism endpoint 실측)",
+        "confidence_mean": "08_m1b_covariates.csv:confidence_mean (assay confidence_score 0–9, §4-A 수집)",
+        "confidence_max": "08_m1b_covariates.csv:confidence_max (assay confidence_score 0–9, §4-A 수집)",
+        "approval_or_first_label_year": "08_m1b_covariates.csv:first_approval_year (ChEMBL first_approval, §4-A 수집)",
+        "pchembl_strength_mean": "08_m1b_covariates.csv:pchembl_mean (05b pchembl_median)",
+        "pchembl_strength_max": "08_m1b_covariates.csv:pchembl_max (05b pchembl_median)"
+      },
+      "cont_features": [
+        "log1p_evidence_count",
+        "log1p_mechanism_target_n",
+        "log1p_binding_target_n",
+        "mechanism_vs_binding_ratio",
+        "confidence_mean",
+        "confidence_max",
+        "first_approval_year",
+        "pchembl_mean",
+        "pchembl_max"
+      ],
+      "indicators": [
+        "confidence_missing",
+        "year_missing",
+        "pchembl_missing",
+        "chembl_unmapped"
+      ],
+      "note": "이전 동결 B_m1b(13차원)와 정의 동일 — sensitivity 블록으로 보존. sensitivity 모델 = M1b_pchembl·M2b_pchembl."
+    },
+    "B_fam": {
+      "dim_seed42_dev": 42,
+      "status": "primary (P-FAM) — 생물학적 family 재정의(2026-07-24, 교수님 승인; docs/35)",
+      "fit": "vocab=train 매핑 약물의 생물학적 family만(train-fit); test OOV family 드롭; multi-hot(표적당 다중 family OR)",
+      "input": "target_mapping/10_target_family_biological.csv (fetch_target_family_biological.py)",
+      "family_source": "ChEMBL protein classification (primary) + Pfam/InterPro fallback + SINGLETON(결측). chosen level = L2",
+      "level": 2,
+      "n_families_total": 42,
+      "granularity": {
+        "n_families": 42,
+        "singleton_family_frac": 0.1905,
+        "family_per_target": 0.0353,
+        "coverage_biological": 1.0,
+        "vs_selfcluster": "자체 mmseqs 50% 클러스터 79.3%(715/902) 싱글톤 → 생물학 family로 실질 coarse화(대비=docs/35)"
+      },
+      "gate_decision": "L2 싱글톤% 0.191 < 게이트 0.6 → L2 유지",
+      "prereg": "사전등록 §4 P-FAM=target family/domain multi-hot(UniProt family·Pfam/InterPro·ChEMBL class), §9 family 정의 다중",
+      "note": "확증 fold마다 vocab 재-fit → 차원 가변(train-fit 원칙, B_pid와 동일). 자체클러스터는 B_fam_selfclust(sensitivity) 보존."
+    },
+    "B_fam_selfclust": {
+      "dim_seed42_dev": 835,
+      "status": "sensitivity (사전등록 §9 family 정의 다중) — primary에서 대체, 보존만",
+      "fit": "vocab=train 매핑 약물의 family(cluster_id)만(train-fit); test OOV family 드롭; multi-hot",
+      "input": "target_mapping/09_target_family_clusters.csv (cluster_target_families.py; mmseqs2 easy-cluster)",
+      "mmseqs_params": {
+        "min_seq_id": "0.5",
+        "cov": "0.8",
+        "cov_mode": "0",
+        "threads": "1"
+      },
+      "n_families_total": 902,
+      "caveat": "본 표적셋 자체 50% 클러스터 — near-identity(715/902=79.3% 싱글톤)라 coarse-family 통제엔 부적합 → P-FAM primary는 생물학 family로 대체. 자체클러스터는 §9 sensitivity로 보존(삭제 안 함).",
+      "note": "어떤 frozen 모델에도 미포함. sensitivity 분석용 보존 블록(P-FAM_selfclust)."
+    }
+  },
+  "blocks_deferred": {},
+  "models_frozen": {
+    "M0": [
+      "B0"
+    ],
+    "M1": [
+      "B0",
+      "B1"
+    ],
+    "M2": [
+      "B0",
+      "B1",
+      "B_seq"
+    ],
+    "M1b": [
+      "B0",
+      "B1",
+      "B_m1b"
+    ],
+    "M2b": [
+      "B0",
+      "B1",
+      "B_m1b",
+      "B_seq"
+    ],
+    "P-ID": [
+      "B0",
+      "B1",
+      "B_m1b",
+      "B_pid"
+    ],
+    "P-FAM": [
+      "B0",
+      "B1",
+      "B_m1b",
+      "B_fam"
+    ],
+    "C-CAP": [
+      "B0",
+      "B1",
+      "B_m1b",
+      "C_ccap"
+    ]
+  },
+  "models_deferred": {},
+  "sensitivity_blocks": {
+    "B_m1b_pchembl": "pChEMBL 포함(13차원) M1b 공변량 — primary B_m1b(10차원, §4 일치)의 pChEMBL 포함/제외 robustness. sensitivity 모델 M1b_pchembl=[B0,B1,B_m1b_pchembl], M2b_pchembl=[B0,B1,B_m1b_pchembl,B_seq].",
+    "B_fam_selfclust": "자체 mmseqs 50% 클러스터(09) — P-FAM primary에서 대체 후 §9 sensitivity 보존. sensitivity 모델 P-FAM_selfclust=[B0,B1,B_m1b,B_fam_selfclust]."
+  },
+  "sensitivity_models": {
+    "M1b_pchembl": [
+      "B0",
+      "B1",
+      "B_m1b_pchembl"
+    ],
+    "M2b_pchembl": [
+      "B0",
+      "B1",
+      "B_m1b_pchembl",
+      "B_seq"
+    ],
+    "P-FAM_selfclust": [
+      "B0",
+      "B1",
+      "B_m1b",
+      "B_fam_selfclust"
+    ]
+  },
+  "m1b_reprimary_2026_07_24": {
+    "change": "primary B_m1b: pChEMBL 포함 13차원 → pChEMBL 제외 10차원(사전등록 §4 닫힌 열거 정확 일치).",
+    "reason": "docs/30·docs/29 §4 M1b 공변량은 닫힌 열거이고 pChEMBL 미포함. pChEMBL은 연구량이 아니라 potency·assay-selection 정보(ChatGPT #7)라 '연구량 통제 후 서열 증분' 분해를 흐림 → primary를 등록 열거와 정확히 일치하게 정정(등록 준수 복원 = 금지된 변경 아님).",
+    "amendment_log": "docs/33 항목6 (2026-07-24 19:45 KST) — 이전 16:33 '유지+명문화'를 대체. 확증 OOF 미조회(N).",
+    "primary_10_features": {
+      "cont": [
+        "log1p_evidence_count",
+        "log1p_mechanism_target_n",
+        "log1p_binding_target_n",
+        "mechanism_vs_binding_ratio",
+        "confidence_mean",
+        "confidence_max",
+        "first_approval_year"
+      ],
+      "ind": [
+        "confidence_missing",
+        "year_missing",
+        "chembl_unmapped"
+      ]
+    },
+    "sensitivity_13_features": {
+      "cont": [
+        "log1p_evidence_count",
+        "log1p_mechanism_target_n",
+        "log1p_binding_target_n",
+        "mechanism_vs_binding_ratio",
+        "confidence_mean",
+        "confidence_max",
+        "first_approval_year",
+        "pchembl_mean",
+        "pchembl_max"
+      ],
+      "ind": [
+        "confidence_missing",
+        "year_missing",
+        "pchembl_missing",
+        "chembl_unmapped"
+      ]
+    },
+    "reprimary_models": [
+      "M1b",
+      "M2b",
+      "P-ID",
+      "P-FAM",
+      "C-CAP"
+    ],
+    "sensitivity_models": [
+      "M1b_pchembl",
+      "M2b_pchembl"
+    ],
+    "byte_invariant_blocks": [
+      "B0_morgan",
+      "B1_count_mask",
+      "B_seq",
+      "B_pid",
+      "C_ccap",
+      "B_fam",
+      "B_fam_selfclust"
+    ],
+    "byte_invariant_models": [
+      "M0",
+      "M1",
+      "M2"
+    ],
+    "intended_recompute_note": "B_m1b(10차원 정정)·M1b·M2b·P-ID·P-FAM·C-CAP은 byte-invariant 아님(의도된 재계산). models_frozen(블록구성 매핑)은 불변(블록 id 리스트 미변경).",
+    "byte_invariance_asserted": true,
+    "byte_invariance_check": {
+      "invariant_blocks": [
+        "B0_morgan",
+        "B1_count_mask",
+        "B_seq",
+        "B_pid",
+        "C_ccap",
+        "B_fam",
+        "B_fam_selfclust"
+      ],
+      "invariant_models": [
+        "M0",
+        "M1",
+        "M2"
+      ],
+      "models_frozen_identical": true,
+      "intended_recompute_blocks": [
+        "B_m1b(13→10)",
+        "(new)B_m1b_pchembl"
+      ],
+      "intended_recompute_models": [
+        "M1b",
+        "M2b",
+        "P-ID",
+        "P-FAM",
+        "C-CAP"
+      ],
+      "m1b_dependent_changed_vs_prior": [
+        "M1b",
+        "M2b",
+        "P-ID",
+        "P-FAM",
+        "C-CAP"
+      ]
+    }
+  },
+  "pfam_refresh_2026_07_24": {
+    "change": "P-FAM primary B_fam: 자체 mmseqs 50% 클러스터(09) → 생물학적 family(10, ChEMBL protein class L2 + Pfam/InterPro fallback)",
+    "reason": "자체클러스터 715/902=79.3% 싱글톤 = near-identity → coarse-family 통제(RQ3b) 미달. 사전등록 §4 P-FAM 문구는 생물학 family 명시.",
+    "scope": "P-FAM/B_fam만 재조립·재동결. M0·M1·M2·M1b·M2b·P-ID·C-CAP 바이트 불변(byte-invariance assert 통과).",
+    "selfcluster_preserved_as": "B_fam_selfclust (sensitivity; 09 삭제 안 함)",
+    "prereg_unchanged": "설계·가설·집계·성공기준·P-FAM 개념 불변(coarse family 데이터 확보만). docs/30 무수정, docs/33 이탈 1줄 append.",
+    "chosen_level": 2,
+    "gate_decision": "L2 싱글톤% 0.191 < 게이트 0.6 → L2 유지",
+    "byte_invariance_asserted": true
+  },
+  "metric": {
+    "macro_ap": "average_precision_score, fold 양성>0 PT AP 산술평균(사전등록 §7). smoke=sanity, 확증 아님"
+  },
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "rdkit": "2026.03.3"
+  },
+  "inputs_sha16": {
+    "data/processed/master_X.parquet": {
+      "sha16": "788c8a64d19e8c3c"
+    },
+    "data/processed/master_Y.parquet": {
+      "sha16": "bd23584342de6482"
+    },
+    "data/processed/scaffold_split.json": {
+      "sha16": "88369dba24449770"
+    },
+    "data/processed/drug_target_emb_meanpool.npy": {
+      "sha16": "052a901f7c2bb91f"
+    },
+    "data/processed/drug_target_mask_meanpool.npy": {
+      "sha16": "577acfffa7d8df1e"
+    },
+    "data/processed/drug_n_targets_meanpool.npy": {
+      "sha16": "52f8fc8065d43406"
+    },
+    "data/processed/target_mapping/06_targets_human.csv": {
+      "sha16": "2784c1bd0fb8df3b"
+    },
+    "data/processed/target_mapping/08_m1b_covariates.csv": {
+      "sha16": "c302399f32c71083"
+    },
+    "data/processed/target_mapping/10_target_family_biological.csv": {
+      "sha16": "6c8da361a1f689b2"
+    },
+    "data/processed/target_mapping/09_target_family_clusters.csv": {
+      "sha16": "7f938d036edefdbc"
+    }
+  },
+  "m1b_coverage_seed42_dev": {
+    "chembl_unmapped": 149,
+    "confidence_missing": 215,
+    "year_missing": 229,
+    "pchembl_missing": 241,
+    "n_total": 1092
+  },
+  "integrity": {
+    "confirmatory_split_accessed": false,
+    "confirmatory_split_generated": false,
+    "smoke_split": "scaffold_split.json (seed-42 dev, train/valid/test)",
+    "ladder_network_calls": 0,
+    "data_source_network": "§4-A: fetch_m1b_covariates.py(mechanism/confidence/first_approval, 기존 943 chembl_id); cluster_target_families.py(mmseqs2, 서열=_cache/ 재사용 네트워크 0); §3-A: fetch_target_family_biological.py(기존 표적 protein_classification/target_component class + 전체 class 트리; Pfam/InterPro=캐시 xref 네트워크 0)",
+    "redownload": false,
+    "mock": false,
+    "drugbank": false,
+    "labels_molset_structure_changed": false,
+    "new_targets_or_molecules_added": false,
+    "remapping": false,
+    "existing_npy_overwritten": false,
+    "selfcluster_09_overwritten": false,
+    "meanpool_morgan_split_changed": false,
+    "invariant_models_recomputed": false,
+    "m1b_primary_pchembl_excluded": true,
+    "m1b_dependent_models_recomputed": true,
+    "labels_structure_meanpool_morgan_split_invariant": true,
+    "fabricated_values": {
+      "confidence": 0,
+      "year": 0,
+      "family": 0,
+      "note": "결측=missing 지시자/SINGLETON fallback+0 대치(날조 0). 커버리지=_m1b_covariate_stats.json·_target_family_biological_stats.json"
+    }
+  },
+  "reproduce": ".venv/bin/python3 v3_Multimodal/src/ladder_confirmatory.py",
+  "reproduce_data_sources": [
+    ".venv/bin/python3 v3_Multimodal/src/fetch_m1b_covariates.py     # 08 (§4-A ChEMBL, 결정적 캐시)",
+    ".venv/bin/python3 v3_Multimodal/src/fetch_target_family_biological.py  # 10 (§3-A ChEMBL protein class, 생물학 family)",
+    "PATH=/opt/homebrew/bin:$PATH .venv/bin/python3 v3_Multimodal/src/cluster_target_families.py  # 09 (mmseqs2, sensitivity 보존)"
+  ]
+}
