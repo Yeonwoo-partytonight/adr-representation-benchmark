@@ -64,3 +64,11 @@ env/
 
 # --- transformers / huggingface 캐시 ---
 .cache/
+
+# --- 사전등록 봉인 산출물 (블라인딩 유지: 절대 공개 금지) ---
+**/_sealed/
+backup/
+
+# --- 내부 워크플로/기록 (docs/와 동일 범주: 교수님 협의·결정 기록 포함) ---
+.claude/
+experiments/provenance/
