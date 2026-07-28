@@ -1,0 +1,41 @@
+{
+  "_scope": "블록 B — 하드웨어 실측(측정 전용). 블록 D 워커 수 결정 변수.",
+  "ts_kst": "2026-07-27 21:23:12 KST",
+  "cpu": {
+    "brand": "Apple M5 Pro",
+    "performance_cores_physical": 6,
+    "efficiency_cores_physical": 12,
+    "physical_total": 18,
+    "logical_total": 18,
+    "perflevel0_logical": 6,
+    "perflevel1_logical": 12,
+    "os_cpu_count": 18,
+    "note": "os.cpu_count()=18 은 P-core 6 + E-core 12 의 합이다. RF n_jobs=-1 은 18 워커를 띄우지만 12개는 효율코어에 배치되어 성능코어 대비 처리량이 낮다 → 실효 병렬도는 18보다 작을 것으로 예상(블록 D-1에서 실측)."
+  },
+  "memory": {
+    "bytes": 68719476736,
+    "gib": 64.0,
+    "gb": 68.72,
+    "budget_60pct_gib": 38.4,
+    "rule": "peak RSS × 워커 수 > 물리 RAM 60% 인 구성은 후보 제외(스왑 방지)"
+  },
+  "os": {
+    "product": "macOS",
+    "version": "26.5.2",
+    "build": "25F84",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.4"
+  },
+  "disk": {
+    "path": "/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction",
+    "free_bytes": 770661941248,
+    "free_gib": 717.73,
+    "total_gib": 926.3,
+    "null_main_projection": {
+      "T_b_scalar_only_bytes": 128000,
+      "if_all_oof_saved_gb": 1.11,
+      "planned_policy": "스칼라 + 각 모드 최초 3 OOF(≈3.3MB) → 디스크 제약 없음"
+    }
+  },
+  "infrastructure_decision": "Mac 단독(랩 서버·유료 클라우드 불가) — 확정 2026-07-27"
+}

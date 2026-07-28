@@ -1,0 +1,190 @@
+{
+  "_scope": "블록 A(A-0·A-3·A-4) — 결과-독립 계측·구조치만. AP·Δ·p 없음.",
+  "ts_kst_start": "2026-07-27 21:16:17 KST",
+  "ts_kst_end": "2026-07-27 21:16:18 KST",
+  "gate0": {
+    "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "ladder_freeze_match": true,
+    "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_manifest_match": true,
+    "sap_version": "1.1",
+    "sap_all_validation_pass": true,
+    "sap_modules_match": {
+      "__init__.py": true,
+      "metrics.py": true,
+      "redaction.py": true,
+      "consensus.py": true,
+      "bootstrap.py": true,
+      "signflip.py": true,
+      "decision.py": true,
+      "null_generator.py": true,
+      "unseen_target.py": true,
+      "synthetic.py": true,
+      "freeze.py": true
+    },
+    "sap_n_modules_verified": 11,
+    "sap_integrity_confirmatory_untouched": true,
+    "primary_B_m1b_dim": 10,
+    "A0_primary_dim": 10,
+    "A1_all_blocks_train_only_fit": true,
+    "A1_bseq_pca_fit_rows": 671,
+    "A5_target_count_mismatch": 0,
+    "gate0_pass": true
+  },
+  "rep1_sealed_unchanged": {
+    "at_start": {
+      "all_match": true,
+      "sha256": {
+        "metrics_full.json": "8722a4e1c52d2eae5cbbebf6b5a5ff5cb145dd591ea5648731d7c481ed15c1b8",
+        "oof_M1b.npz": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+        "oof_M2b.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260"
+      }
+    },
+    "at_end": {
+      "all_match": true,
+      "sha256": {
+        "metrics_full.json": "8722a4e1c52d2eae5cbbebf6b5a5ff5cb145dd591ea5648731d7c481ed15c1b8",
+        "oof_M1b.npz": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+        "oof_M2b.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260"
+      }
+    }
+  },
+  "partition_primary": {
+    "path": "data/processed/target_mapping/11_null_family_partition.csv",
+    "sha256": "a95e26f9a527e9451ee12f9bccf851e0c8912f57ea7b36920d91d6c7281b0a51",
+    "tiebreak_rule": "표적이 복수 family에 속하면 family_id 문자열 사전순 최소값 1개를 교환 family로 배정(결정적·결과 무참조). B_fam(P-FAM) multi-hot 정의는 불변 — 본 규칙은 null 교환 단위 partition 전용.",
+    "columns": [
+      "target_id",
+      "family_id_assigned",
+      "n_families_in_source",
+      "tiebreak_applied",
+      "exchangeable"
+    ],
+    "n_targets": 1191,
+    "n_families": 42,
+    "n_tiebreak_applied": 14,
+    "n_fixed_targets": 13,
+    "n_exchangeable_targets": 1178,
+    "n_fixed_families_singleton_or_size2": 11,
+    "n_singleton_families": 9,
+    "n_size2_families": 2,
+    "n_exchangeable_families": 31,
+    "fixed_target_frac": 0.0109151973131822,
+    "exchangeable_target_frac": 0.9890848026868178
+  },
+  "partition_alt": {
+    "path": "data/processed/target_mapping/11b_null_family_partition_ALT.csv",
+    "sha256": "aee6c742c52ce77c0ef50b1c629b3501fa4441fb5a3c0b38cf194b107ca0e1a7",
+    "rule": "이중소속(n_families_in_source>1) 표적을 permutation에서 제외 후 family 크기 재계산",
+    "columns": [
+      "target_id",
+      "family_id_assigned",
+      "n_families_in_source",
+      "tiebreak_applied",
+      "exchangeable",
+      "excluded"
+    ],
+    "n_excluded": 14,
+    "n_exchangeable_targets": 1162,
+    "n_fixed_or_excluded": 29,
+    "enters_p_emp": false,
+    "spec": {
+      "B_family_ALT": 100,
+      "B_global_ALT": 10,
+      "paired_same_seed_reuse": true,
+      "discordant_rule": "양 규칙 full-B 후 보수적(큰) p_emp 채택"
+    }
+  },
+  "assert_vs_probe_precheck": {
+    "n_targets": {
+      "live": 1191,
+      "spec_expected": 1191,
+      "probe_precheck": 1191,
+      "match": true
+    },
+    "n_families": {
+      "live": 42,
+      "spec_expected": 42,
+      "probe_precheck": 42,
+      "match": true
+    },
+    "n_tiebreak_applied": {
+      "live": 14,
+      "spec_expected": 14,
+      "probe_precheck": 14,
+      "match": true
+    },
+    "n_fixed_targets": {
+      "live": 13,
+      "spec_expected": 13,
+      "probe_precheck": 13,
+      "match": true
+    },
+    "n_exchangeable_targets": {
+      "live": 1178,
+      "spec_expected": 1178,
+      "probe_precheck": 1178,
+      "match": true
+    },
+    "n_fixed_families": {
+      "live": 11,
+      "spec_expected": 11,
+      "probe_precheck": 11,
+      "match": true
+    },
+    "n_exchangeable_families": {
+      "live": 31,
+      "spec_expected": 31,
+      "probe_precheck": 31,
+      "match": true
+    }
+  },
+  "sealed_shape_check": {
+    "path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz",
+    "read_mode": "zip 내 .npy 헤더만(값 미로드)",
+    "npz_members": [
+      "oof.npy",
+      "cid.npy",
+      "fold.npy"
+    ],
+    "shape": [
+      1092,
+      370
+    ],
+    "dtype": "float64",
+    "fortran_order": false,
+    "n_elements": 404040,
+    "expected_n_elements": 404040,
+    "match": true,
+    "correction": "최초 기재 '불일치 원소 0/403,040' 은 오기. 병기된 식 1092×370 = 404,040 이므로 자기반증. 실측 shape (1092, 370) 재확인 → 정정값 0/404,040."
+  },
+  "sealed_access_log": {
+    "n_entries": 6,
+    "by_type": {
+      "machine_read": 6
+    },
+    "n_open_sealed": 0,
+    "sealed_human_read": false,
+    "all_human_exposure_false": true
+  },
+  "integrity": {
+    "network_calls": 0,
+    "models_trained": 0,
+    "raw_data_modified": false,
+    "docs30_modified": false,
+    "sealed_values_human_read": false,
+    "empirical_p_called": false,
+    "bootstrap_or_signflip": false,
+    "ladder_freeze_modified": false,
+    "sap_modules_modified": false,
+    "git_commit": false
+  },
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O"
+  }
+}

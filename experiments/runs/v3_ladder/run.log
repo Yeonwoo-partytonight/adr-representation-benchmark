@@ -1,0 +1,237 @@
+[ladder] device=mps | arch=gin | seeds=[42, 1, 2, 3, 4] | A_wd(focal γ2.0+sqrt pw+wd 0.0001)
+[data] 분자 1092 × PT 370 | train 873 / valid 109 / test 110 (실패 0)
+  === M0 (side_dim=0, fusion=concat) {} ===
+/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/v3_Multimodal/src/train_ladder.py:234: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:839.)
+  tot += float(loss) * batch.num_graphs
+      ep   1 loss 0.2526 validMacro 0.0942 best 0.0942@1
+      ep  40 loss 0.0970 validMacro 0.1310 best 0.1420@38
+      ep  80 loss 0.0836 validMacro 0.1507 best 0.1522@75
+      ep 120 loss 0.0726 validMacro 0.1521 best 0.1646@110
+      ep 160 loss 0.0676 validMacro 0.1679 best 0.1679@160
+      early stop @ep195 (best 0.1733@165)
+    [seed 42] M0 macroPR 0.1522 microPR 0.1659 validMacro 0.1733 evalPT 301 → 저장
+      ep   1 loss 0.2387 validMacro 0.0949 best 0.0949@1
+      ep  40 loss 0.0975 validMacro 0.1170 best 0.1416@36
+      ep  80 loss 0.0754 validMacro 0.1619 best 0.1667@74
+      early stop @ep104 (best 0.1667@74)
+    [seed 1] M0 macroPR 0.1153 microPR 0.1512 validMacro 0.1667 evalPT 301 → 저장
+      ep   1 loss 0.2462 validMacro 0.0853 best 0.0853@1
+      ep  40 loss 0.1030 validMacro 0.1353 best 0.1419@36
+      ep  80 loss 0.0826 validMacro 0.1447 best 0.1638@73
+      ep 120 loss 0.0744 validMacro 0.1671 best 0.1776@103
+      early stop @ep133 (best 0.1776@103)
+    [seed 2] M0 macroPR 0.1316 microPR 0.1619 validMacro 0.1776 evalPT 301 → 저장
+      ep   1 loss 0.2288 validMacro 0.0927 best 0.0927@1
+      ep  40 loss 0.0995 validMacro 0.1588 best 0.1588@40
+      ep  80 loss 0.0799 validMacro 0.1357 best 0.1705@53
+      early stop @ep83 (best 0.1705@53)
+    [seed 3] M0 macroPR 0.1404 microPR 0.1776 validMacro 0.1705 evalPT 301 → 저장
+      ep   1 loss 0.2458 validMacro 0.1057 best 0.1057@1
+      ep  40 loss 0.0970 validMacro 0.1501 best 0.1563@39
+      ep  80 loss 0.0803 validMacro 0.1622 best 0.1856@76
+      early stop @ep106 (best 0.1856@76)
+    [seed 4] M0 macroPR 0.1376 microPR 0.1581 validMacro 0.1856 evalPT 301 → 저장
+  === M1 (side_dim=1, fusion=concat) {} ===
+      ep   1 loss 0.2508 validMacro 0.0976 best 0.0976@1
+      ep  40 loss 0.1012 validMacro 0.1677 best 0.1766@35
+      early stop @ep65 (best 0.1766@35)
+    [seed 42] M1 macroPR 0.1560 microPR 0.2111 validMacro 0.1766 evalPT 301 → 저장
+      ep   1 loss 0.2487 validMacro 0.1058 best 0.1058@1
+      ep  40 loss 0.0964 validMacro 0.1507 best 0.1570@36
+      ep  80 loss 0.0795 validMacro 0.1498 best 0.1667@72
+      early stop @ep102 (best 0.1667@72)
+    [seed 1] M1 macroPR 0.1530 microPR 0.1794 validMacro 0.1667 evalPT 301 → 저장
+      ep   1 loss 0.2409 validMacro 0.0968 best 0.0968@1
+      ep  40 loss 0.0993 validMacro 0.1420 best 0.1575@37
+      ep  80 loss 0.0808 validMacro 0.1782 best 0.1813@77
+      ep 120 loss 0.0695 validMacro 0.1740 best 0.1881@94
+      early stop @ep124 (best 0.1881@94)
+    [seed 2] M1 macroPR 0.1389 microPR 0.1508 validMacro 0.1881 evalPT 301 → 저장
+      ep   1 loss 0.2382 validMacro 0.0977 best 0.0977@1
+      ep  40 loss 0.0999 validMacro 0.1497 best 0.1566@30
+      ep  80 loss 0.0801 validMacro 0.1570 best 0.1624@67
+      ep 120 loss 0.0743 validMacro 0.1564 best 0.1726@99
+      ep 160 loss 0.0692 validMacro 0.1651 best 0.1842@141
+      early stop @ep191 (best 0.1883@161)
+    [seed 3] M1 macroPR 0.1649 microPR 0.1896 validMacro 0.1883 evalPT 301 → 저장
+      ep   1 loss 0.2358 validMacro 0.0874 best 0.0874@1
+      ep  40 loss 0.1010 validMacro 0.1518 best 0.1518@40
+      ep  80 loss 0.0786 validMacro 0.1578 best 0.1692@75
+      early stop @ep105 (best 0.1692@75)
+    [seed 4] M1 macroPR 0.1543 microPR 0.1967 validMacro 0.1692 evalPT 301 → 저장
+  === M2 (side_dim=64, fusion=concat) {'pca_evr': 0.9199643844889103, 'n_fit': 671, 'n_mapped': 847} ===
+      ep   1 loss 0.2271 validMacro 0.0988 best 0.0988@1
+      ep  40 loss 0.0647 validMacro 0.2021 best 0.2168@22
+      early stop @ep52 (best 0.2168@22)
+    [seed 42] M2 macroPR 0.1954 microPR 0.2313 validMacro 0.2168 evalPT 301 → 저장
+      ep   1 loss 0.2310 validMacro 0.0934 best 0.0934@1
+      ep  40 loss 0.0645 validMacro 0.2089 best 0.2097@30
+      ep  80 loss 0.0513 validMacro 0.1966 best 0.2140@60
+      early stop @ep90 (best 0.2140@60)
+    [seed 1] M2 macroPR 0.2055 microPR 0.2484 validMacro 0.2140 evalPT 301 → 저장
+      ep   1 loss 0.2238 validMacro 0.0934 best 0.0934@1
+      ep  40 loss 0.0634 validMacro 0.1965 best 0.2139@37
+      early stop @ep67 (best 0.2139@37)
+    [seed 2] M2 macroPR 0.1881 microPR 0.2343 validMacro 0.2139 evalPT 301 → 저장
+      ep   1 loss 0.2314 validMacro 0.1070 best 0.1070@1
+      ep  40 loss 0.0639 validMacro 0.1915 best 0.2078@26
+      early stop @ep56 (best 0.2078@26)
+    [seed 3] M2 macroPR 0.1866 microPR 0.2336 validMacro 0.2078 evalPT 301 → 저장
+      ep   1 loss 0.2321 validMacro 0.1015 best 0.1015@1
+      ep  40 loss 0.0638 validMacro 0.2001 best 0.2095@23
+      early stop @ep53 (best 0.2095@23)
+    [seed 4] M2 macroPR 0.1967 microPR 0.2276 validMacro 0.2095 evalPT 301 → 저장
+  === M3 (side_dim=66, fusion=concat) {'pca_evr': 0.9199643844889103, 'n_fit': 671, 'n_mapped': 847} ===
+      ep   1 loss 0.2339 validMacro 0.0991 best 0.0991@1
+      ep  40 loss 0.0643 validMacro 0.1829 best 0.2027@33
+      early stop @ep73 (best 0.2061@43)
+    [seed 42] M3 macroPR 0.2220 microPR 0.2585 validMacro 0.2061 evalPT 301 → 저장
+      ep   1 loss 0.2259 validMacro 0.0899 best 0.0899@1
+      ep  40 loss 0.0617 validMacro 0.2057 best 0.2112@35
+      early stop @ep65 (best 0.2112@35)
+    [seed 1] M3 macroPR 0.2154 microPR 0.2404 validMacro 0.2112 evalPT 301 → 저장
+      ep   1 loss 0.2253 validMacro 0.1034 best 0.1034@1
+      ep  40 loss 0.0651 validMacro 0.1989 best 0.2146@31
+      early stop @ep61 (best 0.2146@31)
+    [seed 2] M3 macroPR 0.1757 microPR 0.2171 validMacro 0.2146 evalPT 301 → 저장
+      ep   1 loss 0.2190 validMacro 0.0902 best 0.0902@1
+      ep  40 loss 0.0637 validMacro 0.1946 best 0.2092@34
+      early stop @ep64 (best 0.2092@34)
+    [seed 3] M3 macroPR 0.2167 microPR 0.2445 validMacro 0.2092 evalPT 301 → 저장
+      ep   1 loss 0.2397 validMacro 0.0905 best 0.0905@1
+      ep  40 loss 0.0651 validMacro 0.2023 best 0.2142@32
+      early stop @ep62 (best 0.2142@32)
+    [seed 4] M3 macroPR 0.2128 microPR 0.2337 validMacro 0.2142 evalPT 301 → 저장
+  === M4 (side_dim=64, fusion=gated) {'pca_evr': 0.9199643844889103, 'n_fit': 671, 'n_mapped': 847} ===
+      ep   1 loss 0.1945 validMacro 0.0988 best 0.0988@1
+      ep  40 loss 0.0611 validMacro 0.2178 best 0.2268@39
+      early stop @ep69 (best 0.2268@39)
+    [seed 42] M4 macroPR 0.2132 microPR 0.2527 validMacro 0.2268 evalPT 301 → 저장
+      ep   1 loss 0.1906 validMacro 0.0961 best 0.0961@1
+      ep  40 loss 0.0620 validMacro 0.2063 best 0.2138@32
+      early stop @ep62 (best 0.2138@32)
+    [seed 1] M4 macroPR 0.2116 microPR 0.2451 validMacro 0.2138 evalPT 301 → 저장
+      ep   1 loss 0.2023 validMacro 0.0922 best 0.0922@1
+      ep  40 loss 0.0645 validMacro 0.2064 best 0.2151@33
+      early stop @ep63 (best 0.2151@33)
+    [seed 2] M4 macroPR 0.1912 microPR 0.2292 validMacro 0.2151 evalPT 301 → 저장
+      ep   1 loss 0.1900 validMacro 0.1027 best 0.1027@1
+      ep  40 loss 0.0617 validMacro 0.1903 best 0.2038@31
+      early stop @ep61 (best 0.2038@31)
+    [seed 3] M4 macroPR 0.1976 microPR 0.2267 validMacro 0.2038 evalPT 301 → 저장
+      ep   1 loss 0.1912 validMacro 0.0957 best 0.0957@1
+      ep  40 loss 0.0619 validMacro 0.2052 best 0.2081@22
+      early stop @ep52 (best 0.2081@22)
+    [seed 4] M4 macroPR 0.1949 microPR 0.2298 validMacro 0.2081 evalPT 301 → 저장
+  === A_raw1024 (side_dim=1024, fusion=concat) {'n_fit': 671, 'n_mapped': 847} ===
+      ep   1 loss 0.1716 validMacro 0.0999 best 0.0999@1
+      ep  40 loss 0.0541 validMacro 0.1922 best 0.2033@37
+      ep  80 loss 0.0468 validMacro 0.1943 best 0.2127@78
+      early stop @ep119 (best 0.2148@89)
+    [seed 42] A_raw1024 macroPR 0.2094 microPR 0.2206 validMacro 0.2148 evalPT 301 → 저장
+      ep   1 loss 0.1774 validMacro 0.1086 best 0.1086@1
+      ep  40 loss 0.0569 validMacro 0.1879 best 0.1975@23
+      ep  80 loss 0.0446 validMacro 0.2053 best 0.2053@80
+      early stop @ep110 (best 0.2053@80)
+    [seed 1] A_raw1024 macroPR 0.2089 microPR 0.2306 validMacro 0.2053 evalPT 301 → 저장
+      ep   1 loss 0.1777 validMacro 0.0944 best 0.0944@1
+      ep  40 loss 0.0554 validMacro 0.1913 best 0.2130@19
+      early stop @ep49 (best 0.2130@19)
+    [seed 2] A_raw1024 macroPR 0.2021 microPR 0.2361 validMacro 0.2130 evalPT 301 → 저장
+      ep   1 loss 0.1730 validMacro 0.1093 best 0.1093@1
+      ep  40 loss 0.0570 validMacro 0.1937 best 0.2063@38
+      early stop @ep68 (best 0.2063@38)
+    [seed 3] A_raw1024 macroPR 0.2076 microPR 0.2360 validMacro 0.2063 evalPT 301 → 저장
+      ep   1 loss 0.1781 validMacro 0.0995 best 0.0995@1
+      ep  40 loss 0.0565 validMacro 0.1830 best 0.2188@18
+      early stop @ep48 (best 0.2188@18)
+    [seed 4] A_raw1024 macroPR 0.2151 microPR 0.2276 validMacro 0.2188 evalPT 301 → 저장
+  === A_chunk (side_dim=64, fusion=concat) {'pca_evr': 0.920123894415561, 'n_fit': 671, 'n_mapped': 847} ===
+      ep   1 loss 0.2284 validMacro 0.1036 best 0.1036@1
+      ep  40 loss 0.0651 validMacro 0.1922 best 0.2132@21
+      early stop @ep51 (best 0.2132@21)
+    [seed 42] A_chunk macroPR 0.1895 microPR 0.2582 validMacro 0.2132 evalPT 301 → 저장
+      ep   1 loss 0.2310 validMacro 0.0944 best 0.0944@1
+      ep  40 loss 0.0638 validMacro 0.2020 best 0.2128@30
+      early stop @ep60 (best 0.2128@30)
+    [seed 1] A_chunk macroPR 0.2150 microPR 0.2409 validMacro 0.2128 evalPT 301 → 저장
+      ep   1 loss 0.2218 validMacro 0.0969 best 0.0969@1
+      ep  40 loss 0.0661 validMacro 0.1960 best 0.2048@34
+      early stop @ep64 (best 0.2048@34)
+    [seed 2] A_chunk macroPR 0.2160 microPR 0.2431 validMacro 0.2048 evalPT 301 → 저장
+      ep   1 loss 0.2311 validMacro 0.0995 best 0.0995@1
+      ep  40 loss 0.0627 validMacro 0.1944 best 0.2137@27
+      early stop @ep57 (best 0.2137@27)
+    [seed 3] A_chunk macroPR 0.1970 microPR 0.2200 validMacro 0.2137 evalPT 301 → 저장
+      ep   1 loss 0.2317 validMacro 0.0984 best 0.0984@1
+      ep  40 loss 0.0636 validMacro 0.1796 best 0.2010@27
+      early stop @ep57 (best 0.2010@27)
+    [seed 4] A_chunk macroPR 0.1900 microPR 0.2359 validMacro 0.2010 evalPT 301 → 저장
+  === A_mean (side_dim=64, fusion=concat) {'pca_evr': 0.9300198553142015, 'n_fit': 671, 'n_mapped': 847} ===
+      ep   1 loss 0.2283 validMacro 0.0938 best 0.0938@1
+      ep  40 loss 0.0700 validMacro 0.1794 best 0.1894@25
+      early stop @ep55 (best 0.1894@25)
+    [seed 42] A_mean macroPR 0.1665 microPR 0.2128 validMacro 0.1894 evalPT 301 → 저장
+      ep   1 loss 0.2315 validMacro 0.0938 best 0.0938@1
+      ep  40 loss 0.0681 validMacro 0.1873 best 0.1895@39
+      early stop @ep75 (best 0.1986@45)
+    [seed 1] A_mean macroPR 0.1805 microPR 0.2423 validMacro 0.1986 evalPT 301 → 저장
+      ep   1 loss 0.2224 validMacro 0.0957 best 0.0957@1
+      ep  40 loss 0.0677 validMacro 0.1791 best 0.1884@28
+      ep  80 loss 0.0548 validMacro 0.1798 best 0.1891@51
+      early stop @ep81 (best 0.1891@51)
+    [seed 2] A_mean macroPR 0.1725 microPR 0.2226 validMacro 0.1891 evalPT 301 → 저장
+      ep   1 loss 0.2330 validMacro 0.1021 best 0.1021@1
+      ep  40 loss 0.0729 validMacro 0.1949 best 0.2103@32
+      early stop @ep62 (best 0.2103@32)
+    [seed 3] A_mean macroPR 0.1733 microPR 0.2240 validMacro 0.2103 evalPT 301 → 저장
+      ep   1 loss 0.2318 validMacro 0.0905 best 0.0905@1
+      ep  40 loss 0.0673 validMacro 0.1899 best 0.2000@39
+      early stop @ep72 (best 0.2021@42)
+    [seed 4] A_mean macroPR 0.1847 microPR 0.2283 validMacro 0.2021 evalPT 301 → 저장
+  === A_top1 (side_dim=64, fusion=concat) {'pca_evr': 0.9112080535272181, 'n_fit': 671, 'n_mapped': 847} ===
+      ep   1 loss 0.2302 validMacro 0.0941 best 0.0941@1
+      ep  40 loss 0.0677 validMacro 0.1794 best 0.1799@32
+      early stop @ep62 (best 0.1799@32)
+    [seed 42] A_top1 macroPR 0.1836 microPR 0.2228 validMacro 0.1799 evalPT 301 → 저장
+      ep   1 loss 0.2325 validMacro 0.1038 best 0.1038@1
+      ep  40 loss 0.0655 validMacro 0.1892 best 0.1957@35
+      ep  80 loss 0.0542 validMacro 0.1668 best 0.1980@50
+      early stop @ep80 (best 0.1980@50)
+    [seed 1] A_top1 macroPR 0.1700 microPR 0.2138 validMacro 0.1980 evalPT 301 → 저장
+      ep   1 loss 0.2227 validMacro 0.0975 best 0.0975@1
+      ep  40 loss 0.0668 validMacro 0.1783 best 0.1853@18
+      early stop @ep48 (best 0.1853@18)
+    [seed 2] A_top1 macroPR 0.1672 microPR 0.2155 validMacro 0.1853 evalPT 301 → 저장
+      ep   1 loss 0.2308 validMacro 0.0996 best 0.0996@1
+      ep  40 loss 0.0663 validMacro 0.1810 best 0.1845@25
+      early stop @ep55 (best 0.1845@25)
+    [seed 3] A_top1 macroPR 0.1704 microPR 0.1971 validMacro 0.1845 evalPT 301 → 저장
+      ep   1 loss 0.2299 validMacro 0.0995 best 0.0995@1
+      ep  40 loss 0.0663 validMacro 0.1841 best 0.1880@38
+      ep  80 loss 0.0560 validMacro 0.1743 best 0.2001@54
+      early stop @ep84 (best 0.2001@54)
+    [seed 4] A_top1 macroPR 0.1858 microPR 0.2135 validMacro 0.2001 evalPT 301 → 저장
+  === A_allorg (side_dim=64, fusion=concat) {'pca_evr': 0.9075331977348622, 'n_fit': 689, 'n_mapped': 868} ===
+      ep   1 loss 0.2283 validMacro 0.0971 best 0.0971@1
+      ep  40 loss 0.0636 validMacro 0.2216 best 0.2217@36
+      early stop @ep66 (best 0.2217@36)
+    [seed 42] A_allorg macroPR 0.2356 microPR 0.2422 validMacro 0.2217 evalPT 301 → 저장
+      ep   1 loss 0.2343 validMacro 0.0900 best 0.0900@1
+      ep  40 loss 0.0642 validMacro 0.1967 best 0.2048@33
+      ep  80 loss 0.0502 validMacro 0.1988 best 0.2107@60
+      early stop @ep90 (best 0.2107@60)
+    [seed 1] A_allorg macroPR 0.2249 microPR 0.2461 validMacro 0.2107 evalPT 301 → 저장
+      ep   1 loss 0.2246 validMacro 0.0998 best 0.0998@1
+      ep  40 loss 0.0626 validMacro 0.2195 best 0.2220@38
+      early stop @ep79 (best 0.2238@49)
+    [seed 2] A_allorg macroPR 0.2202 microPR 0.2478 validMacro 0.2238 evalPT 301 → 저장
+      ep   1 loss 0.2292 validMacro 0.1052 best 0.1052@1
+      ep  40 loss 0.0634 validMacro 0.2210 best 0.2288@17
+      early stop @ep47 (best 0.2288@17)
+    [seed 3] A_allorg macroPR 0.2137 microPR 0.2361 validMacro 0.2288 evalPT 301 → 저장
+      ep   1 loss 0.2287 validMacro 0.0985 best 0.0985@1
+      ep  40 loss 0.0643 validMacro 0.1992 best 0.2167@33
+      early stop @ep63 (best 0.2167@33)
+    [seed 4] A_allorg macroPR 0.2467 microPR 0.2448 validMacro 0.2167 evalPT 301 → 저장

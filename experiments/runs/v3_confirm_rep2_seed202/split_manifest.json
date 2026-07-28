@@ -1,0 +1,218 @@
+{
+  "step": "docs/30 §13 실행순서 5 — 확증 OOF 반복2(seed 202) split 생성",
+  "created_kst": "2026-07-27 21:29:01 KST",
+  "prereg": "docs/30_preregistration_OSF_clean.md §6",
+  "repeat": 2,
+  "split_seed": 202,
+  "n_fold": 5,
+  "seed_scheme_note": "반복 r = seed 200+r (docs/33 2026-07-27 11:10 사전확정, delta_sign=null 시점 기록). 204·205 는 미사용 예비 — 결과 기반 교체·추가·재추첨 영구 금지.",
+  "code_path": "반복1(`confirmatory_oof_rep1.py`)의 동일 함수 객체 재사용 (build_scaffold_groups·assign_folds·split_diagnostics). 인자화 = seed·repeat·경로뿐.",
+  "code_path_equivalence_proof": "본 실행 --stage equivalence: seed=201 재현본이 반복1 folds.json 과 sha256 동일",
+  "fold_sizes": [
+    218,
+    218,
+    219,
+    218,
+    219
+  ],
+  "diagnostics": {
+    "n_drugs": 1092,
+    "n_pt": 370,
+    "n_scaffold_groups": 732,
+    "fold_sizes": [
+      218,
+      218,
+      219,
+      218,
+      219
+    ],
+    "label_density_test_spread": {
+      "min": 0.04417307215472353,
+      "max": 0.05254843884980871,
+      "range": 0.008375366695085179
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "n_test_drugs": 218,
+        "n_train_drugs": 874,
+        "n_test_scaffold_groups": 54,
+        "n_test_mapped_drugs": 155,
+        "n_train_mapped_drugs": 692,
+        "train_positive_per_pt": {
+          "min": 5,
+          "median": 17.0,
+          "max": 551,
+          "n_pt_lt1": 0,
+          "n_pt_lt3": 0
+        },
+        "test_positive_per_pt": {
+          "min": 0,
+          "median": 5.0,
+          "n_pt_zero_positive": 6
+        },
+        "label_density_test": 0.04417307215472353,
+        "label_density_train": 0.050049477395015154,
+        "target_jaccard_train_test": 0.3979848866498741,
+        "n_targets_train": 1139,
+        "n_targets_test": 526
+      },
+      {
+        "fold": 1,
+        "n_test_drugs": 218,
+        "n_train_drugs": 874,
+        "n_test_scaffold_groups": 172,
+        "n_test_mapped_drugs": 169,
+        "n_train_mapped_drugs": 678,
+        "train_positive_per_pt": {
+          "min": 6,
+          "median": 17.0,
+          "max": 534,
+          "n_pt_lt1": 0,
+          "n_pt_lt3": 0
+        },
+        "test_positive_per_pt": {
+          "min": 0,
+          "median": 4.0,
+          "n_pt_zero_positive": 21
+        },
+        "label_density_test": 0.04809075130176048,
+        "label_density_train": 0.049072298843465895,
+        "target_jaccard_train_test": 0.5264483627204031,
+        "n_targets_train": 1093,
+        "n_targets_test": 725
+      },
+      {
+        "fold": 2,
+        "n_test_drugs": 219,
+        "n_train_drugs": 873,
+        "n_test_scaffold_groups": 161,
+        "n_test_mapped_drugs": 169,
+        "n_train_mapped_drugs": 678,
+        "train_positive_per_pt": {
+          "min": 5,
+          "median": 17.0,
+          "max": 537,
+          "n_pt_lt1": 0,
+          "n_pt_lt3": 0
+        },
+        "test_positive_per_pt": {
+          "min": 0,
+          "median": 5.0,
+          "n_pt_zero_positive": 12
+        },
+        "label_density_test": 0.048747377514500805,
+        "label_density_train": 0.04890870251694994,
+        "target_jaccard_train_test": 0.44584382871536526,
+        "n_targets_train": 1108,
+        "n_targets_test": 614
+      },
+      {
+        "fold": 3,
+        "n_test_drugs": 218,
+        "n_train_drugs": 874,
+        "n_test_scaffold_groups": 168,
+        "n_test_mapped_drugs": 176,
+        "n_train_mapped_drugs": 671,
+        "train_positive_per_pt": {
+          "min": 5,
+          "median": 18.0,
+          "max": 540,
+          "n_pt_lt1": 0,
+          "n_pt_lt3": 0
+        },
+        "test_positive_per_pt": {
+          "min": 0,
+          "median": 5.0,
+          "n_pt_zero_positive": 6
+        },
+        "label_density_test": 0.05080585172328292,
+        "label_density_train": 0.04839507699919599,
+        "target_jaccard_train_test": 0.5524769101595298,
+        "n_targets_train": 1098,
+        "n_targets_test": 751
+      },
+      {
+        "fold": 4,
+        "n_test_drugs": 219,
+        "n_train_drugs": 873,
+        "n_test_scaffold_groups": 177,
+        "n_test_mapped_drugs": 178,
+        "n_train_mapped_drugs": 669,
+        "train_positive_per_pt": {
+          "min": 4,
+          "median": 17.0,
+          "max": 522,
+          "n_pt_lt1": 0,
+          "n_pt_lt3": 0
+        },
+        "test_positive_per_pt": {
+          "min": 0,
+          "median": 5.0,
+          "n_pt_zero_positive": 14
+        },
+        "label_density_test": 0.05254843884980871,
+        "label_density_train": 0.04795517166651187,
+        "target_jaccard_train_test": 0.4357682619647355,
+        "n_targets_train": 1115,
+        "n_targets_test": 595
+      }
+    ],
+    "gate_A": {
+      "scaffold_group_disjoint": true,
+      "fold_size_band_ok": true,
+      "rare_pt_min1_all_train_folds": true,
+      "n_pt_lt3_max_over_folds": 0,
+      "bseq_fit_rows_ok": true,
+      "gate_A_pass": true
+    }
+  },
+  "gate0": {
+    "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "ladder_freeze_match": true,
+    "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_manifest_match": true,
+    "sap_version": "1.1",
+    "sap_all_validation_pass": true,
+    "sap_modules_match": {
+      "__init__.py": true,
+      "metrics.py": true,
+      "redaction.py": true,
+      "consensus.py": true,
+      "bootstrap.py": true,
+      "signflip.py": true,
+      "decision.py": true,
+      "null_generator.py": true,
+      "unseen_target.py": true,
+      "synthetic.py": true,
+      "freeze.py": true
+    },
+    "sap_n_modules_verified": 11,
+    "sap_integrity_confirmatory_untouched": true,
+    "primary_B_m1b_dim": 10,
+    "A0_primary_dim": 10,
+    "A1_all_blocks_train_only_fit": true,
+    "A1_bseq_pca_fit_rows": 671,
+    "A5_target_count_mismatch": 0,
+    "gate0_pass": true
+  },
+  "hard_asserts": {
+    "n_drugs_all_1092": true,
+    "n_pt_370": true,
+    "n_scaffold_groups_all_732": true,
+    "every_drug_exactly_one_fold": true,
+    "scaffold_group_disjoint_no_fold_crossing": true,
+    "all_groups_assigned": true,
+    "gate_A_pass": true,
+    "bseq_fit_rows_ok": true,
+    "rare_pt_min1_all_train_folds": true
+  },
+  "integrity": {
+    "confirmatory_oof_accessed": false,
+    "models_trained": 0,
+    "network_calls": 0,
+    "rep1_artifacts_modified": false
+  }
+}

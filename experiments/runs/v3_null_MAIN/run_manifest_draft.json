@@ -1,0 +1,109 @@
+{
+  "_status": "DRAFT — 미실행. §13-4 null 본런은 착수하지 않았다(블록 D 완료 후 별도 지시로만 착수).",
+  "_scope": "결과-독립 실행 계약서. AP·Δ·p·T_b 값 없음.",
+  "ts_kst_drafted": "2026-07-27 21:16 KST",
+  "spec_refs": [
+    "docs/30 §5·§8·§13 (OSF 동결 사전등록 — 무수정)",
+    "docs/33 항목8~14 (2026-07-27 21:16 KST 확정)",
+    "v3_Multimodal/src/sap/null_generator.py (sha16 90886abce256a130 · 바이트 무수정)",
+    "experiments/sap/manifest.json (sha16 756d485feb4715e9 · sap_version 1.1)"
+  ],
+
+  "modes": ["global", "family"],
+  "B": 1000,
+  "B_source": "sap.null_generator.NULL_B (정확값 동결 — 하향·상향·조기중단·재시도 영구 금지)",
+  "seeds_rule": {
+    "namespace": "본실행 seed ≤ 1,000,000 (프로브 9,000,001~ 와 교집합 0 — assert 필수)",
+    "global": "b = 0..999 → seed = 1000 + b  (1000~1999)",
+    "family": "b = 0..999 → seed = 11000 + b (11000~11999)",
+    "determinism": "permutation은 seed만으로 완전 결정(프로브 assert: 같은 seed → 같은 mapping). 프로세스 분할 무관.",
+    "reserved_excluded": [42, 201, 202, 203, 204, 205],
+    "assert": "본실행 seed 집합 ∩ (PROBE_SEEDS ∪ RESERVED_SEEDS) = ∅"
+  },
+
+  "T_definition": "observed M2b macro AP",
+  "T_definition_note": "재배치는 B_seq만 교란하고 M1b는 permutation 불변(상수) → #{Δ_b ≥ Δ_obs} = #{T_b ≥ T_obs} → p_emp 동일. 구현은 M2b AP 기준(상수항 감산 불필요).",
+  "T_obs_basis": "rep1_seed201 (CONFIRMED 2026-07-27)",
+  "T_obs_basis_note": "T_obs와 모든 T_b는 동일 절차(rep1 split·동일 5-fold 배정·RF random_state=42)로 산출해야 한다. 등록 §8 'consensus 위 추론' 문면과의 충돌은 docs/33 항목11에 정직 기재됨. consensus 기준 null은 사후 민감도로만(비용 ≈3배).",
+  "sidedness": "one-sided-upper",
+  "p_emp_formula": "(1 + #{T_b >= T_obs}) / (B + 1)",
+  "mc_se": "sqrt(p(1-p)/B) — sap.null_generator.empirical_p 가 동시 반환",
+  "pass_rule": "global·family **둘 다** p_emp < alpha",
+  "rf_common_seed": 42,
+  "pca_rf_refit_scope": "permutation마다 B_seq PCA를 fold-train(∩매핑)에서 재적합 + RF fold별 재학습(random_state=42 공통)",
+  "family_partition": {
+    "primary": "data/processed/target_mapping/11_null_family_partition.csv (sha256 a95e26f9a527e9451ee12f9bccf851e0c8912f57ea7b36920d91d6c7281b0a51)",
+    "tiebreak": "family_id 문자열 사전순 최소값 1개를 교환 family로 배정 (결정적·결과 무참조)",
+    "counts": {"n_targets": 1191, "n_families": 42, "n_tiebreak_applied": 14,
+               "n_fixed_targets": 13, "n_exchangeable_targets": 1178}
+  },
+
+  "storage_policy": "T_b scalar only + first-3 OOF audit",
+  "storage_detail": {
+    "per_permutation_sealed_record": ["mode", "seed", "oof_sha256", "macro_AP", "delta",
+                                      "wall_s", "cpu_s", "peak_rss"],
+    "full_oof_npz": "FORBIDDEN (전량 저장 시 ≈1.11GB — 프로브 실측 554KB × 2000)",
+    "audit_exception": "각 모드 최초 3개 permutation OOF npz 를 _sealed/ 에 보관(총 6개)",
+    "public_files_may_contain": ["시간", "메모리", "코어 수", "개수", "해시", "PASS/FAIL"],
+    "public_files_must_not_contain": ["macro AP", "delta", "T_b", "p_emp", "null 분포", "PT별·fold별 수치"]
+  },
+
+  "parallel_policy": "process-level + runtime n_jobs override, 0-diff proven only",
+  "parallel_detail": {
+    "ladder_freeze_json": "바이트 불변 — 어떤 값도 파일 수정 금지 (sha16 b885585aefbabb32)",
+    "allowed_axis_1": "permutation 단위 프로세스 병렬 (b별 독립·결정적 seed 분할)",
+    "allowed_axis_2": "RandomForest / MultiOutputClassifier n_jobs 의 런타임 override (메모리상 dict만)",
+    "adoption_condition": "identity control 0-diff 증명(예측 배열 sha256 비트 동일)이 붙은 구성만 채택. 증명 없는 구성은 영구 제외.",
+    "measured_by": "블록 D (측정 전용 — 본런 구성 채택은 별도 지시)"
+  },
+
+  "checkpoint": {
+    "format": "append-only JSONL",
+    "path": "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl",
+    "record": {"mode": "...", "seed": 0, "oof_sha256": "...", "macro_AP": 0.0, "delta": 0.0,
+               "wall_s": 0.0, "cpu_s": 0.0, "peak_rss": 0, "ts_kst": "..."},
+    "resume_rule": "완료 seed skip (checkpoint 에 존재하는 (mode, seed) 는 재실행하지 않음)",
+    "partial_aggregation": "FORBIDDEN — p_emp 는 모드별 1000개 전량·중복 0·누락 0 일 때만 계산",
+    "aggregation_assert": ["len(unique (mode,seed)) == 1000 per mode",
+                           "duplicate (mode,seed) == 0",
+                           "missing seed in expected range == 0",
+                           "b_equals_null_b == True"]
+  },
+
+  "gates": [
+    "G1 동시성 불변성 — 워커 수를 바꿔도 각 permutation 예측 sha256 동일(0-diff). 깨지면 프로세스 병렬 경로 폐기.",
+    "G2 워커 불변성 — 동일 워커 수 재실행 시 checkpoint 전 항목 sha256 재현.",
+    "G3 identity 재확인 — 본런 시작 전 identity permutation 이 §13-3 sealed oof_M2b.npz 와 배열 sha256 동일(불일치 원소 0/404,040)."
+  ],
+
+  "SENS_ALT_spec": {
+    "rule": "이중소속 14 표적을 permutation 에서 제외",
+    "partition": "data/processed/target_mapping/11b_null_family_partition_ALT.csv (sha256 aee6c742c52ce77c0ef50b1c629b3501fa4441fb5a3c0b38cf194b107ca0e1a7)",
+    "paired": true,
+    "paired_note": "primary 와 동일 seed 재사용(몬테카를로 잡음 상쇄)",
+    "B_family_ALT": 100,
+    "B_global_ALT": 10,
+    "global_role": "음성대조 — global 은 tie-break 규칙과 무관하므로 차이가 나오면 하네스 버그 신호",
+    "enters_p_emp": false,
+    "discordant_rule": "primary 와 ALT 결론이 갈리면 양 규칙 full-B(1000) 재실행 후 보수적(큰) p_emp 채택. 유리한 쪽 선택 금지.",
+    "n_exchangeable_targets_ALT": 1162
+  },
+
+  "abort_conditions": [
+    "게이트0 실패(ladder_freeze / SAP manifest / 11모듈 sha 불일치)",
+    "rep1 _sealed 3종 sha256 변동",
+    "G3 identity 재확인 FAIL (불일치 원소 != 0)",
+    "G1 동시성 불변성 위반(워커 수에 따라 예측 sha256 상이)",
+    "assert_preservation 실패(bijection·target별 embedding 공유·degree/incidence/결측 보존 중 하나라도)",
+    "mask 또는 n_targets 가 재배치로 변동",
+    "checkpoint 중복 (mode,seed) 검출",
+    "완료 permutation 수 != 1000 인 상태에서 p_emp 계산 시도",
+    "디스크 여유 부족 또는 peak RSS 합계가 물리 RAM 60% 초과(스왑 진입)",
+    "네트워크 호출 발생 / data/raw 변경 / ladder_freeze.json·SAP 모듈 수정 검출"
+  ],
+
+  "not_performed_in_this_draft": [
+    "empirical_p 호출", "T_obs 계산", "permutation 실행", "OOF 학습",
+    "bootstrap CI", "sign-flip", "SESOI/TOST", "성공판정", "sealed 값 사람 열람"
+  ]
+}

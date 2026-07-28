@@ -1,0 +1,45 @@
+{
+  "step": "docs/30 §13 실행순서 5 — consensus OOF(반복 1·2·3), Δ 부호만",
+  "method": "A (등록 §6-(ii)): drug-PT별 raw OOF probability 산술평균 → consensus → 그 위에서 추론",
+  "method_detail": "SAP A8 방법A — 약물-PT별 raw RF probability 3반복 산술평균 → consensus(N×PT)",
+  "inputs": {
+    "repeat1": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_{M1b,M2b}.npz (machine_read)",
+    "repeat2": "experiments/runs/v3_confirm_rep2_seed202/_sealed",
+    "repeat3": "experiments/runs/v3_confirm_rep3_seed203/_sealed"
+  },
+  "ts_kst": "2026-07-27 22:14:40 KST",
+  "viewer": "vscode-claude(runner)",
+  "wall_clock_sec": 1.6836234999937005,
+  "n_repeats": 3,
+  "shape": [
+    1092,
+    370
+  ],
+  "repeat_macro_aps_computed": true,
+  "repeat_macro_aps_disclosure": "값은 전부 _sealed/metrics_full.json — 로그·콘솔·공개 파일 미기록",
+  "not_performed": [
+    "bootstrap CI",
+    "sign-flip",
+    "p-value",
+    "SESOI/TOST",
+    "성공판정",
+    "재배치 null(§13-4)"
+  ],
+  "integrity": {
+    "network_calls": 0,
+    "rep1_artifacts_modified": false,
+    "sealed_values_human_read": false,
+    "git_commit": false
+  },
+  "sealed_sha256": {
+    "consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+    "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+    "metrics_full.json": "6a861640a05940533ad75b97626929c321689929c9609ec3c08972ac87b8dc8d"
+  },
+  "public_output": {
+    "path": "experiments/runs/v3_consensus_rep123/metrics_public.json",
+    "fields": [
+      "sign"
+    ]
+  }
+}

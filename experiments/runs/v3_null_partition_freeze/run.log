@@ -1,0 +1,9 @@
+2026-07-27 21:16:17 KST | ==============================================================================
+2026-07-27 21:16:17 KST | [블록 A] A-0 게이트0 · A-3 partition 동결 · A-4 원소 수 정정 — 재계산 0 · 네트워크 0 · p 0
+2026-07-27 21:16:17 KST | [A-0 시작] rep1 _sealed 3종 sha256 불변 확인 — metrics_full.json=8722a4e1c52d2eae · oof_M1b.npz=b2a61ba846eead5f · oof_M2b.npz=350fa12fac84ef4c
+2026-07-27 21:16:18 KST | [A-3] partition assert PASS — 표적 1191 · family 42 · tie-break 14 · 고정 13(싱글톤 family 9 + size-2 family 2×2) · 교환가능 1178 — 프로브 _precheck.json family_report 와 완전 일치
+2026-07-27 21:16:18 KST | [A-3] 저장 11_null_family_partition.csv sha256=a95e26f9a527e945 · 11b_null_family_partition_ALT.csv sha256=aee6c742c52ce77c (ALT 제외 14 · ALT 교환가능 1162)
+2026-07-27 21:16:18 KST | [A-4] sealed oof_M2b.npz shape=(1092, 370) dtype=float64 → 원소 수 404,040 (헤더만 판독 · 값 미로드) — 기대 404,040 일치
+2026-07-27 21:16:18 KST | [A-4] rep1 _sealed/access.log — 총 6건 · open_sealed 0건 · human_exposure 전부 false=True → sealed_human_read=False
+2026-07-27 21:16:18 KST | [A-0/A-4 종료] rep1 _sealed 3종 sha256 불변 확인 — metrics_full.json=8722a4e1c52d2eae · oof_M1b.npz=b2a61ba846eead5f · oof_M2b.npz=350fa12fac84ef4c
+2026-07-27 21:16:18 KST | [블록 A] A-0·A-3·A-4 완료 — 문서/원장 반영은 별도 단계

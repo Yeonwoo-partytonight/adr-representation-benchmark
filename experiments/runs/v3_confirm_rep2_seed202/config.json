@@ -1,0 +1,241 @@
+{
+  "step": "docs/30 §13 실행순서 5 — 확증 OOF 반복2(seed 202), Δ 부호만",
+  "spec": "docs/36(반복1 정본) 동일 경로 · docs/33 항목8~14",
+  "ts_first_look_kst": "2026-07-27 21:29:01 KST",
+  "viewer": "vscode-claude(runner)",
+  "wall_clock_sec": 1365.413721666031,
+  "models": {
+    "M1b": [
+      "B0",
+      "B1",
+      "B_m1b"
+    ],
+    "M2b": [
+      "B0",
+      "B1",
+      "B_m1b",
+      "B_seq"
+    ]
+  },
+  "primary_B_m1b_dim": 10,
+  "B_m1b_cont": [
+    "log1p_evidence_count",
+    "log1p_mechanism_target_n",
+    "log1p_binding_target_n",
+    "mechanism_vs_binding_ratio",
+    "confidence_mean",
+    "confidence_max",
+    "first_approval_year"
+  ],
+  "B_m1b_ind": [
+    "confidence_missing",
+    "year_missing",
+    "chembl_unmapped"
+  ],
+  "rf": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "n_jobs": -1,
+    "class_weight": "balanced_subsample",
+    "random_state": 42,
+    "retuned": false,
+    "wrapper": "MultiOutputClassifier(one-vs-rest, 370 PT)"
+  },
+  "pca": {
+    "k": 64,
+    "svd_solver": "full",
+    "random_state": 42,
+    "fit_population": "outer-fold train ∩ 매핑 약물 행"
+  },
+  "split": {
+    "seed": 202,
+    "n_fold": 5,
+    "repeat": 2,
+    "dir": "data/processed/splits/confirmatory/rep2_seed202"
+  },
+  "metric": {
+    "primary_estimand": "macro AP = average_precision_score over eligible PTs with in-sample positive>0, arithmetic mean (sklearn.metrics.average_precision_score). Matches ladder_confirmatory.macro_ap and preregistration §7.",
+    "edge_rules": "macro-then-subtract: PT별 AP 산출 후 macro 평균, Δ=macroAP_M2b−macroAP_M1b(공통 eligible PT). tie 처리=sklearn.metrics.average_precision_score 표준(별도 tie-break 없음). test-positive 0 PT=제외(undefined-AP). positive-class 점수=P[:, j](PT별 이진; 별도 열 선택 불필요, raw positive-class probability).",
+    "eligible_pt": "global 양성≥10 = master_Y 370 PT 전체",
+    "zero_tol": 1e-06
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "n_train": 874,
+      "n_test": 218,
+      "bseq_fit_rows": 692,
+      "bseq_pca_evr64": 0.9292649127810308,
+      "dim_M1b": 2060,
+      "dim_M2b": 2124,
+      "rf_random_state": 42
+    },
+    {
+      "fold": 1,
+      "n_train": 874,
+      "n_test": 218,
+      "bseq_fit_rows": 678,
+      "bseq_pca_evr64": 0.9242637410733008,
+      "dim_M1b": 2060,
+      "dim_M2b": 2124,
+      "rf_random_state": 42
+    },
+    {
+      "fold": 2,
+      "n_train": 873,
+      "n_test": 219,
+      "bseq_fit_rows": 678,
+      "bseq_pca_evr64": 0.927582808506502,
+      "dim_M1b": 2060,
+      "dim_M2b": 2124,
+      "rf_random_state": 42
+    },
+    {
+      "fold": 3,
+      "n_train": 874,
+      "n_test": 218,
+      "bseq_fit_rows": 671,
+      "bseq_pca_evr64": 0.926572925503192,
+      "dim_M1b": 2060,
+      "dim_M2b": 2124,
+      "rf_random_state": 42
+    },
+    {
+      "fold": 4,
+      "n_train": 873,
+      "n_test": 219,
+      "bseq_fit_rows": 669,
+      "bseq_pca_evr64": 0.928772351960025,
+      "dim_M1b": 2060,
+      "dim_M2b": 2124,
+      "rf_random_state": 42
+    }
+  ],
+  "leakage": [
+    {
+      "fold": 0,
+      "B0": 0,
+      "B1": 0,
+      "B_seq": 0,
+      "B_m1b": 0
+    },
+    {
+      "fold": 1,
+      "B0": 0,
+      "B1": 0,
+      "B_seq": 0,
+      "B_m1b": 0
+    },
+    {
+      "fold": 2,
+      "B0": 0,
+      "B1": 0,
+      "B_seq": 0,
+      "B_m1b": 0
+    },
+    {
+      "fold": 3,
+      "B0": 0,
+      "B1": 0,
+      "B_seq": 0,
+      "B_m1b": 0
+    },
+    {
+      "fold": 4,
+      "B0": 0,
+      "B1": 0,
+      "B_seq": 0,
+      "B_m1b": 0
+    }
+  ],
+  "runner_asserts_passed": {
+    "rf_seed42_all_folds": true,
+    "bseq_pca_fit_outer_train_mapped": true,
+    "redaction_sign_only": true,
+    "leak_rows_zero_all_folds": true,
+    "oof_shape_1092x370_no_nan": true
+  },
+  "compute_conditions": {
+    "blas_env": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null
+    },
+    "rf_n_jobs": -1,
+    "multioutput_n_jobs": null,
+    "note": "반복1과 동일 compute 조건 유지(스레드 환경변수 미설정·병렬 인자 무변경)."
+  },
+  "gate0": {
+    "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "ladder_freeze_match": true,
+    "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_manifest_match": true,
+    "sap_version": "1.1",
+    "sap_all_validation_pass": true,
+    "sap_modules_match": {
+      "__init__.py": true,
+      "metrics.py": true,
+      "redaction.py": true,
+      "consensus.py": true,
+      "bootstrap.py": true,
+      "signflip.py": true,
+      "decision.py": true,
+      "null_generator.py": true,
+      "unseen_target.py": true,
+      "synthetic.py": true,
+      "freeze.py": true
+    },
+    "sap_n_modules_verified": 11,
+    "sap_integrity_confirmatory_untouched": true,
+    "primary_B_m1b_dim": 10,
+    "A0_primary_dim": 10,
+    "A1_all_blocks_train_only_fit": true,
+    "A1_bseq_pca_fit_rows": 671,
+    "A5_target_count_mismatch": 0,
+    "gate0_pass": true
+  },
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "scipy": "1.18.0",
+    "rdkit": "2026.03.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O"
+  },
+  "not_performed": [
+    "bootstrap CI",
+    "sign-flip randomization",
+    "p-value",
+    "SESOI/TOST",
+    "성공판정",
+    "재배치 null(§13-4)",
+    "M0/M1/M2/P-ID/P-FAM/C-CAP OOF",
+    "GIN",
+    "late-fusion",
+    "shift 층화"
+  ],
+  "integrity": {
+    "network_calls": 0,
+    "raw_data_modified": false,
+    "docs30_modified": false,
+    "frozen_blocks_recomputed": false,
+    "rep1_artifacts_modified": false,
+    "git_commit": false
+  },
+  "sealed_sha256": {
+    "metrics_full.json": "66be535755ca9f4a174a15b45fd2af34fb5f2283d0dab71acc579c6fc66a9621",
+    "oof_M1b.npz": "9155569ac2581613312c7608a4d9cfcfc7bfe25798b24003a0f6a9116a4fcb33",
+    "oof_M2b.npz": "05a51b16002b8c0fbfd68a9b5f1fa1d578b9b0b491e6944f098588d70fad0298"
+  },
+  "public_output": {
+    "path": "experiments/runs/v3_confirm_rep2_seed202/metrics_public.json",
+    "fields": [
+      "sign"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "arch": "gin",
+  "recipe": {
+    "epochs": 200,
+    "patience": 30,
+    "batch": 32,
+    "lr": 0.001,
+    "wd": 0.0001,
+    "gamma": 2.0,
+    "dropout": 0.2,
+    "pca_k": 64
+  },
+  "device": "mps",
+  "torch": "2.12.1",
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "pandas": "3.0.3"
+}
