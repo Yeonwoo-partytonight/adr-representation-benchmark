@@ -1,0 +1,20 @@
+arm: rdkit_descriptor_rf
+selected_by: valid_macro_ap
+config:
+  n_estimators: 600
+  max_depth: 20
+  max_features: 0.1
+  min_samples_leaf: 2
+  class_weight: balanced_subsample
+representation:
+  source: rdkit.Chem.Descriptors.descList
+  n_descriptors_raw: 217
+  n_descriptors_used: 213
+  nan_policy: inf→NaN → train median impute (train 통계만)
+  zero_variance_dropped: 4
+  log1p_compressed:
+  - Ipc
+  scaler: train fit(mean/std) → valid/test transform (train 통계만)
+valid_macro_ap: 0.19664558449564254
+search_budget: 16
+sample_seed: 42

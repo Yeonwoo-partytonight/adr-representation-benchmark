@@ -1,0 +1,94 @@
+[data] 분자 1092 × PT 370 | split train 873 / valid 109 / test 110
+[features] Morgan FP r=2 bits=2048 → (1092, 2048) (밀도 0.0230)
+[arm1] device=mps | X (1092, 2048) | train 873 valid 109 test 110 | n_out 370
+[search] 동등예산 16개 구성 (sample_seed=42) — 검증 macro AP 로만 선택
+    [cfg00] ep  50 validMacro 0.1772 best 0.1800@48
+    [cfg00] ep 100 validMacro 0.1816 best 0.1846@97
+    [cfg00] ep 150 validMacro 0.1819 best 0.1857@128
+    [cfg00] early stop @ep158 (best 0.1857@128)
+  [cfg  0] valid macroAP 0.1857 @ep128 | hidden=(512,) drop=0.5 lr=0.0005 bs=64 (21s)
+    [cfg01] ep  50 validMacro 0.1657 best 0.1685@49
+    [cfg01] ep 100 validMacro 0.1806 best 0.1900@95
+    [cfg01] early stop @ep125 (best 0.1900@95)
+  [cfg  1] valid macroAP 0.1900 @ep95 | hidden=(512, 256) drop=0.5 lr=0.001 bs=128 (16s)
+    [cfg02] ep  50 validMacro 0.1795 best 0.1815@43
+    [cfg02] ep 100 validMacro 0.1801 best 0.1833@75
+    [cfg02] early stop @ep105 (best 0.1833@75)
+  [cfg  2] valid macroAP 0.1833 @ep75 | hidden=(1024,) drop=0.2 lr=0.0005 bs=128 (13s)
+    [cfg03] early stop @ep31 (best 0.1070@1)
+  [cfg  3] valid macroAP 0.1070 @ep1 | hidden=(1024, 512) drop=0.5 lr=0.0001 bs=128 (4s)
+    [cfg04] ep  50 validMacro 0.1447 best 0.1462@48
+    [cfg04] ep 100 validMacro 0.1572 best 0.1572@100
+    [cfg04] ep 150 validMacro 0.1668 best 0.1681@145
+    [cfg04] ep 200 validMacro 0.1751 best 0.1757@193
+  [cfg  4] valid macroAP 0.1757 @ep193 | hidden=(512, 256) drop=0.2 lr=0.0001 bs=64 (27s)
+    [cfg05] ep  50 validMacro 0.1770 best 0.1777@49
+    [cfg05] ep 100 validMacro 0.1869 best 0.1889@95
+    [cfg05] ep 150 validMacro 0.1869 best 0.1916@142
+    [cfg05] early stop @ep172 (best 0.1916@142)
+  [cfg  5] valid macroAP 0.1916 @ep142 | hidden=(512, 256) drop=0.4 lr=0.001 bs=128 (21s)
+    [cfg06] ep  50 validMacro 0.1652 best 0.1709@48
+    [cfg06] ep 100 validMacro 0.1800 best 0.1833@79
+    [cfg06] early stop @ep109 (best 0.1833@79)
+  [cfg  6] valid macroAP 0.1833 @ep79 | hidden=(1024, 512) drop=0.4 lr=0.0005 bs=128 (14s)
+    [cfg07] ep  50 validMacro 0.1747 best 0.1789@49
+    [cfg07] ep 100 validMacro 0.1845 best 0.1904@78
+    [cfg07] early stop @ep108 (best 0.1904@78)
+  [cfg  7] valid macroAP 0.1904 @ep78 | hidden=(512, 256) drop=0.4 lr=0.0005 bs=32 (17s)
+    [cfg08] ep  50 validMacro 0.1556 best 0.1556@50
+    [cfg08] ep 100 validMacro 0.1743 best 0.1743@100
+    [cfg08] ep 150 validMacro 0.1794 best 0.1805@134
+    [cfg08] ep 200 validMacro 0.1812 best 0.1825@175
+  [cfg  8] valid macroAP 0.1825 @ep175 | hidden=(512,) drop=0.4 lr=0.0001 bs=32 (30s)
+    [cfg09] ep  50 validMacro 0.1933 best 0.1946@34
+    [cfg09] ep 100 validMacro 0.1997 best 0.1997@100
+    [cfg09] early stop @ep130 (best 0.1997@100)
+  [cfg  9] valid macroAP 0.1997 @ep100 | hidden=(2048, 512) drop=0.5 lr=0.001 bs=64 (20s)
+    [cfg10] ep  50 validMacro 0.1398 best 0.1398@50
+    [cfg10] ep 100 validMacro 0.1599 best 0.1606@95
+    [cfg10] ep 150 validMacro 0.1719 best 0.1720@149
+    [cfg10] ep 200 validMacro 0.1778 best 0.1779@195
+  [cfg 10] valid macroAP 0.1779 @ep195 | hidden=(512,) drop=0.5 lr=0.0001 bs=64 (26s)
+    [cfg11] ep  50 validMacro 0.1743 best 0.1754@49
+    [cfg11] ep 100 validMacro 0.1805 best 0.1829@76
+    [cfg11] early stop @ep106 (best 0.1829@76)
+  [cfg 11] valid macroAP 0.1829 @ep76 | hidden=(512,) drop=0.5 lr=0.0005 bs=128 (13s)
+    [cfg12] ep  50 validMacro 0.1512 best 0.1518@47
+    [cfg12] ep 100 validMacro 0.1611 best 0.1628@98
+    [cfg12] ep 150 validMacro 0.1756 best 0.1780@143
+    [cfg12] ep 200 validMacro 0.1786 best 0.1813@185
+  [cfg 12] valid macroAP 0.1813 @ep185 | hidden=(1024, 512) drop=0.5 lr=0.0001 bs=32 (36s)
+    [cfg13] ep  50 validMacro 0.1862 best 0.1868@47
+    [cfg13] early stop @ep84 (best 0.1885@54)
+  [cfg 13] valid macroAP 0.1885 @ep54 | hidden=(1024,) drop=0.4 lr=0.0005 bs=32 (14s)
+    [cfg14] ep  50 validMacro 0.1186 best 0.1186@50
+    [cfg14] ep 100 validMacro 0.1523 best 0.1523@100
+    [cfg14] ep 150 validMacro 0.1568 best 0.1577@149
+    [cfg14] ep 200 validMacro 0.1674 best 0.1674@199
+  [cfg 14] valid macroAP 0.1674 @ep199 | hidden=(512, 256) drop=0.2 lr=0.0001 bs=128 (24s)
+    [cfg15] ep  50 validMacro 0.1747 best 0.1755@48
+    [cfg15] ep 100 validMacro 0.1830 best 0.1861@70
+    [cfg15] early stop @ep100 (best 0.1861@70)
+  [cfg 15] valid macroAP 0.1861 @ep70 | hidden=(2048, 512) drop=0.5 lr=0.0005 bs=128 (13s)
+[select] 검증 최적 config_id=9 | valid macroAP 0.1997 (test 미사용)
+    [seed1] ep  50 validMacro 0.1914 best 0.1929@45
+    [seed1] ep 100 validMacro 0.1896 best 0.1993@76
+    [seed1] early stop @ep106 (best 0.1993@76)
+[seed 1] test macroAP 0.1790 microAP 0.2423 | n_pt 301 | valid 0.1993@ep76
+    [seed2] ep  50 validMacro 0.1900 best 0.1921@49
+    [seed2] ep 100 validMacro 0.1913 best 0.1950@92
+    [seed2] early stop @ep140 (best 0.2002@110)
+[seed 2] test macroAP 0.1859 microAP 0.2516 | n_pt 301 | valid 0.2002@ep110
+    [seed3] ep  50 validMacro 0.1869 best 0.1940@32
+    [seed3] ep 100 validMacro 0.1858 best 0.1972@88
+    [seed3] early stop @ep118 (best 0.1972@88)
+[seed 3] test macroAP 0.1918 microAP 0.2561 | n_pt 301 | valid 0.1972@ep88
+    [seed4] ep  50 validMacro 0.1902 best 0.1915@40
+    [seed4] ep 100 validMacro 0.1884 best 0.2004@82
+    [seed4] early stop @ep112 (best 0.2004@82)
+[seed 4] test macroAP 0.1932 microAP 0.2627 | n_pt 301 | valid 0.2004@ep82
+    [seed42] ep  50 validMacro 0.1933 best 0.1946@34
+    [seed42] ep 100 validMacro 0.1997 best 0.1997@100
+    [seed42] early stop @ep130 (best 0.1997@100)
+[seed 42] test macroAP 0.1811 microAP 0.2404 | n_pt 301 | valid 0.1997@ep100
+[arm1] macro 0.1862 ± 0.0063 | micro 0.2506 ± 0.0094 (6.7분)

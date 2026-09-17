@@ -1,0 +1,21 @@
+arm: morgan_mlp
+selected_by: valid_macro_ap
+config:
+  hidden_dims:
+  - 2048
+  - 512
+  dropout: 0.5
+  lr: 0.001
+  batch_size: 64
+recipe:
+  loss: FocalLoss(gamma=2.0)
+  pos_weight: sqrt(neg/pos)
+  optimizer: Adam
+  weight_decay: 0.0001
+  epochs: 200
+  patience: 30
+  early_stopping_metric: valid_macro_ap
+  representation: Morgan r=2/2048bit
+valid_macro_ap: 0.19968728577484796
+search_budget: 16
+sample_seed: 42

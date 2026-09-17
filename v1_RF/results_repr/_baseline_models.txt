@@ -1,0 +1,16 @@
+# 기존 4모델 산출물 mtime+sha (착수 시점)
+1782371203 836 75fd3f279a5e66d4 v2_GNN/results_improve/robustness/robustness_per_seed.csv
+1782371203 360 c467b4707bb479c2 v2_GNN/results_improve/robustness/robustness_summary.csv
+1782394388 133 ddb61950a31a6db1 v1_RF/results_fairtune/seed_1.csv
+1782398259 133 23f418d6480457b9 v1_RF/results_fairtune/seed_2.csv
+1782398547 133 58ff0eeacce50494 v1_RF/results_fairtune/seed_3.csv
+1782398834 132 235c1cae6fa63ca2 v1_RF/results_fairtune/seed_4.csv
+1782432784 133 c2196616e9ee7e51 v1_RF/results_fairtune/seed_42.csv
+1782432898 362 a79d5f0d829ee103 v1_RF/results_fairtune/aggregate_test.csv
+1782439600 125 c82670deab14ec2a v3_Multimodal/results/graphdta_baseline/seed_1.csv
+1782440205 124 4961a82512bec432 v3_Multimodal/results/graphdta_baseline/seed_2.csv
+1782440629 125 327bd803d7591579 v3_Multimodal/results/graphdta_baseline/seed_3.csv
+1782441278 123 5f1d081d7786c824 v3_Multimodal/results/graphdta_baseline/seed_4.csv
+1782441634 125 09b728b069c28ad8 v3_Multimodal/results/graphdta_baseline/seed_42.csv
+1782441634 457 ac7fc9063bbbaea8 v3_Multimodal/results/graphdta_baseline/comparison_table.csv
+1782311216 556 c0a0d55d30df5da5 v1_RF/results/metrics_overall.csv

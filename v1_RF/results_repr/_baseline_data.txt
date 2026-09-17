@@ -1,0 +1,4 @@
+# 보호 데이터 sha256 (착수 시점)
+788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6  data/processed/master_X.parquet
+bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018  data/processed/master_Y.parquet
+88369dba24449770d522269fede3c8f82a38d1e98a281e9755b9dc44c4019db1  data/processed/scaffold_split.json

@@ -2,7 +2,7 @@
 
 희소 다중라벨 ADR(부작용) 예측에서 **Morgan 지문 RandomForest와 분자 그래프 GNN**을 단일 스캐폴드 분할 조건에서 비교한 벤치마크. KCI 투고 논문의 재현용 코드·설정·데이터 분할을 공개한다.
 
-> Bae, Y., Yang, J.-H. *희소 다중라벨 ADR 예측에서 Morgan 지문 RandomForest와 분자 그래프 GNN의 비교: 단일 스캐폴드 분할 기반 벤치마크.* (심사 중)
+> *의약품 표지 기반 희소 다중라벨 ADR 예측에서 Morgan 지문 RandomForest와 결합 속성 미사용 GIN 기반 모델의 비교: 단일 스캐폴드 분할 연구.* 한국정보전자통신기술학회논문지 (게재 예정).
 
 ## 개요
 
@@ -36,8 +36,8 @@ pip install -r requirements.txt
 
 ## 실험 환경
 
-Apple M5 Pro (64GB) · PyTorch MPS · Python 3.11.15.
-주요 버전: PyTorch 2.12.1, PyTorch Geometric 2.8.0, RDKit 2026.3.3, scikit-learn 1.9.0, XGBoost 3.2.0.
+Apple M5 Pro (64GB) · PyTorch MPS · Python 3.14.4. 정확한 패키지 버전은 `requirements-lock.txt`(캡처 시점 기준) 참조.
+주요 버전: PyTorch 2.12.1, PyTorch Geometric 2.8.0, RDKit 2026.3.3, scikit-learn 1.9.0, XGBoost 3.3.0.
 
 > MPS는 부동소수점 누적의 비결정성으로 동일 시드에서도 절대 수치에 미세 변동이 있어, 다중 시드로 완화하고 결론을 방향 일관성·분산과 함께 보고한다.
 

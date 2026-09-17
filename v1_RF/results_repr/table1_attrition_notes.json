@@ -1,0 +1,28 @@
+{
+  "vocab_pt_vocabulary_size": 3550,
+  "vocab_llt_vocabulary_size": 2873,
+  "vocab_total_rows": 6423,
+  "vocab_term_types": {
+    "PT": 3550,
+    "LLT": 2873
+  },
+  "pae_rows": 6928666,
+  "raw_distinct_meddra_any_type": 6423,
+  "raw_distinct_pt_observed": 3550,
+  "raw_distinct_llt_observed": 2873,
+  "step1_n_ingredient_vocab_rows": 1866,
+  "step2_us_labels": 35340,
+  "step2_rows_after_us": 6540259,
+  "step2_rows_after_pmb": 6540259,
+  "step2_rows_after_pt": 4138319,
+  "step2_distinct_meddra_any_type_us": 3620,
+  "step3_positive_pairs": 23111,
+  "step4_mapping_rows": 1115,
+  "step4_mapping_ok": 1115,
+  "step5_cid_to_smiles_rows": 1111,
+  "step5_valid_smiles": 1111,
+  "step5_distinct_ingredient": 1115,
+  "step5_distinct_raw_cid": 1111,
+  "step6_dropped_rare_pts": 1352,
+  "step6_pt_before_rare_filter": 1722
+}

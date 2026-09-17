@@ -17,7 +17,7 @@ from torch_geometric.data import Data
 
 RDLogger.DisableLog("rdApp.*")
 
-# 자주 등장하는 원소(천연물/소분자 약물 커버). 그 외는 'other' 버킷.
+# 자주 등장하는 원소(소분자 약물 커버). 그 외는 'other' 버킷.
 ATOM_LIST = ['C', 'N', 'O', 'S', 'F', 'Cl', 'Br', 'I', 'P', 'B', 'Si', 'Se', 'H']
 HYBRID = [Chem.rdchem.HybridizationType.SP,
           Chem.rdchem.HybridizationType.SP2,

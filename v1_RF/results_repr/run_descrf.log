@@ -1,0 +1,32 @@
+[data] 분자 1092 × PT 370 | split train 873 / valid 109 / test 110
+[desc] RDKit descList 217종 → (1092, 217) | mol 실패 0 · 계산 예외 0
+.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:190: RuntimeWarning: overflow encountered in square
+  x = um.square(x, out=x)
+[desc] inf→NaN 0 | train 중앙값 대치 후 분산 0 열 4개 제거 → 217 → 213열
+[desc] 제거 열: ['SMR_VSA8', 'SlogP_VSA9', 'fr_diazo', 'fr_thiocyan']
+[desc] float32 표현범위 초과 열 1개 = ['Ipc'] → 부호보존 log1p 적용(순증가 변환, RF 분할 기준 불변)
+[arm2] X (1092, 213) | train 873 valid 109 test 110 | n_out 370
+[search] 동등예산 16개 구성 (sample_seed=42) — 검증 macro AP 로만 선택
+  [cfg  0] valid macroAP 0.1877 microAP 0.3222 | n_est=300 depth=40 feat=log2 leaf=2 cw=balanced_subsample (139s)
+  [cfg  1] valid macroAP 0.1893 microAP 0.2952 | n_est=1000 depth=None feat=0.1 leaf=1 cw=balanced (421s)
+  [cfg  2] valid macroAP 0.1709 microAP 0.3169 | n_est=600 depth=40 feat=0.1 leaf=5 cw=None (1816s)
+  [cfg  3] valid macroAP 0.1908 microAP 0.3097 | n_est=1000 depth=20 feat=sqrt leaf=5 cw=balanced_subsample (601s)
+  [cfg  4] valid macroAP 0.1687 microAP 0.3182 | n_est=600 depth=20 feat=sqrt leaf=5 cw=None (214s)
+  [cfg  5] valid macroAP 0.1966 microAP 0.3197 | n_est=600 depth=20 feat=0.1 leaf=2 cw=balanced_subsample (368s)
+  [cfg  6] valid macroAP 0.1693 microAP 0.3137 | n_est=600 depth=None feat=sqrt leaf=2 cw=None (237s)
+  [cfg  7] valid macroAP 0.1920 microAP 0.3166 | n_est=300 depth=40 feat=0.1 leaf=1 cw=balanced_subsample (155s)
+  [cfg  8] valid macroAP 0.1913 microAP 0.2894 | n_est=300 depth=40 feat=0.1 leaf=2 cw=balanced (98s)
+  [cfg  9] valid macroAP 0.1731 microAP 0.3175 | n_est=1000 depth=20 feat=0.1 leaf=5 cw=None (276s)
+  [cfg 10] valid macroAP 0.1908 microAP 0.3243 | n_est=1000 depth=None feat=log2 leaf=2 cw=balanced_subsample (424s)
+  [cfg 11] valid macroAP 0.1693 microAP 0.3175 | n_est=300 depth=20 feat=sqrt leaf=5 cw=None (88s)
+  [cfg 12] valid macroAP 0.1921 microAP 0.3071 | n_est=1000 depth=40 feat=log2 leaf=5 cw=balanced_subsample (424s)
+  [cfg 13] valid macroAP 0.1855 microAP 0.3230 | n_est=300 depth=40 feat=log2 leaf=1 cw=balanced_subsample (136s)
+  [cfg 14] valid macroAP 0.1710 microAP 0.3157 | n_est=1000 depth=None feat=log2 leaf=1 cw=None (278s)
+  [cfg 15] valid macroAP 0.1691 microAP 0.3185 | n_est=1000 depth=None feat=sqrt leaf=5 cw=None (282s)
+[select] 검증 최적 config_id=5 | valid macroAP 0.1966 (test 미사용)
+[seed 1] test macroAP 0.1888 microAP 0.3239 | n_pt 301 (261s)
+[seed 2] test macroAP 0.1882 microAP 0.3206 | n_pt 301 (259s)
+[seed 3] test macroAP 0.1860 microAP 0.3236 | n_pt 301 (250s)
+[seed 4] test macroAP 0.1879 microAP 0.3240 | n_pt 301 (180s)
+[seed 42] test macroAP 0.1876 microAP 0.3211 | n_pt 301 (180s)
+[arm2] macro 0.1877 ± 0.0011 | micro 0.3226 ± 0.0017 (118.3분)

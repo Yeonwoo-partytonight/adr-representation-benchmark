@@ -1,0 +1,7 @@
+step,label,n_ingredient_or_molecule,n_cid,n_pt,n_pt_observed_in_raw
+1,OnSIDES v3.1.1 원자료 (raw),1866,,3550,3550.0
+2,미국(DailyMed) 라벨만 유지 (US labels only),1309,,1854,
+3,"단일성분 제품만 유지 + PT 레벨 (single-ingredient, PT-level)",1115,,1722,
+4,PubChem CID 매핑 성공 (CID mapping),1115,1111.0,1722,
+5,유효 SMILES 수집·표준화 (valid SMILES),1105,1105.0,1722,
+6,희귀 PT(양성<10) 제거 → 최종 (rare-PT removal → final),1092,1092.0,370,

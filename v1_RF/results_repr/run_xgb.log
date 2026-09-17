@@ -1,0 +1,13 @@
+[data] 분자 1092 × PT 370 | split train 873 / valid 109 / test 110
+[features] Morgan FP r=2 bits=2048 → (1092, 2048) (밀도 0.0230)
+[train] XGBoost OvR 라벨 370/370 학습(양성>0), 라벨별 scale_pos_weight 적용
+[seed 1] XGB test macroAP 0.1626 microAP 0.2539 | n_pt 301 (448s)
+[train] XGBoost OvR 라벨 370/370 학습(양성>0), 라벨별 scale_pos_weight 적용
+[seed 2] XGB test macroAP 0.1639 microAP 0.2481 | n_pt 301 (2001s)
+[train] XGBoost OvR 라벨 370/370 학습(양성>0), 라벨별 scale_pos_weight 적용
+[seed 3] XGB test macroAP 0.1591 microAP 0.2486 | n_pt 301 (398s)
+[train] XGBoost OvR 라벨 370/370 학습(양성>0), 라벨별 scale_pos_weight 적용
+[seed 4] XGB test macroAP 0.1616 microAP 0.2505 | n_pt 301 (405s)
+[train] XGBoost OvR 라벨 370/370 학습(양성>0), 라벨별 scale_pos_weight 적용
+[seed 42] XGB test macroAP 0.1583 microAP 0.2506 | n_pt 301 (432s)
+[xgb] macro 0.1611 ± 0.0024 | micro 0.2503 ± 0.0023 (61.4분)

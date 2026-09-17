@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # setup_env.sh — Mac(M5 Pro) 환경 구축 스크립트
-# 실행: cd ~/Desktop/Papers/NaturalBiologics_ADR_Prediction && bash scripts/setup_env.sh
+# 실행: cd adr-representation-benchmark && bash scripts/setup_env.sh
 #
 # 에이전트(리눅스 샌드박스)는 MPS·Mac venv를 검증할 수 없으므로, 이 스크립트를
 # Mac에서 직접 실행해 환경을 만들고 scripts/verify_env.py로 검증한다.

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # run_pipeline.sh — 데이터 파이프라인 STEP2~7 일괄 실행 (★ Mac에서 실행, STEP3·4는 PubChem 네트워크 필요)
-# 사용: cd ~/Desktop/Papers/NaturalBiologics_ADR_Prediction && bash pipeline/run_pipeline.sh
+# 사용: cd adr-representation-benchmark && bash pipeline/run_pipeline.sh
 #  - venv 활성화 후 실행 권장(RDKit/requests/pyarrow 필요)
 #  - 중간 실패해도 캐시(_cache_*.json)로 재실행 시 이어서 진행
 set -euo pipefail

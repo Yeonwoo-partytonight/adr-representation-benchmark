@@ -1,4 +1,4 @@
-# 천연물 부작용 예측 프로젝트 의존성
+# 부작용 예측 프로젝트 의존성
 # Apple M5 Pro / MPS / Python 3.14.4
 # 설치: pip install -r requirements.txt
 # ---

@@ -1,0 +1,11 @@
+[data] 분자 1092 × PT 370 | split train 873 / valid 109 / test 110
+G5 1092 370 | G6 301
+[features] Morgan FP r=2 bits=2048 → (1092, 2048) (밀도 0.0230)
+[G7 seed 1] macro 0.191354 micro 0.323462 (136s)
+[G7 seed 2] macro 0.194037 micro 0.321308 (135s)
+[G7 seed 3] macro 0.190412 micro 0.323373 (135s)
+[G7 seed 4] macro 0.191864 micro 0.323002 (135s)
+[G7 seed 42] macro 0.188193 micro 0.319730 (137s)
+G7 0.19117206473095943 0.002131161050395593
+[G8] macro 0.158289 micro 0.250603 labels 370 (325s)
+DONE

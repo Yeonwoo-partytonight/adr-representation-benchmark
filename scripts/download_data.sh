@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # download_data.sh — 공개 데이터 다운로드 (Mac에서 실행; 샌드박스는 release-assets 호스트가 막혀 불가)
-# 실행: cd ~/Desktop/Papers/NaturalBiologics_ADR_Prediction && bash scripts/download_data.sh
+# 실행: cd adr-representation-benchmark && bash scripts/download_data.sh
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 RAW="$ROOT/data/raw"

@@ -61,3 +61,8 @@ env/
 
 # --- transformers / huggingface 캐시 ---
 .cache/
+# KCI 2026 보충자료(표 3·표 S1(d) 근거) — docs/909
+!v1_RF/results_repr/*.csv
+!v1_RF/results_fairtune/seed_*.csv
+!v2_GNN/results_improve/robustness/robustness_per_seed.csv
+!v3_Multimodal/results/graphdta_baseline/seed_*.csv
