@@ -1,0 +1,4 @@
+axis,scope,n_drug_target_pairs,n_drugs
+binding_evidence (05b affinity 존재),human_primary,12514,831
+affinity_missing (매핑 human 표적 중 05b 부재),human_primary,99,73
+affinity_imputed=1 (07 top-k 보충 표적),human_primary,54,37

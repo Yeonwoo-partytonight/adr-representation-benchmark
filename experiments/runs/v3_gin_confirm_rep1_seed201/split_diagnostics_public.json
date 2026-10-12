@@ -1,0 +1,41 @@
+{
+  "_doc": "블록 AT 분할 진단(공개 — 개수뿐).",
+  "folds": {
+    "rep1_fold0": {
+      "n_outer_train": 874,
+      "n_outer_test": 218,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_inner_train_zero_positive_pt": 0
+    },
+    "rep1_fold1": {
+      "n_outer_train": 874,
+      "n_outer_test": 218,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_inner_train_zero_positive_pt": 0
+    },
+    "rep1_fold2": {
+      "n_outer_train": 873,
+      "n_outer_test": 219,
+      "n_inner_train": 776,
+      "n_inner_valid": 97,
+      "n_inner_train_zero_positive_pt": 0
+    },
+    "rep1_fold3": {
+      "n_outer_train": 874,
+      "n_outer_test": 218,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_inner_train_zero_positive_pt": 0
+    },
+    "rep1_fold4": {
+      "n_outer_train": 873,
+      "n_outer_test": 219,
+      "n_inner_train": 776,
+      "n_inner_valid": 97,
+      "n_inner_train_zero_positive_pt": 0
+    }
+  },
+  "updated_kst": "2026-09-21 20:17:43 KST"
+}

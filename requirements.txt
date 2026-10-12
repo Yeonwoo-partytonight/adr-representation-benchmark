@@ -28,6 +28,7 @@ rdkit
 transformers
 sentencepiece
 tokenizers
+biopython     # PairwiseAligner(BLOSUM62) — v3 표적 audit A-6 train/test 서열 identity 계산
 
 # --- 데이터 처리 / 파싱 ---
 lxml          # DrugBank XML 파싱

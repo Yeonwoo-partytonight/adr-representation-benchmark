@@ -1,0 +1,126 @@
+{
+  "_doc": "블록 AE / AE-2 — 결정성 검증. 워커 수 무관 + 바이트 동일 재현. ★ 체크포인트 미기록(본런 오염 0) · 벽시계는 예산·처리량 표에 투입 금지.",
+  "block": "AE",
+  "when_kst": "2026-08-12T22:46:11+09:00",
+  "cell": "C0:prop",
+  "predictions_are_synthetic": true,
+  "confirmatory_predictions_loaded": false,
+  "design_sha256": "42e2f8f9f3f24ec1dfc5fe9ba9b1afe66d30a13c00ef9fce361a3dcaef650b99",
+  "runs": {
+    "A_w3": {
+      "workers": 3,
+      "wall_seconds": 212.58084869384766,
+      "rep_seeds": [
+        20260813,
+        20260814,
+        20260815
+      ],
+      "t_star_sha256": [
+        "b22e9e3291effd9d18779ebb3750898fd2e46d2fe24da08871234c289013a1d2",
+        "f21914a246ae2317d6897352d40c1cc39327743685e9928ceb9dc8aaa5fe3409",
+        "896e8292b078747cfd0bed06a05576187413125e88e16aba1b60c67bfabcae3c"
+      ],
+      "p_two_sided": [
+        0.20069982504373907,
+        0.5941014746313422,
+        0.4611347163209198
+      ],
+      "T_obs": [
+        0.04782356361817021,
+        0.015626445674567002,
+        -0.024894695073287027
+      ]
+    },
+    "B_w1": {
+      "workers": 1,
+      "wall_seconds": 600.8723330497742,
+      "rep_seeds": [
+        20260813,
+        20260814,
+        20260815
+      ],
+      "t_star_sha256": [
+        "b22e9e3291effd9d18779ebb3750898fd2e46d2fe24da08871234c289013a1d2",
+        "f21914a246ae2317d6897352d40c1cc39327743685e9928ceb9dc8aaa5fe3409",
+        "896e8292b078747cfd0bed06a05576187413125e88e16aba1b60c67bfabcae3c"
+      ],
+      "p_two_sided": [
+        0.20069982504373907,
+        0.5941014746313422,
+        0.4611347163209198
+      ],
+      "T_obs": [
+        0.04782356361817021,
+        0.015626445674567002,
+        -0.024894695073287027
+      ]
+    },
+    "C_w3_repeat": {
+      "workers": 3,
+      "wall_seconds": 220.65000700950623,
+      "rep_seeds": [
+        20260813,
+        20260814,
+        20260815
+      ],
+      "t_star_sha256": [
+        "b22e9e3291effd9d18779ebb3750898fd2e46d2fe24da08871234c289013a1d2",
+        "f21914a246ae2317d6897352d40c1cc39327743685e9928ceb9dc8aaa5fe3409",
+        "896e8292b078747cfd0bed06a05576187413125e88e16aba1b60c67bfabcae3c"
+      ],
+      "p_two_sided": [
+        0.20069982504373907,
+        0.5941014746313422,
+        0.4611347163209198
+      ],
+      "T_obs": [
+        0.04782356361817021,
+        0.015626445674567002,
+        -0.024894695073287027
+      ]
+    }
+  },
+  "worker_count_invariant": true,
+  "byte_identical_reproduction": true,
+  "first3_t_star_sha256": [
+    "b22e9e3291effd9d18779ebb3750898fd2e46d2fe24da08871234c289013a1d2",
+    "f21914a246ae2317d6897352d40c1cc39327743685e9928ceb9dc8aaa5fe3409",
+    "896e8292b078747cfd0bed06a05576187413125e88e16aba1b60c67bfabcae3c"
+  ],
+  "env": {
+    "when_kst": "2026-08-12T22:46:11+09:00",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "logical_cores": 18,
+    "mem_total_gib": 64.0,
+    "mem_available_gib": 29.21,
+    "pmset_powermode": "0",
+    "pmset_ps": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=22872163)\t84%; discharging; 6:48 remaining present: true",
+    "on_ac_power": false,
+    "caffeinate_running": false,
+    "loadavg_1_5_15": [
+      7.89,
+      5.51,
+      4.1
+    ],
+    "env_thread_vars": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "threadpool_info": [
+      {
+        "user_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libomp"
+      }
+    ]
+  },
+  "wall_clock_excluded_from_budget": true,
+  "wall_clock_exclusion_reason": "결정성 확인 전용 실행 · 전원 상태 무관하게 바이트 동일성만 판정"
+}

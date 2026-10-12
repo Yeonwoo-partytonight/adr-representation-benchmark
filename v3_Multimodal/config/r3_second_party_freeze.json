@@ -1,0 +1,190 @@
+{
+  "_doc": "R3(제2자 독립 재실행) 수행 주체 · 합격 기준 · 비교객체 사전 명시. 블록 AG(docs/91). ★ SAP 등재 모듈이 아니며 experiments/sap/manifest.json 을 건드리지 않는다. 본 파일은 판정 규칙만 고정하며 어떤 판정도 담고 있지 않다.",
+  "block": "AG",
+  "instruction": "docs/91_r3_second_party_prep_prompt_for_vscode.md",
+  "frozen_at_kst": "2026-08-14T15:12:46+09:00",
+  "resolution_mode": "pre_specified_before_trigger_event",
+  "resolution_mode_evidence": {
+    "trigger_event": "제2자(<SECOND-PARTY>)가 산출한 프로브·본 드라이런 결과물의 회수",
+    "trigger_event_occurred": false,
+    "trigger_event_status_at_freeze": "미발생 — 요청 메일 발송(2026-08-14 14:26:28 KST) 후 회신 미수령(2026-08-14 15:12 KST 기준, Gmail get_thread 실측: 스레드 <GMAIL-MSGID> 메시지 1건 = 우리 발신분뿐)",
+    "why_this_matters": "합격 기준을 결과를 본 뒤에 정하면 사후 조정이 되어 R3 의 독립성이 형해화된다. 본 파일의 frozen_at_kst 가 트리거 사건보다 이르다는 사실이 사전 명시의 증거다."
+  },
+  "is_sap_freeze": false,
+  "sap_manifest_untouched": {
+    "manifest_sha16": "756d485feb4715e9",
+    "sap_version": "1.1",
+    "modules_modified": 0,
+    "freeze_py_MODULE_FILES_updated": false,
+    "sap_init_updated": false
+  },
+
+  "second_party": {
+    "identity": "<SECOND-PARTY>",
+    "email": "<EMAIL>",
+    "role": "R3 제2자 독립 재실행 수행자",
+    "approval": {
+      "approver": "양진홍 교수 (지도교수)",
+      "verbatim": "네 <SECOND-PARTY>씨에게 부탁해서 처리하시죠.",
+      "gmail_message_id": "<GMAIL-MSGID>",
+      "gmail_thread_id": "<GMAIL-MSGID>",
+      "sent_at_utc": "2026-08-12T09:34:47Z",
+      "sent_at_kst": "2026-08-12 18:34:47 KST"
+    },
+    "approval_scope": {
+      "approved": ["수행 주체가 <SECOND-PARTY>이라는 것"],
+      "not_approved_internal_decisions": [
+        "R3 합격 기준(1차·2차 판정 규칙 및 허용오차)",
+        "게이트 G-ENV 의 정의",
+        "비교객체 numeric_core 의 제외 목록",
+        "프로브 패키지의 구성·규모",
+        "일정"
+      ],
+      "note": "교수님이 승인한 것은 수행 주체뿐이다. 위 '내선 결정' 항목은 연구자·러너가 정한 것이며 교수님 승인 대상이 아니다. 이 구분을 흐리지 않는다."
+    },
+    "request_sent": {
+      "gmail_message_id": "<GMAIL-MSGID>",
+      "gmail_thread_id": "<GMAIL-MSGID>",
+      "sent_at_kst": "2026-08-14 14:26:28 KST",
+      "attachments": 0,
+      "sent_record": "docs/96_<SECOND-PARTY>_mail_r3_SEND_20260814.md"
+    },
+    "withdrawal_path": {
+      "draft_had_opt_out_sentence": true,
+      "sent_version_has_opt_out_sentence": false,
+      "sent_vs_draft_differences": 7,
+      "substantive_deletions": 1,
+      "deleted_sentence_draft_text": "혹시 일정이 부담되시거나 더 적절한 분이 계시면 편하게 말씀해 주십시오.",
+      "implication": "제2자는 <SECOND-PARTY>으로 사실상 확정 요청된 상태다. 교체가 필요해지면 교수님께 재상신하는 경로만 남는다(우리 임의 교체 금지).",
+      "source": "docs/96 §2 #6"
+    }
+  },
+
+  "acceptance_criteria": {
+    "_doc": "2단 판정. 순서를 바꾸거나 단계를 추가하지 않는다.",
+    "stage_1_byte_identity": {
+      "rule": "제2자 산출물의 numeric_core sha256 이 우리 산출의 numeric_core sha256 과 완전 일치하면 R3 충족.",
+      "comparison_object": "numeric_core (아래 §numeric_core 정의)",
+      "tolerance": "없음 (바이트 동일)",
+      "on_pass": "R3 충족 — 2차 판정을 실행하지 않는다."
+    },
+    "stage_2_pre_specified_tolerance": {
+      "activation": "1차 불일치 시에만 발동한다.",
+      "gate_G_ENV": {
+        "id": "G-ENV",
+        "requirement": "두 환경의 명세(collect_env.py 산출)가 실제로 다름을 입증해야 한다.",
+        "fields_compared": ["python_version", "numpy", "sklearn", "machine", "numpy_build_config(BLAS/LAPACK 구현)"],
+        "pass_condition": "위 5개 중 1개 이상 상이",
+        "on_fail": "2차 판정 **금지** → 즉시 중단, 원인 규명 후 재자문. 동일 환경에서 산출이 다르면 그것은 코드 비결정성이며 허용오차로 덮을 사안이 아니다.",
+        "our_env_reference": "experiments/rqint/r3_package_meta/env_local.json (패키지에는 넣지 않는다)"
+      },
+      "criteria_all_must_hold": [
+        {
+          "category": "판정 불리언",
+          "items": ["R6-1~R6-9 각 pass", "r6_all_pass", "synthetic_only", "confirmatory_data_accessed", "unblinding_performed", "gin_start_still_blocked"],
+          "criterion": "완전 일치 (허용오차 없음)"
+        },
+        {
+          "category": "이산량",
+          "items": ["형상 N·K·G", "시드", "n_coin_vectors", "n_permutation_values", "각종 count", "완전열거 2^8 개수"],
+          "criterion": "완전 일치 (허용오차 없음)"
+        },
+        {
+          "category": "연속량",
+          "items": ["macro AP", "Δ_RF", "Δ_GIN", "T_obs", "T* 수열", "p_exact", "p_mc", "균등성 mean(p)", "KS 통계량"],
+          "criterion": "상대오차 |a−b| / max(|a|,|b|,1e-12) ≤ 1e-9",
+          "relative_error_tolerance": 1e-09
+        },
+        {
+          "category": "문자열",
+          "items": ["sap_version", "모듈 sha256", "B_definition_status"],
+          "criterion": "완전 일치"
+        }
+      ],
+      "on_pass": "R3 충족(2차).",
+      "on_fail": {
+        "verdict": "R3 미충족 확정",
+        "forbidden": "임의 3차 기준을 만들지 않는다. 허용오차를 늘리지 않는다. 비교객체를 바꾸지 않는다.",
+        "required_action": "양진홍 교수님 · 외부 검토자(<EXTERNAL-REVIEWER> Ph.D., GIIC)께 보고 후 지시를 받는다.",
+        "note": "이 실패 경로도 트리거 사건 이전에 못박아 둔다."
+      }
+    },
+    "tolerance_rationale_1e_9": {
+      "argument": "macro_ap 는 average_precision_score 의 산술평균이고 순열 통계량은 그 차의 차이다. float64 누산 순서 차이(BLAS 구현·SIMD 폭)에서 오는 오차는 항목당 상대 1e-15 규모이며, K·G 규모의 누산을 거쳐도 1e-12 를 넘기 어렵다.",
+      "conclusion": "1e-9 는 그보다 3자리 느슨한 상한으로, '플랫폼 차이는 통과시키되 실질적 계산 차이는 잡는다'는 취지에 부합한다.",
+      "no_monte_carlo_tolerance": "p-값은 동일 시드 → 동일 동전 벡터이므로 결정적이며 몬테카를로 오차항이 필요 없다. 별도 MC 허용오차를 두면 오히려 실질 차이를 덮으므로 두지 않는다."
+    }
+  },
+
+  "numeric_core": {
+    "_doc": "비교 대상 정규화 객체. audit_r6.json(또는 본 드라이런 결과 JSON)에서 아래 제외 규칙을 적용한 나머지 전부.",
+    "exclude_rules_count": 6,
+    "exclude_pointers_count": 8,
+    "exclude_rules": [
+      {"rule": 1, "pointers": ["/run_at_kst"], "reason": "실행 시각 — 환경·시점 의존"},
+      {"rule": 2, "pointers": ["/wall_clock_seconds"], "reason": "벽시계 총 소요 — 하드웨어·부하 의존"},
+      {"rule": 3, "pointers": ["/timing/per_permutation_seconds", "/timing/per_reference_value_seconds"], "reason": "단가 2필드 — 하드웨어·부하 의존. timing 의 형상·개수 필드는 남긴다"},
+      {"rule": 4, "pointers": ["/versions"], "reason": "패키지·플랫폼 버전 — 별도 대조표(G-ENV)로 비교하며 해시 대상이 아니다"},
+      {"rule": 5, "pointers": ["/_doc", "/block", "/instruction"], "reason": "서술 문자열 — 지시서 문면 변화에 취약"},
+      {"rule": 6, "pointers": [], "reason": "확장 슬롯(현재 비어 있음) — 제외 목록을 늘리려면 amendment 가 필요하다. 지금 고정된 제외는 규칙 1~5 뿐이다"}
+    ],
+    "must_include": [
+      "/r6 (전체)", "/r6_all_pass", "/weak_null_diagnostic", "/code_scan", "/import_topology",
+      "/text_checks", "/d6_conditionality_keys", "/synthetic_only", "/confirmatory_data_accessed",
+      "/unblinding_performed", "/gin_start_still_blocked", "/sap_version_unchanged",
+      "/timing 의 나머지 필드(N·K·G·n_coin_vectors·n_permutation_values 등 형상·개수)"
+    ],
+    "canonical_serialization": "json.dumps(obj, sort_keys=True, ensure_ascii=False, separators=(\",\", \":\")).encode(\"utf-8\")",
+    "canonical_serialization_note": "이 바이트열의 sha256 이 numeric_core_sha256. 파이썬 float repr 은 shortest round-trip 이므로 값이 같으면 문자열도 같다.",
+    "implementation": "experiments/rqint/r3_package/canonical.py (패키지에 동봉 — 제2자가 같은 방식으로 산출한다)",
+    "amendment_policy": "제외 목록 변경은 amendment 대상이다. 결과를 본 뒤 변경하는 것은 금지한다."
+  },
+
+  "probe_package": {
+    "_doc": "★ R3 판정 0 — 프로브는 플랫폼 적합성 확인 전용이며 R3 합격·불합격 판정에 사용하지 않는다. R3 판정 대상은 R2(SAP 1.2 재동결) 이후의 본 드라이런 산출물뿐이다.",
+    "is_r3_verdict_input": false,
+    "path": "experiments/rqint/r3_package/",
+    "zip": "experiments/rqint/r3_package.zip",
+    "zip_sha256": "fcbcaeea6c6158de8bbe7da60fe7d5410e15db9a97f6e804a26c62cc146e9351",
+    "n_files": 19,
+    "expected_hash_files_included": 0,
+    "expected_hash_policy": "기대 해시를 패키지에 넣지 않는다. 제2자 산출값을 회수한 뒤 우리가 대조한다.",
+    "inputs_are_100_percent_synthetic": true,
+    "confirmatory_data_bytes_included": 0,
+    "scale": {"N": 60, "K": 8, "G": 12, "n_coin_vectors": 64},
+    "scale_reduced_from_target": false,
+    "scale_note": "docs/91 AG-4 가 지정한 규모 그대로다. 60초 예산 안에 들어와 축소가 필요 없었다(우리 Mac 실측 7.8초 / 재실행 7.62초).",
+    "wall_clock_seconds_measured": 7.8,
+    "wall_clock_budget_seconds": 60,
+    "r6_subset_executed": ["R6-1", "R6-2", "R6-5", "R6-6", "R6-7", "R6-9"],
+    "r6_excluded_from_probe": {
+      "R6-3": "균등성은 R=200 realization 이 필요해 60초 예산을 초과한다.",
+      "R6-4": "합격기준이 draws_checked >= 1000 으로 규모 의존이라 축소 규모에서 성립하지 않는다. 기준 완화는 금지이므로 실행하지 않는다.",
+      "R6-8": "2^G 전수열거(G=12 → 4,096 회 소박 평가)가 예산을 초과한다."
+    },
+    "r6_excluded_note": "제외 3항은 R3 본 드라이런에서 전항 실행된다. 프로브의 부분집합 실행은 R3 범위를 축소하지 않는다.",
+    "seed_acquisition_rule": "run_rqint_audit.py 의 시드 리터럴을 그대로 쓴다 — fixture zero=11 · exchangeable=12 · timing=99, 검사 시드 R6-n → n. 새 난수 추첨 0.",
+    "our_local_outputs_kept_outside_package": [
+      "experiments/rqint/r3_package_meta/probe_result_local.json",
+      "experiments/rqint/r3_package_meta/probe_numeric_core_local.sha256",
+      "experiments/rqint/r3_package_meta/probe_run_local.log",
+      "experiments/rqint/r3_package_meta/env_local.json",
+      "experiments/rqint/r3_package_meta/package_manifest.json"
+    ]
+  },
+
+  "order_of_operations": {
+    "_doc": "본 블록 이후에도 R3 는 여전히 미이행이다.",
+    "sequence": ["AD 계측(완료)", "R1 캘리브레이션 감사 C0~C4", "전규모 드라이런", "R2 SAP 1.2 재동결", "R3 본 드라이런", "GIN 착수"],
+    "r3_status": "not_executed",
+    "main_package_send_timing": "R2(SAP 1.2 재동결) 완료 이후. 본 블록의 프로브 패키지는 그 전에 플랫폼 위험만 걷어내기 위한 것이다."
+  },
+
+  "not_done_by_this_block": [
+    "R3 판정", "R3 이행", "SAP 1.2 재동결", "manifest.json 수정", "동결 모듈 수정",
+    "B 확정", "개봉(unblinding)", "emit_sign", "decision.py 호출", "GIN 학습·착수",
+    "확증 데이터 접근", "_sealed/ 읽기·쓰기", "git commit", "git push"
+  ],
+  "unblinding_performed": false,
+  "gin_start_still_blocked": true
+}

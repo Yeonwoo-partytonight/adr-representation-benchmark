@@ -1,0 +1,184 @@
+{
+ "_schema": "rqint_procedure_decisions/v1.DRAFT",
+ "_doc": "★ 초안이다. 동결본이 아니며 v0 를 대체하지 않는다. 파일명의 `.DRAFT` 접미사는 필수이며 제거는 R2(SAP 1.2 재동결) 블록의 일이다. 본 파일은 `still_unspecified` 3건에 대한 **종결안**과 그 실측 근거만 담는다.",
+ "status": "draft_not_frozen",
+ "is_sap_freeze": false,
+ "is_authorization": false,
+ "supersedes": null,
+ "supersede_relation": {
+  "target": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+  "target_sha256": "951b302a2d474361feb51ef785fd7c0fb016027cd8d8e319f6c4018d36ef3626",
+  "relation": "superseding_proposal_only — 본 초안이 채택되면 v0 의 `still_unspecified` 3건을 해소하는 v1 이 된다. 채택 전까지 v0 가 유효하며 v0 는 **0바이트 수정**이다.",
+  "target_status_at_draft": "decisions_recorded_not_frozen",
+  "target_is_sap_freeze": false,
+  "v0_bytes_modified_by_this_block": 0
+ },
+ "block": "AK — docs/99 R2P-5 (R2 준비 · 무동결 · 계산 0)",
+ "drafted_at_kst": "2026-08-24T11:50:08+09:00",
+ "instruction": "docs/99_r2_freeze_prep_prompt_for_vscode.md",
+ "sap_state_at_draft": {
+  "manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+  "manifest_sha16": "756d485feb4715e9",
+  "sap_version": "1.1",
+  "modules_registered": 11,
+  "modules_modified_bytes": 0
+ },
+ "closures_proposed": [
+  {
+   "id": "b_monte_carlo_sample_size_and_definition",
+   "v0_status": "still_unspecified",
+   "proposed_resolution": {
+    "B_definition": "B = 동전 벡터 수 (n_coin_vectors)",
+    "B_value": 100000,
+    "implied_reference_distribution": 200000,
+    "note": "pair_complement = true 이므로 참조분포 = 2 × 동전 수."
+   },
+   "decided_by": "사용자 확정 2026-08-24",
+   "evidence": [
+    {
+     "fact": "F-BMEAS (가)",
+     "source": "experiments/rqint/b_100k/run.json",
+     "value": {
+      "n_coin_vectors": 100000,
+      "reference_distribution": 200000,
+      "wall_hours_total": 19.488727281689645
+     },
+     "reading": "19.4887 h ≤ 24 h → D15 의 '벽시계 24h 초과 시 50,000 으로 하향' 조항 **미발동**."
+    },
+    {
+     "fact": "F-BMEAS (나)",
+     "source": "experiments/rqint/b_dryrun/decisive.json",
+     "value": {
+      "n_coin_vectors": 50000,
+      "reference_distribution": 100000,
+      "wall_hours_total": 9.884754196736548
+     },
+     "reading": "대안 해석도 24 h 이내라, 24h 게이트로는 두 해석이 갈리지 않는다 → 정의 선택은 게이트가 아니라 **문면 결정**이다."
+    },
+    {
+     "fact": "검토자 §9-2 함의 단가",
+     "source": "docs/84_rqint_reviewer_response_triage.md",
+     "value": "B=100,000 = 단일코어 약 30시간 → 1.08 s/동전",
+     "reading": "검토자가 `B` 를 **동전 수**로 상정했음을 시사한다(실측 단가 0.6946 s/동전은 그보다 낮다)."
+    },
+    {
+     "fact": "SE 대비",
+     "source": "experiments/rqint/b_100k/se_comparison.json",
+     "reading": "참조분포 2배 → SE 는 1/√2 배. (가)는 정밀도 √2 배 · 비용 2배."
+    }
+   ],
+   "sap_1_2_text_location": "sap/rqint.py `B_DEFINITION_STATUS` (L63-64) 및 SAP 1.2 §RQ-int",
+   "not_a_post_hoc_choice_because": "판정식 2분기가 `b_100k_prespec.json`(동결 2026-08-22T22:12:40+09:00)에 실주행 시작(2026-08-23T11:36:18+09:00) **이전에** 고정되어 있었고, 실현된 가지를 그대로 따랐다. 3분기 신설·캡 연장·재실행 0.",
+   "freeze_action_deferred_to": "R2 (docs/100)"
+  },
+  {
+   "id": "c0_c3_replicates",
+   "v0_status": "still_unspecified",
+   "proposed_resolution": {
+    "primary_R": 2000,
+    "sensitivity_R": 1000
+   },
+   "decided_by": "이미 동결된 설계값의 사후 기록 — 새 선택이 아니다",
+   "evidence": [
+    {
+     "fact": "F-C0C3",
+     "source": "experiments/rqint/calibration_design.json",
+     "value": {
+      "sha256": "42e2f8f9f3f24ec1dfc5fe9ba9b1afe66d30a13c00ef9fce361a3dcaef650b99",
+      "frozen_at_kst": "2026-08-12T22:25:21+09:00",
+      "primary_variant": "reduced_proportional (prop)",
+      "primary_R": 2000,
+      "sensitivity_variant": "reduced_ratio_optimal (ratio)",
+      "sensitivity_R": 1000
+     }
+    },
+    {
+     "fact": "첫 시뮬레이션 시각",
+     "source": "experiments/rqint/calibration_sessions.jsonl",
+     "value": {
+      "event": "session_start",
+      "cell": "C0:prop",
+      "when_kst": "2026-08-12T22:46:44+09:00"
+     }
+    }
+   ],
+   "★_key_rationale": "**결과를 보고 정한 것이 아니다.** 설계 동결 2026-08-12 22:25:21 KST 가 첫 시뮬레이션 세션 시작 2026-08-12 22:46:44 KST 보다 **21분 23초 앞선다**. 즉 복제수는 어떤 시뮬레이션 산출도 존재하지 않는 시점에 고정되었다. v0 의 `why_unspecified` 축자('계측 블록 산출(단가) 이후 확정한다. 결과를 보고 정하는 것은 금지.')는 준수되었다 — 단가는 블록 AD 계측 산출이고, 이는 C0~C4 **시뮬레이션 결과가 아니다**.",
+   "reviewer_range_compliance": "검토자 권고 1,000~2,000 범위 안 (primary 2,000 · sensitivity 1,000)",
+   "freeze_action_deferred_to": "R2 (docs/100)"
+  },
+  {
+   "id": "r3_second_party",
+   "v0_status": "escalated_awaiting_advisor_reply",
+   "v0_confirmed_second_party": null,
+   "proposed_resolution": {
+    "confirmed_second_party": "<SECOND-PARTY> 학생",
+    "second_party_environment": "별도 환경 재실행"
+   },
+   "decided_by": "지도교수 승인 2026-08-12 18:34:47 KST (이미 접수 완료)",
+   "evidence": [
+    {
+     "fact": "F-R3 승인 서신",
+     "source": "experiments/provenance/ledger.json:correspondence[19]",
+     "value": {
+      "message_id": "<GMAIL-MSGID>",
+      "ts_kst": "2026-08-12 18:34:47 KST",
+      "verbatim": "네 <SECOND-PARTY>씨에게 부탁해서 처리하시죠.",
+      "approval_scope": "수행 주체(<SECOND-PARTY>)만. 합격기준·일정·패키지 구성은 내선 결정.",
+      "supersedes": "correspondence[16].advisor_reply = none_as_of_2026-08-12"
+     }
+    },
+    {
+     "fact": "R3 패키지 동결파일 존재",
+     "source": "v3_Multimodal/config/r3_second_party_freeze.json",
+     "value": {
+      "sha256": "0624d3ddb852c4e9a2f7f070024814653264eb49c2652dd3e7a947ac38ff27d0",
+      "recorded_by": "블록 AG (docs/91)"
+     }
+    }
+   ],
+   "★_omission_found_by_this_block": {
+    "what": "블록 AG 가 `r3_second_party_freeze.json` 을 만들면서 `rqint_procedure_decisions_v0.json` 의 `still_unspecified[4]` 는 갱신하지 않았다. 그 결과 v0 는 2026-08-24 현재까지도 `status` = `escalated_awaiting_advisor_reply` · `confirmed_second_party` = null 로 남아 있다.",
+    "measured_at": "2026-08-24 (블록 AK)",
+    "measured_source": "v3_Multimodal/config/rqint_procedure_decisions_v0.json:still_unspecified[4]",
+    "v0_note_verbatim": "상신은 완료됐으나 수행 주체 확정은 미완이므로 still_unspecified 에서 빼지 않는다(escalated: true · resolved: false).",
+    "why_this_is_stale": "그 note 는 승인 서신 접수(2026-08-12 18:34:47) **이전** 기준이다. 승인은 그날 저녁에 도착했고 블록 AG(2026-08-14)가 접수·기록했으나 v0 의 해당 항목에는 반영되지 않았다.",
+    "corrective_action": "본 초안이 채택되는 R2 에서 해소한다. **본 블록은 v0 를 0바이트 수정한다.**",
+    "cowork_note_verified": "메모 등에 있던 `ledger.open_question.r3_second_party` 는 **존재하지 않는 키**다 — ledger 최상위 11키에 `open_question` 없음(실측). 그쪽은 조치 불요."
+   },
+   "approval_scope_caveat": "승인 범위는 **수행 주체가 <SECOND-PARTY>이라는 것뿐**이다. 합격 기준·게이트 G-ENV· numeric_core 제외 목록·패키지 구성·일정은 승인 대상이 아니며 내선 결정이다.",
+   "freeze_action_deferred_to": "R2 (docs/100)"
+  }
+ ],
+ "still_unspecified_after_this_draft": [],
+ "stale_in_v0_noted_but_not_touched": [
+  {
+   "path": "conditions.R1.status",
+   "v0_value": "pending",
+   "measured": "experiments/rqint/calibration_summary.json:r1_passed = true (2026-08-18 완주)",
+   "action": "R2 에서 갱신"
+  },
+  {
+   "path": "conditions.R6.status",
+   "v0_value": "pending",
+   "measured": "블록 AC(docs/89)에서 RQ-int 코드경로 감사 2종 수행",
+   "action": "R2 에서 갱신 — 본 블록은 R6 완료를 선언하지 않는다"
+  },
+  {
+   "path": "conditions.R5.status",
+   "v0_value": "partial",
+   "measured": "docs/99_amendment_section8_draft.md 로 문안 초안 작성(미삽입)",
+   "action": "R2 에서 §8 삽입 후 갱신"
+  }
+ ],
+ "gin_start_still_blocked": true,
+ "unblinding_performed": false,
+ "computation_performed": false,
+ "models_trained": 0,
+ "network_calls": 0,
+ "sealed_read": 0,
+ "open_sealed_calls": 0,
+ "emit_sign_calls": 0,
+ "decision_py_calls": 0,
+ "this_file_is_not_an_authorization": "본 초안은 R2 동결·R3 이행·`B` 확정·GIN 착수·개봉 중 어느 것에 대한 허가도 아니다. 전부 차단 유지.",
+ "executed_by": "Claude Code (VS Code) — 블록 AK"
+}

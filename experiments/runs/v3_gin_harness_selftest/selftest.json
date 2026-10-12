@@ -1,0 +1,543 @@
+{
+  "_doc": "confirmatory_gin_rep.py --stage selftest 산출. 확증 GIN 학습 0회.",
+  "block": "AR",
+  "generated_kst": "2026-09-15 13:06:21 KST",
+  "harness_sha256": "1e6642bf9ecac5a272fdb49c441668d2f6f3ec97e87528831aad75a9c40d995a",
+  "n_cases": 12,
+  "n_pass": 12,
+  "n_skip": 0,
+  "all_pass": true,
+  "all_pass_definition": "all_pass = (n_pass + n_skip == n_cases)",
+  "sealed_dirs_created": 0,
+  "confirmatory_training_runs_performed": 0,
+  "s3_units": [
+    {
+      "unit": [
+        201,
+        0
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        201,
+        1
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        201,
+        2
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        201,
+        3
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        201,
+        4
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        202,
+        0
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        202,
+        1
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        202,
+        2
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        202,
+        3
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        202,
+        4
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        203,
+        0
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        203,
+        1
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        203,
+        2
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        203,
+        3
+      ],
+      "match": true,
+      "diff": {}
+    },
+    {
+      "unit": [
+        203,
+        4
+      ],
+      "match": true,
+      "diff": {}
+    }
+  ],
+  "cases": [
+    {
+      "case": "S1",
+      "desc": "동결 3종 sha256 대조",
+      "expected": {
+        "n_match": 3
+      },
+      "actual": {
+        "n_match": 3
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S2",
+      "desc": "대표 unit 규칙(SHA-256 mod 5) 재산출",
+      "expected": [
+        4,
+        1,
+        0
+      ],
+      "actual": [
+        4,
+        1,
+        0
+      ],
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S3",
+      "desc": "inner split 15 unit 전건 재현",
+      "expected": {
+        "n_units": 15,
+        "n_mismatch": 0,
+        "inner_valid": 97
+      },
+      "actual": {
+        "n_units": 15,
+        "n_mismatch": 0,
+        "inner_valid_set": [
+          97
+        ]
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S4",
+      "desc": "outer split 3반복 재현 + assign_buckets 일반화 등가성",
+      "expected": {
+        "mismatched_rows": 0,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ],
+        "n_scaffold_groups": 732
+      },
+      "actual": {
+        "rep1_seed201": {
+          "mismatched_rows": 0,
+          "fold_sizes": [
+            218,
+            218,
+            219,
+            218,
+            219
+          ],
+          "n_scaffold_groups": 732
+        },
+        "rep2_seed202": {
+          "mismatched_rows": 0,
+          "fold_sizes": [
+            218,
+            218,
+            219,
+            218,
+            219
+          ],
+          "n_scaffold_groups": 732
+        },
+        "rep3_seed203": {
+          "mismatched_rows": 0,
+          "fold_sizes": [
+            218,
+            218,
+            219,
+            218,
+            219
+          ],
+          "n_scaffold_groups": 732
+        }
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S5",
+      "desc": "A_wd 상수 대조 (import) — 코드 = 규격 = inner_valid 동결",
+      "expected": {
+        "SEEDS": [
+          42,
+          1,
+          2,
+          3,
+          4
+        ],
+        "THR": 0.5,
+        "ARCH": "gin",
+        "EMBED_DIM": 128,
+        "PCA_K": 64,
+        "EPOCHS": 200,
+        "PATIENCE": 30,
+        "BATCH": 32,
+        "LR": 0.001,
+        "WD": 0.0001,
+        "GAMMA": 2.0,
+        "DROPOUT": 0.2
+      },
+      "actual": {
+        "SEEDS": [
+          42,
+          1,
+          2,
+          3,
+          4
+        ],
+        "THR": 0.5,
+        "ARCH": "gin",
+        "EMBED_DIM": 128,
+        "PCA_K": 64,
+        "EPOCHS": 200,
+        "PATIENCE": 30,
+        "BATCH": 32,
+        "LR": 0.001,
+        "WD": 0.0001,
+        "GAMMA": 2.0,
+        "DROPOUT": 0.2
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S6",
+      "desc": "early-stop 진리표(strict > · patience · tie=최초 · min_epoch 부재)",
+      "expected": {
+        "n_cases": 6,
+        "patience": 30,
+        "max_epoch": 200,
+        "min_epoch": null
+      },
+      "actual": {
+        "n_cases": 6,
+        "patience": 30,
+        "max_epoch": 200,
+        "min_epoch": null,
+        "cases": [
+          {
+            "name": "동률은 최초 epoch 승",
+            "seq": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "exp_best_ep": 1,
+            "got": {
+              "best_ep": 1,
+              "best_v": 0.5,
+              "stopped_at": null
+            }
+          },
+          {
+            "name": "단조 증가 → 최종 epoch",
+            "seq": [
+              0.1,
+              0.2,
+              0.3,
+              0.4
+            ],
+            "exp_best_ep": 4,
+            "got": {
+              "best_ep": 4,
+              "best_v": 0.4,
+              "stopped_at": null
+            }
+          },
+          {
+            "name": "patience 30 정확히 소진 → ep 31 정지",
+            "seq": "0.9 + 0.1×30",
+            "exp_best_ep": 1,
+            "got": {
+              "best_ep": 1,
+              "best_v": 0.9,
+              "stopped_at": 31
+            }
+          },
+          {
+            "name": "patience 29 에서는 정지 안 함",
+            "seq": "0.9 + 0.1×29",
+            "exp_best_ep": 1,
+            "got": {
+              "best_ep": 1,
+              "best_v": 0.9,
+              "stopped_at": null
+            }
+          },
+          {
+            "name": "최솟값 갱신 없음(첫 epoch 이 best)",
+            "seq": [
+              0.7,
+              0.6,
+              0.65
+            ],
+            "exp_best_ep": 1,
+            "got": {
+              "best_ep": 1,
+              "best_v": 0.7,
+              "stopped_at": null
+            }
+          },
+          {
+            "name": "min_epoch 부재 — 1 epoch 도 best 가 될 수 있다",
+            "seq": [
+              0.8
+            ],
+            "exp_best_ep": 1,
+            "got": {
+              "best_ep": 1,
+              "best_v": 0.8,
+              "stopped_at": null
+            }
+          }
+        ]
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S7",
+      "desc": "macro AP 가변 분모(AP=0 대입 없음) + 반환 키",
+      "expected": {
+        "n_eval": 3,
+        "n_excluded_undefined": 2,
+        "n_eligible": 5,
+        "keys": [
+          "defined_mask",
+          "excl_frac",
+          "n_eligible",
+          "n_eval",
+          "n_excluded_undefined"
+        ]
+      },
+      "actual": {
+        "n_eval": 3,
+        "n_excluded_undefined": 2,
+        "n_eligible": 5,
+        "excl_frac": 0.4,
+        "defined_mask": [
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        "keys_present": [
+          "defined_mask",
+          "excl_frac",
+          "n_eligible",
+          "n_eval",
+          "n_excluded_undefined"
+        ]
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S8",
+      "desc": "build_eight_consensus 8행렬 · seed 키 정렬 · metric-then-average (rqint_test 호출 0 · 순열 0)",
+      "expected": {
+        "n_mats": 8,
+        "seed_keys": [
+          1,
+          2,
+          42
+        ],
+        "n_delta_gin": 3,
+        "metric_then_average": true,
+        "build_consensus_is_frozen_object": true
+      },
+      "actual": {
+        "n_mats": 8,
+        "seed_keys": [
+          1,
+          2,
+          42
+        ],
+        "n_delta_gin": 3,
+        "metric_then_average": true,
+        "build_consensus_is_frozen_object": true,
+        "repeat_axis_matches_build_consensus": true,
+        "rqint_test_calls": 0,
+        "permutations": 0
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S9",
+      "desc": "합성 smoke — 지시서 공급 SMILES 12 + rng(20260914) 라벨 12×8 · 2 epoch",
+      "expected": {
+        "completed": true,
+        "n_graphs": 12,
+        "build_graphs_used": false
+      },
+      "actual": {
+        "completed": true,
+        "n_graphs": 12,
+        "n_parse_fail": 0,
+        "epochs": 2,
+        "seconds": 0.193,
+        "seconds_per_epoch": 0.096,
+        "device": "mps",
+        "pred_shape_ok": true,
+        "columns_excluded_by_macro_ap_rule": [],
+        "build_graphs_used": false,
+        "confirmatory_data_accessed": false,
+        "metrics_recorded": false
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S10",
+      "desc": "--stage train → exit 11 · 차단 사유 출력 · 실행 디렉터리 생성 0",
+      "expected": {
+        "returncode": 11,
+        "reason_printed": true,
+        "dirs_created": 0
+      },
+      "actual": {
+        "returncode": 11,
+        "stdout": "GIN 착수 차단 중: rqint_procedure_decisions_v1.json / gin_seed_freeze.json / gin_inner_valid_freeze.json gin_start_still_blocked=true. 해제는 별도 블록·별도 승인.",
+        "dirs_created": 0
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S11",
+      "desc": "규격 왕복(schema_fixture) · _sealed 디렉터리 생성 0",
+      "expected": {
+        "npz_keys": true,
+        "checkpoint_keys": true,
+        "metrics_full_keys": true,
+        "access_log": true,
+        "sealed_dir_created": 0
+      },
+      "actual": {
+        "npz_keys": true,
+        "checkpoint_keys": true,
+        "metrics_full_keys": true,
+        "access_log": true,
+        "sealed_dir_created": 0,
+        "n_layout_paths": 90
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    },
+    {
+      "case": "S12",
+      "desc": "위생 — __pycache__ 착수=종료 · 봉인 25/291/275/16 불변",
+      "expected": {
+        "pycache": 4541,
+        "sealed_dirs": 25,
+        "sealed_files": 291,
+        "access_logs": 16,
+        "non_access": 275
+      },
+      "actual": {
+        "pycache": 4541,
+        "sealed_dirs": 25,
+        "sealed_files": 291,
+        "access_logs": 16,
+        "non_access": 275
+      },
+      "pass": true,
+      "skip": false,
+      "skip_reason": null
+    }
+  ],
+  "environment": {
+    "python": "3.14.4",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  }
+}

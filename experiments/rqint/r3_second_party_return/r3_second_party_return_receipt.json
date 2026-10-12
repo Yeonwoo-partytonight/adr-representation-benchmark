@@ -1,0 +1,68 @@
+{
+  "_doc": "R3 본 드라이런 — 제2자 회수물 원본(메일 회신 첨부 바이트 그대로) + 회수 경위. cowork 2026-09-14 기입. ★ 판정은 v3_Multimodal/src/r3_judge.py(동결본) 1회 실행으로만 확정한다 — 본 파일은 판정이 아니다.",
+  "mail_3_sent": {
+    "message_id": "<GMAIL-MSGID>",
+    "sent_kst": "2026-09-14 01:27:38",
+    "sent_utc": "2026-09-13T16:27:38Z",
+    "thread_id": "<GMAIL-MSGID>",
+    "size_estimate": 130708,
+    "attachment": "r3_main_package.zip (사용자가 직접 첨부 · 바이트 대조 미실시)",
+    "note": "트리거 사건 = 이 발송. 기준값·판정기·패키지는 블록 AP(2026-09-14 01:05 KST)에서 이미 동결됨"
+  },
+  "reply_received": {
+    "message_id": "<GMAIL-MSGID>",
+    "received_kst": "2026-09-14 15:10:45",
+    "received_utc": "2026-09-14T06:10:45Z",
+    "from": "<EMAIL>",
+    "n_attachments": 4,
+    "body_gist": "본 실행 진행 후 생성된 파일 첨부 — 확인 요청"
+  },
+  "files_as_received": {
+    "audit_r6_second_party.json": {
+      "attachment_filename": "audit_r6.json",
+      "sha256": "e06464919c4e0358d48b42c6b7b85cd04c079c94bb9851f67ed72a87f5cd7413",
+      "bytes": 10382
+    },
+    "env_second_party_main_e2c3a7fa6723.json": {
+      "attachment_filename": "env_e2c3a7fa6723 1.json",
+      "sha256": "7a404edba225af64be7c4f3dbcf9014b2aaf39bd04c3fe8023e0df8a31065106",
+      "bytes": 3100
+    },
+    "audit_numeric_core_second_party.sha256": {
+      "attachment_filename": "audit_numeric_core.sha256",
+      "sha256": "2e5461a65bc9d789487b9f957fe0833857c5bdbde93ef2699ee82d8137c0031d",
+      "bytes": 778
+    },
+    "package_hashes_second_party.json": {
+      "attachment_filename": "package_hashes.json",
+      "sha256": "7560b6cdde1d10f8d91edf4dc84fe47ec093b9d5f2d21b9a9a4a1e91a176da86",
+      "bytes": 3168
+    }
+  },
+  "second_party_run_facts": {
+    "run_at_kst": "2026-09-14T14:34:37+09:00",
+    "wall_clock_seconds": 4223.9,
+    "versions": {
+      "python": "3.12.9",
+      "numpy": "2.5.0",
+      "sklearn": "1.9.0",
+      "platform": "Windows-10-10.0.19045-SP0"
+    },
+    "r6_all_pass": true,
+    "r6_3_remeasure": null,
+    "reported_numeric_core_sha256": "fd488eb429a71990d47ebf321efeb1f34083bbeb4813730a76777262b1ba878b",
+    "reported_canonical_bytes": 7493,
+    "cowork_independent_recompute": {
+      "method": "canonical.py 미사용 — 제외 pointer 8개를 자체 구현하고 json.dumps(sort_keys,ensure_ascii=False,separators=(',',':')) 로 직렬화",
+      "numeric_core_sha256": "fd488eb429a71990d47ebf321efeb1f34083bbeb4813730a76777262b1ba878b",
+      "canonical_bytes": 7493
+    },
+    "package_hashes": {
+      "n_files_listed": 20,
+      "n_missing": 0,
+      "vs_package_manifest": "20/20 일치(cowork 대조)"
+    },
+    "transfer_note": "회수 경로 = 메일 첨부 → 사용자 다운로드 → Cowork 업로드 → cowork 커밋. env 파일은 다운로드 시 'env_e2c3a7fa6723 1.json' 으로 개명됐고 바이트는 프로브 회수본과 동일(같은 기계·같은 버전이므로 collect_env 산출이 동일)"
+  },
+  "not_a_verdict": "1차·2차 판정과 원장 기입은 후속 블록(docs/105)에서 동결 판정기로 수행한다."
+}

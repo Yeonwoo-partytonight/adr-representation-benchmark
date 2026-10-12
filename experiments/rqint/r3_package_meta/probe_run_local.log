@@ -1,0 +1,25 @@
+[15:10:55] ══════════════════════════════════════════════════════════════════════
+[15:10:55] 블록 AG — R3 제2자 프로브 (플랫폼 적합성 전용 · R3 판정 아님 · 합성 전용)
+[15:10:55] ══════════════════════════════════════════════════════════════════════
+[15:10:55] [스캔] S1 동결규칙 = True (금지 import 0 · data-load call 0 · open() 리터럴 0) · S2 비-docstring 문자열 hit 파일 7종
+[15:10:55] [토폴로지] rqint←signflip=False · rqint_audit←rqint=False · pass=True
+[15:10:55] [텍스트] 축자 대조 pass=True
+[15:10:55] [fixture] N=60 K=8 G=12 n_coin_vectors=64
+[15:10:55] [R6-1] 가환성
+[15:10:55]         pass=True max_abs_diff=0.000e+00
+[15:10:55] [R6-2] zero-effect → p = 1.0
+[15:10:56]         pass=True p=1.0
+[15:10:56] [R6-5] 전체 교환 보존 (z ≡ 1 → T* = −T)
+[15:10:56]         pass=True abs_dev=0.000e+00
+[15:10:56] [R6-6] 군 순서 불변
+[15:10:58]         pass=True p_base=0.3953488372093023
+[15:10:58] [R6-7] 재실행 결정성
+[15:11:00]         pass=True
+[15:11:00] [R6-9] 독립 구현 대조
+[15:11:01]         pass=True max_diff=0.000e+00
+[15:11:01] [계측] per_permutation_seconds 실측
+[15:11:02]         per_permutation_seconds=0.011545s
+[15:11:03] [종합] R6 부분집합 6항 전항 PASS = True
+[15:11:03] [산출] <REPO_ROOT>/experiments/rqint/r3_package/probe_result.json
+[15:11:03] [산출] <REPO_ROOT>/experiments/rqint/r3_package/probe_numeric_core.sha256
+[15:11:03] [numeric_core] sha256 = 3745438643aa1c53a3356813a2c85dcad52b0f23b8e8025202ed252ec06919f4

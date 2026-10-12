@@ -1,0 +1,2461 @@
+{
+ "timeline": [
+  {
+   "ts": "2026-07-22",
+   "event": "v3.3 사전등록 확정(교수님 B안 승인): primary=M2b−M1b, RF primary·GIN robustness",
+   "actor": "advisor+user",
+   "artifacts": [
+    "docs/29"
+   ],
+   "confirmatory": "N"
+  },
+  {
+   "ts": "2026-07-23 15:49 KST",
+   "event": "OSF 사전등록 동결(embargo)",
+   "actor": "user",
+   "artifacts": [
+    "osf.io/5w2uv",
+    "docs/30"
+   ],
+   "hash": {
+    "docs/30": "cdbaa7e69e654a36"
+   },
+   "confirmatory": "N"
+  },
+  {
+   "ts": "2026-07-24 12:18 KST",
+   "event": "M1b 공변량·P-FAM(자체 50% 클러스터) 데이터 소싱(§4-A/§3-A 승인 네트워크)",
+   "actor": "vscode",
+   "artifacts": [
+    "08_m1b_covariates.csv",
+    "09_target_family_clusters.csv"
+   ],
+   "confirmatory": "N",
+   "ref": "docs/33#1,2"
+  },
+  {
+   "ts": "2026-07-24",
+   "event": "P-FAM 생물학 family(ChEMBL class L2, 42 family, 싱글톤19.1%)로 재정의; mmseqs 50%=§9 sensitivity 보존",
+   "actor": "vscode",
+   "artifacts": [
+    "10_target_family_biological.csv"
+   ],
+   "confirmatory": "N",
+   "ref": "docs/33#4, docs/35"
+  },
+  {
+   "ts": "2026-07-24 15:08 KST",
+   "event": "§13-2 사다리 7모델 동결 완결 문서",
+   "actor": "vscode+cowork",
+   "artifacts": [
+    "docs/34"
+   ],
+   "confirmatory": "N"
+  },
+  {
+   "ts": "2026-07-24 16:33 KST",
+   "event": "M1b pChEMBL amendment(유지) — 이후 19:45에 대체됨",
+   "actor": "user",
+   "artifacts": [],
+   "confirmatory": "N",
+   "ref": "docs/33#5",
+   "status": "superseded"
+  },
+  {
+   "ts": "2026-07-24 19:45 KST",
+   "event": "★primary M1b 재지정(안 B): pChEMBL 제외 10차원=등록 §4 일치; 포함 13차원=sensitivity",
+   "actor": "advisor-consult+user",
+   "artifacts": [
+    "docs/33",
+    "docs/29 §20"
+   ],
+   "confirmatory": "N",
+   "ref": "docs/33#6, docs/40 §3"
+  },
+  {
+   "ts": "2026-07-24 20:27 KST",
+   "event": "ladder_freeze.json 재동결(10차원 primary), M0/M1/M2 byte-invariant",
+   "actor": "vscode+cowork",
+   "artifacts": [
+    "v3_Multimodal/config/ladder_freeze.json"
+   ],
+   "hash": {
+    "ladder_freeze.json": "b885585aefbabb32"
+   },
+   "confirmatory": "N"
+  },
+  {
+   "ts": "2026-07-24 20:27 KST",
+   "event": "확증 직전 하드닝 A0~A5(재primary 매니페스트·nested-fit assert·split 진단·B_seq 절단·target count). B_seq PCA=outer-train-drug만, leak_rows=0",
+   "actor": "vscode+cowork",
+   "artifacts": [
+    "experiments/audits/A0..A5"
+   ],
+   "confirmatory": "N",
+   "ref": "docs/38"
+  },
+  {
+   "ts": "2026-07-25 15:31 KST",
+   "event": "SAP 동결 v1.0(A6~A11+redaction): 분석 연산자 코드+hash 동결, synthetic 검증, CI=BCa 사전고정",
+   "actor": "vscode+cowork",
+   "artifacts": [
+    "v3_Multimodal/src/sap/*",
+    "experiments/sap/manifest.json"
+   ],
+   "hash": {
+    "sap_v1.0_sha16": {
+     "metrics": "16fa0d2328239645",
+     "bootstrap": "df601d0cb04c256c",
+     "signflip": "f0dfa68448b4fc2d",
+     "decision": "953732284ca94b1b",
+     "null_generator": "b77504652e097b00",
+     "synthetic": "55a248f9d7165d8c",
+     "freeze": "19ba25beaf4a12ed",
+     "consensus": "9bddb53da5752c46",
+     "redaction": "4d4bf221141fbc79",
+     "unseen_target": "96c0c87911e8c93d",
+     "__init__": "8dc63e28ffcf93dc"
+    }
+   },
+   "confirmatory": "N",
+   "ref": "docs/41, docs/33#7"
+  },
+  {
+   "ts": "2026-07-25 18:20:26 KST",
+   "event": "SAP 재-동결 v1.1(ChatGPT 3차 A1~A6): A1 BCa불능→not_estimable(percentile 성공판정 차단·실제 코드갭 수정)·A2 Holm7고정·A3 PT eligibility·A4 NULL_B=1000·A5 진단·A6 문구/assert",
+   "actor": "vscode+cowork",
+   "artifacts": [
+    "v3_Multimodal/src/sap/*",
+    "experiments/sap/manifest.json"
+   ],
+   "hash": {
+    "sap_v1.1_sha16": {
+     "__init__": "8dc63e28ffcf93dc",
+     "metrics": "a7d3fe4fe9e87983",
+     "consensus": "9bddb53da5752c46",
+     "redaction": "4d4bf221141fbc79",
+     "bootstrap": "05437c516e606a05",
+     "signflip": "3de1223585ae0f97",
+     "decision": "f688b20d816acabe",
+     "null_generator": "90886abce256a130",
+     "unseen_target": "96c0c87911e8c93d",
+     "synthetic": "ddf715e6fba7503e",
+     "freeze": "94e6369fa952be7f"
+    },
+    "manifest": "756d485feb4715e9"
+   },
+   "confirmatory": "N",
+   "ref": "docs/42, docs/43, docs/33(18:20)"
+  },
+  {
+   "ts": "2026-07-25",
+   "event": "교수님 승인 요청(1p 요약+메일초안) 전달",
+   "actor": "cowork+user",
+   "artifacts": [
+    "docs/44_first_look_approval_summary.pdf",
+    "docs/44_professor_approval_email_first_look.md"
+   ],
+   "confirmatory": "N"
+  },
+  {
+   "ts": "2026-07-25",
+   "event": "교수님 회신: 무결성 강조 + 연구과정 타임스탬프·결과 상세 기록 지시(심사·확장 대비) → 본 ledger 생성",
+   "actor": "advisor",
+   "artifacts": [
+    "docs/45_research_integrity_ledger.md",
+    "experiments/provenance/ledger.json"
+   ],
+   "confirmatory": "N"
+  },
+  {
+   "event": "★§13-3 확증 OOF 반복1(seed 201) 최초 조회 — M1b·M2b 전체 1092×370 OOF 완성, Δ(M2b−M1b) 부호만 방출. 게이트0(동결 hash)·A(split 진단)·B(사전 로그) 전부 PASS.",
+   "actor": "vscode-claude(runner)",
+   "artifacts": [
+    "docs/36",
+    "experiments/provenance/first_look_log.json",
+    "experiments/runs/v3_confirm_rep1_seed201/metrics_public.json",
+    "data/processed/splits/confirmatory/rep1_seed201/"
+   ],
+   "confirmatory": "Y (최초 조회 — 이 시점부터 확증 조회 Y)",
+   "ts_kst": "2026-07-27 10:55:31 KST",
+   "ts_completed_kst": "2026-07-27 11:17:57 KST",
+   "hash": {
+    "sealed_sha16": {
+     "metrics_full.json": "8722a4e1c52d2eae",
+     "oof_M1b.npz": "b2a61ba846eead5f",
+     "oof_M2b.npz": "350fa12fac84ef4c"
+    }
+   },
+   "result_summary": "delta_sign = negative (원시 AP·Δ크기·PT/fold별은 sealed, 미열람)",
+   "integrity_note": "전 fold RF random_state=42 · B_seq PCA=outer-fold train∩매핑 fit(leak_rows=0) · 부호-only redaction 경로 분리 · bootstrap/sign-flip/p/SESOI/성공판정 미실행 · 반복2·3 미생성 · 타 모델 미조회 · 네트워크 0 · _sealed 미열람(access.log 부재)",
+   "ts": "2026-07-27"
+  },
+  {
+   "ts_kst": "2026-07-27 11:10:06 KST",
+   "actor": "vscode-claude",
+   "step": "§13-5 pre-commit",
+   "event": "반복↔seed 대응 사전확정: 반복 r = seed 200+r (반복1=201·반복2=202·반복3=203; 204·205 미사용 예비). 결과에 따른 seed 교체·추가·재추첨 영구 금지.",
+   "artifacts": [
+    "docs/33"
+   ],
+   "confirmatory": "N",
+   "result_summary": "seed map 200+r 확정",
+   "integrity_note": "delta_sign=null 상태에서 기록 = pre-look. 부호 산출 시각 2026-07-27 11:17:57 KST 보다 앞선 2026-07-27 11:10:06 KST 에 기록됨(교차검증 가능).",
+   "ts": "2026-07-27"
+  },
+  {
+   "ts": "2026-07-27",
+   "ts_kst": "2026-07-27 13:31:12 KST (완료 2026-07-27 14:27:20 KST)",
+   "actor": "vscode-claude",
+   "step": "§13-4 timing probe",
+   "event": "재배치 null 타이밍 프로브(B=2, probe seed 격리) — p·비교·판정 없음. 목적=permutation 1회당 실측 wall-clock/메모리/디스크 확보해 2,000 permutation 인프라 결정. global·family 각 2회(총 4회) + identity control 1회. permutation 중앙값 673.7s (global 676.4s·family 673.7s, min 669.1·max 683.6) → 2,000회 단일프로세스 순차 추정 374.3h(≈15.6일, 구간 371.7~379.8h). peak RSS 2.02GB·18코어·RF n_jobs 실효 18·fold 시간의 99.95%가 RF. eligible target 1191·42 family·고정(|family|≤2) target 13·incidence 0.0097. 디스크: T_b 스칼라만 저장 설계 시 128KB(전량 OOF 저장 시 1.11GB) — 감사용 최초 3개만 예외 보관.",
+   "artifacts": [
+    "experiments/runs/v3_null_probe/config.json",
+    "experiments/runs/v3_null_probe/timing_public.json",
+    "experiments/runs/v3_null_probe/identity_control.json",
+    "experiments/runs/v3_null_probe/run.log",
+    "experiments/runs/v3_null_probe/_precheck.json",
+    "experiments/runs/v3_null_probe/_sealed/probe_stats.json (T_b 4개 — 봉인·폐기 예정, 본 분포 미편입)",
+    "v3_Multimodal/src/null_timing_probe.py"
+   ],
+   "confirmatory": "N (관측 Δ와 비교 없음; sealed M1b는 machine_read)",
+   "integrity_note": "identity control **PASS** — identity permutation의 M2b 5-fold OOF가 §13-3 sealed oof_M2b.npz와 바이트 동일(파일 sha256 350fa12fac84ef4ca…, 배열 sha256 798f420e4e29e162…, 불일치 원소 0/404,040 (2026-07-27 정정: 최초 기재 '0/403,040'은 오기. 병기된 식 1092×370이 404,040이므로 자기반증. 실측 shape (1092,370) 재확인)). 재실행에서도 동일 PASS = 결정성 확인. 게이트0 PASS(ladder_freeze b885585aefbabb32·SAP manifest 756d485feb4715e9 v1.1·11/11 모듈). PROBE_SEEDS=[9000001,9000002]는 본실행 seed namespace(≤1,000,000)와 교집합 0(runner assert), probe_only=true·enters_null_distribution=false. NULL_B=1000 무수정(하향·상향·조기중단·재시도 없음). sealed oof_M1b.npz는 **machine_read**(human_exposure=false)로 1회 로드해 전 permutation 재사용 — open_sealed(사람 열람) 호출 0, access.log에 4건 machine_read 기록(1차 실행 2건 + 재실행 2건). empirical_p 미호출·T_obs 비교 없음·bootstrap/sign-flip/SESOI/성공판정 미실행·반복2·3 미생성·타 모델 미조회·네트워크 0·data/raw 불변. 1차 실행은 집계 로그의 dict 키 오타로 첫 permutation 계산 직후 중단(수치 영향 없음) → 코드 수정 후 identity control부터 전체 재실행, 본 기록의 수치는 전부 재실행분.",
+   "corrections": [
+    {
+     "ts_kst": "2026-07-27 21:16 KST",
+     "field": "integrity_note",
+     "original_text": "불일치 원소 0/403,040",
+     "corrected_text": "불일치 원소 0/404,040",
+     "reason": "병기된 식 1092×370 = 404,040 이므로 최초 기재 403,040 은 산술 자기반증. sealed oof_M2b.npz 의 npz 내부 .npy **헤더만** 판독(값 미로드)해 shape (1092,370) 실측 재확인.",
+     "verification": {
+      "read_mode": "zip 내 .npy 헤더만(값 미로드·미출력)",
+      "shape": [
+       1092,
+       370
+      ],
+      "n_elements": 404040,
+      "access_log_entry": "machine_read / purpose='shape only' / human_exposure=false"
+     },
+     "note": "불일치 **개수 0** 자체는 불변 — 분모(전체 원소 수) 표기만 정정. identity control PASS 판정 무영향.",
+     "scope": "본 오기는 ledger.json 1개소에만 존재. docs/45·run.log 는 '불일치 원소 0'(분모 미기재)으로 오기 부재 — 두 파일에는 검증된 분모를 **추가 기재**(정정 아님)."
+    }
+   ]
+  },
+  {
+   "ts": "2026-07-27",
+   "ts_kst": "2026-07-27 21:16 KST",
+   "actor": "vscode-claude",
+   "step": "§13-4 블록 A (기록·동결)",
+   "event": "§13-4 본런 전 **기록·동결 블록 A** — 재계산 0·네트워크 0·모델학습 0·p 계산 0. (1) family partition tie-break 확정(family_id 사전순 최소; 동결 모듈 바깥 상류 전처리, null_generator.py 바이트 무수정) (2) §13 실행순서 4↔5 스왑(인프라 로지스틱스 전용, 분석 정의 불변) (3) null 검정통계량 T=관측 M2b macro AP·단측 상단꼬리 판독 확정(Δ 기준과 p_emp 동치 증명 병기) (4) null T_obs 기준 = 반복1(seed 201) 단일반복 확정(사용자 승인; 등록 §8 문면 충돌 정직 기재) (5) 파티션 ALT 민감도 사양 동결(paired·B_family_ALT=100·B_global_ALT=10·enters_p_emp=false) (6) permutation 산출물 저장 정책 동결(스칼라만 + 각 모드 최초 3 OOF 감사 예외) (7) 병렬화 정책 동결(ladder_freeze.json 바이트 불변; 런타임 override는 identity 0-diff 증명 구성만). partition CSV 2종 동결 + sealed 원소 수 오기(403,040→404,040) 정정.",
+   "artifacts": [
+    "docs/33_prereg_deviation_log.md (§16 신규 7항목 = 항목8~14)",
+    "docs/29_v3.3_preregistration_advisor_approved.md §20 (mirror 7줄)",
+    "docs/45_research_integrity_ledger.md",
+    "data/processed/target_mapping/11_null_family_partition.csv",
+    "data/processed/target_mapping/11b_null_family_partition_ALT.csv",
+    "experiments/runs/v3_null_partition_freeze/partition_freeze.json",
+    "experiments/runs/v3_null_MAIN/run_manifest_draft.json (초안 — 미실행)",
+    "v3_Multimodal/src/null_partition_freeze.py"
+   ],
+   "hash": {
+    "11_null_family_partition.csv": "a95e26f9a527e945",
+    "11b_null_family_partition_ALT.csv": "aee6c742c52ce77c",
+    "docs/33_after_append": "bbcaeec21ff85f34",
+    "ladder_freeze.json": "b885585aefbabb32",
+    "sap_manifest": "756d485feb4715e9",
+    "rep1_sealed_sha16": {
+     "metrics_full.json": "8722a4e1c52d2eae",
+     "oof_M1b.npz": "b2a61ba846eead5f",
+     "oof_M2b.npz": "350fa12fac84ef4c"
+    }
+   },
+   "confirmatory": "Y (sealed 수치 미열람)",
+   "result_summary": "기록·동결 7건 확정 + partition CSV 2종 동결(assert 전 항목 PASS: 표적 1191·family 42·tie-break 14·고정 13·교환가능 1178, 프로브 _precheck.json family_report 와 완전 일치) + 원소 수 정정 404,040 실측 확인. 통계량·AP·Δ·p 산출 0.",
+   "integrity_note": "게이트0 PASS(ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 v1.1 · 11/11 모듈 · A0~A5 PASS · primary B_m1b dim=10). rep1 _sealed 3종 sha256 블록 시작·종료 모두 불변. sealed_human_read=false — _sealed/access.log 의 open_sealed **0건**(전 항목 machine_read·human_exposure=false). A-4는 npz 내부 .npy **헤더만** 판독(shape·dtype)해 배열 값을 로드하지 않았다. confirmatory 필드가 Y 인 것은 **프로젝트 상태**(2026-07-27 10:55 반복1 부호 기조회 이후)를 뜻하며, 블록 A 자체는 새 split test/OOF 를 생성·조회하지 않았다(docs/33 각 항목 열 = N). empirical_p 미호출 · bootstrap/sign-flip/SESOI/TOST/성공판정 미실행 · §13-4 null 본런 미착수 · NULL_B=1000·NULL_RF_COMMON_SEED=42·p_emp 공식·SAP 11모듈·ladder_freeze.json 무수정 · 네트워크 0 · data/raw 불변 · git commit 없음."
+  },
+  {
+   "ts": "2026-07-27",
+   "ts_kst": "2026-07-27 22:15 KST",
+   "actor": "vscode-claude(runner)",
+   "step": "§13-5 반복2·3 + consensus",
+   "event": "확증 OOF 반복2(seed 202)·반복3(seed 203) M1b·M2b 전수 조회 + consensus(반복1·2·3, SAP A8 방법A = raw probability 산술평균) 산출. 각 실행 공개 = Δ(M2b−M1b) 부호 1개. 반복1과 동일 함수 객체 재사용(코드경로 동일성 증명: seed=201 재현본 folds.json 이 반복1 원본과 sha256 동일 3c1a5d68bfcc6ddf) · 반복1과 동일 compute 조건(BLAS 환경변수 미설정·병렬 인자 무변경).",
+   "artifacts": [
+    "data/processed/splits/confirmatory/rep2_seed202/",
+    "data/processed/splits/confirmatory/rep3_seed203/",
+    "experiments/runs/v3_confirm_rep2_seed202/(config.json·metrics_public.json·_sealed/)",
+    "experiments/runs/v3_confirm_rep3_seed203/(config.json·metrics_public.json·_sealed/)",
+    "experiments/runs/v3_consensus_rep123/(config.json·metrics_public.json·_sealed/)",
+    "experiments/runs/v3_confirm_rep23/block_C_summary.json",
+    "v3_Multimodal/src/confirmatory_oof_rep23.py"
+   ],
+   "hash": {
+    "rep2_sealed_sha16": {
+     "metrics_full.json": "66be535755ca9f4a",
+     "oof_M1b.npz": "9155569ac2581613",
+     "oof_M2b.npz": "05a51b16002b8c0f"
+    },
+    "rep3_sealed_sha16": {
+     "metrics_full.json": "b4d80cb9acceb8de",
+     "oof_M1b.npz": "0bb7a951246f85ab",
+     "oof_M2b.npz": "c850e55c64309c5c"
+    },
+    "consensus_sealed_sha16": {
+     "consensus_M1b.npz": "f77a69528ebdb88c",
+     "consensus_M2b.npz": "8594592e2afae583",
+     "metrics_full.json": "6a861640a0594053"
+    },
+    "rep1_sealed_sha16_unchanged": {
+     "metrics_full.json": "8722a4e1c52d2eae",
+     "oof_M1b.npz": "b2a61ba846eead5f",
+     "oof_M2b.npz": "350fa12fac84ef4c"
+    }
+   },
+   "confirmatory": "Y (새 split test/OOF 조회 — 부호만 방출, sealed 수치 미열람)",
+   "result_summary": "반복2 delta_sign = negative · 반복3 delta_sign = negative · consensus(1·2·3) delta_sign = negative (원시 macro AP·Δ 크기·PT별·fold별·반복별 AP 는 sealed, 미열람)",
+   "integrity_note": "게이트0 PASS · 게이트A(하드) 전 항목 PASS: 약물 1,092 전수 · scaffold group 732 전수 · 모든 scaffold group 이 정확히 1 fold(fold 교차 0) · rare-PT 전 train fold PT별 양성 ≥1 · B_seq PCA fit = outer-fold train∩매핑 · 전 fold leak_rows=0 · 전 fold RF random_state=42 · OOF shape (1092,370) NaN 0. seed 게이트: 반복 r = seed 200+r 만 허용(204·205 미사용, 그 외 시도 시 즉시 중단 하드코딩). 반복1 _sealed 3종 sha256 은 블록 시작·각 반복 종료·블록 종료에서 모두 불변. consensus 입력의 반복1 sealed OOF 2종은 machine_read(human_exposure=false)로만 로드 — open_sealed(사람 열람) 호출 0건 유지. 누출 스캔: 확증 경로 공개/config/log 에서 지표 후보 소수 검출 0건. bootstrap/sign-flip/p/SESOI/TOST/성공판정 미실행 · §13-4 null 본런 미착수 · 네트워크 0 · data/raw 불변 · docs/30 무수정 · git commit 없음."
+  },
+  {
+   "ts": "2026-07-27",
+   "ts_kst": "2026-07-27 22:16 KST",
+   "actor": "vscode-claude",
+   "step": "§13-4 블록 D (compute 프로브2) — D-0 중단",
+   "event": "블록 D(Mac wall-clock 최적화 측정 전용) 착수 시도 → **D-0 사전게이트에서 중단**. 게이트0 PASS·블록 C sealed 12종 sha256 스냅샷 전부 일치 확인 후, 전원 게이트에서 실패: `pmset -g ps` = 'Now drawing from Battery Power'(배터리 85%, discharging), `pmset -g live` powermode=1(저전력). AC 프로파일은 powermode=0 이므로 어댑터 연결 시 두 게이트 동시 해소. 세 번째 게이트 `caffeinate` 미감지 — 재실행 시 `caffeinate -dimsu` 로 감싸면 해소. **측정 미수행**: D-1 CPU-시간·D-2 마이크로벤치·D-3 프로세스 병렬·D-4 재산정 전부 미실행.",
+   "artifacts": [
+    "experiments/runs/v3_null_probe2_compute/run.log",
+    "v3_Multimodal/src/null_compute_probe2.py"
+   ],
+   "confirmatory": "N (측정 전용 프로브 — 확증 OOF 미접근, sealed 값 미열람)",
+   "result_summary": "D-0 abort — 전원 미연결(배터리)·저전력 모드 ON 으로 wall-clock 측정 무효 판정. 수치 산출 0.",
+   "integrity_note": "부작용 없음: 블록 C sealed 12종·rep1 sealed 3종·ladder_freeze(b885585aefbabb32)·SAP manifest(756d485feb4715e9) 전부 불변. 생성물은 run.log 와 빈 디렉터리뿐. empirical_p 미호출·p 미계산·T_obs 비교 없음·성공판정 없음·§13-4 본런 미착수·네트워크 0·data/raw 불변·git commit 없음. 게이트를 우회한 배터리 상태 측정은 수행하지 않았다(측정 무효화 + 스크립트 자체 계약 위반)."
+  },
+  {
+   "ts": "2026-07-27",
+   "ts_kst": "2026-07-27 22:19 KST",
+   "actor": "vscode-claude",
+   "step": "블록 C compute 조건 고지 + 블록 D 측정 규약 보정 3건",
+   "event": "① 블록 C(§13-5 반복2·3+consensus) 실행 구간 전원 상태 실측·기록 — 전 구간 배터리·powermode=1(저전력 ON) → wall-clock 비교 불가, 블록 D·§13-4 추정 투입 금지. 바이트 동일성에는 영향 없음(sealed sha256·부호 판정 유효). ② 블록 D-3 처리량 정의를 w/wall_max(마지막 워커 완료 기준)로 확정, 평균 기반 계산 금지, 워커별 wall min/median/max/(max−min)/median 보고 의무화, 코어 배정 규칙(워커당=logical//w · RF 우선→잔여 MOC)과 P/E 비대칭 한계 명시. ③ 블록 D-4 열감쇠·지속부하 baseline 을 단독(w=1) 1 permutation 완주 값으로 한정, 병렬 워커0(identity) wall 은 0-diff 검증 전용, 지속부하 구간 전원·powermode·시각 60s 주기 로깅. 재계산 0·모델학습 0·네트워크 0·sealed 미개봉.",
+   "artifacts": [
+    "experiments/runs/v3_confirm_rep23/power_state_block_C.json",
+    "experiments/runs/v3_confirm_rep23/power_samples.jsonl",
+    "v3_Multimodal/src/power_state_probe.py",
+    "v3_Multimodal/src/null_compute_probe2.py (D-3·D-4 보정 반영)",
+    "docs/33 항목16",
+    "docs/45 §5 추기"
+   ],
+   "confirmatory": "N (새 split test/OOF 미조회 — 부호는 2026-07-27 22:14 기조회, open_sealed 0건)",
+   "result_summary": "블록 C 전원 = 배터리·powermode 1 전 구간(전환 이벤트 0건, 샘플 4건, 잔량 [87, 86, 86, 85]). wall_clock_comparable=false. 블록 D 측정 규약 3건 보정 코드 반영 완료(미실행 — AC·powermode=0 확인 후 착수).",
+   "integrity_note": "통계 정의·가설·집계·성공기준 불변 · ladder_freeze.json sha16 b885585aefbabb32 불변 · SAP 동결 모듈 sha256 불변 · 본 보정은 시간 측정 규약에만 관여 · empirical_p 미호출 · p 미계산 · bootstrap/sign-flip/SESOI/성공판정 미실행 · §13-4 본런 미착수(별도 지시) · data/raw 불변 · docs/30 무수정 · git commit 없음."
+  },
+  {
+   "ts": "2026-07-28",
+   "ts_kst": "2026-07-28 18:28 KST",
+   "actor": "vscode-claude",
+   "step": "§13-4 블록 D (병렬 구성 실측·확정 — 측정 전용)",
+   "event": "Mac wall-clock 최적화 실측. (1) 실효 병렬도 2.05 (cpu/wall; logical 18 대비 11%, P코어 6 대비 34%) — 프로브1 '374시간'은 wall-clock이며 CPU-시간이 아님을 실측 정정(재산정 총 CPU 552h / 총 wall 11.2일). (2) 병렬축 5구성 스윕 — 비트동일 게이트 전 구성 통과=True, 제외=없음, 최속=구성 D(6.01× 가속). (3) 워커 스윕 {1,3,6,9,12,18}은 n_estimators=60 **타이밍 프록시**로 측정(OOF 미저장·분석 미투입·_proxy/ 격리·NOT_AN_ANALYSIS_RESULT) — G1 동시성 불변성=True, W_BEST=18. (4) 전량 300 trees 재확인 — 프록시 오차 -10.2%, identity 0-diff=True, 지속부하 540s 열 감쇠 -1.8%(총 wall 추정에 반영). (5) 권장 = 구성 D × 워커 18, 2,000 permutation 예상 총 wall 1.79일 → 7일 초과=False → Mac 단독 실행 가능.",
+   "artifacts": [
+    "experiments/runs/v3_null_probe2_compute/compute_public.json",
+    "experiments/runs/v3_null_probe2_compute/config.json",
+    "experiments/runs/v3_null_probe2_compute/run.log",
+    "experiments/runs/v3_null_probe2_compute/_proxy/worker_sweep_proxy.json (NOT_AN_ANALYSIS_RESULT)",
+    "experiments/runs/v3_null_probe2_compute/_sealed/fold_pred_reference.npy",
+    "docs/33_prereg_deviation_log.md (항목16-B)",
+    "docs/45_research_integrity_ledger.md §2"
+   ],
+   "zero_diff_proof_sha256": {
+    "D2_reference_configA_fold0": "b36a00b22b3abcd0b5f05542706f4b2ba9c08c1a9d4ab90e389552d90a82a40e",
+    "D4_full_identity_fold0": "b36a00b22b3abcd0b5f05542706f4b2ba9c08c1a9d4ab90e389552d90a82a40e",
+    "D3_G1_invariant": true
+   },
+   "integrity": {
+    "confirmatory_oof_accessed": false,
+    "sealed_human_read": false,
+    "empirical_p_called": false,
+    "p_computed": false,
+    "T_obs_compared": false,
+    "ladder_freeze_modified": false,
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "blockC_sealed_unchanged": true,
+    "blockC_sealed_files": 12,
+    "network_calls": 0,
+    "raw_data_modified": false,
+    "git_commit": false
+   },
+   "timing_proxy_disclosure": {
+    "used": true,
+    "stage": "D-3 워커 수 스윕",
+    "n_estimators_proxy": 60,
+    "frozen_n_estimators": 300,
+    "oof_saved": false,
+    "enters_analysis": false,
+    "reverified_full_in": "D-4",
+    "error_vs_full_pct": -10.214280765390406
+   }
+  },
+  {
+   "ts": "2026-07-28",
+   "ts_kst": "2026-07-28 19:57 KST",
+   "actor": "vscode-claude",
+   "step": "블록 E — 블록 D 사후 정정 6건 + §13-4 본런 인프라 하드닝 (정정·구현 전용)",
+   "event": "① docs/33 항목번호 중복(16 2건 — null_probe2_record.py 하드코딩 버그) 확인. append-only 원칙상 원문 2건 모두 무수정, 후자를 항목16-B 로 별칭 지정하고 docs/45·ledger 의 **상호참조 문자열만** 갱신(원문 사실 변경 아님). 레코더는 doc_numbering.next_item_number() 판독형으로 수정 + 중복 번호 검출 assert 추가. ② joblib daemonic 강등 — multiprocessing.Pool 워커가 daemonic 이라 loky 가 MultiOutputClassifier 를 무음으로 n_jobs=1 강등('Loky-backed parallel loops cannot be called in a multiprocessing, setting n_jobs=1'). 따라서 D-3·D-4 는 배정 코어와 무관하게 내부 직렬 실행됐고, 실제 채택 구성은 '18 프로세스 × (RF n_jobs=1, MOC 실효 n_jobs=1)' 이다. compute_public.json 의 scaling_rule·core_assignment_rule 이 기술한 MOC 프로세스 팬아웃은 미실행. 증거 = 네이티브 16.1s/fold vs 워커내부 107.8s/fold (6.7×) + introspection(parent effective_n_jobs=18 vs worker 1). 결론값 무영향 — 권장 1.79일은 본런과 동일 형태를 전량 실측한 값이며 네이티브 순차 교차검증 1.87일과 일치. D-5 표는 D×1~D×12 가 '직렬화된 구성 D' 값이고(D×1 13.99일 > A×1 11.21일 역전) D×1 은 프록시 앵커 보정(1.114) 경로 — 측정 출처 혼재. 권장행 D×18 은 전량 실측이라 영향 없음. ③ 총 permutation 수 정정 — 1.79일은 2,000회 기준이며 사전지정 ALT 110회(B_family_ALT=100 + B_global_ALT=10) 미포함. 전체 2110회 = 45.3h ≈ 1.89일 → 7일 초과=False(판정 불변). ④ 배타 락·G-IDLE 은 블록 D 실행 시점 미구현이었음을 정직 고지(러너가 값 날조 없이 '보고 불가'로 명시). 15:58~16:10 타 세션 git 이력은 블록 D 시작 17:34 와 미중첩. 본 블록에서 compute_lock.py 구현 완료 — §13-4 본런에 하드 게이트로 적용. ⑤ 열감쇠 근거 한계(지속부하 540s < 하한 600s, sustained_ok=False)는 재측정하지 않고 본런 체크포인트의 배치별 처리량 로깅으로 실시간 감시 대체. ⑥ 통계 정의·가설·집계·성공기준·ladder_freeze.json·SAP 모듈 sha256 전부 불변.",
+   "artifacts": [
+    "v3_Multimodal/src/compute_lock.py (신규 — 배타 락 + G-IDLE A/B/C)",
+    "v3_Multimodal/src/doc_numbering.py (신규 — 항목번호 판독·중복검출)",
+    "v3_Multimodal/src/joblib_daemonic_probe.py (신규 — introspection 증거)",
+    "experiments/runs/v3_null_probe2_compute/_evidence/joblib_daemonic_probe.json",
+    "experiments/runs/v3_null_probe2_compute/compute_public.json (corrections append)",
+    "experiments/runs/v3_null_MAIN/run_manifest_draft.json (confirmed_config 정정)",
+    "docs/33_prereg_deviation_log.md (항목17)",
+    "docs/29_v3.3_preregistration_advisor_approved.md §20",
+    "docs/45_research_integrity_ledger.md §2"
+   ],
+   "git_audit_E3": {
+    "window_kst": "2026-07-28 15:58~16:10",
+    "commits": [
+     "878b3ba",
+     "025e2ea",
+     "b5cd8e0",
+     "reset→878b3ba",
+     "bdb65c8",
+     "10687f4"
+    ],
+    "protected_paths_touched": 0,
+    "untracked_by_git": [
+     "docs/30_*",
+     "docs/33_*",
+     "docs/45_*",
+     "**/_sealed/**",
+     "experiments/provenance/**"
+    ],
+    "tracked_frozen": {
+     "ladder_freeze.json": "15:47:33 최초 추가(A) 후 수정 이력 0 · HEAD blob = live 바이트 동일",
+     "v3_Multimodal/src/sap/** (11모듈)": "15:47:47 최초 추가(A) 후 수정 이력 0 · 전 모듈 동일",
+     "experiments/sap/manifest.json": "15:51:00 최초 추가(A) 후 수정 이력 0 · 동일"
+    },
+    "block_D_start_kst": "2026-07-28 17:34",
+    "overlap_with_window": false,
+    "verdict": "PASS"
+   },
+   "corrections": {
+    "item_number_duplicate": {
+     "original_untouched": true,
+     "alias": "항목16-B"
+    },
+    "joblib_daemonic_downgrade": {
+     "confirmed": true,
+     "moc_n_jobs_requested": 18,
+     "moc_n_jobs_effective": 1,
+     "adopted_form": "18 프로세스 × (RF n_jobs=1, MOC 실효 n_jobs=1)",
+     "conclusion_impact": "none"
+    },
+    "total_permutations": {
+     "primary": 2000,
+     "ALT": 110,
+     "grand_total": 2110,
+     "days_2000": 1.787,
+     "days_total": 1.886,
+     "hours_total": 45.3,
+     "over_7_days": false
+    },
+    "lock_gidle_absent_during_block_D": true,
+    "thermal_basis_thin": {
+     "sustained_load_s": 540.3760217098752,
+     "sustained_min_s": 600.0,
+     "sustained_ok": false,
+     "mitigation": "본런 체크포인트 배치별 처리량 로깅으로 실시간 감시(재측정 없음)"
+    }
+   },
+   "integrity": {
+    "confirmatory_oof_accessed": false,
+    "sealed_human_read": false,
+    "open_sealed_calls": 0,
+    "empirical_p_called": false,
+    "p_computed": false,
+    "T_obs_compared": false,
+    "permutations_run": 0,
+    "models_trained": 0,
+    "ladder_freeze_modified": false,
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "sap_modules_modified": false,
+    "docs30_modified": false,
+    "blockC_sealed_unchanged": true,
+    "blockC_sealed_files": 12,
+    "network_calls": 0,
+    "raw_data_modified": false,
+    "git_commit": false,
+    "git_read_only_audit": true
+   }
+  },
+  {
+   "ts": "2026-07-28",
+   "ts_kst": "2026-07-28 23:17 KST",
+   "actor": "vscode-claude",
+   "step": "블록 F-0 — §13-4 본런 착수 전 사전정정 3건 (정정·기록 전용)",
+   "event": "① daemonic 강등 적용 범위 정정 — 블록 E 정정은 강등을 D-3·D-4 전반의 사실로 기술했으나, 권장 구성(w=18)에는 강등이 적용된 적이 없다. 코어 배정 규칙 logical//w = 18//18 = 1 에 의해 MOC=1 이 **요청**되었고 실효도 1이다. 강등이 실제로 작용한 지점은 D-4a 단독 baseline(요청 18 → 실효 1)과 D-3 의 w∈{1,3,6,9}(요청 18/6/3/2) 뿐이며, w∈{12,18}은 요청 자체가 1이다. run_manifest_draft.json 의 parallel_policy·confirmed_config.label·moc_n_jobs_requested 를 'MOC 요청=1 · 실효=1 · daemonic 강등 무관 / RF=1' 로 정정하고 joblib_daemonic_downgrade 를 {confirmed_config: false, d4a_solo: true, d3_rows_w_1_3_6_9: true} 로 세분화. 결론 불변 — 1.79일은 (w=18, MOC 실효 1) 형태의 전량 실측이며, D-4a 단독의 108s/fold vs 네이티브 16.1s/fold 6.7× 격차가 강등의 흔적이나 이는 단독 baseline 에만 해당한다. 0-diff 증명 3종 해시 불변. ② RAM 추정치 정정 — D5_recommendation.sum_peak_rss_gib(10.592743 GiB)는 D3_worker_sweep 의 w=18 행(sum_peak_rss_bytes=11373871104)과 바이트 일치하며 그 행은 timing_proxy=true·n_estimators=60(동결 300)이다. 즉 300트리 × 18워커 합계 peak RSS 는 미측정이다. 단독 300트리 실측 1.790 GiB × 18 = 추정 32.22 GiB(예산 38.4 GiB 의 83.9%, 여유 16.1%) — 측정이 아니라 선형 추정임을 명시. 여유가 얇으므로 라이브 RAM 게이트 G4 를 본런 하드 게이트로 신설: 첫 풀 라운드 동안 10초 주기 전 워커 RSS 합계 샘플, 예산 초과 시 워커 수 즉시 하향(18→12→9) + 사실·시각·관측값 기록 후 재개. 워커 수는 G1 동시성 불변성으로 통계적 중립이 증명된 축이나 변경 이력은 반드시 기록한다. D5_recommendation 자체는 무수정(corrections append only). ③ §13-4 공개 범위 사전확정(redaction) — 본런 완료 시 공개는 완주 permutation 개수·해시·시간·메모리·게이트 PASS/FAIL·워커 수 변경 이력·power_excursion 수·세션 분할 이력뿐이며, p_emp·MC SE·유의 여부·null 분포·T_obs·T_b·macro AP·Δ 는 전부 _sealed/ 에 둔다. 개봉은 성공판정 단계에서 Holm/BH 다중성과 함께 일괄 수행한다 — §13-4 단계에서 RQ4 유의 여부를 단독 공개하면 조각 개봉이 되어 다중성 보정 이전에 결과를 부분 학습하게 되기 때문이다. 본런 착수 전에 기록됨(decided_before_run=true). ④ 통계 정의·가설·집계·성공기준·NULL_B=1000·p_emp 공식·seed 규칙·ALT 사양·ladder_freeze.json·SAP 모듈 sha256 전부 불변.",
+   "artifacts": [
+    "experiments/runs/v3_null_probe2_compute/compute_public.json (corrections 3건 append)",
+    "experiments/runs/v3_null_MAIN/run_manifest_draft.json (parallel_policy·label·moc_n_jobs_requested 정정 + ram_gate_G4·redaction_policy_13_4 신규)",
+    "docs/33_prereg_deviation_log.md (항목18)",
+    "docs/29_v3.3_preregistration_advisor_approved.md §20",
+    "docs/45_research_integrity_ledger.md §2"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "계산 0 · 모델학습 0 · permutation 0 · 네트워크 0 · sealed 미개봉 · empirical_p 미호출 · p 미계산 · T_obs 비교 없음 · open_sealed 0건 · ladder_freeze.json/SAP 11모듈/docs/30 무수정 · git commit 없음",
+   "corrections_scope": {
+    "F-0-1": "daemonic 강등 적용 범위 — 권장 구성(w=18)은 강등 무관(요청=실효=1)",
+    "F-0-2": "RAM 추정치 — D5 값은 프록시(60 trees) 재사용, 300트리 18워커 합계 미측정 → G4 신설",
+    "F-0-3": "§13-4 공개 범위 사전확정 — 개수·해시·시간·메모리·PASS/FAIL 만 공개"
+   }
+  },
+  {
+   "ts": "2026-08-01",
+   "ts_kst": "2026-08-01 01:16 KST",
+   "actor": "vscode-claude",
+   "step": "블록 F-2 — §13-4 재배치 null 본런 완주 + 집계 실행 (pre-look 기록)",
+   "event": "① 본런 완주 — completed 2110/2110, stop_reason 'done', 모드별 completed_by_mode == expected_by_mode (global 1000 · family 1000 · family_ALT 100 · global_ALT 10), _sealed/checkpoint.jsonl 2110행(행 수만 판독). ② 세션 분할 — 6세션(2026-07-28 23:38:10 KST ~ 2026-07-31 21:18:17 KST), 세션별 완주 415/94/576/801/216/8, 워커 18 고정(변경 이력 0건) × (RF n_jobs=1, MOC n_jobs=1), 전 세션 AC 전원 · powermode_live 0 · graceful_stop=true · power_excursion 0. 분할 실행은 permutation seed 가 결정적이므로 산출물에 무영향이며 실행 로그 사항으로만 기록한다. ③ 재개 세션 게이트 축약 — 환경 지문 완전 일치(diff_keys 0건) 확인 후 G3 identity·G1/G2 재실행 생략. 블록 F 설계에 따른 사전지정 축약이며 첫 세션(2026-07-28 23:46:31 KST) 결과를 인용했다 — G3 n_elements_differing 0/404040, array_bitwise_match True, G1+G2 solo vs pool OOF sha256 동일. seed 격리 교집합 0. ④ 관측 RAM(정직 고지) — 워커 합계 peak RSS 세션별 최대 30.94 / 30.28 / 29.85 / 32.51 / 31.36 / 17.52 GiB, 전체 최대 32.51 GiB(예산 38.4 GiB 의 84.7%). F-0 ②의 선형 프록시 추정 32.22 GiB 보다 +0.29 GiB(+0.9%) 높다 — 추정이 근소하게 낙관적이었으며 '추정보다 낮았다'는 서술은 사실이 아니다. 다만 예산 이내이므로 결론(예산 내 실행)에는 변화가 없고, F-0 ②의 '미측정 → 라이브 게이트 필수' 판단은 유효했다. G4 라이브 게이트 임계는 예산이며 미발동(exceeded=False, 샘플 75, 워커 하향 0회). ⑤ 공개 범위 — 항목18 ③에서 이미 사전확정된 redaction 을 본 항목에서 변경하지 않는다. p_emp·MC SE·유의 여부·null 분포·T_obs·T_b·macro AP·Δ 전부 _sealed/null_result.json, 개봉은 성공판정 단계에서 Holm/BH 다중성과 일괄. §13-4 단독 개봉은 조각 개봉이므로 금지. ⑥ empirical_p 최초 호출 전환점 — 항목 1~18 은 전부 empirical_p 미호출 상태에서 작성됐고, 본 항목 직후 실행되는 --stage aggregate 가 그 전환점이다. 드라이버는 하드 assert(모드별 unique==expected · 중복 0 · 누락 0 · 범위밖 0 · B==NULL_B==1000 · checkpoint 마지막 줄 완전성 · sealed guard >= 12종) 전항 PASS 시에만 empirical_p 를 호출하고, 하나라도 FAIL 이면 호출조차 하지 않고 중단한다(부분집계 물리 차단). 호출은 기계 호출이며 반환값은 즉시 봉인되므로 sealed_human_read=false · open_sealed 0건 유지. ⑦ 불변 — 통계 정의·가설·집계 규칙·성공기준·ladder_freeze.json(b885585aefbabb32)·SAP 11모듈+manifest(756d485feb4715e9)·null_generator.py(90886abce256a130)·NULL_B=1000·NULL_RF_COMMON_SEED=42·p_emp 공식·파티션 CSV 2종 전부 불변. sealed guard 12종 불변=True. docs/30 무수정.",
+   "artifacts": [
+    "experiments/runs/v3_null_MAIN/progress_public.json (완주 2110/2110 · 세션 6)",
+    "experiments/runs/v3_null_MAIN/gates_public.json (게이트 전항 PASS)",
+    "experiments/runs/v3_null_MAIN/run.log (세션별 peak RSS · power_excursion)",
+    "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl (2110행 — 행 수만 판독)",
+    "docs/33_prereg_deviation_log.md (항목19)",
+    "docs/29_v3.3_preregistration_advisor_approved.md §20",
+    "docs/45_research_integrity_ledger.md §2"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 기록 시점 기준: p 해석 0 · 개봉 0 · 성공판정 0 · Holm/BH 0 · bootstrap 0 · sign-flip 0 · SESOI/TOST 0 · sealed 사람 열람 0 · open_sealed 0건 · access.log 7행 전건 machine_read(human_exposure=false) · ladder_freeze.json/SAP 11모듈/docs/30 무수정 · 네트워크 0 · data/raw 변경 0 · git commit 없음",
+   "run_facts": {
+    "completed": 2110,
+    "total": 2110,
+    "by_mode": {
+     "global": 1000,
+     "family": 1000,
+     "family_ALT": 100,
+     "global_ALT": 10
+    },
+    "n_checkpoint_rows": 2110,
+    "n_sessions": 6,
+    "session_completed": [
+     415,
+     94,
+     576,
+     801,
+     216,
+     8
+    ],
+    "workers": 18,
+    "worker_changes": 0,
+    "power_excursion": 0,
+    "observed_max_sum_peak_rss_gib": 32.51,
+    "observed_max_by_session_gib": {
+     "1": 30.94,
+     "2": 30.28,
+     "3": 29.85,
+     "4": 32.51,
+     "5": 31.36,
+     "6": 17.52
+    },
+    "ram_budget_gib": 38.4,
+    "F0_2_linear_estimate_gib": 32.224273681640625,
+    "observed_minus_estimate_gib": 0.285726318359373,
+    "observed_vs_estimate_pct": 0.8866803987025532,
+    "estimate_was_optimistic": true,
+    "within_budget": true,
+    "G4_fired": false
+   },
+   "redaction_scope": "항목18 ③ 사전확정 불변 — 공개 = 개수·해시·시간·메모리·PASS/FAIL. p_emp·MC SE·유의 여부·null 분포·T_obs·T_b·AP·Δ 는 sealed."
+  },
+  {
+   "ts": "2026-08-01",
+   "ts_kst": "2026-08-01 16:55 KST",
+   "actor": "vscode-claude",
+   "step": "블록 H-0 — §13-6 연속 유사도 층화 판독확정 5건 (pre-look 기록)",
+   "event": "① consensus 기준 층 배정 — 반복별(seed 201/202/203) 배정 후 3반복 층이 일치하는 약물만 primary 층화 대상, 불일치 약물은 unstable_stratum 으로 분리 집계(제외 아님). ② canonicalization — secondary_to_primary·seq_representative 공급 파일 부재로 둘 다 None (병합 없음) 고정, isoform suffix 절단만 적용. 09_target_family_clusters.csv 의 cluster_rep 은 50% 클러스터 대표라 '동일 서열 대표'와 의미가 달라 대입하지 않는다. 병합하지 않으면 동일 서열의 다른 accession 이 seen 대신 unseen 으로 잡혀 전이 성능을 과대평가하지 않는 보수적 방향이며, 한계로 명시한다. ③ eligible_pt=None(370 PT 전열) — 층 내부 재선정 금지, undefined-AP 는 metrics.macro_ap 의 동결 규칙에 위임. ④ 층화 전용 seed — bootstrap 6001 · sign-flip 6002 · B=10000. 예약(201~205·42)·null 본런(1000~1999·11000~11999)·프로브·SAP dry-run 총 2033개와 대조해 교집합 0 실측. ⑤ 구조축 — fold-train 대비 max Morgan Tanimoto(동결 지문 r=2·2048bit). 사전등록에 경계 수치가 없어 반복1 기준 25/50/75 분위로 확정 = 0.2500/0.3284/0.4658, 3반복 공통 적용. 결과를 본 뒤 조정 금지. 경계 산출은 구조 정보만 사용하며 라벨·예측·확증 OOF 를 참조하지 않는다. ⑥ 착수 전 게이트 실측 — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9(v1.1) · 모듈 11/11 · sealed guard 12종 · FASTA 1191 서열 · open_sealed 0건. ⑦ identity 인프라 — IDENTITY_METHOD 가 요구하는 pairwise identity 산출물이 프로젝트에 없다(_mmseqs 에는 easy-cluster 결과만). mmseqs2 는 이미 설치되어 있어 brew install 을 실행하지 않았고 본 블록 네트워크 사용은 0건이다. 미정렬 쌍은 0 채움 없이 missing 유지. ⑧ 공개/봉인 범위 사전확정 — 공개는 identity 산출물·층 배정표·표본수·라벨·B·seed·시간·해시·게이트 PASS/FAIL 뿐이고, 층별 macro AP·Δ·CI·sign-flip p·부트스트랩 분포는 전량 봉인. 다중성 보정·성공판정은 본 단계에서 하지 않는다.",
+   "artifacts": [
+    "experiments/runs/v3_stratification/struct_bounds.json (구조축 분위 경계)",
+    "docs/33_prereg_deviation_log.md (항목20)"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 기록 시점 기준: 층화 계산 0 · bootstrap 0 · sign-flip 0 · 층별 AP/Δ/CI/p 0 · 다중성 보정 0 · 성공판정 0 · 개봉 0 · consensus OOF 미판독 · open_sealed 0건 · ladder_freeze.json/SAP 11모듈/docs/30 무수정 · 네트워크 0 · data/raw 변경 0 · git commit 없음",
+   "readout_decisions": {
+    "consensus_stratum_assignment": "반복별 배정 → 3반복 일치만 primary · 불일치 unstable_stratum 분리",
+    "canonicalization": {
+     "secondary_to_primary": null,
+     "seq_representative": null,
+     "isoform_suffix_trim_only": true,
+     "conservative_direction": "미병합 → seen 과소·unseen 과대 = 전이 과대평가 방지"
+    },
+    "eligible_pt": "None (370 PT 전열 · 층 내부 재선정 금지)",
+    "seeds": {
+     "bootstrap": 6001,
+     "signflip": 6002,
+     "B": 10000,
+     "n_forbidden_checked": 2033,
+     "intersection": 0
+    },
+    "structure_axis": {
+     "definition": "fold-train 약물집합 대비 max Morgan Tanimoto",
+     "fingerprint": {
+      "radius": 2,
+      "n_bits": 2048,
+      "source": "ladder_freeze.json morgan (v1_RF pilot 정의)",
+      "generator": "rdFingerprintGenerator.GetMorganGenerator",
+      "n_parse_fail": 0
+     },
+     "reference_repeat": 1,
+     "quantiles": [
+      25,
+      50,
+      75
+     ],
+     "boundaries": {
+      "q25": 0.25,
+      "q50": 0.3283582089552239,
+      "q75": 0.4658045977011494
+     },
+     "applied_to": "3반복 공통"
+    }
+   },
+   "redaction_scope": "공개 = identity 산출물·층 배정표·표본수·클러스터수·formal/descriptive 라벨·B·seed·시간·해시·게이트 PASS/FAIL·unstable_stratum 개수. 봉인 = 층별 macro AP·Δ·CI·sign-flip p·null 요약·부트스트랩 분포."
+  },
+  {
+   "ts": "2026-08-02",
+   "ts_kst": "2026-08-02 20:43 KST",
+   "actor": "vscode-claude",
+   "step": "블록 H — §13-6 연속 유사도 층화 실행 (identity 인프라 → 층 배정 → 층별 추정)",
+   "event": "① identity 인프라 신설 — IDENTITY_METHOD 가 요구하는 pairwise identity 산출물이 프로젝트에 없었다(_mmseqs 에 easy-cluster 결과만). mmseqs2 18-8cc5c easy-search all-vs-all 을 신규 실행: 정렬쌍 201289/708645 (28.40%), 자기적중 1191 제외, 양방향 best identity 대칭화, 미정렬 쌍은 0 채움 없이 missing 유지. 도구가 이미 설치되어 있어 brew install 을 실행하지 않았고 본 블록 네트워크 사용은 0건. 산출 identity_pairs.tsv (sha256 7a47e4951207fdf2) 는 설계 자산이므로 공개 경로. ② 층 배정 — 반복1·2·3 각각 fold-local T_train,f 로 classify_drug·drug_sequence_stratum· 구조 분위를 배정(3276행 = 1092 × 3반복). 3반복 일치 약물만 primary, 불일치는 unstable_stratum 으로 분리 집계(drug_class 71 · seq_stratum 10 · struct_bin 204). no-target 245 약물은 INFERENCE_MODE 상 excluded 로 추정에서 제외했고 H-4 assert 로 추정집합 포함 0건을 확인했다. seqid 관측 0건 약물 = 0/0/0. ③ 계측 후 실행 — B=100 파일럿(최대 표본 층 seq_stratum/seen, n=820)으로 전 층 × B=10000 총 wall 을 0.193일로 추정, 정지 임계 7.0일 미만 확인 후 본계산 진입. 파일럿 산출은 전량 폐기(봉인 저장 0). 본계산 실측 wall 8.03h. ④ 본계산 — 층 13개(formal 9 · descriptive 4), bootstrap B=10000 seed 6001 unit=scaffold_cluster, sign-flip B=10000 seed 6002. primary CI=BCa, BCa 불능 1건은 percentile 대체 없이 not_estimable 그대로 봉인. 산출 전량 _sealed/stratification_result.json (sha256 cd2969c73ed6bae7). 공개 파일에는 층별 macro AP·Δ·CI·sign-flip p 가 한 값도 없다(방어 assert 통과). ⑤ 다중성·성공판정 미수행 — decision.py 의 rq2/rq3/rq4/holm/bh_fdr/tost_equivalence 를 한 번도 호출하지 않았고(multiplicity_applied=False), 유의·성공·동등 여부를 판단·서술하지 않았다. Holm/BH 는 성공판정 단계에서 일괄. ⑥ 게이트 — H-1 G0(ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치 · sealed guard 12종 · 입력 전건 존재 · open_sealed 0), H-4(약물 1092 · scaffold 732 · fold 교차 0 · 반복별 배정 합계 1092 · consensus shape [1092, 370] = y [1092, 370] · NaN 0 · seed 교집합 0), 종료 시 sealed guard 12종 불변=True. ⑦ 확증 조회 = Y(값 미열람) — consensus OOF 를 기계 판독해 새 추정을 만들었으므로 대장에 Y 로 기록하되, open_sealed 0건 · access.log 전건 machine_read/human_exposure=false(누적 28건) · 층별 수치 공개 노출 0 · 층별 Δ 부호조차 공개하지 않았다. ⑧ 시간·전원 정직 고지 — (i) 파일럿 스케일 모형이 층 비용을 n_drugs 선형으로 가정했으나 실제 지배변수는 층 내 양성≥1 PT 수여서 추정 4.62h 대비 실측 8.03h (1.74배). 7일 정지 게이트 판정은 불변. (ii) 층 1·2 는 배터리·powermode=1, 층 3~13 은 AC·powermode=0 이라 층별 wall_s 는 상호 비교 불가(docs/45 블록 C 추기와 동일 취급). (iii) 로그 경과 9.37h vs 기록 wall 8.03h, 차이 80.8분이 macOS 시스템 슬립(Idle/Maintenance/Clamshell) 중단분이며 전원 샘플 결손 4건이 증거. 기록 wall_s 는 perf_counter 누계라 슬립을 세지 않으므로 순수 계산시간이다. 21:02 부터 caffeinate 로 유휴 슬립 차단(compute_lock 은 caffeinate 를 경쟁 프로세스 판정에서 제외). (iv) 세 항목 모두 seed 고정·단일 프로세스·연산 순서 불변이므로 봉인 산출물 바이트와 Δ/CI/p 에 영향 없음 — 제한되는 것은 시간 비교뿐. ⑨ 한계 — canonicalization 미병합(보수적 방향), 서열축 상위 층 표본 부족으로 descriptive, 구조축 경계는 문헌이 아니라 본 데이터 분위(항목20 ⑤ 에 사전 기록), 층별 추정은 다중성 보정 전 raw 이며 해석은 성공판정 이후에만 가능.",
+   "artifacts": [
+    "data/processed/target_mapping/_mmseqs/identity_pairs.tsv (설계 자산·공개)",
+    "data/processed/target_mapping/_mmseqs/identity_manifest.json",
+    "experiments/runs/v3_stratification/strata_assignment.csv (3276행)",
+    "experiments/runs/v3_stratification/strata_summary.json",
+    "experiments/runs/v3_stratification/pilot_timing.json",
+    "experiments/runs/v3_stratification/gates_public.json",
+    "experiments/runs/v3_stratification/stratification_public.json",
+    "experiments/runs/v3_stratification/_sealed/stratification_result.json (봉인)",
+    "docs/33_prereg_deviation_log.md (항목21)",
+    "docs/29_v3.3_preregistration_advisor_approved.md §20",
+    "docs/45_research_integrity_ledger.md §2·§5"
+   ],
+   "confirmatory_lookup": "Y",
+   "integrity_note": "본 기록 시점 기준: open_sealed 0 · 사람 열람 0 · 성공판정 0 · Holm/BH 0 · TOST 0 · 층별 macro AP/Δ/CI/p 공개 노출 0 · 층별 Δ 부호 공개 0 · ladder_freeze.json/SAP 11모듈/docs/30 무수정 · SEQID_BOUNDARIES/SEQID_STRATA/MIN_SUPPORT/INFERENCE_MODE/IDENTITY_METHOD 불변 · 확증 split·fold·seed 재추첨 0 · 네트워크 0 · data/raw 변경 0 · git commit 없음",
+   "run_facts": {
+    "n_units": 13,
+    "n_formal": 9,
+    "n_descriptive": 4,
+    "n_ci_not_estimable": 1,
+    "B": 10000,
+    "seed_bootstrap": 6001,
+    "seed_signflip": 6002,
+    "bootstrap_unit": "scaffold_cluster",
+    "primary_ci_method": "BCa",
+    "total_wall_hours": 8.025957767407503,
+    "pilot_estimated_wall_days": 0.19253347463491444,
+    "abort_threshold_days": 7.0,
+    "identity": {
+     "tool": "mmseqs2",
+     "version": "18-8cc5c",
+     "aligned_pairs": 201289,
+     "total_pairs": 708645,
+     "aligned_fraction": 0.28404772488340424,
+     "tsv_sha256": "7a47e4951207fdf21e960c3cb8ddb6759b2e0454b8f654ee0dd3ff677dd641d6"
+    },
+    "strata_rows": 3276,
+    "unstable_stratum_counts": {
+     "drug_class": 71,
+     "seq_stratum": 10,
+     "struct_bin": 204
+    },
+    "excluded_no_target_drugs": 245,
+    "seqid_zero_observation_drugs": {
+     "1": 0,
+     "2": 0,
+     "3": 0
+    },
+    "sealed_result_sha256": "cd2969c73ed6bae720df5ffacae8dbba7d6ce8c6e7e6f10b95fa0f91937196ef",
+    "sealed_guard_n_files_end": 12,
+    "sealed_guard_unchanged": true,
+    "timing_and_power": {
+     "start_kst": "2026-08-01 17:08:24 KST",
+     "end_kst": "2026-08-02 02:30:48 KST",
+     "elapsed_s": 33744.0,
+     "elapsed_hours": 9.373333333333333,
+     "recorded_wall_s": 28893.447962667007,
+     "recorded_wall_hours": 8.025957767407503,
+     "suspended_s": 4850.552037332993,
+     "suspended_minutes": 80.84253395554988,
+     "wall_clock_semantics": "기록 wall_s = time.perf_counter() 누계 = **실제 계산시간**. macOS 슬립 구간은 포함되지 않는다(mach_absolute_time 정지). 로그 경과 − 기록 wall = 시스템 중단분.",
+     "pilot_estimated_s": 16634.892208456607,
+     "pilot_underestimate_ratio": 1.736918255952303,
+     "power_samples": 75,
+     "power_samples_ac": 75,
+     "power_samples_powermode0": 75,
+     "power_sampler_start_kst": "2026-08-01 18:57:27 KST",
+     "suspension_gaps_in_power_samples": [
+      {
+       "from": "19:02:28",
+       "to": "19:27:39",
+       "gap_s": 1511.0
+      },
+      {
+       "from": "19:27:39",
+       "to": "19:47:42",
+       "gap_s": 1203.0
+      },
+      {
+       "from": "19:52:42",
+       "to": "20:17:26",
+       "gap_s": 1484.0
+      },
+      {
+       "from": "20:22:26",
+       "to": "20:52:47",
+       "gap_s": 1821.0
+      }
+     ],
+     "n_suspension_gaps": 4
+    }
+   },
+   "redaction_scope": "공개 = identity 산출물·파라미터·커버리지 · 층 배정표 · 층별 표본수/클러스터수 · formal/descriptive 라벨 · B·seed · 시간 · 해시 · 게이트 PASS/FAIL · unstable_stratum 개수. 봉인 = 층별 macro AP · Δ · CI(BCa/percentile) · sign-flip p · null 요약 · 부트스트랩 분포."
+  },
+  {
+   "ts": "2026-08-04",
+   "ts_kst": "2026-08-04 01:20 KST",
+   "actor": "vscode-claude",
+   "step": "블록 I — 확증 RF 사다리 잔여 6모델 OOF (M0·M1·M2·P-ID·P-FAM·C-CAP)",
+   "event": "① 목적 — sap/decision.py 의 HOLM_FAMILY 는 크기 7 고정이고 Holm 보정은 family 전원의 p 가 있어야 성립하는데, 확증 OOF 에 M1b·M2b 밖에 없어 ② M2b-P-ID ③ M2b-P-FAM ⑤ M2b-M0 을 계산할 수 없었다. 개봉은 family 전원 확보 후 일괄이므로 잔여 모델 산출이 개봉의 임계경로다. §16 실행순서보다 앞당겨 수행하되 가설·모델정의·대비·다중성 규칙· 알파·성공기준은 불변이며, 날짜 찍힌 post-interim amendment 를 docs/33 에 사전 기입한 뒤 착수했다. ② 실행 — 3반복(seed 201·202·203) × 5 fold × 6모델 = 90건 전건 완주. split 은 기존 folds.json 을 그대로 읽었고(재추첨 0) M1b·M2b 는 재계산하지 않았다. 기존 confirmatory_oof_rep1.py·rep23.py 는 무수정, 신규 러너 confirmatory_oof_rest.py 가 gate0_verify·블록 클래스·rf_fit_predict·MODEL_BLOCKS 를 import 재사용하고 모델 루프만 6개로 바꿨다. RF random_state=42 전 fold 공통, eligible_pt=None, undefined-AP 는 sap/metrics.macro_ap 동결 규칙 위임, BLAS 환경변수 미설정 유지. ③ 코드경로 바이트 동일성 증명 — 신규 러너로 M2b 반복1 fold0(218행 × 370 PT, dim 2124, dtype float64)을 재계산해 기존 sealed oof_M2b.npz 의 해당 슬라이스와 dtype·shape·tobytes 3중 일치를 확인했다. 기존 sealed 는 읽기만 했다(machine_read). 5 fold 전체를 담은 npz 와 1 fold 재계산의 파일 단위 비교는 원리적으로 불가능하므로 슬라이스 비교를 채택했고 그 범위를 docs/33 에 명시했다. ④ 정합 검증 — 약물 1092 전수 · scaffold group 732 전수 · scaffold-fold 교차 0(3반복) · rare-PT 위반 0 · OOF shape (1092,370) · NaN 0 · 모델별 leak_rows 0. B_seq PCA fit 모집단이 outer-fold train ∩ 매핑 약물과 정확히 일치함을 np.array_equal 로 강제했다. ⑤ 계측 후 실행 — 최고차원 P-ID(dim 3173) 1 fold 실측으로 총 wall 을 0.070일로 추정, 정지 임계 7.0일 미만 확인 후 본계산 진입. 실측 계산 wall 2.34시간, 세션 1개, (반복,모델,fold) 단위 체크포인트로 재개했다. ⑥ 공개 범위 — 항목 판독확정 ③ 대로 Δ·AP·CI·p 는 물론 부호도 공개하지 않았다. emit_sign 을 한 번도 호출하지 않았고 Δ 자체를 산출하지 않았다. 봉인 metrics_full.json 에는 모델별·fold별 macro AP 만 담았다. 공개 파일 rest_public.json 에 macro_ap·delta· sign·ci_*·p_* 키가 부재함을 방어 assert 로 확인했다. ⑦ consensus — 6모델 각각 SAP consensus.build_consensus(방법A, raw probability 3반복 산술평균, 반복 순서 1→2→3 고정)를 적용해 별도 디렉터리 v3_confirm_rest_consensus_rep123/_sealed/ 에 저장했다. 기존 v3_consensus_rep123 은 불변이다. ⑧ RF_tuned(⑥) — 계산하지 않고 소싱 가능성만 조사했다. 구성은 v1_RF/results_fairtune/best_config.yaml 에 완전 명세돼 있고 valid 로만 선택돼 확증 OOF 에 대해 결과-독립이지만, 지문(Morgan r=3 vs 동결 B0 r=2)·RF 하이퍼(n_estimators 1000/max_depth 40/max_features sqrt/min_samples_leaf 2/class_weight balanced vs 동결 300·None·balanced_subsample)·평가맥락(seed-42 dev split·301 PT vs 확증 5-fold·370 PT)이 달라 새 블록 B0_r3 + 새 하이퍼셋의 추가 동결 amendment 가 선행돼야 한다. 본 블록의 모델 재정의 금지 제약 안에서는 착수 불가로 판정하고 다음 지시서로 이월했다. 개봉 시점까지 ⑥ p 가 없으면 HOLM_UNDEFINED_FILL=1.0 이 적용되며 이는 검정력에 보수적 방향이다. ⑨ 게이트 — G0(ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 sha 일치), G-IDLE A(load)·B(경쟁 프로세스 0)를 모델 단위 전후로 호출, 종료 시 sealed guard 30종 불변=True. G-IDLE A 는 우회하지 않고 시스템 유휴 대기 후 진입했다. ⑩ 한계 — 본 블록은 산출물만 만들었고 추정도 판정도 하지 않았다. Holm family 7 중 ⑥·⑦·⑧ 은 여전히 미산출이며(⑧ 은 미동결 3건 선결 필요), 어떤 모델이 낫다는 진술은 개봉·다중성 보정 이후에만 가능하다.",
+   "artifacts": [
+    "experiments/runs/v3_confirm_rest/rest_public.json",
+    "experiments/runs/v3_confirm_rest/verify_public.json",
+    "experiments/runs/v3_confirm_rest/measure_public.json",
+    "experiments/runs/v3_confirm_rest/_sealed/checkpoint.jsonl (90행)",
+    "experiments/runs/v3_confirm_rest/_sealed/env_fingerprint.json",
+    "experiments/runs/v3_confirm_rest_rep{1,2,3}_seed{201,202,203}/_sealed/ (봉인 OOF)",
+    "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/ (봉인 consensus)",
+    "v3_Multimodal/src/confirmatory_oof_rest.py (신규 러너)",
+    "docs/33_prereg_deviation_log.md (항목22·23)",
+    "docs/45_research_integrity_ledger.md §2·§5"
+   ],
+   "confirmatory_lookup": "Y",
+   "integrity_note": "본 기록 시점 기준: open_sealed 0 · 사람 열람 0 · 성공판정 0 · Holm/BH 0 · TOST 0 · Δ 산출 0 · emit_sign 호출 0 · Δ/macro AP/CI/p/부호 공개 노출 0 · 기존 sealed 수정 0 · ladder_freeze.json/SAP 11모듈/docs/30 무수정 · 확증 split·fold·seed 재추첨 0 · 네트워크 0 · data/raw 변경 0 · git commit 없음",
+   "run_facts": {
+    "models": [
+     "M0",
+     "M1",
+     "M2",
+     "P-ID",
+     "P-FAM",
+     "C-CAP"
+    ],
+    "models_reused_not_recomputed": [
+     "M1b",
+     "M2b"
+    ],
+    "repeats": [
+     1,
+     2,
+     3
+    ],
+    "seeds": [
+     201,
+     202,
+     203
+    ],
+    "n_fold": 5,
+    "n_completed_model_folds": 90,
+    "n_sessions": 1,
+    "total_compute_wall_s": 8428.483381291007,
+    "total_compute_wall_hours": 2.3412453836919465,
+    "min_fold_wall_s": 92.66936620799243,
+    "max_fold_wall_s": 96.9770352919877,
+    "model_dims": {
+     "M0": 2048,
+     "M1": 2050,
+     "M2": 2114,
+     "P-ID": 3173,
+     "P-FAM": 2102,
+     "C-CAP": 2124
+    },
+    "measured_model": "P-ID",
+    "measured_dim": 3173,
+    "estimated_total_wall_days": 0.07028039609453285,
+    "abort_threshold_days": 7.0,
+    "equivalence": {
+     "model": "M2b",
+     "repeat": 1,
+     "fold": 0,
+     "n_test_rows": 218,
+     "dim": 2124,
+     "dtype": "float64",
+     "leak_rows": {
+      "B0": 0,
+      "B1": 0,
+      "B_seq": 0,
+      "B_m1b": 0
+     },
+     "wall_s": 95.26814179102075
+    },
+    "n_sealed_oof_files": 21,
+    "n_sealed_consensus_files": 7,
+    "sealed_sha256_oof": {
+     "rep1/oof_M0.npz": "9d6cdaac86c7f9fc68509c00e43a51648c739b4c4bd8a11e45711aeeccc8052d",
+     "rep1/oof_M1.npz": "27a273ca581ddd20a2ecd0583c71efc107e77b1d31145ee17eeb6a5c5c249c5c",
+     "rep1/oof_M2.npz": "5298187b4fa3765ce3fbd090d7117c6b4bcfdf155c2e2b8183a5e53b8984110d",
+     "rep1/oof_P-ID.npz": "24fc4de5bde8130eead1bd1021cf3363f34d82fa14a43f4915cb6707a9e091d5",
+     "rep1/oof_P-FAM.npz": "97c80beda28c71666ff6b24e680787f4b1c8fe1bd725398090d44d6a45ce590c",
+     "rep1/oof_C-CAP.npz": "e89941191c24cfb388759b8ccbde54f550ed332beaf9e7e0e599c7df05503ab9",
+     "rep1/metrics_full.json": "b85b0d35fdc186979184f33ff966669b52a51bf7f8d8dd1d7c5195a124b28534",
+     "rep2/oof_M0.npz": "640ac1a52e5d8d805cdada74171bdef85aacdf23f1bac3b795dca9d7071a20c2",
+     "rep2/oof_M1.npz": "9c19b40928cb82c4b1c29a883f631b0700e5b846d232afecc15d34c81fce55ac",
+     "rep2/oof_M2.npz": "f11b8c24bbc156454622633592e92b66f631041b50737f0a3a569a5621969256",
+     "rep2/oof_P-ID.npz": "2da2adad9b9c4e2badfc8e16e2b5c9114180bbdca13f528e134d969fa0d90839",
+     "rep2/oof_P-FAM.npz": "18528b38ba2f733ab2e3857e5537dbf1403e626a09e56cd2c13f87b844d9ff5a",
+     "rep2/oof_C-CAP.npz": "2585f17dfb7fcafa72060a09897c350d0326a0fdb182dd33a35793547fc2777e",
+     "rep2/metrics_full.json": "7f9f6572a5f86d3794c9ce46d2a79be2c697a007f33b27116b884ccaa155e89e",
+     "rep3/oof_M0.npz": "10e5b68f4fe1c04998a79ab0056ffb83dd9932641ac150636b6445963d92f08d",
+     "rep3/oof_M1.npz": "22618a1580f27ea8a8eb28fd3f6bbac9338e45a3f954fbdcb447f76d91259aa2",
+     "rep3/oof_M2.npz": "01fce973cd1d9b33b123cc960c8031209b79cc62d2d44d0c6bcb650408a9258e",
+     "rep3/oof_P-ID.npz": "af053bb4392723ee73b7e3901083bd8408b26b6df980ced9abcd19e4426a2766",
+     "rep3/oof_P-FAM.npz": "e6188e149a1960abd132328fa645505d7fa773ff3a1ea3e58f8e6f7a72fabc7e",
+     "rep3/oof_C-CAP.npz": "9d6670e0bd2a010ec73d902ded5da6d8caa352953a8424f55a1affe68ee97d2e",
+     "rep3/metrics_full.json": "7851ddd847fd3d580fc98df2d829dffb4ae87af6ed411563b7bf15ccc7b3d31c"
+    },
+    "sealed_sha256_consensus": {
+     "consensus_M0.npz": "257de8d10e3a22d35e2de7a6245870fc4ca3e5309c92a8a74502aa8228d0bf1e",
+     "consensus_M1.npz": "6ebd5dd9a8023a8e165abc2d1c0ddd1337ce9ac147dcd96b547ec5b2f4cc69b4",
+     "consensus_M2.npz": "286ae904dbba9fc578bc0faa51af9b1e2e30a98e7f5667e8472e548614618c56",
+     "consensus_P-ID.npz": "9598da3498b1d3cecb1119950e58e43a5f9a7be9981740f0f315de85f56b1f0c",
+     "consensus_P-FAM.npz": "904bbeb3a8a7acca8f38ed24833515c8d92921afa88576a73038d33f335d8127",
+     "consensus_C-CAP.npz": "33e4d34c7e483e24673d01d7e6bebe992d366f1f6b4d2234dd3aacba9f2b6eb0",
+     "metrics_full.json": "48b39fa5524f372ff91518148f7bc5120f99b362caf7508528520ba3b87063dc"
+    },
+    "sealed_guard_n_files": 30,
+    "sealed_guard_unchanged": true,
+    "peak_rss_gib": 2.330322265625,
+    "rf_tuned_investigation": {
+     "computed": false,
+     "config_source": "v1_RF/results_fairtune/best_config.yaml",
+     "config_sha16": "f411602e9a46a34c",
+     "selected_by": "valid macro PR-AUC only (test 미사용), 탐색예산 16, sample_seed=42",
+     "result_independent_of_confirmatory_oof": true,
+     "blockers": [
+      "fingerprint 불일치: tuned=Morgan r=3/2048bit vs 동결 B0=r=2/2048bit → 신규 블록 동결 필요",
+      "RF 하이퍼 불일치: n_estimators=1000·max_depth=40·max_features=sqrt·min_samples_leaf=2·class_weight=balanced vs 동결 RF_KW(300·None·balanced_subsample)",
+      "평가맥락 불일치: v1 선택은 seed-42 dev split(873/109/110)·301 PT, 확증은 5-fold scaffold CV·370 PT"
+     ],
+     "verdict": "추가 동결 amendment(B0_r3 블록 + RF_tuned 하이퍼셋, 둘 다 결과-독립임을 명시) 선행 시 계산 가능. 본 블록의 '모델 재정의 금지' 제약 안에서는 불가 → 다음 지시서로 이월.",
+     "if_missing_at_unsealing": "HOLM_UNDEFINED_FILL=1.0 적용(드롭 금지) — 검정력에 보수적"
+    }
+   },
+   "redaction_scope": "공개 = 완주 개수 · 해시 · 시간 · 메모리 · 게이트 PASS/FAIL · 모델별 조립 차원 · 표본수/그룹수 · 세션 수. 봉인 = 모델별·fold별 macro AP · consensus 확률배열 · OOF 확률배열. 미산출 = Δ · 부호 · CI · p."
+  },
+  {
+   "ts": "2026-08-04",
+   "ts_kst": "2026-08-04 09:29 KST",
+   "actor": "vscode-claude",
+   "step": "블록 K — 층 회계 정합 독립 재현 + 회계 assertion 코드 고정 + §13-6 커버리지 감사",
+   "event": "① 배경 — 교수님 2026-08-03 회신(docs/53 §4·§5)에서 docs/51 메일의 층별 숫자 불일치('820+2+15=837 != 847', 'unseen 합계 17인데 본문 18')를 지적하시고 독립 재현·assertion 고정·경계사례 분류·커버리지 감사를 지시하셨다. 본 블록은 판독·기록 전용이며 모델학습 0 · permutation 0 · bootstrap 0 · sign-flip 0 · 네트워크 0 · 새 추정 0 이다. ② 독립 재현 — cowork 실측표를 그대로 믿지 않고 신규 판독 전용 스크립트 v3_Multimodal/src/strata_accounting_check.py 가 동결 입력(master_X/Y.parquet, 06_targets_human.csv, 확증 split fold_membership.csv 3반복, identity_pairs.tsv, _max_tanimoto.npy, struct_bounds.json)과 동결 연산자(sap/unseen_target.classify_drug, drug_sequence_stratum, 무수정)로 층 배정 3,276행을 처음부터 재계산했다. 기존 strata_assignment.csv 와 fold·drug_class·seq_stratum·n_targets·n_unseen_targets·n_seqid_observed·struct_bin·max_tanimoto 전 컬럼 불일치 0 으로 일치했고 cowork 표와도 전건 일치해 정본 교체는 불필요했다. ③ 하드 회계 assert — 축마다 stable(no-target 제외) 합 + unstable_stratum = 847, 847 + no-target 245 = 1,092, 세 축의 추정 모수 동일 및 추정 대상 약물 집합 동일(집합 단위), 저장된 stable_* 컬럼과 재계산 일치, stratification_public.json units 합 847 — 전항 PASS. 실측 drug_class 552+206+18+71, seq_stratum 820+2+15+10, struct_bin 144+174+150+175+204. 즉 837 은 데이터·계산 오류가 아니라 unstable_stratum 보고 누락이다. ④ 경계·불일치 사례 전건 분류(unstable_cases.csv 855행) — struct_bin 204 전부 경계 인접, drug_class 71 전부 집합 변동(n_unseen_targets 변동으로 실제 확인), seq_stratum 10 = 집합 변동 9 + 경계 인접 1. 관측 결손(all-unseen 且 n_seqid_observed==0) 반복 1·2·3 전부 0건, 분류 불가 0건. ⑤ '18 vs 17' 은 경계 사례 정확히 1건이다 — cid 16139605(표적 1개), 반복1 unseen_70_90(drug-level max identity 87.5%) 대 반복2·3 unseen_ge90(100.0%), 90% 경계까지 거리 2.5%p. drug_class 는 3반복 모두 all-unseen 으로 stable 이므로 all-unseen 18명 중 17명만 서열축에서도 stable 이고 1명이 서열축 unstable 이다. 역방향으로 서열축 unseen 17명은 전원 all-unseen (교차 오염 0). 부수 관측(설계 진단): 반복2·3 identity 가 100.0% 인데도 unseen 인 것은 H-0-2 canonicalization 이 isoform 절단만 적용하고 secondary_to_primary·seq_representative 병합을 비활성했기 때문이며, 동결 연산자를 바꾸지 않고 한계로만 명시한다. ⑥ assertion 코드 고정 — 동일 assert 블록을 stratification_run.py 에 assert_strata_accounting(df) 로 추가하고 stage_strata·stage_verify 에서 호출하게 했다. 본 블록에서 stratification_run.py 를 실행하지 않았으므로 strata_assignment.csv·strata_summary.json·stratification_public.json 은 바이트 불변이다. ⑦ §13-6 커버리지 감사(계산 없음, 명세만) — 사전등록 §11 연속축 6종 중 수행 2종(max Morgan Tanimoto, 표적 max sequence identity), 미수행 4종(unseen-target proportion 의 unweighted·evidence-weighted·mechanism-target indicator·dominant-target-cold). unweighted 는 입력 가용(n_unseen_targets/n_targets)이나 층 경계 미동결, evidence-weighted·dominant-target-cold 는 입력 부분가용(07_agg_topk.csv weight·rank·pChEMBL, top-k<=5) + 정의 미동결, mechanism-target indicator 는 표적 수준 mechanism 플래그가 현 산출물에 없고(03_targets.csv source 전건 chembl, 08_m1b_covariates.csv 는 약물 수준 mechanism_target_n 만) 캐시 내 ChEMBL mechanism 응답 1,009 파일 재파싱으로 네트워크 없이 재생성 가능하나 판정 기준 미동결이다. 미동결 정의는 본 블록에서 정하지 않았다 — 부호 4건 공개 이후이므로 post-interim amendment 대상이다. Delta(M2b-P-ID) 층화는 블록 I 완료로 consensus_P-ID.npz 가 확보돼 선행 조건이 해소됐다 — '블록 I 이후 가능'이 아니라 지금 계산 가능하며 다만 본 블록 범위 밖이고 후속 블록 후보로 제안한다. ⑧ 축별 위상 라벨(교수님 2026-08-03 결정, 라벨만 부착·해석 없음) — struct_bin·seq_stratum = confirmatory, drug_class = data_characteristic(분포 자체는 데이터 특성으로 보고, 재분할 결과 분석은 exploratory). drug_class 는 등록 §11 연속축 목록 밖(§9 범주 정의)임도 감사표에 명기했다. ⑨ 무결성 게이트 — 배타 락(role=recorder) 획득·정상 해제, G-IDLE 게이트 A 를 우회하지 않았다(최초 진입 load1=2.55 로 거부 → 임계 변경 없이 유휴 대기 런처로 진입만 미룬 뒤 재진입, 러너 게이트 A load1=1.49 < 2.0 PASS), sealed guard 157종(experiments/runs/**/_sealed/ 하위 트리 전 파일, access.log 제외) sha256 시작=종료 완전 일치, _sealed/stratification_result.json sha256 cd2969c73ed6bae7... 불변. 공개 산출물 3종에 macro_ap·delta·sign·ci_*·p_*·boot_* 키 부재를 방어 assert 로 강제(검출 0).",
+   "confirmatory_access": "N",
+   "confirmatory_access_note": "새 추정 없음 · _sealed/ 값 미열람 · open_sealed 0건 · 봉인 파일은 sha256 지문 대조만 · 성공판정 함수 호출 0 · 다중성 보정 0 · Delta·AP·CI·p·부호 산출 0",
+   "artifacts": [
+    "experiments/runs/v3_stratification/strata_accounting_public.json",
+    "experiments/runs/v3_stratification/unstable_cases.csv",
+    "experiments/runs/v3_stratification/accounting_check.json",
+    "experiments/runs/v3_stratification/coverage_audit.json",
+    "v3_Multimodal/src/strata_accounting_check.py",
+    "docs/33 항목24",
+    "docs/45 §2",
+    "docs/54_v3_strata_accounting_report.md"
+   ],
+   "instruction": "docs/54_v3_strata_accounting_prompt_for_vscode.md"
+  },
+  {
+   "ts": "2026-08-05",
+   "ts_kst": "2026-08-05 08:36 KST",
+   "actor": "vscode-claude",
+   "step": "블록 L — §13-6 커버리지 C2: Δ(M2b−P-ID) 층화 (기존 consensus 재사용 · 새 OOF 0)",
+   "event": "① 왜 이 블록인가 — docs/54 커버리지 감사 C2 가 지적한 대로, 블록 H 는 등록 §11 이 요구하는 두 대비 중 Δ(M2b−M1b) 층화만 수행했고 Δ(M2b−P-ID) 층화는 미수행이었다. 블록 I 로 consensus_P-ID.npz 가 확보돼 선행 조건이 해소됐고 대비 자체는 HOLM_FAMILY ② 로 이미 동결돼 있어 추가 amendment 없이 수행 가능했다. ② 재계산 0 — consensus OOF(M2b·P-ID), 층 배정 strata_assignment.csv, 구조축 경계 struct_bounds.json, identity identity_pairs.tsv 를 전부 기존 산출 그대로 읽었다. 모델학습 0건 · 새 OOF 0건 · 네트워크 0건. 블록 H 러너 stratification_run.py 는 한 줄도 수정하지 않고 import 재사용했고(load_common·estimation_units·assert_strata_accounting·build_strata_summary), 신규 산출은 신규 디렉터리 experiments/runs/v3_stratification_pid/ 에만 썼다. ③ 행 정렬 동일성 — 두 consensus 는 서로 다른 런(블록 C vs 블록 I)의 산출이라 행이 어긋나면 조용히 잘못된 대비가 나온다. (i) 두 npz 의 cid 배열이 원소 단위로 동일하고 master_X 정렬과도 동일, (ii) 두 러너가 같은 동결 함수 ladder_confirmatory.load_frozen() 을 호출함을 런타임 함수 객체 동일성으로 확인, (iii) master_X.parquet sha256 이 블록 I 기록과 동일. 반복 {1,2,3}=seed{201,202,203}·5-fold·동일 folds.json 도 sha256 로 확인했다. ④ 부호 방향 검증 — 확증 값을 쓰지 않고 합성 데이터로만 확인했다. 첫째 인자=P-ID(기준), 둘째=M2b(비교) 배치가 Δ=macroAP(M2b)−macroAP(P-ID) 를 주며, 비교 arm 우수→Δ>0 · 기준 arm 우수→Δ<0 · arm 교환 시 반대칭 · 같은 합성 입력에서 블록 H run_unit 과 Δ 완전 일치. ⑤ 계측 후 실행 — 층마다 Δ 1회 비용을 직접 실측하고 최대 표본 층 B=100 파일럿으로 비례상수만 보정해 총 wall 을 7.64h 로 추정, 정지 임계 7.0일 미만 확인 후 진입했다. 실측 7.35h (추정 대비 0.96배). 블록 H 는 n_drugs 선형 가정으로 1.74배 과소추정했는데, 지배변수(층 내 양성≥1 PT 수)를 가정하지 않고 층마다 실측하는 방식으로 교체했다. 파일럿 산출은 전량 폐기. ⑥ 본계산 — 층 13개(formal 9 · descriptive 4), bootstrap B=10000 seed 6001 unit=scaffold_cluster, sign-flip B=10000 seed 6002. seed 는 블록 H 와 동일 재사용(새 seed 미추첨) — 층·B·재표집 인덱스를 M1b 대비와 동일 조건으로 두어 두 대비의 차이가 재표집 난수에서 생기지 않게 하고 사후 seed 선택 여지를 제거하기 위함이다. primary CI=BCa, 불능 1건은 percentile 대체 없이 not_estimable 그대로 봉인. 산출 전량 _sealed/stratification_pid_result.json (sha256 d38151f60b141ea2). ⑦ 공개 범위 — 층별 표본수·클러스터수·n_eff_clusters·formal/descriptive·축 위상·B·seed·시간·해시·게이트뿐이며 Δ·AP·CI·p 는 물론 Δ 의 부호도 공개하지 않았다(M2b−P-ID 는 Holm family ② 이므로 부호 노출도 조각 개봉). 공개 4파일에 macro_ap·delta·sign·ci_*·p_*·boot_*·null_* 계열 키가 부재함을 방어 assert 로 강제했다(검출 0). 층별 표본수는 블록 H stratification_public.json 및 블록 K strata_accounting_public.json 과 전건 일치한다. ⑧ 게이트 — 배타 락(runner) 획득·정상 해제, G-IDLE 게이트 A 를 우회하지 않았다(임계 변경 0, 유휴 대기 런처로 진입만 미룸), 게이트 B 는 스테이지·층 단위 전후 호출로 경쟁 프로세스 0건, G0(ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치), sealed guard 157종 (experiments/runs/**/_sealed/ 전 트리, access.log 제외) 시작=종료 완전 일치=True, open_sealed 0건. ⑨ 미수행·한계 — 성공판정·다중성 보정 0(decision.py 호출 0건), emit_sign False. 등록 §11 의 unseen-target proportion 4변형은 정의 미동결로 여전히 미수행이며 본 블록 범위 밖이다. 두 대비(M2b−M1b · M2b−P-ID)는 동일 재표집 난수를 공유하므로 서로 독립이 아니다 — 의도된 설계이며 결합 해석 시 고려해야 한다. 층 정의의 한계(canonicalization 미병합 · 서열축 상위 층 표본 부족 · 구조축 경계는 본 데이터 분위)는 블록 H·K 와 동일하게 승계된다. 본 블록은 추정만 했고 판정은 하지 않았다.",
+   "artifacts": [
+    "experiments/runs/v3_stratification_pid/gates_public.json",
+    "experiments/runs/v3_stratification_pid/signcheck_public.json",
+    "experiments/runs/v3_stratification_pid/pilot_timing.json",
+    "experiments/runs/v3_stratification_pid/stratification_pid_public.json",
+    "experiments/runs/v3_stratification_pid/redaction_scan_public.json",
+    "experiments/runs/v3_stratification_pid/_sealed/stratification_pid_result.json (봉인)",
+    "experiments/runs/v3_stratification_pid/_sealed/checkpoint.jsonl (봉인)",
+    "v3_Multimodal/src/pid_stratification_run.py",
+    "docs/33_prereg_deviation_log.md (항목26)",
+    "docs/45_research_integrity_ledger.md §2·§5",
+    "docs/57_v3_pid_stratification_report.md"
+   ],
+   "confirmatory_lookup": "Y",
+   "integrity_note": "본 기록 시점 기준: open_sealed 0 · 사람 열람 0 · 성공판정 0 · Holm/BH 0 · TOST 0 · 층별 macro AP/Δ/CI/p 공개 노출 0 · **Δ 부호 공개 0** · emit_sign 0 · 모델학습 0 · 새 OOF 0 · 기존 _sealed/ 및 블록 H·K 공개 산출물 바이트 불변 · stratification_run.py 무수정 · ladder_freeze.json/SAP 11모듈/manifest.json/docs/30 무수정 · SEQID_BOUNDARIES/SEQID_STRATA/MIN_SUPPORT/INFERENCE_MODE/IDENTITY_METHOD 불변 · 확증 split·fold·seed 재추첨 0 · 네트워크 0 · data/raw 변경 0 · git commit 없음",
+   "run_facts": {
+    "contrast": "M2b vs P-ID (HOLM_FAMILY ② `M2b-P-ID`)",
+    "n_units": 13,
+    "n_formal": 9,
+    "n_descriptive": 4,
+    "n_ci_not_estimable": 1,
+    "B": 10000,
+    "seed_bootstrap": 6001,
+    "seed_signflip": 6002,
+    "seed_reused_from_block_H": true,
+    "bootstrap_unit": "scaffold_cluster",
+    "primary_ci_method": "BCa",
+    "total_wall_hours": 7.345604331770535,
+    "estimated_wall_hours": 7.636919264735105,
+    "abort_threshold_days": 7.0,
+    "unstable_stratum_counts": {
+     "drug_class": 71,
+     "seq_stratum": 10,
+     "struct_bin": 204
+    },
+    "excluded_no_target_drugs": 245,
+    "denominator_estimated": 847,
+    "sealed_result_sha256": "d38151f60b141ea291d0f78ff8171675534fe80e8761c7c02e75f4f069da6706",
+    "input_consensus_sha256": {
+     "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+     "consensus_P-ID.npz": "9598da3498b1d3cecb1119950e58e43a5f9a7be9981740f0f315de85f56b1f0c"
+    },
+    "sealed_guard_n_files_end": 157,
+    "sealed_guard_unchanged": true,
+    "recomputed_nothing": [
+     "consensus OOF(M2b·P-ID·M1b)",
+     "strata_assignment.csv",
+     "struct_bounds.json",
+     "identity_pairs.tsv"
+    ],
+    "models_trained": 0,
+    "new_oof_generated": 0,
+    "redaction_scan": {
+     "files": [
+      "gates_public.json",
+      "pilot_timing.json",
+      "signcheck_public.json",
+      "stratification_pid_public.json"
+     ],
+     "total_hits": 0,
+     "checkpoint_rows": 13,
+     "recomputed_statistics": 0,
+     "sealed_artifacts_modified": 0
+    }
+   },
+   "redaction_scope": "공개 = 층별 표본수·클러스터수·n_eff_clusters · formal/descriptive 라벨 · 축 위상 라벨 · B·seed · 시간 · 해시 · 게이트 PASS/FAIL · unstable_stratum 개수 · not_estimable 층 수. 봉인 = 층별 macro AP · Δ · **Δ 의 부호** · CI(BCa/percentile) · sign-flip p · null 요약 · 부트스트랩 분포."
+  },
+  {
+   "ts": "2026-08-05",
+   "ts_kst": "2026-08-05 16:51 KST",
+   "actor": "vscode-claude",
+   "step": "블록 Q — GIN training seed·대표 outer unit 사전 확정 (기입 전용 · 계산 0 · 학습 0 · 봉인 접근 0)",
+   "event": "① 왜 지금 기입하는가 — 이 확정의 방어력은 전적으로 **GIN 착수 전·확증 성능 결과 미조회 상태에서 값을 고정했다**는 사실에 있다. SAP 1.2 재동결(외부 통계검토 회신 대기)을 기다리면 그 사이에 확증 산출물이 늘어나 '결과를 보고 정했을 수 있다'는 반론 여지가 생기므로, 등록문이 값을 지정하지 않은 자유도만 먼저 고정한다. 등록 항목 변경(amendment)이 아니라 **미지정 자유도의 사전 확정**이다. ② 확정값 (a)~(g) — (a) outer unit 표기는 항상 `(split_seed, zero-based fold_index)` 쌍(fold index 단독 표기 금지). (b) 대표 3 unit = (201,f4)·(202,f1)·(203,f0). 선정 규칙 = 각 split seed 의 개행 없는 ASCII 십진 문자열의 SHA-256 digest 를 unsigned 256-bit 정수로 해석한 뒤 5로 나눈 나머지. 입력은 split seed 정수뿐이며 fold 별 약물 수·scaffold group 수·모델 출력·성능 지표를 일절 쓰지 않는다. 자유도 자진신고: 규칙은 fold 구성표를 본 뒤 채택했으나 어떤 GIN 학습·예측·성능 결과도 보기 전에 고정했고, 대안 해시·인코딩·모듈러 변형은 계산·비교한 사실이 없다. (c) 안정성 training seed 순서 목록 = (42,1,2,3,4). 새로 창작한 목록이 아니라 v2_GNN/src/robustness.py:43 과 v3_Multimodal/src/train_ladder.py:61 에 본 확정 이전부터 존재하던 순서다. (d) 확증 GIN 은 그 앞 3개 (42,1,2) 를 15 outer unit 전부에 적용하고 seed 별 완전 OOF 에서 macro AP·Δ 를 산출한 뒤 평균한다(metric-then-average). (e) 3×5 안정성 진단의 적용 모델은 7모델 전부(M0·M1·M1b·M2b·P-ID·P-FAM·C-CAP)이며 등록된 분해 보고의 primary 는 Δ(M2b−M1b) 한 쌍, 나머지는 보조표. (f) fold 단위 macro AP 는 동결 §7 규칙 그대로 — 적격 PT 370 고정, 해당 표본 내 양성 0인 PT 는 미정의라 macro 평균에서 제외(가변 분모), cell 별 n_eval·n_excluded_undefined 병기. (g) 실행순서는 확증 15 unit × 3 seed 를 전량 완주·봉인한 뒤에야 대표 3 unit 에 4·5번째 seed 를 추가한다 — 안정성 결과가 확증에 영향을 줄 수 없음을 실행 순서로 물리적으로 보장한다. 아울러 train_seed=42 는 split_seed=42(개발 전용, 확증 제외)·RF random_state=42 와 별개 이름공간임을 명시했고, 분해는 15개 Δ 의 기술적 2원 제곱합 분해로만 하며 REML·ICC·분산성분·유의성검정·확증적 CI 해석을 금지했다. ③ 외부 자문 대비 정정 2건 — 자문 문안을 그대로 채택하지 않은 지점이 둘 있다. (정정1) 자문은 'macro AP 는 370 PT 를 고정 분모로 쓰고 해당 fold 에 양성이 없는 PT 의 AP 를 0으로 정의'하자고 했으나 이는 동결 규정과 정면 충돌한다 — sap/metrics.py 모듈 docstring·MACRO_AP_EDGE_RULES·sap/bootstrap.py 머리주석 4항이 모두 'test-positive 0 PT 는 macro 평균에서 제외(분모 변동 허용 방식 하나로 고정)'로 동결돼 있고 macro_ap() 구현도 n_eval·n_excluded_undefined·excl_frac·defined_mask 를 반환한다. 영향도 무시할 수 없다: cell 마다 정의 불가 PT 수가 다르므로 AP=0 대치는 서로 다른 개수의 0을 주입해 SS_unit 에 '정의 가능 PT 수의 차이'를 그대로 섞어 넣는다. 제외 규칙에서는 같은 cell 의 두 모델이 동일한 정의 집합을 공유하므로(defined_mask 는 y 에만 의존) Δ 가 공통 PT 집합 위의 paired contrast 로 유지된다. → 동결 규칙 유지. (정정2) 자문은 3×5 진단을 M1b·M2b 두 모델로 좁히자고 조건부 권고했으나, docs/30 §13 예산 문면의 '동일 세트'가 GIN 절 전체를 수식하므로 축소하면 문면 축소 = amendment 기입 의무가 발생한다(자문 스스로 단 '원문 우선' 유보가 실제로 발동). seed 가 nested 라 비용 차이도 42 run vs 12 run 수준이다. → 7모델 전부 실행, 보고 primary 만 Δ(M2b−M1b) 로 지정. ④ 본 블록이 하지 않은 것 — GIN 학습·추론 0회, 통계 계산 0건(새 추정·새 지표·새 Δ·부호 산출 0, emit_sign 0), _sealed/ 접근 0회(열람·복사·mtime 변경 0, open_sealed 0), decision.py 호출 0, 다중성 보정·성공판정 0, 기존 봉인 수치를 문서로 옮긴 사실 0, 네트워크 0, git commit·push 0, ladder_freeze.json 0바이트 수정(sha16 b885585aefbabb32 불변 — 신규 동결값은 별도 파일 gin_seed_freeze.json 으로 분리), docs/30 0바이트 수정, docs/33 append-only 준수. ⑤ 여전히 미결 — outer-train 내부 validation 설계(분할 단위·비율, monitor, patience, min/max epoch, best checkpoint tie-break), RQ-int U1~U7(외부 통계검토 회신 대기), SAP 1.2 재동결. 따라서 본 확정은 (a)~(g) 를 고정할 뿐 GIN 착수 허가가 아니며, 동결 파일에 gin_start_still_blocked=true 로 명시했다. 아울러 RQ-int 외부 통계검토 요청서의 발송 시각·수신자·회신 기한은 여전히 미기입이며, 추측 기입을 금지하고 사용자 입력 대기 상태로 남긴다.",
+   "artifacts": [
+    "v3_Multimodal/config/gin_seed_freeze.json",
+    "docs/33_prereg_deviation_log.md (항목29)",
+    "docs/45_research_integrity_ledger.md §2·§5",
+    "docs/64_gin_seed_fold_triage.md (근거)",
+    "docs/65_gin_seed_fold_freeze_report.md",
+    "v3_Multimodal/src/record_block_Q.py"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 기록 시점 기준: GIN 학습 0 · GIN 예측 0 · open_sealed 0 · _sealed/ 읽기·쓰기 0 · 사람 열람 0 · 성공판정 0 · Holm/BH 0 · TOST 0 · 새 추정 0 · Δ 산출 0 · emit_sign 0 · 부호 공개 0 · ladder_freeze.json 무수정(sha16 b885585aefbabb32) · SAP 11모듈/manifest.json 무수정(sha16 756d485feb4715e9) · docs/30 무수정 · docs/33 append-only · 확증 split·fold·seed 재추첨 0 · 네트워크 0 · data/raw 변경 0 · git commit 없음",
+   "run_facts": {
+    "unit_notation": "(split_seed, zero_based_fold_index)",
+    "representative_units": [
+     [
+      201,
+      4
+     ],
+     [
+      202,
+      1
+     ],
+     [
+      203,
+      0
+     ]
+    ],
+    "representative_unit_rule": "SHA-256(ascii decimal split seed) as uint256 mod 5",
+    "rule_inputs_used": [
+     "split seed integer"
+    ],
+    "rule_inputs_not_used": [
+     "fold drug counts",
+     "scaffold group counts",
+     "any model output",
+     "any performance metric"
+    ],
+    "alternative_rules_evaluated": 0,
+    "training_seeds_ordered": [
+     42,
+     1,
+     2,
+     3,
+     4
+    ],
+    "confirmatory_seed_prefix": [
+     42,
+     1,
+     2
+    ],
+    "seed_list_preexisting_in": [
+     "v2_GNN/src/robustness.py:43",
+     "v3_Multimodal/src/train_ladder.py:61"
+    ],
+    "model_scope_stability_n": 7,
+    "primary_reported_contrast": "Δ(M2b − M1b)",
+    "macro_ap_rule": "frozen undefined-AP exclusion (variable denominator)",
+    "execution_order": "confirmatory 15x3 sealed first, then stability seeds 4&5",
+    "gin_freeze_file": "v3_Multimodal/config/gin_seed_freeze.json",
+    "gin_freeze_sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+    "gin_start_still_blocked": true,
+    "gin_training_runs": 0,
+    "models_trained": 0,
+    "new_estimates": 0,
+    "sealed_access": 0,
+    "git_commits": 0,
+    "corrections_vs_external_advice": [
+     "macro AP zero-positive 처리 — 자문의 '370 고정 분모 + AP=0' 채택 불가, 동결 undefined-AP 제외(가변 분모) 유지 (docs/64 §3-1)",
+     "3×5 진단 적용 모델 — 자문의 M1b·M2b 축소 채택 불가, docs/30 §13 '동일 세트' 문면대로 7모델 전부 실행 (docs/64 §3-2)"
+    ],
+    "still_unspecified": [
+     "inner-validation design within outer-train (split unit/ratio, monitor, patience, min/max epoch, best-checkpoint tie-break)",
+     "U1-U7 (RQ-int) pending external statistical review",
+     "SAP 1.2 re-freeze",
+     "RQ-int 외부검토 요청서 발송 시각·수신자·회신 기한 (사용자 입력 대기)"
+    ]
+   },
+   "redaction_scope": "공개 = 표기 규약 · 대표 unit ID · 선정 규칙과 재현 명령 · seed 목록과 그 출처 · 적용 모델 범위 · macro AP 규칙 문면 · 분해 방법과 금지 목록 · 실행순서 · RNG 범위 · 실패 처리 · 방화벽 · 파일 해시. 봉인 = 모든 성능 수치(macro AP·Δ·CI·p)와 **Δ 의 부호**. 본 블록은 그중 어느 것도 산출·인용하지 않았다."
+  },
+  {
+   "ts": "2026-08-05",
+   "ts_kst": "2026-08-05 19:04 KST",
+   "actor": "vscode-claude",
+   "step": "블록 R — GIN inner-validation 설계 사전 확정 (기입 전용 · 모델 계산 0 · 학습 0 · 봉인 접근 0)",
+   "event": "① 왜 지금인가 — 블록 Q 와 동일하게, 이 확정의 방어력은 전적으로 **GIN 착수 전·확증 성능 결과 미조회 상태에서 값을 고정했다**는 사실에 있다. 블록 Q 가 gin_seed_freeze.json 에 남긴 still_unspecified 3건 중 1번(inner-validation 설계)을 해소한다. 등록 항목 변경(amendment)이 아니라 등록문이 **값을 지정하지 않은 자유도의 사전 확정**이다. ② 새로 정하지 않은 것 vs 정한 것 — (새로 정하지 않음) max epoch 200·patience 30·min epoch 하한 없음·monitor(valid macro AP, 표본 내 양성 0 열 제외)·best checkpoint 갱신 조건(엄격 부등호)과 그로부터 자동으로 따라오는 tie-break(동점 시 이른 epoch 승)·best state 복원은 A_wd 레시피와 학습 루프에 **이미 동결**돼 있어 재기술일 뿐이다. 적격 PT 집합이 370 전열이므로 monitor 는 동결 §7 macro AP 규칙과 정의가 일치한다. min epoch 하한 도입은 레시피 변경이라 도입하지 않는다. (새로 정함) inner-valid 분할 단위 = Bemis–Murcko scaffold group(빈 문자열 pseudo-group 을 등록 outer split 과 동일하게 하나의 정당한 그룹으로 셈), 비율 = outer-train 의 1/9(개발 split 873/109/110 의 비-test 풀 대비 valid 비율 계승 — 새 수치 창작 아님), 무작위원 = inner_seed = 1000×split_seed + fold_index(training seed 와 무관), 분할 절차 = 등록 §6 outer split 알고리즘의 불균등 2-bucket 일반화(새 알고리즘 금지), 공유 범위 = (split_seed, fold) 당 1개를 GIN 7모델 × training seed 5개 전부가 공유, 피처 블록(scaler·PCA-64·vocab) fit 모집단 = inner-valid 행을 포함한 outer-train 전체. 후보 비율 10%·15%·20% 도 등록 §6 rare-PT 제약을 모두 통과해 제약으로는 가려지지 않았으므로 계승 논증으로 1/9 을 택했음을 자유도 자진신고로 남긴다. ③ RF 비대칭 결정과 근거 — 확증 RF 는 outer-train 전체(873~874 약물)로 학습하고 inner-valid 를 떼지 않는다(RF 는 결정적이라 early stopping 불요). GIN 은 동결 A_wd 레시피의 patience 가 valid 를 요구하므로 776~777 약물로 학습한다 — gradient 가 보는 행 수가 11.1% 적다. 이 비대칭을 **수용하고 명시**하며, inner-valid 로 epoch 을 고른 뒤 outer-train 전체로 재학습하는 동등화안은 채택하지 않는다(GIN 학습량 약 2배 증가, '다른 표본 크기에서 고른 epoch 이 전이된다'는 새 가정 추가, 재학습 구간 early stopping 부재). 한계로 보고할 것: RQ-int 는 Δ_RF 와 Δ_GIN 의 차이를 묻는데 두 family 의 학습 표본 수가 11.1% 다르므로, 표본 부족이 GIN 의 서열정보 활용을 눌러 Δ_GIN 이 축소되면 family 차이로 오독될 수 있다. 아울러 outer unit (202,f2) 의 inner-valid 는 97 약물이 scaffold group 15개에만 걸치고 그중 77 약물이 빈 문자열 pseudo-group 에서 오므로 이 unit 의 early stopping monitor 는 사실상 15 클러스터에 근거한다 — 등록 split 의 pseudo-group 취급을 내부에도 동일 적용한 직접적 귀결이므로 규칙을 바꾸지 않고 한계로 명시한다(거대 그룹 배제 규칙은 관측 후 조정이라 불채택). ④ 재현 검증과 러너 정정 2건 — 본 블록에서 유일하게 허용된 계산으로 확정 규칙을 직접 구현해 15 outer unit 전수를 docs/66 §4 표와 대조했고 전건 일치했다(inner-valid 97 · inner-train 776/777 · bucket 간 scaffold group 교차 0 · 행 합 == outer-train · inner-train 양성 0 PT 0건 · 대표 3 unit 정의가능 PT 297·303·300 · (202,f2) 빈 문자열 그룹 77). 입력은 fold_membership.csv 와 master_Y.parquet 뿐이며 모델·예측·봉인 산출물을 일절 읽지 않았고 성능 수치는 산출하지 않았다. 그 과정에서 지시서 §3 JSON 의 문구 2건을 정정했다: (정정1) 사전정렬 키 'str(first cid)' → 'str(first row index)'. assign_folds 의 groups 는 scaffold→행 인덱스 리스트이므로 groups[g][0] 은 cid 가 아니며, cid 로 구현하면 셔플 초기순서가 달라져 docs/66 §4 표를 재현하지 못한다. 교정 해석이 옳음은 동결 outer split 을 fold_membership.csv 만으로 3반복 전건 0행 불일치 재현해 독립 검증했다. (정정2) 레시피 상수 출처 'train_ladder.py:61-63' → '61-67'(EPOCHS·PATIENCE 줄 실측 67; 236-248 은 실측 일치). 둘 다 설계값 변경이 아니라 재현 불가·불일치 문구의 교정이며, 지시서가 무수정을 지정한 국문·영문 문안 자체는 바이트 그대로 삽입하고 정정 사실만 항목 말미에 병기했다. ⑤ 본 블록이 하지 않은 것 — GIN 학습·추론 0회, 모델 코드 실행 0, 새 추정 0, Δ·부호 산출 0(emit_sign 0), _sealed/ 접근 0회(열람·복사·mtime 변경 0, open_sealed 0), decision.py 호출 0, 다중성 보정·성공판정 0, 기존 봉인 수치를 문서로 옮긴 사실 0, 네트워크 0(git ls-remote 포함), git commit·push 0, ladder_freeze.json 0바이트 수정(sha16 b885585aefbabb32 불변), gin_seed_freeze.json 0바이트 수정(sha16 10828447c6d33118 불변 — 신규 동결값은 별도 파일 gin_inner_valid_freeze.json 으로 분리), docs/30·docs/64·docs/65_*·docs/66 0바이트 수정, confirmatory_oof_*.py·ladder_confirmatory.py·train_ladder.py 0바이트 수정, docs/33 append-only 준수. ⑥ 여전히 미결 — RQ-int U1~U7(외부 통계검토 회신 대기)과 SAP 1.2 재동결. 따라서 본 확정은 inner-validation 설계를 고정할 뿐 GIN 착수 허가가 아니며, 동결 파일에 gin_start_still_blocked=true 로 명시했다. RQ-int 외부 통계검토 요청서의 발송 시각·수신자·회신 기한도 여전히 미기입이며, 추측 기입을 금지하고 사용자 입력 대기 상태로 남긴다.",
+   "artifacts": [
+    "v3_Multimodal/config/gin_inner_valid_freeze.json",
+    "experiments/runs/v3_gin_inner_valid_freeze/inner_split_check.json",
+    "docs/33_prereg_deviation_log.md (항목30)",
+    "docs/45_research_integrity_ledger.md §2·§5",
+    "docs/66_gin_inner_validation_design.md (근거)",
+    "docs/67_gin_inner_valid_freeze_report.md",
+    "v3_Multimodal/src/record_block_R.py"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 기록 시점 기준: GIN 학습 0 · GIN 예측 0 · 모델 코드 실행 0 · open_sealed 0 · _sealed/ 읽기·쓰기 0 · 사람 열람 0 · 성공판정 0 · Holm/BH 0 · TOST 0 · 새 추정 0 · Δ 산출 0 · emit_sign 0 · 부호 공개 0 · ladder_freeze.json 무수정(sha16 b885585aefbabb32) · gin_seed_freeze.json 무수정(sha16 10828447c6d33118) · SAP 11모듈/manifest.json 무수정(sha16 756d485feb4715e9) · docs/30·64·65·66 무수정 · docs/33 append-only · 확증 split·fold·seed 재추첨 0 · 네트워크 0 · data/raw 변경 0 · git commit 없음",
+   "run_facts": {
+    "resolves": "gin_seed_freeze.json still_unspecified[0] (inner-validation design)",
+    "already_frozen_restated_not_chosen": [
+     "max_epoch=200",
+     "patience=30",
+     "min_epoch=none",
+     "monitor = valid macro AP over in-sample-positive PTs",
+     "checkpoint rule = strict greater-than",
+     "tie_break = earliest epoch (automatic consequence)",
+     "best_state restore before test prediction"
+    ],
+    "newly_fixed": [
+     "inner-valid unit = Bemis-Murcko scaffold group (empty-string pseudo-group counted)",
+     "inner-valid fraction = 1/9 of outer-train (inherited from development split)",
+     "inner_seed = 1000*split_seed + fold_index (independent of training seed)",
+     "split algorithm = registered outer-split algorithm generalized to 2 unequal buckets",
+     "one inner split per (split_seed, fold), shared by 7 models x 5 training seeds",
+     "feature-block fit population = full outer-train (identical to RF harness)",
+     "RF asymmetry accepted and disclosed, no refit equalization"
+    ],
+    "inner_seed_values": {
+     "201": [
+      201000,
+      201001,
+      201002,
+      201003,
+      201004
+     ],
+     "202": [
+      202000,
+      202001,
+      202002,
+      202003,
+      202004
+     ],
+     "203": [
+      203000,
+      203001,
+      203002,
+      203003,
+      203004
+     ]
+    },
+    "n_outer_units_verified": 15,
+    "verification_inputs": [
+     "fold_membership.csv",
+     "master_Y.parquet"
+    ],
+    "verification_matches_docs66_table": true,
+    "outer_split_reproduced_from_csv_mismatched_rows": 0,
+    "candidate_ratios_checked": [
+     "10%",
+     "15%",
+     "20%"
+    ],
+    "inner_valid_size_all_units": 97,
+    "inner_train_zero_positive_pt_all_units": 0,
+    "scaffold_group_crossing_between_buckets": 0,
+    "gin_inner_valid_freeze_file": "v3_Multimodal/config/gin_inner_valid_freeze.json",
+    "gin_inner_valid_freeze_sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+    "gin_start_still_blocked": true,
+    "gin_training_runs": 0,
+    "models_trained": 0,
+    "new_estimates": 0,
+    "sealed_access": 0,
+    "git_commits": 0,
+    "corrections_vs_prompt_json": [
+     "inner_split.algorithm: 'pre-sort groups by (-group_size, str(first cid))' -> 'pre-sort groups by (-group_size, str(first row index)), where the row index is the position in the frozen master_X/master_Y ascending-cid order and the outer-train subset is NOT re-indexed'",
+     "already_frozen_not_newly_chosen.source: 'v3_Multimodal/src/train_ladder.py:61-63,236-248' -> 'v3_Multimodal/src/train_ladder.py:61-67,236-248'"
+    ],
+    "still_unspecified": [
+     "U1-U7 (RQ-int) pending external statistical review",
+     "SAP 1.2 re-freeze",
+     "RQ-int 외부검토 요청서 발송 시각·수신자·회신 기한 (사용자 입력 대기)"
+    ]
+   },
+   "redaction_scope": "공개 = inner-split 규칙 문면 · inner_seed 공식과 값 · 표본 수·scaffold group 수·정의가능 PT 수 · 블록 fit 모집단 · RF 비대칭 사실과 한계 · 파일 해시. 봉인 = 모든 성능 수치(macro AP·Δ·CI·p)와 **Δ 의 부호**. 본 블록은 그중 어느 것도 산출·인용하지 않았다."
+  },
+  {
+   "ts": "2026-08-06",
+   "ts_kst": "2026-08-06 09:33 KST",
+   "actor": "vscode-claude",
+   "step": "블록 S — post-interim 확정 v1.0 기입 (기입 전용 · 모델 계산 0 · 학습 0 · 봉인 접근 0 · ⑥⑦·GIN·A5 미착수)",
+   "event": "① 왜 한 건으로 묶었는가 — 여기서 확정한 항목들은 서로 정의를 맞물고 있다. Holm ⑦ 의 λ 선택은 GIN inner-validation 분할을 그대로 공유하고, 연속축 A3·A4·A6 의 no_target 처리는 ⑦ 의 0 벡터 한계와 같은 사실(표적 미매핑 245 약물)에서 나오며, 명칭 정정은 ⑥ 의 성격 규정과 한 몸이다. 개별로 승인받으면 항목 사이가 어긋날 위험이 실재하므로 **버전 붙은 master amendment 한 건**(v1.0)으로 묶어 기록하고, 이후 임시결정을 추가하지 않는다. 더 중요한 이유는 시점이다 — 이 확정 전체의 방어력은 **Holm ⑥·⑦ 계산과 연속축 층화를 아직 착수하지 않았고 확증 성능 결과를 조회하지 않은 상태에서 값을 고정했다**는 사실에 있고, 그 사실은 계산이 하나라도 시작되는 순간 사라진다. Δ 부호 4건이 이미 알려진 뒤의 결정이므로 전체를 날짜가 찍힌 post-interim amendment 로 표기하며, 지도교수께 docs/70 으로 통보하고 이의 제기 기회를 열어 두었다(이의 항목은 되돌린다). ② 항목별 도출 규칙과 기각 대안 — (⑥ baseline) [규칙] 등록 §4 가 'Morgan RF·tuned RF' 를 쌍으로 열거하고 ⑤ 가 이미 디폴트 Morgan RF(M0)이므로 ⑥ 은 그 튜닝 대응물이어야 한다. 게이트에서 실측한 ladder_freeze.json 의 rf_hyperparameters.note 가 'fairtune tuned RF는 미사용' 이라고 명시해 tuned RF 가 처음부터 사다리와 구분되는 별도 baseline 이었음을 뒷받침한다. 따라서 확증 split 생성 이전에 공정튜닝 절차가 선택해 둔 구성을 축자 그대로 쓰고 재튜닝하지 않는다. [기각] 기존 반경 2 블록에 튜닝 하이퍼만 얹는 안 — 그런 구성은 존재한 적이 없어 지금 새로 조립하는 것이 되며 연구자 자유도가 오히려 커진다. [성격 정정] 반경만·하이퍼만의 효과를 분리하는 ablation 이 아니라 개발단계에서 선택된 강한 구조전용 baseline 전체와의 benchmark 비교로 명시한다. 착수 전 지문 생성기 버전·chirality·count 대 bit·비트 수·반경을 함께 동결한다. (⑦ 기준 RF) [규칙] 등록 §14 표가 'RF+seq > RF 는 서열이 fingerprint 와 비중복 정보를 제공함을 뜻한다' 고 적어 문면이 일의적이고, M0 확증 산출물이 이미 있어 추가 학습이 없다. [기각] M1b 기준안 — ① 과 축이 겹치고 등록 문구 'fingerprint' 에서 멀어진다. (⑦ p_seq) [규칙] 등록 §4 는 'target-only sequence model' 이라는 이름만 두고 학습기를 정하지 않았다. ⑦ 은 등록상 RF 상보성 가설이고 기준선도 RF 이므로 학습기를 고정하고 피처만 바꾸는 것이 대비가 주장하는 바와 정확히 일치하며, 새 학습기도 새 하이퍼파라미터도 도입하지 않는다. 표적 서열 블록 단독을 primary, [표적 수·매핑 여부 + 서열] 을 sensitivity 로 병기하되 sensitivity 는 ⑦ 의 성공판정이나 primary 대체에 쓰지 않는다. [기각] ridge·MLP·신경망 — 전부 부호가 알려진 뒤에 새 하이퍼를 고르게 만든다. [한계] 표적이 매핑되지 않은 245 약물이 0 벡터가 되는데 이 0 은 결측의 명시적 지시자가 아니다. (⑦ λ) [규칙] GIN inner-validation 과 동일한 1/9 scaffold group 분할과 동일한 무작위원을 공유해 새 자유도를 만들지 않는다. 선택 지표는 검증셋 macro AP 이고 동결된 미정의-AP 제외 규칙을 그대로 적용한다. 격자는 0.00~1.00 step 0.05, λ 는 outer unit 별 하나, 동점이면 0.5 에 가까운 λ, 그래도 동점이면 작은 λ. **λ 를 고른 뒤 두 base learner 를 outer-train 전체로 재적합한다** — 재적합하지 않으면 p_RF 가 대비 상대인 M0 보다 적은 표본으로 학습한 모델이 되어 대비가 서열의 비중복 정보가 아니라 학습표본 크기 차이를 섞기 때문이며, 재적합된 p_RF 의 예측이 해당 fold 의 기존 봉인 M0 OOF 와 바이트 단위로 동일함을 assert 로 강제한다. λ=0.5 고정판은 항상 병기하고 선택 λ 와 교체하지 않는다. [기각] 내부 5-fold CV — λ 추정은 더 안정적이나 새 분할 규칙과 새 피처 적합 모집단을 추가한다. [자체 폐기] 애초 초안의 '홀드아웃 20%' 안은 위 학습표본 혼입 결함 때문에 우리가 먼저 폐기했다. (연속축 A3·A4·A6) [규칙] 앞선 두 유사도 축이 이미 사전 고정 구간 층화로 수행·봉인됐으므로 선례를 계승한다 — 세 번째 축만 다른 형식을 쓰면 축 사이 비교가 불가능해지고, 선례 계승이 새 형식 도입보다 자유도가 작다. A3 = 미관찰 표적 수 / 전체 표적 수, A4 = pChEMBL 점수 가중 비율(결측 pair 는 분자·분모 양쪽 제외, 약물별 결측 pair 수 기록, 전부 결측인 약물은 별도 층), A6 = pchembl_median 최대 주표적의 미관찰 여부(동점은 UniProt 접근번호 사전순 최소). 표적 미매핑 245 약물은 분모가 0 이므로 사전 정의된 제외 집합 no_target 으로 두고 0 구간과 합치지 않으며 수를 함께 보고한다. 커버리지 분모는 pair 기준 12,613 중 12,514, 약물 기준 매핑 847 중 16 이 pChEMBL 전무. 재표집 seed·B·단위·CI 는 앞선 층화 블록 재사용(새 seed 미추첨), 각 축에서 등록대로 두 대비를 모두 산출한다. [분리] A5 는 작용기전 표적의 약물 귀속을 캐시에서 복원할 수 없어 1회 재조회가 필요하므로 본 확정에 포함하지 않으며, 승인되지 않으면 임의 대리지표로 대체하지 않고 추정 불가로 남긴다. (early stopping) [규칙] 체크포인트 갱신이 엄격 부등호이므로 최소 개선폭은 0 이고 동점은 갱신하지 않아 이른 epoch 이 선택된다 — 새 규칙 도입이 아니라 이미 동결된 코드의 자동 귀결이다. 검증 지표가 미정의인 epoch 은 개선 없음으로 처리하고, 모든 epoch 에서 미정의이면 hard technical failure 로 기록해 동일 seed·동일 설정으로 1회 재시도하며 조용히 건너뛰지 않는다(실측상 15개 내부 검증셋 모두 양성 보유 PT 293~323 이라 발생하지 않는다). (명칭 정정 3건) '대표 fold/대표 unit' → '사전 지정된 진단 unit'(통계적 대표성 함의 제거), Holm ⑥ 은 ablation 이 아니라 benchmark 비교, A4 의 가중은 '친화도 질량' 이 아니라 'pChEMBL 점수 가중 비율'. (저장소) 성능 산출물의 추가 push 는 명시 승인까지 중지하고, 이미 공개된 것은 삭제하거나 이력을 고쳐 쓰지 않으며 공개 시점·범위만 기록하고, 공개는 새 부호를 동반하지 않는 범위에서만 한다 — 추가 push 는 남은 반복의 부호를 하나 더 공개하는 비가역 사건이고 중지가 보수적인 쪽이다. (개봉 전 절차) 봉인 완전성 점검과 부호 인지 기록표의 규격을 여기에 명시하되 구현은 후속 블록으로 미룬다. ③ 위임 범위 밖이었던 항목의 지위 표기 — GIN inner-validation 설계(블록 R, docs/33 항목30)는 교수님 2026-08-03 지시가 '착수 전 고정·기록' 대상으로 명시한 항목이지만 명시적 위임 결정은 아니었다. docs/33 은 append-only 이므로 항목30 원문은 삭제·수정하지 않고, 대상 JSON 도 sha256 이 3곳에 기록돼 있어 수정하지 않는다. 대신 사이드카 gin_inner_valid_freeze.status.json 을 신설해 지위를 남겼다 — status=frozen(지시서 §3 지정: GIN 착수가 SAP 1.2 승인 뒤라 되돌릴 기회가 남아 있다)이되 delegated_by_advisor=false 와 advisor_notified_in=docs/70 §1-1, 그리고 교수님 확인이 필요한 항목(좁힌 RQ-int 해석)을 함께 적어 **위임 범위 밖이었다는 사실을 숨기지 않는다.** docs/69 §4 는 status 를 provisional_pending_ratification 으로 두는 안을 권고했으나 지시서 §3 이 사유(2026-08-03 지시가 이 항목을 착수 전 고정 대상으로 명시)와 함께 frozen 으로 명시 지정했고, /실행 규약상 지시서가 우선하므로 그대로 따르되 이 차이를 기록에 남긴다. ④ 본 블록이 하지 않은 것 — 모델 학습·추론 0회(RF·GIN 무관), 통계 계산 0, 새 추정 0, Δ·부호 산출 0(emit_sign 0), _sealed/ 접근 0회(경로·mtime·크기 stat-only 스냅샷 168행이 착수=종료 동일, open_sealed 0), decision.py 호출 0(HOLM_FAMILY 는 소스 텍스트 판독이며 import·실행 아님), 다중성 보정·성공판정 0, Holm ⑥·⑦ 계산 0, 연속축 A3·A4·A6 층화 0, A5 재조회 0, 기존 봉인 수치를 문서로 옮긴 사실 0, 네트워크 0(git ls-remote 포함), git commit·push 0, 선행 동결 3종 0바이트 수정, docs/30·64·65_*·66·67_*·69·70 0바이트 수정, confirmatory_oof_*.py·ladder_confirmatory.py·train_ladder.py·sap/*.py 0바이트 수정, docs/33 append-only 준수. ⑤ 여전히 미결 — A5 재조회 승인, 개봉 승인자 지정과 개봉 시점, RQ-int 외부검토 U1~U7, SAP 1.2 재동결, 그리고 RQ-int 요청서의 발송 시각·수신자·회신 기한(추측 기입 금지, 사용자 입력 대기). 따라서 본 확정은 정의를 고정할 뿐 어떤 착수 허가도 아니며, gin_start_still_blocked=true 와 holm67_start_still_blocked_until_reply=true 로 명시했다. ⑥ 시각 표기 — 확정 도출일은 docs/69·docs/70 의 2026-08-05(국문 (1) 문단 표기)이고 실제 기입일은 2026-08-06 이다. 지시서 헤더 템플릿의 날짜 자리에는 실측 시각을 넣었고 소급 기입은 하지 않았다.",
+   "artifacts": [
+    "v3_Multimodal/config/post_interim_freeze_v1_0.json",
+    "v3_Multimodal/config/gin_inner_valid_freeze.status.json",
+    "docs/33_prereg_deviation_log.md (항목31)",
+    "docs/45_research_integrity_ledger.md §2·§5",
+    "docs/69_advisor_consult_triage_20260805.md (근거)",
+    "docs/70_advisor_reply_draft_20260805.md §1 (근거)",
+    "docs/71_post_interim_freeze_v1_report.md",
+    "v3_Multimodal/src/record_block_S.py"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 기록 시점 기준: 모델 학습 0(RF·GIN 무관) · 모델 추론 0 · 통계 계산 0 · open_sealed 0 · _sealed/ 읽기·쓰기 0(stat-only 스냅샷 168행 착수=종료 동일) · 사람 열람 0 · 성공판정 0 · Holm/BH 0 · TOST 0 · 새 추정 0 · Δ 산출 0 · emit_sign 0 · 부호 공개 0 · A5 재조회 0 · ladder_freeze.json 무수정(sha16 b885585aefbabb32) · gin_seed_freeze.json 무수정(sha16 10828447c6d33118) · gin_inner_valid_freeze.json 무수정(sha16 038599c3e1576022) · SAP 11모듈/manifest.json 무수정(sha16 756d485feb4715e9) · docs/30·64·65·66·67·69·70 무수정 · confirmatory_oof_*.py·ladder_confirmatory.py·train_ladder.py·sap/*.py 무수정 · docs/33 append-only · 확증 split·fold·seed 재추첨 0 · 네트워크 0 · data/raw 변경 0 · git commit·push 없음",
+   "run_facts": {
+    "amendment_version": "1.0",
+    "amendment_type": "post-interim (signs of four contrasts already known; no magnitudes)",
+    "bundled_as_single_master_amendment": true,
+    "items_frozen": [
+     "Holm 6 baseline = Morgan r=3 / 2048 bits + fair-tuned hyperparameters verbatim",
+     "Holm 6 character = benchmark comparison, not ablation",
+     "Holm 7 p_RF = M0",
+     "Holm 7 p_seq = sequence block only (primary), [B1, B_seq] as sensitivity",
+     "Holm 7 p_seq learner = frozen confirmatory RF harness, same hyperparameters",
+     "Holm 7 lambda procedure incl. mandatory refit on the full outer-train fold",
+     "axes A3 / A4 / A6 = pre-fixed bins, no_target as a named excluded set",
+     "early stopping min_delta = 0 and undefined-metric rule",
+     "three terminology corrections",
+     "repository policy: additional push of result artifacts suspended",
+     "pre-unblinding procedures specified (implementation deferred)"
+    ],
+    "not_frozen_here": [
+     "A5 (requires a one-off re-query and advisor approval)"
+    ],
+    "holm_family_read_from_source": [
+     "M2b-P-ID",
+     "M2b-P-FAM",
+     "M2b-realloc_null",
+     "M2b-M0",
+     "M2b-RF_tuned",
+     "RFseq-RF",
+     "RQ-int"
+    ],
+    "holm6_baseline_fingerprint": {
+     "radius": 3,
+     "n_bits": 2048
+    },
+    "holm6_hyperparameter_source_file": "v1_RF/results_fairtune/best_config.yaml",
+    "holm6_hyperparameter_source_sha256": "f411602e9a46a34c0747af50368c58b1abdd1f3f5399b81271e5d50c93920a12",
+    "performance_value_in_source_not_copied": true,
+    "post_interim_freeze_file": "v3_Multimodal/config/post_interim_freeze_v1_0.json",
+    "post_interim_freeze_sha256": "502db732bd5e45cbe0d1da78106f639c0f65261e1215af9912250e1ffa284258",
+    "gin_inner_valid_status_sidecar": "v3_Multimodal/config/gin_inner_valid_freeze.status.json",
+    "gin_inner_valid_status_sha256": "bd329fefe613971f59bde8b13ea3f1c4929be04541655ad8e27e9922aa6cb0d0",
+    "gin_inner_valid_status_value": "frozen",
+    "gin_inner_valid_delegated_by_advisor": false,
+    "sidecar_differs_from_docs69_recommendation": "docs/69 section 4 recommended provisional_pending_ratification; docs/71 section 3 explicitly specified frozen with its reason, and the instruction takes precedence",
+    "gin_start_still_blocked": true,
+    "holm67_start_still_blocked_until_reply": true,
+    "gin_training_runs": 0,
+    "models_trained": 0,
+    "new_estimates": 0,
+    "sealed_access": 0,
+    "a5_requery": 0,
+    "git_commits": 0,
+    "derivation_date_kst": "2026-08-05",
+    "recorded_date_kst": "2026-08-06",
+    "still_pending_advisor": [
+     "A5 one-off re-query approval",
+     "unblinding approver and timing"
+    ],
+    "still_pending_external_review": [
+     "U1-U7 (RQ-int procedure)",
+     "SAP 1.2 re-freeze"
+    ],
+    "still_unspecified": [
+     "U1-U7 (RQ-int) pending external statistical review",
+     "SAP 1.2 re-freeze",
+     "RQ-int 외부검토 요청서 발송 시각·수신자·회신 기한 (사용자 입력 대기)"
+    ]
+   },
+   "redaction_scope": "공개 = 확정된 정의 문면 · 도출 규칙과 기각 대안 · 파일 해시 · 표본 수·PT 수·커버리지 분모 · λ 격자 등 사전 고정 상수. 봉인 = 모든 성능 수치(macro AP·Δ·CI·p·λ 선택값)와 **Δ 의 부호**. 본 블록은 그중 어느 것도 산출·인용하지 않았다."
+  },
+  {
+   "ts": "2026-08-06",
+   "ts_kst": "2026-08-06 10:26:37 KST",
+   "actor": "user+advisor (기입 vscode-claude)",
+   "step": "블록 T — 서신 기록 기입 (기입 전용 · 계산 0 · 학습 0 · 봉인 접근 0 · commit 0 · docs/33 무수정)",
+   "event": "① RQ-int 외부 통계검토 요청서 서신 왕복 6건(전건 상대 = 양진홍 교수님 <EMAIL>, 시각 KST) — 2026-08-04 23:22 발신 요청서 v1(제목 '통계 검토 문서 메일드립니다!') / 2026-08-05 11:12 수신 대폭 수정 요청 + 교수님 수정본 첨부 + 확인요청 2건(대표 fold 수 2 vs 3 · M1 정의) / 2026-08-05 15:02 발신 v2(docs/55b, 제목 '통계 검토 문서 수정하여 송부드립니다.') / 2026-08-05 15:05 수신 MS Word 포맷 재저장 요청(수신본이 Pages 로 열림) + '어느 fold와 어느 seed를 쓸지는 임의로 하나 선정해 재동결 문서에 기입해 두십시오' / 2026-08-05 15:19 발신 Word 재전송 + '선정 후 바로 GIN 착수하겠습니다' / 2026-08-05 15:30 수신 '넵 요청해보도록 하겠습니다'(외부 검토자 전달은 교수님이 진행). ② 2026-08-06 10:26:37 KST 교수님 회신 v2 발송(Gmail 메시지 <GMAIL-MSGID> / 스레드 <GMAIL-MSGID>, 원본 2026-08-06T01:26:37Z) — 제목 축자 '[DTI-ADR v3] 승인 요청 3건 (A5 재조회 · 개봉 승인자)'이나 본문 승인 요청은 2건(A5 1회 재조회 · 개봉 승인자와 시점)이며 제목의 '3건'은 오기다. 정정 발송은 하지 않았고 대장에는 축자 그대로 남긴다. 회신 기한은 설정하지 않았다(no_deadline_set). post-interim 확정 9건은 전문을 보내지 않고 1문단 고지 + 요청 시 송부로 축약했다(사용자 지시 2026-08-06). 발송 직전 사용자가 Gmail 초안을 직접 편집했고 cowork 가 보낸편지함 원문을 회수·대조해 초안 대비 차이 7건을 docs/72 의 표로 보존했다. ③ 2026-08-05 15:05 지시(대표 fold·seed 를 하나 선정해 재동결 문서에 기입)는 블록 Q(2026-08-05 16:51 KST, docs/64·docs/65)로 이행 완료했다 — gin_seed_freeze.json(sha16 10828447c6d33118)에 대표 3 unit 이 기입돼 있다. 이 인과를 여기에 남긴다. ④ 2026-08-05 15:19 답신('선정 후 바로 GIN 착수하겠습니다')은 2026-08-03 지시(외부 통계검토 후 최종 승인 전까지 SAP 재동결·GIN 착수 불가)와 상충한다. 2026-08-06 사용자 판단으로 8/3 지시를 우선하며, 교수님께 다시 여쭙지 않고(상신하지 않음) 외부 검토 회신과 SAP 1.2 재동결 이후에 GIN 을 착수한다. GIN 착수는 여전히 0회이고 gin_start_still_blocked=true 를 유지한다. ⑤ 교수님 2026-08-05 11:12 확인요청 2건(대표 fold 수 · M1 정의)은 answered_2026-08-05T15:02:56+09:00 이다 — 근거 = 2026-08-05 15:02:56 KST 발신 메시지 <GMAIL-MSGID> 의 §① (대표 fold 수 = 3; 등록 초안 docs/24·27·28, 승인본 docs/29, OSF 동결본 docs/30 §13, docs/53, docs/55b 가 전부 3이고 '2'는 2026-08-04 요청서 1곳뿐인 표기 오류) 와 §② (M1 = [B0, B1] 2,050차원; 등록문 §4 의 coverage 성분은 매핑 약물에서 상수 1.000 이라 mask 와 완전 중복이므로 구현 제외하고 사유를 문서에 병기). 교수님 15:05:59 회신(<GMAIL-MSGID>)은 §④ 에 대한 지시로 응답했고 §①② 에 이의가 없었다. docs/72 발송본에 이 문단이 없는 것은 누락이 아니라 별건으로 이미 응답을 마쳤기 때문이며, 후속 회신은 불필요하다 (2026-08-06 cowork 가 Gmail 스레드 <GMAIL-MSGID> 원문을 재판독해 확정). ⑥ open_commitment 1건 — 위 15:02:56 메일 §③ 에서 영문본의 M1b 서술을 'molecular structure + 10차원' → 'M1 + 10차원' 으로 고치면서 국문 정본 docs/55b 도 함께 수정하겠다고 교수님께 약속했으나 미이행이다. 실측(2026-08-06) docs/55b:48 은 여전히 'M1b(구조 + 비서열 표적 공변량 10차원)' 이고, 동결값은 ladder_freeze.json models_frozen.M1b = [B0, B1, B_m1b] = M1 + 10차원 이다. 이행(문서 수정)은 본 블록 범위 밖이며 별도 블록에서 처리한다 — 본 블록에서 docs/55b 는 0바이트 수정이다. ⑦ 같은 메일 §④ 는 '대표 fold ID·seed ID 가 어느 문서에도 기록되어 있지 않다 / 영문본에 미확정으로 명시' 라고 적었으나, 직후 블록 Q(2026-08-05 16:51 KST)에서 확정·기입이 완료되어 검토자에게 전달된 영문본의 해당 문장은 현재 stale 이다. 이는 정정이 아니라 사실 기록이며, 정정 발송 여부는 사용자 판단 사항으로 남긴다. ⑧ 본 블록이 하지 않은 것: 통계 계산 0 · 모델 학습 0(RF·GIN 무관) · 모델 추론 0 · 새 추정 0 · Δ 산출 0 · emit_sign 0 · _sealed/ 접근 0(open_sealed 0, stat-only 스냅샷 168행 착수=종료 동일) · decision.py 호출 0 · A5 재조회 0 · Holm 6·7 계산 0 · 네트워크 0(git ls-remote 포함) · git commit·push 0 · docs/33 무수정(본 블록은 사전등록 이탈이 아니라 서신 기록이다). ⑨ 미해결로 남긴 것: 외부 검토자 신원 · 교수님→검토자 전달 시각 · 회신 기한 3건은 교수님 경유이며 통보받지 못해 unknown_as_of_2026-08-06 으로 남기고 추정하지 않는다.",
+   "artifacts": [
+    "docs/45_research_integrity_ledger.md §2(타임라인 2행)·§5(문서이력 1블록)",
+    "experiments/provenance/ledger.json (timeline #33 · correspondence 신설 7항목 · authoritative_sources 11)",
+    "docs/72_advisor_reply_v2_SEND_20260806.md (발송본 정본)",
+    "docs/72_advisor_reply_v2_SEND_20260806.presend.bak (cowork 초안, 미발송)",
+    "docs/72_advisor_reply_v2_SEND_20260806.long.bak (cowork 전문판 초안, 미발송)",
+    "docs/55_rqint_external_statreview_package.md (요청서 v1)",
+    "docs/55b_rqint_external_statreview_package_v2.md (요청서 v2 · 본 블록에서 0바이트 수정)",
+    "docs/73_correspondence_ledger_prompt_for_vscode.md (지시서·FACTS 출처)",
+    "docs/73_correspondence_ledger_report.md",
+    "v3_Multimodal/src/record_block_T.py"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 기록 시점 기준: 모델 학습 0(RF·GIN 무관) · 모델 추론 0 · 통계 계산 0 · 새 추정 0 · Δ 산출 0 · emit_sign 0 · 부호 신규 공개 0 · open_sealed 0 · _sealed/ 읽기·쓰기 0(stat-only 스냅샷 168행 착수=종료 동일, sha256 eb03cabeef1f1dc3f623dde7ca26513b1ce63cb1a84a9d36abafea088245655e) · decision.py 호출 0 · 성공판정 0 · Holm/BH 0 · A5 재조회 0 · GIN 착수 0 · Holm 6·7 계산 0 · ladder_freeze.json 무수정(sha16 b885585aefbabb32) · gin_seed_freeze.json 무수정(sha16 10828447c6d33118) · gin_inner_valid_freeze.json 무수정(sha16 038599c3e1576022) · post_interim_freeze_v1_0.json 무수정(sha16 502db732bd5e45cb) · gin_inner_valid_freeze.status.json 무수정(sha16 bd329fefe613971f) · docs/30·33·64·65·66·67·69·70·71·72 무수정 · confirmatory_oof_*.py·ladder_confirmatory.py·train_ladder.py·sap/*.py 무수정 · 확증 split·fold·seed 재추첨 0 · 네트워크 0 · data/raw 변경 0 · git commit·push 없음",
+   "run_facts": {
+    "block": "T",
+    "block_type": "correspondence recording only",
+    "correspondence_items_recorded": 7,
+    "rqint_request_thread_exchanges": 6,
+    "rqint_request_window_kst": "2026-08-04 23:22 ~ 2026-08-05 15:30",
+    "advisor_reply_v2_sent_kst": "2026-08-06 10:26:37",
+    "advisor_reply_v2_sent_utc": "2026-08-06T01:26:37Z",
+    "advisor_reply_v2_gmail_message_id": "<GMAIL-MSGID>",
+    "advisor_reply_v2_gmail_thread_id": "<GMAIL-MSGID>",
+    "advisor_reply_v2_subject_verbatim": "[DTI-ADR v3] 승인 요청 3건 (A5 재조회 · 개봉 승인자)",
+    "advisor_reply_v2_subject_count_is_typo": true,
+    "advisor_reply_v2_approval_requests_in_body": 2,
+    "advisor_reply_v2_approval_requests": [
+     "A5 (mechanism-of-action target indicator) one-off re-query approval",
+     "unblinding approver designation and unblinding timing"
+    ],
+    "advisor_reply_v2_response_deadline": "no_deadline_set",
+    "advisor_reply_v2_body_edited_by_user_before_send": true,
+    "advisor_reply_v2_draft_vs_sent_differences": 7,
+    "advisor_reply_v2_unsent_drafts": [
+     "docs/72_advisor_reply_v2_SEND_20260806.presend.bak",
+     "docs/72_advisor_reply_v2_SEND_20260806.long.bak"
+    ],
+    "post_interim_nine_items_full_text_sent": false,
+    "post_interim_nine_items_disclosure_mode": "one paragraph notice + send on request (user instruction 2026-08-06)",
+    "gin_start_submitted_to_advisor": false,
+    "gin_start_conflict_resolution": "2026-08-05 15:19 reply ('will start GIN right after the selection') conflicts with the 2026-08-03 instruction (no SAP re-freeze / no GIN start before final approval following external statistical review). User decision 2026-08-06: the 2026-08-03 instruction prevails; resolved internally without re-submitting to the advisor.",
+    "instruction_20260805_1505_fulfilled_by": "block Q (2026-08-05 16:51 KST, docs/64 · docs/65, gin_seed_freeze.json sha16 10828447c6d33118)",
+    "advisor_questions_20260805_1112": {
+     "status": "answered_2026-08-05T15:02:56+09:00",
+     "answered_by_message_id": "<GMAIL-MSGID>",
+     "answered_at_kst": "2026-08-05 15:02:56 KST",
+     "items": [
+      "대표 fold 수 = 3 (등록 초안 docs/24·27·28 · 승인본 docs/29 · OSF 동결본 docs/30 §13 · docs/53 · docs/55b 전부 3; '2'는 2026-08-04 요청서 1곳뿐인 표기 오류 → 영문본 3으로 정정)",
+      "M1 = [B0, B1] 2,050차원 (B0 = Morgan ECFP r=2 2048bit, B1 = log1p(표적수)·매핑 mask 2차원; 등록문 §4 coverage 성분은 매핑 약물에서 상수 1.000 이라 mask 와 완전 중복 → 구현 제외, 사유 문서 병기)"
+     ],
+     "advisor_ack": "교수님 2026-08-05 15:05:59 회신(<GMAIL-MSGID>)은 §④ 에 대한 지시로 응답했고 §①② 에 이의 없음",
+     "follow_up_needed": false,
+     "note": "docs/72 발송본에 해당 문단이 없는 것은 누락이 아니라 별건으로 이미 응답을 마쳤기 때문 (2026-08-06 cowork 가 Gmail 스레드 <GMAIL-MSGID> 원문 재판독으로 확정)"
+    },
+    "open_commitment": [
+     {
+      "item": "docs/55b 국문 정본의 M1b 서술 정정",
+      "promised_in": "2026-08-05 15:02:56 KST 발신 메시지 <GMAIL-MSGID> §③",
+      "promise": "영문본을 'molecular structure + 10차원' → 'M1 + 10차원' 으로 고치면서 국문 정본 docs/55b 도 함께 수정하겠다고 약속",
+      "status": "not_fulfilled_as_of_2026-08-06",
+      "observed_20260806": "docs/55b:48 은 여전히 'M1b(구조 + 비서열 표적 공변량 10차원)'",
+      "frozen_truth": "ladder_freeze.json models_frozen.M1b = [B0, B1, B_m1b] = M1 + 10차원 (M1 = [B0, B1])",
+      "fulfilment_scope": "본 블록 범위 밖 — 별도 블록. 본 블록에서 docs/55b 는 0바이트 수정",
+      "docs55b_sha256_unchanged": "83f896ea55a885ab310d3738c708b7395046d55e74a6f0540176f547a21bb599"
+     }
+    ],
+    "stale_statement_in_reviewer_copy": {
+     "where": "2026-08-05 15:02:56 발신 메일 §④ 및 검토자에게 전달된 영문본",
+     "statement": "대표 fold ID·seed ID 가 어느 문서에도 기록되어 있지 않다 / 영문본에 미확정으로 명시",
+     "why_stale": "직후 블록 Q(2026-08-05 16:51 KST, docs/64·docs/65)에서 확정·기입 완료",
+     "correction_dispatch_decision": "pending_user_decision (본 블록은 사실 기록만, 정정 발송 0)"
+    },
+    "unknown_as_of": {
+     "external_reviewer_identity": "unknown_as_of_2026-08-06",
+     "forwarded_at": "unknown_as_of_2026-08-06",
+     "response_deadline": "unknown_as_of_2026-08-06"
+    },
+    "gin_start_still_blocked": true,
+    "gin_training_runs": 0,
+    "models_trained": 0,
+    "new_estimates": 0,
+    "sealed_access": 0,
+    "a5_requery": 0,
+    "holm67_computations": 0,
+    "network_calls": 0,
+    "git_commits": 0,
+    "docs33_modified": false
+   },
+   "redaction_scope": "공개 = 서신 시각·방향·상대·제목 축자·건수·Gmail 메시지/스레드 ID·파일 경로. 봉인 = 모든 성능 수치(macro AP·Δ·CI·p·λ)와 Δ 의 부호. 본 블록은 그중 어느 것도 산출·인용하지 않았다."
+  },
+  {
+   "ts": "2026-08-06",
+   "ts_kst": "2026-08-06 11:28:54 KST",
+   "actor": "vscode-claude (지시서 docs/74 · FACTS 출처 cowork Gmail 전수 조회)",
+   "step": "블록 U — 서신 대장 정정(superseding append · 계산 0 · 학습 0 · 봉인 접근 0 · 네트워크 0 · commit 0 · docs/33 무수정)",
+   "event": "① 블록 T(timeline #33)의 지시서 FACTS 는 RQ-int 외부 통계검토 요청서 서신을 왕복 6건으로 확정했으나 실측은 8건이다. 누락 2건 = (i) 2026-08-05 13:08:00 KST 발신, Gmail 메시지 <GMAIL-MSGID>, 스레드 <GMAIL-MSGID>, 제목 'Re: 통계 검토 문서 메일드립니다!' — 교수님 수정본 수령 확인 답신이며 \"만들어주신 파일 기반으로 수정하여 다시 메일드리겠습니다\" 로 v2(docs/55b)가 교수님 수정본을 기반으로 작성됐음을 보여주는 연결 고리다. (ii) 2026-08-05 16:35:00 KST 발신, Gmail 메시지 <GMAIL-MSGID>, 스레드 <GMAIL-MSGID>, 제목 'Re: 통계 검토 문서 수정하여 송부드립니다.' — 스레드 종결 인사(\"넵 감사합니다!\")로 교수님 15:30:42 회신 \"요청해보도록 하겠습니다\" 에 대한 수신 확인이다. ② 결손의 출처는 cowork 지시서 docs/73 §0-A 의 FACTS 자체이며, cowork 가 프로젝트 메모리의 요약 표만 근거로 삼고 Gmail 스레드를 전수 조회하지 않은 것이 원인이다. 블록 T 러너는 지시서 §6(\"§0 FACTS 를 임의로 보정하지 말 것\")을 정확히 준수했고 과실이 없다(runner_at_fault=false). 러너가 제목 4건을 추정 없이 unknown_as_of_2026-08-06 으로 남긴 판단(docs/73 리포트 §6-6)은 옳았다. ③ 서신 제목은 §0-A 표(run_facts.correspondence_full_table 9행)로 전건 확정했고, 그 표에서 제목이 unknown_as_of 인 행은 0건이다. 확정 범위 = 시각(KST 초 단위)·방향·Gmail 메시지 ID·스레드 ID·제목 축자. ④ 본 블록이 바꾸지 않은 것: 교수님 2026-08-05 11:12 확인요청 2건의 answered_2026-08-05T15:02:56+09:00 판정 · open_commitment(docs/55b 국문 정본 M1b 서술 정정) · stale_statement_in_reviewer_copy(영문본 §④ fold·seed 미기록 문장) · unknown_as_of 3건(외부 검토자 신원 · 교수님→검토자 전달 시각 · 회신 기한) · docs/72:81-84 각주(블록 T 리포트 §6-1 이 상신한 충돌 건으로 사용자 결정 대기 중이라 손대지 않는다). 이 4개 항목은 timeline[32].run_facts 에서 객체 단위로 변경되지 않았음을 확인했다. ⑤ 본 블록이 하지 않은 것: 통계 계산 0 · 모델 학습 0(RF·GIN 무관) · 모델 추론 0 · 새 추정 0 · Δ·부호 산출 0(emit_sign 0) · _sealed/ 접근 0(open_sealed 0, stat-only 스냅샷 168행 착수=종료 동일) · decision.py 호출 0 · A5 재조회 0 · GIN 착수 0 · Holm 6·7 계산 0 · 네트워크 0(Gmail 재조회 0, git ls-remote 포함) · git commit·push 0 · docs/33 무수정(본 블록은 사전등록 이탈이 아니라 서신 기록이다). ⑥ 정정 방식은 superseding append 다 — 기존 33 entry 와 기존 correspondence 7항목은 객체 단위로 무수정이며, 정정은 본 entry 와 correspondence 2항목 append 로만 표현한다. 따라서 correspondence[0..6] 의 subject unknown_as_of 4건은 문자열로는 잔존하되 본 entry 의 correspondence_full_table 이 이를 대체한다(supersedes 필드 참조).",
+   "artifacts": [
+    "docs/45_research_integrity_ledger.md §2(타임라인 1행)·§5(문서이력 1블록)",
+    "experiments/provenance/ledger.json (timeline #34 · correspondence 7→9항목 · authoritative_sources 11 불변)",
+    "docs/74_correspondence_supersede_prompt_for_vscode.md (지시서·FACTS 출처)",
+    "docs/74_correspondence_supersede_report.md",
+    "docs/73_correspondence_ledger_prompt_for_vscode.md (결손이 발생한 지시서 · 본 블록에서 0바이트 수정)",
+    "docs/73_correspondence_ledger_report.md (블록 T 리포트 · 본 블록에서 0바이트 수정)",
+    "v3_Multimodal/src/record_block_U.py"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 기록 시점 기준: 모델 학습 0(RF·GIN 무관) · 모델 추론 0 · 통계 계산 0 · 새 추정 0 · Δ 산출 0 · emit_sign 0 · 부호 신규 공개 0 · open_sealed 0 · _sealed/ 읽기·쓰기 0(stat-only 스냅샷 168행 착수=종료 동일, sha256 eb03cabeef1f1dc3f623dde7ca26513b1ce63cb1a84a9d36abafea088245655e) · decision.py 호출 0 · 성공판정 0 · Holm/BH 0 · A5 재조회 0 · GIN 착수 0 · Holm 6·7 계산 0 · Gmail 재조회 0 · 네트워크 0 · ladder_freeze.json 무수정(sha16 b885585aefbabb32) · gin_seed_freeze.json 무수정(sha16 10828447c6d33118) · gin_inner_valid_freeze.json 무수정(sha16 038599c3e1576022) · post_interim_freeze_v1_0.json 무수정(sha16 502db732bd5e45cb) · gin_inner_valid_freeze.status.json 무수정(sha16 bd329fefe613971f) · docs/30·33·55b·64·65·66·67·69·70·71·72·73 무수정 · confirmatory_oof_*.py·ladder_confirmatory.py·train_ladder.py·sap/*.py 무수정 · 확증 split·fold·seed 재추첨 0 · data/raw 변경 0 · git commit·push 없음",
+   "run_facts": {
+    "block": "U",
+    "block_type": "correspondence ledger correction (superseding append only)",
+    "supersedes": "timeline[32].run_facts.rqint_request_thread_exchanges (6) · correspondence[0..6] 의 subject unknown_as_of 4건",
+    "rqint_request_thread_exchanges_corrected": 8,
+    "correspondence_items_total_after": 9,
+    "correspondence_items_appended": 2,
+    "correspondence_full_table": [
+     {
+      "ts_kst": "2026-08-04 23:22:17 KST",
+      "direction": "outbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "subject": "통계 검토 문서 메일드립니다!"
+     },
+     {
+      "ts_kst": "2026-08-05 11:12:34 KST",
+      "direction": "inbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "subject": "Re: 통계 검토 문서 메일드립니다!"
+     },
+     {
+      "ts_kst": "2026-08-05 13:08:00 KST",
+      "direction": "outbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "subject": "Re: 통계 검토 문서 메일드립니다!"
+     },
+     {
+      "ts_kst": "2026-08-05 15:02:56 KST",
+      "direction": "outbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "subject": "통계 검토 문서 수정하여 송부드립니다."
+     },
+     {
+      "ts_kst": "2026-08-05 15:05:59 KST",
+      "direction": "inbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "subject": "Re: 통계 검토 문서 수정하여 송부드립니다."
+     },
+     {
+      "ts_kst": "2026-08-05 15:19:00 KST",
+      "direction": "outbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "subject": "Re: 통계 검토 문서 수정하여 송부드립니다."
+     },
+     {
+      "ts_kst": "2026-08-05 15:30:42 KST",
+      "direction": "inbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "subject": "Re: 통계 검토 문서 수정하여 송부드립니다."
+     },
+     {
+      "ts_kst": "2026-08-05 16:35:00 KST",
+      "direction": "outbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "subject": "Re: 통계 검토 문서 수정하여 송부드립니다."
+     },
+     {
+      "ts_kst": "2026-08-06 10:26:37 KST",
+      "direction": "outbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "subject": "[DTI-ADR v3] 승인 요청 3건 (A5 재조회 · 개봉 승인자)"
+     }
+    ],
+    "correspondence_full_table_rows": 9,
+    "correspondence_full_table_subject_unknown_rows": 0,
+    "missing_items_recovered": [
+     {
+      "ts_kst": "2026-08-05 13:08:00 KST",
+      "direction": "outbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "gist": "교수님 수정본(11:12:34 수신) 수령 확인 답신 — \"만들어주신 파일 기반으로 수정하여 다시 메일드리겠습니다\"; v2(docs/55b)가 교수님 수정본 기반임을 보여주는 연결 고리"
+     },
+     {
+      "ts_kst": "2026-08-05 16:35:00 KST",
+      "direction": "outbound",
+      "message_id": "<GMAIL-MSGID>",
+      "thread_id": "<GMAIL-MSGID>",
+      "gist": "스레드 종결 인사(\"넵 감사합니다!\") — 교수님 15:30:42 \"요청해보도록 하겠습니다\" 에 대한 수신 확인"
+     }
+    ],
+    "rqint_request_threads": {
+     "<GMAIL-MSGID>": 3,
+     "<GMAIL-MSGID>": 5
+    },
+    "facts_source": "cowork Gmail 전수 조회 2026-08-06 — 조회식 {from:<EMAIL> to:<EMAIL>} after:2026/08/03 before:2026/08/07 (스레드 4건 반환; RQ-int 요청서 관련 2건 = <GMAIL-MSGID> · <GMAIL-MSGID>, 별건 2건 = 19fc54eccdc4ab27 2026-08-03 판단요청 · <GMAIL-MSGID> docs/72 발송). 본 블록 러너는 Gmail 을 열지 않았다(네트워크 0).",
+    "defect_origin": "cowork instruction docs/73 §0-A",
+    "defect_cause": "cowork 가 프로젝트 메모리의 요약 표만 근거로 삼고 Gmail 스레드를 전수 조회하지 않음",
+    "runner_at_fault": false,
+    "runner_judgement_upheld": "블록 T 러너가 subject 4건을 추정 없이 unknown_as_of_2026-08-06 으로 남긴 판단(docs/73 리포트 §6-6)은 옳았다",
+    "unchanged_by_this_block": [
+     "확인요청 2건 = answered_2026-08-05T15:02:56+09:00 판정 (timeline[32].run_facts.advisor_questions_20260805_1112)",
+     "open_commitment (docs/55b 국문 정본 M1b 서술 정정, not_fulfilled_as_of_2026-08-06)",
+     "stale_statement_in_reviewer_copy (영문본 §④ 대표 fold·seed 미기록 문장)",
+     "unknown_as_of 3건 (외부 검토자 신원 · 교수님→검토자 전달 시각 · 회신 기한)"
+    ],
+    "docs72_footnote_conflict": "docs/72:81-84 각주 — 블록 T 리포트 §6-1 이 상신한 충돌 건으로 사용자 결정 대기 중. 본 블록에서 docs/72 는 0바이트 수정(pending_user_decision)",
+    "existing_objects_untouched": "timeline[0..32] 33 entry · correspondence[0..6] 7항목 · first_look_register · authoritative_sources 11항목 모두 객체 단위 동일",
+    "gin_start_still_blocked": true,
+    "gin_training_runs": 0,
+    "models_trained": 0,
+    "new_estimates": 0,
+    "sealed_access": 0,
+    "a5_requery": 0,
+    "holm67_computations": 0,
+    "network_calls": 0,
+    "gmail_lookups_by_runner": 0,
+    "git_commits": 0,
+    "docs33_modified": false
+   },
+   "redaction_scope": "공개 = 서신 시각·방향·상대·제목 축자·건수·Gmail 메시지/스레드 ID·파일 경로. 봉인 = 모든 성능 수치(macro AP·Δ·CI·p·λ)와 Δ 의 부호. 본 블록은 그중 어느 것도 산출·인용하지 않았다."
+  },
+  {
+   "ts": "2026-08-06",
+   "ts_kst": "2026-08-06 12:03:00 KST",
+   "actor": "vscode-claude (지시서 docs/75 · FACTS 출처 cowork Gmail 스레드 <GMAIL-MSGID> 재판독)",
+   "step": "블록 V — docs/72 정정 배너 append + correspondence subject 정본 포인터 신설(문서 append · 계산 0 · 학습 0 · 봉인 접근 0 · 네트워크 0 · commit 0 · docs/33 무수정)",
+   "event": "① `docs/72_advisor_reply_v2_SEND_20260806.md` 말미에 정정 배너를 append 했다. 배너가 supersede 하는 대상 = 발송본 「차이 기록」 #3 및 그 아래 ★ 각주(L81-84)의 응답 상태 판정(각주는 답변 문단이 발송본에서 빠졌으므로 후속 회신이 필요하다고 적었다)이다. 원문 84행 5,701 B 는 바이트 그대로 보존했고 추가분은 전부 5,701 바이트 이후에만 존재한다(append-only). ② 확정 사실: 교수님이 2026-08-05 11:12:34 KST(메시지 <GMAIL-MSGID>)에 물으신 확인요청 2건은 2026-08-05 15:02:56 KST 발신 메시지 <GMAIL-MSGID> 의 본문 §①② 에서 이미 답변되었다. 교수님 15:05:59 KST 회신(<GMAIL-MSGID>)은 그 메일의 §④ 에 대한 지시로 응답했고 §①② 에는 이의를 제기하지 않았다. 즉 발송본에 해당 문단이 없는 것은 누락이 아니라 별건으로 이미 응답을 마쳤기 때문이며 후속 회신은 불필요하다. 대장 기입값 = answered_2026-08-05T15:02:56+09:00 (timeline[32].run_facts.advisor_questions_20260805_1112). ③ 최상위 키 correspondence_subject_authority 를 신설했다. 제목의 정본은 timeline[33].run_facts.correspondence_full_table(9행, 제목 unknown 0행)이며, correspondence[1][3][4][5] 의 subject 가 unknown_as_of_2026-08-06 으로 잔존하는 것은 append-only 준수의 귀결이지 값을 모르기 때문이 아니다. 2026-08-06 사용자 판단은 supersede 유지(제자리 치환 금지)이며 본 블록은 그 결정을 이행하기 위해 정본 위치를 가리키는 포인터만 추가했다. ④ 본 블록이 하지 않은 것: correspondence 제자리 치환 0 · docs/55b 0바이트 수정(open_commitment = 국문 정본 M1b 서술 정정, 미이행 유지 — 별도 블록 범위) · 영문본 §④ stale 문장 정정 발송 0(U1~U7 회신 때 정리하기로 2026-08-06 사용자 결정) · docs/33 무수정. ⑤ 통계 계산 0 · 모델 학습 0(RF·GIN 무관) · 모델 추론 0 · 새 추정 0 · Δ·부호 산출 0(emit_sign 0) · _sealed/ 접근 0(open_sealed 0, stat-only 스냅샷 168행 착수=종료 동일) · decision.py 호출 0 · A5 재조회 0 · GIN 착수 0 · Holm 6·7 계산 0 · 네트워크 0(Gmail 재조회·git ls-remote 포함) · git commit·push 0.",
+   "artifacts": [
+    "docs/72_advisor_reply_v2_SEND_20260806.md (말미 정정 배너 append · 기존 84행 바이트 보존)",
+    "docs/45_research_integrity_ledger.md §2(타임라인 1행)·§5(문서이력 1블록)",
+    "experiments/provenance/ledger.json (timeline #35 · 최상위 키 correspondence_subject_authority 신설 · correspondence 9항목 불변 · authoritative_sources 11 불변)",
+    "docs/75_docs72_banner_and_subject_authority_prompt_for_vscode.md (지시서·배너 문면 출처)",
+    "docs/75_docs72_banner_and_subject_authority_report.md",
+    "v3_Multimodal/src/record_block_V.py"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 기록 시점 기준: 모델 학습 0(RF·GIN 무관) · 모델 추론 0 · 통계 계산 0 · 새 추정 0 · Δ 산출 0 · emit_sign 0 · 부호 신규 공개 0 · open_sealed 0 · _sealed/ 읽기·쓰기 0(stat-only 스냅샷 168행 착수=종료 동일, sha256 eb03cabeef1f1dc3f623dde7ca26513b1ce63cb1a84a9d36abafea088245655e) · decision.py 호출 0 · 성공판정 0 · Holm/BH 0 · A5 재조회 0 · GIN 착수 0 · Holm 6·7 계산 0 · Gmail 재조회 0 · 네트워크 0 · ladder_freeze.json 무수정(sha16 b885585aefbabb32) · gin_seed_freeze.json 무수정(sha16 10828447c6d33118) · gin_inner_valid_freeze.json 무수정(sha16 038599c3e1576022) · post_interim_freeze_v1_0.json 무수정(sha16 502db732bd5e45cb) · gin_inner_valid_freeze.status.json 무수정(sha16 bd329fefe613971f) · docs/30·33·55b·64·65·66·67·69·70·71·73·74 무수정 · docs/72 는 append-only(본문 84행 바이트 보존) · confirmatory_oof_*.py·ladder_confirmatory.py·train_ladder.py·sap/*.py 무수정 · 확증 split·fold·seed 재추첨 0 · data/raw 변경 0 · git commit·push 없음",
+   "run_facts": {
+    "block": "V",
+    "block_type": "document append (superseding banner) + subject authority pointer",
+    "docs72_footnote_conflict_resolution": "appended superseding banner; original 84 lines byte-preserved",
+    "docs72_bytes_before": 5701,
+    "docs72_bytes_after": 7249,
+    "docs72_sha256_before": "963cddf4d73014db77e1381880746fcdf74bb4b1f555a1f42168e46d84f24ff4",
+    "docs72_sha256_after": "e8882c3ad2e79bc543f39b6389cec190204fbc2048523dcd389f7d14d6922a6f",
+    "docs72_original_lines_preserved": true,
+    "docs72_superseded_target": "docs/72:75 「차이 기록」 #3 행의 '★후속 필요' 및 L81-84 각주의 응답 상태 판정(답변 문단이 발송본에서 빠졌으므로 후속 회신이 필요하다는 서술)",
+    "advisor_questions_20260805_1112_status": "answered_2026-08-05T15:02:56+09:00",
+    "advisor_questions_answered_by_message_id": "<GMAIL-MSGID>",
+    "advisor_questions_asked_by_message_id": "<GMAIL-MSGID>",
+    "advisor_ack_message_id": "<GMAIL-MSGID>",
+    "follow_up_reply_needed": false,
+    "correspondence_subject_decision": "supersede_kept",
+    "correspondence_subject_authority_key_added": true,
+    "correspondence_items_total": 9,
+    "correspondence_in_place_edits": 0,
+    "open_commitment_still_unfulfilled": true,
+    "stale_statement_in_reviewer_copy": "deferred_to_U1_U7_reply (사용자 결정 2026-08-06)",
+    "existing_objects_untouched": "timeline[0..33] 34 entry · correspondence[0..8] 9항목 · first_look_register · authoritative_sources 11항목 모두 객체 단위 동일",
+    "new_top_level_keys": [
+     "correspondence_subject_authority"
+    ],
+    "gin_start_still_blocked": true,
+    "gin_training_runs": 0,
+    "models_trained": 0,
+    "new_estimates": 0,
+    "sealed_access": 0,
+    "a5_requery": 0,
+    "holm67_computations": 0,
+    "network_calls": 0,
+    "gmail_lookups_by_runner": 0,
+    "git_commits": 0,
+    "docs33_modified": false
+   },
+   "redaction_scope": "공개 = 서신 시각·방향·상대·제목 축자·건수·Gmail 메시지/스레드 ID·파일 경로·바이트 수·sha256. 봉인 = 모든 성능 수치(macro AP·Δ·CI·p·λ)와 Δ 의 부호. 본 블록은 그중 어느 것도 산출·인용하지 않았다."
+  },
+  {
+   "ts": "2026-08-06",
+   "ts_kst": "2026-08-06 13:25:28 KST",
+   "actor": "vscode-claude (지시서 docs/76 · FACTS 출처 cowork Gmail 스레드 <GMAIL-MSGID> 실측)",
+   "step": "블록 W — 교수님 승인 3건 기록(A5 1회 재조회 승인 · 개봉 승인자 확정 · 검토자 전달 통보) (기입 전용 · 계산 0 · 학습 0 · A5 재조회 0 · 개봉 0 · 봉인 접근 0 · 네트워크 0 · commit 0)",
+   "event": "① 승인 3건(축자) — 2026-08-06 12:05:26 KST 교수님 회신(메시지 <GMAIL-MSGID> / 스레드 <GMAIL-MSGID>)의 인라인 주석 3건이다. (1) A5(작용기전 표적 지시자) 1회 재조회 = '>> 승인' (2) 개봉 승인자 지정 = '>> 네. 승인' (3) 외부 검토 요청서 전달 시점 = '>> 금일 2026.08.06 일 메일로 전달 드렸습니다.' 교수님 본문은 '인-line으로 답변 드려요.' 한 줄뿐이다. 우리 답신은 2026-08-06 13:04:02 KST 메시지 <GMAIL-MSGID> 이다. ② 확정된 것 / 여전히 미정인 것 — A5 1회 재조회는 우리 요청 문면 그대로 승인됐다(기존 943개 ID 한정·1회만 / 조회일·출처·원응답·해시·ID 매핑 실패율 기록 / 라벨과 결합하기 전 캐시 봉인 / A5 는 '현재 snapshot 기반 post-interim 보조분석' 표기). 개봉 승인자는 양진홍 교수님으로 확정됐으나 개봉 시점은 여전히 미정이다 — 우리 문면이 '조건이 모두 충족됐을 때 별도로 여쭙겠습니다' 였고 교수님은 그 문면째로 승인했으므로 개봉 승인은 지금 개봉해도 된다는 뜻이 아니며 선행은 Holm ②~⑧ 전원 확보 + 봉인 완전성 점검 통과 + 별도 승인이다. 검토자 전달은 날짜만 통보받았다(2026-08-06) — 시각은 통보받지 못했으므로 forwarded_at 본값에 시각을 채우지 않고, '회신 12:05:26 KST 이전'이라는 상한은 우리가 파생한 추론이므로 별도 필드로 분리했다. 회신 기한은 미설정, 외부 검토자 신원은 미통보, U1~U7 회신은 미도착(전달만 됐다)이다. 내선 확정 9건에 교수님이 이의를 제기하지 않았으나 명시적 승인 문구도 없으므로 no_objection_raised 로 적으며 explicitly_approved 가 아니다. ③ 차단 상태 변화 — Holm ⑥·⑦ 의 교수님 회신 대기 조건은 해소되어 holm67_start_still_blocked_until_reply 가 false 가 됐다. 다만 docs/60·docs/61 개정이 여전히 선행 필수이므로 holm67_start_requires 2건을 신설했다. GIN 은 차단 유지(true 불변) — U1~U7 회신 + SAP 1.2 재동결이 선행이다. A5 재조회는 승인됐으나 본 블록에서 실행하지 않았고, 개봉은 승인자만 확정됐을 뿐 별도 승인이 필요하다. ④ 본 블록이 하지 않은 것 — A5 재조회 0 · 개봉 0 · Holm ⑥·⑦ 계산 0 · GIN 착수 0 · docs/33 무수정(본 블록은 사전등록 이탈이 아니라 승인·서신 기록이다) · docs/55b 무접촉(open_commitment = 국문 정본 M1b 서술 정정, 미이행 유지 — 별도 블록) · correspondence[1][3][4][5] 의 subject 제자리 치환 0(블록 V 확정 = supersede 유지) · post_interim_freeze_v1_0.json 0바이트 수정(해소는 신규 사이드카로만). ⑤ 계산 0 · 모델 학습 0(RF·GIN 무관) · 모델 추론 0 · 새 추정 0 · Δ·부호 산출 0(emit_sign 0) · decision.py 호출 0 · 다중성·성공판정 0 · _sealed/ 접근 0(open_sealed 0, stat-only 스냅샷 168행 착수=종료 동일) · Gmail 재조회 0 · 네트워크 0(git ls-remote 포함) · git commit·push 0.",
+   "artifacts": [
+    "docs/77_advisor_approval_20260806.md (승인 원문 보관 기록 · 신규)",
+    "v3_Multimodal/config/post_interim_freeze_v1_0.status.json (신규 사이드카 · 대상 0바이트 수정)",
+    "docs/45_research_integrity_ledger.md §2(타임라인 1행)·§5(문서이력 1블록)",
+    "experiments/provenance/ledger.json (timeline #36 · correspondence 9→11 · authoritative_sources 11→12)",
+    "docs/76_advisor_approval_record_prompt_for_vscode.md (지시서·FACTS 출처)",
+    "docs/76_advisor_approval_record_report.md",
+    "v3_Multimodal/src/record_block_W.py"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 기록 시점 기준: 모델 학습 0(RF·GIN 무관) · 모델 추론 0 · 통계 계산 0 · 새 추정 0 · Δ 산출 0 · emit_sign 0 · 부호 신규 공개 0 · open_sealed 0 · _sealed/ 읽기·쓰기 0(stat-only 스냅샷 168행 착수=종료 동일, sha256 eb03cabeef1f1dc3f623dde7ca26513b1ce63cb1a84a9d36abafea088245655e) · decision.py 호출 0 · 성공판정 0 · Holm/BH 0 · A5 재조회 0(승인됐어도 본 블록 미실행) · 개봉 0 · GIN 착수 0 · Holm ⑥·⑦ 계산 0 · Gmail 재조회 0 · 네트워크 0 · ladder_freeze.json 무수정(sha16 b885585aefbabb32) · gin_seed_freeze.json 무수정(sha16 10828447c6d33118) · gin_inner_valid_freeze.json 무수정(sha16 038599c3e1576022) · post_interim_freeze_v1_0.json 무수정(sha16 502db732bd5e45cb) · gin_inner_valid_freeze.status.json 무수정(sha16 bd329fefe613971f) · docs/30·33·55b·64·65·66·67·69·70·71·72·73·74·75 무수정 · confirmatory_oof_*.py·ladder_confirmatory.py·train_ladder.py·sap/*.py 무수정 · 확증 split·fold·seed 재추첨 0 · data/raw 변경 0 · git commit·push 없음",
+   "run_facts": {
+    "block": "W",
+    "block_type": "advisor approval record (document + sidecar + ledger append)",
+    "approval_message_id": "<GMAIL-MSGID>",
+    "approval_at_kst": "2026-08-06 12:05:26",
+    "approver": "양진홍 교수님",
+    "our_reply_message_id": "<GMAIL-MSGID>",
+    "our_reply_at_kst": "2026-08-06 13:04:02",
+    "thread_id": "<GMAIL-MSGID>",
+    "subject_verbatim": "Re: [DTI-ADR v3] 승인 요청 3건 (A5 재조회 · 개봉 승인자)",
+    "advisor_body_verbatim": "in-line으로 답변 드려요.",
+    "inline_annotations_verbatim": [
+     ">> 승인",
+     ">> 네. 승인",
+     ">> 금일 2026.08.06 일 메일로 전달 드렸습니다."
+    ],
+    "a5_requery_approved": true,
+    "a5_requery_executed": false,
+    "unblinding_approver": "양진홍 교수님",
+    "unblinding_timing": "still_undecided — separate approval required",
+    "unblinding_performed": false,
+    "external_review_forwarded_at": "2026-08-06 (시각 미통보)",
+    "external_review_forwarded_at_derived_upper_bound_kst": "2026-08-06 12:05:26 KST (회신 시각 — 우리 파생 추론, 교수님 통보값 아님)",
+    "external_reviewer_identity": "unknown_as_of_2026-08-06",
+    "response_deadline": "not_set_as_of_2026-08-06",
+    "deadline_setting": "pending_user_decision",
+    "still_pending_external_review": [
+     "U1-U7 (RQ-int procedure)",
+     "SAP 1.2 re-freeze"
+    ],
+    "nine_internal_decisions_advisor_response": "no_objection_raised",
+    "gin_start_still_blocked": true,
+    "holm67_start_still_blocked_until_reply": false,
+    "holm67_start_requires": [
+     "docs/60 개정 (docs/70 §1-2 확정본)",
+     "docs/61 개정 (docs/70 §1-4·§1-5 + 단일 홀드아웃 20% 폐기 + ⑦ 기준 RF 의 [기각] M1b 기준안 필드 보충)"
+    ],
+    "correspondence_items_total_after": 11,
+    "correspondence_in_place_edits": 0,
+    "post_interim_freeze_target_modified_bytes": 0,
+    "sidecar_path": "v3_Multimodal/config/post_interim_freeze_v1_0.status.json",
+    "sidecar_sha256": "a12fee2cdfd71350422e20e8ba2b6f4d083dd89f6907296fad944959d7d70083",
+    "docs77_sha256": "c7d8389c0517afceaf951dcb033c09253315f83f944ebde00103155a8887cdab",
+    "docs77_bytes": 6300,
+    "existing_objects_untouched": "timeline[0..34] 35 entry · correspondence[0..8] 9항목 · first_look_register · correspondence_subject_authority · authoritative_sources 기존 11항목 모두 객체 단위 동일",
+    "new_top_level_keys": [],
+    "models_trained": 0,
+    "new_estimates": 0,
+    "sealed_access": 0,
+    "a5_requery": 0,
+    "unblinding_events": 0,
+    "holm67_computations": 0,
+    "gin_training_runs": 0,
+    "network_calls": 0,
+    "gmail_lookups_by_runner": 0,
+    "git_commits": 0,
+    "docs33_modified": false,
+    "docs55b_touched": false
+   },
+   "supersedes": "timeline[32].run_facts.unknown_as_of.forwarded_at (unknown_as_of_2026-08-06 → 2026-08-06, 시각 미통보)",
+   "redaction_scope": "공개 = 서신 시각·방향·상대·제목 축자·건수·Gmail 메시지/스레드 ID·승인 문면 축자·파일 경로·바이트 수·sha256. 봉인 = 모든 성능 수치(macro AP·Δ·CI·p·λ)와 Δ 의 부호. 본 블록은 그중 어느 것도 산출·인용하지 않았다."
+  },
+  {
+   "ts": "2026-08-06",
+   "ts_kst": "2026-08-06 18:43:59 KST",
+   "actor": "vscode-claude (지시서 docs/60 개정판 v2 · 지정 러너 세션 1개)",
+   "step": "블록 O — Holm ⑥ tuned-RF baseline 확증 OOF 산출 (arm 1개 · 15 model-fold · 산출 전량 봉인 · Δ·부호 산출 0 · 개봉 0)",
+   "event": "① 무엇을 만들었나 — 사전등록 §4 「추가 baseline(필수)」이 'Morgan RF·tuned RF' 를 쌍으로 열거하는데 tuned 쪽은 동결 사다리 8모델 어디에도 없었다. 그 결과 Holm family 7개 중 ⑥ 이 미산출로 남아 있었고, 개봉이 family 전원 확보 후 1회·일괄이므로 ⑥ 이 임계경로였다. 본 블록은 그 comparator arm 의 확증 OOF 만 만든다. 대비(Δ)는 만들지 않는다 — ⑥ 은 Holm family 이므로 부호 노출도 조각 개봉이기 때문이다. ② 왜 별도 동결 파일인가 — tuned RF 는 사다리 모델이 아니라 등록이 별도로 요구한 baseline 이다. 사다리 동결 파일의 RF 하이퍼파라미터 주석이 '공정튜닝 RF 는 미사용' 이라고 적은 것은 사다리 8모델의 RF 하네스에 튜닝 하이퍼를 주입하지 않는다는 뜻이며(같은 항목의 재튜닝 여부 필드가 거짓인 것과 짝), ⑥ 자체를 금지하는 문면이 아니다. 그래서 사다리 동결 파일은 한 바이트도 고치지 않고 신규 파일 rf_tuned_freeze.json 을 만들었다. ③ 자유도를 어디서 닫았나 — 하이퍼파라미터와 지문 반경은 확증 split 이 생성되기 이전에 공정튜닝 절차가 개발 split 의 검증셋만으로(테스트 미사용) 이미 선택해 둔 구성을 축자 인용했고 재튜닝은 하지 않았다. 그 출처 파일의 해시는 docs/48 기록값과 일치한다. 확정본이 '착수 전에 함께 동결하라' 고 남겨 둔 지문 생성기 명세 다섯 항목은 B0_r3 행렬을 한 번도 만들기 전에 동결했으며, 값은 러너가 정한 것이 아니라 동결 B0(반경 2)를 만든 코드경로를 구문트리로 읽어 온 것이다. 생성기 호출의 인자 집합이 반경과 비트 수 둘뿐이고 위치인자가 없음을 assert 로 고정해, 반경 3 구성이 동결 B0 와 반경 하나만 다름을 증명했다. 구현도 MorganBlock 을 상속해 동일 코드경로를 그대로 실행하되 반경 상수만 일시 치환·원복하는 방식이라 ladder_confirmatory.py 는 무수정이다. ④ 하드 게이트 — 신규 러너로 동결 모델 M0 의 반복1 fold0 을 재계산해 블록 I 봉인 슬라이스와 dtype·shape·원시바이트 3중 일치를 확인했다(데이터 로딩·fold 배정·행 정렬·RF 하네스가 블록 I 와 동일하다는 증거이며, 재계산본은 저장하지 않고 폐기했다). B0_r3 가 B0 와 동일 행렬이면 반경 인자 미적용 버그이므로 중단하도록 걸어 두었고, 실제로는 서로 다른 행렬임을 확인했다. 결정적 지문이라 fit 모집단이 공집합임도 assert 했다. ⑤ 성격 — 이 비교는 반경만 또는 하이퍼파라미터만의 효과를 분리하는 ablation 이 아니라, 개발단계에서 선택된 강한 구조전용 baseline 전체와의 benchmark 비교다. 비교 arm 이 primary arm 과 하이퍼파라미터·지문 반경 양쪽에서 다르다는 사실과, 튜닝 맥락이 확증 설정과 달랐다는 사실을 결과와 함께 보고한다. 기각한 대안은 '기존 반경 2 지문에 튜닝 하이퍼만 얹기' 이며, 그 구성은 존재한 적이 없어 지금 새로 조립하는 것이 되어 연구자 자유도가 오히려 커진다. ⑥ 착수 조건 — 개정판 v2 의 착수 게이트 다섯 경로를 실측했다. 확정 내용·확정 기입·교수님 통보·교수님 무이의·차단 해제가 전건 일치했고 특히 차단 플래그가 거짓이었다. 이 확정에 대해 교수님은 이의를 제기하지 않았으나 명시적 승인 문구도 없어 대장의 기입값은 여전히 이의 없음이다.",
+   "artifacts": [
+    "v3_Multimodal/config/rf_tuned_freeze.json (신규 동결 · 생성 후 수정 금지)",
+    "experiments/runs/v3_confirm_rftuned_rep{1,2,3}_seed20{1,2,3}/_sealed/ (oof_RF_tuned.npz + metrics_full.json)",
+    "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/ (consensus_RF_tuned.npz + metrics_full.json)",
+    "experiments/runs/v3_confirm_rftuned/rftuned_public.json (공개 요약 — 봉인 키 0)",
+    "experiments/runs/v3_confirm_rftuned/suspend_fold_recheck_public.json (자진 추가 검증)",
+    "docs/33 (pre-look 1항목 + 실행 1항목)",
+    "docs/45 §2(타임라인 1행) · §5(확증 조회 대장 1행)",
+    "v3_Multimodal/src/{confirmatory_oof_rftuned.py, record_block_O0.py, record_block_O.py}"
+   ],
+   "confirmatory_lookup": "Y (값 미열람)",
+   "integrity_note": "본 기록 시점 기준: open_sealed 0 · emit_sign 0 · Δ 산출 0 · macro AP·CI·p 공개 0 · decision.py 호출 0(HOLM_FAMILY 는 소스 구문트리 판독이며 import·실행 아님) · 성공판정 0 · 다중성 보정 0 · 재튜닝·재탐색 0 · split·fold·seed 재추첨 0 · 기존 _sealed/ 덮어쓰기 0(신규 디렉터리에만 기록) · M1b·M2b·M0·M1·M2·P-ID·P-FAM·C-CAP 재계산 0 · 기존 동결물 무수정(해시 대조 전건 일치) · A5 재조회 0 · GIN 착수 0 · ⑦ late-fusion 0 · ⑧ RQ-int 0 · A3·A4·A6 층화 0 · 네트워크 0 · data/raw 변경 0 · git commit·push 0. 봉인 산출물 전수 스냅샷은 착수 159종이 전건 불변이고 신규 추가는 본 블록 디렉터리에서만 발생했다.",
+   "run_facts": {
+    "block": "O",
+    "block_type": "confirmatory OOF generation for one Holm comparator arm (RF_tuned)",
+    "hypothesis": "Holm ⑥ (M2b − RF_tuned) — comparator arm only, contrast NOT computed",
+    "model": "RF_tuned",
+    "feature_block": "B0_r3 (Morgan radius 3, 2048 bits, molecule-only)",
+    "n_model_folds_completed": 15,
+    "repeats": [
+     201,
+     202,
+     203
+    ],
+    "n_fold": 5,
+    "freeze_file": "v3_Multimodal/config/rf_tuned_freeze.json",
+    "freeze_sha256": "c1ef6406fbb48b7fade599390d75a945360a2f3ce1ee644a8c4e605e6a3703b3",
+    "predecessor_freeze": "post_interim_freeze_v1_0.json holm6_rf_tuned (docs/33 항목31 국문 (2))",
+    "fingerprint_spec_frozen_before_any_generation": true,
+    "code_path_equivalence": "M0 반복1 fold0 재계산 → 블록 I 봉인 슬라이스와 dtype·shape·tobytes 3중 일치(재계산본은 저장하지 않고 폐기)",
+    "b0_r3_distinct_from_b0_r2": true,
+    "n_drug_rows_differing_from_r2": 1058,
+    "sealed_outputs": {
+     "oof_files": 6,
+     "consensus_files": 2
+    },
+    "sealed_guard_n_files_at_start": 159,
+    "sealed_guard_unchanged": true,
+    "power_state_event": {
+     "what": "본계산 중 배터리 임계 잔량 도달로 시스템 강제 절전 → 외부 전원 연결로 복귀. 전력관리 로그 경고 등급 2→3 기록. caffeinate 보증은 생성돼 있었으나 임계 잔량 강제 절전은 그 보증으로 막지 못한다.",
+     "wall_clock_comparable": false,
+     "wall_clock_note": "오염된 것은 블록 경과시간뿐이다. 러너의 단조 시계는 절전 구간을 세지 않아 fold 단가는 오염되지 않았다. 이 블록의 경과시간을 다른 블록의 비용 추정에 투입하지 말 것(선례 = 반복2·3 배터리 실행).",
+     "n_model_folds_spanning_suspend": 1,
+     "model_fold_spanning_suspend": "rep1 fold3",
+     "suspend_gap_minutes": 89,
+     "per_fold_wall_s_min": 200,
+     "per_fold_wall_s_max": 288,
+     "bytes_affected": false,
+     "bytes_affected_evidence": "절전 경계를 걸친 rep1 fold3 을 같은 코드경로로 재계산해 저장된 부분 산출과 dtype·형상·원시바이트가 동일함을 확인했다(자진 추가 검증·지시서 미요구·재계산본 미저장). 기록 = experiments/runs/v3_confirm_rftuned/suspend_fold_recheck_public.json"
+    },
+    "not_performed": [
+     "개봉(open_sealed)",
+     "성공판정(rq*_decision)",
+     "Holm/BH 다중성",
+     "TOST/SESOI",
+     "bootstrap CI",
+     "sign-flip",
+     "p-value",
+     "Δ 산출",
+     "부호 산출(emit_sign)",
+     "재튜닝·재탐색",
+     "기존 동결물 수정",
+     "기존 _sealed 덮어쓰기",
+     "M1b·M2b·M0·M1·M2·P-ID·P-FAM·C-CAP 재계산",
+     "split·fold·seed 재추첨",
+     "⑦ late-fusion",
+     "⑧ GIN·RQ-int",
+     "A3·A4·A6 층화",
+     "네트워크",
+     "data/raw 변경",
+     "git commit·push"
+    ],
+    "supersedes_backfill": "블록 W(timeline[35])가 지시서 docs/76 §5 의 요구에도 불구하고 기입하지 못한 supersede 포인터를 여기서 보충한다 — timeline[32].run_facts.unknown_as_of.forwarded_at(unknown_as_of_2026-08-06) 은 timeline[35].run_facts.external_review_forwarded_at(2026-08-06, 시각 미통보)으로 대체됐다. 결손 원인은 cowork 지시서 docs/76 의 종료검증 누락. timeline[32]·[35] 자체는 무수정."
+   },
+   "redaction_scope": "공개 = 모델명·피처 차원·반복/fold 수·완주 건수·형상·NaN 수·leak_rows·해시·동결파일 sha256·계측 추정 대 실측 wall·peak RSS·게이트 판정·지문 비트 밀도(지문 자체의 성질이며 결과 계열 아님). 봉인 = 모델별 macro AP·per-fold·per-PT·Δ·CI·p 와 Δ 의 부호 전량. 본 블록은 대비(Δ)를 산출하지 않았으므로 부호는 존재조차 하지 않는다."
+  },
+  {
+   "ts": "2026-08-06",
+   "ts_kst": "2026-08-06 23:34:48 KST",
+   "actor": "vscode-claude (지시서 docs/61 개정판 v2.1 · 지정 러너 세션 1개)",
+   "step": "블록 P — Holm ⑦ RFseq−RF late-fusion arm 확증 OOF 산출 (arm 5종 · 15 outer unit · 산출 전량 봉인 · Δ·부호·λ 산출·공개 0 · 개봉 0)",
+   "event": "① 무엇을 만들었나 — 등록 §12·§10.4 가 late-fusion 상보성(RQ7)을 Holm family 의 일곱 번째 대비로 두었는데 그 arm 이 미산출이었다. 본 블록은 서열 단독 학습기의 확증 OOF 와 그것을 기준 RF 예측과 볼록결합한 앙상블 OOF, 그리고 고정 가중 판을 만든다. 대비 자체는 만들지 않는다 — ⑦ 은 family 구성원이라 부호 노출도 조각 개봉이다. ② 자유도를 어디서 닫았나 — 기준 RF 는 분자 지문 단독 모델로 확정돼 있었고 기존 확증 산출물이 있다. 서열 학습기는 새로 고르지 않고 동결 확증 RF 하네스를 하이퍼파라미터 그대로 서열 블록에만 적용했다(새 학습기 0·새 하이퍼 0). 볼록결합 가중은 GIN 내부 검증을 위해 이미 동결해 둔 같은 분할을 그대로 공유해 고르되, 그 분할을 새로 추첨하지 않고 동결 규칙으로 **재현**했으며 열다섯 unit 전건이 동결 검증표와 정확히 일치했다. 가중은 outer unit 당 하나이고 동점 처리는 두 단계로 미리 정해져 있었다. ③ 하드 게이트 — 가중을 고른 뒤 두 base learner 를 outer training 전체로 재적합하고, 재적합된 기준 RF 예측이 해당 fold 의 봉인 산출물과 dtype·형상·원시 바이트 세 겹으로 동일함을 **매 unit** 확인했다. 재적합하지 않으면 기준 RF 가 대비 상대보다 적은 표본으로 학습한 모델이 되어 대비에 학습표본 크기가 섞이기 때문이며, 불일치였다면 하네스 경로가 어긋났다는 뜻이므로 즉시 중단하도록 걸어 두었다. 가중 선택에 쓰인 행과 해당 fold 의 test 행이 교집합 0 임도 전건 확인했다. ④ 무엇을 봉인했나 — arm 산출물과 함께 **선택된 가중값 자체를 봉인**했다. 그것은 결과에 의존해 고른 양이라 값 하나의 공개도 조각 개봉이기 때문이다. 공개 요약에는 격자의 정의(끝점과 간격과 점의 개수)만 적었다. 등록 §12 가 함께 보고하라고 한 보조 지표들도 봉인 파일 안에서만 계산했고 공개에는 존재 여부만 적었다. ⑤ 선언한 한계 — 표적이 매핑되지 않은 약물들의 서열 블록은 정확히 영 벡터가 되는데 이 영은 결측의 명시적 표시가 아니다. 따라서 상보성 추정치는 사실상 매핑된 약물들이 이끈다. 감도 구성은 성공판정에 쓰지 않고 primary 를 대체하지도 않으며 별도 파일로 봉인했다. ⑥ 착수 전 결손 보충 — 확정 시점에 이미 내려져 있었으나 블록 S 의 기입 지시서 누락으로 동결 JSON 과 대장 양쪽에 옮겨지지 못한 '기준 RF 대안 기각' 사유를 계산 착수 **전에** 새 항목으로 보충 기입했다. 기존 항목은 대체하지 않았고 확정 내용도 바꾸지 않았다.",
+   "artifacts": [
+    "v3_Multimodal/config/holm7_latefusion_freeze.json (신규 동결 · 생성 후 수정 금지)",
+    "experiments/runs/v3_latefusion_rep{1,2,3}_seed20{1,2,3}/_sealed/ (arm OOF 5종 + lambda_selected.json + metrics_full.json)",
+    "experiments/runs/v3_latefusion_consensus_rep123/_sealed/ (consensus 5종 + metrics_full.json)",
+    "experiments/runs/v3_latefusion/latefusion_public.json (공개 요약 — 봉인 키 0)",
+    "docs/33 (보충 기록 1항목 + 실행 1항목)",
+    "docs/45 §2(타임라인 1행) · §5(확증 조회 대장 1행)",
+    "v3_Multimodal/src/{confirmatory_latefusion.py, record_block_P0.py, record_block_P.py}"
+   ],
+   "confirmatory_lookup": "Y (값 미열람)",
+   "integrity_note": "본 기록 시점 기준: open_sealed 0 · emit_sign 0 · Δ 산출 0 · macro AP·CI·p 공개 0 · λ 값 공개 0 · decision.py 호출 0(HOLM_FAMILY 는 소스 구문트리 판독) · 성공판정 0 · 다중성 보정 0 · split·fold·seed 재추첨 0 · **내부 valid 재추첨 0**(동결 규칙 재현) · 기존 _sealed/ 덮어쓰기 0(신규 디렉터리에만 기록) · 동결 8모델·RF_tuned 재계산 0 · 기존 동결물 무수정(해시 대조 전건 일치) · A5 재조회 0 · GIN 착수 0 · ⑧ RQ-int 0 · A3·A4·A6 층화 0 · 네트워크 0 · data/raw 변경 0 · git commit·push 0. 봉인 산출물 전수 스냅샷은 착수 184종이 전건 불변이고 신규 추가는 본 블록 디렉터리에서만 발생했다.",
+   "run_facts": {
+    "block": "P",
+    "block_type": "confirmatory OOF generation for the Holm 7 late-fusion arms (RQ7)",
+    "hypothesis": "Holm ⑦ (RF+seq − RF) — arms only, contrast NOT computed",
+    "arms": {
+     "p_rf": "M0 (Morgan-only RF)",
+     "p_seq_primary": "B_seq only",
+     "p_seq_sensitivity": "[B1, B_seq] (adjudication excluded)"
+    },
+    "feature_dims": {
+     "p_rf": 2048,
+     "p_seq_primary": 64,
+     "p_seq_sensitivity": 66
+    },
+    "n_outer_units_completed": 15,
+    "n_rf_fits_total": 90,
+    "repeats": [
+     201,
+     202,
+     203
+    ],
+    "n_fold": 5,
+    "freeze_file": "v3_Multimodal/config/holm7_latefusion_freeze.json",
+    "freeze_sha256": "d89f8c52412b656e467accbda4e1e9a36aaba14830be5b3d81ca756e54b357c1",
+    "predecessor_freeze": "post_interim_freeze_v1_0.json holm7_late_fusion (docs/33 항목31 국문 (3))",
+    "inner_split_shared_not_redrawn": true,
+    "inner_split_reference": "gin_inner_valid_freeze.json 의 1/9 scaffold-group 분할 · inner_seed = 1000*split_seed + fold_index · 사전정렬 키 = (-group_size, str(첫 행 인덱스))",
+    "inner_valid_size": 97,
+    "inner_train_sizes": [
+     776,
+     777
+    ],
+    "inner_split_matches_frozen_check": true,
+    "refit_byte_identity_every_unit": true,
+    "lambda_selection": "inner-valid macro AP 위 격자 탐색 · outer unit 당 1개 · 동점 2단계(0.5 근접 → 작은 값) · **선택값 전량 봉인**",
+    "lambda_public": false,
+    "lambda_half_reported_alongside": true,
+    "sensitivity_firewall": "[B1, B_seq] 결과는 ⑦ 성공판정에 쓰지 않고 primary 를 대체하지 않는다. 별도 파일로 봉인.",
+    "zero_vector_caveat": "표적 미매핑 245 약물의 B_seq 는 정확히 0 이며 이 0 은 결측의 명시적 표시가 아니다. 상보성 추정치는 사실상 매핑된 847 약물이 이끈다 — 결과와 함께 보고한다.",
+    "auxiliary_registered_s12": "상관·rank disagreement·정오 비중복·개선 fold 비율을 **봉인 파일에만** 계산해 담았다. 공개 요약에는 존재 여부만 적었다(지시서 §P-4).",
+    "delta_not_computed": true,
+    "sealed_outputs": {
+     "per_repeat_files": 21,
+     "consensus_files": 6
+    },
+    "sealed_guard_n_files_at_start": 184,
+    "sealed_guard_unchanged": true,
+    "power_state": "착수 시 pmset 실측 = 외부 전원 미연결(배터리 구동, 잔량 충분). 블록 O 에서 caffeinate 가 임계 배터리 강제 절전을 막지 못함이 확인돼 착수 전 잔량을 실측했고, 본 블록에서는 절전 사건이 발생하지 않았다.",
+    "not_performed": [
+     "개봉(open_sealed)",
+     "성공판정(rq*_decision)",
+     "Holm/BH 다중성",
+     "TOST/SESOI",
+     "bootstrap CI",
+     "sign-flip",
+     "p-value",
+     "Δ(ensemble − RF) 산출",
+     "부호 산출(emit_sign)",
+     "λ 값 공개",
+     "λ 를 test·OOF·Δ·p 로 선택",
+     "기존 동결물 수정",
+     "기존 _sealed 덮어쓰기",
+     "동결 8모델·RF_tuned 재계산",
+     "split·fold·seed 재추첨",
+     "내부 valid 재추첨",
+     "⑧ GIN·RQ-int",
+     "A3·A4·A6 층화",
+     "A5 재조회",
+     "네트워크",
+     "data/raw 변경",
+     "git commit·push"
+    ],
+    "supersedes": "본 블록의 docs/33 보충 기록은 항목31 국문 (3) 문단을 **보충**한다(supersede 아님) — ⑦ 기준 RF 선택에서 기각한 M1b 기준안이 확정 시점에 이미 결정돼 있었으나 블록 S 의 기입 지시서 누락으로 동결 JSON 과 항목31 양쪽에 옮겨지지 못한 결손을 되돌려 놓은 것이다. 항목31 자체는 무수정.",
+    "supersedes_backfill_note": "동일 필드가 ledger 전문에 이미 존재(블록 O 가 먼저 기입)해 중복 기입하지 않고 존재 사실만 기록한다 — 지시서 §P-6-3 멱등 규정."
+   },
+   "redaction_scope": "공개 = arm 이름·피처 차원·반복/fold 수·완주 건수·형상·NaN 수·leak_rows·해시·내부 valid 크기와 group 교차 여부·λ **격자 정의**·계측 추정 대 실측 wall·peak RSS·게이트 판정·재적합 바이트 동일성 참거짓. 봉인 = arm 별 macro AP·per-fold·per-PT·**선택된 λ 값**·등록 §12 보조 지표 전량. 본 블록은 대비(Δ)를 산출하지 않았으므로 부호는 존재조차 하지 않는다."
+  },
+  {
+   "ts": "2026-08-07",
+   "ts_kst": "2026-08-07 09:57:45 KST",
+   "actor": "vscode-claude (지시서 docs/78 · 점검·기입 전용 세션 1개)",
+   "step": "블록 X — 개봉 전 점검(봉인 완전성 점검 + 부호 인지 기록표). 계산 0 · 학습 0 · 추론 0 · 개봉 0 · 새 부호 산출 0",
+   "event": "① 확정본 `post_interim_freeze_v1_0.json` 의 `pre_unblinding_procedures_specified` 가 규격만 명시하고 구현을 후속 블록으로 미룬 두 절차를 구현했다. ② 기대 목록은 동결 러너 상수·동결 config·각 블록 리포트의 봉인 표·실행 시점 기록물에서 **먼저** 구성했고(산출군마다 `expected_from` 기입), 그 다음에 live 와 양방향 대조했다 — 기대 273 대 live 273, missing 0 · unexpected 0. ③ 완주 격자는 개수가 아니라 (반복, fold)·(반복, 모델, fold)·(mode, seed) **집합 동일성**으로 판정 — 4 산출군 전건 일치. ④ 봉인 산출물 273종 전건 해시 후 기록물 기대값과 312건 대조, 불일치 0건. ⑤ 접근 기록 15파일 91건 전건 machine_read · human_exposure=true 0건. ⑥ 실패·재시작 기록 — 계산 3블록 단일 세션 완주, 다세션은 재배치 null 본런 1건(설계상 중단·재개), 시각 역행 6건은 전부 동일 세션 내 1초(18 워커 배치 수집), 확정본이 요구한 항목으로 블록 O 강제 절전 89분 공백을 등재(산출 바이트 무영향). ⑦ 부호 인지 기록표 4행 — 전부 주분석 대비이고 새 부호 산출 0. 경로 4종(러너 최초 조회 · 공개 저장소를 통한 불특정 다수 · 미푸시 로컬 커밋 · 지도교수)을 행 안의 `disclosure_routes` 로 표현했다. 공개 저장소는 스칼라 값으로 판정했고 푸시 여부는 네트워크 없이 로컬 원격추적 ref·reflog 로 확인했다. 지도교수 경로는 unknown_as_of_2026-08-06 로 남기고 open_question 에 올렸다(추측 기입 0). 어느 행에서도 부호 이후 설계·성공기준 변경은 없다. ⑧ cowork 상신 2건을 베끼지 않고 독립 재현했다 — `first_look_register.rows` 결손은 사실이라 3행 append + status 정정 문면을 덧붙였고(기존 문면 삭제 0), `sealed_access_log` '부재' 문면은 **'열람 0' 판정은 참이고 '파일 부재' 서술만 틀림** 이므로 후자만 신규 키로 정정했다. ⑨ 본 점검 통과는 **개봉 허가가 아니다** — `unblinding_performed` false 유지.",
+   "artifacts": [
+    "docs/78_pre_unblinding_audit_prompt_for_vscode.md",
+    "docs/78_pre_unblinding_audit_report.md",
+    "docs/79_sign_disclosure_matrix.md",
+    "experiments/provenance/sealing_completeness_audit.json (sha256 b189f77f30dce9b5)",
+    "experiments/provenance/sign_disclosure_matrix.json (sha256 d20415256c087825)",
+    "experiments/runs/v3_pre_unblinding_audit/audit_public.json",
+    "docs/33 항목36",
+    "v3_Multimodal/src/pre_unblinding_audit.py",
+    "v3_Multimodal/src/record_block_X.py"
+   ],
+   "confirmatory_lookup": "N (개봉 0 · 새 추정 0 · 봉인 값 미판독 — 해싱은 바이트 읽기이지 값 판독이 아니다. docs/45 §5 확증 조회 대장에 행을 추가하지 않음)",
+   "integrity_note": "open_sealed 0 · emit_sign 0 · decision.py 호출 0(HOLM_FAMILY 는 구문트리 판독) · Δ·macro AP·CI·p 산출 0 · λ 판독 0 · 성공판정 0 · 다중성 보정 0 · 봉인 파일 np.load/json.load 0 · _sealed/ 쓰기·수정·삭제 0 · sealed guard 273(access.log 제외)/288(포함) 착수=종료 완전 일치 · 본 블록이 _sealed/ 에 추가한 파일 0 · 네트워크 0(git ls-remote 포함) · git commit·push 0 · A5 재조회 0 · GIN 착수 0 · Holm ⑧ 0",
+   "run_facts": {
+    "verdict": "PASS",
+    "n_expected": 273,
+    "n_live": 273,
+    "n_missing": 0,
+    "n_unexpected": 0,
+    "n_sealed_directories": 24,
+    "n_sealed_artifacts": 273,
+    "n_access_logs": 15,
+    "n_total_sealed_files": 288,
+    "n_hashed": 273,
+    "n_hash_compared": 312,
+    "n_hash_mismatch": 0,
+    "n_files_with_recorded_hash": 193,
+    "model_fold_seed_all_set_equal": true,
+    "n_access_log_entries": 91,
+    "n_human_exposure_true": 0,
+    "n_known_failure_restart_events": 3,
+    "n_multi_session_runs": 1,
+    "sign_matrix_n_rows": 4,
+    "sign_matrix_route_kinds": [
+     "runner_first_look",
+     "public_repository_pushed",
+     "local_commit_unpushed",
+     "advisor"
+    ],
+    "advisor_route_determination": "unknown_as_of_2026-08-06",
+    "n_scalar_sign_literals_public_repo": 3,
+    "public_repo_pushed_ref_tip": "bdb65c8",
+    "unpushed_local_commit_is_ancestor_of_remote": false,
+    "unblinding_performed": false,
+    "gate_G0_pass": true,
+    "gate_HOLM_n_labels": 7,
+    "cowork_submissions_resolved": {
+     "first_look_register_rows_short": "confirmed_true → appended 3 rows (superseding append, 기존 1행 무수정)",
+     "sealed_access_log_absent_statement": "partially_false → '열람 0' 판정은 참, '파일 부재' 서술만 정정"
+    }
+   },
+   "redaction_scope": "공개 = 판정·개수·해시 대조 건수·경로 종류·게이트 PASS/FAIL. 부호 값은 sign_disclosure_matrix.json 과 docs/79 에만 두고 공개 요약에는 싣지 않는다. Δ·macro AP·CI·p·λ 는 어느 산출물에도 없다."
+  },
+  {
+   "ts": "2026-08-07",
+   "ts_kst": "2026-08-07 11:13:28 KST",
+   "actor": "vscode-claude (지시서 docs/80 · 조회·봉인 전용 세션 1개)",
+   "step": "블록 Y — A5 작용기전 표적 1회 재조회(캐시 구축·봉인). A5 계산 0 · 라벨 결합 0 · 개봉 0",
+   "event": "① 교수님 승인(2026-08-06 12:05:26 KST · docs/77 §3 주석 1 축자 「승인」)의 범위는 **재조회 행위**뿐이며 A5 정의·구간은 A3·A4·A6 과 동일한 no_objection_raised 로 분리 기재했다(승인 범위 부풀리기 금지). ② **정의를 조회 전에 동결**했다 — a5_mechanism_freeze.json 의 definition·bins 는 docs/63 §2 A5 행 축자이고 frozen_at_kst 가 최초 네트워크 호출보다 이르다. 커버리지를 보고 구간을 바꾸는 경로를 구조적으로 막기 위함이다. ③ 이 프로젝트에서 **네트워크가 처음 허용된 블록**이고 화이트리스트는 ChEMBL /mechanism(943 화합물 한정)과 /target/{id}(그 응답이 지목한 target 한정) 둘뿐이다. 관측 호스트 ['www.ebi.ac.uk'] · 요청 URL 전건 로그. ④ **배치 대신 분자당 1요청** — 과거 __in= 배치가 응답에서 약물 귀속을 잃은 것이 이 블록의 존재 이유(docs/63 §3)이므로 귀속을 요청 자체로 보장했다. 요청 ID ↔ 응답 molecule_chembl_id 불일치 0건. ⑤ 조회 943 → 성공 943 · 실패 0(실패율 0.0) · 네트워크 호출 1087건 · 성공 ID 재호출 0. ⑥ target→UniProt = 전체 333 중 로컬(06_targets_human.csv) 189 · /target/ 추가 조회 124(호출 144건) · 미해석 20(대리지표 대체 0) · multi_uniprot 86종 전건 보존(임의 단일 선택 0). scope 해석 1건은 사유·건수·엔드포인트와 함께 manifest.scope_interpretation 에 명시했다. ⑦ 과거 수집(08_m1b_covariates.mechanism_target_n) 대비 일치 943 · 불일치 0 — snapshot 차이로 예상 범위이며 전건 열거했다. no_mechanism 약물 393종은 가용성 수치이지 층 배정이 아니다. ⑧ **봉인 = 해시 고정**이며 _sealed/ 이동이 아니다. A5 캐시는 라벨 무관 메타데이터라 _sealed/ 밖에 두었고(넣으면 봉인 회계 273 이 깨지고 개봉 대상으로 오분류) 캐시 2174종 전건 sha256 + cache_tree_sha256 기록 후 재해시 일치를 확인했다. 원응답은 절삭·정규화 없이 바이트 원문 보관. ⑨ 라벨 결합은 하지 않았다 — 봉인이 이 블록의 끝이고 A5 층화·Δ·CI·p 는 후속 블록이다.",
+   "artifacts": [
+    "docs/80_a5_mechanism_requery_prompt_for_vscode.md",
+    "docs/80_a5_mechanism_requery_report.md",
+    "v3_Multimodal/config/a5_mechanism_freeze.json (sha256 3419b2f793d74051)",
+    "data/processed/target_mapping/a5_mechanism_targets.csv (sha256 62fb85d013a15d15)",
+    "experiments/provenance/a5_requery_manifest.json (sha256 66023c1d4403bbb2)",
+    "experiments/runs/v3_a5_requery/a5_requery_public.json",
+    "data/processed/target_mapping/_a5_mechanism_cache/ (cache_tree_sha256 349e42d5f11771e7)",
+    "docs/33 항목37, docs/33 항목38",
+    "v3_Multimodal/src/a5_mechanism_freeze.py",
+    "v3_Multimodal/src/a5_mechanism_requery.py",
+    "v3_Multimodal/src/record_block_Y_pre.py",
+    "v3_Multimodal/src/record_block_Y.py"
+   ],
+   "confirmatory_lookup": "N (성능 조회가 아니다 — 라벨·지표·봉인 값을 열지 않았다. docs/45 §5 확증 조회 대장에 행을 추가하지 않음)",
+   "integrity_note": "label_join_performed false · master_Y·PT·OOF·성능 산출물 접근 0 · A5 층화·Δ·macro AP·CI·p·부호 산출 0 · emit_sign 0 · decision.py 호출 0 · open_sealed 0 · _sealed/ 쓰기·수정·삭제 0 · sealed guard 273/288 착수=종료 · post_interim_freeze_v1_0.json 0바이트 수정 · 기존 _cache/ 무수정 · 943 밖 화합물 조회 0 · 2회차 조회 0(성공 ID 재호출 0) · 친화도(pchembl) 수치 기록 0 · git commit·push 0 · GIN 착수 0 · Holm ⑧ 0 · unblinding_performed false 유지",
+   "run_facts": {
+    "approval_scope": "re-query only (explicitly_approved); definition = no_objection_raised",
+    "analysis_label": "현재 snapshot 기반 post-interim 보조분석",
+    "frozen_before_any_fetch": true,
+    "n_requested": 943,
+    "n_success": 943,
+    "n_failed": 0,
+    "failure_rate": 0.0,
+    "n_network_calls": 1087,
+    "one_request_per_molecule": true,
+    "batch_query_used": false,
+    "n_targets_total": 333,
+    "n_targets_resolved_local": 189,
+    "n_targets_resolved_endpoint": 124,
+    "n_targets_unresolved": 20,
+    "unresolved_rate": 0.06006,
+    "n_multi_uniprot_targets": 86,
+    "n_target_endpoint_calls": 144,
+    "coverage_crosscheck_n_agree": 943,
+    "coverage_crosscheck_n_disagree": 0,
+    "no_mechanism_drug_count": 393,
+    "n_cache_files": 2174,
+    "n_raw_files": 1087,
+    "cache_tree_sha256": "349e42d5f11771e788d017d1bcc8206a7d2b5ebc6a88dd99c4ebca80917aa684",
+    "cache_outside_sealed": true,
+    "sealed_artifacts_start_end": [
+     273,
+     273
+    ],
+    "label_join_performed": false,
+    "unblinding_performed": false
+   },
+   "redaction_scope": "공개 = 조회 건수·실패율·해석 결과·커버리지 대조 건수·해시. Δ·macro AP·CI·p·부호·λ·친화도 수치는 어느 산출물에도 없다."
+  },
+  {
+   "ts": "2026-08-08",
+   "ts_kst": "2026-08-08 16:45 KST",
+   "actor": "vscode-claude",
+   "step": "블록 Z — 등록 §11 세 번째 축(A3·A4·A5·A6) unseen-target proportion 층화 (기존 consensus 재사용 · 새 OOF 0)",
+   "event": "① 왜 이 블록인가 — 등록 §11 은 unseen-target proportion 축을 요구하는데 블록 H 는 구조·서열 2축만, 블록 L 은 Δ(M2b−P-ID) 만 수행해 세 번째 축 4변형(A3·A4·A5·A6)이 §13-6 커버리지의 마지막 결손으로 남아 있었다. 정의는 이미 동결돼 있었고(post_interim_freeze_v1_0.axes_a3_a4_a6 + 블록 Y a5_mechanism_freeze.json) 블록 Y 가 A5 표적 캐시를 확보해 선행 조건이 해소됐다. ② 착수 전 동결 — A5 동결 문면이 '표적이 없으면 no_mechanism' 이라 (레코드 없음)/(레코드는 있으나 표적 없음)/(표적은 있으나 UniProt 전부 미해석) 세 경우를 구분하지 못한다는 것이 블록 Y 에서 드러났다. 사용자 결정(2026-08-07)으로 A·B=no_mechanism, C=신규 not_estimable, D={0}/{1} 로 경계를 명료화해 계산 전에 기입했고(a5_boundary_amendment.json, supersedes_nothing=true — 동결 문면은 0바이트 수정), 동결 2026-08-07 12:05:16 KST < 최초 Δ 산출 2026-08-07 19:14:27 KST 을 기계 확인했다. not_estimable 은 새 효과 구간이 아니라 estimability 부재 표기이며 대리지표로 대체하지 않았다. ③ 비순환 판정 2건 — pchembl_median 정본 파일은 동결 문면이 파일을 지목하지 않으므로 동결 커버리지 상수를 재현하는 쪽으로 판정했다. 후보 2개를 모두 채워 보고 05b_affinity_values.csv 만 pair 12514/12613 · drug 16/847 을 재현했다(07_agg_topk.csv 는 3436 로 미재현 → 판정 유일). A5 표적도 블록 H 와 같은 함수·같은 인자 canonicalize_set(t, None, None) 을 통과시킨 뒤 T_train_f 와 비교했다(생략하면 unseen 과대계상, 고유 UniProt 758→758). ④ A5 모집단과 추정 모수의 분리 — A5 모집단은 chembl_id 매칭 943 이고 추정 모수는 847 이라 서로 다르다. 943∩847=847 · 847 중 A5 모집단 밖 0 · 943 중 847 밖 96(비매핑 245 사전 제외 집합의 일부). 847 내부 분해는 A 326/B 21/C 24/D 476(합 847)로 cowork 참고값을 베끼지 않고 원자료에서 독립 재현해 일치시켰다. C 집단이 {0}/{1}/no_mechanism 에 유입되지 않았음과 not_estimable 층 == C 집합임을 양방향 assert 로 확인했다. ⑤ 회계 하드 게이트 — 축마다 Σ stable+unstable = 847, 847+245=1092, 네 축의 추정 대상 약물 집합 동일. 3반복 배정 불일치는 제외가 아니라 축별 unstable_stratum 으로 분리 집계했다(A3 79 · A4 78 · A5 31 · A6 42). 층별 표본수를 보고 동결 구간을 조정하지 않았다. ⑥ 상수 재사용 — SEED_BOOTSTRAP 6001, SEED_SIGNFLIP 6002, B 10000, unit scaffold_cluster, ELIGIBLE_PT None, EXPECT_DENOM 847, WALL_ABORT_DAYS 7 을 stratification_run.py 에서 import 재사용하고 그 사실을 AST 로 기계 확인했다(대상 14종 · 리터럴 재정의 0 · 새 seed 추첨 0). 블록 H·L 러너는 한 줄도 수정하지 않았다. ⑦ 계측 — 블록 H 의 약물수 선형 가정이 1.74배 과소였고 블록 L 이 직접 실측으로 맞췄 으므로 본 블록도 층 × 대비마다 Δ 1회를 직접 실측한 뒤 최대 표본 층에서 B=100 파일럿으로 비례상수만 보정했다. 추정 22.29h → 정지 임계 7.0일 미만 확인 후 진입 → 실측 21.49h. 파일럿 통계 산출은 전량 폐기했다. ⑧ 본계산 — 층 20개 × 대비 2종 = 40 unit-run 전건 완주(formal 28 · descriptive 12), bootstrap B=10000 seed 6001 unit=scaffold_cluster, sign-flip B=10000 seed 6002, primary CI=BCa. BCa 불능 0건 · percentile 자동대체 0건. 산출 전량 _sealed/axes_result.json (sha256 5c1aa8e24cd5ca9c) + _sealed/checkpoint.jsonl 40행. ⑨ 공개 범위 — 축·층 이름·표본수·클러스터수·formal/descriptive·회계·판정 근거·B·seed·시간·해시·게이트뿐이며 Δ·AP·CI·p 는 물론 Δ 의 부호도 공개하지 않았다. 공개 4파일에 macro_ap·delta·sign·ci_*·p_*·boot_*·null_* 계열 키가 부재함을 방어 assert 로 강제했고(검출 0), 키 이름이 아니라 값으로도 판정해 허용목록 밖 실수를 차단했다. ⑩ 자체 검사코드 결함 1건 — 본계산 직후 공개요약이 40건 전건을 not_estimable 로 표기했다. 통계가 아니라 공개요약 코드의 문제로, estimability 판정 필드는 ci_primary.status(SAP A1 상 BCa 성공 시에만 estimable)인데 ci_bca.status 로 걸렀고 그 필드의 성공 토큰은 estimable 이 아니라 bca 였다. 정본 필드로 교정하고 규약을 estimability_rule 로 공개 파일에 명시했다. 교정은 체크포인트 40건 전건 SKIP 으로 수행해 통계 재계산 0 · 봉인 재작성 0 · 봉인 판독 0 이며 sha 는 본계산 종료 시점 값 그대로다. ⑪ 게이트 — 배타 락 획득·정상 해제, G-IDLE 게이트 A 를 우회하거나 임계를 변경하지 않고 시스템이 유휴가 될 때까지 진입만 미루는 대기 런처를 썼으며 게이트 판정은 러너 안에서 그대로 수행했다. 게이트 B 는 스테이지·층 단위 전후로 호출해 경쟁 계산 프로세스 0건 확인. 전원은 착수 전 pmset 으로 AC 연결을 실측했다(블록 O 교훈). G0 동결 10종 일치 · sealed guard 273종 시작=종료 완전 일치 · open_sealed 0건.",
+   "artifacts": [
+    "experiments/runs/v3_stratification_axes/gates_public.json",
+    "experiments/runs/v3_stratification_axes/axes_summary.json",
+    "experiments/runs/v3_stratification_axes/axes_assignment.csv",
+    "experiments/runs/v3_stratification_axes/pilot_timing.json",
+    "experiments/runs/v3_stratification_axes/axes_public.json",
+    "experiments/runs/v3_stratification_axes/redaction_scan_public.json",
+    "experiments/runs/v3_stratification_axes/_sealed/axes_result.json (sha256 5c1aa8e24cd5ca9c, SEALED)",
+    "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl (40행, SEALED)",
+    "v3_Multimodal/config/a5_boundary_amendment.json (sha256 860f5a4529dfb57b)",
+    "docs/33 항목40 (종료 후) · docs/33 항목39 (착수 전)",
+    "docs/45 §2 타임라인 · docs/45 §5 확증 조회 대장",
+    "docs/81_axes_a3a4a5a6_stratification_report.md",
+    "v3_Multimodal/src/{axes_stratification_run,a5_boundary_amendment,record_block_Z}.py"
+   ],
+   "confirmatory_lookup": "Y (값 미열람) — 기존 consensus OOF 를 기계 판독해 층별 추정을 생성했으므로 확증 조회다. Δ·AP·CI·p·부호의 사람 열람·공개 노출은 0 이며 개봉·성공판정·다중성 보정은 수행하지 않았다.",
+   "integrity_note": "기존 봉인·동결물 무수정 — sealed guard 273종(access.log 제외) 착수=종료 완전 일치, 신규 봉인은 본 블록 디렉터리에만. a5_mechanism_freeze.json·post_interim_freeze_v1_0.json 0바이트 수정. unblinding_performed false 유지 · a5_requery_executed true 불변(재조회 0 · 네트워크 0) · gin_start_still_blocked true 유지. git commit·push 0.",
+   "run_facts": {
+    "n_axes": 4,
+    "n_units": 20,
+    "n_unit_runs": 40,
+    "n_formal": 28,
+    "n_descriptive": 12,
+    "n_ci_not_estimable": 0,
+    "percentile_auto_substitutions": 0,
+    "B": 10000,
+    "seed_bootstrap": 6001,
+    "seed_signflip": 6002,
+    "bootstrap_unit": "scaffold_cluster",
+    "primary_ci_method": "BCa",
+    "estimated_wall_hours": 22.291486513878507,
+    "measured_wall_hours": 21.487197357095273,
+    "checkpoint_rows": 40,
+    "models_trained": 0,
+    "new_oof_generated": 0,
+    "network_calls": 0,
+    "sealed_result_sha256": "5c1aa8e24cd5ca9ca0c3a61049d22d01fb13a17fca7b3af3510f2bc01a3a009c",
+    "sealed_guard_n_files": 273,
+    "denominator_estimated": 847,
+    "excluded_no_target_drugs": 245,
+    "a5_decomposition_847": {
+     "A": 326,
+     "B": 21,
+     "C": 24,
+     "D": 476
+    }
+   },
+   "redaction_scope": "층별 macro AP·Δ·CI·sign-flip p 및 **Δ 의 부호**까지 전량 sealed. 공개는 축·층 이름·표본수·클러스터수·formal/descriptive 라벨·회계 assert·판정 근거·B·seed·시간·해시·게이트 PASS/FAIL 뿐이며 값 기준 스캔으로 허용목록 밖 실수도 차단했다."
+  },
+  {
+   "ts": "2026-08-09",
+   "ts_kst": "2026-08-09 15:47:29 KST",
+   "actor": "vscode-claude",
+   "step": "블록 AA — 문면 정정 2건 (A: docs/55b M1/M1b 정정 · B: A5 층 개명). 계산 0 · 개봉 0 · 봉인 무수정",
+   "event": "① 왜 이 블록인가 — Holm ⑧ RQ-int 는 외부 검토 회신 대기, 개봉은 별도 승인 대기로 둘 다 막혀 있어, 그 사이에 처리 가능한 미이행 2건을 문면 정정만으로 해소했다. ② A(약속 이행) — 2026-08-05 15:02:56 KST 발신 메시지 <GMAIL-MSGID> §③ 에서 영문본 M1b 서술을 고치며 국문 정본 docs/55b 도 함께 수정하겠다고 약속했으나 미이행이었다(timeline[32].run_facts.open_commitment, status=not_fulfilled_as_of_2026-08-06). docs/55b:48 이 M1 을 정의 없이 나열하고 M1b 를 '구조 + 비서열 표적 공변량 10차원' 으로 적어 B1(2차원)이 누락돼 nested 사다리가 깨져 보였다. 러너는 cowork 문장을 베끼지 않고 ladder_freeze.json 을 직접 읽어 M1=[B0,B1] dim 2050(B0 Morgan r=2 2048bit + B1 2차원: log1p(매핑 human 표적 수)에 fold-train 전용 StandardScaler, 매핑 mask 0/1), M1b=[B0,B1,B_m1b]=M1+10차원, M2b=M1b+64차원을 실측한 뒤 문면을 썼다. 세 번째 요소로 coverage 제외 사유를 병기했다 — OSF docs/30 §4 는 M1 을 'M0 + log(표적수) + missing/coverage' 로 적었으나 구현은 mask 만 쓰는 2차원이며, 매핑 약물의 coverage 평균이 상수 1.000(docs/31:141)이라 mask 와 중복이기 때문이고 이 사유는 ladder_freeze.json blocks_frozen.B1_count_mask.def 에 이미 동결돼 있었다. ③ 최소 치환의 증명 — 48~50행 한 곳만 치환했고, 앞 접두사(1~47행)·중간(착수본 51~52행)·뒤 접미사(착수본 53행~끝)가 착수본과 바이트 동일함을 확인한 뒤 원 불릿 3행을 되끼워 재조립한 결과가 착수본 sha256 과 완전 일치함으로써 구간 밖 변경 0 을 증명했다. 원 문면은 흔적 없이 덮이지 않았다 — 같은 절 하단 각주에 원 문구를 축자 인용해 보존했고 착수본 자체도 .pre_fix.bak 로 남겼다. docx 는 md_to_docx_min.py 로 재생성해 표 12개 전건 w:tbl · Heading 1/12/19 착수본 동일 · md↔docx 텍스트 완전 일치를 확인했다. ④ 정정판 ≠ 발송본 — docs/55b 는 2026-08-05 PDF 로 이미 발송됐으므로 검토자가 가진 판본과 정본이 달라졌다. 이 사실을 정정 각주·docs/33 항목41·본 entry 에 명시하고 재발송은 하지 않았다(사용자 판단 → open_questions). 같은 성격의 미해소 2건(발송 PDF 의 §11-4 기입란 누락 · 영문본 §④ 가 블록 Q 로 stale)은 범위 밖이며 후속 메일 1통으로 함께 처리하는 선택지가 있다. ⑤ B(개명) — A5 층 not_estimable 은 SAP A1 의 'BCa 실패 → CI 추정 불가' 예약어와 충돌하는데 실측상 이 층은 estimable: true · formal 로 정상 추정됐고 같은 공개 파일에 not_estimable_units: [] 가 공존한다. mechanism_target_unresolved 로 개명하되 매핑 파일 1개만 신설하고 _sealed/axes_result.json·axes_public.json·axes_assignment.csv 는 셋 다 무수정으로 두었다 — 층 구성원 변화 0 이라 재생성할 이유가 없고 재생성하면 ts_kst 로 해시만 흔들린다. no_mechanism(표적 없음, 347명)과 다른 뜻임을 이름과 문면 양쪽에 남겼고 SAP 쪽 정의는 그대로다. ⑥ 원인 귀속 — 잘못된 이름은 cowork 가 docs/81 지시서 Z-2 에서 지은 것이며 블록 Z 러너는 지시서대로 정확히 수행했다. docs/33 항목42 에 그렇게 적었다. ⑦ 층 구성원은 공개 CSV(axes_assignment.csv)만 판독해 24명을 재현했다 — 봉인은 해시 대조만 했고 Δ·AP·CI·p·부호는 한 건도 판독하지 않았으므로 확증 조회가 아니다(docs/45 §5 +0행).",
+   "artifacts": [
+    "docs/55b_rqint_external_statreview_package_v2.md (정정)",
+    "docs/55b_rqint_external_statreview_package_v2.docx (재생성)",
+    "docs/55b_rqint_external_statreview_package_v2.md.pre_fix.bak (착수본 보존)",
+    "docs/55b_rqint_external_statreview_package_v2.docx.pre_fix.bak (착수본 보존)",
+    "v3_Multimodal/config/a5_stratum_label_supersede.json (신규)",
+    "v3_Multimodal/src/record_block_AA.py (기록 스크립트)",
+    "docs/33 항목41·42",
+    "docs/45 §2 +1행",
+    "docs/82_docs55b_m1b_fix_and_a5_relabel_report.md"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "계산 0 · 모델 학습·추론 0 · Δ/AP/CI/p/부호 산출 0 · emit_sign 0 · decision.py 호출 0 · 개봉 0(unblinding_performed false 유지 · open_sealed 0 · 봉인 판독 0, 해시 대조만) · _sealed/ 쓰기·수정·삭제 0 · axes_public.json·axes_assignment.csv 수정 0 · docs/55(v1) md·docx 바이트 불변 · 네트워크 0 · data/raw/ 변경 0 · git commit·push 0 · sealed guard 275종(access.log 제외)/291종(포함) 착수=종료 불변.",
+   "run_facts": {
+    "fulfils": "docs/55b 국문 정본의 M1 정의 누락 및 M1b 서술 오류(B1 2차원 누락) 정정 — M1=[B0,B1] dim 2050 명시 · M1b='M1 + 10차원' · 등록 docs/30 §4 coverage 제외 사유 병기",
+    "fulfils_target": "ledger.timeline[32].run_facts.open_commitment[0]",
+    "promised_in": "2026-08-05 15:02:56 KST 발신 메시지 <GMAIL-MSGID> §③",
+    "fulfilled_at_kst": "2026-08-09 15:47:29 KST",
+    "docs55b_sha256_before": "83f896ea55a885ab310d3738c708b7395046d55e74a6f0540176f547a21bb599",
+    "docs55b_sha256_after": "21f71e0fbfa3c4d1c73adab53657a32be03a755a768666f0e7290b7afb9911a2",
+    "docs55b_docx_sha256_before": "b573b00ffeb7eee40936debfba69118ab3f9643213198b1ddaae4194a58b29a8",
+    "docs55b_docx_sha256_after": "74510e0f0bd9b5baa5749035ff7c2c4a8b6e9645bee148facbff1255b0cdfd90",
+    "still_not_resent_to_reviewer": true,
+    "sent_version_identifier": {
+     "sent_at_kst": "2026-08-05 15:02:56 KST (PDF) · 2026-08-05 15:19 KST (Word 재전송)",
+     "message_id": "<GMAIL-MSGID>",
+     "subject": "통계 검토 문서 수정하여 송부드립니다.",
+     "content_sha256": "83f896ea55a885ab310d3738c708b7395046d55e74a6f0540176f547a21bb599",
+     "note": "검토자 보유 판본에는 본 정정이 반영돼 있지 않다. 재발송 여부는 사용자 판단."
+    },
+    "supersede_convention": "timeline[32].run_facts.open_commitment 의 기존 status 문자열은 덮어쓰지 않았다(블록 T·U·X 계승). 해소 사실은 본 신규 entry 에만 적는다.",
+    "a5_relabel": {
+     "axis": "A5",
+     "old_label": "not_estimable",
+     "new_label": "mechanism_target_unresolved",
+     "mapping_file": "v3_Multimodal/config/a5_stratum_label_supersede.json",
+     "mapping_file_sha256": "ac187375d2a7c16e38d55f78eb3bd5511f668946a88a6e3e59eb1bc6d49219e4",
+     "membership_unchanged": true,
+     "n_drugs": 24,
+     "member_cids_sorted_sha256": "17148aa9166d415c4beba5ccdcc979aca89de25ef57b0d4d72fad585e9c5b696",
+     "artifacts_not_modified": {
+      "experiments/runs/v3_stratification_axes/_sealed/axes_result.json": "5c1aa8e24cd5ca9ca0c3a61049d22d01fb13a17fca7b3af3510f2bc01a3a009c",
+      "experiments/runs/v3_stratification_axes/axes_public.json": "a539c83d51a9bb920fefc22344e49cede6b9487de0b35ead490804cee0791031",
+      "experiments/runs/v3_stratification_axes/axes_assignment.csv": "2bae421f9e5fa863d5a8b6a0e66ddf0767a41bc277bbdb9632a14d3ee976f9a6"
+     },
+     "sap_not_estimable_definition_unchanged": true,
+     "defect_attribution": "cowork (docs/81 지시서 Z-2) — 블록 Z 러너는 지시서대로 수행"
+    },
+    "open_questions": [
+     "docs/55b 정정판을 외부 검토자께 재발송할 것인가 (정정판 ≠ 2026-08-05 발송본) — 사용자 판단",
+     "발송 PDF 의 §11-4 기입란 누락 대응 — 후속 메일 1통으로 함께 처리 가능",
+     "영문본 §④ '대표 fold·seed 미기록' 이 블록 Q(2026-08-05 16:51)로 stale 이 된 건 — 동상"
+    ],
+    "sealed_guard_n_files": {
+     "excluding_access_log": 275,
+     "including_access_log": 291
+    },
+    "recomputed_nothing": true,
+    "models_trained": 0,
+    "new_oof_generated": 0,
+    "open_sealed_calls": 0,
+    "emit_sign_called": false,
+    "decision_functions_called": [],
+    "multiplicity_applied": false,
+    "network_calls": 0,
+    "git_commit": false
+   },
+   "redaction_scope": "Δ·AP·CI·p·부호·λ 는 본 entry 와 모든 산출물에 한 글자도 기입하지 않았다. 본 블록은 봉인 수치를 판독하지 않았다."
+  },
+  {
+   "ts": "2026-08-14",
+   "ts_kst": "2026-08-14 13:53:25 KST",
+   "actor": "vscode-claude (지시서 docs/86 초판 + AB-5 · FACTS 출처 cowork Gmail 실측)",
+   "step": "블록 AB — RQ-int 외부 통계검토 회신 접수 기록(판정·조건 R1~R6·채택 결정 D1~D22). 기입 전용 · 계산 0 · 개봉 0 · 구현 0 · SAP 1.2 재동결 0 · 네트워크 0",
+   "event": "① 무엇을 접수했나 — <EXTERNAL-REVIEWER> Ph.D.(KAIST 정보통신공학 / Gyeongnam Intelligence Innovation Center) 의 2026-08-10 자 외부 통계검토 회신을 원장에 등재했다. 판정은 Approved with revisions(조건 R1~R6, 전부 봉인해제 이전 완료)이며, 러너는 cowork 요약을 베끼지 않고 회신 원본 docx 의 word/document.xml 을 직접 판독해 표지 표 6개 값을 축자 추출했다. 판별자 문자열 'reverts to the paired scaffold-cluster BCa interval' 존재를 착수 시 재확인했다. ② 날짜 불일치 1건 — 표지 표 Date of review = 2026-08-10, 부록 B = 2026-08-06 으로 다르다. 우리는 표지 기준 2026-08-10 을 채택해 서명 요청본에 기입하고 '08-06 이 맞으면 수정 요청' 문면을 함께 넣었으며, 두 리터럴을 date_discrepancy 로 모두 보존한다(임의 삭제 0). 부록 B 는 Affiliation 공란·서명/일자 미기입이라 signature_status = pending_as_of_2026-08-12. ③ 회신 §9-1(최우선)이 요구한 A6 코드 실물 확인을 러너가 독립 재실측했다 — signflip.py:76 의 양측 카운트에 np.abs(perm) 와 abs(delta_obs) 가 둘 다 존재함을 AST 로 증명했고, _EPS 실측값 1e-12 를 임계에서 빼는 방향이 카운트 증가 = p 증가 = 보수적임을 부등호(GtE)까지 확인했다. docs/55b:195 국문 정본도 |Δ*| ≥ |Δ_obs| 형태로 절댓값이 있다. 판정 = code_defect false · document_only true · scope english_recipient_copy_only 이며 이미 산출된 ②③⑤⑥⑦ 의 p-값은 영향 없다. signflip.py 는 0바이트 수정했다. ④ 절차 결정은 rqint_procedure_decisions_v0.json 에 기록했고 이 파일은 동결이 아니다(status = decisions_recorded_not_frozen · is_sap_freeze false · sap_version_at_record 1.1). D1~D22 22건 · R1~R6 6건. 실측 재확인 3건 = D10 scaffold group 732(확증 3반복 split_manifest 전건 일치) · D18 재현 명령이 [4, 1, 0] 재현 · D20 manifest model_family 문자열 14곳(횟수만 기록, 수정 0). ⑤ R5 는 cowork·회신서가 '§8 초안 이미 충족' 이라고 적었으나 러너 실측 결과 partial 이다 — §8 개정문 문면에 기지 부호 4건은 있으나 공개일자 2026-07-27 은 §2 본문에만 있고 §8 안에 없으며 노출 인원 수는 문서 어디에도 없다. SAP 1.2 개정문에 두 요소를 추가해야 R5 가 완결된다. ⑥ 확정 1건 = 예비 학습시드 [3, 4](gin_seed_freeze training_seeds_ordered 의 미사용 접미부를 기계적으로 취함 — 신규 추첨 0). stability_seeds 와 겹치는 점은 동일 난수 초기화값 사용일 뿐이라 수용하되 stability_analysis_is_independent_replication = false 를 함께 적었다. 확정 2건(Y1 '2개 이상 교체' 의 계수 단위 = 실패한 원 시드 수 · Y2 R1 실패 폴백은 판정하지 않고 슬롯 p=1.0)은 재문의 없이 우리 사전 명시로 종결했고, 근거와 사후선택이 아닌 이유(GIN 학습 0회 · R1 감사 0회 시점 기록)를 함께 기입했다. R1 이 실제 실패하면 폴백 적용 전 검토자 재자문 의무를 on_r1_failure_reconsult_reviewer 로 못박았다. ⑦ still_unspecified 는 5건으로 두었다 — Y1·Y2(우리 사전 명시로 종결) · B 값과 정의 · C0~C3 복제 수 · R3 제2자. B 와 C0~C3 두 건은 blocking 필드에 R1 감사 착수를 막는다고 적었다. ⑧ external_reviews 를 3 → 6 으로 보충했다 — round 4(docs/50)가 누락돼 있었고(러너 실측 확인), round 5(docs/88)와 <EXTERNAL-REVIEWER> 박사 entry 를 함께 append 했다. 기존 3항목은 객체 단위 무수정이며 type 소급 부여도 하지 않았다(신규 항목에만 type). 5차 회신은 접수·분류 사실만 기록하고 버킷 A 채택 확정은 SAP 1.2 동결 블록으로 미뤘다. 충돌 2건 처리 = X1 BCa 유효 replicate 임계 게이트 신설 안 함(A7 은 이미 동결·사용된 모듈) · X2 R1 실패 폴백은 <EXTERNAL-REVIEWER> §10 대로 후보 C 회귀. ⑨ sign_disclosure_matrix.json 의 decisions_after 를 2분할했다 — 원 문자열은 바이트 그대로 보존하고 경로 객체마다 decisions_after_enumerated 와 evidence_of_influence 두 키만 추가했다. 열거는 cowork 목록을 베끼지 않고 ledger timeline 과 docs/33 기입 시각 스탬프에서 기계 수집했으며 절단점은 경로별 노출 시각이다(advisor 경로는 노출 시각이 unknown 이라 절단점 없음 = 미판정, 반복1 public 경로는 미공개라 해당 없음). 판정('부호를 근거로 한 설계·성공기준 변경 0')은 바뀌지 않았고 바뀐 것은 그 판정을 뒷받침하는 서술의 정확성이다. 한정어 없는 맨 'none' 은 rows[0].disclosure_routes[1](public_repository_pushed) 1건뿐임을 실측했다. ⑩ 서신 기록 — 2026-08-12 스레드 <GMAIL-MSGID> 5건과 R3 상신 신규 스레드 <GMAIL-MSGID> 1건을 합쳐 correspondence 에 6건 append 했다(Gmail 재조회 0 · 네트워크 0). 확정 3건 = 정정 통지는 서명 요청 문서에 합침 · 국문 본문 그대로 제출 가능 · 회수 경로는 교수님 전달 → 서명 → 회신. forwarded_at(검토자 전달 시각)은 '전달 드리고' 라는 예정 표현뿐이라 unknown_as_of_2026-08-12 로 남겼다(추측 기입 0). ⑪ R3 제2자 상신은 2026-08-12 14:48:48 KST 에 실제 발송됐다(메시지 <GMAIL-MSGID>). 초판 지시서가 not_yet_escalated 로 적은 것은 11:05 발송본 기준으로는 정확했고 그 사실도 이력 레코드로 보존했다 — open_question.r3_second_party 는 이력·현행 2레코드이며 현행에 supersedes 포인터를 넣었다. 초안↔발송본 차이 6건은 전부 문면이고 실질 변경 0이라 escalation_substantively_complete = true 로 적었으나, 수행 주체 확정은 미완이므로 still_unspecified 에서 빼지 않았다(escalated true · resolved false). ⑫ 본 기입은 어떤 착수 허가도 아니다 — GIN 학습·RQ-int 구현 확정·SAP 1.2 재동결·B 확정·개봉은 전부 차단 유지이며 manifest.json 은 0바이트 수정(sap_version 1.1)이다.",
+   "artifacts": [
+    "v3_Multimodal/config/rqint_procedure_decisions_v0.json (신규 · 동결 아님)",
+    "experiments/provenance/sign_disclosure_matrix.json (decisions_after 2분할 · 원 문자열 보존)",
+    "experiments/provenance/ledger.json (external_reviews 3→6 · correspondence +6 · timeline +1)",
+    "v3_Multimodal/src/record_block_AB.py (기록 스크립트)",
+    "docs/33 항목45",
+    "docs/45 §2 +1행 · §5 문서 이력 +1",
+    "docs/85 §후속 메일 실제 발송 기록 append",
+    "docs/88 §7 재정정 블록인용 append",
+    "docs/86_rqint_reviewer_response_record_report.md"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "계산·재계산 0 · 모델 학습·추론 0 · Δ/AP/CI/p/부호 산출 0 · emit_sign 0 · decision.py 호출 0 · 개봉 0(unblinding_performed false 유지 · open_sealed 0 · 봉인 판독 0, stat-only 스냅샷 대조만) · _sealed/ 쓰기·수정 0 · RQ-int 구현 0(검정 함수·순열 루프·합성 데이터 생성기 신규 0) · SAP 1.2 재동결 0(manifest.json 0바이트 · sap_version 1.1) · signflip.py 0바이트 · model_family 문자열 정정 0(횟수만 기록) · GIN 착수 0 · Gmail 재조회 0(네트워크 0) · data/raw/ 변경 0 · git commit·push 0 · 기존 문면 삭제 0(전부 append 또는 superseding append) · sealed guard 275종(access.log 제외)/291종(포함) 착수=종료 불변.",
+   "run_facts": {
+    "external_reviewer_identity_resolved": {
+     "supersedes": [
+      "ledger.timeline[32].run_facts.unknown_as_of.external_reviewer_identity",
+      "ledger.timeline[35].run_facts.external_reviewer_identity"
+     ],
+     "superseded_value_verbatim": "unknown_as_of_2026-08-06",
+     "original_fields_modified_bytes": 0,
+     "reviewer": "<EXTERNAL-REVIEWER>, Ph.D.",
+     "degree_specialty": "Ph.D., Department of Information and Communications Engineering, KAIST — resampling-based inference, multiple testing, evaluation metrics for predictive models",
+     "affiliation": "Gyeongnam Intelligence Innovation Center (GIIC)",
+     "date_of_review": "2026-08-10",
+     "date_discrepancy_appendix_b": "2026-08-06",
+     "access_to_sealed": "none_declared",
+     "conflict_of_interest": "none_declared",
+     "determination": "approved_with_revisions",
+     "source_doc": "docs/RQint_Reviewer_Response_<EXTERNAL-REVIEWER>_20260810.docx",
+     "source_sha256": "0c29ddf201eb6751a47f420d0c405fdafd0a6baf0ae7705059b0a85fa296aa99",
+     "signature_status": "pending_as_of_2026-08-12",
+     "resolution_scope": "신원·소속·검토일·판정까지 해소한다. 서명 회수 사실과 서명일은 본 블록 범위 밖(서명본 접수는 블록 AH · docs/95)."
+    },
+    "forwarded_at": "unknown_as_of_2026-08-12",
+    "forwarded_at_reason": "2026-08-12 12:19:47 회신은 '전달 드리고 서명 받아서 회신 드릴께요' 라는 예정 표현이고 전달 완료 통보가 없다. 추측 기입 0.",
+    "open_question": {
+     "r3_second_party": [
+      {
+       "record": 1,
+       "state": "not_yet_escalated",
+       "as_of": "2026-08-12T11:05:01+09:00",
+       "reason": "R3 paragraph absent from sent message <GMAIL-MSGID> (draft/sent divergence)"
+      },
+      {
+       "record": 2,
+       "state": "escalated_awaiting_advisor_reply",
+       "escalated_at": "2026-08-12T14:48:48+09:00",
+       "message_id": "<GMAIL-MSGID>",
+       "thread_id": "<GMAIL-MSGID>",
+       "proposed_second_party": "<SECOND-PARTY>",
+       "approved": false,
+       "escalated": true,
+       "resolved": false,
+       "advisor_reply": "none_as_of_2026-08-12",
+       "draft_vs_sent_differences": 6,
+       "substantive_change": false,
+       "escalation_substantively_complete": true,
+       "supersedes": "ledger.timeline[42].run_facts.open_question.r3_second_party[0] (record 1, not_yet_escalated)"
+      }
+     ]
+    },
+    "reviewer_response_cover_verbatim": {
+     "reviewer": "<EXTERNAL-REVIEWER>, Ph.D.",
+     "degree_specialty": "Ph.D., Department of Information and Communications Engineering, KAIST — resampling-based inference, multiple testing, evaluation metrics for predictive models",
+     "affiliation": "Gyeongnam Intelligence Innovation Center (GIIC)",
+     "date_of_review": "2026-08-10",
+     "access_to_sealed": "None. §11.2의 results-blind 조건 하에 검토하였으며, 봉인된 효과크기 · p-값 · 신뢰구간 · 귀무분포 · 층별 결과를 요청하거나 열람한 사실이 없음",
+     "determination": "Approved with revisions (조건부 승인)"
+    },
+    "reviewer_response_appendix_b_verbatim": {
+     "reviewer_name": "<EXTERNAL-REVIEWER>",
+     "affiliation": "",
+     "date_of_review": "2026-08-06",
+     "determination": "Approved with revisions — conditional on requirements R1 through R6 (§6.2)"
+    },
+    "code_check_9_1": {
+     "requested_by": "회신 §9-1 (최우선) — 'A6 은 이미 동결되어 ②③⑤⑥⑦ 에 쓰이는 모듈이므로 코드 실물을 확인하라'",
+     "verified_independently_by_runner": true,
+     "file": "v3_Multimodal/src/sap/signflip.py",
+     "file_sha256": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+     "file_modified_bytes": 0,
+     "line": 76,
+     "source_verbatim": "count = int(np.sum(np.abs(perm) >= abs(delta_obs) - _EPS))",
+     "ast_calls": [
+      "int",
+      "sum",
+      "abs",
+      "abs"
+     ],
+     "np_abs_perm_present": true,
+     "abs_delta_obs_present": true,
+     "comparison_operator": "GtE",
+     "eps_measured": 1e-12,
+     "eps_direction": "카운트 임계에서 `- _EPS` 를 빼므로 `|Δ*| ≥ |Δ_obs| − ε` 가 되어 조건이 **더 쉽게** 참이 된다 → count 증가 → p = (1 + count)/(B + 1) **증가** → 보수적(anti-conservative 아님). 부등호(GtE)와 부호를 코드에서 직접 확인했다.",
+     "docs55b_line195_verbatim": "양측 p = `(1 + #{|Δ*| ≥ |Δ_obs|}) / (B + 1)`.",
+     "docs55b_abs_present": true,
+     "code_defect": false,
+     "document_only": true,
+     "scope": "english_recipient_copy_only",
+     "already_computed_pvalues_affected": "없음 — ②③⑤⑥⑦ 에 쓰인 p-값은 위 코드경로(절댓값 양측)로 산출됐으므로 영향 0.",
+     "note": "본 블록은 signflip.py 를 0바이트 수정했고 확인만 했다."
+    },
+    "d10_n_scaffold_groups": 732,
+    "d18_reproduce_stdout": "[4, 1, 0]",
+    "d20_model_family_occurrences": 14,
+    "r5_status_measured": "partial",
+    "decisions_file": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+    "decisions_file_sha256": "951b302a2d474361feb51ef785fd7c0fb016027cd8d8e319f6c4018d36ef3626",
+    "decisions_file_is_sap_freeze": false,
+    "external_reviews_count": {
+     "before": 3,
+     "after": 6
+    },
+    "correspondence_count": {
+     "before": 11,
+     "after": 17,
+     "appended": 6
+    },
+    "confirmed_1": {
+     "reserve_seeds": [
+      3,
+      4
+     ]
+    },
+    "pre_specified_readings_2": [
+     "y1_replacement_count_unit",
+     "y2_r1_failure_fallback_decision_rule"
+    ],
+    "still_unspecified_5": [
+     "y1_replacement_count_unit",
+     "y2_r1_failure_fallback_decision_rule",
+     "b_monte_carlo_sample_size_and_definition",
+     "c0_c3_replicates",
+     "r3_second_party"
+    ],
+    "cowork_facts_defects": [
+     "docs/86 §1 은 docs/33 마지막 항목을 42(다음 43)로 적었으나 실측 마지막은 44 이다(블록 AC 항목43 · 블록 AD 항목44 가 그 뒤에 추가됨). 중단 조건 규정대로 중단하지 않고 실측값 45 으로 진행했다.",
+     "docs/86 종료검증 #6 은 `external_reviews` 3→6, #11d 는 3→5 로 서로 다르다. cowork 배너 자기고지대로 정본 = #6 의 6(기존 3 + round 4 보충 + round 5 + <EXTERNAL-REVIEWER> 박사)이며 #11d 의 5 는 AB-2-6 구간 부분합이다. 러너는 6 을 기준으로 검증했다."
+    ],
+    "sealed_guard_n_files": {
+     "excluding_access_log": 275,
+     "including_access_log": 291
+    },
+    "sealed_stat_snapshot_sha256": "1adfc0822c13ec1caead60e77f648894cda5204ca9884058734c19b0fe323d93",
+    "sap_version": "1.1",
+    "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "gin_start_still_blocked": true,
+    "unblinding_performed": false,
+    "recomputed_nothing": true,
+    "models_trained": 0,
+    "new_oof_generated": 0,
+    "open_sealed_calls": 0,
+    "emit_sign_called": false,
+    "decision_functions_called": [],
+    "multiplicity_applied": false,
+    "network_calls": 0,
+    "git_commit": false
+   },
+   "redaction_scope": "Δ·AP·CI·p·부호·λ 는 본 entry 와 본 블록의 모든 신규 산출물에 한 글자도 기입하지 않았다. 본 블록은 봉인 수치를 판독하지 않았다."
+  },
+  {
+   "ts": "2026-08-14",
+   "ts_kst": "2026-08-14 14:51:14 KST",
+   "recorded_at": "2026-08-14 14:51:14 KST",
+   "event_at": "2026-08-12 16:11:03 KST",
+   "backfill": true,
+   "actor": "vscode-claude (블록 AH 보충 append · 출처 = docs/89 리포트 실측만)",
+   "step": "블록 AC — RQ-int 검정 구현 + R6 검증 (합성 전용 · 동결 아님). timeline 전용 entry 누락분 보충",
+   "event": "① 왜 보충하나 — 블록 AC 는 docs/33 항목43 과 docs/45 §2·§5 에는 기록됐으나 ledger.timeline 에 전용 entry 가 없었다(timeline[42] 의 cowork_facts_defects 서술 안에만 문자열로 존재). 블록 AB 러너 상신 ②를 수용해 본 블록에서 append 한다. ② 소급 기입 금지 — event_at 은 docs/89 리포트가 적은 실측 수행 시각이고 recorded_at 은 본 블록의 기입 시각이다(블록 S 선례). ③ 내용(docs/89 리포트 실측만, cowork 요약 미사용) — docs/55b §5 후보 B sharp null 로 RQ-int 검정을 구현하고 R6-1~R6-9 를 9/9 PASS 로 검증했다. 신설 4파일 = v3_Multimodal/src/sap/rqint.py · rqint_synthetic.py · rqint_audit.py · v3_Multimodal/src/run_rqint_audit.py 이며 동결 11모듈과 manifest 는 0바이트 수정, MODULE_FILES 등재도 하지 않았다. 산출 = experiments/rqint/audit_r6.json · run.log. 입력은 합성 fixture 뿐이고 확증 데이터 접근 0 · 개봉 0 · 동결 0 · GIN 착수 0 이다.",
+   "artifacts": [
+    "v3_Multimodal/src/sap/rqint.py (sha256 eb842bc98140e9c5…)",
+    "v3_Multimodal/src/sap/rqint_synthetic.py (sha256 27ef0011ee041920…)",
+    "v3_Multimodal/src/sap/rqint_audit.py (sha256 ddffe6d128de4d18…)",
+    "v3_Multimodal/src/run_rqint_audit.py (sha256 ab831c2726a36e8a…)",
+    "experiments/rqint/audit_r6.json (sha16 921e16ea8191bc9b)",
+    "experiments/rqint/run.log (sha16 43f395828040f2b5)",
+    "docs/33 항목43 · docs/89_rqint_implementation_r6_report.md"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 entry 는 사실의 사후 기록이며 새 판단·새 계산을 포함하지 않는다. 출처는 docs/89 리포트 실측값뿐이고, 러너는 블록 AC 를 재실행하지 않았다(계산 0).",
+   "run_facts": {
+    "backfilled_by": "블록 AH — docs/95 AH-5 ★",
+    "reason": "ledger.timeline 에 블록 AC 전용 entry 부재(블록 AB 러너 상신 ② · cowork 독립 확인)",
+    "source_of_truth": "docs/89_rqint_implementation_r6_report.md",
+    "r6_pass": "9/9",
+    "sap_version_at_event": "1.1",
+    "manifest_sha16_at_event": "756d485feb4715e9",
+    "sealed_guard_at_event": "275종(access.log 제외) / 291종(포함) 착수=종료 동일",
+    "unblinding_performed": false,
+    "gin_start_still_blocked": true
+   },
+   "redaction_scope": "합성 fixture 값만 — 확증 Δ·AP·CI·p·부호 0"
+  },
+  {
+   "ts": "2026-08-14",
+   "ts_kst": "2026-08-14 14:51:14 KST",
+   "recorded_at": "2026-08-14 14:51:14 KST",
+   "event_at": "2026-08-12 20:59:49 KST",
+   "backfill": true,
+   "actor": "vscode-claude (블록 AH 보충 append · 출처 = docs/90 리포트 실측만)",
+   "step": "블록 AD — RQ-int 계측 및 C0~C4 예산 확정 (계측 전용 · 판정 0). timeline 전용 entry 누락분 보충",
+   "event": "① 왜 보충하나 — 블록 AD 도 docs/33 항목44 와 docs/45 §2·§5 에만 있고 ledger.timeline 에 전용 entry 가 없었다. 블록 AB 러너 상신 ②를 수용해 append 한다. ② 소급 기입 금지 — event_at 은 docs/90 리포트 실측 시각, recorded_at 은 본 블록 기입 시각이다. ③ 내용(docs/90 리포트 실측만) — RQ-int 단가·병렬·축소 프로파일을 계측하고 C0~C4 예산을 확정했다. 신설 2파일 = v3_Multimodal/src/rqint_timing.py · rqint_reduced_fixture.py (전부 sap/ 밖 — sap/ 내 신규·수정 0건). 산출 = experiments/rqint/timing.json · profile_match.json · weak_null_scaled.json · budget.json. 입력은 실제 라벨행렬·실제 scaffold 군집구조(docs/84 §2 R1 이 result-independent 설계량으로 명시 허용)와 합성 예측행렬뿐이며 확증 예측·OOF 로드 0 · 1종오류·검정력 판정 0 · B 확정 0 이다.",
+   "artifacts": [
+    "v3_Multimodal/src/rqint_timing.py",
+    "v3_Multimodal/src/rqint_reduced_fixture.py",
+    "experiments/rqint/timing.json (sha16 85c222e8f50ec290)",
+    "experiments/rqint/profile_match.json (sha16 17098c5286be4a54)",
+    "experiments/rqint/weak_null_scaled.json (sha16 f5946db74fdd1554)",
+    "experiments/rqint/budget.json (sha16 51867bfd1fc6a3f6)",
+    "docs/33 항목44 · docs/90_rqint_timing_calibration_budget_report.md"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 entry 는 사실의 사후 기록이며 새 판단·새 계산을 포함하지 않는다. 출처는 docs/90 리포트 실측값뿐이고, 러너는 블록 AD 를 재실행하지 않았다(계측 0).",
+   "run_facts": {
+    "backfilled_by": "블록 AH — docs/95 AH-5 ★",
+    "reason": "ledger.timeline 에 블록 AD 전용 entry 부재(블록 AB 러너 상신 ② · cowork 독립 확인)",
+    "source_of_truth": "docs/90_rqint_timing_calibration_budget_report.md",
+    "sap_version_at_event": "1.1",
+    "manifest_sha16_at_event": "756d485feb4715e9",
+    "sealed_guard_at_event": "275종(access.log 제외) / 291종(포함) 착수=종료 동일",
+    "b_value_frozen": false,
+    "unblinding_performed": false,
+    "gin_start_still_blocked": true
+   },
+   "redaction_scope": "합성 예측 위의 값만 — 확증 Δ·AP·CI·p·부호 0"
+  },
+  {
+   "ts": "2026-08-14",
+   "ts_kst": "2026-08-14 14:51:14 KST",
+   "recorded_at": "2026-08-14 14:51:14 KST",
+   "event_at": "2026-08-13 15:31:31 KST (서명본 수령) / 2026-08-12 (서명일)",
+   "actor": "vscode-claude (지시서 docs/95 · FACTS 출처 cowork + 러너 Gmail get_thread 실측)",
+   "step": "블록 AH — 검토자 서명본 접수 기록 · 신원 확정 해소 · amendment 빈칸 값 확정. 기입 전용 · 계산 0 · 개봉 0 · SAP 1.2 동결 0 · GIN 착수 0 · commit/push 0",
+   "event": "① 무엇을 접수했나 — 2026-08-13 15:31:31 KST 교수님 경유로 <EXTERNAL-REVIEWER> 박사 서명본을 수령했다(Gmail 메시지 <GMAIL-MSGID> · 스레드 <GMAIL-MSGID> · 본문 축자 「연우씨. 연구원 서명 받은 파일 송부 드립니다.」). 파일 = docs/RQint_Reviewer_Record_Signature_20260812_SIGNED.pdf (sha256 161dd9d2290df32b…, 146,939 B). 우리 회신은 <GMAIL-MSGID>(2026-08-14 12:58:46 KST). ② 서명 실측(러너 독립 재확인) — 2쪽 '서명 / Signature' 란에 PDF 이미지 XObject 206×97 · DeviceRGB + SMask(= RGBA) 가 존재하고 발송본(.docx)의 내장 이미지는 0장, 발송 전 PDF 의 이미지도 0장이다. 서명 일자 축자 = 2026-08-12. 발송본(.docx) ↔ 서명본 본문은 공백 제거 후 접미 1,111자가 일치해 §3 참고 3건·§4 향후절차가 무수정 = 검토자 이의 0건임을 확인했다. ③ 신원 해소의 귀속 — external_reviewer_identity: unknown_as_of_2026-08-06 의 해소는 블록 AB 가 timeline[42].run_facts.external_reviewer_identity_resolved 로 이미 수행했다(신원·소속·검토일·판정). 본 블록은 멱등 규약대로 그 위에 서명 사실만 얹으며 external_reviews 항목 추가 0 · 기존 객체 수정 0 이다. AB 가 남긴 signature_status = pending_as_of_2026-08-12 를 본 entry 가 superseding append 로 해소한다. 원 문자열 unknown_as_of_2026-08-06 두 곳(timeline[32]·[35])은 바이트 보존한다. ④ amendment 빈칸 값 확정(문면 동결 아님) — [DATE]=2026-08-10 · [NAME]=<EXTERNAL-REVIEWER> · [DEGREE]=Ph.D. · [AFFILIATION]=Gyeongnam Intelligence Innovation Center (GIIC). [DATE] 는 승인일(Date of review)이며 서명일 2026-08-12 가 아니다 — 회신 원본이 표지 08-10 / 부록 B 08-06 으로 달라 우리가 표지 기준 08-10 으로 통일하고 '08-06이 맞다면 수정해 달라'고 명시했는데 서명본에서 수정되지 않았다. 두 리터럴을 모두 보존한다. 신규 파일 v3_Multimodal/config/reviewer_identity_resolved.json 은 freeze_status = values_confirmed_not_frozen · frozen_by = pending_R2_SAP_1_2 이며 SAP 등재 모듈이 아니다. ⑤ 문면 차이 3건 귀속 — SIGNED 와 발송 전 PDF 사이의 텍스트 차이 3건(영문 부제 삭제 · '저희가 기입'→'기입' · '일자만'→'일자를')은 연구자 본인이 발송 전에 편집한 것이고 .docx 가 이미 편집 후 상태다. 러너가 word/document.xml 로 독립 재확인했다(영문 부제 부재 · '일자를 채워' 존재). 따라서 발송본과 서명본의 본문은 동일하고 정정 대상 기록은 없다. ⑥ 조회 규약 확립 — search_threads 의 메시지 목록은 전수가 아닐 수 있다(같은 스레드를 search 는 5건, get_thread 는 7건 반환 — 러너 재실측으로 7건 확인). 앞으로 Gmail 실측은 스레드 ID 확보 후 get_thread 로 재확인한 값만 원장에 넣는다. ⑦ 블록 AC·AD timeline entry 보충 2건을 함께 append 했다(소급 날짜 0 — recorded_at/event_at 분리).",
+   "artifacts": [
+    "docs/RQint_Reviewer_Record_Signature_20260812_SIGNED.pdf (sha256 161dd9d2290df32b…, 회신 서명본)",
+    "v3_Multimodal/config/reviewer_identity_resolved.json (신규 · 동결 아님)",
+    "docs/33 항목46",
+    "docs/45 §2 타임라인 +1행 · §5 문서 이력 +1",
+    "docs/86 말미 배너 append (초판 바이트 접두사 보존)",
+    "docs/95_reviewer_signature_receipt_report.md"
+   ],
+   "confirmatory_lookup": "N",
+   "integrity_note": "본 기록은 접수·확정 기록이며 어떤 착수 허가도 아니다. SAP 1.2 재동결 · amendment 문면 동결 · R1 캘리브레이션 감사 · R3 이행 · GIN 착수 · 개봉은 전부 차단 유지다.",
+   "run_facts": {
+    "external_reviewer_signature_confirmed": {
+     "supersedes": [
+      "ledger.timeline[32].run_facts.unknown_as_of.external_reviewer_identity",
+      "ledger.timeline[35].run_facts.external_reviewer_identity",
+      "ledger.timeline[42].run_facts.external_reviewer_identity_resolved.signature_status"
+     ],
+     "superseded_values_verbatim": {
+      "timeline[32]/[35]": "unknown_as_of_2026-08-06",
+      "timeline[42].signature_status": "pending_as_of_2026-08-12"
+     },
+     "original_fields_modified_bytes": 0,
+     "signature_status": "signed_received_2026-08-13",
+     "reviewer_name": "<EXTERNAL-REVIEWER> (<EXTERNAL-REVIEWER>)",
+     "degree": "Ph.D.",
+     "degree_field": "Department of Information and Communications Engineering, KAIST",
+     "specialty": "resampling-based inference, multiple testing, evaluation metrics for predictive models",
+     "affiliation": "Gyeongnam Intelligence Innovation Center (GIIC)",
+     "date_of_review": "2026-08-10",
+     "signature_date": "2026-08-12",
+     "access_to_sealed_results": "None",
+     "conflict_of_interest": "None declared",
+     "determination": "Approved with revisions (conditional on R1–R6)",
+     "signature_evidence": {
+      "file": "docs/RQint_Reviewer_Record_Signature_20260812_SIGNED.pdf",
+      "sha256": "161dd9d2290df32befed6ca9e028799f60a4cab3a84598db22728a7d8678ea3f",
+      "size_bytes": 146939,
+      "signature_image": {
+       "page": 2,
+       "field": "서명 / Signature",
+       "width": 206,
+       "height": 97,
+       "channels": "RGBA (DeviceRGB XObject + SMask DeviceGray)",
+       "embedded_stream_bytes": {
+        "rgb_flate": 3526,
+        "smask_flate": 2176
+       },
+       "cowork_reported_png_bytes": 7156,
+       "runner_note": "206×97 · RGBA 는 러너가 PDF XObject 사전(/Width 206 /Height 97 /ColorSpace/DeviceRGB /SMask)에서 직접 재확인했다. cowork 가 보고한 PNG 7,156 B 는 재인코딩 산물이라 인코더 의존적이며 러너 재인코딩은 5,514 B(zlib level 6)/5,305 B(level 9) 였다 — 바이트 수는 독립 재현 불가로 남기고 화소 규격·알파 존재만 PASS 로 판정한다."
+      },
+      "sender_copy_images": {
+       "docx_media_count": 0,
+       "presend_pdf_image_count": 0
+      },
+      "signature_date_literal_source": "SIGNED.pdf 2쪽 '일자 / Date' 란 축자 = 2026-08-12",
+      "body_identity": {
+       "method": "공백 제거 정규화 후 발송본(.docx) ↔ 서명본(SIGNED.pdf) 접미 비교",
+       "matched_suffix_chars": 1111,
+       "undecoded_chars_excluded": 115,
+       "conclusion": "§3 참고 3건·§4 향후절차 무수정 = 검토자 이의 0건"
+      }
+     },
+     "received_at": "2026-08-13 15:31:31 KST (2026-08-13T06:31:31Z)",
+     "received_via": "email_via_advisor",
+     "received_message_id": "<GMAIL-MSGID>",
+     "identity_resolution_already_done_by": "블록 AB — ledger.timeline[42].run_facts.external_reviewer_identity_resolved (신원·소속·검토일·판정). AH 는 서명 사실만 얹는다(멱등).",
+     "date_of_review_vs_signature_date": "date_of_review 2026-08-10 = amendment [DATE]. signature_date 2026-08-12 는 별개이며 [DATE] 에 넣지 않는다.",
+     "self_pointer": "ledger.timeline[45].run_facts.external_reviewer_signature_confirmed"
+    },
+    "idempotency_measured_live": {
+     "external_reviews_len": 6,
+     "external_reviews_<EXTERNAL-REVIEWER>_index": [
+      5
+     ],
+     "external_reviews_appended_by_AH": 0,
+     "identity_supersede_already_present": true,
+     "correspondence_appended_by_AH": 2,
+     "note": "docs/95 §머리말이 지정한 AB→AH 정상 순서대로 AB(2026-08-14 13:53)가 먼저 수행됐다. AH-4 배너의 멱등 분기를 적용해 중복 기입 0."
+    },
+    "gmail_lookup_protocol_established": {
+     "finding": "search_threads 의 메시지 목록은 전수가 아닐 수 있다",
+     "measurement": "같은 스레드 <GMAIL-MSGID> — search 5건 vs get_thread 7건(러너 재실측 7건)",
+     "rule": "스레드 ID 확보 후 get_thread 로 재확인한 값만 원장에 기입",
+     "runner_calls": "get_thread 1회(읽기 전용) · 첨부 재다운로드 0 · 발신 0 · 수정 0"
+    },
+    "amendment_blanks": {
+     "[DATE]": "2026-08-10",
+     "[NAME]": "<EXTERNAL-REVIEWER>",
+     "[DEGREE]": "Ph.D.",
+     "[AFFILIATION]": "Gyeongnam Intelligence Innovation Center (GIIC)",
+     "freeze_status": "values_confirmed_not_frozen",
+     "frozen_by": "pending_R2_SAP_1_2"
+    },
+    "sap_state": {
+     "sap_version": "1.1",
+     "manifest_sha16": "756d485feb4715e9",
+     "manifest_modified_bytes": 0,
+     "modules_modified_bytes": 0,
+     "is_sap_freeze": false
+    },
+    "unblinding_performed": false,
+    "gin_start_still_blocked": true,
+    "emit_sign_calls": 0,
+    "open_sealed_calls": 0,
+    "not_performed": "계산 0 · 재계산 0 · 모델 학습 0 · 모델 추론 0 · 새 추정 0 · Δ·AP·CI·p·부호 산출 0 · emit_sign 0 · decision.py 호출 0 · 개봉 0(unblinding_performed false) · open_sealed 0건 · _sealed/ 읽기·쓰기 0(stat-only 스냅샷 275종(access.log 제외)/291종(포함) 착수=종료 동일) · SAP 1.2 재동결 0(sap_version 1.1 · manifest sha16 756d485feb4715e9 불변 · 11모듈 0바이트) · amendment 문면 동결 0 · external_reviews 항목 추가 0 · B 확정 0 · GIN 착수 0(gin_start_still_blocked true 유지) · R1 감사 0 · R3 이행 0 · git commit·push 0",
+    "runner_deviations": [
+     {
+      "id": "AH-DEV-1",
+      "item": "docs/86 배너 위치 — AH-4 는 '맨 위', §7-8 은 '초판 바이트 접두사 동일'",
+      "resolution": "두 요구가 동시에 성립할 수 없어(맨 위 삽입은 접두사를 깨뜨린다) 기계 검증 가능한 §7-8(접두사 보존)을 택해 파일 말미에 append 했다. AB 는 2026-08-14 13:53 에 이미 수행됐으므로 '맨 위' 의 가시성 목적은 소멸했고, 배너는 사후 기록으로만 기능한다. 블록 V(docs/72 말미 append 배너) 선례와 동일하다."
+     },
+     {
+      "id": "AH-DEV-2",
+      "item": "timeline 최종 길이 — AH-5 는 '+1', §7-10b 는 '43→45(AC·AD 2건)'",
+      "resolution": "AH 자신의 entry 1건 + AC·AD 보충 2건 = 43→46 이 두 지시를 모두 만족한다. §7-10b 의 45 는 AH 자신의 entry 를 세지 않은 부분합이다. 어느 쪽도 생략하지 않았다."
+     },
+     {
+      "id": "AH-DEV-3",
+      "item": "§7-14 '네트워크 0' vs §1-1 ★ 'get_thread 로 재확인한 값만 기입'",
+      "resolution": "지시서 §1-1 이 요구한 FACTS 1-1 재확인을 위해 Gmail get_thread 를 1회 호출했다(읽기 전용). 파일 재다운로드 0 · 발신 0 · 라벨/삭제 등 변경 0 · 그 외 네트워크 0. '네트워크 0' 은 첨부 재다운로드 금지(AH-1)를 뜻하는 것으로 읽었고, 호출 사실을 여기에 남긴다."
+     },
+     {
+      "id": "AH-DEV-4",
+      "item": "서명 이미지 7,156 B 독립 재현 불가",
+      "resolution": "206×97 · RGBA(SMask 존재)는 PDF XObject 사전에서 직접 확인해 PASS. 바이트 수는 PNG 재인코딩 산물이라 인코더 의존적이며(러너 재인코딩 5,514 B / 5,305 B) 값을 맞추지 않고 미검증으로 남긴다."
+     }
+    ]
+   },
+   "redaction_scope": "서신·문서 메타데이터와 파일 해시만 — 확증 지표·Δ·CI·p·부호 0"
+  },
+  {
+   "ts": "2026-08-14",
+   "ts_kst": "2026-08-14 15:12:46 KST",
+   "recorded_at": "2026-08-14 15:12:46 KST",
+   "event_at": "2026-08-12 18:34:47 KST (교수님 승인) / 2026-08-14 14:26:28 KST (제2자 요청 발송) / 2026-08-14 15:10~15:12 KST (프로브 실행·동결)",
+   "actor": "vscode-claude (지시서 docs/91 · FACTS 출처 cowork + 러너 Gmail get_thread 실측 · 파일 해시 실측)",
+   "step": "블록 AG — R3 제2자 독립 재실행 **준비**(기입 + 패키지 생성 전용). ★ R3 이행 아님 · R3 판정 0 · 계산은 프로브 1회(합성 전용 7.8초)뿐 · 개봉 0 · SAP 1.2 재동결 0 · GIN 착수 0 · commit/push 0",
+   "event": "① 제2자 확정 — 2026-08-12 18:34:47 KST 교수님 승인(Gmail <GMAIL-MSGID> · 축자 「네 <SECOND-PARTY>씨에게 부탁해서 처리하시죠.」)으로 R3 제2자 = <SECOND-PARTY> 확정. ★ 승인 범위는 **수행 주체뿐**이며 합격기준·게이트·비교객체·패키지 구성·일정은 우리 내선 결정이다. 2026-08-14 14:26:28 KST 실제 요청 발송(<GMAIL-MSGID> · 신규 스레드 <GMAIL-MSGID> · 첨부 없음). 발송본은 초안(docs/92) 대비 7건 차이가 있고 그중 실질 삭제 1건이 「더 적절한 분이 계시면 말씀해 달라」는 **철회 여지 문장**이다 → 제2자는 <SECOND-PARTY>으로 사실상 확정 요청된 상태이고 교체가 필요해지면 교수님 재상신 경로만 남는다. ② R3 합격기준 **사전 명시** — 트리거 사건(제2자 산출물 회수)이 **아직 발생하지 않은** 시점에 2단 판정을 동결했다. 1차 = numeric_core sha256 바이트 동일 → 충족. 2차 = 게이트 **G-ENV**(python_version·numpy·sklearn·machine·BLAS 중 1개 이상 상이로 환경 상이 입증) 통과 시에만 발동하며, 판정 불리언·이산량·문자열은 완전일치, 연속량은 상대오차 1e-9 이하. 환경이 전부 동일한데 산출이 다르면 2차 금지 → 즉시 중단·재자문(동일 환경 불일치는 코드 비결정성이며 허용오차로 덮을 사안이 아니다). 2차도 실패하면 **R3 미충족 확정** + 교수님·<EXTERNAL-REVIEWER> 박사께 보고, 임의 3차 기준 금지. 신규 파일 v3_Multimodal/config/r3_second_party_freeze.json(sha256 0624d3ddb852c4e9… · **SAP 등재 아님** · manifest.json 0바이트). ③ 비교객체 numeric_core 사전 고정 — 제외 **규칙 6항 / 구체 pointer 8개**(/run_at_kst · /wall_clock_seconds · /timing 단가 2필드 · /versions · 서술문자열 /_doc·/block·/instruction · 확장 슬롯 비움). 정규화 직렬화는 json.dumps(obj, sort_keys=True, ensure_ascii=False, separators=(\",\", \":\")).encode(\"utf-8\") 축자 고정이며 구현(canonical.py)을 패키지에 동봉해 제2자가 같은 방식으로 산출하게 한다. ④ 프로브 패키지 생성 — experiments/rqint/r3_package/ (19파일 · zip sha256 fcbcaeea6c6158de…). 입력 100% 합성(sap.rqint_synthetic 기존 생성기 재사용 · 재구현 0 · 새 시드 추첨 0). 규모 N=60·K=8·G=12·n_coin_vectors=64, 우리 Mac 벽시계 **7.8초**(예산 60초, 축소 불필요). R6 부분집합 6항(R6-1·2·5·6·7·9) 전항 PASS이며 R6-3·R6-4·R6-8 은 축소 규모에서 native 합격기준이 성립하지 않아 제외하고 R3 본 드라이런에서 전항 실행한다. ★ **기대 해시 미동봉**(패키지 내 0건) — 제2자 산출값을 회수한 뒤 우리가 대조한다. 우리 프로브 산출물은 패키지 밖 r3_package_meta/ 에 둔다. ⑤ 환경 명세 회수기 — collect_env.py 는 hostname 원문을 저장하지 않고 sha256 앞 12자리(host_id)만 쓰며 절대경로를 <path-redacted> 로 치환한다(docs/56 PII 규칙). 우리 기준 명세 = r3_package_meta/env_local.json(host_id 89be108a4c00 · Python 3.14.4 · numpy 2.5.0 · sklearn 1.9.0 · scipy 1.18.0 · macOS-26.5.2-arm64 · cpu 18) — **패키지에는 넣지 않는다**(제2자가 우리 값에 맞출 이유를 만들지 않기 위함). ⑥ ★ **R3 는 여전히 미이행**이다. 프로브는 플랫폼 적합성 확인 전용이며 R3 판정에 사용하지 않는다. 본 패키지 발송 시점은 R2(SAP 1.2 재동결) 완료 이후다. 순서 = R1 감사 → 전규모 드라이런 → R2 → R3 본 드라이런 → GIN 착수.",
+   "artifacts": [
+    "v3_Multimodal/config/r3_second_party_freeze.json (신규 · sha256 0624d3ddb852c4e9… · SAP 등재 아님)",
+    "experiments/rqint/r3_package/ (19파일) · experiments/rqint/r3_package.zip (sha256 fcbcaeea6c6158de…)",
+    "experiments/rqint/r3_package_meta/{probe_result_local.json, probe_numeric_core_local.sha256, probe_run_local.log, env_local.json, package_manifest.json}",
+    "docs/91_r3_second_party_prep_prompt_for_vscode.md (지시서) · docs/91_r3_second_party_prep_report.md (리포트)",
+    "docs/96_<SECOND-PARTY>_mail_r3_SEND_20260814.md (발송 실측 대장) · docs/33 항목47·48"
+   ],
+   "run_facts": {
+    "r3_verdict_rendered": false,
+    "r3_status": "not_executed",
+    "probe_used_for_r3_verdict": false,
+    "probe_wall_clock_seconds": 7.8,
+    "probe_numeric_core_deterministic_across_two_local_runs": true,
+    "acceptance_criteria_frozen_before_trigger_event": true,
+    "trigger_event_occurred_at_freeze": false,
+    "second_party": "<SECOND-PARTY>",
+    "approval_scope": "수행 주체만",
+    "confirmatory_data_accessed": false,
+    "synthetic_only": true,
+    "unblinding_performed": false,
+    "gin_start_still_blocked": true,
+    "sap_version": "1.1",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_modules_modified": 0,
+    "sealed_stat_snapshot": "291종(전 파일) / 275종(access.log 제외) — 착수=종료 diff 무출력",
+    "network": "Gmail get_thread 읽기 전용 2회(스레드 <GMAIL-MSGID> · <GMAIL-MSGID>). 그 외 0.",
+    "git_commit_push": 0
+   }
+  },
+  {
+   "ts": "2026-08-22",
+   "ts_kst": "2026-08-22 11:56:58 KST",
+   "recorded_at": "2026-08-22 11:56:58 KST",
+   "event_at": "2026-08-22T01:42:52+09:00 (단가 계측 착수) / 2026-08-22T02:03:15+09:00 (결정적 드라이런 착수) / 2026-08-22 11:56:58 KST (기입)",
+   "actor": "vscode-claude (지시서 docs/97 · FACTS 14행 러너 실측 · 파일 해시 실측)",
+   "step": "블록 AI — 전규모 합성 드라이런 벽시계 계측 → `B` 후보 산출(계측 전용). ★ `B` 동결 0(문면 확정은 R2 의 일) · SAP 1.2 재동결 0 · 개봉 0 · GIN 착수 0 · commit/push 0",
+   "event": "① 순서 정정 — `docs/84` §5 는 ⑥ = 전규모 드라이런 벽시계 → `B` 확정, ⑦ = R2(SAP 1.2 재동결)이고 R2 의 동결 대상에 축자로 `B` 가 포함된다. `sap/rqint.py` 의 `B_DEFINITION_STATUS` 는 `still_unspecified` 이므로 ⑥ 을 건너뛰면 R2 가 빈칸을 동결한다 → 본 블록을 R2 앞에 수행했다. `docs/94` report2 §7-2(다음 관문 = R2)는 이로써 정정되고, §7-3(큐 잔여 86·95·91)은 셋 다 2026-08-14 완료라 stale 이다. 두 리포트 문면은 무수정. ② 두 해석 — `pair_complement=True` 로 참조분포 = 2 × `n_coin_vectors` 이므로 (가) `B`=동전 수 → 100,000 동전, (나) `B`=참조분포 크기 → 50,000 동전으로 비용이 정확히 2배 차이난다. `rqint_test` 는 직렬 루프라 워커 수로 나눠지지 않는다(F-SERIAL). ③ 사전명시 동결 — `v3_Multimodal/config/b_dryrun_prespec.json`(sha256 9a2545eb0d897f304f23350e1363415bc9642a7895fca87b8306f1eadcfa7939, 동결 2026-08-22T00:56:14+09:00, SAP 등재 아님)에 수렴 논증·결정적 구성(동전 50,000)·외삽 허용 밴드 [18h,30h]·`threads_limit` 1 고정 이유·시드 파생·**전건 붕괴 시 처리**를 어떤 측정도 보기 전에 고정했다. 동결 시각 < 첫 측정 시각. ④ 단가 계측(단독 실행·동시 워커 0·AC 전원·`caffeinate -dimsu`·효과 주입 0·전규모 fixture N1,092·K370·G732·새 fixture 생성 0) — 계단 3점 n_coin {200,500,1000}, 선형성 상대 산포 0.031628 (≤0.10 통과), û = 0.694588 s/동전 (주루프 0.693028 s), F-C4UNIT 1.506339 s(18워커 경합 상한)의 0.461배 · 블록 AD F_UNIT_FULL 0.716650 s 의 0.969배. ⑤ ★ 수렴 논증의 전건 붕괴 — 실측 û 로 (가) 100,000 동전 추정 벽시계는 19.487 h 로 사전명시 밴드 [18,30] h 안이라 외삽 판정이 금지된다. 즉 '(가) > 24h' 는 미확정이다. 사전명시 처리대로 ⓐ 사실 기록 ⓑ 결정적 드라이런은 예정대로 수행 ⓒ (가) 판정은 상신(100,000 실주행은 본 블록 예산 밖 · 자체 구제 0 · 구성 변경 0). 블록 AD 의 '드라이런 100,000 = 3.88 h' 추정은 18워커 처리량(F_THRU_FULL)을 쓴 값이라 직렬 함수에는 적용되지 않으며 본 계측이 이를 대체한다. ⑥ 결정적 드라이런 실측 — 동전 50,000 · pair_complement true · threads_limit 1 · 단독 · AC · 24h 하드 캡: 총 벽시계 9.8848 h, 캡 도달 false, 실현 참조분포 100000 (= 2 × 50000), 여집합 항등식 감사 1000 draw 실패 0 (max_abs_dev 0.0, tol 1e-12), complement_identity_used true, RAM peak 0.461 GiB (게이트 30.72 GiB, 브리치 0). → D15 판정: 동전 50,000 구성은 24h 이내. ⑦ D15 후단 이행 — T_obs 0.00318021, p 0.672623, SE_MC = sqrt(p(1−p)/n_permutation_values) = 0.00148392 (식 축자). ★ 이 p 는 100% 합성 예측 위의 값이라 확증 결과가 아니며 어떤 가설 판정에도 쓰지 않는다. ⑧ R2 에 넘길 `B` 후보 — (나) 해석이면 B = 100,000(참조분포) = 동전 50,000 이고 실측 9.88 h < 24 h 라 D15 하향 미발동. (가) 해석은 동전 100,000 이 필요하며 본 실측 파생 2배 외삽 ≈ 19.58 h 이나 밴드 안이라 외삽 판정 금지 → 미확정·상신. 검토자 §9-2 함의 단가 1.08 s/동전은 검토자가 B 를 동전 수로 상정했음을 시사하나 해석 확정은 R2 의 일이다. **동결·확정 선언 0건.** ⑨ cowork 판정 3건 수용 — ⓐ AF-DEV-1(A12 적응적 중지 미이행)은 검토자 미상신(사용자 결정 2026-08-18, 근거 = R1 판정 무영향 + 초과 수행). ⓑ `docs/33` 항목48 ⑨ 의 AF 진도는 stale, 정본은 항목49 ②(중단 4건 1,440·1,512·215·1,569, 최종 완주 2026-08-18 11:55:10) — 항목48 문면 무수정, supersede 포인터만 추가. ⓒ `docs/94` report2 §7-2·§7-3 정정(문면 무수정, 기록은 `docs/33` 항목50 과 `docs/97` 리포트 §5). ⑩ 무결성 착수=종료 불변 — SAP 11모듈 0바이트, manifest sha16 756d485feb4715e9, sap_version 1.1, 블록 AC 4파일 + AD 2파일 0바이트, `sap/rqint.py` sha256 착수=종료 동일(B_DEFINITION_STATUS 무수정), `_sealed/` guard 275/291 및 stat-only 스냅샷 sha256 완전 동일, HEAD 566f487 · 커밋 21 불변. ⑪ 시드 신규 추첨 0 — probe 파생 규약 계승(계단 850260813~815, 결정적 860260813), 확증 시드 공간 8개 및 블록 AF rep_seed 13,200개와 교집합 0(동전 시드 포함). ⑫ 본 entry 는 어떤 착수 허가도 아니다 — `B` 동결 0, SAP 1.2 재동결 0, 개봉 0(unblinding_performed false · open_sealed 0 · emit_sign 0 · decision.py 호출 0), 확증 예측·OOF 로드 0(confirmatory_predictions_loaded false), GIN 착수 0(gin_start_still_blocked true), 네트워크 0, data/raw/ 변경 0, git commit·push 0.",
+   "artifacts": {
+    "prompt": "docs/97_b_definition_dryrun_prompt_for_vscode.md",
+    "report": "docs/97_b_definition_dryrun_report.md",
+    "prespec": "v3_Multimodal/config/b_dryrun_prespec.json (sha256 9a2545eb0d897f304f23350e1363415bc9642a7895fca87b8306f1eadcfa7939)",
+    "runner": "v3_Multimodal/src/b_dryrun.py",
+    "outputs": [
+     "experiments/rqint/b_dryrun/stair.json",
+     "experiments/rqint/b_dryrun/decisive.json",
+     "experiments/rqint/b_dryrun/facts.json",
+     "experiments/rqint/b_dryrun/verify.json",
+     "experiments/rqint/b_dryrun/integrity.json",
+     "experiments/rqint/b_dryrun/decisive_heartbeat.jsonl"
+    ],
+    "deviation_log": "docs/33 항목50"
+   },
+   "first_look": "N"
+  }
+ ],
+ "authoritative_sources": [
+  "docs/33 (append-only 이탈기록)",
+  "docs/29 §20 (change-history mirror)",
+  "docs/30 (OSF 동결 사전등록, osf.io/5w2uv)",
+  "experiments/sap/manifest.json",
+  "experiments/audits/*.json (하드닝)",
+  "v3_Multimodal/config/ladder_freeze.json",
+  "docs/64 (GIN seed·대표 outer unit 트리아지·확정값, 블록 Q 근거)",
+  "docs/66 (GIN inner-validation 설계 근거·실측·확정값, 블록 R 근거)",
+  "docs/69 (ChatGPT 자문 4버킷 트리아지, 블록 S 근거)",
+  "docs/70 (교수님 회신 초안 v2 §1 확정 통보 9건, 블록 S 근거)",
+  "docs/72 (교수님 회신 v2 발송본 — 제목 축자 '승인 요청 3건', 본문 승인 요청 2건)",
+  "docs/77 (교수님 승인 기록 2026-08-06 — A5 재조회 승인 · 개봉 승인자 확정 · 검토자 전달 통보)",
+  "docs/60 (Holm ⑥ tuned-RF baseline 지시서 개정판 v2, 블록 O 근거)",
+  "docs/77 (교수님 승인·무이의 기록, 블록 O 착수 게이트 근거)",
+  "docs/61 (Holm ⑦ late-fusion 지시서 개정판 v2.1, 블록 P 근거)",
+  "docs/78 (개봉 전 점검 지시서 — 봉인 완전성 점검·부호 인지 기록표 규격, 블록 X 근거)",
+  "docs/80 (A5 작용기전 표적 1회 재조회 지시서 — 캐시 구축·봉인 규격, 블록 Y 근거)",
+  "docs/81 (등록 §11 세 번째 축 A3·A4·A5·A6 층화 지시서 — 블록 Z 근거)",
+  "docs/82 (문면 정정 2건 지시서 — docs/55b M1/M1b 정정 + A5 층 개명, 블록 AA 근거)",
+  "docs/84 (RQ-int 외부 통계검토 회신 → SAP 1.2 개정 대응표, 블록 AB 근거)",
+  "docs/86 (RQ-int 회신 접수 기록 지시서 — 초판 + AB-5, 블록 AB 근거)",
+  "docs/95 (검토자 서명본 접수·신원 확정·amendment 빈칸 값 확정 지시서, 블록 AH 근거)",
+  "docs/91 (R3 제2자 독립 재실행 준비 — 수행 주체 확정·합격기준 사전명시·프로브 패키지 지시서, 블록 AG 근거)",
+  "docs/96 (R3 제2자 협조 요청 실제 발송본 고정 기록 — Gmail 실측, 블록 AG AG-1 근거)",
+  "docs/97 (전규모 합성 드라이런 벽시계 계측 → `B` 후보 확정 지시서 — 블록 AI 근거 · 실행순서 ⑥, R2 선행)"
+ ]
+}

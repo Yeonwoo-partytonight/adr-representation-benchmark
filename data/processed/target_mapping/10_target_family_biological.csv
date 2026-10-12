@@ -1,0 +1,1206 @@
+uniprot,target_chembl_id,family_id,family_name,family_source,level,missing_flag
+B2RXH2,CHEMBL1293226,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+O00206,CHEMBL5255,CHEMBL_CLASS:649,Toll-like and Il-1 receptors,chembl_class,2,0
+O00238,CHEMBL5476,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O00255,CHEMBL1615381,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+O00264,CHEMBL4105706,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+O00329,CHEMBL3130,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+O00408,CHEMBL2652,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+O00444,CHEMBL3788,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O00481,CHEMBL4105758,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+O00506,CHEMBL5552,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O00519,CHEMBL2243,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+O00571,CHEMBL5553,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+O00748,CHEMBL3180,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+O00750,CHEMBL5554,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+O00764,CHEMBL1075181,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+O14578,CHEMBL5579,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O14649,CHEMBL2321613,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+O14684,CHEMBL5658,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+O14727,CHEMBL1795093,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+O14730,CHEMBL5659,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O14733,CHEMBL3530,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O14746,CHEMBL2916,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+O14757,CHEMBL4630,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O14842,CHEMBL4422,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+O14920,CHEMBL1991,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O14936,CHEMBL1908381,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+O14939,CHEMBL2734,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+O14965,CHEMBL4722,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O14976,CHEMBL4355,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O14980,CHEMBL5661,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+O15054,CHEMBL1938211,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+O15056,CHEMBL4523129,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+O15075,CHEMBL5683,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O15111,CHEMBL3476,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O15118,CHEMBL1293277,CHEMBL_CLASS:1006,Transporter,chembl_class,1,0
+O15146,CHEMBL5684,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O15197,CHEMBL5836,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+O15244,CHEMBL1743122,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+O15245,CHEMBL5685,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+O15254,CHEMBL4105817,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+O15264,CHEMBL2939,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O15357,CHEMBL2331064,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+O15379,CHEMBL1829,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+O15393,CHEMBL1795140,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+O15438,CHEMBL5918,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+O15439,CHEMBL1743128,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+O15440,CHEMBL2046258,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+O15530,CHEMBL2534,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O15550,CHEMBL2069164,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+O15554,CHEMBL4305,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+O43151,CHEMBL4879414,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+O43174,CHEMBL5141,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+O43193,CHEMBL2203,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+O43283,CHEMBL1163124,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O43293,CHEMBL2468,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O43318,CHEMBL5776,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O43353,CHEMBL5014,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O43451,CHEMBL2074,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+O43497,CHEMBL4641,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+O43570,CHEMBL3242,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+O43613,CHEMBL5113,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+O43614,CHEMBL4792,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+O43683,CHEMBL1772932,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O43781,CHEMBL4575,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O43924,CHEMBL3860,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+O60218,CHEMBL5983,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+O60285,CHEMBL5784,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O60331,CHEMBL1908383,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+O60341,CHEMBL6136,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+O60566,CHEMBL4295998,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+O60656,CHEMBL1743319,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+O60658,CHEMBL4640,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+O60674,CHEMBL2971,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O60885,CHEMBL1163125,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+O60911,CHEMBL3272,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+O75116,CHEMBL2973,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O75151,CHEMBL4295672,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+O75164,CHEMBL5896,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+O75164,CHEMBL5896,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+O75365,CHEMBL4162,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+O75385,CHEMBL6006,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O75460,CHEMBL1163101,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+O75469,CHEMBL3401,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+O75475,CHEMBL3988590,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+O75493,CHEMBL2420,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+O75496,CHEMBL1293278,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+O75530,CHEMBL2189117,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+O75582,CHEMBL4237,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O75604,CHEMBL1293227,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+O75643,CHEMBL4105972,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+O75676,CHEMBL3125,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O75688,CHEMBL2845,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+O75716,CHEMBL3938,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O75747,CHEMBL1163120,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+O75751,CHEMBL2073673,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+O75762,CHEMBL6007,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+O75874,CHEMBL2007625,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+O75914,CHEMBL2999,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O76039,CHEMBL1163112,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O76074,CHEMBL1827,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+O76083,CHEMBL3535,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+O94759,CHEMBL1250402,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+O94760,CHEMBL6036,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+O94768,CHEMBL3980,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O94782,CHEMBL1795087,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+O94804,CHEMBL3981,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O94806,CHEMBL2595,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O94921,CHEMBL6162,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O94956,CHEMBL1743124,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+O95069,CHEMBL2321615,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+O95136,CHEMBL2955,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+O95180,CHEMBL1859,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+O95271,CHEMBL6164,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+O95342,CHEMBL6020,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+O95347,CHEMBL4105890,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+O95382,CHEMBL1163123,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O95470,CHEMBL3286061,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+O95718,CHEMBL3751,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+O95747,CHEMBL1163104,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O95749,CHEMBL4769,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+O95819,CHEMBL6166,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O95835,CHEMBL6167,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O95838,CHEMBL5844,CHEMBL_CLASS:1021,Family B G protein-coupled receptor,chembl_class,2,0
+O95977,CHEMBL3230,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+O96013,CHEMBL4482,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O96017,CHEMBL2527,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+O96028,CHEMBL3108645,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+P00338,CHEMBL4835,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P00352,CHEMBL3577,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P00374,CHEMBL202,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P00390,CHEMBL2755,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P00403,CHEMBL6174,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+P00491,CHEMBL4338,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P00519,CHEMBL1862,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P00533,CHEMBL203,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P00734,CHEMBL204,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P00742,CHEMBL244,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P00747,CHEMBL1801,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P00749,CHEMBL3286,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P00750,CHEMBL1873,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P00797,CHEMBL286,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P00813,CHEMBL1910,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P00915,CHEMBL261,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+P00918,CHEMBL205,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+P01031,CHEMBL2364163,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P01112,CHEMBL2167,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+P01116,CHEMBL2189121,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P01375,CHEMBL1825,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P01584,CHEMBL1909490,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P02545,CHEMBL1293235,CHEMBL_CLASS:4,Structural protein,chembl_class,1,0
+P02545,CHEMBL1293235,CHEMBL_CLASS:5,Other nuclear protein,chembl_class,1,0
+P02708,CHEMBL4808,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P02766,CHEMBL3194,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P02768,CHEMBL3253,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P02774,CHEMBL2259,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P03372,CHEMBL206,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P03956,CHEMBL332,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P04035,CHEMBL402,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P04049,CHEMBL1906,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P04062,CHEMBL2179,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P04150,CHEMBL2034,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P04156,CHEMBL4869,CHEMBL_CLASS:9,Surface antigen,chembl_class,1,0
+P04183,CHEMBL2883,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P04271,CHEMBL4300,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+P04278,CHEMBL3305,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P04626,CHEMBL1824,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P04629,CHEMBL2815,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P04637,CHEMBL4096,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+P04818,CHEMBL1952,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P04839,CHEMBL1287627,CHEMBL_CLASS:797,Transmembrane 1-electron transfer carriers,chembl_class,2,0
+P05023,CHEMBL1807,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+P05023,CHEMBL1807,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P05067,CHEMBL2487,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+P05093,CHEMBL3522,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P05108,CHEMBL2033,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P05113,CHEMBL1169600,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P05129,CHEMBL2938,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P05141,CHEMBL3709670,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P05164,CHEMBL2439,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P05177,CHEMBL3356,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P05231,CHEMBL1795129,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P05362,CHEMBL3070,CHEMBL_CLASS:2,Adhesion,chembl_class,1,0
+P05771,CHEMBL3045,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P05981,CHEMBL2079849,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P06213,CHEMBL1981,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P06239,CHEMBL258,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P06241,CHEMBL1841,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P06276,CHEMBL1914,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P06280,CHEMBL2524,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P06401,CHEMBL208,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P06493,CHEMBL308,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P06730,CHEMBL4848,CHEMBL_CLASS:5,Other nuclear protein,chembl_class,1,0
+P06746,CHEMBL2392,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P06865,CHEMBL1250415,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P07101,CHEMBL1969,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P07202,CHEMBL1839,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P07288,CHEMBL2099,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P07332,CHEMBL5455,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P07333,CHEMBL1844,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P07339,CHEMBL2581,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P07437,CHEMBL5444,CHEMBL_CLASS:4,Structural protein,chembl_class,1,0
+P07451,CHEMBL2885,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+P07550,CHEMBL210,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P07686,CHEMBL5877,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P07711,CHEMBL3837,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P07858,CHEMBL4072,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P07900,CHEMBL3880,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+P07947,CHEMBL2073,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P07948,CHEMBL3905,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P07949,CHEMBL2041,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P08069,CHEMBL1957,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P08134,CHEMBL5465545,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P08172,CHEMBL211,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P08173,CHEMBL1821,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P08183,CHEMBL4302,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+P08185,CHEMBL2421,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P08235,CHEMBL1994,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P08246,CHEMBL248,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P08253,CHEMBL333,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P08263,CHEMBL3409,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P08311,CHEMBL4071,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P08574,CHEMBL4105975,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P08581,CHEMBL3717,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P08588,CHEMBL213,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P08631,CHEMBL3234,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P08684,CHEMBL340,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P08686,CHEMBL2759,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P08842,CHEMBL3559,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P08908,CHEMBL214,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P08912,CHEMBL2035,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P08913,CHEMBL1867,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P08922,CHEMBL5568,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P09086,CHEMBL3509582,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+P09211,CHEMBL3902,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P09429,CHEMBL2311236,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P09619,CHEMBL1913,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P09769,CHEMBL4454,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P09848,CHEMBL1075131,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P09874,CHEMBL3105,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P09884,CHEMBL1828,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P09917,CHEMBL215,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P09960,CHEMBL4618,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P0C1S8,CHEMBL5095,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P0C264,CHEMBL5116,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P0DJD9,CHEMBL3295,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P0DMS8,CHEMBL256,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P0DP23,CHEMBL6093,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P10145,CHEMBL2157,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P10253,CHEMBL2608,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P10275,CHEMBL1871,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P10276,CHEMBL2055,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P10398,CHEMBL1169596,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P10415,CHEMBL4860,CHEMBL_CLASS:670,Other ion channel,chembl_class,2,0
+P10619,CHEMBL6115,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P10632,CHEMBL3721,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P10635,CHEMBL289,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P10636,CHEMBL1293224,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+P10721,CHEMBL1936,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P10826,CHEMBL2008,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P10827,CHEMBL1860,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P10828,CHEMBL1947,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P11229,CHEMBL216,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P11274,CHEMBL5146,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P11274,CHEMBL5146,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+P11309,CHEMBL2147,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P11362,CHEMBL3650,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P11387,CHEMBL1781,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+P11388,CHEMBL1806,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+P11473,CHEMBL1977,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P11474,CHEMBL3429,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P11509,CHEMBL5282,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P11511,CHEMBL1978,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P11712,CHEMBL3397,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P11802,CHEMBL331,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P11940,CHEMBL1293286,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P12004,CHEMBL2346488,CHEMBL_CLASS:5,Other nuclear protein,chembl_class,1,0
+P12104,CHEMBL4879,CHEMBL_CLASS:830,Fatty acid binding protein family,chembl_class,2,0
+P12236,CHEMBL4105854,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P12268,CHEMBL2002,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P12821,CHEMBL1808,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P12931,CHEMBL267,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P12955,CHEMBL4185,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P13569,CHEMBL4051,CHEMBL_CLASS:670,Other ion channel,chembl_class,2,0
+P13631,CHEMBL2003,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P13866,CHEMBL4979,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P13945,CHEMBL246,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P14060,CHEMBL1958,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P14091,CHEMBL3092,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P14207,CHEMBL5064,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+P14324,CHEMBL1782,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P14410,CHEMBL2748,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P14416,CHEMBL217,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P14555,CHEMBL3474,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P14616,CHEMBL5483,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P14618,CHEMBL1075189,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P14735,CHEMBL1293287,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P14780,CHEMBL321,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P14859,CHEMBL3509601,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+P14867,CHEMBL1962,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P14902,CHEMBL4685,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P14920,CHEMBL5485,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P15056,CHEMBL5145,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P15104,CHEMBL4612,CHEMBL_CLASS:645,Ligase,chembl_class,2,0
+P15121,CHEMBL1900,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P15328,CHEMBL2121,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+P15428,CHEMBL1293255,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P15538,CHEMBL1908,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P15692,CHEMBL1783,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P15735,CHEMBL2349,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P16050,CHEMBL2903,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P16083,CHEMBL3959,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P16234,CHEMBL2007,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P16278,CHEMBL2522,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P16473,CHEMBL1963,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P16499,CHEMBL3878,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+P16591,CHEMBL3982,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P16662,CHEMBL4370,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P17174,CHEMBL2189139,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P17252,CHEMBL299,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P17405,CHEMBL2760,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+P17516,CHEMBL4999,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P17538,CHEMBL4796,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P17612,CHEMBL4101,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P17752,CHEMBL5689,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P17948,CHEMBL1868,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P18031,CHEMBL335,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+P18054,CHEMBL3687,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P18074,CHEMBL4105743,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P18089,CHEMBL1942,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P18405,CHEMBL1787,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P18825,CHEMBL1916,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P19099,CHEMBL2722,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P19174,CHEMBL3964,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P19224,CHEMBL1743316,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P19440,CHEMBL5696,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P19525,CHEMBL5785,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P19634,CHEMBL2781,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P19784,CHEMBL4070,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P19793,CHEMBL2061,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P19801,CHEMBL2118,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P19838,CHEMBL3251,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+P19838,CHEMBL3251,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+P20292,CHEMBL4550,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+P20309,CHEMBL245,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P20618,CHEMBL4208,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P20701,CHEMBL1803,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+P20701,CHEMBL1803,CHEMBL_CLASS:2,Adhesion,chembl_class,1,0
+P20813,CHEMBL4729,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P20815,CHEMBL3019,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P20839,CHEMBL1822,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P21127,CHEMBL5808,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P21397,CHEMBL1951,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P21452,CHEMBL2327,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P21453,CHEMBL4333,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P21462,CHEMBL3359,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P21554,CHEMBL218,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P21589,CHEMBL5957,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+P21673,CHEMBL4286,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P21709,CHEMBL5810,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P21728,CHEMBL2056,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P21730,CHEMBL2373,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P21731,CHEMBL2069,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P21802,CHEMBL4142,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P21860,CHEMBL5838,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P21917,CHEMBL219,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P21918,CHEMBL1850,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P21964,CHEMBL2023,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P22001,CHEMBL4633,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+P22079,CHEMBL5898,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P22102,CHEMBL3972,CHEMBL_CLASS:645,Ligase,chembl_class,2,0
+P22234,CHEMBL5922,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P22303,CHEMBL220,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P22309,CHEMBL1287617,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P22310,CHEMBL3619,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P22455,CHEMBL3973,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P22460,CHEMBL4306,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+P22607,CHEMBL2742,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P22612,CHEMBL2743,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P22694,CHEMBL2918,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P22736,CHEMBL1293229,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P22748,CHEMBL3729,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+P22760,CHEMBL3509584,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P22830,CHEMBL3879831,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+P23219,CHEMBL221,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P23280,CHEMBL3025,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+P23284,CHEMBL2075,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+P23415,CHEMBL5845,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P23443,CHEMBL4501,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P23458,CHEMBL2835,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P23946,CHEMBL4068,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P23975,CHEMBL222,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P24046,CHEMBL3561,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P24530,CHEMBL1785,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P24557,CHEMBL1835,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P24723,CHEMBL3616,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P24752,CHEMBL2616,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P24941,CHEMBL301,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P25021,CHEMBL1941,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P25024,CHEMBL4029,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P25089,CHEMBL5646,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P25090,CHEMBL4227,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P25092,CHEMBL1795197,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+P25098,CHEMBL4079,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P25100,CHEMBL223,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P25101,CHEMBL252,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P25103,CHEMBL249,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P25105,CHEMBL250,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P25116,CHEMBL3974,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P25774,CHEMBL2954,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P25929,CHEMBL4777,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P26358,CHEMBL1993,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+P27338,CHEMBL2039,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P27361,CHEMBL3385,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P27448,CHEMBL5600,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P27482,CHEMBL5169127,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P27487,CHEMBL284,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P27695,CHEMBL5619,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P27815,CHEMBL254,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+P28062,CHEMBL5620,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P28065,CHEMBL1944495,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P28072,CHEMBL1944496,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P28074,CHEMBL4662,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P28221,CHEMBL1983,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P28222,CHEMBL1898,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P28223,CHEMBL224,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P28300,CHEMBL2249,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P28335,CHEMBL225,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P28472,CHEMBL1847,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P28482,CHEMBL4040,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P28566,CHEMBL2182,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P28702,CHEMBL1870,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P28845,CHEMBL4235,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P29274,CHEMBL251,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P29275,CHEMBL255,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P29317,CHEMBL2068,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P29320,CHEMBL4954,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P29322,CHEMBL4134,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P29323,CHEMBL3290,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P29371,CHEMBL4429,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P29375,CHEMBL2424504,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+P29375,CHEMBL2424504,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+P29376,CHEMBL5627,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P29466,CHEMBL4801,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P29475,CHEMBL3568,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P29597,CHEMBL3553,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P30043,CHEMBL5019,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P30086,CHEMBL4105856,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P30291,CHEMBL5491,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P30304,CHEMBL3775,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+P30405,CHEMBL3325306,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+P30411,CHEMBL3157,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P30518,CHEMBL1790,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P30530,CHEMBL4895,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P30531,CHEMBL1903,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P30536,CHEMBL5742,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+P30542,CHEMBL226,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P30556,CHEMBL227,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P30559,CHEMBL2049,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P30872,CHEMBL1917,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P30874,CHEMBL1804,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P30939,CHEMBL1805,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P30968,CHEMBL1855,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P30988,CHEMBL1832,CHEMBL_CLASS:1021,Family B G protein-coupled receptor,chembl_class,2,0
+P30989,CHEMBL4123,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P31040,CHEMBL5758,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P31152,CHEMBL5759,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P31213,CHEMBL1856,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P31327,CHEMBL2362990,CHEMBL_CLASS:645,Ligase,chembl_class,2,0
+P31391,CHEMBL1853,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P31639,CHEMBL3884,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P31644,CHEMBL5112,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P31645,CHEMBL228,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P31749,CHEMBL4282,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P31751,CHEMBL2431,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P31939,CHEMBL2518,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P32238,CHEMBL1901,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P32239,CHEMBL298,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P32245,CHEMBL259,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P32246,CHEMBL2413,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P32247,CHEMBL4080,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P32249,CHEMBL3259470,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P32297,CHEMBL3068,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P32298,CHEMBL5861,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P32745,CHEMBL2028,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P32754,CHEMBL1861,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P33032,CHEMBL4608,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P33261,CHEMBL3622,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+P33527,CHEMBL3004,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+P33981,CHEMBL3983,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P34896,CHEMBL1772927,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P34897,CHEMBL4295747,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P34903,CHEMBL3026,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P34913,CHEMBL2409,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P34947,CHEMBL5678,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P34969,CHEMBL3155,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P34972,CHEMBL253,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P34995,CHEMBL1811,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P35218,CHEMBL4789,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+P35346,CHEMBL1792,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P35348,CHEMBL229,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P35354,CHEMBL230,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P35367,CHEMBL231,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P35368,CHEMBL232,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P35372,CHEMBL233,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P35398,CHEMBL5868,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P35408,CHEMBL1836,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P35414,CHEMBL1628481,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P35462,CHEMBL234,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P35499,CHEMBL2072,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+P35573,CHEMBL5272,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P35590,CHEMBL5274,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P35610,CHEMBL2782,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P35869,CHEMBL3201,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+P35916,CHEMBL1955,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P35968,CHEMBL279,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P36507,CHEMBL2964,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P36544,CHEMBL2492,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P36639,CHEMBL3708265,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P36776,CHEMBL4879436,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P36873,CHEMBL4438,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+P36888,CHEMBL1974,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P36894,CHEMBL5275,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P36896,CHEMBL5310,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P36897,CHEMBL4439,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P37023,CHEMBL5311,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P37088,CHEMBL1791,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P37173,CHEMBL4267,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P37231,CHEMBL235,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P37268,CHEMBL3338,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P37288,CHEMBL1889,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P37840,CHEMBL6152,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P38398,CHEMBL5990,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P40225,CHEMBL1293256,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P40238,CHEMBL1864,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+P40306,CHEMBL3317334,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P40763,CHEMBL4026,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+P40925,CHEMBL3560,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P40926,CHEMBL5917,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P41143,CHEMBL236,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P41145,CHEMBL237,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P41180,CHEMBL1878,CHEMBL_CLASS:1022,Family C G protein-coupled receptor,chembl_class,2,0
+P41212,CHEMBL2401606,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+P41229,CHEMBL2163176,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+P41229,CHEMBL2163176,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+P41240,CHEMBL2634,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P41252,CHEMBL3235,CHEMBL_CLASS:645,Ligase,chembl_class,2,0
+P41440,CHEMBL4833,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P41595,CHEMBL1833,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P41597,CHEMBL4015,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P41968,CHEMBL4644,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P42226,CHEMBL5401,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+P42261,CHEMBL2009,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P42263,CHEMBL3595,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P42330,CHEMBL4681,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P42336,CHEMBL4005,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P42338,CHEMBL3145,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P42345,CHEMBL2842,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P42679,CHEMBL4175,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P42680,CHEMBL4246,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P42681,CHEMBL4367,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P42684,CHEMBL4014,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P42685,CHEMBL4223,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P42858,CHEMBL5514,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P43088,CHEMBL1987,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P43115,CHEMBL3710,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P43116,CHEMBL1881,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P43119,CHEMBL1995,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P43166,CHEMBL2326,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+P43220,CHEMBL1784,CHEMBL_CLASS:1021,Family B G protein-coupled receptor,chembl_class,2,0
+P43235,CHEMBL268,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P43250,CHEMBL6144,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P43351,CHEMBL2362978,CHEMBL_CLASS:5,Other nuclear protein,chembl_class,1,0
+P43354,CHEMBL5002,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P43403,CHEMBL2803,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P43405,CHEMBL2599,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P43681,CHEMBL1882,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P45983,CHEMBL2276,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P45984,CHEMBL4179,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P45985,CHEMBL2897,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P46063,CHEMBL1293236,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P46098,CHEMBL1899,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P46663,CHEMBL4308,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P46721,CHEMBL1743123,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P46734,CHEMBL2109,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P47712,CHEMBL3816,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P47869,CHEMBL4956,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P47898,CHEMBL3426,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P47901,CHEMBL1921,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P47989,CHEMBL1929,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P48039,CHEMBL1945,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P48061,CHEMBL3286074,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P48169,CHEMBL2472,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P48307,CHEMBL6066240,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P48426,CHEMBL1795194,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P48443,CHEMBL2004,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P48729,CHEMBL2793,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P48730,CHEMBL2828,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P48735,CHEMBL3991501,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P48736,CHEMBL3267,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P48764,CHEMBL3273,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P49019,CHEMBL4421,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P49137,CHEMBL2208,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P49146,CHEMBL4018,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P49238,CHEMBL4843,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P49286,CHEMBL1946,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P49327,CHEMBL4158,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P49336,CHEMBL5719,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P49366,CHEMBL4415,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P49411,CHEMBL4105970,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P49585,CHEMBL4105855,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P49589,CHEMBL4105937,CHEMBL_CLASS:645,Ligase,chembl_class,2,0
+P49674,CHEMBL4937,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P49721,CHEMBL3492,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P49759,CHEMBL4224,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P49760,CHEMBL4225,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P49761,CHEMBL4226,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P49840,CHEMBL2850,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P49841,CHEMBL262,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P49895,CHEMBL2019,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P50052,CHEMBL4607,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P50225,CHEMBL1743291,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P50406,CHEMBL3371,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P50613,CHEMBL3055,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P50750,CHEMBL3116,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P51151,CHEMBL1293294,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+P51160,CHEMBL3977,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+P51449,CHEMBL1741186,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P51451,CHEMBL2250,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P51589,CHEMBL3491,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P51617,CHEMBL3357,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P51679,CHEMBL2414,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P51681,CHEMBL274,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P51685,CHEMBL4596,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P51788,CHEMBL1628478,CHEMBL_CLASS:670,Other ion channel,chembl_class,2,0
+P51812,CHEMBL2345,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P51813,CHEMBL3834,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P51817,CHEMBL5818,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P51843,CHEMBL1795094,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P51955,CHEMBL3835,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P51956,CHEMBL5679,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P51957,CHEMBL5819,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P52333,CHEMBL2148,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P52564,CHEMBL2171,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P52895,CHEMBL5847,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+P53041,CHEMBL3425389,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+P53350,CHEMBL3024,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P53355,CHEMBL2558,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P53396,CHEMBL3720,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P53634,CHEMBL2252,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P53667,CHEMBL3836,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P53671,CHEMBL5932,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P53778,CHEMBL4674,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P53779,CHEMBL2637,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P54132,CHEMBL1293237,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P54289,CHEMBL1919,CHEMBL_CLASS:834,Calcium channel auxiliary subunit alpha2delta family,chembl_class,2,0
+P54577,CHEMBL3179,CHEMBL_CLASS:645,Ligase,chembl_class,2,0
+P54619,CHEMBL2393,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P54646,CHEMBL2116,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P54750,CHEMBL3421,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+P54753,CHEMBL4901,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P54756,CHEMBL3987,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P54760,CHEMBL5147,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P54762,CHEMBL5072,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P54764,CHEMBL3988,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P55011,CHEMBL1615383,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P55017,CHEMBL1876,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+P55055,CHEMBL4093,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P55072,CHEMBL1075145,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+P55157,CHEMBL2569,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+P55210,CHEMBL3468,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P55212,CHEMBL3308,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P55263,CHEMBL3589,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P55789,CHEMBL1741189,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P56373,CHEMBL2998,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+P56524,CHEMBL3524,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+P56817,CHEMBL4822,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P57058,CHEMBL1795165,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P57059,CHEMBL6082,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P57078,CHEMBL6083,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P57789,CHEMBL2331041,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+P59533,CHEMBL4523248,CHEMBL_CLASS:620,Taste family G protein-coupled receptor,chembl_class,2,0
+P60174,CHEMBL4880,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P61073,CHEMBL2107,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+P61081,CHEMBL4295787,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+P61088,CHEMBL6089,CHEMBL_CLASS:1035,Aminoacyltransferase,chembl_class,2,0
+P61158,CHEMBL4105857,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P62508,CHEMBL4245,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+P62826,CHEMBL1741190,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P62937,CHEMBL1949,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+P62942,CHEMBL1902,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+P62993,CHEMBL3663,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+P63098,CHEMBL2082,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+P63316,CHEMBL2066,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+P67775,CHEMBL4703,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+P67870,CHEMBL2358,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P68106,CHEMBL2430,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+P68400,CHEMBL3629,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P68871,CHEMBL4331,CHEMBL_CLASS:3,Secreted protein,chembl_class,1,0
+P78356,CHEMBL5667,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P78362,CHEMBL5668,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P78368,CHEMBL2543,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P78417,CHEMBL3174,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+P78527,CHEMBL3142,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P78536,CHEMBL3706,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+P80192,CHEMBL2872,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+P80370,CHEMBL5671,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+P80404,CHEMBL2044,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q00526,CHEMBL4442,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q00534,CHEMBL2508,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q00535,CHEMBL4036,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q00536,CHEMBL4597,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q00537,CHEMBL5790,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q00975,CHEMBL4478,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q00987,CHEMBL5023,CHEMBL_CLASS:5,Other nuclear protein,chembl_class,1,0
+Q01453,CHEMBL1293298,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q01538,CHEMBL2331044,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q01650,CHEMBL4459,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q01668,CHEMBL4138,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q01726,CHEMBL3795,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q01860,CHEMBL3580526,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q01959,CHEMBL238,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q02127,CHEMBL1966,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q02156,CHEMBL3582,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q02750,CHEMBL3587,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q02763,CHEMBL4128,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q02779,CHEMBL2873,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q02790,CHEMBL4050,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+Q02880,CHEMBL3396,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+Q03164,CHEMBL1293299,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q03164,CHEMBL1293299,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q03181,CHEMBL3979,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+Q03405,CHEMBL4883,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+Q04206,CHEMBL5533,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q04609,CHEMBL1892,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q04759,CHEMBL3920,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q04760,CHEMBL2424,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+Q04771,CHEMBL5903,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q04828,CHEMBL5905,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q04844,CHEMBL2484,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+Q04912,CHEMBL2689,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q05397,CHEMBL2695,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q05655,CHEMBL2996,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q05932,CHEMBL3171,CHEMBL_CLASS:645,Ligase,chembl_class,2,0
+Q05940,CHEMBL1893,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q06187,CHEMBL5251,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q06203,CHEMBL2362992,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q06278,CHEMBL3257,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q06418,CHEMBL5314,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q06710,CHEMBL2362980,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q07002,CHEMBL5316,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q07343,CHEMBL275,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+Q07817,CHEMBL4625,CHEMBL_CLASS:670,Other ion channel,chembl_class,2,0
+Q07820,CHEMBL4361,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+Q07869,CHEMBL239,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+Q07889,CHEMBL2079846,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q07912,CHEMBL4599,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q07973,CHEMBL4521,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+Q08209,CHEMBL4445,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+Q08345,CHEMBL5319,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q08493,CHEMBL291,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+Q08499,CHEMBL288,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+Q08752,CHEMBL1697657,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+Q08881,CHEMBL2959,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q09013,CHEMBL5320,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q09428,CHEMBL2071,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+Q09470,CHEMBL2309,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q12778,CHEMBL5294,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q12797,CHEMBL4680030,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q12809,CHEMBL240,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q12851,CHEMBL5330,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q12852,CHEMBL1908389,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q12866,CHEMBL5331,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q12884,CHEMBL4683,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q12908,CHEMBL2778,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q12974,CHEMBL1075105,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+Q13043,CHEMBL4598,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13118,CHEMBL3407312,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q13131,CHEMBL4045,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13133,CHEMBL2808,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+Q13148,CHEMBL2362981,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q13153,CHEMBL4600,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13163,CHEMBL4948,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13164,CHEMBL5332,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13177,CHEMBL4487,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13188,CHEMBL4708,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13224,CHEMBL1904,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+Q13233,CHEMBL3956,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13237,CHEMBL2896,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13258,CHEMBL4427,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q13304,CHEMBL1075162,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q13315,CHEMBL3797,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13370,CHEMBL290,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+Q13393,CHEMBL2536,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q13418,CHEMBL5247,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13422,CHEMBL4739685,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q13451,CHEMBL2052031,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+Q13464,CHEMBL3231,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13470,CHEMBL5334,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13509,CHEMBL2597,CHEMBL_CLASS:4,Structural protein,chembl_class,1,0
+Q13523,CHEMBL1908382,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13526,CHEMBL2288,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+Q13546,CHEMBL5464,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13547,CHEMBL325,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q13554,CHEMBL4121,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13555,CHEMBL3829,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13557,CHEMBL2801,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13621,CHEMBL1874,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q13627,CHEMBL2292,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13639,CHEMBL1875,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q13698,CHEMBL3805,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q13705,CHEMBL5466,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13822,CHEMBL3691,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+Q13873,CHEMBL5467,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13882,CHEMBL4601,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q13936,CHEMBL1940,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q13946,CHEMBL3012,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+Q13976,CHEMBL4273,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q14012,CHEMBL2493,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q14123,CHEMBL4619,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+Q14145,CHEMBL2069156,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q14164,CHEMBL3529,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q14289,CHEMBL5469,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q14330,CHEMBL2384898,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q14376,CHEMBL5843,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+Q14432,CHEMBL241,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+Q14524,CHEMBL1980,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q14534,CHEMBL3592,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q14654,CHEMBL1886,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q14680,CHEMBL4578,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q14683,CHEMBL4105747,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q14940,CHEMBL3058,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q14973,CHEMBL5287,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q14994,CHEMBL5503,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+Q15046,CHEMBL5575,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+Q15067,CHEMBL4105748,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q15125,CHEMBL4931,CHEMBL_CLASS:644,Isomerase,chembl_class,2,0
+Q15139,CHEMBL3863,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15208,CHEMBL1075155,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15303,CHEMBL3009,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15349,CHEMBL3906,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15375,CHEMBL4602,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15392,CHEMBL2331059,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q15393,CHEMBL1250378,CHEMBL_CLASS:5,Other nuclear protein,chembl_class,1,0
+Q15418,CHEMBL2553,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15465,CHEMBL5602,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q15569,CHEMBL5604,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15633,CHEMBL2098,CHEMBL_CLASS:5,Other nuclear protein,chembl_class,1,0
+Q15722,CHEMBL3911,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q15746,CHEMBL2428,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15759,CHEMBL3961,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15788,CHEMBL1615387,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q15831,CHEMBL5606,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15835,CHEMBL5607,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q15842,CHEMBL4770,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q15858,CHEMBL4296,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q15910,CHEMBL2189110,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q16236,CHEMBL1075094,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q16288,CHEMBL5608,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q16348,CHEMBL1743125,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q16445,CHEMBL2579,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+Q16512,CHEMBL3384,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q16513,CHEMBL3032,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q16539,CHEMBL260,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q16549,CHEMBL2232,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q16566,CHEMBL2494,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q16584,CHEMBL2708,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q16602,CHEMBL3798,CHEMBL_CLASS:1021,Family B G protein-coupled receptor,chembl_class,2,0
+Q16620,CHEMBL4898,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q16637,CHEMBL1293232,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q16659,CHEMBL5121,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q16665,CHEMBL4261,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q16678,CHEMBL4878,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+Q16696,CHEMBL3542436,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+Q16739,CHEMBL2063,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q16762,CHEMBL4295835,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q16790,CHEMBL3594,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+Q16816,CHEMBL4004,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q16832,CHEMBL5122,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q16850,CHEMBL3849,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+Q16853,CHEMBL3437,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q2M2I8,CHEMBL3830,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q2NL67,CHEMBL2380187,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q2TB90,CHEMBL1741200,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q32MK0,CHEMBL4627,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q3MIX3,CHEMBL4105886,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q460N3,CHEMBL2176778,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q460N5,CHEMBL2176777,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q4U2R8,CHEMBL1641347,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q52WX2,CHEMBL1163129,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q53EL6,CHEMBL1781868,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q53GL7,CHEMBL2429708,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q56UN5,CHEMBL6191,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q58F21,CHEMBL1795185,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q59H18,CHEMBL5260,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q5BJF2,CHEMBL4105907,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+Q5HYI8,CHEMBL4105853,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q5JUK3,CHEMBL4739688,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q5NUL3,CHEMBL5339,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q5S007,CHEMBL1075104,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q5VT25,CHEMBL4516,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q5XXA6,CHEMBL2046267,CHEMBL_CLASS:670,Other ion channel,chembl_class,2,0
+Q6DT37,CHEMBL5615,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q6JQN1,CHEMBL4105816,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q6N021,CHEMBL4523344,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q6P3R8,CHEMBL5044,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q6P988,CHEMBL3714531,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q6PHR2,CHEMBL5047,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q6PL18,CHEMBL2150837,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q6SZW1,CHEMBL4523350,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q6V1X1,CHEMBL4657,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q6W5P4,CHEMBL5162,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q6XQN6,CHEMBL4523354,CHEMBL_CLASS:645,Ligase,chembl_class,2,0
+Q6XUX3,CHEMBL1908386,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+Q6ZMT4,CHEMBL2163177,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q6ZMT4,CHEMBL2163177,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q6ZN16,CHEMBL1163127,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q6ZQN7,CHEMBL2073690,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q6ZSR9,CHEMBL4105933,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q709F0,CHEMBL4105707,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q76MJ5,CHEMBL4105932,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q7KZI7,CHEMBL3831,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q7L0J3,CHEMBL1998,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q7L7X3,CHEMBL5261,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q7RTN6,CHEMBL1795198,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q7Z2W7,CHEMBL1075319,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q7Z3E1,CHEMBL2380188,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q7Z406,CHEMBL4105888,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q7Z418,CHEMBL2331042,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q86TI2,CHEMBL4793,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q86TP1,CHEMBL2079850,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+Q86TW2,CHEMBL4105885,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q86UE8,CHEMBL5404,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q86V86,CHEMBL5407,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q86VL8,CHEMBL1743127,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q86WV6,CHEMBL4523377,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q86Y07,CHEMBL1649059,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+Q86YV6,CHEMBL5426,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q86Z02,CHEMBL5427,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8IU85,CHEMBL5073,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8IVH8,CHEMBL5432,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8IVW4,CHEMBL1163117,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8IW41,CHEMBL3094,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8IWQ3,CHEMBL4574,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8IWU9,CHEMBL5433,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q8IXQ6,CHEMBL4295895,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q8IY84,CHEMBL3542,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8IYL9,CHEMBL3714081,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q8IYT8,CHEMBL5435,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8N1Q1,CHEMBL3912,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+Q8N2K0,CHEMBL5516,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q8N3A8,CHEMBL3091262,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q8N4C8,CHEMBL5518,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8N568,CHEMBL5519,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8N5K1,CHEMBL4523399,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q8N5S9,CHEMBL5256,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8N5Y8,CHEMBL4105981,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q8N6T7,CHEMBL2163182,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q8N752,CHEMBL5520,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8N884,CHEMBL4105728,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q8NB16,CHEMBL1938217,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q8NE63,CHEMBL1075167,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8NEB9,CHEMBL1075165,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q8NER1,CHEMBL4794,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q8NEV4,CHEMBL5546,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8NFD2,CHEMBL5547,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8NFI3,CHEMBL5172,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q8NFU7,CHEMBL4523402,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q8NG66,CHEMBL5638,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8NHM5,CHEMBL3779760,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q8NI60,CHEMBL5550,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8TBX8,CHEMBL1770034,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q8TCC7,CHEMBL1641348,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q8TCT1,CHEMBL6113,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+Q8TD08,CHEMBL5198,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8TD19,CHEMBL5257,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8TDC3,CHEMBL5650,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8TDR2,CHEMBL5651,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8TDS4,CHEMBL3785,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q8TDU6,CHEMBL5409,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q8TDV5,CHEMBL5652,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q8TDX5,CHEMBL4105941,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+Q8TDX7,CHEMBL4849,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8WTQ7,CHEMBL1075133,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8WTS6,CHEMBL5523,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q8WU08,CHEMBL6150,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q8WUI4,CHEMBL2716,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q8WWX8,CHEMBL1744524,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q8WXR4,CHEMBL5654,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q92570,CHEMBL1961792,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+Q92630,CHEMBL4376,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q92731,CHEMBL242,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+Q92753,CHEMBL3091268,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+Q92769,CHEMBL1937,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q92772,CHEMBL5728,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q92793,CHEMBL5747,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q92793,CHEMBL5747,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q92800,CHEMBL2189116,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q92843,CHEMBL4677,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+Q92847,CHEMBL4616,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q92887,CHEMBL5748,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+Q92918,CHEMBL5749,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q92934,CHEMBL3817,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+Q93009,CHEMBL2157850,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q93096,CHEMBL1075169,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+Q969S8,CHEMBL5103,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q96BR1,CHEMBL6186,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q96D53,CHEMBL5753,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q96DB2,CHEMBL3310,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q96FL8,CHEMBL1743126,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q96G23,CHEMBL5291553,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q96GD4,CHEMBL2185,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q96GW9,CHEMBL4739700,CHEMBL_CLASS:645,Ligase,chembl_class,2,0
+Q96IV0,CHEMBL4523429,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q96KQ7,CHEMBL6032,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q96L34,CHEMBL5754,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q96L73,CHEMBL3588738,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q96LB1,CHEMBL5849,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q96NT5,CHEMBL1795188,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q96NX5,CHEMBL5258,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q96P20,CHEMBL1741208,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q96PF2,CHEMBL6014,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q96PY6,CHEMBL5855,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q96Q04,CHEMBL4523432,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q96Q40,CHEMBL5856,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q96RI1,CHEMBL2047,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+Q96RJ0,CHEMBL5857,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q96RR4,CHEMBL5284,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q96RU2,CHEMBL2157853,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q96S37,CHEMBL6120,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q96S44,CHEMBL1938223,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+Q96SB4,CHEMBL4375,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q96SW2,CHEMBL3763008,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q99250,CHEMBL4187,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q99436,CHEMBL3347256,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q99500,CHEMBL3892,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q99527,CHEMBL5872,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q99571,CHEMBL2104,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+Q99640,CHEMBL3984,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q99707,CHEMBL2150844,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q99714,CHEMBL4159,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q99720,CHEMBL287,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+Q99755,CHEMBL5969,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q99759,CHEMBL5970,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q99808,CHEMBL1997,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q99814,CHEMBL1744522,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q99835,CHEMBL5971,CHEMBL_CLASS:619,Frizzled family G protein-coupled receptor,chembl_class,2,0
+Q99873,CHEMBL5524,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q9BPV8,CHEMBL3321651,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9BPW9,CHEMBL5974,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q9BQB6,CHEMBL1930,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q9BQI3,CHEMBL6029,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9BRS2,CHEMBL5975,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9BU89,CHEMBL4523441,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q9BUB5,CHEMBL4718,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9BV23,CHEMBL2189127,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q9BVS4,CHEMBL6000,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9BWU1,CHEMBL6002,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9BXA7,CHEMBL6003,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9BY08,CHEMBL2311238,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q9BY41,CHEMBL3192,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q9BYF1,CHEMBL3736,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q9BYT3,CHEMBL6005,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9BZ95,CHEMBL3108646,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q9BZL6,CHEMBL4900,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9C098,CHEMBL6123,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9C0B1,CHEMBL2331065,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q9GZU7,CHEMBL1795098,CHEMBL_CLASS:1030,Phosphatase,chembl_class,2,0
+Q9H093,CHEMBL5698,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9H0J9,CHEMBL2429709,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q9H0K1,CHEMBL5699,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9H1R3,CHEMBL2777,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9H228,CHEMBL2274,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9H244,CHEMBL2001,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9H255,CHEMBL4523454,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9H2G2,CHEMBL4202,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9H2K2,CHEMBL6154,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q9H2K8,CHEMBL5701,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9H2X6,CHEMBL4576,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9H3N8,CHEMBL3759,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9H3Y6,CHEMBL5703,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9H422,CHEMBL4577,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9H4B4,CHEMBL4897,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9H773,CHEMBL3769292,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q9H8M2,CHEMBL3108640,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q9HAW7,CHEMBL1743317,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q9HAW8,CHEMBL1743320,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q9HAZ1,CHEMBL4203,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9HBH9,CHEMBL4204,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9HBX9,CHEMBL1293316,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9HC29,CHEMBL1293266,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q9HC97,CHEMBL1293267,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9HC98,CHEMBL4309,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9HCG7,CHEMBL3761,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+Q9HCN6,CHEMBL3308912,CHEMBL_CLASS:11,Membrane receptor,chembl_class,1,0
+Q9HCN6,CHEMBL3308912,CHEMBL_CLASS:2,Adhesion,chembl_class,1,0
+Q9HCP0,CHEMBL2426,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9HCR9,CHEMBL2717,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+Q9NPC1,CHEMBL3191,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9NPC2,CHEMBL2321614,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q9NPD5,CHEMBL1743121,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q9NPI1,CHEMBL3085622,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q9NQU5,CHEMBL4311,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9NR20,CHEMBL1075115,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9NR21,CHEMBL2380189,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q9NR63,CHEMBL3713687,CHEMBL_CLASS:1031,Cytochrome P450,chembl_class,2,0
+Q9NR96,CHEMBL5804,CHEMBL_CLASS:649,Toll-like and Il-1 receptors,chembl_class,2,0
+Q9NRH2,CHEMBL1908384,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9NRM7,CHEMBL5907,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9NRP7,CHEMBL4312,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9NRX4,CHEMBL5169200,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q9NS75,CHEMBL4330,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9NSA0,CHEMBL2073677,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q9NSY1,CHEMBL4522,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9NTG7,CHEMBL4461,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q9NUW8,CHEMBL1075138,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+Q9NWZ3,CHEMBL3778,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9NXA8,CHEMBL2163183,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q9NY46,CHEMBL5163,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q9NY47,CHEMBL3896,CHEMBL_CLASS:834,Calcium channel auxiliary subunit alpha2delta family,chembl_class,2,0
+Q9NY57,CHEMBL5912,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9NY59,CHEMBL4523470,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q9NYK1,CHEMBL5936,CHEMBL_CLASS:649,Toll-like and Il-1 receptors,chembl_class,2,0
+Q9NYL2,CHEMBL3886,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9NYY3,CHEMBL5938,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9NZ45,CHEMBL1795168,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q9P0L2,CHEMBL5940,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9P1W9,CHEMBL4523,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9P286,CHEMBL4524,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9P289,CHEMBL5941,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9P2K8,CHEMBL5358,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UBE8,CHEMBL5364,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UBF8,CHEMBL3268,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q9UBN7,CHEMBL1865,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q9UBS5,CHEMBL2064,CHEMBL_CLASS:1022,Family C G protein-coupled receptor,chembl_class,2,0
+Q9UDY8,CHEMBL3632452,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q9UEE5,CHEMBL4525,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UEW8,CHEMBL1163108,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UF33,CHEMBL4526,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UGJ0,CHEMBL2453,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UGM1,CHEMBL2184,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+Q9UGN5,CHEMBL5366,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q9UHC3,CHEMBL5368,CHEMBL_CLASS:1024,Ligand-gated ion channel,chembl_class,2,0
+Q9UHC9,CHEMBL2027,CHEMBL_CLASS:7,Other membrane protein,chembl_class,1,0
+Q9UHD2,CHEMBL5408,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UHD8,CHEMBL4105891,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q9UHL4,CHEMBL3976,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q9UIK4,CHEMBL3123,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UK17,CHEMBL1964,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q9UK32,CHEMBL4924,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UKE5,CHEMBL4527,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UKI8,CHEMBL5388,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UKK3,CHEMBL6142,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q9UKT9,CHEMBL4739707,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q9UKV0,CHEMBL4145,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q9UL54,CHEMBL1075195,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9ULC5,CHEMBL4105818,CHEMBL_CLASS:645,Ligase,chembl_class,2,0
+Q9ULK4,CHEMBL4146,CHEMBL_CLASS:12,Transcription factor,chembl_class,1,0
+Q9ULX7,CHEMBL3510,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+Q9UM73,CHEMBL4247,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UNQ0,CHEMBL5393,CHEMBL_CLASS:1027,Primary active transporter,chembl_class,2,0
+Q9UNU6,CHEMBL4523494,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q9UPE1,CHEMBL5415,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UPY5,CHEMBL1075149,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q9UPZ9,CHEMBL1163126,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UQ88,CHEMBL5416,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UQB9,CHEMBL3935,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9UQL6,CHEMBL2563,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q9UQM7,CHEMBL4147,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y230,CHEMBL2062349,CHEMBL_CLASS:1,Enzyme,chembl_class,1,0
+Q9Y233,CHEMBL4409,CHEMBL_CLASS:1034,Phosphodiesterase,chembl_class,2,0
+Q9Y239,CHEMBL1293222,CHEMBL_CLASS:601,Unclassified protein,chembl_class,1,0
+Q9Y243,CHEMBL4816,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y251,CHEMBL3921,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q9Y271,CHEMBL1798,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9Y2D0,CHEMBL3969,CHEMBL_CLASS:648,Lyase,chembl_class,2,0
+Q9Y2H1,CHEMBL4851,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y2H9,CHEMBL1163128,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y2I1,CHEMBL3923,CHEMBL_CLASS:8,Other cytosolic protein,chembl_class,1,0
+Q9Y2K2,CHEMBL6149,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y2K7,CHEMBL1938210,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q9Y2K7,CHEMBL1938210,CHEMBL_CLASS:839,Eraser,chembl_class,2,0
+Q9Y2T3,CHEMBL3129,CHEMBL_CLASS:646,Hydrolase,chembl_class,2,0
+Q9Y2T6,CHEMBL1075322,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9Y2U5,CHEMBL5914,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y3Q4,CHEMBL1250417,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q9Y463,CHEMBL5543,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y466,CHEMBL1961788,CHEMBL_CLASS:1033,Nuclear receptor,chembl_class,2,0
+Q9Y468,CHEMBL1287622,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q9Y4K4,CHEMBL4852,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y572,CHEMBL1795199,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y5N1,CHEMBL264,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9Y5S2,CHEMBL5052,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y5Y4,CHEMBL5071,CHEMBL_CLASS:1020,Family A G protein-coupled receptor,chembl_class,2,0
+Q9Y5Y6,CHEMBL3018,CHEMBL_CLASS:1028,Protease,chembl_class,2,0
+Q9Y5Y9,CHEMBL5451,CHEMBL_CLASS:1019,Voltage-gated ion channel,chembl_class,2,0
+Q9Y616,CHEMBL5081,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y6A2,CHEMBL4523510,CHEMBL_CLASS:10,Oxidoreductase,chembl_class,2,0
+Q9Y6E0,CHEMBL5082,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y6F1,CHEMBL5083,CHEMBL_CLASS:643,Transferase,chembl_class,2,0
+Q9Y6K1,CHEMBL1992,CHEMBL_CLASS:837,Reader,chembl_class,2,0
+Q9Y6K1,CHEMBL1992,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q9Y6L6,CHEMBL1697668,CHEMBL_CLASS:1032,Electrochemical transporter,chembl_class,2,0
+Q9Y6M4,CHEMBL5084,CHEMBL_CLASS:6,Kinase,chembl_class,2,0
+Q9Y6Q9,CHEMBL1615382,CHEMBL_CLASS:838,Writer,chembl_class,2,0
+Q9Y6R4,CHEMBL4853,CHEMBL_CLASS:6,Kinase,chembl_class,2,0

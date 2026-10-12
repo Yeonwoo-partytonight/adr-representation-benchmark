@@ -1,0 +1,2526 @@
+{
+  "_doc": "블록 BC (docs/118) 개봉 계획 v1 — 개봉(120)이 계산·공개할 모든 것의 정본. 이후 변경 = amendment(docs/33 신규 항목 · 사유 · 전후 해시).",
+  "plan_id": "unblinding_plan_v1",
+  "block": "BC (docs/118)",
+  "frozen_by": "vscode-claude(runner)",
+  "is_authorization": false,
+  "sealed_values_read_to_build": 0,
+  "circular_hash_policy": "이 계획은 개봉 스크립트·검산기 해시를 갖지 않는다. 개봉 스크립트만 이 계획의 sha 를 상수로 갖고, 승인 기록(approved_hashes)이 전부를 결속한다.",
+  "decisions": {
+    "rows_verbatim": {
+      "X1": "| **X1** | 절차 동결(118) → 전수 감사(119) → 승인 → 개봉(120). 승인은 **118 동결 해시 + 119 감사 리포트 해시**에 결속 |",
+      "X2": "| **X2** | ⑧ 귀무 문면·보고 계획을 개봉 승인 요청에 **비차단 첨부**(외부 검토자 의견은 받되 개봉을 막지 않음) |",
+      "X3": "| **X3** | **독립 소형 검산기만**: SAP 코드·개봉 스크립트를 import 하지 않고 동결 문면만으로 짠 검산이 개봉 산출과 일치해야 공개 |",
+      "G1": "| **G1** | ①②③⑤⑥⑦ 및 secondary 전 대비 공통: **bootstrap seed 6001 · sign-flip seed 6002 · B 10,000** · eligible = `np.arange(370)` 명시. ① CI 는 재계산해 봉인 `d9_bca_result.json[\"rf\"]` 와 **비트 일치 assert** · ① Δ 는 `holm8_result.json[\"delta_rf\"]` 와 비트 일치 assert |",
+      "G2": "| **G2** | ④ 슬롯 p = **max(p_emp_global, p_emp_family)**. 두 원 p 와 RQ4 판정 병기 |",
+      "G3~G10": "| **G3~G10** | cowork 기본안 일괄(§0-3 표) — 같은 절차·「비판정·secondary」 라벨·결과와 무관하게 전부 보고 |",
+      "G7": "| **G7** | 민감도 OOF 3종은 블록 BB 가 봉인 → 개봉 시 secondary 로 산출 |",
+      "G11": "| **G11** | **판정 p = Holm 조정 p**: `rq3_decision` 의 p = ②·③ Holm 조정 p · `rq4_decision` 두 입력 = ④ 슬롯 Holm 조정 p(같은 값) · RQ-int = ⑧ Holm 조정 p < α(D7) · ① RQ2 = 원 p(무보정). 원 p 항상 병기 |",
+      "H1": "| **H1** RQ8 외부·시간 검증 | 사전등록 §12·§13-9 「외부/temporal 1종(본문 최소 1종)」 은 **수행·이탈 기록 모두 없었다**(교차검증 실측). → **계획만 개봉 전 동결**: cowork 가 `docs/118b_external_validation_plan.md`(데이터 소스·분할·모델·지표·판정)를 작성·사용자 확인 후 **119 착수 전** 동결하고, 실행은 개봉 이후 별도 블록. 본 블록은 계획 JSON `prereg_coverage` 에 「RQ8 = plan_frozen_pre_opening(docs/118b · sha256 `4f06d39e9aa827bd63a2ac28e6dbedbedec2430bbde10aaadd567c81c726f60e`) · execution_post_opening」으로 등재만 한다(RQ8 의 R8-1~R8-3 = 라벨 출처 이식성 · EU∪UK 주 · 부호 일치만 — 2026-10-04 사용자 결정) · `docs/118b` 는 **동결물 목록(승인 결속 `approved_hashes`)에 추가**한다 |",
+      "H2": "| **H2** C-CAP 판정 | 등록 §8 「최소 성립 조건 = RQ2 + (RQ3 또는 C-CAP) + RQ4」 의 C-CAP(M2b − C-CAP) = **RQ3 와 같은 규칙 · 원 p**(Holm family 밖 · 무보정): `sap.decision._contrast_pass(ci_primary, p_raw)`(CI 하한 > 0 ∧ p < α · not_estimable → 실패). **최소 성립 = RQ2 ∧ (RQ3 ∨ C-CAP) ∧ RQ4** 를 판정 출력에 포함 |",
+      "H3": "| **H3** 판정 Holm 판 | **RQ3·RQ4·RQ-int 판정 = 판1(⑧ = 주 p)의 조정 p**(사이드카 1호 `d14_panel1_refers_to` 정합). 판2(⑧ = 1.0)는 전 표 보고 + 슬롯별 결론 차이 플래그만 |",
+      "H4": "| **H4** 그 밖 미수행 등록 항목 | **일괄 이탈 기록 + 계산 가능한 것만 포함.** 개봉 전 `docs/33`(항목 78)에 항목별 미수행 사유 기록: §5 B(degree-preserving 재학습 null)·C(residue-shuffle) · §4 추가 baseline 중 LR(Morgan+multi-hot)·ridge·MLP(Morgan+평균 ProtBERT) · §8 PT bootstrap(endpoint-generalization) · §9 hard cold split·dual-shift · §11 XAI · §12 PU. **봉인물로 산출 가능해 개봉 산출에 포함**: label prevalence baseline(PT prevalence 상수 예측의 macro AP — 라벨만으로 결정) · target-only sequence baseline(`consensus_seq`·`consensus_seq_sens` macro AP) · RQ7 부속 지표(⑦ rep별 `metrics_full.json` 봉인값 공개) · ④ null 분포 그림(`v3_null_MAIN/_sealed/checkpoint.jsonl` 의 primary `macro_AP` 열 + T_obs 수직선) · GIN ②③⑤ 방향(GIN cell_1 점추정 · 기술) |"
+    },
+    "source_docs_sha256": {
+      "docs/118_unblinding_procedure_freeze_prompt_for_vscode.md": "0888534da82aebae3ffbf6363e7de5d3bdf3b8bc0ef6523d874be9d9e7910af1",
+      "docs/116c_chatgpt_review9_triage.md": "c60dd4a0ab656f2d28455bac2a44b7895ca2c52c6bb4ac38d57645702b259049"
+    },
+    "RQ2": {
+      "item": "C1",
+      "function": "sap.decision.rq2_decision",
+      "p_kind": "raw",
+      "call": "rq2_decision(C1.bootstrap.ci_primary, C1.p_raw, C1.delta_obs)"
+    },
+    "RQ3": {
+      "items": [
+        "C2",
+        "C3"
+      ],
+      "holm_labels": [
+        "M2b-P-ID",
+        "M2b-P-FAM"
+      ],
+      "function": "sap.decision.rq3_decision",
+      "p_kind": "panel1_adjusted",
+      "call": "rq3_decision(C2.ci_primary, adj1[M2b-P-ID], C3.ci_primary, adj1[M2b-P-FAM])"
+    },
+    "RQ4": {
+      "item": "C4",
+      "holm_label": "M2b-realloc_null",
+      "function": "sap.decision.rq4_decision",
+      "p_kind": "panel1_adjusted",
+      "call": "rq4_decision(adj1[④], adj1[④]) · 원 p_emp_global·p_emp_family 별도 병기"
+    },
+    "RQ_int": {
+      "item": "C8",
+      "holm_label": "RQ-int",
+      "p_kind": "panel1_adjusted",
+      "rule": "판1 Holm 조정 p < α (D7 · H3)"
+    },
+    "C_CAP": {
+      "item": "C-CAP",
+      "function": "sap.decision._contrast_pass",
+      "p_kind": "raw",
+      "call": "_contrast_pass(C-CAP.bootstrap.ci_primary, C-CAP.p_raw)"
+    },
+    "minimum_establishment_rule": "RQ2 ∧ (RQ3 ∨ C-CAP) ∧ RQ4 (H2 · 등록 §8)",
+    "raw_p_always_reported": true
+  },
+  "frozen_rules_reconfirmed": {
+    "decision_module": "v3_Multimodal/src/sap/decision.py",
+    "decision_module_sha256": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+    "opening_rule": "개봉은 Holm ②~⑧ 전원이 갖춰진 뒤 1회·일괄, 교수님 승인 이후에만 · 부분 개봉 없음 (docs/70:27)",
+    "approver": "양진홍 교수님 (docs/77)"
+  },
+  "design": {
+    "n_rows": 1092,
+    "n_pt": 370,
+    "n_groups": 732,
+    "scaffold_group": "confirmatory_oof_rep1.scaffold_of(master_X.smiles_canonical) → sorted(set) 정수 군 라벨 (블록 AY 하네스 rqint_holm8_run.py:707-712 축자)",
+    "y": "master_Y[ycols].values.astype(int) · ycols = cid 제외 열 순서",
+    "eligible_pt": "np.arange(n_pt)"
+  },
+  "labels": {
+    "master_x": {
+      "path": "data/processed/master_X.parquet",
+      "sha256": "788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6"
+    },
+    "master_y": {
+      "path": "data/processed/master_Y.parquet",
+      "sha256": "bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018"
+    },
+    "smiles_column": "smiles_canonical"
+  },
+  "npz_schema": {
+    "keys": [
+      "consensus",
+      "cid"
+    ],
+    "matrix_key": "consensus",
+    "cid_key": "cid",
+    "evidence": "confirmatory_oof_rep23.py:480-482 · rest.py:698-700 · rftuned.py:627-629 · latefusion.py:938-940 · sens.py:763-768",
+    "row_order": "master_X cid 정렬 순서와 일치 assert"
+  },
+  "items": [
+    {
+      "id": "C1",
+      "slot": "①",
+      "label": "M2b − M1b (RF · primary)",
+      "status": "confirmatory",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+        "arm": "M1b"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "RQ2 = rq2_decision(원 p · 무보정)"
+    },
+    {
+      "id": "C2",
+      "slot": "②",
+      "label": "M2b − P-ID",
+      "status": "confirmatory",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-ID.npz",
+        "arm": "P-ID"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "RQ3(판1 Holm 조정 p · H3)",
+      "holm_label": "M2b-P-ID"
+    },
+    {
+      "id": "C3",
+      "slot": "③",
+      "label": "M2b − P-FAM",
+      "status": "confirmatory",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-FAM.npz",
+        "arm": "P-FAM"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "RQ3(판1 Holm 조정 p · H3)",
+      "holm_label": "M2b-P-FAM"
+    },
+    {
+      "id": "C4",
+      "slot": "④",
+      "label": "M2b vs 자연 임베딩 재배치 null",
+      "status": "confirmatory",
+      "kind": "sealed_p_null",
+      "source": "experiments/runs/v3_null_MAIN/_sealed/null_result.json",
+      "holm_label": "M2b-realloc_null",
+      "keys": {
+        "p_global": [
+          "primary",
+          "global",
+          "p_emp"
+        ],
+        "p_family": [
+          "primary",
+          "family",
+          "p_emp"
+        ],
+        "T_obs": [
+          "T_obs"
+        ]
+      },
+      "keys_evidence": "v3_Multimodal/src/null_main_run.py:1356-1368 · sap/null_generator.py:129-131",
+      "slot_rule": "G2: 슬롯 p = max(p_emp_global, p_emp_family) · 두 원 p 병기",
+      "T_obs_basis": "rep1(seed 201) OOF 기준 M2b macro AP(consensus 아님) — null_main_run.py:1343-1351",
+      "decision_ref": "RQ4 = rq4_decision(판1 조정 p, 판1 조정 p) · 원 p_emp 2개 별도 칸"
+    },
+    {
+      "id": "C5",
+      "slot": "⑤",
+      "label": "M2b − M0",
+      "status": "confirmatory",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz",
+        "arm": "M0"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "Holm 표",
+      "holm_label": "M2b-M0"
+    },
+    {
+      "id": "C6",
+      "slot": "⑥",
+      "label": "M2b − RF_tuned",
+      "status": "confirmatory",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/consensus_RF_tuned.npz",
+        "arm": "RF_tuned"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "Holm 표",
+      "holm_label": "M2b-RF_tuned"
+    },
+    {
+      "id": "C7",
+      "slot": "⑦",
+      "label": "RF+seq − RF (ens − M0)",
+      "status": "confirmatory",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz",
+        "arm": "M0(p_RF)"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens.npz",
+        "arm": "ens"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "Holm 표",
+      "holm_label": "RFseq-RF",
+      "note": "p_RF = M0 (holm7_latefusion_freeze.json) · ens = λ 선택판"
+    },
+    {
+      "id": "C8",
+      "slot": "⑧",
+      "label": "RQ-int (Δ_RF vs Δ_GIN)",
+      "status": "confirmatory",
+      "kind": "sealed_p_holm8",
+      "source": "experiments/runs/v3_rqint_holm8/_sealed/holm8_result.json",
+      "holm_label": "RQ-int",
+      "keys": {
+        "p_primary": [
+          "p_primary"
+        ],
+        "p_secondary": [
+          "p_secondary"
+        ],
+        "se_primary": [
+          "se_primary"
+        ],
+        "se_secondary": [
+          "se_secondary"
+        ],
+        "c_abs_ge_obs_first_B": [
+          "c_abs_ge_obs_first_B"
+        ],
+        "B": [
+          "B"
+        ],
+        "count_abs_ge_obs": [
+          "count_abs_ge_obs"
+        ],
+        "n_permutation_values": [
+          "n_permutation_values"
+        ],
+        "t_obs": [
+          "t_obs"
+        ],
+        "delta_rf": [
+          "delta_rf"
+        ],
+        "delta_gin": [
+          "delta_gin"
+        ]
+      },
+      "keys_evidence": "v3_Multimodal/src/rqint_holm8_run.py:953-979",
+      "decision_ref": "RQ-int = 판1 Holm 조정 p < α (D7 · H3) · 판2(⑧ = 1.0) 병기(D14)"
+    },
+    {
+      "id": "C-CAP",
+      "slot": "RQ3d",
+      "label": "M2b − C-CAP",
+      "status": "secondary_decision",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_C-CAP.npz",
+        "arm": "C-CAP"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "H2: _contrast_pass(ci_primary, 원 p) → 최소 성립 조건 (Holm family 밖 · 무보정)"
+    },
+    {
+      "id": "S-RQ1",
+      "slot": "RQ1",
+      "label": "M1 − M0",
+      "status": "secondary",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz",
+        "arm": "M0"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M1.npz",
+        "arm": "M1"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "비판정"
+    },
+    {
+      "id": "S-RQ1b",
+      "slot": "RQ1b",
+      "label": "M1b − M1",
+      "status": "secondary",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M1.npz",
+        "arm": "M1"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+        "arm": "M1b"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "비판정"
+    },
+    {
+      "id": "S-M2",
+      "slot": "M2",
+      "label": "M2 − M1",
+      "status": "secondary",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M1.npz",
+        "arm": "M1"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M2.npz",
+        "arm": "M2"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "비판정"
+    },
+    {
+      "id": "S-7h",
+      "slot": "⑦h",
+      "label": "ens_half − M0 (λ = 0.5)",
+      "status": "secondary",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz",
+        "arm": "M0(p_RF)"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_half.npz",
+        "arm": "ens_half"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "비판정"
+    },
+    {
+      "id": "S-7s",
+      "slot": "⑦s",
+      "label": "ens_sens − M0",
+      "status": "secondary",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz",
+        "arm": "M0(p_RF)"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_sens.npz",
+        "arm": "ens_sens"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "비판정"
+    },
+    {
+      "id": "S-pch",
+      "slot": "①pch",
+      "label": "M2b_pchembl − M1b_pchembl",
+      "status": "sensitivity",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_sens_consensus_rep123/_sealed/consensus_M1b_pchembl.npz",
+        "arm": "M1b_pchembl"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_confirm_sens_consensus_rep123/_sealed/consensus_M2b_pchembl.npz",
+        "arm": "M2b_pchembl"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "비판정 · ① pChEMBL 민감도"
+    },
+    {
+      "id": "S-fsc",
+      "slot": "③fsc",
+      "label": "M2b − P-FAM_selfclust",
+      "status": "sensitivity",
+      "kind": "contrast",
+      "base": {
+        "path": "experiments/runs/v3_confirm_sens_consensus_rep123/_sealed/consensus_P-FAM_selfclust.npz",
+        "arm": "P-FAM_selfclust"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_perm": true,
+        "argument_order": "(base arm, treat arm) → Δ = treat − base (sap/signflip.py _perm_deltas)"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "tost": {
+        "function": "sap.decision.tost_equivalence",
+        "call": "tost_equivalence(ci_primary.low, ci_primary.high, delta_obs, ci_status=ci_primary.status)"
+      },
+      "decision_ref": "비판정 · ③ family 정의 민감도"
+    },
+    {
+      "id": "S-unit-drug",
+      "slot": "①unit",
+      "label": "M2b − M1b bootstrap 단위 = drug",
+      "status": "sensitivity",
+      "kind": "ci_only",
+      "base": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+        "arm": "M1b"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "drug",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "decision_ref": "비판정 · ci_primary 그대로(percentile 아님)"
+    },
+    {
+      "id": "S-unit-sw",
+      "slot": "①unit",
+      "label": "M2b − M1b bootstrap 단위 = size_weighted",
+      "status": "sensitivity",
+      "kind": "ci_only",
+      "base": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+        "arm": "M1b"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "bootstrap": {
+        "function": "sap.bootstrap.paired_scaffold_bootstrap",
+        "B": 10000,
+        "seed": 6001,
+        "unit": "size_weighted",
+        "alpha": 0.05,
+        "eligible_pt": "np.arange(n_pt)",
+        "return_boot": true
+      },
+      "decision_ref": "비판정 · ci_primary 그대로(percentile 아님)"
+    },
+    {
+      "id": "S-PT",
+      "slot": "①PT",
+      "label": "M2b − M1b PT별 sign-flip + BH-FDR",
+      "status": "secondary",
+      "kind": "pt_tests",
+      "base": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+        "arm": "M1b"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "eligibility": {
+        "function": "sap.decision.pt_eligibility",
+        "call": "pt_eligibility(y, scaffold_group)",
+        "rule": "양성 ≥ 10 ∧ 양성 포함 scaffold 군 ≥ 3"
+      },
+      "signflip": {
+        "function": "sap.signflip.scaffold_signflip",
+        "B": 10000,
+        "seed": 6002,
+        "eligible_pt": "np.array([j]) (PT j 마다)",
+        "return_perm": false
+      },
+      "bh": {
+        "function": "sap.decision.bh_fdr",
+        "q": 0.05,
+        "labels": "master_Y PT 열 이름",
+        "reject_rule": "q ≤ 0.05"
+      },
+      "checkpoint_every_pt": 50,
+      "decision_ref": "G4 · 별도 BH family · 비판정"
+    },
+    {
+      "id": "S-base",
+      "slot": "base",
+      "label": "target-only sequence baseline · label prevalence baseline",
+      "status": "descriptive",
+      "kind": "baseline_ap",
+      "metric": "sap.metrics.macro_ap",
+      "matrices": {
+        "target_only_seq": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq.npz",
+        "target_only_seq_sens": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq_sens.npz"
+      },
+      "prevalence_baseline": true,
+      "prevalence_rule": "PT j 의 모든 약물 점수 = 전체 prevalence_j 상수 → macro AP (라벨만으로 결정)",
+      "decision_ref": "H4 · 점추정 · 대비 없음"
+    },
+    {
+      "id": "S-GIN",
+      "slot": "GIN",
+      "label": "GIN Δ(M2b − M1b) · GIN ②③⑤ 방향(기술)",
+      "status": "secondary",
+      "kind": "gin",
+      "gin_metrics": "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/metrics_full.json",
+      "holm8": "experiments/runs/v3_rqint_holm8/_sealed/holm8_result.json",
+      "d9": "experiments/runs/v3_rqint_holm8/_sealed/d9_bca_result.json",
+      "keys": {
+        "cell_1": [
+          "cells",
+          "cell_1_seed_consensus_macro_ap"
+        ],
+        "cell_1_value_path": [
+          "macro_ap"
+        ],
+        "cell_2_delta_gin_per_seed": [
+          "cells",
+          "cell_2_delta_gin_per_seed"
+        ],
+        "cell_3_delta_gin": [
+          "cells",
+          "cell_3_delta_gin"
+        ],
+        "holm8_delta_gin": [
+          "delta_gin"
+        ],
+        "d9_gin_composite": [
+          "gin_composite"
+        ]
+      },
+      "keys_evidence": "confirmatory_gin_consensus.py:456-473,511-531 · rqint_holm8_run.py:959,986",
+      "cell_1_key_format": "{model}|seed{t}",
+      "seeds": [
+        42,
+        1,
+        2
+      ],
+      "gin_contrasts": {
+        "GIN M2b − P-ID": {
+          "base": "P-ID",
+          "treat": "M2b",
+          "rf_item": "C2"
+        },
+        "GIN M2b − P-FAM": {
+          "base": "P-FAM",
+          "treat": "M2b",
+          "rf_item": "C3"
+        },
+        "GIN M2b − M0": {
+          "base": "M0",
+          "treat": "M2b",
+          "rf_item": "C5"
+        }
+      },
+      "assert": "cell_3_delta_gin == holm8_result.delta_gin (불일치 = 무결성 실패)",
+      "direction_rule": "G9: sign(Δ_GIN cell_3) == sign(Δ_RF C1) · ②③⑤ = cell_1 시드 평균 점추정 vs RF 대응 항목 부호(기술 · CI 없음 · 판정 아님)",
+      "decision_ref": "비판정"
+    },
+    {
+      "id": "S-sub",
+      "slot": "①sub",
+      "label": "① 부지표 (docs/30 §7 · 기술)",
+      "status": "descriptive",
+      "kind": "sub_metrics",
+      "base": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+        "arm": "M1b"
+      },
+      "treat": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "arm": "M2b"
+      },
+      "spec": {
+        "n_threshold_subsets": [
+          20
+        ],
+        "prevalence_bin_quantiles": [
+          0.3333333333333333,
+          0.6666666666666666
+        ],
+        "prevalence_bin_rule": "np.quantile(prev, [1/3, 2/3]) · np.digitize(right=True) — 경계 PT 는 하위 bin",
+        "budget_k": 10,
+        "label_weight": "PT 양성 수",
+        "micro_ap": "average_precision_score(Ym.ravel(), P.ravel())",
+        "lift": "PT별 AP / prevalence 산술평균",
+        "calibration": "PT별 Brier score macro 평균",
+        "roc_auc": "양성·음성 모두 있는 PT macro 평균",
+        "not_computable": {
+          "macro_ap_N5": "master_Y 는 양성 ≥ 10 PT 370 열만 보유(데이터 구조)",
+          "ultra_sparse_1_2_positive_stratum": "master_Y 는 양성 ≥ 10 PT 370 열만 보유(데이터 구조)"
+        }
+      },
+      "decision_ref": "CI·p 없음 · 판정·SESOI 미사용 (G10)"
+    },
+    {
+      "id": "SP-D9",
+      "label": "D9 Δ_RF·Δ_GIN BCa",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_rqint_holm8/_sealed/d9_bca_result.json": [
+          [
+            "rf",
+            "delta_obs"
+          ],
+          [
+            "rf",
+            "ci_bca"
+          ],
+          [
+            "rf",
+            "ci_percentile"
+          ],
+          [
+            "rf",
+            "ci_primary"
+          ],
+          [
+            "gin_composite",
+            "delta_obs"
+          ],
+          [
+            "gin_composite",
+            "delta_obs_per_seed"
+          ],
+          [
+            "gin_composite",
+            "ci_bca"
+          ],
+          [
+            "gin_composite",
+            "ci_percentile"
+          ],
+          [
+            "gin_composite",
+            "ci_primary"
+          ]
+        ]
+      },
+      "keys_evidence": "rqint_holm8_run.py:980-990 · 526-543",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-H8",
+      "label": "⑧ 봉인 결과(p_primary·p_secondary·SE·Δ)",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_rqint_holm8/_sealed/holm8_result.json": [
+          [
+            "t_obs"
+          ],
+          [
+            "delta_rf"
+          ],
+          [
+            "delta_gin"
+          ],
+          [
+            "delta_gin_per_seed"
+          ],
+          [
+            "B"
+          ],
+          [
+            "p_primary"
+          ],
+          [
+            "p_secondary"
+          ],
+          [
+            "se_primary"
+          ],
+          [
+            "se_secondary"
+          ],
+          [
+            "d14_dual_reporting"
+          ]
+        ]
+      },
+      "keys_evidence": "rqint_holm8_run.py:953-979",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-D11",
+      "label": "D11 leverage λ_k·ρ",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_rqint_leverage_d11/_sealed/leverage_diagnostics.json": [
+          [
+            "T_obs"
+          ],
+          [
+            "delta_rf"
+          ],
+          [
+            "delta_gin"
+          ],
+          [
+            "lambda_k"
+          ],
+          [
+            "rho"
+          ],
+          [
+            "checks"
+          ]
+        ]
+      },
+      "keys_evidence": "rqint_leverage_d11.py:479-504",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-D12",
+      "label": "D12 민감도 2종 (변형별 p_primary·p_secondary·SE)",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_rqint_d12/_sealed/d12_result.json": [
+          [
+            "t_obs"
+          ],
+          [
+            "variants",
+            "i",
+            "label_rule"
+          ],
+          [
+            "variants",
+            "i",
+            "n_groups_G"
+          ],
+          [
+            "variants",
+            "i",
+            "B"
+          ],
+          [
+            "variants",
+            "i",
+            "p_primary"
+          ],
+          [
+            "variants",
+            "i",
+            "p_secondary"
+          ],
+          [
+            "variants",
+            "i",
+            "se_primary"
+          ],
+          [
+            "variants",
+            "i",
+            "se_secondary"
+          ],
+          [
+            "variants",
+            "ii",
+            "label_rule"
+          ],
+          [
+            "variants",
+            "ii",
+            "n_groups_G"
+          ],
+          [
+            "variants",
+            "ii",
+            "B"
+          ],
+          [
+            "variants",
+            "ii",
+            "p_primary"
+          ],
+          [
+            "variants",
+            "ii",
+            "p_secondary"
+          ],
+          [
+            "variants",
+            "ii",
+            "se_primary"
+          ],
+          [
+            "variants",
+            "ii",
+            "se_secondary"
+          ]
+        ]
+      },
+      "keys_evidence": "rqint_d12_run.py:1027-1064",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-S6",
+      "label": "S6 안정성 15셀 기술적 SS 분해",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_stability_ss15/_sealed/ss15_result.json": [
+          [
+            "cells"
+          ],
+          [
+            "two_way_ss"
+          ]
+        ]
+      },
+      "keys_evidence": "stability_ss15_run.py:723-756",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-STRAT",
+      "label": "연속 유사도 층화(M2b − M1b)",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_stratification/_sealed/stratification_result.json": [
+          [
+            "strata"
+          ],
+          [
+            "multiplicity"
+          ]
+        ]
+      },
+      "keys_evidence": "stratification_run.py:893-928",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-STRAT-PID",
+      "label": "유사도 층화(M2b − P-ID · RQ6)",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_stratification_pid/_sealed/stratification_pid_result.json": [
+          [
+            "strata"
+          ],
+          [
+            "multiplicity"
+          ]
+        ]
+      },
+      "keys_evidence": "pid_stratification_run.py:769-786",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-AXES",
+      "label": "층화 축 3종(C1 M2b − M1b · C2 M2b − P-ID)",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_stratification_axes/_sealed/axes_result.json": [
+          [
+            "strata"
+          ],
+          [
+            "multiplicity"
+          ]
+        ]
+      },
+      "keys_evidence": "axes_stratification_run.py:1032-1053",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-NULL",
+      "label": "재배치 null 전 결과(primary · ALT · T_obs)",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_null_MAIN/_sealed/null_result.json": [
+          [
+            "T_obs"
+          ],
+          [
+            "T_obs_basis"
+          ],
+          [
+            "primary"
+          ],
+          [
+            "ALT"
+          ]
+        ]
+      },
+      "keys_evidence": "null_main_run.py:1356-1390",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-LAMBDA",
+      "label": "⑦ λ 선택(rep별)",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_latefusion_rep1_seed201/_sealed/lambda_selected.json": [
+          [
+            "per_unit"
+          ],
+          [
+            "grid"
+          ]
+        ],
+        "experiments/runs/v3_latefusion_rep2_seed202/_sealed/lambda_selected.json": [
+          [
+            "per_unit"
+          ],
+          [
+            "grid"
+          ]
+        ],
+        "experiments/runs/v3_latefusion_rep3_seed203/_sealed/lambda_selected.json": [
+          [
+            "per_unit"
+          ],
+          [
+            "grid"
+          ]
+        ]
+      },
+      "keys_evidence": "confirmatory_latefusion.py:869-876",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-REP",
+      "label": "반복별·consensus macro AP (RF 계열)",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_repeat_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_repeat_macro_ap"
+          ]
+        ],
+        "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_repeat_macro_ap"
+          ]
+        ]
+      },
+      "keys_evidence": "confirmatory_oof_rep1.py:568-577 · rep23.py:376-382,483-490 · rest.py:651-661,706-714 · rftuned.py:582-594,631-640",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-LATEFUSION",
+      "label": "⑦ 부속 지표(RQ7 · rep별 · consensus)",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_latefusion_rep1_seed201/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ],
+          [
+            "auxiliary_registered_s12"
+          ]
+        ],
+        "experiments/runs/v3_latefusion_rep2_seed202/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ],
+          [
+            "auxiliary_registered_s12"
+          ]
+        ],
+        "experiments/runs/v3_latefusion_rep3_seed203/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_fold_macro_ap"
+          ],
+          [
+            "auxiliary_registered_s12"
+          ]
+        ],
+        "experiments/runs/v3_latefusion_consensus_rep123/_sealed/metrics_full.json": [
+          [
+            "macro_ap"
+          ],
+          [
+            "per_repeat_macro_ap"
+          ]
+        ]
+      },
+      "keys_evidence": "confirmatory_latefusion.py:879-900,946-954",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "SP-GIN-CELLS",
+      "label": "GIN 셀 88",
+      "status": "sealed_publish",
+      "kind": "sealed_publish",
+      "extract": {
+        "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/metrics_full.json": [
+          [
+            "cells"
+          ]
+        ]
+      },
+      "keys_evidence": "confirmatory_gin_consensus.py:448-484,511-531",
+      "decision_ref": "판정 미사용 · 항상 병기 (명세 S2·S3·S5·S6)"
+    },
+    {
+      "id": "F-D13",
+      "label": "D13 ⑧ 참조분포 히스토그램",
+      "status": "descriptive",
+      "kind": "figure",
+      "figure": {
+        "type": "d13_tstar",
+        "t_star": "experiments/runs/v3_rqint_holm8/_sealed/t_star.npy",
+        "holm8": "experiments/runs/v3_rqint_holm8/_sealed/holm8_result.json",
+        "observed_key": [
+          "t_obs"
+        ],
+        "bins": 200,
+        "range_rule": "대칭 [−max|T*|, +max|T*|]",
+        "dpi": 150,
+        "output_stem": "fig_d13_rqint_reference",
+        "x_label": "T* (RQ-int coin reference, B coin vectors)"
+      },
+      "decision_ref": "기술"
+    },
+    {
+      "id": "F-NULL",
+      "label": "④ 재배치 null 분포 그림(등록 §5 A)",
+      "status": "descriptive",
+      "kind": "figure",
+      "figure": {
+        "type": "null_hist",
+        "checkpoint": "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl",
+        "null_result": "experiments/runs/v3_null_MAIN/_sealed/null_result.json",
+        "filter_field": "enters_p_emp",
+        "value_field": "macro_AP",
+        "kind_field": "mode",
+        "kind_values": {
+          "global": "global",
+          "family": "family"
+        },
+        "observed_key": [
+          "T_obs"
+        ],
+        "bins": 50,
+        "range_rule": "패널별 [min, max]",
+        "dpi": 150,
+        "output_stem": "fig_null_realloc",
+        "x_label": "M2b macro AP under natural-embedding reallocation",
+        "fields_evidence": "null_main_run.py:545 CKPT_FIELDS · 526 · 532"
+      },
+      "decision_ref": "기술"
+    },
+    {
+      "id": "T-REPORT",
+      "label": "보고 문면 축자 삽입(§0-5 · §14 · D19 · R-d · RQ-int 비유의)",
+      "status": "descriptive",
+      "kind": "reporting",
+      "text_keys": [
+        "estimand_verbatim",
+        "estimand_commentary_U5",
+        "null_hypothesis_rqint_verbatim",
+        "t_obs_basis_rq4",
+        "d13_methods",
+        "d14_rule",
+        "d19_verbatim",
+        "rqint_nonsignificant_verbatim",
+        "r_d",
+        "s6_text",
+        "sign_awareness_table",
+        "reporting_priority_and_disclosure",
+        "allowed_claims_s14_verbatim"
+      ],
+      "references": {
+        "power_simulation": "docs/94 R1 캘리브레이션 본런(2026-08-18 r1_passed) · D19 축자 문장",
+        "sign_disclosure": "experiments/provenance/sign_disclosure_matrix.json"
+      },
+      "decision_ref": "기술"
+    }
+  ],
+  "holm": {
+    "function": "sap.decision.holm",
+    "alpha": 0.05,
+    "family_size": 7,
+    "labels": [
+      "M2b-P-ID",
+      "M2b-P-FAM",
+      "M2b-realloc_null",
+      "M2b-M0",
+      "M2b-RF_tuned",
+      "RFseq-RF",
+      "RQ-int"
+    ],
+    "panels": {
+      "panel1": {
+        "slots": {
+          "M2b-P-ID": {
+            "item": "C2",
+            "field": [
+              "p_raw"
+            ]
+          },
+          "M2b-P-FAM": {
+            "item": "C3",
+            "field": [
+              "p_raw"
+            ]
+          },
+          "M2b-realloc_null": {
+            "item": "C4",
+            "field": [
+              "p_slot"
+            ]
+          },
+          "M2b-M0": {
+            "item": "C5",
+            "field": [
+              "p_raw"
+            ]
+          },
+          "M2b-RF_tuned": {
+            "item": "C6",
+            "field": [
+              "p_raw"
+            ]
+          },
+          "RFseq-RF": {
+            "item": "C7",
+            "field": [
+              "p_raw"
+            ]
+          },
+          "RQ-int": {
+            "item": "C8",
+            "field": [
+              "p_slot"
+            ]
+          }
+        }
+      },
+      "panel2": {
+        "slots": {
+          "M2b-P-ID": {
+            "item": "C2",
+            "field": [
+              "p_raw"
+            ]
+          },
+          "M2b-P-FAM": {
+            "item": "C3",
+            "field": [
+              "p_raw"
+            ]
+          },
+          "M2b-realloc_null": {
+            "item": "C4",
+            "field": [
+              "p_slot"
+            ]
+          },
+          "M2b-M0": {
+            "item": "C5",
+            "field": [
+              "p_raw"
+            ]
+          },
+          "M2b-RF_tuned": {
+            "item": "C6",
+            "field": [
+              "p_raw"
+            ]
+          },
+          "RFseq-RF": {
+            "item": "C7",
+            "field": [
+              "p_raw"
+            ]
+          },
+          "RQ-int": {
+            "fixed_value": 1.0,
+            "note": "D14 판2 — ⑧ = 1.0"
+          }
+        }
+      }
+    },
+    "panel_notes": {
+      "panel1": "⑧ = holm8_result.p_primary (주 p)",
+      "panel2": "⑧ = 1.0"
+    },
+    "adjudication_panel": "panel1",
+    "comparison_panel": "panel2",
+    "d14_excluded_label": "RQ-int",
+    "missing_fill_rule": "Holm 결측 1.0 규칙 발동 = 무결성 실패 (undefined_filled 하나라도 true → 중단)",
+    "h3": "RQ3·RQ4·RQ-int 판정 = 판1 조정 p (사이드카 1호 d14_panel1_refers_to 정합)"
+  },
+  "g1_bit_equality": {
+    "item": "C1",
+    "holm8": "experiments/runs/v3_rqint_holm8/_sealed/holm8_result.json",
+    "holm8_delta_key": [
+      "delta_rf"
+    ],
+    "d9": "experiments/runs/v3_rqint_holm8/_sealed/d9_bca_result.json",
+    "d9_rf_key": [
+      "rf"
+    ],
+    "bootstrap_keys": [
+      "delta_obs",
+      "ci_bca",
+      "ci_percentile",
+      "ci_primary",
+      "boot_summary"
+    ],
+    "comparison": "_json_safe(재계산) == d9_bca_result.json[rf][key] (NaN→null 동일 규칙 · 정확 일치)",
+    "gin_cell3_vs_holm8_delta_gin": "S-GIN 처리 중 assert"
+  },
+  "read_scope": {
+    "files": [
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_C-CAP.npz",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M1.npz",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M2.npz",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-FAM.npz",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-ID.npz",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/consensus_RF_tuned.npz",
+      "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/metrics_full.json",
+      "experiments/runs/v3_confirm_sens_consensus_rep123/_sealed/consensus_M1b_pchembl.npz",
+      "experiments/runs/v3_confirm_sens_consensus_rep123/_sealed/consensus_M2b_pchembl.npz",
+      "experiments/runs/v3_confirm_sens_consensus_rep123/_sealed/consensus_P-FAM_selfclust.npz",
+      "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+      "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+      "experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json",
+      "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/metrics_full.json",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens.npz",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_half.npz",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_sens.npz",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq.npz",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq_sens.npz",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/metrics_full.json",
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/lambda_selected.json",
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/metrics_full.json",
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/lambda_selected.json",
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/metrics_full.json",
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/lambda_selected.json",
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/metrics_full.json",
+      "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl",
+      "experiments/runs/v3_null_MAIN/_sealed/null_result.json",
+      "experiments/runs/v3_rqint_d12/_sealed/d12_result.json",
+      "experiments/runs/v3_rqint_holm8/_sealed/d9_bca_result.json",
+      "experiments/runs/v3_rqint_holm8/_sealed/holm8_result.json",
+      "experiments/runs/v3_rqint_holm8/_sealed/t_star.npy",
+      "experiments/runs/v3_rqint_leverage_d11/_sealed/leverage_diagnostics.json",
+      "experiments/runs/v3_stability_ss15/_sealed/ss15_result.json",
+      "experiments/runs/v3_stratification/_sealed/stratification_result.json",
+      "experiments/runs/v3_stratification_axes/_sealed/axes_result.json",
+      "experiments/runs/v3_stratification_pid/_sealed/stratification_pid_result.json"
+    ],
+    "trees": [
+      "experiments/runs/v3_confirm_rep1_seed201",
+      "experiments/runs/v3_confirm_rep2_seed202",
+      "experiments/runs/v3_confirm_rep3_seed203",
+      "experiments/runs/v3_confirm_rest_consensus_rep123",
+      "experiments/runs/v3_confirm_rest_rep1_seed201",
+      "experiments/runs/v3_confirm_rest_rep2_seed202",
+      "experiments/runs/v3_confirm_rest_rep3_seed203",
+      "experiments/runs/v3_confirm_rftuned_consensus_rep123",
+      "experiments/runs/v3_confirm_rftuned_rep1_seed201",
+      "experiments/runs/v3_confirm_rftuned_rep2_seed202",
+      "experiments/runs/v3_confirm_rftuned_rep3_seed203",
+      "experiments/runs/v3_confirm_sens_consensus_rep123",
+      "experiments/runs/v3_consensus_rep123",
+      "experiments/runs/v3_gin_confirm_consensus_rep123",
+      "experiments/runs/v3_latefusion_consensus_rep123",
+      "experiments/runs/v3_latefusion_rep1_seed201",
+      "experiments/runs/v3_latefusion_rep2_seed202",
+      "experiments/runs/v3_latefusion_rep3_seed203",
+      "experiments/runs/v3_null_MAIN",
+      "experiments/runs/v3_rqint_d12",
+      "experiments/runs/v3_rqint_holm8",
+      "experiments/runs/v3_rqint_leverage_d11",
+      "experiments/runs/v3_stability_ss15",
+      "experiments/runs/v3_stratification",
+      "experiments/runs/v3_stratification_axes",
+      "experiments/runs/v3_stratification_pid"
+    ],
+    "trees_without_access_log_at_118": [
+      "experiments/runs/v3_confirm_rep2_seed202",
+      "experiments/runs/v3_confirm_rep3_seed203",
+      "experiments/runs/v3_confirm_rftuned_consensus_rep123",
+      "experiments/runs/v3_confirm_sens_consensus_rep123",
+      "experiments/runs/v3_latefusion_consensus_rep123"
+    ],
+    "rule": "개봉 스크립트 + 독립 검산기 판독 범위 합집합 (검산기 ⊆ 스크립트)"
+  },
+  "stat_groups": {
+    "confirm_gin": [
+      "experiments/runs/v3_gin_confirm_rep1_seed201",
+      "experiments/runs/v3_gin_confirm_rep2_seed202",
+      "experiments/runs/v3_gin_confirm_rep3_seed203"
+    ],
+    "stability": [
+      "experiments/runs/v3_gin_stability"
+    ],
+    "gin_consensus": [
+      "experiments/runs/v3_gin_confirm_consensus_rep123"
+    ],
+    "leverage": [
+      "experiments/runs/v3_rqint_leverage_d11"
+    ],
+    "holm8": [
+      "experiments/runs/v3_rqint_holm8"
+    ],
+    "d12": [
+      "experiments/runs/v3_rqint_d12"
+    ],
+    "s6": [
+      "experiments/runs/v3_stability_ss15"
+    ],
+    "sens": [
+      "experiments/runs/v3_confirm_sens",
+      "experiments/runs/v3_confirm_sens_rep1_seed201",
+      "experiments/runs/v3_confirm_sens_rep2_seed202",
+      "experiments/runs/v3_confirm_sens_rep3_seed203",
+      "experiments/runs/v3_confirm_sens_consensus_rep123"
+    ],
+    "__rest__": []
+  },
+  "independent_check": {
+    "script_path": "v3_Multimodal/src/unblinding_independent_check.py",
+    "output_file": "independent_check.json",
+    "invocation": "별도 프로세스: python -B <script> --stage check --root <root> --plan <plan> --staging <staging>",
+    "banned_import_prefixes": [
+      "sap",
+      "unblinding_run",
+      "rqint_",
+      "confirmatory_",
+      "ladder_",
+      "compute_lock"
+    ],
+    "allowed_imports": [
+      "__future__",
+      "sys",
+      "argparse",
+      "ast",
+      "hashlib",
+      "io",
+      "json",
+      "os",
+      "numpy",
+      "pandas",
+      "rdkit",
+      "scipy",
+      "sklearn"
+    ],
+    "constants": {
+      "tol_delta": 1e-12,
+      "tol_perm": 1e-12,
+      "tol_bca": 1e-10,
+      "eps": 1e-12,
+      "n_perm_regenerate": 200,
+      "sesoi": 0.01,
+      "holm_m": 7,
+      "pt_min_positive": 10,
+      "pt_min_positive_clusters": 3
+    },
+    "perm_protocol_verbatim": "rng = np.random.default_rng(seed); uniq = np.unique(groups); gi_of_row = np.searchsorted(uniq, groups); for b in range(B): flip_group = rng.random(n_groups) < 0.5; swap_row = flip_group[gi_of_row]; M1p = np.where(sr, cM2b, cM1b); M2p = np.where(sr, cM1b, cM2b); perm[b] = macro(M2p) − macro(M1p)  (sap/signflip.py _perm_deltas 문면)",
+    "p_rule": "p = (1 + #{|perm| ≥ |Δ_checker| − 1e-12}) / (B + 1) — 정확 일치",
+    "comparisons": {
+      "delta": "|차| ≤ 1e-12",
+      "perm_first_200": "|차| ≤ 1e-12",
+      "p": "==",
+      "bca": "|차| ≤ 1e-10 · status ==",
+      "holm": "==",
+      "labels": "==",
+      "holm_reject": "조정 p < α",
+      "bh_reject": "q ≤ 0.05",
+      "tost": "Positive 우선 · Equivalent = 닫힌 구간 [−0.01, 0.01]"
+    }
+  },
+  "outputs": {
+    "root": "experiments/runs/v3_unblinding",
+    "presence_glob": "experiments/runs/v3_unblinding*",
+    "staging_dir": "_staging",
+    "items_subdir": "items",
+    "results_dir": "results",
+    "failure_file": "failure.json",
+    "launches_file": "launches.jsonl",
+    "heartbeat_file": "heartbeat.jsonl",
+    "design_file": "design.json",
+    "design_groups_file": "design_groups.npy",
+    "decisions_file": "decisions.json",
+    "event_path": "experiments/provenance/unblinding_event.json",
+    "results_layout": [
+      "results_full.json",
+      "table_main.md/csv",
+      "table_pt_bh.md/csv",
+      "fig_d13_rqint_reference.png/json",
+      "fig_null_realloc.png/json",
+      "reporting_text.md",
+      "sealed_publish/<경로__치환>",
+      "manifest_public.json"
+    ],
+    "staging_human_viewing": "금지 — 실패·중단 상태 staging 열람 = 부분 개봉(docs/70:27 위반). 진단은 오류 코드·항목 id·파일명만.",
+    "expected_post_counts": {
+      "rule": "개봉 후 n_access_log = 119 감사 n_access_log + len(trees_without_access_log_at_118) · n_sealed_files_total 동일 증가 · n_sealed_artifacts 불변 · 120 착수 시 119 값으로 확정",
+      "at_118_stat": {
+        "n_access_log": 30,
+        "n_sealed_files_total": 831,
+        "n_sealed_artifacts": 801,
+        "n_sealed_dirs": 39
+      },
+      "access_lines_rule": "판독 트리마다 launch 수 + 공개 1줄 증가"
+    },
+    "open_sealed_relation": "sap.redaction.open_sealed 는 호출하지 않는다 — 파일별 사람 열람 경로가 아니라 R7 일괄 공개이며, 사람 노출 이벤트는 unblinding_event.json + 각 판독 트리 access.log(type unblinding_publish · human_exposure true)로 기록한다."
+  },
+  "approval_binding": {
+    "record_path": "experiments/provenance/unblinding_approval.json",
+    "approver": "양진홍",
+    "required_fields": [
+      "approver",
+      "approved_at_kst",
+      "evidence",
+      "approved_hashes",
+      "recorded_by",
+      "recorded_at_kst"
+    ],
+    "evidence_fields": [
+      "gmail_message_id",
+      "thread_id",
+      "quoted_approval_text"
+    ],
+    "approved_hashes_paths": [
+      "v3_Multimodal/config/unblinding_plan_v1.json",
+      "v3_Multimodal/src/unblinding_run.py",
+      "v3_Multimodal/src/unblinding_independent_check.py",
+      "docs/118_unblinding_reporting_plan.md",
+      "docs/118b_external_validation_plan.md",
+      "docs/119_pre_unblinding_audit_v3_report.md",
+      "experiments/provenance/pre_unblinding_audit_v3.json"
+    ],
+    "written_by": "블록 120 러너가 사용자가 제공한 승인 증거(Gmail)로 작성 (120 지시서 소관)",
+    "note": "approved_hashes 전부 == 현재 파일 sha 이어야 run 진행"
+  },
+  "expected_hash_source": {
+    "audit_path": "experiments/provenance/pre_unblinding_audit_v3.json",
+    "top_level_keys": [
+      "audit_version",
+      "verdict",
+      "audited_at_kst",
+      "sealed_sha256",
+      "sealed_counts",
+      "stat_fingerprints",
+      "access_log_lines",
+      "frozen_118_sha256",
+      "report_path"
+    ],
+    "schema": {
+      "audit_version": "\"v3\"",
+      "verdict": "\"PASS\"|\"FAIL\"",
+      "sealed_sha256": "{repo 상대경로: sha256 전문} — 전 봉인 파일",
+      "sealed_counts": [
+        "n_sealed_dirs",
+        "n_sealed_files_total",
+        "n_sealed_artifacts",
+        "n_access_log"
+      ],
+      "stat_fingerprints": "{그룹: sha256} — 그룹 = stat_groups 의 각 이름(__rest__ → existing) + 각 '<그룹>__no_access' (규칙 = '<상대경로>\\t<바이트>' 정렬 → '\\n'.join + '\\n' → sha256 · rel.startswith(prefix + os.sep))",
+      "access_log_lines": "{트리 상대경로: 개행 수}",
+      "frozen_118_sha256": "{BC-6 동결물 7종: sha256}",
+      "report_path": "docs/119_pre_unblinding_audit_v3_report.md"
+    },
+    "report_path": "docs/119_pre_unblinding_audit_v3_report.md",
+    "label_sha256": {
+      "master_X.parquet": "788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6",
+      "master_Y.parquet": "bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018"
+    },
+    "secondary_cross_check": "각 트리 manifest_public.json·config.json·*_public.json·first_look_log.json·sealing_completeness_audit(_v2).json 기록 sha — 119 가 일치 확인 (sealing_completeness_audit 는 sens·GIN consensus·D11·D12·Holm8·S6 미포함)"
+  },
+  "flags": {
+    "gin_start_still_blocked_true": [
+      "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+      "v3_Multimodal/config/gin_seed_freeze.json",
+      "v3_Multimodal/config/gin_inner_valid_freeze.json"
+    ],
+    "unblinding_performed_false": [
+      "v3_Multimodal/config/post_interim_freeze_v1_0.status.json",
+      "v3_Multimodal/config/gin_train_contract.json",
+      "experiments/runs/v3_gin_start_authorization/manifest_t4_post_confirmatory.json"
+    ]
+  },
+  "long_run": {
+    "watchdog_path": "v3_Multimodal/src/unblinding_watchdog.py",
+    "watchdog_dir": "experiments/runs/v3_unblind_watchdog",
+    "max_restarts": 5,
+    "adapter_min_w": 90,
+    "power_gate": "pmset -g ps 'AC Power' ∧ 어댑터 ≥ 90 W — 배터리면 기동 거부",
+    "load_gate": "compute_lock.gate_a_load (load1 < 2.0) · 래퍼 LOAD_MAX 1.7 × 3회 연속",
+    "compute_lock_path": "experiments/runs/.compute_lock.json",
+    "single_instance": "flock(watchdog.lock)",
+    "heartbeat_fields": [
+      "ts_kst",
+      "event",
+      "item",
+      "power_ok",
+      "load1"
+    ],
+    "pt_checkpoint_every": 50,
+    "estimated_hours": "≈ 20~22 h (docs/118 F6 교차검증 추정)",
+    "progress": "래퍼가 heartbeat item_done 수로 잔여 추정(progress 이벤트 · 값 0)"
+  },
+  "failure_rules": {
+    "integrity_failure_stop_no_resume": [
+      "input_missing",
+      "sha_mismatch",
+      "npz_keys",
+      "matrix_shape_or_order",
+      "matrix_nonfinite",
+      "label_order",
+      "label_shape",
+      "n_groups",
+      "key_missing",
+      "delta_mismatch_signflip_bootstrap",
+      "confirmatory_nonfinite",
+      "completeness_items",
+      "g1_delta_rf",
+      "g1_d9_<key>",
+      "g1_cell3_vs_holm8_delta_gin",
+      "holm_undefined_fill_triggered",
+      "holm_family_labels",
+      "independent_check_error",
+      "independent_check_mismatch",
+      "figure_no_rows",
+      "write_guard",
+      "access_log_no_trailing_newline"
+    ],
+    "on_failure": "staging 보존 · _staging/failure.json(code·item·file) · 공개 0 · 슬롯 삭제·값 대입 금지 · amendment 필요 · 재개 거부(prior_failure)",
+    "bca_not_estimable": "결과이지 실패 아님 (판정 함수가 status 로 처리)"
+  },
+  "resume_rules": {
+    "allowed": "전원 차단 · SIGTERM · 크래시 · 감시 래퍼 재시작 — 같은 명령 재실행 · 완료 항목(_staging/items/<id>.json) 건너뜀 · 항목 내부 sign-flip/bootstrap 부분 결과(_parts) 재사용 · S-PT 는 PT 단위 체크포인트",
+    "determinism": "시드 고정 · 결정적 → 재개 결과 == 무중단 결과 (selftest U9 바이트 동일)",
+    "launch_record": "launch 마다 R1 access.log 1줄 + launches.jsonl 1줄",
+    "max_restarts": 5
+  },
+  "freeze": {
+    "selftest_run_path": "experiments/runs/v3_unblind_freeze/selftest_unblinding_run.json",
+    "selftest_check_path": "experiments/runs/v3_unblind_freeze/selftest_independent_check.json",
+    "freeze_manifest_path": "experiments/runs/v3_unblind_freeze/freeze_manifest.json",
+    "frozen_7": [
+      "v3_Multimodal/config/unblinding_plan_v1.json",
+      "v3_Multimodal/src/unblinding_run.py",
+      "v3_Multimodal/src/unblinding_watchdog.py",
+      "v3_Multimodal/src/unblinding_independent_check.py",
+      "docs/118_unblinding_reporting_plan.md",
+      "experiments/runs/v3_unblind_freeze/selftest_unblinding_run.json",
+      "experiments/runs/v3_unblind_freeze/selftest_independent_check.json"
+    ]
+  },
+  "reporting_text": {
+    "null_hypothesis_rqint_verbatim": "강한 null(각 family 내부 arm 라벨이 군 단위 교환 가능)을 부과하는 공유 동전 군 단위 교환 검정 · 검정 대상은 약한 null(Δ_RF = Δ_GIN) · 약한 null 하 1종오류는 R1 사전지정 시뮬레이션 조건(보정 전 α=0.05)에서만 실증 · 「약한 null 정확검정」 표기 금지. 참조분포 = 동전 100,000 + 짝 여집합(독립 추출 200,000 아님).",
+    "estimand_verbatim": "conditional OOF evaluation — 고정된 consensus OOF 예측 위에서의 macro AP Δ. 모델 재학습 미포함(예측을 고정한 조건부 평가). A6: cluster 복원추출→멤버 약물행 복제→pooled AP = drug-weighted macro AP.",
+    "estimand_commentary_U5": "재학습 변동은 RF 에서 분할 반복 3(학습 random_state 42 고정), GIN 에서 분할 반복 3 × 학습시드 3 범위에서만 반영 · 새 표본 일반화 주장 아님",
+    "s6_text": "선택된 15셀의 기술적 제곱합 분해. 금지 표현 = 「분할 분산」·「시드가 X% 설명」·「재현성 입증」·「seed 효과 유의」. 병기 = 확증 seed 중복(5 중 3) · unit 간 약물 중복 수 · unit별 유효 PT 수.",
+    "sign_awareness_table": "RF 부호 4건 인지(2026-07-27 연구자 1인 · 정본 experiments/provenance/sign_disclosure_matrix.json) ↔ 이후 결정 목록(결정자·시점·방향 — U2·W1′~W3·I1~I6·J1~J6·G1~G11·H1~H4) — 「완전 맹검」 주장 금지.",
+    "t_obs_basis_rq4": "④ T_obs = rep1(seed 201) OOF 기준(consensus 아님) — 동결 사실.",
+    "r_d": "보정 전 α=0.05 경계 일치를 Holm 보정 후 판정으로 확대 서술 금지 · 기존 감사 승계 범위 = 확인된 조건으로 한정.",
+    "d19_verbatim": "The τ = 0.02 power level (0.735 at unadjusted α = 0.05, middle rung of the pre-specified ladder) was below the 0.80 target; power for the Holm-adjusted decision is lower, so a non-significant RQ-int has limited ability to exclude interactions of that size.",
+    "rqint_nonsignificant_verbatim": "A non-significant RQ-int is reported as inconclusive and must not be interpreted as evidence of equal sequence effects across model families.",
+    "d14_rule": "Both adjusted-p tables are reported in full (docs/100:145). 판1(⑧ = 주 p) · 판2(⑧ = 1.0). 두 판에서 다른 6슬롯 결론이 달라지면 본문에 명시한다(d14_conclusion_differs).",
+    "d13_methods": "Kish G_eff 85.3 · 상위 2군 14.2% 지배(docs/84:55)를 방법부에 명시한다.",
+    "reporting_priority_and_disclosure": "① 주 판정은 주 p·조정 p 로만 결정 ② D12·BCa·S6·민감도와의 불일치는 공개 의무 ③ 부가분석으로 주 판정 대체 금지 ④ 결과 설명용 원인·새 수치 기준(「안정적」 등)은 미리 정하지 않음 ⑤ 산출 목록의 모든 항목을 결과와 무관하게 공개.",
+    "allowed_claims_s14_verbatim": "| 확보 결과 | 허용 주장 |\n|---|---|\n| M2b > M1b | 서열 표현이 (개수·연구량 통제 후) 증분 정보 제공 |\n| M2b > C-CAP | 개선이 단순 파라미터/용량 증가 아님 |\n| M2b > P-ID | 서열 내용이 이산 정체성 이상 기여 |\n| M2b > P-FAM | 서열이 coarse family 이상 기여 |\n| True > 재배치 null | 정확한 drug–target 대응이 예측에 기여 |\n| 유사도 낮은 층 M2b > P-ID | 서열 표현이 미관찰 표적에 전이 |\n| RF+seq > RF | 서열이 fingerprint와 비중복 정보 제공 |\n| 외부서 방향 재현 | label-source·시간 transportability 지지 |\n| M2b ≈ RF | 관측 성능 유사; 우월·비열등 주장 불가 |\n| M2b < RF 이나 M2b > M1b | 서열 증분 가치 있으나 최종 utility는 RF 미만 |\n| M2b ≈ P-ID | 이득이 서열보다 정체성 기인 가능 |\n| 재배치 null ≈ M2b | drug–target 대응 기반 해석 불가 |\n| seen 성공·unseen 실패 | continuous representation 이점, 기전 정보 미입증 |",
+    "insertion_order": [
+      "estimand_verbatim",
+      "estimand_commentary_U5",
+      "null_hypothesis_rqint_verbatim",
+      "t_obs_basis_rq4",
+      "d13_methods",
+      "d14_rule",
+      "d19_verbatim",
+      "rqint_nonsignificant_verbatim",
+      "r_d",
+      "s6_text",
+      "sign_awareness_table",
+      "reporting_priority_and_disclosure",
+      "allowed_claims_s14_verbatim"
+    ]
+  },
+  "prereg_coverage": {
+    "source": "docs/30_preregistration_OSF_clean.md",
+    "source_sha256": "cdbaa7e69e654a36e753f09b05a5e390a7a049c2075e19633fab496d74159413",
+    "map": {
+      "§3 RQ2 M2b > M1b (primary)": {
+        "status": "item",
+        "item_ids": [
+          "C1"
+        ]
+      },
+      "§3 RQ1 M1 > M0": {
+        "status": "item",
+        "item_ids": [
+          "S-RQ1"
+        ]
+      },
+      "§3 RQ1b M1b > M1": {
+        "status": "item",
+        "item_ids": [
+          "S-RQ1b"
+        ]
+      },
+      "§3 RQ3a M2b > P-ID": {
+        "status": "item",
+        "item_ids": [
+          "C2"
+        ]
+      },
+      "§3 RQ3b M2b > P-FAM": {
+        "status": "item",
+        "item_ids": [
+          "C3"
+        ]
+      },
+      "§3 RQ3d M2b > C-CAP": {
+        "status": "item",
+        "item_ids": [
+          "C-CAP"
+        ]
+      },
+      "§3 RQ4 M2b > 자연 임베딩 재배치 null": {
+        "status": "item",
+        "item_ids": [
+          "C4",
+          "F-NULL",
+          "SP-NULL"
+        ]
+      },
+      "§3 RQ5 반복 scaffold OOF ΔAP > 0": {
+        "status": "item",
+        "item_ids": [
+          "C1",
+          "SP-REP"
+        ],
+        "note": "consensus 위 추론 + 반복별 macro AP 공개"
+      },
+      "§3 RQ6 유사도 낮은 층 M2b > P-ID": {
+        "status": "item",
+        "item_ids": [
+          "SP-STRAT-PID",
+          "SP-AXES"
+        ]
+      },
+      "§3 RQ7 RF+seq > RF": {
+        "status": "item",
+        "item_ids": [
+          "C7",
+          "S-7h",
+          "S-7s",
+          "SP-LATEFUSION",
+          "SP-LAMBDA"
+        ]
+      },
+      "§3 RQ-int interaction test": {
+        "status": "item",
+        "item_ids": [
+          "C8",
+          "SP-H8",
+          "SP-D9",
+          "SP-D11",
+          "SP-D12",
+          "F-D13"
+        ]
+      },
+      "§3 RQ8 외부·시간 방향 재현": {
+        "status": "plan_frozen_pre_opening",
+        "note": "docs/118b_external_validation_plan.md sha256 4f06d39e9aa827bd63a2ac28e6dbedbedec2430bbde10aaadd567c81c726f60e · execution_post_opening · R8-1~R8-3 = 라벨 출처 이식성 · EU∪UK 주 · 부호 일치만 (H1)"
+      },
+      "§4 M2 = M1 + 서열 (secondary robustness)": {
+        "status": "item",
+        "item_ids": [
+          "S-M2"
+        ]
+      },
+      "§4 GIN family 사다리 robustness (방향·CI)": {
+        "status": "item",
+        "item_ids": [
+          "S-GIN",
+          "SP-GIN-CELLS",
+          "SP-D9"
+        ]
+      },
+      "§4 neural family mean + DeepSets 병행(보조)": {
+        "status": "deviation_not_performed",
+        "reason": "DeepSets 집계 미구현 — GIN 은 mean-pool 집계판만 학습",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§4 M1b 적응증·ATC 통제 sensitivity": {
+        "status": "deviation_not_performed",
+        "reason": "적응증·ATC 공변량 미수집·미학습",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§4 C-CAP train–val gap 보고": {
+        "status": "deviation_not_performed",
+        "reason": "확증 RF 하네스 산출물에 train/valid 지표 기록 없음(rest metrics_full 키 = OOF macro AP 계열만 · confirmatory_oof_rest.py:651-661)",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§4 baseline label prevalence · prevalence-normalized lift": {
+        "status": "item",
+        "item_ids": [
+          "S-base",
+          "S-sub"
+        ]
+      },
+      "§4 baseline Morgan RF": {
+        "status": "item",
+        "item_ids": [
+          "C5"
+        ],
+        "note": "M0 = Morgan RF"
+      },
+      "§4 baseline tuned RF": {
+        "status": "item",
+        "item_ids": [
+          "C6"
+        ]
+      },
+      "§4 baseline M0 GIN": {
+        "status": "item",
+        "item_ids": [
+          "S-GIN",
+          "SP-GIN-CELLS"
+        ]
+      },
+      "§4 baseline Morgan + target multi-hot (LR)": {
+        "status": "deviation_not_performed",
+        "reason": "LR 모델 미학습(H4)",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§4 baseline Morgan + 평균 ProtBERT (ridge · MLP)": {
+        "status": "deviation_not_performed",
+        "reason": "ridge·MLP 모델 미학습(H4)",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§4 baseline target-only sequence model": {
+        "status": "item",
+        "item_ids": [
+          "S-base"
+        ]
+      },
+      "§4 baseline RF+seq late-fusion": {
+        "status": "item",
+        "item_ids": [
+          "C7"
+        ]
+      },
+      "§4 보조자료(C-RAND · M3 · M4 · neural DeepSets · ESM-2 · affinity top-k sweep · PU-loss · calibration 세부 · leave-one-target-out · 1,000회 test-time permutation · 단계화 null · 적응증·ATC)": {
+        "status": "deviation_not_performed",
+        "reason": "보조자료(본문 아님) 실험 미수행 — H4 일괄 이탈 기록",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§5 A 자연 임베딩 재배치 null (global · family-constrained · realization ≥100)": {
+        "status": "item",
+        "item_ids": [
+          "C4",
+          "SP-NULL"
+        ]
+      },
+      "§5 A 관측값과 null 분포 전체 그림": {
+        "status": "item",
+        "item_ids": [
+          "F-NULL"
+        ]
+      },
+      "§5 B retrained degree-preserving null": {
+        "status": "deviation_not_performed",
+        "reason": "재학습 null 미수행(H4)",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§5 C residue-shuffle": {
+        "status": "deviation_not_performed",
+        "reason": "residue-shuffle 임베딩 미산출(H4)",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§6 반복별 macro AP 3개 보고": {
+        "status": "item",
+        "item_ids": [
+          "SP-REP",
+          "SP-LATEFUSION"
+        ]
+      },
+      "§6 consensus OOF 위 통계 추론": {
+        "status": "item",
+        "item_ids": [
+          "C1",
+          "C2",
+          "C3",
+          "C5",
+          "C6",
+          "C7"
+        ]
+      },
+      "§6 GIN outer fold당 3 training seed 평균": {
+        "status": "item",
+        "item_ids": [
+          "S-GIN"
+        ]
+      },
+      "§7 primary macro AP (global 양성 ≥10 PT · consensus OOF)": {
+        "status": "item",
+        "item_ids": [
+          "C1"
+        ]
+      },
+      "§7 전체 370 PT macro AP": {
+        "status": "item",
+        "item_ids": [
+          "C1"
+        ],
+        "note": "master_Y 의 370 열 = 양성 ≥ 10 PT 전부 → primary 와 같은 집합"
+      },
+      "§7 N=20 macro AP": {
+        "status": "item",
+        "item_ids": [
+          "S-sub"
+        ]
+      },
+      "§7 N=5 macro AP": {
+        "status": "not_computable",
+        "reason": "master_Y 는 양성 ≥ 10 PT 370 열만 보유(데이터 구조)"
+      },
+      "§7 prevalence bin별 macro AP": {
+        "status": "item",
+        "item_ids": [
+          "S-sub"
+        ]
+      },
+      "§7 label-weighted macro AP": {
+        "status": "item",
+        "item_ids": [
+          "S-sub"
+        ]
+      },
+      "§7 micro AP": {
+        "status": "item",
+        "item_ids": [
+          "S-sub"
+        ]
+      },
+      "§7 prevalence-normalized lift": {
+        "status": "item",
+        "item_ids": [
+          "S-sub"
+        ]
+      },
+      "§7 precision/recall@fixed-budget": {
+        "status": "item",
+        "item_ids": [
+          "S-sub"
+        ]
+      },
+      "§7 calibration(보조)": {
+        "status": "item",
+        "item_ids": [
+          "S-sub"
+        ]
+      },
+      "§7 ROC-AUC": {
+        "status": "item",
+        "item_ids": [
+          "S-sub"
+        ]
+      },
+      "§7 양성 1~2개 초희소 PT exploratory stratum": {
+        "status": "not_computable",
+        "reason": "master_Y 는 양성 ≥ 10 PT 370 열만 보유(데이터 구조)"
+      },
+      "§8 paired scaffold cluster bootstrap 95% CI · cluster 크기 분포 · effective number of clusters": {
+        "status": "item",
+        "item_ids": [
+          "C1"
+        ]
+      },
+      "§8 drug · size-weighted bootstrap sensitivity": {
+        "status": "item",
+        "item_ids": [
+          "S-unit-drug",
+          "S-unit-sw"
+        ]
+      },
+      "§8 paired sign-flip randomization": {
+        "status": "item",
+        "item_ids": [
+          "C1"
+        ]
+      },
+      "§8 PT bootstrap (endpoint-generalization sensitivity)": {
+        "status": "deviation_not_performed",
+        "reason": "PT 재표본 bootstrap 미구현(H4)",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§8 ②~⑧ Holm 보정": {
+        "status": "item",
+        "item_ids": [
+          "C2",
+          "C3",
+          "C4",
+          "C5",
+          "C6",
+          "C7",
+          "C8"
+        ],
+        "note": "decisions.holm 판1·판2"
+      },
+      "§8 PT별 formal test + BH-FDR 5%": {
+        "status": "item",
+        "item_ids": [
+          "S-PT"
+        ]
+      },
+      "§8 Interaction (RF vs GIN)": {
+        "status": "item",
+        "item_ids": [
+          "C8"
+        ]
+      },
+      "§8 Power simulation": {
+        "status": "item",
+        "item_ids": [
+          "T-REPORT"
+        ],
+        "note": "개봉 전 완료(docs/94 R1) · D19 축자 문장으로 보고"
+      },
+      "§8 SESOI 다차원(상대개선 · lift · 다수 prevalence 층 방향)": {
+        "status": "item",
+        "item_ids": [
+          "S-sub"
+        ],
+        "note": "판정은 |Δ| ≥ 0.01 단일 기준(sap.decision.SESOI) · 그 밖 차원은 기술 서술만"
+      },
+      "§8 음성결과 3분 판정(TOST)": {
+        "status": "item",
+        "item_ids": [
+          "C1",
+          "C2",
+          "C3",
+          "C5",
+          "C6",
+          "C7",
+          "C-CAP",
+          "S-RQ1",
+          "S-RQ1b",
+          "S-M2",
+          "S-7h",
+          "S-7s",
+          "S-pch",
+          "S-fsc"
+        ]
+      },
+      "§8 최소 성립 조건 RQ2 + (RQ3 또는 C-CAP) + RQ4": {
+        "status": "item",
+        "item_ids": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C-CAP"
+        ],
+        "note": "H2 · decisions.minimum_establishment"
+      },
+      "§9 연속 유사도 층화(primary)": {
+        "status": "item",
+        "item_ids": [
+          "SP-STRAT",
+          "SP-AXES",
+          "SP-STRAT-PID"
+        ]
+      },
+      "§9 하드 cold split (stress test)": {
+        "status": "deviation_not_performed",
+        "reason": "family-disjoint split 미생성(H4)",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§9 family 정의 다중": {
+        "status": "item",
+        "item_ids": [
+          "S-fsc"
+        ],
+        "note": "primary P-FAM = ChEMBL class L2 · selfclust = sensitivity(기존 재정의 기록 docs/33)"
+      },
+      "§9 dual-shift exploratory stress test": {
+        "status": "deviation_not_performed",
+        "reason": "dual-shift split 미생성(H4)",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§10 late-fusion λ inner valid 선택 · λ = 0.5 병기": {
+        "status": "item",
+        "item_ids": [
+          "C7",
+          "S-7h",
+          "SP-LAMBDA"
+        ]
+      },
+      "§10 상관 · rank disagreement · 상호 정오 · ensemble − RF Δ · 개선 fold 비율": {
+        "status": "item",
+        "item_ids": [
+          "SP-LATEFUSION"
+        ],
+        "note": "auxiliary_registered_s12 · per_fold_macro_ap 봉인값 공개 (H4 RQ7 부속)"
+      },
+      "§11 XAI(tier-2)": {
+        "status": "deviation_not_performed",
+        "reason": "attribution 분석 미수행(H4)",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§12 PU(보조)": {
+        "status": "deviation_not_performed",
+        "reason": "PU-loss·FAERS 검증 미수행(H4)",
+        "docs33_ref": "docs/33 항목 78 (개봉 전 기록)"
+      },
+      "§12 외부/시간 검증(tier-3)": {
+        "status": "plan_frozen_pre_opening",
+        "note": "= §3 RQ8 (docs/118b)"
+      },
+      "§13 GIN 대표 3 fold × 5 seed": {
+        "status": "item",
+        "item_ids": [
+          "SP-S6"
+        ]
+      },
+      "§14 결과별 허용 주장 규칙": {
+        "status": "item",
+        "item_ids": [
+          "T-REPORT"
+        ],
+        "note": "reporting_text.allowed_claims_s14_verbatim 축자"
+      }
+    }
+  },
+  "prereg_coverage_rules": {
+    "allowed_prefixes": [
+      "item",
+      "not_computable",
+      "deviation_not_performed",
+      "plan_frozen_pre_opening"
+    ],
+    "registered_items": [
+      "§3 RQ2 M2b > M1b (primary)",
+      "§3 RQ1 M1 > M0",
+      "§3 RQ1b M1b > M1",
+      "§3 RQ3a M2b > P-ID",
+      "§3 RQ3b M2b > P-FAM",
+      "§3 RQ3d M2b > C-CAP",
+      "§3 RQ4 M2b > 자연 임베딩 재배치 null",
+      "§3 RQ5 반복 scaffold OOF ΔAP > 0",
+      "§3 RQ6 유사도 낮은 층 M2b > P-ID",
+      "§3 RQ7 RF+seq > RF",
+      "§3 RQ-int interaction test",
+      "§3 RQ8 외부·시간 방향 재현",
+      "§4 M2 = M1 + 서열 (secondary robustness)",
+      "§4 GIN family 사다리 robustness (방향·CI)",
+      "§4 neural family mean + DeepSets 병행(보조)",
+      "§4 M1b 적응증·ATC 통제 sensitivity",
+      "§4 C-CAP train–val gap 보고",
+      "§4 baseline label prevalence · prevalence-normalized lift",
+      "§4 baseline Morgan RF",
+      "§4 baseline tuned RF",
+      "§4 baseline M0 GIN",
+      "§4 baseline Morgan + target multi-hot (LR)",
+      "§4 baseline Morgan + 평균 ProtBERT (ridge · MLP)",
+      "§4 baseline target-only sequence model",
+      "§4 baseline RF+seq late-fusion",
+      "§4 보조자료(C-RAND · M3 · M4 · neural DeepSets · ESM-2 · affinity top-k sweep · PU-loss · calibration 세부 · leave-one-target-out · 1,000회 test-time permutation · 단계화 null · 적응증·ATC)",
+      "§5 A 자연 임베딩 재배치 null (global · family-constrained · realization ≥100)",
+      "§5 A 관측값과 null 분포 전체 그림",
+      "§5 B retrained degree-preserving null",
+      "§5 C residue-shuffle",
+      "§6 반복별 macro AP 3개 보고",
+      "§6 consensus OOF 위 통계 추론",
+      "§6 GIN outer fold당 3 training seed 평균",
+      "§7 primary macro AP (global 양성 ≥10 PT · consensus OOF)",
+      "§7 전체 370 PT macro AP",
+      "§7 N=20 macro AP",
+      "§7 N=5 macro AP",
+      "§7 prevalence bin별 macro AP",
+      "§7 label-weighted macro AP",
+      "§7 micro AP",
+      "§7 prevalence-normalized lift",
+      "§7 precision/recall@fixed-budget",
+      "§7 calibration(보조)",
+      "§7 ROC-AUC",
+      "§7 양성 1~2개 초희소 PT exploratory stratum",
+      "§8 paired scaffold cluster bootstrap 95% CI · cluster 크기 분포 · effective number of clusters",
+      "§8 drug · size-weighted bootstrap sensitivity",
+      "§8 paired sign-flip randomization",
+      "§8 PT bootstrap (endpoint-generalization sensitivity)",
+      "§8 ②~⑧ Holm 보정",
+      "§8 PT별 formal test + BH-FDR 5%",
+      "§8 Interaction (RF vs GIN)",
+      "§8 Power simulation",
+      "§8 SESOI 다차원(상대개선 · lift · 다수 prevalence 층 방향)",
+      "§8 음성결과 3분 판정(TOST)",
+      "§8 최소 성립 조건 RQ2 + (RQ3 또는 C-CAP) + RQ4",
+      "§9 연속 유사도 층화(primary)",
+      "§9 하드 cold split (stress test)",
+      "§9 family 정의 다중",
+      "§9 dual-shift exploratory stress test",
+      "§10 late-fusion λ inner valid 선택 · λ = 0.5 병기",
+      "§10 상관 · rank disagreement · 상호 정오 · ensemble − RF Δ · 개선 fold 비율",
+      "§11 XAI(tier-2)",
+      "§12 PU(보조)",
+      "§12 외부/시간 검증(tier-3)",
+      "§13 GIN 대표 3 fold × 5 seed",
+      "§14 결과별 허용 주장 규칙"
+    ],
+    "scope": "등록 §3~§14 의 분석·보고 항목 전수. §6 분할 설계 규칙(5 fold × 3 반복 · rare-PT 제약 · split seed)·§13 실행 순서·§15 한계는 분석 항목이 아니라 매핑 대상에서 제외(설계 사실은 기존 하네스 verify 가 확인).",
+    "check": "registered_items 전부 map 에 존재 ∧ status ∈ allowed ∧ item 이면 item_ids ⊆ items.id (selftest U16)"
+  }
+}

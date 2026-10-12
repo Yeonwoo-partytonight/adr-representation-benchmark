@@ -1,0 +1,15 @@
+{
+  "n_models": 6,
+  "method": "A (등록 §6-(ii)): drug-PT별 raw OOF probability 산술평균 → consensus → 그 위에서 추론",
+  "dir": "experiments/runs/v3_confirm_rest_consensus_rep123",
+  "sealed_sha256": {
+    "consensus_M0.npz": "257de8d10e3a22d35e2de7a6245870fc4ca3e5309c92a8a74502aa8228d0bf1e",
+    "consensus_M1.npz": "6ebd5dd9a8023a8e165abc2d1c0ddd1337ce9ac147dcd96b547ec5b2f4cc69b4",
+    "consensus_M2.npz": "286ae904dbba9fc578bc0faa51af9b1e2e30a98e7f5667e8472e548614618c56",
+    "consensus_P-ID.npz": "9598da3498b1d3cecb1119950e58e43a5f9a7be9981740f0f315de85f56b1f0c",
+    "consensus_P-FAM.npz": "904bbeb3a8a7acca8f38ed24833515c8d92921afa88576a73038d33f335d8127",
+    "consensus_C-CAP.npz": "33e4d34c7e483e24673d01d7e6bebe992d366f1f6b4d2234dd3aacba9f2b6eb0",
+    "metrics_full.json": "48b39fa5524f372ff91518148f7bc5120f99b362caf7508528520ba3b87063dc"
+  },
+  "wall_s": 2.7905160000082105
+}

@@ -1,0 +1,45 @@
+{
+  "_scope": "공개 — 기입 사실·개수·해시만. 지표·부호 값 없다.",
+  "ts_kst": "2026-08-07 09:57:45 KST",
+  "block": "X (docs/78) — 기록",
+  "checks": {
+    "docs33_prefix_preserved": true,
+    "docs33_bytes_added": 7600,
+    "docs33_no_new_duplicate_item_number": true,
+    "docs33_item_number": 36,
+    "docs45_all_old_lines_present": true,
+    "docs45_lines_added": 1,
+    "docs45_section5_unchanged": true,
+    "ledger_timeline": 39,
+    "ledger_top_keys": 11,
+    "ledger_existing_38_entries_identical": true,
+    "ledger_correspondence_unchanged": true,
+    "ledger_first_look_rows": 4,
+    "ledger_first_look_row0_identical": true,
+    "ledger_old_status_text_preserved": true,
+    "ledger_old_access_text_preserved": true,
+    "first_look_log_entries": 12,
+    "first_look_log_untouched": true
+  },
+  "ledger_raw_bytes_before": 190573,
+  "ledger_raw_bytes_after": 199890,
+  "artifacts_sha256": {
+    "docs/33_prereg_deviation_log.md": "b04e647a8367bc93df685edadc83fa34e7672e16cbad774d01e65d938a443df9",
+    "docs/45_research_integrity_ledger.md": "5574d919212a155d7ca8d47a4935f3369216116062a069071acc73bc5062a68c",
+    "experiments/provenance/ledger.json": "bfa10368a4a30b38ac385bc7cf9b3c5b7a5fa8969ff38d1f6e647c388ae7e4a4",
+    "experiments/provenance/sealing_completeness_audit.json": "b189f77f30dce9b59fc77519a22cfb4322daa669ab7801569f3672de8a197550",
+    "experiments/provenance/sign_disclosure_matrix.json": "d20415256c087825483b52740731e15fd5343227bfc520fc08b491849f6dffb6",
+    "docs/79_sign_disclosure_matrix.md": "99d3292aa0f0dabd3d7690fc47c49a4d143c0160fc98881d5204eb9fab93d833"
+  },
+  "not_performed": {
+    "open_sealed": 0,
+    "emit_sign": 0,
+    "decision_py": 0,
+    "sealed_writes": 0,
+    "network": 0,
+    "git_commit": 0,
+    "git_push": 0,
+    "docs45_section5_rows_added": 0,
+    "first_look_log_appends": 0
+  }
+}

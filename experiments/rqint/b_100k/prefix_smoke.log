@@ -1,0 +1,28 @@
+{
+  "purpose": "AJ-2-b 전제 자가시험(prefix · 감사 비교란 · 체크포인트 재현)",
+  "runA": {
+    "n_coin": 100,
+    "audit": 0,
+    "count_abs_ge_obs": 138,
+    "n_permutation_values": 200,
+    "wall_note": "자가시험 — 벽시계 판정 미사용"
+  },
+  "runB": {
+    "n_coin": 200,
+    "audit_requested": 1000,
+    "audit_checked": 200,
+    "audit_failures": 0,
+    "count_abs_ge_obs": 272
+  },
+  "t_star_prefix_sha256_A": "7a5d43a9a6233a8224f45caf0f9b4284b17bfa23b15c9a3e98e1a690c631f580",
+  "t_star_prefix_sha256_B_first100": "7a5d43a9a6233a8224f45caf0f9b4284b17bfa23b15c9a3e98e1a690c631f580",
+  "prefix_identical": true,
+  "checkpoint_recomputed_from_B": 138,
+  "checkpoint_matches_runA": true,
+  "observed_statistic_invariant_to_n_coin": true,
+  "T_obs": 0.0031802114140302242,
+  "delta_rf": 0.00038510137913283504,
+  "delta_gin": -0.002795110034897389,
+  "matches_block_AI_observed": true,
+  "all_pass": true
+}

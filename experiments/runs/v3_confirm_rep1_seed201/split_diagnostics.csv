@@ -1,0 +1,6 @@
+fold,n_test_drugs,n_train_drugs,n_test_scaffold_groups,n_test_mapped_drugs,n_train_mapped_drugs,train_positive_per_pt,test_positive_per_pt,label_density_test,label_density_train,target_jaccard_train_test,n_targets_train,n_targets_test
+0,218,874,174,158,689,"{'min': 7, 'median': 18.0, 'max': 544, 'n_pt_lt1': 0, 'n_pt_lt3': 0}","{'min': 0, 'median': 4.0, 'n_pt_zero_positive': 24}",0.04178031242251426,0.05064629847238543,0.5264483627204031,1113,705
+1,218,874,182,176,671,"{'min': 5, 'median': 17.0, 'max': 520, 'n_pt_lt1': 0, 'n_pt_lt3': 0}","{'min': 0, 'median': 5.0, 'n_pt_zero_positive': 6}",0.054587155963302755,0.04745191415671965,0.5121746431570109,1092,709
+2,219,873,109,152,695,"{'min': 6, 'median': 17.0, 'max': 543, 'n_pt_lt1': 0, 'n_pt_lt3': 0}","{'min': 0, 'median': 5.0, 'n_pt_zero_positive': 5}",0.0508700481303221,0.0483762112628092,0.45256087321578503,1111,619
+3,218,874,122,178,669,"{'min': 5, 'median': 17.0, 'max': 533, 'n_pt_lt1': 0, 'n_pt_lt3': 0}","{'min': 0, 'median': 5.0, 'n_pt_zero_positive': 9}",0.05068187453508555,0.04842600037108046,0.5239294710327456,1109,706
+4,219,873,145,183,664,"{'min': 4, 'median': 18.0, 'max': 544, 'n_pt_lt1': 0, 'n_pt_lt3': 0}","{'min': 0, 'median': 5.0, 'n_pt_zero_positive': 15}",0.046464272491669754,0.049481440203089685,0.4424853064651553,1129,589

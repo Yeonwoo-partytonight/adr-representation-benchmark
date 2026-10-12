@@ -1,0 +1,217 @@
+{
+  "step": "docs/30 §13 실행순서 3 — 확증 OOF 반복1(seed 201) split 생성",
+  "created_kst": "2026-07-27 10:54:54 KST",
+  "prereg": "docs/30_preregistration_OSF_clean.md §6",
+  "repeat": 1,
+  "split_seed": 201,
+  "n_fold": 5,
+  "seed_scheme_note": "§6은 'split seed = {201…205} × 3 반복'으로 5개 seed 풀을 선언한다. 반복1은 그 순서열의 첫 원소 = 201로 일의적(docs/36 §1·§3도 '반복1 = seed 201'로 명시). 반복 2·3의 seed 배정은 본 단계 범위 밖(§13 실행순서 5)이며 여기서 물질화하지 않는다.",
+  "scaffold_definition": "RDKit MurckoScaffold.MurckoScaffoldSmiles(includeChirality=False); 파싱불가·무고리 → '' 단일 그룹 — pipeline/src/step6_scaffold_split.py 및 docs/38 A2와 동일 정의(교차검증 완료)",
+  "scaffold_group_structure_vs_A2": {
+    "n_groups": 732,
+    "n_groups_A2": 732,
+    "empty_group_size": 77,
+    "empty_group_size_A2": 77,
+    "max_group": 78,
+    "max_group_A2": 78,
+    "identical_to_A2": true
+  },
+  "assignment_algorithm": "사전등록 §6 '스캐폴드 그룹 셔플 후 목표비율 순차배정': 결정적 사전정렬(-size, 첫 cid) → random.Random(201).shuffle → 누적합이 (i+1)N/5 이하인 첫 fold에 배정(초과 시 마지막 fold). 크기 재정렬 없음.",
+  "dev_split_excluded": "seed-42 dev split(scaffold_split.json)은 확증 분석에서 제외(§6) — 미사용",
+  "fold_sizes": [
+    218,
+    218,
+    219,
+    218,
+    219
+  ],
+  "diagnostics": {
+    "n_drugs": 1092,
+    "n_pt": 370,
+    "n_scaffold_groups": 732,
+    "fold_sizes": [
+      218,
+      218,
+      219,
+      218,
+      219
+    ],
+    "label_density_test_spread": {
+      "min": 0.04178031242251426,
+      "max": 0.054587155963302755,
+      "range": 0.012806843540788496
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "n_test_drugs": 218,
+        "n_train_drugs": 874,
+        "n_test_scaffold_groups": 174,
+        "n_test_mapped_drugs": 158,
+        "n_train_mapped_drugs": 689,
+        "train_positive_per_pt": {
+          "min": 7,
+          "median": 18.0,
+          "max": 544,
+          "n_pt_lt1": 0,
+          "n_pt_lt3": 0
+        },
+        "test_positive_per_pt": {
+          "min": 0,
+          "median": 4.0,
+          "n_pt_zero_positive": 24
+        },
+        "label_density_test": 0.04178031242251426,
+        "label_density_train": 0.05064629847238543,
+        "target_jaccard_train_test": 0.5264483627204031,
+        "n_targets_train": 1113,
+        "n_targets_test": 705
+      },
+      {
+        "fold": 1,
+        "n_test_drugs": 218,
+        "n_train_drugs": 874,
+        "n_test_scaffold_groups": 182,
+        "n_test_mapped_drugs": 176,
+        "n_train_mapped_drugs": 671,
+        "train_positive_per_pt": {
+          "min": 5,
+          "median": 17.0,
+          "max": 520,
+          "n_pt_lt1": 0,
+          "n_pt_lt3": 0
+        },
+        "test_positive_per_pt": {
+          "min": 0,
+          "median": 5.0,
+          "n_pt_zero_positive": 6
+        },
+        "label_density_test": 0.054587155963302755,
+        "label_density_train": 0.04745191415671965,
+        "target_jaccard_train_test": 0.5121746431570109,
+        "n_targets_train": 1092,
+        "n_targets_test": 709
+      },
+      {
+        "fold": 2,
+        "n_test_drugs": 219,
+        "n_train_drugs": 873,
+        "n_test_scaffold_groups": 109,
+        "n_test_mapped_drugs": 152,
+        "n_train_mapped_drugs": 695,
+        "train_positive_per_pt": {
+          "min": 6,
+          "median": 17.0,
+          "max": 543,
+          "n_pt_lt1": 0,
+          "n_pt_lt3": 0
+        },
+        "test_positive_per_pt": {
+          "min": 0,
+          "median": 5.0,
+          "n_pt_zero_positive": 5
+        },
+        "label_density_test": 0.0508700481303221,
+        "label_density_train": 0.0483762112628092,
+        "target_jaccard_train_test": 0.45256087321578503,
+        "n_targets_train": 1111,
+        "n_targets_test": 619
+      },
+      {
+        "fold": 3,
+        "n_test_drugs": 218,
+        "n_train_drugs": 874,
+        "n_test_scaffold_groups": 122,
+        "n_test_mapped_drugs": 178,
+        "n_train_mapped_drugs": 669,
+        "train_positive_per_pt": {
+          "min": 5,
+          "median": 17.0,
+          "max": 533,
+          "n_pt_lt1": 0,
+          "n_pt_lt3": 0
+        },
+        "test_positive_per_pt": {
+          "min": 0,
+          "median": 5.0,
+          "n_pt_zero_positive": 9
+        },
+        "label_density_test": 0.05068187453508555,
+        "label_density_train": 0.04842600037108046,
+        "target_jaccard_train_test": 0.5239294710327456,
+        "n_targets_train": 1109,
+        "n_targets_test": 706
+      },
+      {
+        "fold": 4,
+        "n_test_drugs": 219,
+        "n_train_drugs": 873,
+        "n_test_scaffold_groups": 145,
+        "n_test_mapped_drugs": 183,
+        "n_train_mapped_drugs": 664,
+        "train_positive_per_pt": {
+          "min": 4,
+          "median": 18.0,
+          "max": 544,
+          "n_pt_lt1": 0,
+          "n_pt_lt3": 0
+        },
+        "test_positive_per_pt": {
+          "min": 0,
+          "median": 5.0,
+          "n_pt_zero_positive": 15
+        },
+        "label_density_test": 0.046464272491669754,
+        "label_density_train": 0.049481440203089685,
+        "target_jaccard_train_test": 0.4424853064651553,
+        "n_targets_train": 1129,
+        "n_targets_test": 589
+      }
+    ],
+    "gate_A": {
+      "scaffold_group_disjoint": true,
+      "fold_size_band_ok": true,
+      "rare_pt_min1_all_train_folds": true,
+      "n_pt_lt3_max_over_folds": 0,
+      "bseq_fit_rows_ok": true,
+      "gate_A_pass": true
+    }
+  },
+  "gate0": {
+    "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "ladder_freeze_match": true,
+    "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_manifest_match": true,
+    "sap_version": "1.1",
+    "sap_all_validation_pass": true,
+    "sap_modules_match": {
+      "__init__.py": true,
+      "metrics.py": true,
+      "redaction.py": true,
+      "consensus.py": true,
+      "bootstrap.py": true,
+      "signflip.py": true,
+      "decision.py": true,
+      "null_generator.py": true,
+      "unseen_target.py": true,
+      "synthetic.py": true,
+      "freeze.py": true
+    },
+    "sap_n_modules_verified": 11,
+    "sap_integrity_confirmatory_untouched": true,
+    "primary_B_m1b_dim": 10,
+    "A0_primary_dim": 10,
+    "A1_all_blocks_train_only_fit": true,
+    "A1_bseq_pca_fit_rows": 671,
+    "A5_target_count_mismatch": 0,
+    "gate0_pass": true
+  },
+  "integrity": {
+    "confirmatory_oof_accessed": false,
+    "models_trained": 0,
+    "network_calls": 0,
+    "note": "split·진단만 산출. OOF 예측 미조회(stage=oof에서 최초 조회)."
+  }
+}

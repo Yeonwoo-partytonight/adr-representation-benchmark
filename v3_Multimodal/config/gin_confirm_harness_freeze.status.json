@@ -1,0 +1,11 @@
+{
+  "target": "v3_Multimodal/config/gin_confirm_harness_freeze.json",
+  "target_sha256": "1af993fde7330e1d48e6d10fee157c1310f42dacc5c1d65a4834b9020e5b7072",
+  "status": "frozen",
+  "delegated_by_advisor": false,
+  "basis": "사용자 결정 2026-09-14 — GIN 실제 착수는 교수님 회신 이후로 하고, 회신을 기다리는 동안 산출물 규격·봉인 경계·재개 단위·집계 경로를 확증 학습 0회로 먼저 동결한다 (docs/106 블록 AR). docs/64 §6-1 이 남긴 「5-fold outer CV 안에서 valid를 어떻게 떼는지는 미규정」의 산출물 측 잔여를 메운다.",
+  "reversibility": "선행 sidecar(gin_inner_valid_freeze.status.json)의 조건인 SAP 1.2 re-freeze approval 은 블록 AN(docs/102)으로 충족됐다(live sap_version 1.2 · manifest d08dcedf2a22e1c8). 현재 GIN 착수를 막는 것은 ① 교수님 회신(사용자 결정 2026-09-14) ② Holm ⑧ RQ-int ③ 개봉 승인·시점 이며, 그때까지 본 결정은 되돌릴 수 있다.",
+  "advisor_notified_in": "미고지 — 본 규격은 산출물·경로·봉인 경계의 기술 규격이고 통계 설계를 바꾸지 않는다. GIN 착수 자체는 교수님 회신 이후이며 그 서신에서 고지된다.",
+  "item_requiring_advisor_confirmation": "GIN 착수 시점 자체(gin_start_still_blocked 해제) — 본 규격 파일은 그 근거를 만들지 않는다.",
+  "as_of_kst": "2026-09-15 12:46 KST"
+}

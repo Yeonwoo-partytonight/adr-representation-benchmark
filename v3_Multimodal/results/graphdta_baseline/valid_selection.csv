@@ -1,0 +1,3 @@
+variant,arch,valid_macro_pr,best_ep
+graphdta_gin,gin,0.16172031049353777,53
+graphdta_gatgcn,gatgcn,0.10659144564798136,2

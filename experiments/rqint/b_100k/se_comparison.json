@@ -1,0 +1,33 @@
+{
+  "formula_verbatim": "SE_MC = sqrt( p·(1−p) / n_permutation_values )",
+  "interpretation_a": {
+    "interpretation": "(가)",
+    "meaning": "B = 동전 수 (n_coin_vectors)",
+    "n_coin_vectors": 100000,
+    "n_permutation_values": 200000,
+    "wall_hours": 19.488727281689645,
+    "p_two_sided": 0.6705116474417628,
+    "se_mc": 0.0010510132684383579,
+    "se_mc_recorded_by_runner": 0.0010510132684383579,
+    "count_abs_ge_obs": 134102,
+    "source": "experiments/rqint/b_100k/run.json (블록 AJ 실측)"
+  },
+  "interpretation_b": {
+    "interpretation": "(나)",
+    "meaning": "B = 참조분포 크기 (n_permutation_values)",
+    "n_coin_vectors": 50000,
+    "n_permutation_values": 100000,
+    "wall_hours": 9.884754196736548,
+    "p_two_sided": 0.6726232737672623,
+    "se_mc": 0.0014839178055198099,
+    "se_mc_recorded_by_runner": 0.0014839178055198099,
+    "count_abs_ge_obs": 67262,
+    "source": "experiments/rqint/b_dryrun/decisive.json (블록 AI 실측)"
+  },
+  "se_ratio_a_over_b": 0.7082691942430009,
+  "one_over_sqrt2": 0.7071067811865475,
+  "se_ratio_matches_1_over_sqrt2_within_1pct": true,
+  "quantitative_note": "참조분포가 2배(100,000 → 200,000)면 SE_MC 는 1/√2 = 0.70711 배가 된다 — 실측 비 0.70827. 즉 (가) 를 택하면 SE_MC 0.001051, (나) 를 택하면 0.0014839 로 정밀도는 √2 배 좋아지고 비용은 2배가 된다. **이 정량 대비가 R2 의 정의 선택 근거다.**",
+  "synthetic_only_caveat": "★ 양쪽 p·SE_MC 는 모두 **100% 합성 예측 위의 값**이며 효과 주입 0 의 귀무 구성에서 나온 타이밍·정밀도 계측용 산출이다. **확증 결과가 아니고** 어떤 가설 판정에도 쓰지 않는다.",
+  "definition_adoption": "**본 블록은 정의를 채택하지 않는다.** (가)/(나) 양쪽 실측을 갖춰 주는 데까지이며, 어느 쪽을 `B` 로 삼을지는 **R2(SAP 1.2 재동결) 소관**이다."
+}

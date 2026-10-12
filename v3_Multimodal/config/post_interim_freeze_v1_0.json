@@ -1,0 +1,180 @@
+{
+  "_doc": "post-interim 확정 v1.0. docs/70 §1. 선행 동결 파일 전부 무수정.",
+  "version": "1.0",
+  "frozen_at_kst": "2026-08-06 09:33 KST",
+  "basis": [
+    "docs/69_advisor_consult_triage_20260805.md",
+    "docs/70_advisor_reply_draft_20260805.md"
+  ],
+  "preconditions": {
+    "sealed_confirmatory_results_viewed": false,
+    "gin_training_runs": 0,
+    "holm6_computation_started": false,
+    "holm7_computation_started": false,
+    "axes_a3a4a6_computation_started": false,
+    "known_disclosure": "signs of four contrasts only; no magnitudes"
+  },
+  "predecessor_freezes": {
+    "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "gin_seed_freeze_sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+    "gin_inner_valid_freeze_sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea"
+  },
+  "holm6_rf_tuned": {
+    "contrast": "M2b - RF_tuned",
+    "baseline_features": "Morgan fingerprint only, radius 3, 2048 bits, no target-derived block",
+    "hyperparameters_source": "verbatim from the pre-confirmatory fair-tuning result (v1_RF/results_fairtune)",
+    "hyperparameters": {
+      "n_estimators": 1000,
+      "max_depth": 40,
+      "max_features": "sqrt",
+      "min_samples_leaf": 2,
+      "class_weight": "balanced",
+      "fp_radius": 3,
+      "fp_bits": 2048
+    },
+    "hyperparameters_provenance": {
+      "file": "v1_RF/results_fairtune/best_config.yaml",
+      "file_sha256": "f411602e9a46a34c0747af50368c58b1abdd1f3f5399b81271e5d50c93920a12",
+      "selected_by": "valid_macro_pr",
+      "search_budget": 16,
+      "sample_seed": 42,
+      "not_copied_here": "the selection metric value stored in the same file is a performance figure and is deliberately not reproduced in this freeze record; read it from the source file if needed"
+    },
+    "fingerprint_spec_to_freeze": [
+      "RDKit version",
+      "includeChirality",
+      "count vs bit vector",
+      "nBits",
+      "radius"
+    ],
+    "rule": "Take the configuration that the pre-confirmatory fair-tuning procedure had already selected, verbatim. No re-tuning.",
+    "rejected_alternative": "keeping the frozen r=2 block and applying only the tuned hyperparameters - that configuration has never existed and would be assembled now, carrying MORE researcher degrees of freedom",
+    "supporting_evidence": "ladder_freeze.json rf_hyperparameters.note states the fair-tuned RF is NOT used by the ladder, i.e. tuned RF was always a separate baseline",
+    "character": "benchmark comparison against a strong structure-only baseline, NOT an ablation isolating radius or hyperparameters",
+    "timing": "the tuned configuration was selected on the development split's validation set before the confirmatory splits existed"
+  },
+  "holm7_late_fusion": {
+    "formula": "p_ens = lambda * p_RF + (1 - lambda) * p_seq",
+    "p_rf": "M0 (Morgan-only RF), reusing the existing confirmatory OOF",
+    "p_rf_rule": "registration section 14 states 'RF+seq > RF implies sequence carries information non-redundant with the FINGERPRINT'",
+    "p_seq_features_primary": "B_seq only (target sequence block)",
+    "p_seq_features_sensitivity": "[B1, B_seq] (target count + mapping mask + sequence)",
+    "p_seq_learner": "the frozen confirmatory RF harness with identical hyperparameters, applied to the sequence block only",
+    "p_seq_learner_rule": "RQ7 is registered as RF complementarity and the baseline is RF, so holding the learner fixed and changing only the features is exactly what the contrast claims to measure; this introduces no new learner and no new hyperparameter",
+    "p_seq_rejected": "ridge / MLP / neural learners - each would require selecting new hyperparameters after the signs became known",
+    "sensitivity_firewall": "the sensitivity variant may not be used for the Holm 7 adjudication nor substituted for the primary",
+    "zero_vector_caveat": "the 245 drugs without mapped targets become all-zero vectors; this zero is not an explicit missingness indicator",
+    "lambda": {
+      "inner_split": "SHARED with gin_inner_valid_freeze.json - same 1/9 scaffold-group split, same inner_seed = 1000*split_seed + fold_index",
+      "selection_metric": "macro AP on the inner validation set, using the frozen undefined-AP exclusion rule",
+      "grid": "0.00 to 1.00 inclusive, step 0.05",
+      "scope": "one lambda per outer unit (split_seed, fold_index)",
+      "tie_break": "smallest |lambda - 0.5|; if still tied, the smaller lambda",
+      "refit": "after selecting lambda, BOTH base learners are refitted on the FULL outer-train fold",
+      "refit_rationale": "without the refit, p_RF would be trained on a smaller sample than the M0 baseline it is contrasted against, so the contrast would mix training-set size with the sequence contribution",
+      "refit_assert": "the refitted p_RF predictions must be byte-identical to the existing sealed M0 OOF for the same fold (deterministic RF, same training rows, same hyperparameters)",
+      "lambda_half": "the lambda = 0.5 variant is always reported alongside and is never substituted by the selected lambda",
+      "rejected_alternative": "inner 5-fold CV - more stable lambda but adds another split rule and another feature-fitting population"
+    }
+  },
+  "axes_a3_a4_a6": {
+    "reporting_form": "pre-fixed bins, identical in form to the two similarity axes already completed and sealed",
+    "reporting_form_rule": "the first two continuous axes were reported as pre-fixed strata and are already sealed; using a different form for the third axis would make the axes non-comparable",
+    "no_target_handling": "drugs with zero mapped targets (n = 245) form a pre-defined EXCLUDED set named no_target; they are never merged into the {0} bin and their count is reported",
+    "A3": {
+      "definition": "unseen target count / total target count",
+      "bins": [
+        "{0}",
+        "(0,0.5)",
+        "[0.5,1)",
+        "{1}"
+      ]
+    },
+    "A4": {
+      "name": "pChEMBL-score-weighted proportion",
+      "definition": "affinity-weighted unseen proportion; pairs with missing pChEMBL are excluded from BOTH numerator and denominator; per-drug missing counts are recorded; drugs with no pChEMBL at all form a no_evidence stratum",
+      "aggregation": "pchembl_median as produced by the existing frozen pipeline",
+      "bins": [
+        "same as A3",
+        "no_evidence"
+      ]
+    },
+    "A6": {
+      "definition": "1 if the dominant target (largest pchembl_median; ties broken by smallest UniProt accession in lexicographic order) is unseen",
+      "bins": [
+        "{0}",
+        "{1}",
+        "no_evidence"
+      ]
+    },
+    "coverage_denominators": {
+      "pair_level": "12514 of 12613",
+      "drug_level": "16 of 847 mapped drugs have no pChEMBL at all"
+    },
+    "resampling": "reuse the seeds, B, unit and CI method already fixed by the earlier stratification blocks; no new seed is drawn",
+    "contrasts": "both Delta(M2b - M1b) and Delta(M2b - P-ID) on each axis, as registered",
+    "A5_status": "NOT frozen here - requires a one-off re-query and therefore advisor approval (docs/70 section 2-1). If not approved, A5 is reported as not estimable; no proxy substitution."
+  },
+  "early_stopping_addendum": {
+    "target": "supplements gin_inner_valid_freeze.json (that file is NOT modified)",
+    "min_delta": 0,
+    "min_delta_source": "the checkpoint update uses a strict greater-than comparison, so any improvement however small counts and ties do not update",
+    "tie_break": "earliest epoch wins (automatic consequence of the strict inequality)",
+    "undefined_metric_rule": "if the validation macro AP is undefined for an epoch (no eligible PT has an in-sample positive), that epoch is treated as NO improvement; if it is undefined for every epoch the run is recorded as a hard technical failure and retried once with the same seed and configuration, and is never silently skipped",
+    "observed_feasibility": "each of the 15 inner validation sets has 293 to 323 PTs with positives, so the undefined case does not arise in practice"
+  },
+  "terminology_corrections": [
+    {
+      "was": "representative fold / representative unit",
+      "now": "preselected diagnostic unit",
+      "why": "avoids implying statistical representativeness"
+    },
+    {
+      "was": "Holm 6 as an ablation",
+      "now": "benchmark comparison against a strong structure-only baseline",
+      "why": "radius and hyperparameters differ jointly, so no single factor is isolated"
+    },
+    {
+      "was": "affinity mass weighting",
+      "now": "pChEMBL-score-weighted proportion",
+      "why": "names the weight for what it is"
+    }
+  ],
+  "repository_policy": {
+    "additional_push_of_result_artifacts": "suspended until explicit advisor approval",
+    "already_public": "recorded as-is; no deletion, no history rewrite",
+    "freeze_files": "kept local only until a push can be made without exposing any new sign",
+    "rule": "publication only within a scope that carries no new sign"
+  },
+  "pre_unblinding_procedures_specified": {
+    "sealing_completeness_audit": "before unblinding, mechanically verify that every expected artifact exists and none was opened: expected file list, hashes, model x fold x seed manifest cross-check, failure and restart log. TO BE IMPLEMENTED in a later block; specified here.",
+    "sign_disclosure_matrix": "a single table linking, for each contrast whose sign is known: who learned it, when, by what route, and which decisions were taken afterwards. TO BE IMPLEMENTED in a later block; specified here.",
+    "unblinding_approver": "to be recorded once the advisor confirms (docs/70 section 2-2)"
+  },
+  "still_pending_advisor": [
+    "A5 one-off re-query approval",
+    "unblinding approver and timing"
+  ],
+  "still_pending_external_review": [
+    "U1-U7 (RQ-int procedure)",
+    "SAP 1.2 re-freeze"
+  ],
+  "rq_int_interpretation_narrowing": "to be confirmed together with the SAP 1.2 re-freeze approval; draft wording is held in docs/69 section 7",
+  "gin_start_still_blocked": true,
+  "holm67_start_still_blocked_until_reply": true,
+  "recording_note": {
+    "derivation_date_kst": "2026-08-05 (docs/69, docs/70)",
+    "recorded_at_kst": "2026-08-06 09:33 KST",
+    "why_dates_differ": "docs/71 was executed on the calendar day after the derivation; the verbatim Korean paragraph (1) states 2026-08-05, which is the date the definitions were derived. The recording timestamp is reported as measured and was not back-dated.",
+    "holm_family_read": [
+      "M2b-P-ID",
+      "M2b-P-FAM",
+      "M2b-realloc_null",
+      "M2b-M0",
+      "M2b-RF_tuned",
+      "RFseq-RF",
+      "RQ-int"
+    ],
+    "no_authorisation": "this file authorises nothing: neither GIN training nor the Holm 6 / Holm 7 computations nor the A5 re-query"
+  }
+}

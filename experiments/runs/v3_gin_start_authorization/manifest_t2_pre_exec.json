@@ -1,0 +1,331 @@
+{
+  "_doc": "블록 AS 2시점(AS-3~AS-7 완료 후 · 기록 기입 «전») manifest. docs/109 AS-8. 비열람 증거 A-plus 의 2시점 스냅샷이며 지도교수 서명·OSF 업데이트 등록은 실행 «후» 첨부다.",
+  "block": "AS",
+  "timepoint": "t2_pre_exec",
+  "instruction": "docs/109_gin_start_supersession_prompt_for_vscode.md §AS-8",
+  "ts_kst": "2026-09-16 14:28:46 KST",
+  "unblinding_performed": false,
+  "signature_status": "deferred_to_post_execution",
+  "t1_reference": {
+    "path": "experiments/runs/v3_gin_start_authorization/manifest_t1_pre_v2.json",
+    "sha256": "d471756459d6eb370f7f270b9837ec70e258e62b282af78f5e402e60afa2fe92",
+    "ts_kst": "2026-09-16 14:18:01 KST"
+  },
+  "covered_artifacts": [
+    "v3_Multimodal/config/gin_start_supersede.json",
+    "v3_Multimodal/config/gin_confirm_harness_freeze_v2.json",
+    "v3_Multimodal/config/gin_confirm_harness_freeze_v2.status.json",
+    "v3_Multimodal/src/confirmatory_gin_rep_v2.py",
+    "experiments/runs/v3_gin_start_authorization/selftest_v2.json",
+    "experiments/runs/v3_gin_start_authorization/manifest_t1_pre_v2.json",
+    "experiments/runs/v3_gin_budget/gin_budget_estimate_v2.json"
+  ],
+  "new_artifacts": [
+    {
+      "path": "v3_Multimodal/config/gin_start_supersede.json",
+      "sha256": "c061d033ae35bea3df269d37c1a45174fc48f70bfe37ace4f159a8cb36d4a32c",
+      "bytes": 6359
+    },
+    {
+      "path": "v3_Multimodal/config/gin_confirm_harness_freeze_v2.json",
+      "sha256": "ec43025a61378e18b77d6f1ae11a7c5c6085f46b0b7bdcc975bf136d6af3c612",
+      "bytes": 26558
+    },
+    {
+      "path": "v3_Multimodal/config/gin_confirm_harness_freeze_v2.status.json",
+      "sha256": "73c0a69c571fb075fc6c744b2b396268f45c967a869c13ed24a1f3451f4532fd",
+      "bytes": 2056
+    },
+    {
+      "path": "v3_Multimodal/src/confirmatory_gin_rep_v2.py",
+      "sha256": "644abf4f272c51e673dfb3be2915792502552ba4baad610aaa62fee58101860a",
+      "bytes": 28331
+    },
+    {
+      "path": "experiments/runs/v3_gin_start_authorization/selftest_v2.json",
+      "sha256": "adcc143c29ac44d7cfcdef984bee0f8d38b1c217f472638e2fc08166d535a4ac",
+      "bytes": 12476
+    },
+    {
+      "path": "experiments/runs/v3_gin_start_authorization/manifest_t1_pre_v2.json",
+      "sha256": "d471756459d6eb370f7f270b9837ec70e258e62b282af78f5e402e60afa2fe92",
+      "bytes": 8843
+    },
+    {
+      "path": "experiments/runs/v3_gin_budget/gin_budget_estimate_v2.json",
+      "sha256": "8325c6d00bfb6f100ab70ba83073cbfe539e62aab8def2cddf4f3d5fdd5d5948",
+      "bytes": 13865
+    }
+  ],
+  "self_excluded": "`manifest_t2_pre_exec.json` — 자기 해시 순환 방지. 본 파일의 sha256 은 리포트 §3 과 `docs/45` §3 에 기록한다.",
+  "blocking_flag_files_entry_vs_exit": {
+    "files": {
+      "v3_Multimodal/config/rqint_procedure_decisions_v1.json": {
+        "sha256_at_entry": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+        "sha256_at_exit": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+        "unchanged": true,
+        "bytes": 22062
+      },
+      "v3_Multimodal/config/gin_seed_freeze.json": {
+        "sha256_at_entry": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+        "sha256_at_exit": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+        "unchanged": true,
+        "bytes": 4637
+      },
+      "v3_Multimodal/config/gin_inner_valid_freeze.json": {
+        "sha256_at_entry": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+        "sha256_at_exit": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+        "unchanged": true,
+        "bytes": 6913
+      }
+    },
+    "gin_start_still_blocked_at_exit": {
+      "v3_Multimodal/config/rqint_procedure_decisions_v1.json": true,
+      "v3_Multimodal/config/gin_seed_freeze.json": true,
+      "v3_Multimodal/config/gin_inner_valid_freeze.json": true
+    },
+    "n_true_at_exit": 3
+  },
+  "v1_artifacts_entry_vs_exit": {
+    "v3_Multimodal/config/gin_confirm_harness_freeze.json": {
+      "sha256_at_entry": "1af993fde7330e1d48e6d10fee157c1310f42dacc5c1d65a4834b9020e5b7072",
+      "sha256_at_exit": "1af993fde7330e1d48e6d10fee157c1310f42dacc5c1d65a4834b9020e5b7072",
+      "unchanged": true,
+      "bytes": 21968
+    },
+    "v3_Multimodal/config/gin_confirm_harness_freeze.status.json": {
+      "sha256_at_entry": "5df9a7c4bfa64749f2b37f5b1984cfcca85d8f609e6c8c444097ff78e24c819a",
+      "sha256_at_exit": "5df9a7c4bfa64749f2b37f5b1984cfcca85d8f609e6c8c444097ff78e24c819a",
+      "unchanged": true,
+      "bytes": 1439
+    },
+    "v3_Multimodal/src/confirmatory_gin_rep.py": {
+      "sha256_at_entry": "1e6642bf9ecac5a272fdb49c441668d2f6f3ec97e87528831aad75a9c40d995a",
+      "sha256_at_exit": "1e6642bf9ecac5a272fdb49c441668d2f6f3ec97e87528831aad75a9c40d995a",
+      "unchanged": true,
+      "bytes": 42450
+    },
+    "experiments/runs/v3_gin_harness_selftest/selftest.json": {
+      "sha256_at_entry": "37b0af4d2ef74ad410c76603a143c7089161c6f35a75d68271a8a8cf94c78e09",
+      "sha256_at_exit": "37b0af4d2ef74ad410c76603a143c7089161c6f35a75d68271a8a8cf94c78e09",
+      "unchanged": true,
+      "bytes": 11399
+    },
+    "experiments/runs/v3_gin_budget/gin_budget_estimate.json": {
+      "sha256_at_entry": "f42e839d154611f2050124fdf2902cbec5a02988860de185622236113b139605",
+      "sha256_at_exit": "f42e839d154611f2050124fdf2902cbec5a02988860de185622236113b139605",
+      "unchanged": true,
+      "bytes": 11151
+    },
+    "experiments/runs/v3_gin_budget/README.md": {
+      "sha256_at_entry": "6fd60d4a59c48b49341bd3cd41f92f5c620d1789b20995e44c68205b31c51796",
+      "sha256_at_exit": "6fd60d4a59c48b49341bd3cd41f92f5c620d1789b20995e44c68205b31c51796",
+      "unchanged": true,
+      "bytes": 1224
+    }
+  },
+  "frozen_files_no_modify_entry_vs_exit": {
+    "n": 22,
+    "all_unchanged": true,
+    "files": [
+      {
+        "path": "v3_Multimodal/src/sap/__init__.py",
+        "sha256_at_entry": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+        "sha256_at_exit": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/bootstrap.py",
+        "sha256_at_entry": "05437c516e606a053e02acefb23c2597365472201b6c70ff2814278d6597a31e",
+        "sha256_at_exit": "05437c516e606a053e02acefb23c2597365472201b6c70ff2814278d6597a31e",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/consensus.py",
+        "sha256_at_entry": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+        "sha256_at_exit": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/decision.py",
+        "sha256_at_entry": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+        "sha256_at_exit": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/freeze.py",
+        "sha256_at_entry": "8bef5f70d168c50d7860d5e1d70f78b771d76405fafe2c4d256ac04d08078bc9",
+        "sha256_at_exit": "8bef5f70d168c50d7860d5e1d70f78b771d76405fafe2c4d256ac04d08078bc9",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/metrics.py",
+        "sha256_at_entry": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+        "sha256_at_exit": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/null_generator.py",
+        "sha256_at_entry": "90886abce256a130531a0ab0cd8edd17abc27ff1b62ee56f24248aa76fa204c7",
+        "sha256_at_exit": "90886abce256a130531a0ab0cd8edd17abc27ff1b62ee56f24248aa76fa204c7",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/redaction.py",
+        "sha256_at_entry": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+        "sha256_at_exit": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/signflip.py",
+        "sha256_at_entry": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+        "sha256_at_exit": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/synthetic.py",
+        "sha256_at_entry": "ddf715e6fba7503e817c6435c9220f7a83a5e5e31375603fddd522570f2a27d7",
+        "sha256_at_exit": "ddf715e6fba7503e817c6435c9220f7a83a5e5e31375603fddd522570f2a27d7",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/unseen_target.py",
+        "sha256_at_entry": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+        "sha256_at_exit": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/rqint.py",
+        "sha256_at_entry": "eb842bc98140e9c55b67bc1563cd5573c3b294885778f23744468b712c498b26",
+        "sha256_at_exit": "eb842bc98140e9c55b67bc1563cd5573c3b294885778f23744468b712c498b26",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/rqint_audit.py",
+        "sha256_at_entry": "ddffe6d128de4d180aeab9be18d6b1a9b5281523bc24cd8a3b4f48f20a2aa4a3",
+        "sha256_at_exit": "ddffe6d128de4d180aeab9be18d6b1a9b5281523bc24cd8a3b4f48f20a2aa4a3",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/sap/rqint_synthetic.py",
+        "sha256_at_entry": "27ef0011ee041920a6e7b63eb4dcfef13c7fd2a70ac017f2324e671df8b0f985",
+        "sha256_at_exit": "27ef0011ee041920a6e7b63eb4dcfef13c7fd2a70ac017f2324e671df8b0f985",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/ladder_confirmatory.py",
+        "sha256_at_entry": "13a17129db6a6679bd6dbdc28a12c0f31e2e8d6b0811130450add602daf5137c",
+        "sha256_at_exit": "13a17129db6a6679bd6dbdc28a12c0f31e2e8d6b0811130450add602daf5137c",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/src/train_ladder.py",
+        "sha256_at_entry": "1d0a5357aafe57bd36f03bf67f1ba63e9e8b36d32a9bb49b1aafc4907a204fd9",
+        "sha256_at_exit": "1d0a5357aafe57bd36f03bf67f1ba63e9e8b36d32a9bb49b1aafc4907a204fd9",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/config/ladder_freeze.json",
+        "sha256_at_entry": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+        "sha256_at_exit": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+        "unchanged": true
+      },
+      {
+        "path": "experiments/sap/sap_1_2_hash_registry.json",
+        "sha256_at_entry": "855616a27ff1f8faa508f1da5f2bac3f886d5cbb745020770e9e9f1ea41e0683",
+        "sha256_at_exit": "855616a27ff1f8faa508f1da5f2bac3f886d5cbb745020770e9e9f1ea41e0683",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+        "sha256_at_entry": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+        "sha256_at_exit": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/config/gin_seed_freeze.json",
+        "sha256_at_entry": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+        "sha256_at_exit": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/config/gin_inner_valid_freeze.json",
+        "sha256_at_entry": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+        "sha256_at_exit": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+        "unchanged": true
+      },
+      {
+        "path": "v3_Multimodal/config/gin_inner_valid_freeze.status.json",
+        "sha256_at_entry": "bd329fefe613971f59bde8b13ea3f1c4929be04541655ad8e27e9922aa6cb0d0",
+        "sha256_at_exit": "bd329fefe613971f59bde8b13ea3f1c4929be04541655ad8e27e9922aa6cb0d0",
+        "unchanged": true
+      }
+    ]
+  },
+  "v2_gate_verify": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B -X utf8 v3_Multimodal/src/confirmatory_gin_rep_v2.py --stage verify",
+    "n_conditions": 6,
+    "n_pass": 6,
+    "all_pass": true,
+    "failed": [],
+    "exit_code_when_unmet": 12,
+    "note": "require_supersession() 을 인자 없이 호출했다(기본값 = v1 CFG_DIR + 저장소 승인 이벤트)."
+  },
+  "v2_selftest": {
+    "path": "experiments/runs/v3_gin_start_authorization/selftest_v2.json",
+    "n_cases": 10,
+    "n_pass": 10,
+    "n_skip": 0,
+    "all_pass": true,
+    "originals_intact_after_T5_T7": true
+  },
+  "sealed_snapshot_counts_only": {
+    "n_sealed_dirs": 25,
+    "n_sealed_files_total": 291,
+    "n_sealed_artifacts": 275,
+    "n_access_log": 16,
+    "method": "디렉터리 열거 + stat 만 사용 — `_sealed/` 파일을 열지도 해싱하지도 않았다.",
+    "files_opened": 0,
+    "files_hashed": 0,
+    "sealed_dirs_created": 0,
+    "unchanged_vs_t1": true
+  },
+  "git": {
+    "head": "566f487f2157e6d22b9727dc961478835af7a1d1",
+    "head_short": "566f487",
+    "n_commits": 21,
+    "ls_files_modified": [
+      "experiments/sap/freeze.log",
+      "experiments/sap/manifest.json",
+      "v3_Multimodal/src/rqint_package_gates.py",
+      "v3_Multimodal/src/sap/freeze.py"
+    ]
+  },
+  "git_index_lock": {
+    "present": true,
+    "bytes": 0,
+    "mtime_kst": "2026-08-06 19:59:28 KST",
+    "policy": "docs/104 L86 축자 「.git/index.lock(0 B, 2026-08-06 선재)은 건드리지 않는다.」 — 제거·이동 0",
+    "opened": false
+  },
+  "venv": {
+    "python": "3.14.4",
+    "torch": "2.12.1",
+    "torch_geometric": "2.8.0",
+    "rdkit": "2026.03.3",
+    "sklearn": "1.9.0",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3"
+  },
+  "pycache_dirs_at_exit": {
+    "count": 4541,
+    "at_entry": 4541,
+    "counting_convention": "archive/ 포함 (블록 AR 이 4,541 로 보고한 것과 동일 규약). 제외 시 4,540."
+  },
+  "access_log_evidence_note": "`_sealed/`의 `access.log` 는 운영 코드가 자체 생성한 응용계층 로그로서, 기록 대상 경로를 통한 접근이 관찰되지 않았음을 보조적으로 보여 준다. 다만 OS 수준의 독립 감사로그가 아니므로 관리자 접근, 우회 경로 또는 로그 외 접근의 부재를 독립적으로 증명하지는 않는다.",
+  "non_reading_claim_boundary": "연구팀은 실행 전후 manifest 의 해시 일치, 봉인 루트의 불변 확인, 응용계층 접근로그 및 실행 전 승인 기록을 통해 결과 비열람 절차를 문서화하였다. 그러나 봉인이 암호학적 키 통제나 OS 수준 독립 감사로 강제된 것은 아니므로, 이 자료는 절차 준수에 대한 감사추적을 제공하지만 절대적 비열람을 기술적으로 증명하지는 않는다.",
+  "deferred_to_post_execution": [
+    "advisor signature on manifest",
+    "OSF update timestamp"
+  ]
+}

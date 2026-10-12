@@ -1,0 +1,207 @@
+{
+  "_scope": "공개 — 커버리지 감사(수행/미수행 표)뿐. 계산·추정 없음. 결과 수치 없음.",
+  "ts_kst": "2026-08-04 09:29:44 KST",
+  "block": "K-5 (docs/54)",
+  "registered_section": "docs/29 §11 — 연속 유사도 층화(primary): max Morgan Tanimoto / 표적 max sequence identity / unseen-target proportion(unweighted · evidence-weighted · mechanism-target indicator · dominant-target-cold). 각 축에서 성능 · Δ(M2b−M1b) 및 Δ(M2b−P-ID) 층화.",
+  "n_items": 9,
+  "n_executed": 4,
+  "n_not_executed": 5,
+  "items": [
+    {
+      "id": "A1",
+      "registered_axis": "max Morgan Tanimoto (구조 유사도)",
+      "executed": true,
+      "executed_where": "블록 H — struct_bin q1~q4 (`struct_bounds.json`)",
+      "inputs_available": {
+        "status": "available",
+        "evidence": [
+          "experiments/runs/v3_stratification/strata_assignment.csv",
+          "experiments/runs/v3_stratification/_max_tanimoto.npy"
+        ]
+      },
+      "definition_frozen": {
+        "status": "frozen",
+        "evidence": "struct_bounds.json (반복1 기준 25/50/75 분위, 결과 무참조 사전확정)"
+      },
+      "prerequisites": [],
+      "phase": "confirmatory",
+      "note": "블록 H 에서 층별 추정까지 완료(산출 전량 `_sealed/`)."
+    },
+    {
+      "id": "A2",
+      "registered_axis": "표적 max sequence identity",
+      "executed": true,
+      "executed_where": "블록 H — seq_stratum (seen/≥90/70–90/40–70/<40)",
+      "inputs_available": {
+        "status": "available",
+        "evidence": [
+          "experiments/runs/v3_stratification/strata_assignment.csv",
+          "data/processed/target_mapping/_mmseqs/identity_pairs.tsv"
+        ]
+      },
+      "definition_frozen": {
+        "status": "frozen",
+        "evidence": "sap/unseen_target.py — SEQID_BOUNDARIES · drug_sequence_stratum"
+      },
+      "prerequisites": [],
+      "phase": "confirmatory",
+      "note": "층별 추정까지 완료. `unseen_40_70`·`unseen_lt40` 은 stable 표본 0 (추정 불가능성)."
+    },
+    {
+      "id": "A3",
+      "registered_axis": "unseen-target proportion — unweighted",
+      "executed": false,
+      "executed_where": null,
+      "inputs_available": {
+        "status": "available",
+        "evidence": [
+          "experiments/runs/v3_stratification/strata_assignment.csv — `n_unseen_targets` / `n_targets` (분모>0 인 약물-반복 2541행)"
+        ]
+      },
+      "definition_frozen": {
+        "status": "not_frozen",
+        "detail": "비율 자체는 산술적으로 즉시 계산되나, **층 경계(bin)·연속축 처리 방식**이 SAP·등록 어디에도 동결돼 있지 않다. `sap/unseen_target.py` 에 proportion 관련 상수·연산자 없음(A2 의 SEQID_BOUNDARIES 에 해당하는 것이 부재)."
+      },
+      "prerequisites": [
+        "층 경계(또는 연속축 모형) 동결 amendment — post-interim"
+      ],
+      "phase": "confirmatory",
+      "note": "docs/53 §1 — '미관찰 표적 비율' 분석은 확증으로 유지 결정."
+    },
+    {
+      "id": "A4",
+      "registered_axis": "unseen-target proportion — evidence-weighted",
+      "executed": false,
+      "executed_where": null,
+      "inputs_available": {
+        "status": "partial",
+        "evidence": [
+          "data/processed/target_mapping/07_agg_topk.csv — 표적별 `weight`·`pchembl_median`·`affinity_imputed`(top-k 한정, 3,436행)",
+          "data/processed/target_mapping/08_m1b_covariates.csv — 약물수준 `evidence_count`·`confidence_mean/max`·`pchembl_mean/max`"
+        ],
+        "gap": "표적별 evidence 가중은 top-k(≤5) 표적에만 존재 — 전 표적 가중은 재생성 필요"
+      },
+      "definition_frozen": {
+        "status": "not_frozen",
+        "detail": "'evidence' 의 정의(assay 수 · confidence · pChEMBL · MoA 여부)와 가중 함수가 미동결. 층 경계도 미동결."
+      },
+      "prerequisites": [
+        "가중 정의 동결 amendment",
+        "층 경계 동결 amendment"
+      ],
+      "phase": "confirmatory"
+    },
+    {
+      "id": "A5",
+      "registered_axis": "unseen-target proportion — mechanism-target indicator",
+      "executed": false,
+      "executed_where": null,
+      "inputs_available": {
+        "status": "regeneration_required",
+        "evidence": [
+          "data/processed/target_mapping/08_m1b_covariates.csv — **약물 수준** `mechanism_target_n` 만 보유",
+          "data/processed/target_mapping/03_targets.csv — `source` 열이 전건 'chembl' 단일값 → **표적 수준 mechanism/activity 구분 없음**",
+          "data/processed/target_mapping/_cache/ — ChEMBL `mechanism` 응답 1,009 파일 존재(네트워크 없이 재파싱 가능)"
+        ],
+        "gap": "표적 수준 mechanism 플래그가 현 산출물에 없음 → 캐시 재파싱으로 재생성 필요"
+      },
+      "definition_frozen": {
+        "status": "not_frozen",
+        "detail": "indicator 판정 기준(MoA 표적만 대상인지, 지표를 층 축으로 쓸지 공변량으로 쓸지)이 미동결."
+      },
+      "prerequisites": [
+        "표적 수준 mechanism 플래그 재생성(캐시 재파싱)",
+        "판정 기준 동결 amendment"
+      ],
+      "phase": "confirmatory"
+    },
+    {
+      "id": "A6",
+      "registered_axis": "unseen-target proportion — dominant-target-cold",
+      "executed": false,
+      "executed_where": null,
+      "inputs_available": {
+        "status": "partial",
+        "evidence": [
+          "data/processed/target_mapping/07_agg_topk.csv — `rank`(1~5)·`pchembl_median` 로 '지배 표적' 후보 산출 가능",
+          "experiments/runs/v3_stratification/strata_assignment.csv — fold-local seen/unseen 판정 입력"
+        ],
+        "gap": "top-k 밖 표적의 순위·친화도 부재"
+      },
+      "definition_frozen": {
+        "status": "not_frozen",
+        "detail": "'dominant target' 정의(rank=1 / pChEMBL 임계 / MoA 우선)와 'cold' 임계가 미동결."
+      },
+      "prerequisites": [
+        "dominant 정의·임계 동결 amendment"
+      ],
+      "phase": "confirmatory"
+    },
+    {
+      "id": "C1",
+      "registered_axis": "각 축에서 Δ(M2b−M1b) 층화",
+      "executed": true,
+      "executed_where": "블록 H — 수행 축(A1·A2 + drug_class) 13 층 전건, 산출 전량 `_sealed/`",
+      "inputs_available": {
+        "status": "available",
+        "evidence": [
+          "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz · consensus_M2b.npz"
+        ]
+      },
+      "definition_frozen": {
+        "status": "frozen",
+        "evidence": "SAP manifest 756d485feb4715e9 (v1.1)"
+      },
+      "prerequisites": [],
+      "phase": "confirmatory",
+      "note": "미실행 축(A3~A6)에 대해서는 당연히 미수행."
+    },
+    {
+      "id": "C2",
+      "registered_axis": "각 축에서 Δ(M2b−P-ID) 층화",
+      "executed": false,
+      "executed_where": null,
+      "inputs_available": {
+        "status": "available",
+        "evidence": [
+          "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-ID.npz (블록 I, 2026-08-04 완료)",
+          "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz"
+        ]
+      },
+      "definition_frozen": {
+        "status": "frozen",
+        "evidence": "대비 자체는 `sap/decision.py` HOLM_FAMILY ② 로 동결"
+      },
+      "prerequisites": [],
+      "status_note": "★ 선행 조건 **해소됨** — 블록 I 완료로 P-ID consensus OOF 확보. '블록 I 이후 가능'이 아니라 **지금 계산 가능**이며, 다만 **본 블록(K) 범위 밖**이다. 후속 블록 후보로 제안한다.",
+      "phase": "confirmatory"
+    },
+    {
+      "id": "X1",
+      "registered_axis": "(등록 §11 연속축 목록 밖) drug_class — all-seen/mixed/all-unseen",
+      "executed": true,
+      "executed_where": "블록 H — 3 층 + unstable_stratum",
+      "inputs_available": {
+        "status": "available",
+        "evidence": [
+          "experiments/runs/v3_stratification/strata_assignment.csv"
+        ]
+      },
+      "definition_frozen": {
+        "status": "frozen",
+        "evidence": "sap/unseen_target.py — classify_drug (등록 §9 범주 정의)"
+      },
+      "prerequisites": [],
+      "phase": "data_characteristic",
+      "note": "docs/53 §1 — 세 집단의 구조적 **분포 자체는 데이터 특성으로 보고**하되 **재분할 결과 분석은 exploratory**. §11 의 '연속 유사도 축'에는 포함되지 않는다."
+    }
+  ],
+  "definition_freeze_caveat": "미동결 항목(A3 경계 · A4 가중 정의 · A5 판정 기준 · A6 임계)은 **본 블록에서 정하지 않는다**. Δ 부호 4건이 이미 공개된 뒤이므로 확정은 **post-interim amendment** 로만 가능하다.",
+  "not_performed": [
+    "미실행 축 계산 착수",
+    "정의 확정",
+    "개봉",
+    "성공판정",
+    "다중성 보정"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "_scope": "블록 C 요약(공개) — 부호·해시·시간·개수만. AP·Δ 크기·p 없음.",
+  "ts_kst": "2026-07-27 22:14:40 KST",
+  "elapsed_sec": 2740.561664167035,
+  "gate0_pass": true,
+  "rep1_sealed_unchanged": {
+    "at_start": {
+      "metrics_full.json": "8722a4e1c52d2eae5cbbebf6b5a5ff5cb145dd591ea5648731d7c481ed15c1b8",
+      "oof_M1b.npz": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+      "oof_M2b.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260"
+    },
+    "at_end": {
+      "metrics_full.json": "8722a4e1c52d2eae5cbbebf6b5a5ff5cb145dd591ea5648731d7c481ed15c1b8",
+      "oof_M1b.npz": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+      "oof_M2b.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260"
+    },
+    "all_match": true
+  },
+  "seed_map": {
+    "2": 202,
+    "3": 203
+  },
+  "code_path_equivalence": {
+    "reproduced_sha256": "3c1a5d68bfcc6ddfa1de17990194c5beb3c4fe365ee0a123d04c4a34bed871b2",
+    "rep1_folds_sha256": "3c1a5d68bfcc6ddfa1de17990194c5beb3c4fe365ee0a123d04c4a34bed871b2",
+    "byte_identical": true,
+    "fold_sizes": [
+      218,
+      218,
+      219,
+      218,
+      219
+    ],
+    "note": "반복1 원본 파일은 읽기만 함(재생성·덮어쓰기 없음). 재현본은 임시 디렉터리에만 기록 후 삭제."
+  },
+  "repeats": {
+    "2": {
+      "seed": 202,
+      "sign": "negative",
+      "sealed_sha256": {
+        "metrics_full.json": "66be535755ca9f4a174a15b45fd2af34fb5f2283d0dab71acc579c6fc66a9621",
+        "oof_M1b.npz": "9155569ac2581613312c7608a4d9cfcfc7bfe25798b24003a0f6a9116a4fcb33",
+        "oof_M2b.npz": "05a51b16002b8c0fbfd68a9b5f1fa1d578b9b0b491e6944f098588d70fad0298"
+      },
+      "gate_A_asserts": {
+        "n_drugs_all_1092": true,
+        "n_pt_370": true,
+        "n_scaffold_groups_all_732": true,
+        "every_drug_exactly_one_fold": true,
+        "scaffold_group_disjoint_no_fold_crossing": true,
+        "all_groups_assigned": true,
+        "gate_A_pass": true,
+        "bseq_fit_rows_ok": true,
+        "rare_pt_min1_all_train_folds": true
+      },
+      "fold_sizes": [
+        218,
+        218,
+        219,
+        218,
+        219
+      ],
+      "wall_clock_sec": 1365.413721666031
+    },
+    "3": {
+      "seed": 203,
+      "sign": "negative",
+      "sealed_sha256": {
+        "metrics_full.json": "b4d80cb9acceb8de6b05da1b0a247d0de94197ffebf24c9309d004d9b722c1cd",
+        "oof_M1b.npz": "0bb7a951246f85ab37b5d1536073a491c9857cd255593fdef0206c3f8b8b22c4",
+        "oof_M2b.npz": "c850e55c64309c5cae763f6388459206270a106efc70d7a11322b14c0c3091c8"
+      },
+      "gate_A_asserts": {
+        "n_drugs_all_1092": true,
+        "n_pt_370": true,
+        "n_scaffold_groups_all_732": true,
+        "every_drug_exactly_one_fold": true,
+        "scaffold_group_disjoint_no_fold_crossing": true,
+        "all_groups_assigned": true,
+        "gate_A_pass": true,
+        "bseq_fit_rows_ok": true,
+        "rare_pt_min1_all_train_folds": true
+      },
+      "fold_sizes": [
+        218,
+        218,
+        219,
+        218,
+        219
+      ],
+      "wall_clock_sec": 1371.291810417024
+    }
+  },
+  "consensus": {
+    "sign": "negative",
+    "sealed_sha256": {
+      "consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+      "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+      "metrics_full.json": "6a861640a05940533ad75b97626929c321689929c9609ec3c08972ac87b8dc8d"
+    }
+  },
+  "leak_scan": {
+    "n_files_scanned": 18,
+    "n_hits_total": 580,
+    "n_hits_strict_confirmatory": 0,
+    "strict_hits": [],
+    "rule": "확증 반복/consensus 공개·config·log 에서 지표 후보 소수(0.dd+) 검출 = 0 이어야 함",
+    "allowlist_keys": [
+      "sec",
+      "wall",
+      "time",
+      "rss",
+      "gb",
+      "frac",
+      "ratio",
+      "share",
+      "density",
+      "jaccard",
+      "evr",
+      "zero_tol",
+      "version",
+      "incidence",
+      "elapsed",
+      "hours",
+      "days",
+      "mc_se",
+      "alpha",
+      "cov",
+      "min_seq_id",
+      "budget"
+    ]
+  },
+  "compute_conditions": {
+    "blas_env_unset": true,
+    "rf_n_jobs": -1,
+    "note": "반복1과 동일 조건(환경변수 미설정) 유지"
+  },
+  "not_performed": [
+    "bootstrap CI",
+    "sign-flip",
+    "p-value",
+    "SESOI/TOST",
+    "성공판정",
+    "§13-4 null 본런",
+    "sealed 값 사람 열람",
+    "git commit",
+    "네트워크"
+  ]
+}

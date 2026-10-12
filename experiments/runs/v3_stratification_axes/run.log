@@ -1,0 +1,109 @@
+2026-08-07 12:29:54 KST | [verify] Z-1 게이트 + Z-3 입력 판정
+2026-08-07 12:29:55 KST | [verify] pchembl 정본 = 05b_affinity_values.csv (12514/12613)
+2026-08-07 12:29:55 KST | [verify] A5 — 943∩847=847 · 847 분해 {'A': 326, 'B': 21, 'C': 24, 'D': 476} · canonical UniProt 758→758
+2026-08-07 12:29:55 KST | [verify] PASS — G0 · sealed guard 273종 · open_sealed 0 · AST 상수 재사용 14종 · 입력 7종 sha 일치
+2026-08-07 16:56:38 KST | [verify] Z-1 게이트 + Z-3 입력 판정
+2026-08-07 16:56:39 KST | [verify] pchembl 정본 = 05b_affinity_values.csv (12514/12613)
+2026-08-07 16:56:39 KST | [verify] A5 — 943∩847=847 · 847 분해 {'A': 326, 'B': 21, 'C': 24, 'D': 476} · canonical UniProt 758→758
+2026-08-07 16:56:39 KST | [verify] PASS — G0 · sealed guard 273종 · open_sealed 0 · AST 상수 재사용 14종 · 입력 7종 sha 일치
+2026-08-07 17:18:14 KST | [strata] Z-4 4축 fold-local 층 배정 + 회계 assert
+2026-08-07 17:18:14 KST | [strata] experiments/runs/v3_stratification_axes/axes_assignment.csv — 3276행 (1,092 × 3반복)
+2026-08-07 17:18:15 KST | [strata] 회계 assert PASS — 축별 {'A3': 847, 'A4': 847, 'A5': 847, 'A6': 847} · 847+245=1092 · 네 축 집합 동일
+2026-08-07 17:18:16 KST | [strata] A3: {0} n=552 · (0,0.5) n=184 · [0.5,1) n=14 · {1} n=18 · unstable_stratum n=79
+2026-08-07 17:18:16 KST | [strata] A4: {0} n=557 · (0,0.5) n=172 · [0.5,1) n=12 · {1} n=12 · no_evidence n=16 · unstable_stratum n=78
+2026-08-07 17:18:16 KST | [strata] A5: {0} n=264 · {1} n=181 · no_mechanism n=347 · not_estimable n=24 · unstable_stratum n=31
+2026-08-07 17:18:16 KST | [strata] A6: {0} n=741 · {1} n=48 · no_evidence n=16 · unstable_stratum n=42
+2026-08-07 17:18:16 KST | [strata] 추정 층 20개 × 대비 2종 = 40 unit-run
+2026-08-07 17:42:15 KST | [pilot] Z-5 계측 — B=100. 파일럿 통계 산출은 전량 폐기(봉인 저장 0).
+2026-08-07 17:42:20 KST | [pilot] 보정 대상 = A6/{0} (n_drugs=741)
+2026-08-07 17:44:17 KST | [pilot] 전 층×대비(40) × B=10000 총 추정 wall = 22.29h (0.929일) · 7.0일 초과 = False
+2026-08-07 18:19:52 KST | [estimate] Z-6 본계산 — B=10000, seed boot=6001 flip=6002. 산출 전량 `_sealed/`.
+2026-08-07 19:14:27 KST | [estimate] 1/40 A3::{0}::C1 n=552 clusters=398 primary_ci=estimable wall=3274.1s
+2026-08-07 20:09:49 KST | [estimate] 2/40 A3::{0}::C2 n=552 clusters=398 primary_ci=estimable wall=3322.5s
+2026-08-07 20:56:55 KST | [estimate] 3/40 A3::(0,0.5)::C1 n=184 clusters=154 primary_ci=estimable wall=2825.4s
+2026-08-07 21:42:23 KST | [estimate] 4/40 A3::(0,0.5)::C2 n=184 clusters=154 primary_ci=estimable wall=2728.2s
+2026-08-07 21:55:57 KST | [estimate] 5/40 A3::[0.5,1)::C1 n=14 clusters=9 primary_ci=estimable wall=814.3s
+2026-08-07 22:09:30 KST | [estimate] 6/40 A3::[0.5,1)::C2 n=14 clusters=9 primary_ci=estimable wall=812.5s
+2026-08-07 22:22:46 KST | [estimate] 7/40 A3::{1}::C1 n=18 clusters=16 primary_ci=estimable wall=796.2s
+2026-08-07 22:36:02 KST | [estimate] 8/40 A3::{1}::C2 n=18 clusters=16 primary_ci=estimable wall=796.2s
+2026-08-07 23:10:56 KST | [estimate] 9/40 A3::unstable_stratum::C1 n=79 clusters=72 primary_ci=estimable wall=2093.3s
+2026-08-07 23:45:53 KST | [estimate] 10/40 A3::unstable_stratum::C2 n=79 clusters=72 primary_ci=estimable wall=2097.7s
+2026-08-08 00:38:55 KST | [estimate] 11/40 A4::{0}::C1 n=557 clusters=400 primary_ci=estimable wall=3181.8s
+2026-08-08 01:31:59 KST | [estimate] 12/40 A4::{0}::C2 n=557 clusters=400 primary_ci=estimable wall=3183.7s
+2026-08-08 02:15:26 KST | [estimate] 13/40 A4::(0,0.5)::C1 n=172 clusters=149 primary_ci=estimable wall=2606.5s
+2026-08-08 02:58:55 KST | [estimate] 14/40 A4::(0,0.5)::C2 n=172 clusters=149 primary_ci=estimable wall=2609.4s
+2026-08-08 03:11:13 KST | [estimate] 15/40 A4::[0.5,1)::C1 n=12 clusters=9 primary_ci=estimable wall=738.2s
+2026-08-08 03:23:35 KST | [estimate] 16/40 A4::[0.5,1)::C2 n=12 clusters=9 primary_ci=estimable wall=741.1s
+2026-08-08 03:33:32 KST | [estimate] 17/40 A4::{1}::C1 n=12 clusters=12 primary_ci=estimable wall=597.8s
+2026-08-08 03:43:29 KST | [estimate] 18/40 A4::{1}::C2 n=12 clusters=12 primary_ci=estimable wall=596.5s
+2026-08-08 04:00:14 KST | [estimate] 19/40 A4::no_evidence::C1 n=16 clusters=12 primary_ci=estimable wall=1005.1s
+2026-08-08 04:17:01 KST | [estimate] 20/40 A4::no_evidence::C2 n=16 clusters=12 primary_ci=estimable wall=1007.4s
+2026-08-08 04:53:24 KST | [estimate] 21/40 A4::unstable_stratum::C1 n=78 clusters=68 primary_ci=estimable wall=2182.2s
+2026-08-08 05:29:46 KST | [estimate] 22/40 A4::unstable_stratum::C2 n=78 clusters=68 primary_ci=estimable wall=2181.8s
+2026-08-08 06:16:32 KST | [estimate] 23/40 A5::{0}::C1 n=264 clusters=208 primary_ci=estimable wall=2805.8s
+2026-08-08 07:03:19 KST | [estimate] 24/40 A5::{0}::C2 n=264 clusters=208 primary_ci=estimable wall=2807.1s
+2026-08-08 07:45:47 KST | [estimate] 25/40 A5::{1}::C1 n=181 clusters=142 primary_ci=estimable wall=2548.6s
+2026-08-08 08:28:18 KST | [estimate] 26/40 A5::{1}::C2 n=181 clusters=142 primary_ci=estimable wall=2550.8s
+2026-08-08 09:16:48 KST | [estimate] 27/40 A5::no_mechanism::C1 n=347 clusters=258 primary_ci=estimable wall=2910.0s
+2026-08-08 10:05:15 KST | [estimate] 28/40 A5::no_mechanism::C2 n=347 clusters=258 primary_ci=estimable wall=2906.5s
+2026-08-08 10:25:19 KST | [estimate] 29/40 A5::not_estimable::C1 n=24 clusters=16 primary_ci=estimable wall=1203.7s
+2026-08-08 10:45:19 KST | [estimate] 30/40 A5::not_estimable::C2 n=24 clusters=16 primary_ci=estimable wall=1200.3s
+2026-08-08 11:05:36 KST | [estimate] 31/40 A5::unstable_stratum::C1 n=31 clusters=27 primary_ci=estimable wall=1216.7s
+2026-08-08 11:25:50 KST | [estimate] 32/40 A5::unstable_stratum::C2 n=31 clusters=27 primary_ci=estimable wall=1214.8s
+2026-08-08 12:22:15 KST | [estimate] 33/40 A6::{0}::C1 n=741 clusters=525 primary_ci=estimable wall=3384.0s
+2026-08-08 13:18:37 KST | [estimate] 34/40 A6::{0}::C2 n=741 clusters=525 primary_ci=estimable wall=3382.0s
+2026-08-08 13:44:28 KST | [estimate] 35/40 A6::{1}::C1 n=48 clusters=46 primary_ci=estimable wall=1551.2s
+2026-08-08 14:10:08 KST | [estimate] 36/40 A6::{1}::C2 n=48 clusters=46 primary_ci=estimable wall=1540.3s
+2026-08-08 14:27:01 KST | [estimate] 37/40 A6::no_evidence::C1 n=16 clusters=12 primary_ci=estimable wall=1013.0s
+2026-08-08 14:43:55 KST | [estimate] 38/40 A6::no_evidence::C2 n=16 clusters=12 primary_ci=estimable wall=1013.7s
+2026-08-08 15:16:30 KST | [estimate] 39/40 A6::unstable_stratum::C1 n=42 clusters=36 primary_ci=estimable wall=1955.0s
+2026-08-08 15:49:09 KST | [estimate] 40/40 A6::unstable_stratum::C2 n=42 clusters=36 primary_ci=estimable wall=1958.7s
+2026-08-08 15:49:09 KST | [estimate] 완료 — unit-run 40 · 총 계산 wall 21.49h · not_estimable 40 · sealed sha16 5c1aa8e24cd5ca9c · guard 273종 불변
+2026-08-08 16:06:27 KST | [recheck] 공개 산출물 교차 redaction 스캔 + 무결성 재확인 (재계산 0)
+2026-08-08 16:06:27 KST | [recheck] PASS — 공개 4파일 검출 0 · 봉인 sha 일치 · guard 273종 불변 · open_sealed 0 · 체크포인트 40행
+2026-08-08 16:22:52 KST | [estimate] Z-6 본계산 — B=10000, seed boot=6001 flip=6002. 산출 전량 `_sealed/`.
+2026-08-08 16:22:53 KST | [estimate] 체크포인트 재개 — 완주 40/40
+2026-08-08 16:22:53 KST | [estimate] 1/40 A3::{0}::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 2/40 A3::{0}::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 3/40 A3::(0,0.5)::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 4/40 A3::(0,0.5)::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 5/40 A3::[0.5,1)::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 6/40 A3::[0.5,1)::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 7/40 A3::{1}::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 8/40 A3::{1}::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 9/40 A3::unstable_stratum::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 10/40 A3::unstable_stratum::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 11/40 A4::{0}::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 12/40 A4::{0}::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 13/40 A4::(0,0.5)::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 14/40 A4::(0,0.5)::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 15/40 A4::[0.5,1)::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 16/40 A4::[0.5,1)::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 17/40 A4::{1}::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 18/40 A4::{1}::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 19/40 A4::no_evidence::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 20/40 A4::no_evidence::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 21/40 A4::unstable_stratum::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 22/40 A4::unstable_stratum::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 23/40 A5::{0}::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 24/40 A5::{0}::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 25/40 A5::{1}::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 26/40 A5::{1}::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 27/40 A5::no_mechanism::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 28/40 A5::no_mechanism::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 29/40 A5::not_estimable::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 30/40 A5::not_estimable::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 31/40 A5::unstable_stratum::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 32/40 A5::unstable_stratum::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 33/40 A6::{0}::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 34/40 A6::{0}::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 35/40 A6::{1}::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 36/40 A6::{1}::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 37/40 A6::no_evidence::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 38/40 A6::no_evidence::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 39/40 A6::unstable_stratum::C1 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 40/40 A6::unstable_stratum::C2 — 체크포인트 존재, SKIP
+2026-08-08 16:22:53 KST | [estimate] 봉인 결과 파일 기존재 — 재작성 0 · 판독 0(공개요약만 재구성)
+2026-08-08 16:22:53 KST | [estimate] 완료 — unit-run 40 · 총 계산 wall 21.49h · not_estimable 0 · sealed sha16 5c1aa8e24cd5ca9c · guard 273종 불변
+2026-08-08 16:39:51 KST | [recheck] 공개 산출물 교차 redaction 스캔 + 무결성 재확인 (재계산 0)
+2026-08-08 16:39:51 KST | [recheck] PASS — 공개 4파일 검출 0 · 봉인 sha 일치 · guard 273종 불변 · open_sealed 0 · 체크포인트 40행

@@ -1,0 +1,43 @@
+{
+  "purpose": "블록 O 자진 추가 검증 — 임계 배터리 강제 슬립 구간을 걸친 유일한 model-fold(rep1 fold3)의 결정성을 재계산으로 확인",
+  "model": "RF_tuned",
+  "repeat": 1,
+  "fold": 3,
+  "n_train": 874,
+  "n_test": 218,
+  "dim": 2048,
+  "dtype_recomputed": "float32",
+  "dtype_stored": "float32",
+  "shape_recomputed": [
+    218,
+    370
+  ],
+  "shape_stored": [
+    218,
+    370
+  ],
+  "byte_identical": true,
+  "recompute_wall_s": 197.56718712497968,
+  "stored_partial": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold3.npy",
+  "gates": {
+    "A": {
+      "gate": "A",
+      "label": "블록 O 자진검증 진입",
+      "load1": 1.7041015625,
+      "pass": true
+    },
+    "B": {
+      "gate": "B",
+      "label": "블록 O 자진검증",
+      "competitors": 0,
+      "pass": true
+    }
+  },
+  "note": "재계산본은 저장하지 않고 폐기했다. 저장된 부분 산출은 읽기만 했고 어떤 봉인 산출물도 수정하지 않았다. Δ·지표·CI·p·부호 산출 0.",
+  "sealed_guard_check": {
+    "n_preexisting": 184,
+    "n_added_own": 0,
+    "n_foreign": 0,
+    "preexisting_unchanged": true
+  }
+}

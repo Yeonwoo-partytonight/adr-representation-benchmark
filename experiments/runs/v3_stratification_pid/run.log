@@ -1,0 +1,28 @@
+2026-08-04 23:14:39 KST | [verify] L-1 게이트 + L-2 정합 하드 assert
+2026-08-04 23:14:40 KST | [verify] PASS — G0 · sealed guard 157종 · open_sealed 0 · 행순서 동일 True · shape [1092, 370] NaN 0 · 회계 847/1092 · 층 13개(블록 H·K 와 일치)
+2026-08-04 23:14:40 KST | [signcheck] 부호 방향 검증 — **합성 데이터만** 사용(확증 consensus 미사용)
+2026-08-04 23:14:44 KST | [signcheck] PASS — 슬롯 (arg1=P-ID 기준, arg2=M2b 비교) · 방향 규약 일치 · 블록 H run_unit 과 동일 매핑(합성 입력에서 Δ 완전 일치)
+2026-08-04 23:14:44 KST | [pilot] L-3 계측 — B=100. 파일럿 통계 산출은 전량 폐기(봉인 저장 0).
+2026-08-04 23:14:45 KST | [pilot] 대상 = seq_stratum/seen (n_drugs=820)
+2026-08-04 23:16:53 KST | [pilot] 전 층(13) × B=10000 총 추정 wall = 7.64h (0.318일) · 7일 초과 = False
+2026-08-04 23:16:53 KST | [estimate] L-4 본계산 — B=10000, seed boot=6001 flip=6002. 산출 전량 `_sealed/`.
+2026-08-05 00:10:28 KST | [estimate] 1/13 drug_class::all-seen n=552 clusters=398 primary_ci=estimable wall=3214.0s
+2026-08-05 00:23:44 KST | [estimate] 2/13 drug_class::all-unseen n=18 clusters=16 primary_ci=estimable wall=796.4s
+2026-08-05 01:09:26 KST | [estimate] 3/13 drug_class::mixed n=206 clusters=167 primary_ci=estimable wall=2741.6s
+2026-08-05 01:43:42 KST | [estimate] 4/13 drug_class::unstable_stratum n=71 clusters=65 primary_ci=estimable wall=2055.5s
+2026-08-05 02:40:58 KST | [estimate] 5/13 seq_stratum::seen n=820 clusters=571 primary_ci=estimable wall=3436.8s
+2026-08-05 02:42:53 KST | [estimate] 6/13 seq_stratum::unseen_ge90 n=2 clusters=2 primary_ci=not_estimable wall=114.6s
+2026-08-05 02:55:24 KST | [estimate] 7/13 seq_stratum::unseen_70_90 n=15 clusters=13 primary_ci=estimable wall=751.4s
+2026-08-05 03:06:03 KST | [estimate] 8/13 seq_stratum::unstable_stratum n=10 clusters=9 primary_ci=estimable wall=638.1s
+2026-08-05 03:46:53 KST | [estimate] 9/13 struct_bin::struct_q1 n=144 clusters=107 primary_ci=estimable wall=2450.1s
+2026-08-05 04:28:25 KST | [estimate] 10/13 struct_bin::struct_q2 n=174 clusters=137 primary_ci=estimable wall=2492.0s
+2026-08-05 05:10:06 KST | [estimate] 11/13 struct_bin::struct_q3 n=150 clusters=117 primary_ci=estimable wall=2501.1s
+2026-08-05 05:53:07 KST | [estimate] 12/13 struct_bin::struct_q4 n=175 clusters=130 primary_ci=estimable wall=2580.3s
+2026-08-05 06:37:39 KST | [estimate] 13/13 struct_bin::unstable_stratum n=204 clusters=161 primary_ci=estimable wall=2672.1s
+2026-08-05 08:04:52 KST | [recheck] 공개 4파일 교차 redaction 스캔 + 무결성 재확인 (재계산 0)
+2026-08-05 08:04:52 KST | [signcheck] 부호 방향 검증 — **합성 데이터만** 사용(확증 consensus 미사용)
+2026-08-05 08:04:56 KST | [signcheck] PASS — 슬롯 (arg1=P-ID 기준, arg2=M2b 비교) · 방향 규약 일치 · 블록 H run_unit 과 동일 매핑(합성 입력에서 Δ 완전 일치)
+2026-08-05 08:31:04 KST | [recheck] 공개 4파일 교차 redaction 스캔 + 무결성 재확인 (재계산 0)
+2026-08-05 08:31:04 KST | [signcheck] 부호 방향 검증 — **합성 데이터만** 사용(확증 consensus 미사용)
+2026-08-05 08:31:07 KST | [signcheck] PASS — 슬롯 (arg1=P-ID 기준, arg2=M2b 비교) · 방향 규약 일치 · 블록 H run_unit 과 동일 매핑(합성 입력에서 Δ 완전 일치)
+2026-08-05 08:31:07 KST | [recheck] PASS — 공개 4파일 검출 0 · 봉인 sha 일치 · guard 157종 불변 · open_sealed 0 · 체크포인트 13행

@@ -1,0 +1,13 @@
+{
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "scipy": "1.18.0",
+  "scikit_learn": "1.9.0",
+  "joblib": "1.5.3",
+  "pandas": "3.0.3",
+  "rdkit": "2026.03.3",
+  "machine": "arm64",
+  "os": "Darwin 25.6.0",
+  "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+  "harness_sha256": "967f3749cb0796e7202de6723e1694d96c4605dc2e5374972f739c6f812e76d9"
+}

@@ -1,0 +1,10 @@
+{
+  "n_models": 1,
+  "method": "A (등록 §6-(ii)): drug-PT별 raw OOF probability 산술평균 → consensus → 그 위에서 추론",
+  "dir": "experiments/runs/v3_confirm_rftuned_consensus_rep123",
+  "sealed_sha256": {
+    "consensus_RF_tuned.npz": "41080e1be7072b08c46027dd4590cb1d9112b904a4a3645b1812a5f26ad5d081",
+    "metrics_full.json": "771c25d2850efa90fccc1f922945c9f5878310b94fe6e2c6210da5deedab0551"
+  },
+  "wall_s": 0.5447302079992369
+}

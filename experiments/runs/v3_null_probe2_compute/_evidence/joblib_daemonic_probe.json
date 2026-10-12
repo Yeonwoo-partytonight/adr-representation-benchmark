@@ -1,0 +1,41 @@
+{
+  "_scope": "joblib daemonic 강등 사실 확인 — introspection 전용. 모델학습 0 · permutation 0 · 실제 데이터 미접근 · 네트워크 0.",
+  "NOT_AN_ANALYSIS_RESULT": true,
+  "enters_null_distribution": false,
+  "ts_kst": "2026-07-28 19:53:23 KST",
+  "versions": {
+    "joblib": "1.5.3",
+    "sklearn": "1.9.0",
+    "python": "3.14.4",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O"
+  },
+  "parent_non_daemonic": {
+    "process_name": "MainProcess",
+    "daemonic": false,
+    "n_jobs_requested": 18,
+    "effective_n_jobs": 18,
+    "warnings": [],
+    "trivial_result": [
+      3,
+      3,
+      3
+    ]
+  },
+  "pool_worker_daemonic": {
+    "process_name": "SpawnPoolWorker-20",
+    "daemonic": true,
+    "n_jobs_requested": 18,
+    "effective_n_jobs": 1,
+    "warnings": [
+      "Loky-backed parallel loops cannot be called in a multiprocessing, setting n_jobs=1",
+      "Loky-backed parallel loops cannot be called in a multiprocessing, setting n_jobs=1"
+    ],
+    "trivial_result": [
+      3,
+      3,
+      3
+    ]
+  },
+  "daemonic_downgrade_confirmed": true,
+  "interpretation": "multiprocessing.Pool 워커는 daemonic 이므로 loky 백엔드가 n_jobs=1 로 강등된다. 따라서 블록 D 의 D-3·D-4 워커 내부 MultiOutputClassifier 는 요청값(18)과 무관하게 **직렬(n_jobs=1)** 로 실행됐다. 이는 실행 형태(시간)에만 관여하며 예측 배열의 비트 동일성에는 영향이 없다(D-2·D-3 G1·D-4 의 0-diff 증명이 그대로 유효)."
+}

@@ -1,0 +1,1906 @@
+{
+  "_doc": "블록 AT 확증 실행 계획 315 단위 (docs/110 §3 AT-5). 학습 0.",
+  "generated_kst": "2026-09-21 16:27:31 KST",
+  "source": "confirmatory_gin_rep.build_plan(frozen_design(load_frozen()))['confirmatory_units']",
+  "n_confirmatory": 315,
+  "n_stability_executed": 0,
+  "order": "rep → fold → model(M0,M1,M1b,M2b,P-ID,P-FAM,C-CAP) → train_seed(42,1,2)",
+  "rep_seed_map": {
+    "1": 201,
+    "2": 202,
+    "3": 203
+  },
+  "units": [
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 1,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 2,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 3,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 1,
+      "fold": 4,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 0,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 1,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 2,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 3,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 2,
+      "fold": 4,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 0,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 1,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 2,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 3,
+      "model": "C-CAP",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M0",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M0",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M0",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M1",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M1",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M1",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M1b",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M1b",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M1b",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M2b",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M2b",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "M2b",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "P-ID",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "P-ID",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "P-ID",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "P-FAM",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "P-FAM",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "P-FAM",
+      "train_seed": 2
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "C-CAP",
+      "train_seed": 42
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "C-CAP",
+      "train_seed": 1
+    },
+    {
+      "rep": 3,
+      "fold": 4,
+      "model": "C-CAP",
+      "train_seed": 2
+    }
+  ],
+  "plan_sha256": "7d3c57a2bf37e5d124488d072f1935aeea38282cbde9ea7cc100070e92e1ecfd"
+}

@@ -1,0 +1,146 @@
+{
+  "step": "§13-4 사전작업 — 블록 D(개정) Mac wall-clock 최적화 프로브2(측정 전용)",
+  "probe_only": true,
+  "enters_null_distribution": false,
+  "probe2_seed_base": 9000101,
+  "seeds_used": [
+    9000101,
+    9000102,
+    9000103,
+    9000104,
+    9000105,
+    9000106,
+    9000107,
+    9000108,
+    9000109,
+    9000110,
+    9000111,
+    9000112,
+    9000113,
+    9000114,
+    9000115,
+    9000116,
+    9000117,
+    9000118
+  ],
+  "configs": [
+    {
+      "name": "A",
+      "label": "MOC=None / RF=-1(18)",
+      "moc_n_jobs": null,
+      "rf_n_jobs": -1,
+      "intent": "현행 기준"
+    },
+    {
+      "name": "B",
+      "label": "MOC=None / RF=6",
+      "moc_n_jobs": null,
+      "rf_n_jobs": 6,
+      "intent": "P코어만 → E코어 혼입 효과 분리"
+    },
+    {
+      "name": "C",
+      "label": "MOC=6 / RF=1",
+      "moc_n_jobs": 6,
+      "rf_n_jobs": 1,
+      "intent": "PT 축 병렬 · P코어 수"
+    },
+    {
+      "name": "D",
+      "label": "MOC=18 / RF=1",
+      "moc_n_jobs": 18,
+      "rf_n_jobs": 1,
+      "intent": "PT 축 병렬 · logical 전량"
+    },
+    {
+      "name": "E",
+      "label": "MOC=6 / RF=3",
+      "moc_n_jobs": 6,
+      "rf_n_jobs": 3,
+      "intent": "하이브리드"
+    }
+  ],
+  "worker_sweep": [
+    1,
+    3,
+    6,
+    9,
+    12,
+    18
+  ],
+  "fold_for_bench": 0,
+  "rf_frozen_hyperparams": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "class_weight": "balanced_subsample"
+  },
+  "rf_random_state": 42,
+  "timing_proxy": {
+    "used_in": "D-3 워커 스윕만",
+    "n_estimators": 60,
+    "oof_saved": false,
+    "enters_analysis": false,
+    "reverified_full_in": "D-4"
+  },
+  "runtime_override_note": "병렬 인자(n_jobs)만 메모리상 복사본에서 override. ladder_freeze.json 및 RF_KW 원본 dict 는 미변경.",
+  "gate0": {
+    "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "ladder_freeze_match": true,
+    "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_manifest_match": true,
+    "sap_version": "1.1",
+    "sap_all_validation_pass": true,
+    "sap_modules_match": {
+      "__init__.py": true,
+      "metrics.py": true,
+      "redaction.py": true,
+      "consensus.py": true,
+      "bootstrap.py": true,
+      "signflip.py": true,
+      "decision.py": true,
+      "null_generator.py": true,
+      "unseen_target.py": true,
+      "synthetic.py": true,
+      "freeze.py": true
+    },
+    "sap_n_modules_verified": 11,
+    "sap_integrity_confirmatory_untouched": true,
+    "primary_B_m1b_dim": 10,
+    "A0_primary_dim": 10,
+    "A1_all_blocks_train_only_fit": true,
+    "A1_bseq_pca_fit_rows": 671,
+    "A5_target_count_mismatch": 0,
+    "gate0_pass": true
+  },
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O"
+  },
+  "integrity": {
+    "network_calls": 0,
+    "raw_data_modified": false,
+    "docs30_modified": false,
+    "ladder_freeze_modified": false,
+    "sealed_values_human_read": false,
+    "empirical_p_called": false,
+    "git_commit": false
+  },
+  "outputs": {
+    "public": [
+      "config.json",
+      "compute_public.json",
+      "run.log"
+    ],
+    "proxy": [
+      "_proxy/worker_sweep_proxy.json (NOT_AN_ANALYSIS_RESULT)"
+    ],
+    "sealed": [
+      "_sealed/fold_pred_reference.npy (구성 A 기준 예측 배열)"
+    ]
+  }
+}

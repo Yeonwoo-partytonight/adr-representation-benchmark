@@ -1,0 +1,154 @@
+{
+  "_schema": "reviewer_identity_resolved/v0",
+  "title": "RQ-int 외부 통계검토 — 검토자 신원·서명 확정 및 사전등록 amendment 빈칸 값 확정",
+  "generated": "2026-08-14 14:51:14 KST",
+  "recorded_by": "블록 AH — 지시서 docs/95_reviewer_signature_receipt_prompt_for_vscode.md",
+  "freeze_status": "values_confirmed_not_frozen",
+  "frozen_by": "pending_R2_SAP_1_2",
+  "is_sap_freeze": false,
+  "registered_in_sap_manifest": false,
+  "scope_note": "이 파일은 amendment 문면을 동결하지 않는다. 빈칸에 들어갈 값만 확정 기록하며, 문면 동결은 R1 통과 후 SAP 1.2 동결 블록(R2)의 일이다. experiments/sap/manifest.json 은 본 블록에서 0바이트 수정이다.",
+  "sap_state_at_record": {
+    "manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "manifest_sha16": "756d485feb4715e9",
+    "sap_version": "1.1",
+    "modules_registered": 11,
+    "modules_modified_bytes": 0
+  },
+  "amendment_text_verbatim": "The procedure was reviewed by an external statistician holding a doctoral degree who had no access to any sealed confirmatory result, and was approved on [DATE]. Reviewer: [NAME], [DEGREE], [AFFILIATION].",
+  "blanks_resolved": {
+    "[DATE]": {
+      "value": "2026-08-10",
+      "basis": "서명본 표지 표 'Date of review' 축자 = 2026-08-10(승인일). 회신 원본은 표지 08-10 / 부록 B 08-06 으로 달랐고, 우리 서명 요청 문서가 표지 기준 08-10 으로 통일한 뒤 '08-06이 맞다면 아래 표를 수정해 주십시오' 라고 명시했으나 서명본에서 수정되지 않았다.",
+      "is_not_signature_date": "2026-08-12 (서명일 — [DATE] 와 혼동 금지)",
+      "both_literals_preserved": {
+        "cover_table": "2026-08-10",
+        "appendix_b_original": "2026-08-06"
+      }
+    },
+    "[NAME]": {
+      "value": "<EXTERNAL-REVIEWER>",
+      "basis": "서명본 'Reviewer name' 축자 = <EXTERNAL-REVIEWER> (<EXTERNAL-REVIEWER>)"
+    },
+    "[DEGREE]": {
+      "value": "Ph.D.",
+      "basis": "서명본 'Degree / specialty' 축자 선두 = Ph.D."
+    },
+    "[AFFILIATION]": {
+      "value": "Gyeongnam Intelligence Innovation Center (GIIC)",
+      "basis": "서명본 'Affiliation' 축자. 회신 원본 부록 B 는 공란이었고 표지 표 기재값을 승계했다."
+    }
+  },
+  "reviewer": {
+    "reviewer_name": "<EXTERNAL-REVIEWER> (<EXTERNAL-REVIEWER>)",
+    "degree": "Ph.D.",
+    "degree_field": "Department of Information and Communications Engineering, KAIST",
+    "specialty": "resampling-based inference, multiple testing, evaluation metrics for predictive models",
+    "affiliation": "Gyeongnam Intelligence Innovation Center (GIIC)",
+    "date_of_review": "2026-08-10",
+    "signature_date": "2026-08-12",
+    "access_to_sealed_results": "None",
+    "conflict_of_interest": "None declared",
+    "determination": "Approved with revisions (conditional on R1–R6)"
+  },
+  "receipt": {
+    "received_at_kst": "2026-08-13 15:31:31 KST",
+    "received_at_utc": "2026-08-13T06:31:31Z",
+    "received_via": "email_via_advisor",
+    "gmail_message_id": "<GMAIL-MSGID>",
+    "gmail_thread_id": "<GMAIL-MSGID>",
+    "sender": "<EMAIL>",
+    "body_verbatim": "연우씨.\n\n연구원 서명 받은 파일 송부 드립니다.",
+    "our_acknowledgement": {
+      "gmail_message_id": "<GMAIL-MSGID>",
+      "sent_at_kst": "2026-08-14 12:58:46 KST",
+      "sent_at_utc": "2026-08-14T03:58:46Z"
+    }
+  },
+  "signature_evidence": {
+    "file": "docs/RQint_Reviewer_Record_Signature_20260812_SIGNED.pdf",
+    "sha256": "161dd9d2290df32befed6ca9e028799f60a4cab3a84598db22728a7d8678ea3f",
+    "size_bytes": 146939,
+    "signature_image": {
+      "page": 2,
+      "field": "서명 / Signature",
+      "width": 206,
+      "height": 97,
+      "channels": "RGBA (DeviceRGB XObject + SMask DeviceGray)",
+      "embedded_stream_bytes": {
+        "rgb_flate": 3526,
+        "smask_flate": 2176
+      },
+      "cowork_reported_png_bytes": 7156,
+      "runner_note": "206×97 · RGBA 는 러너가 PDF XObject 사전(/Width 206 /Height 97 /ColorSpace/DeviceRGB /SMask)에서 직접 재확인했다. cowork 가 보고한 PNG 7,156 B 는 재인코딩 산물이라 인코더 의존적이며 러너 재인코딩은 5,514 B(zlib level 6)/5,305 B(level 9) 였다 — 바이트 수는 독립 재현 불가로 남기고 화소 규격·알파 존재만 PASS 로 판정한다."
+    },
+    "sender_copy_images": {
+      "docx_media_count": 0,
+      "presend_pdf_image_count": 0
+    },
+    "signature_date_literal_source": "SIGNED.pdf 2쪽 '일자 / Date' 란 축자 = 2026-08-12",
+    "body_identity": {
+      "method": "공백 제거 정규화 후 발송본(.docx) ↔ 서명본(SIGNED.pdf) 접미 비교",
+      "matched_suffix_chars": 1111,
+      "undecoded_chars_excluded": 115,
+      "conclusion": "§3 참고 3건·§4 향후절차 무수정 = 검토자 이의 0건"
+    }
+  },
+  "source_files": {
+    "docs/RQint_Reviewer_Record_Signature_20260812.docx": {
+      "sha256": "bfb01bfeae87ee3bb642bae33fad6697a2d5c48829b9cfaf69c054d255ea08c3",
+      "size_bytes": 18891
+    },
+    "docs/RQint_Reviewer_Record_Signature_20260812.pdf": {
+      "sha256": "8316c56230b3ccd075d2da83aec538c2fcb0b6a185c659e672fdf0c067c98535",
+      "size_bytes": 181398
+    },
+    "docs/RQint_Reviewer_Record_Signature_20260812_SIGNED.pdf": {
+      "sha256": "161dd9d2290df32befed6ca9e028799f60a4cab3a84598db22728a7d8678ea3f",
+      "size_bytes": 146939
+    },
+    "docs/RQint_Reviewer_Response_<EXTERNAL-REVIEWER>_20260810.docx": {
+      "sha256": "0c29ddf201eb6751a47f420d0c405fdafd0a6baf0ae7705059b0a85fa296aa99",
+      "size_bytes": 63649
+    }
+  },
+  "document_diff_attribution": {
+    "count": 3,
+    "items": [
+      "영문 부제 삭제",
+      "'저희가 기입' → '기입'",
+      "'일자만' → '일자를'"
+    ],
+    "attribution": "연구자 본인이 발송 전에 편집 — .docx 가 이미 편집 후 상태",
+    "runner_independent_recheck": {
+      "docx_english_subtitle_present": false,
+      "docx_contains_일자를채워": true,
+      "method": "zipfile → word/document.xml 축자 판독"
+    },
+    "correction_records_required": 0,
+    "presend_pdf_status": "편집 전 산출물로 보존(미발송)"
+  },
+  "ledger_pointers": {
+    "identity_resolution_owner": "블록 AB — ledger.timeline[42].run_facts.external_reviewer_identity_resolved",
+    "signature_confirmation_owner": "블록 AH — ledger.timeline[45].run_facts.external_reviewer_signature_confirmed",
+    "external_reviews_entry": "ledger.external_reviews[5]",
+    "idempotency": "AB(docs/86)가 external_reviews 3→6 과 identity supersede 를 이미 수행했다. AH 는 서명 사실만 얹으며 external_reviews 항목 추가 0 · 기존 객체 수정 0 이다."
+  },
+  "not_performed": [
+    "SAP 1.2 재동결",
+    "amendment 문면 동결",
+    "manifest.json 수정",
+    "external_reviews 항목 추가",
+    "개봉(unblinding)",
+    "emit_sign",
+    "decision.py 호출",
+    "_sealed/ 읽기·쓰기",
+    "모델 학습·추론",
+    "통계 계산",
+    "R1 캘리브레이션 감사",
+    "R3 이행",
+    "GIN 착수",
+    "git commit·push",
+    "회신 원본·서명본 재다운로드"
+  ]
+}

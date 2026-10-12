@@ -1,0 +1,53 @@
+{
+  "_doc": "블록 BC (docs/118 BC-6) 개봉 절차 동결 매니페스트 — 동결물 7종. 개봉 승인은 이 해시 + docs/119 감사 리포트에 결속(X1).",
+  "block": "BC (docs/118)",
+  "frozen_at_kst": "2026-10-04 23:41:43 KST",
+  "frozen_7": {
+    "v3_Multimodal/config/unblinding_plan_v1.json": {
+      "sha256": "d5aa594b630992fd10739573409a2008227db72a843f310b001b9ca24ce59764",
+      "bytes": 88848
+    },
+    "v3_Multimodal/src/unblinding_run.py": {
+      "sha256": "84f773596a01cf3fdc93334ca2f01af977d24e939a911be42f464b3f95cc3737",
+      "bytes": 96610
+    },
+    "v3_Multimodal/src/unblinding_watchdog.py": {
+      "sha256": "334eced17a6db4925c8f9011acc5e28cb326f7081aedb0e0102b8414cdd6fd3e",
+      "bytes": 13943
+    },
+    "v3_Multimodal/src/unblinding_independent_check.py": {
+      "sha256": "10075502901efbcc370edad527169dd8da5928a2abfd6bb799fc4d4a5700939e",
+      "bytes": 18055
+    },
+    "docs/118_unblinding_reporting_plan.md": {
+      "sha256": "e3b342e75cfee99a062d67b6cdfe16d3c614dad9b5b4c7333ab89ccee8203abb",
+      "bytes": 25110
+    },
+    "experiments/runs/v3_unblind_freeze/selftest_unblinding_run.json": {
+      "sha256": "7a477fd1cfdd13740e1987a3450464861a8a2ba50d25b862dd6c59262eb0842a",
+      "bytes": 3891
+    },
+    "experiments/runs/v3_unblind_freeze/selftest_independent_check.json": {
+      "sha256": "17da44e69df3c053a1139b2d676303816e2876b17af80d3acbf050d722efa58f",
+      "bytes": 506
+    }
+  },
+  "approval_binding_targets": [
+    "v3_Multimodal/config/unblinding_plan_v1.json",
+    "v3_Multimodal/src/unblinding_run.py",
+    "v3_Multimodal/src/unblinding_independent_check.py",
+    "docs/118_unblinding_reporting_plan.md",
+    "docs/118b_external_validation_plan.md",
+    "docs/119_pre_unblinding_audit_v3_report.md",
+    "experiments/provenance/pre_unblinding_audit_v3.json"
+  ],
+  "approval_binding_note": "승인 기록 experiments/provenance/unblinding_approval.json 의 approved_hashes 는 위 7경로(계획·개봉 스크립트·독립 검산기·보고 계획·docs/118b·docs/119 리포트·감사 JSON)를 결속한다. 감시 래퍼·selftest 2종은 개봉 스크립트 run stage 의 selftest 결속 검사(script·plan·watchdog·checker sha)로 결속된다.",
+  "related": {
+    "docs/118b_external_validation_plan.md": "4f06d39e9aa827bd63a2ac28e6dbedbedec2430bbde10aaadd567c81c726f60e"
+  },
+  "plan_items": 38,
+  "prereg_coverage_registered": 67,
+  "sealed_values_read": 0,
+  "run_stage_executed": false,
+  "unblinding_performed": false
+}

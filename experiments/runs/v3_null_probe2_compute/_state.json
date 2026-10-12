@@ -1,0 +1,2239 @@
+{
+  "d0": {
+    "gate0": {
+      "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+      "ladder_freeze_sha16": "b885585aefbabb32",
+      "ladder_freeze_match": true,
+      "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+      "sap_manifest_sha16": "756d485feb4715e9",
+      "sap_manifest_match": true,
+      "sap_version": "1.1",
+      "sap_all_validation_pass": true,
+      "sap_modules_match": {
+        "__init__.py": true,
+        "metrics.py": true,
+        "redaction.py": true,
+        "consensus.py": true,
+        "bootstrap.py": true,
+        "signflip.py": true,
+        "decision.py": true,
+        "null_generator.py": true,
+        "unseen_target.py": true,
+        "synthetic.py": true,
+        "freeze.py": true
+      },
+      "sap_n_modules_verified": 11,
+      "sap_integrity_confirmatory_untouched": true,
+      "primary_B_m1b_dim": 10,
+      "A0_primary_dim": 10,
+      "A1_all_blocks_train_only_fit": true,
+      "A1_bseq_pca_fit_rows": 671,
+      "A5_target_count_mismatch": 0,
+      "gate0_pass": true
+    },
+    "sealed_guard": {
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json": "8722a4e1c52d2eae5cbbebf6b5a5ff5cb145dd591ea5648731d7c481ed15c1b8",
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+      "experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json": "66be535755ca9f4a174a15b45fd2af34fb5f2283d0dab71acc579c6fc66a9621",
+      "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M1b.npz": "9155569ac2581613312c7608a4d9cfcfc7bfe25798b24003a0f6a9116a4fcb33",
+      "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M2b.npz": "05a51b16002b8c0fbfd68a9b5f1fa1d578b9b0b491e6944f098588d70fad0298",
+      "experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json": "b4d80cb9acceb8de6b05da1b0a247d0de94197ffebf24c9309d004d9b722c1cd",
+      "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M1b.npz": "0bb7a951246f85ab37b5d1536073a491c9857cd255593fdef0206c3f8b8b22c4",
+      "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M2b.npz": "c850e55c64309c5cae763f6388459206270a106efc70d7a11322b14c0c3091c8",
+      "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+      "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+      "experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json": "6a861640a05940533ad75b97626929c321689929c9609ec3c08972ac87b8dc8d"
+    },
+    "power": {
+      "raw_pmset_ps": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=35127395)\t70%; charging; (no estimate) present: true",
+      "on_ac_power": true,
+      "powermode_live": 0,
+      "low_power_mode_off": true,
+      "caffeinate_detected": true,
+      "thermal_pressure": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+    },
+    "hardware": {
+      "_scope": "블록 B — 하드웨어 실측(측정 전용). 블록 D 워커 수 결정 변수.",
+      "ts_kst": "2026-07-27 21:23:12 KST",
+      "cpu": {
+        "brand": "Apple M5 Pro",
+        "performance_cores_physical": 6,
+        "efficiency_cores_physical": 12,
+        "physical_total": 18,
+        "logical_total": 18,
+        "perflevel0_logical": 6,
+        "perflevel1_logical": 12,
+        "os_cpu_count": 18,
+        "note": "os.cpu_count()=18 은 P-core 6 + E-core 12 의 합이다. RF n_jobs=-1 은 18 워커를 띄우지만 12개는 효율코어에 배치되어 성능코어 대비 처리량이 낮다 → 실효 병렬도는 18보다 작을 것으로 예상(블록 D-1에서 실측)."
+      },
+      "memory": {
+        "bytes": 68719476736,
+        "gib": 64.0,
+        "gb": 68.72,
+        "budget_60pct_gib": 38.4,
+        "rule": "peak RSS × 워커 수 > 물리 RAM 60% 인 구성은 후보 제외(스왑 방지)"
+      },
+      "os": {
+        "product": "macOS",
+        "version": "26.5.2",
+        "build": "25F84",
+        "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "python": "3.14.4"
+      },
+      "disk": {
+        "path": "<REPO_ROOT>",
+        "free_bytes": 770661941248,
+        "free_gib": 717.73,
+        "total_gib": 926.3,
+        "null_main_projection": {
+          "T_b_scalar_only_bytes": 128000,
+          "if_all_oof_saved_gb": 1.11,
+          "planned_policy": "스칼라 + 각 모드 최초 3 OOF(≈3.3MB) → 디스크 제약 없음"
+        }
+      },
+      "infrastructure_decision": "Mac 단독(랩 서버·유료 클라우드 불가) — 확정 2026-07-27"
+    },
+    "ts_kst": "2026-07-28 17:34:30 KST"
+  },
+  "d12": {
+    "configs": [
+      {
+        "name": "A",
+        "label": "MOC=None / RF=-1(18)",
+        "moc_n_jobs": null,
+        "rf_n_jobs": -1,
+        "intent": "현행 기준"
+      },
+      {
+        "name": "B",
+        "label": "MOC=None / RF=6",
+        "moc_n_jobs": null,
+        "rf_n_jobs": 6,
+        "intent": "P코어만 → E코어 혼입 효과 분리"
+      },
+      {
+        "name": "C",
+        "label": "MOC=6 / RF=1",
+        "moc_n_jobs": 6,
+        "rf_n_jobs": 1,
+        "intent": "PT 축 병렬 · P코어 수"
+      },
+      {
+        "name": "D",
+        "label": "MOC=18 / RF=1",
+        "moc_n_jobs": 18,
+        "rf_n_jobs": 1,
+        "intent": "PT 축 병렬 · logical 전량"
+      },
+      {
+        "name": "E",
+        "label": "MOC=6 / RF=3",
+        "moc_n_jobs": 6,
+        "rf_n_jobs": 3,
+        "intent": "하이브리드"
+      }
+    ],
+    "bench": [
+      {
+        "name": "A",
+        "label": "MOC=None / RF=-1(18)",
+        "moc_n_jobs": null,
+        "rf_n_jobs": -1,
+        "intent": "현행 기준",
+        "wall_s": 96.89754949999042,
+        "cpu_s": 198.58994900000002,
+        "cpu_self_s": 198.589949,
+        "cpu_children_s": 0.0,
+        "loky_reaped": true,
+        "effective_parallelism": 2.0494837075319396,
+        "eff_vs_p_cores": 0.34158061792198996,
+        "eff_vs_logical": 0.11386020597399665,
+        "peak_rss_self_bytes_cumulative": 1861451776,
+        "peak_rss_self_delta_bytes": 1504411648,
+        "peak_rss_max_child_bytes": 4472832,
+        "peak_rss_note": "ru_maxrss(SELF)는 프로세스 최고수위(단조증가) = 누적치; CHILDREN 은 자식 중 최대 1개 값",
+        "pred_sha256": "b36a00b22b3abcd0b5f05542706f4b2ba9c08c1a9d4ab90e389552d90a82a40e",
+        "bitwise_identical_to_A": true,
+        "excluded_reason": null
+      },
+      {
+        "name": "B",
+        "label": "MOC=None / RF=6",
+        "moc_n_jobs": null,
+        "rf_n_jobs": 6,
+        "intent": "P코어만 → E코어 혼입 효과 분리",
+        "wall_s": 97.71346262498992,
+        "cpu_s": 194.209125,
+        "cpu_self_s": 194.20912500000003,
+        "cpu_children_s": 0.0,
+        "loky_reaped": true,
+        "effective_parallelism": 1.987537026963689,
+        "eff_vs_p_cores": 0.33125617116061484,
+        "eff_vs_logical": 0.11041872372020495,
+        "peak_rss_self_bytes_cumulative": 1862647808,
+        "peak_rss_self_delta_bytes": 1196032,
+        "peak_rss_max_child_bytes": 4472832,
+        "peak_rss_note": "ru_maxrss(SELF)는 프로세스 최고수위(단조증가) = 누적치; CHILDREN 은 자식 중 최대 1개 값",
+        "pred_sha256": "b36a00b22b3abcd0b5f05542706f4b2ba9c08c1a9d4ab90e389552d90a82a40e",
+        "bitwise_identical_to_A": true,
+        "excluded_reason": null
+      },
+      {
+        "name": "C",
+        "label": "MOC=6 / RF=1",
+        "moc_n_jobs": 6,
+        "rf_n_jobs": 1,
+        "intent": "PT 축 병렬 · P코어 수",
+        "wall_s": 29.500486458011437,
+        "cpu_s": 161.06909100000013,
+        "cpu_self_s": 6.6977300000000355,
+        "cpu_children_s": 154.371361,
+        "loky_reaped": true,
+        "effective_parallelism": 5.459879152476099,
+        "eff_vs_p_cores": 0.9099798587460165,
+        "eff_vs_logical": 0.3033266195820055,
+        "peak_rss_self_bytes_cumulative": 2931163136,
+        "peak_rss_self_delta_bytes": 1068515328,
+        "peak_rss_max_child_bytes": 301514752,
+        "peak_rss_note": "ru_maxrss(SELF)는 프로세스 최고수위(단조증가) = 누적치; CHILDREN 은 자식 중 최대 1개 값",
+        "pred_sha256": "b36a00b22b3abcd0b5f05542706f4b2ba9c08c1a9d4ab90e389552d90a82a40e",
+        "bitwise_identical_to_A": true,
+        "excluded_reason": null
+      },
+      {
+        "name": "D",
+        "label": "MOC=18 / RF=1",
+        "moc_n_jobs": 18,
+        "rf_n_jobs": 1,
+        "intent": "PT 축 병렬 · logical 전량",
+        "wall_s": 16.113894624984823,
+        "cpu_s": 210.545843,
+        "cpu_self_s": 8.101114999999993,
+        "cpu_children_s": 202.444728,
+        "loky_reaped": true,
+        "effective_parallelism": 13.066105240228248,
+        "eff_vs_p_cores": 2.177684206704708,
+        "eff_vs_logical": 0.725894735568236,
+        "peak_rss_self_bytes_cumulative": 2931785728,
+        "peak_rss_self_delta_bytes": 622592,
+        "peak_rss_max_child_bytes": 301514752,
+        "peak_rss_note": "ru_maxrss(SELF)는 프로세스 최고수위(단조증가) = 누적치; CHILDREN 은 자식 중 최대 1개 값",
+        "pred_sha256": "b36a00b22b3abcd0b5f05542706f4b2ba9c08c1a9d4ab90e389552d90a82a40e",
+        "bitwise_identical_to_A": true,
+        "excluded_reason": null
+      },
+      {
+        "name": "E",
+        "label": "MOC=6 / RF=3",
+        "moc_n_jobs": 6,
+        "rf_n_jobs": 3,
+        "intent": "하이브리드",
+        "wall_s": 36.82236583402846,
+        "cpu_s": 268.0766679999998,
+        "cpu_self_s": 11.500526999999977,
+        "cpu_children_s": 256.576141,
+        "loky_reaped": true,
+        "effective_parallelism": 7.280267357299012,
+        "eff_vs_p_cores": 1.2133778928831687,
+        "eff_vs_logical": 0.40445929762772287,
+        "peak_rss_self_bytes_cumulative": 2931998720,
+        "peak_rss_self_delta_bytes": 212992,
+        "peak_rss_max_child_bytes": 301662208,
+        "peak_rss_note": "ru_maxrss(SELF)는 프로세스 최고수위(단조증가) = 누적치; CHILDREN 은 자식 중 최대 1개 값",
+        "pred_sha256": "b36a00b22b3abcd0b5f05542706f4b2ba9c08c1a9d4ab90e389552d90a82a40e",
+        "bitwise_identical_to_A": true,
+        "excluded_reason": null
+      }
+    ],
+    "ref_sha256": "b36a00b22b3abcd0b5f05542706f4b2ba9c08c1a9d4ab90e389552d90a82a40e",
+    "cfg_best": "D",
+    "excluded": [],
+    "freeze_sha16_after": "b885585aefbabb32",
+    "bench_fold": {
+      "fold": 0,
+      "n_train": 874,
+      "n_test": 218,
+      "dim_M2b": 2124,
+      "permutation": "identity",
+      "n_estimators": 300
+    },
+    "p_cores": 6,
+    "logical": 18,
+    "ram_bytes": 68719476736,
+    "ts_kst": "2026-07-28 17:39:08 KST"
+  },
+  "d3": {
+    "sweep": [
+      {
+        "workers": 1,
+        "cores_per_worker": 18,
+        "scaled_cfg": {
+          "rf_n_jobs": 1,
+          "moc_n_jobs": 18,
+          "cores_assigned": 18,
+          "intra_worker_threads_nominal": 18
+        },
+        "thread_env_value": 18,
+        "seeds": [
+          9000101
+        ],
+        "wall_total_s": 23.04180033301236,
+        "cpu_total_s": 23.045175999999856,
+        "per_worker_wall_s": [
+          21.985112667025533
+        ],
+        "per_worker_setup_s": [
+          0.18428966699866578
+        ],
+        "per_worker_recurring_s": [
+          21.7907265839749
+        ],
+        "worker_wall_min_s": 21.985112667025533,
+        "worker_wall_median_s": 21.985112667025533,
+        "worker_wall_max_s": 21.985112667025533,
+        "worker_wall_spread_s": 0.0,
+        "worker_wall_spread_over_median": 0.0,
+        "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+        "wall_max_s": 21.985112667025533,
+        "recurring_max_s": 21.7907265839749,
+        "throughput_perm_per_sec": 0.045485325235556075,
+        "throughput_perm_per_sec_amortized": 0.04589108105901384,
+        "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+        "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+        "max_fold_wall_s": 21.69727383396821,
+        "max_perm_build_s": 0.09345275000669062,
+        "per_worker_fold_wall_s": [
+          21.69727383396821
+        ],
+        "median_fold_wall_s": 21.69727383396821,
+        "median_perm_build_s": 0.09345275000669062,
+        "sum_peak_rss_bytes": 634716160,
+        "sum_peak_rss_gb": 0.63471616,
+        "sum_peak_rss_gib": 0.59112548828125,
+        "ram_budget_ok": true,
+        "pred_sha256": {
+          "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f"
+        },
+        "timing_proxy": true,
+        "n_estimators_proxy": 60
+      },
+      {
+        "workers": 3,
+        "cores_per_worker": 6,
+        "scaled_cfg": {
+          "rf_n_jobs": 1,
+          "moc_n_jobs": 6,
+          "cores_assigned": 6,
+          "intra_worker_threads_nominal": 6
+        },
+        "thread_env_value": 6,
+        "seeds": [
+          9000101,
+          9000102,
+          9000103
+        ],
+        "wall_total_s": 26.290838333021384,
+        "cpu_total_s": 78.58569499999976,
+        "per_worker_wall_s": [
+          25.060370083956514,
+          25.096604541002307,
+          25.132111167011317
+        ],
+        "per_worker_setup_s": [
+          0.19361550000030547,
+          0.19044125004438683,
+          0.1879427920212038
+        ],
+        "per_worker_recurring_s": [
+          24.857104041031562,
+          24.89488704194082,
+          24.934343457978684
+        ],
+        "worker_wall_min_s": 25.060370083956514,
+        "worker_wall_median_s": 25.096604541002307,
+        "worker_wall_max_s": 25.132111167011317,
+        "worker_wall_spread_s": 0.07174108305480331,
+        "worker_wall_spread_over_median": 0.0028585971834394664,
+        "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+        "wall_max_s": 25.132111167011317,
+        "recurring_max_s": 24.934343457978684,
+        "throughput_perm_per_sec": 0.11936919982821947,
+        "throughput_perm_per_sec_amortized": 0.12031598125115409,
+        "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+        "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+        "max_fold_wall_s": 24.831677292007953,
+        "max_perm_build_s": 0.10266616597073153,
+        "per_worker_fold_wall_s": [
+          24.75746583304135,
+          24.793804999964777,
+          24.831677292007953
+        ],
+        "median_fold_wall_s": 24.793804999964777,
+        "median_perm_build_s": 0.10108204197604209,
+        "sum_peak_rss_bytes": 1900773376,
+        "sum_peak_rss_gb": 1.900773376,
+        "sum_peak_rss_gib": 1.770233154296875,
+        "ram_budget_ok": true,
+        "pred_sha256": {
+          "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f",
+          "9000102": "cb8d489568faee7f0a1e5bc4104a13e80ae87f44cd1faad1b1b0b6bc79b5fa40",
+          "9000103": "bfc453fa1faf57f0dccfa5391e89b305b497a03f1ce26c584f6151141b6ff68b"
+        },
+        "timing_proxy": true,
+        "n_estimators_proxy": 60
+      },
+      {
+        "workers": 6,
+        "cores_per_worker": 3,
+        "scaled_cfg": {
+          "rf_n_jobs": 1,
+          "moc_n_jobs": 3,
+          "cores_assigned": 3,
+          "intra_worker_threads_nominal": 3
+        },
+        "thread_env_value": 3,
+        "seeds": [
+          9000101,
+          9000102,
+          9000103,
+          9000104,
+          9000105,
+          9000106
+        ],
+        "wall_total_s": 35.02091058297083,
+        "cpu_total_s": 204.17541699999992,
+        "per_worker_wall_s": [
+          33.648403458006214,
+          33.29438945901347,
+          33.41604695899878,
+          33.41579945804551,
+          33.22328237496549,
+          33.38047704100609
+        ],
+        "per_worker_setup_s": [
+          0.24236558296252042,
+          0.2400059589999728,
+          0.24054254195652902,
+          0.23428620799677446,
+          0.23851920798188075,
+          0.23647275002440438
+        ],
+        "per_worker_recurring_s": [
+          33.39525895798579,
+          33.04284766694764,
+          33.16364441701444,
+          33.170550793001894,
+          32.973213666991796,
+          33.13221833301941
+        ],
+        "worker_wall_min_s": 33.22328237496549,
+        "worker_wall_median_s": 33.3981382495258,
+        "worker_wall_max_s": 33.648403458006214,
+        "worker_wall_spread_s": 0.4251210830407217,
+        "worker_wall_spread_over_median": 0.01272888566016873,
+        "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+        "wall_max_s": 33.648403458006214,
+        "recurring_max_s": 33.39525895798579,
+        "throughput_perm_per_sec": 0.17831455235277666,
+        "throughput_perm_per_sec_amortized": 0.17966622170975033,
+        "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+        "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+        "max_fold_wall_s": 33.273469874984585,
+        "max_perm_build_s": 0.1242418329929933,
+        "per_worker_fold_wall_s": [
+          33.273469874984585,
+          32.928546499984805,
+          33.04083675000584,
+          33.05480795900803,
+          32.85188504203688,
+          33.007976500026416
+        ],
+        "median_fold_wall_s": 33.02440662501613,
+        "median_perm_build_s": 0.12155885397805832,
+        "sum_peak_rss_bytes": 3796058112,
+        "sum_peak_rss_gb": 3.796058112,
+        "sum_peak_rss_gib": 3.5353546142578125,
+        "ram_budget_ok": true,
+        "pred_sha256": {
+          "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f",
+          "9000102": "cb8d489568faee7f0a1e5bc4104a13e80ae87f44cd1faad1b1b0b6bc79b5fa40",
+          "9000103": "bfc453fa1faf57f0dccfa5391e89b305b497a03f1ce26c584f6151141b6ff68b",
+          "9000104": "45b1c25c04d535ef6dffd11d2caa78419537b8e6e5ced15e140c6b9422bdc716",
+          "9000105": "a47e247d4e5ed39259e49b416d222151d8af9208e68248972ead136969f9cd35",
+          "9000106": "857efbb0bb9667351d61b83e7864baab8812928a68ba10530660e3cf372f4063"
+        },
+        "timing_proxy": true,
+        "n_estimators_proxy": 60
+      },
+      {
+        "workers": 9,
+        "cores_per_worker": 2,
+        "scaled_cfg": {
+          "rf_n_jobs": 1,
+          "moc_n_jobs": 2,
+          "cores_assigned": 2,
+          "intra_worker_threads_nominal": 2
+        },
+        "thread_env_value": 2,
+        "seeds": [
+          9000101,
+          9000102,
+          9000103,
+          9000104,
+          9000105,
+          9000106,
+          9000107,
+          9000108,
+          9000109
+        ],
+        "wall_total_s": 38.54729825002141,
+        "cpu_total_s": 339.3565110000002,
+        "per_worker_wall_s": [
+          36.70982004201505,
+          37.074795334017836,
+          36.71741600002861,
+          36.829854500014335,
+          36.878290999971796,
+          36.86992866703076,
+          36.78080316702835,
+          36.58575712505262,
+          36.78924787498545
+        ],
+        "per_worker_setup_s": [
+          0.2596829999820329,
+          0.24806404201081023,
+          0.25724316702689976,
+          0.2567466250038706,
+          0.2568982089869678,
+          0.25377062504412606,
+          0.2574153750319965,
+          0.26007245801156387,
+          0.2545897079980932
+        ],
+        "per_worker_recurring_s": [
+          36.43671987502603,
+          36.814934540947434,
+          36.44625916698715,
+          36.55916091700783,
+          36.610000249987934,
+          36.60382233298151,
+          36.51244116696762,
+          36.31212645804044,
+          36.52377637504833
+        ],
+        "worker_wall_min_s": 36.58575712505262,
+        "worker_wall_median_s": 36.78924787498545,
+        "worker_wall_max_s": 37.074795334017836,
+        "worker_wall_spread_s": 0.4890382089652121,
+        "worker_wall_spread_over_median": 0.01329296566831228,
+        "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+        "wall_max_s": 37.074795334017836,
+        "recurring_max_s": 36.814934540947434,
+        "throughput_perm_per_sec": 0.24275252011282406,
+        "throughput_perm_per_sec_amortized": 0.24446600577246022,
+        "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+        "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+        "max_fold_wall_s": 36.693640290992334,
+        "max_perm_build_s": 0.13497420802013949,
+        "per_worker_fold_wall_s": [
+          36.31212358298944,
+          36.693640290992334,
+          36.325374124979135,
+          36.43491529201856,
+          36.48538937501144,
+          36.4707609579782,
+          36.385498916963115,
+          36.1771522500203,
+          36.38963795802556
+        ],
+        "median_fold_wall_s": 36.38963795802556,
+        "median_perm_build_s": 0.12461087497649714,
+        "sum_peak_rss_bytes": 5692424192,
+        "sum_peak_rss_gb": 5.692424192,
+        "sum_peak_rss_gib": 5.301483154296875,
+        "ram_budget_ok": true,
+        "pred_sha256": {
+          "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f",
+          "9000102": "cb8d489568faee7f0a1e5bc4104a13e80ae87f44cd1faad1b1b0b6bc79b5fa40",
+          "9000103": "bfc453fa1faf57f0dccfa5391e89b305b497a03f1ce26c584f6151141b6ff68b",
+          "9000104": "45b1c25c04d535ef6dffd11d2caa78419537b8e6e5ced15e140c6b9422bdc716",
+          "9000105": "a47e247d4e5ed39259e49b416d222151d8af9208e68248972ead136969f9cd35",
+          "9000106": "857efbb0bb9667351d61b83e7864baab8812928a68ba10530660e3cf372f4063",
+          "9000107": "d075319dd07be12138728fb9c979d7630f8eb41d50175ea65a0f9b16394e5b4f",
+          "9000108": "4ddcc3c463a89d8b980ded641b08e630a71fcf7d4cfd943bde92094ae12557fe",
+          "9000109": "de342557453d2f0c9bc07f96f143f92390414b7b24a1a4e8d3a7d129aa80c971"
+        },
+        "timing_proxy": true,
+        "n_estimators_proxy": 60
+      },
+      {
+        "workers": 12,
+        "cores_per_worker": 1,
+        "scaled_cfg": {
+          "rf_n_jobs": 1,
+          "moc_n_jobs": 1,
+          "cores_assigned": 1,
+          "intra_worker_threads_nominal": 1
+        },
+        "thread_env_value": 1,
+        "seeds": [
+          9000101,
+          9000102,
+          9000103,
+          9000104,
+          9000105,
+          9000106,
+          9000107,
+          9000108,
+          9000109,
+          9000110,
+          9000111,
+          9000112
+        ],
+        "wall_total_s": 44.44849283300573,
+        "cpu_total_s": 516.7868529999996,
+        "per_worker_wall_s": [
+          42.006603125017136,
+          41.96848337497795,
+          42.355956999992486,
+          42.133954208984505,
+          42.717420500004664,
+          42.24062029196648,
+          42.217457375023514,
+          42.23741533298744,
+          42.170936374983285,
+          42.14376404200448,
+          42.055259875021875,
+          42.31138641695725
+        ],
+        "per_worker_setup_s": [
+          0.2758812910178676,
+          0.2779828329803422,
+          0.272824416984804,
+          0.2749949999852106,
+          0.28574562503490597,
+          0.27642133401241153,
+          0.2799935830407776,
+          0.2785148749826476,
+          0.2851214589900337,
+          0.29515487496973947,
+          0.3031429999973625,
+          0.29900154197821394
+        ],
+        "per_worker_recurring_s": [
+          41.71544291701866,
+          41.676064750005025,
+          42.06693733303109,
+          41.84410012495937,
+          42.42107058299007,
+          41.95015945797786,
+          41.92403974896297,
+          41.94487420900259,
+          41.87094587495085,
+          41.83440387499286,
+          41.737804375065025,
+          42.00072666694177
+        ],
+        "worker_wall_min_s": 41.96848337497795,
+        "worker_wall_median_s": 42.1941968750034,
+        "worker_wall_max_s": 42.717420500004664,
+        "worker_wall_spread_s": 0.7489371250267141,
+        "worker_wall_spread_over_median": 0.017749766093317867,
+        "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+        "wall_max_s": 42.717420500004664,
+        "recurring_max_s": 42.42107058299007,
+        "throughput_perm_per_sec": 0.2809158385394242,
+        "throughput_perm_per_sec_amortized": 0.2828782922044344,
+        "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+        "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+        "max_fold_wall_s": 42.27755649999017,
+        "max_perm_build_s": 0.14590300002600998,
+        "per_worker_fold_wall_s": [
+          41.582293750019744,
+          41.54689400002826,
+          41.93212020798819,
+          41.706839541962836,
+          42.27755649999017,
+          41.815737375000026,
+          41.78782979096286,
+          41.79897120897658,
+          41.72608633397613,
+          41.701078000012785,
+          41.59750933304895,
+          41.85686491697561
+        ],
+        "median_fold_wall_s": 41.756958062469494,
+        "median_perm_build_s": 0.13673527049832046,
+        "sum_peak_rss_bytes": 7584104448,
+        "sum_peak_rss_gb": 7.584104448,
+        "sum_peak_rss_gib": 7.0632476806640625,
+        "ram_budget_ok": true,
+        "pred_sha256": {
+          "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f",
+          "9000102": "cb8d489568faee7f0a1e5bc4104a13e80ae87f44cd1faad1b1b0b6bc79b5fa40",
+          "9000103": "bfc453fa1faf57f0dccfa5391e89b305b497a03f1ce26c584f6151141b6ff68b",
+          "9000104": "45b1c25c04d535ef6dffd11d2caa78419537b8e6e5ced15e140c6b9422bdc716",
+          "9000105": "a47e247d4e5ed39259e49b416d222151d8af9208e68248972ead136969f9cd35",
+          "9000106": "857efbb0bb9667351d61b83e7864baab8812928a68ba10530660e3cf372f4063",
+          "9000107": "d075319dd07be12138728fb9c979d7630f8eb41d50175ea65a0f9b16394e5b4f",
+          "9000108": "4ddcc3c463a89d8b980ded641b08e630a71fcf7d4cfd943bde92094ae12557fe",
+          "9000109": "de342557453d2f0c9bc07f96f143f92390414b7b24a1a4e8d3a7d129aa80c971",
+          "9000110": "522c253979279c2b673c2d255fb248821f272eb569e97c6fdbd821216a3ffb60",
+          "9000111": "5c3cd1d478ba05c17bfdd87d7fcb773c1a5a44bb73d862b1d8475478f1bd3149",
+          "9000112": "be88fdfdbb3fd6f6d047212cba6d84221f25971f8ee7817838d0570a807d735e"
+        },
+        "timing_proxy": true,
+        "n_estimators_proxy": 60
+      },
+      {
+        "workers": 18,
+        "cores_per_worker": 1,
+        "scaled_cfg": {
+          "rf_n_jobs": 1,
+          "moc_n_jobs": 1,
+          "cores_assigned": 1,
+          "intra_worker_threads_nominal": 1
+        },
+        "thread_env_value": 1,
+        "seeds": [
+          9000101,
+          9000102,
+          9000103,
+          9000104,
+          9000105,
+          9000106,
+          9000107,
+          9000108,
+          9000109,
+          9000110,
+          9000111,
+          9000112,
+          9000113,
+          9000114,
+          9000115,
+          9000116,
+          9000117,
+          9000118
+        ],
+        "wall_total_s": 54.491802375006955,
+        "cpu_total_s": 897.7490990000001,
+        "per_worker_wall_s": [
+          51.6392351249815,
+          50.62949204200413,
+          50.98579004203202,
+          51.65673870802857,
+          51.879126041021664,
+          51.92102079099277,
+          52.26726187503664,
+          51.442864250042476,
+          52.330802291980945,
+          51.70011908299057,
+          51.2099181250087,
+          51.952234042051714,
+          50.7316717079957,
+          52.12591754103778,
+          51.705533500004094,
+          52.04840470798081,
+          51.79199216602137,
+          51.64447724999627
+        ],
+        "per_worker_setup_s": [
+          0.33352220797678456,
+          0.32492500002263114,
+          0.3119752500206232,
+          0.32501750002847984,
+          0.3177275829948485,
+          0.32059237494831905,
+          0.32906833302695304,
+          0.3346274170326069,
+          0.3340397499850951,
+          0.3313305419869721,
+          0.3437955410336144,
+          0.3383900829940103,
+          0.34872454102151096,
+          0.3436454579932615,
+          0.3490299170371145,
+          0.36043504101689905,
+          0.35351975000230595,
+          0.34470291703473777
+        ],
+        "per_worker_recurring_s": [
+          51.28814112499822,
+          50.285163249995094,
+          50.656487333006226,
+          51.31447520799702,
+          51.544249001017306,
+          51.58514479198493,
+          51.92477445799159,
+          51.09117899998091,
+          51.9844322919962,
+          51.35311712505063,
+          50.84904000000097,
+          51.59887737495592,
+          50.365128625999205,
+          51.77065008302452,
+          51.34159912500763,
+          51.67595683201216,
+          51.42531979101477,
+          51.28610737598501
+        ],
+        "worker_wall_min_s": 50.62949204200413,
+        "worker_wall_median_s": 51.70282629149733,
+        "worker_wall_max_s": 52.330802291980945,
+        "worker_wall_spread_s": 1.7013102499768138,
+        "worker_wall_spread_over_median": 0.032905556078983614,
+        "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+        "wall_max_s": 52.330802291980945,
+        "recurring_max_s": 51.9844322919962,
+        "throughput_perm_per_sec": 0.34396568008968365,
+        "throughput_perm_per_sec_amortized": 0.3462575083804729,
+        "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+        "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+        "max_fold_wall_s": 51.81759629200678,
+        "max_perm_build_s": 0.18038366601103917,
+        "per_worker_fold_wall_s": [
+          51.135249832994305,
+          50.141127457958646,
+          50.51216804201249,
+          51.13409154198598,
+          51.38826145901112,
+          51.438031334022526,
+          51.765465040982235,
+          50.92799900000682,
+          51.81759629200678,
+          51.18431608303217,
+          50.69001775002107,
+          51.43386212497717,
+          50.20661158399889,
+          51.61397062498145,
+          51.18318341602571,
+          51.51103429100476,
+          51.26957095798571,
+          51.11909941700287
+        ],
+        "median_fold_wall_s": 51.18374974952894,
+        "median_perm_build_s": 0.15876964599010535,
+        "sum_peak_rss_bytes": 11373871104,
+        "sum_peak_rss_gb": 11.373871104,
+        "sum_peak_rss_gib": 10.592742919921875,
+        "ram_budget_ok": true,
+        "pred_sha256": {
+          "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f",
+          "9000102": "cb8d489568faee7f0a1e5bc4104a13e80ae87f44cd1faad1b1b0b6bc79b5fa40",
+          "9000103": "bfc453fa1faf57f0dccfa5391e89b305b497a03f1ce26c584f6151141b6ff68b",
+          "9000104": "45b1c25c04d535ef6dffd11d2caa78419537b8e6e5ced15e140c6b9422bdc716",
+          "9000105": "a47e247d4e5ed39259e49b416d222151d8af9208e68248972ead136969f9cd35",
+          "9000106": "857efbb0bb9667351d61b83e7864baab8812928a68ba10530660e3cf372f4063",
+          "9000107": "d075319dd07be12138728fb9c979d7630f8eb41d50175ea65a0f9b16394e5b4f",
+          "9000108": "4ddcc3c463a89d8b980ded641b08e630a71fcf7d4cfd943bde92094ae12557fe",
+          "9000109": "de342557453d2f0c9bc07f96f143f92390414b7b24a1a4e8d3a7d129aa80c971",
+          "9000110": "522c253979279c2b673c2d255fb248821f272eb569e97c6fdbd821216a3ffb60",
+          "9000111": "5c3cd1d478ba05c17bfdd87d7fcb773c1a5a44bb73d862b1d8475478f1bd3149",
+          "9000112": "be88fdfdbb3fd6f6d047212cba6d84221f25971f8ee7817838d0570a807d735e",
+          "9000113": "8bb116567fd5166aa9abcc3edcf3ddc479ab20e23921255363ed216988a19bd1",
+          "9000114": "817170f4a65ec2ff3c7280074ac2949f919dd7d9bd3401b71615ebb78c524c1f",
+          "9000115": "253833ed040d7c94f838e4962dcd44aef67932379897e2623a34409ee1c6fecc",
+          "9000116": "e6518ef9d4f5e9b694ebb0eb2a05036ffb4c848cfb3129de985ffc061764e20f",
+          "9000117": "bb231f1df8f8a14b0ce13b56e90a19109390ad4ae1034487585acd4140ad2fe7",
+          "9000118": "7c0bc90cdca2e2a6b2dc03b60a9ffc00a2e038c7459c83d3c658c6a45f96b8d7"
+        },
+        "timing_proxy": true,
+        "n_estimators_proxy": 60
+      }
+    ],
+    "g1_pass": true,
+    "g1_detail": [
+      {
+        "seed": 9000101,
+        "n_observations": 6,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          1,
+          3,
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000102,
+        "n_observations": 5,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          3,
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000103,
+        "n_observations": 5,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          3,
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000104,
+        "n_observations": 4,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000105,
+        "n_observations": 4,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000106,
+        "n_observations": 4,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000107,
+        "n_observations": 3,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000108,
+        "n_observations": 3,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000109,
+        "n_observations": 3,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000110,
+        "n_observations": 2,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000111,
+        "n_observations": 2,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000112,
+        "n_observations": 2,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000113,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      },
+      {
+        "seed": 9000114,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      },
+      {
+        "seed": 9000115,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      },
+      {
+        "seed": 9000116,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      },
+      {
+        "seed": 9000117,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      },
+      {
+        "seed": 9000118,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      }
+    ],
+    "w_best": 18,
+    "probe2_seeds": [
+      9000101,
+      9000102,
+      9000103,
+      9000104,
+      9000105,
+      9000106,
+      9000107,
+      9000108,
+      9000109,
+      9000110,
+      9000111,
+      9000112,
+      9000113,
+      9000114,
+      9000115,
+      9000116,
+      9000117,
+      9000118
+    ],
+    "ts_kst": "2026-07-28 17:42:50 KST"
+  },
+  "d4": {
+    "config": "D",
+    "workers": 18,
+    "cores_per_worker": 1,
+    "scaled_cfg": {
+      "rf_n_jobs": 1,
+      "moc_n_jobs": 1,
+      "cores_assigned": 1,
+      "intra_worker_threads_nominal": 1
+    },
+    "n_estimators": 300,
+    "baseline_rule": "열감쇠·지속부하 baseline = **D-4a 단독(w=1) 1 permutation 완주 값만**. D-4b 병렬 워커0(identity)의 wall 은 오버서브스크립션 상태 측정치이므로 baseline 금지 — 0-diff 검증 용도로만 사용.",
+    "solo_baseline": {
+      "workers": 1,
+      "cores": 18,
+      "scaled_cfg": {
+        "rf_n_jobs": 1,
+        "moc_n_jobs": 18,
+        "cores_assigned": 18,
+        "intra_worker_threads_nominal": 18
+      },
+      "mode": "identity",
+      "wall_total_s": 541.8227909579873,
+      "cpu_total_s": 543.0112269999995,
+      "setup_s": 0.2023754590190947,
+      "perm_build_s": 0.10527025000192225,
+      "recurring_s": 540.3760217098752,
+      "fold_walls_s": [
+        110.05696979200002,
+        107.78938883397495,
+        106.6504017499974,
+        107.73179770895513,
+        108.04219337494578
+      ],
+      "peak_rss_bytes": 1922252800,
+      "peak_rss_gib": 1.7902374267578125,
+      "fold0_sha256": "b36a00b22b3abcd0b5f05542706f4b2ba9c08c1a9d4ab90e389552d90a82a40e",
+      "zero_diff_vs_d2_configA": true,
+      "power": {
+        "phase": "D-4a 단독 baseline",
+        "n_samples": 11,
+        "interval_s": 60.0,
+        "samples": [
+          {
+            "ts_kst": "2026-07-28 17:42:50 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "start",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:43:51 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:44:51 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:45:51 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:46:51 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:47:51 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:48:52 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:49:52 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:50:52 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:51:52 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:51:52 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "end",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          }
+        ],
+        "ac_power_held_entire_phase": true,
+        "low_power_mode_off_entire_phase": true,
+        "powermode_values_seen": [
+          "0"
+        ],
+        "measurement_valid": true
+      }
+    },
+    "parallel": {
+      "measured_separately": true,
+      "wall_total_s": 1392.432661540981,
+      "cpu_total_s": 23208.805013,
+      "n_workers_run": 18,
+      "per_permutation_recurring_s": [
+        1385.9591062070103,
+        1386.4606776240398,
+        1371.732360499911,
+        1384.872317498899,
+        1385.2927827509702,
+        1384.5440894999774,
+        1386.8265704999794,
+        1386.0972959570354,
+        1384.1284830810037,
+        1376.766609581944,
+        1365.538678833982,
+        1389.855894457025,
+        1379.9284961250378,
+        1381.7416208309005,
+        1385.6338449990144,
+        1387.235652833071,
+        1374.5044432919822,
+        1387.6540735820308
+      ],
+      "permutation_recurring_max_s": 1389.855894457025,
+      "permutation_recurring_min_s": 1365.538678833982,
+      "permutation_recurring_median_s": 1385.0825501249346,
+      "throughput_perm_per_sec": 0.012950982955705678,
+      "throughput_definition": "w / max(per_worker_recurring_s) — 마지막 완료 기준",
+      "worker0_identity_role": "0-diff 검증 전용 — baseline·열감쇠 미투입",
+      "power": {
+        "phase": "D-4b 병렬 w=18",
+        "n_samples": 25,
+        "interval_s": 60.0,
+        "samples": [
+          {
+            "ts_kst": "2026-07-28 17:51:53 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "start",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:52:53 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:53:53 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:54:54 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:55:54 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:56:54 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:57:54 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:58:54 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:59:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:00:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:01:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:02:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:03:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:04:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:05:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:06:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:07:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:08:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:09:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:10:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:11:57 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:12:57 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:13:57 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:14:57 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:15:05 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "end",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          }
+        ],
+        "ac_power_held_entire_phase": true,
+        "low_power_mode_off_entire_phase": true,
+        "powermode_values_seen": [
+          "0"
+        ],
+        "measurement_valid": true
+      }
+    },
+    "wall_total_s": 1392.432661540981,
+    "cpu_total_s": 23208.805013,
+    "per_permutation_recurring_s": [
+      1385.9591062070103,
+      1386.4606776240398,
+      1371.732360499911,
+      1384.872317498899,
+      1385.2927827509702,
+      1384.5440894999774,
+      1386.8265704999794,
+      1386.0972959570354,
+      1384.1284830810037,
+      1376.766609581944,
+      1365.538678833982,
+      1389.855894457025,
+      1379.9284961250378,
+      1381.7416208309005,
+      1385.6338449990144,
+      1387.235652833071,
+      1374.5044432919822,
+      1387.6540735820308
+    ],
+    "max_permutation_recurring_s": 1389.855894457025,
+    "per_worker_setup_s": [
+      0.30718000000342727,
+      0.3038053329801187,
+      0.30624545901082456,
+      0.3028066250262782,
+      0.3021971670095809,
+      0.2967672499944456,
+      0.3022741249878891,
+      0.3019383330247365,
+      0.30129287496674806,
+      0.3048320410307497,
+      0.30832104198634624,
+      0.30992916703689843,
+      0.32518037501722574,
+      0.31908883404685184,
+      0.321094999962952,
+      0.3276337920106016,
+      0.3172091660089791,
+      0.32530345796840265
+    ],
+    "fold_walls": [
+      [
+        286.54247220797697,
+        271.9576809160062,
+        274.1731077499571,
+        278.49859812500654,
+        274.64236929104663
+      ],
+      [
+        287.10955770802684,
+        272.3949771250482,
+        273.84155595797347,
+        278.89287837501615,
+        274.0801799999899
+      ],
+      [
+        281.920566832996,
+        269.2068946249783,
+        270.30212329200003,
+        276.8473868329893,
+        273.3066072499496
+      ],
+      [
+        286.1577167499927,
+        271.4211127079907,
+        273.20318141696043,
+        279.0010734159732,
+        274.9474417499732
+      ],
+      [
+        285.94421824999154,
+        271.85766258399235,
+        273.32181449997006,
+        278.70838324999204,
+        275.3155377920484
+      ],
+      [
+        285.2826510419836,
+        272.10611195798265,
+        272.88174383400474,
+        278.79149799997685,
+        275.347087208007
+      ],
+      [
+        286.6083412080188,
+        272.5123177919886,
+        273.0326689169742,
+        279.5240325839841,
+        275.0080089580151
+      ],
+      [
+        285.6927673750324,
+        272.60816233296646,
+        273.8816930830362,
+        279.3524996670312,
+        274.4121229159646
+      ],
+      [
+        285.9307187910308,
+        271.15477149997605,
+        273.3236779579893,
+        278.60015629103873,
+        274.97574087500107
+      ],
+      [
+        283.79056475003017,
+        270.1966637909645,
+        271.25123162497766,
+        277.3768728330033,
+        274.00423695798963
+      ],
+      [
+        279.43523504096083,
+        268.40036291698925,
+        269.4610187500366,
+        275.43428445904283,
+        272.66785249998793
+      ],
+      [
+        288.5625728330342,
+        273.3664628750412,
+        276.1763979579555,
+        280.0957983750268,
+        271.51295812497847
+      ],
+      [
+        285.36438183300197,
+        270.22234654199565,
+        272.5354652919923,
+        277.1787926250254,
+        274.47330474999035
+      ],
+      [
+        285.19443379098084,
+        271.64048150001327,
+        272.18573374999687,
+        278.03563379094703,
+        274.5398149579996
+      ],
+      [
+        286.56649054097943,
+        271.91896791703766,
+        273.77482291602064,
+        279.01052129099844,
+        274.20748933398863
+      ],
+      [
+        286.86259112501284,
+        272.5488716660184,
+        274.51014787500026,
+        280.0583558329963,
+        273.1143992920406
+      ],
+      [
+        282.7178562079789,
+        269.7001845840132,
+        271.0330747080152,
+        276.7593209579936,
+        274.14510983397486
+      ],
+      [
+        287.53051470802166,
+        272.72231716598617,
+        274.20981845801,
+        279.6550935420091,
+        273.4029121249914
+      ]
+    ],
+    "max_fold_wall_s": 288.5625728330342,
+    "median_fold_wall_s": 274.4917263124953,
+    "sum_peak_rss_bytes": 33280393216,
+    "sum_peak_rss_gib": 30.994781494140625,
+    "ram_budget_ok": true,
+    "zero_diff_vs_d2_configA": true,
+    "identity_fold0_sha256": "b36a00b22b3abcd0b5f05542706f4b2ba9c08c1a9d4ab90e389552d90a82a40e",
+    "proxy_check": {
+      "proxy_predicted_fold_s": 259.0879814600339,
+      "measured_fold_s": 288.5625728330342,
+      "basis": "max fold wall (평균 기반 아님)",
+      "error_frac": -0.10214280765390406,
+      "tolerance": 0.3,
+      "proxy_accepted": true
+    },
+    "thermal": {
+      "source": "D-4a 단독(w=1) 1 permutation 완주 — baseline 규칙 준수",
+      "solo_fold_walls_s": [
+        110.05696979200002,
+        107.78938883397495,
+        106.6504017499974,
+        107.73179770895513,
+        108.04219337494578
+      ],
+      "decay_frac": -0.018306668090735393,
+      "median_decay_frac": -0.018306668090735393,
+      "sustained_load_s": 540.3760217098752,
+      "sustained_min_s": 600.0,
+      "sustained_ok": false,
+      "excluded_from_baseline": "D-4b 병렬 전 워커(워커0 identity 포함) — 오버서브스크립션 상태 측정치"
+    },
+    "power_measurement_valid": true,
+    "power_phases": [
+      {
+        "phase": "D-4a 단독 baseline",
+        "n_samples": 11,
+        "interval_s": 60.0,
+        "samples": [
+          {
+            "ts_kst": "2026-07-28 17:42:50 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "start",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:43:51 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:44:51 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:45:51 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:46:51 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:47:51 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:48:52 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:49:52 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:50:52 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:51:52 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:51:52 KST",
+            "phase": "D-4a 단독 baseline",
+            "kind": "end",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          }
+        ],
+        "ac_power_held_entire_phase": true,
+        "low_power_mode_off_entire_phase": true,
+        "powermode_values_seen": [
+          "0"
+        ],
+        "measurement_valid": true
+      },
+      {
+        "phase": "D-4b 병렬 w=18",
+        "n_samples": 25,
+        "interval_s": 60.0,
+        "samples": [
+          {
+            "ts_kst": "2026-07-28 17:51:53 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "start",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:52:53 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:53:53 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:54:54 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:55:54 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:56:54 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:57:54 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:58:54 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 17:59:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:00:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:01:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:02:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:03:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:04:55 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:05:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:06:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:07:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:08:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:09:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:10:56 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:11:57 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:12:57 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:13:57 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:14:57 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "during",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          },
+          {
+            "ts_kst": "2026-07-28 18:15:05 KST",
+            "phase": "D-4b 병렬 w=18",
+            "kind": "end",
+            "on_ac_power": true,
+            "powermode_live": 0,
+            "low_power_mode_off": true,
+            "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+          }
+        ],
+        "ac_power_held_entire_phase": true,
+        "low_power_mode_off_entire_phase": true,
+        "powermode_values_seen": [
+          "0"
+        ],
+        "measurement_valid": true
+      }
+    ],
+    "power_after": {
+      "ts_kst": "2026-07-28 18:15:05 KST",
+      "phase": "D-4b 병렬 w=18",
+      "kind": "end",
+      "on_ac_power": true,
+      "powermode_live": 0,
+      "low_power_mode_off": true,
+      "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+    },
+    "ts_kst": "2026-07-28 18:15:05 KST"
+  },
+  "d5": {
+    "table": [
+      {
+        "config": "A",
+        "workers": 1,
+        "source": "D-2 실측(fold 단가 × 5)",
+        "wall_per_permutation_s": 484.4877474999521,
+        "throughput_perm_per_hour": 7.430528467596295,
+        "total_wall_days_raw": 11.214994155091484,
+        "total_wall_days_thermal": 11.214994155091484,
+        "total_cpu_hours": 551.6387472222223,
+        "sum_peak_rss_gib": 1.733612060546875,
+        "ram_budget_ok": true,
+        "bitwise_gate": true,
+        "measured_full": true
+      },
+      {
+        "config": "D",
+        "workers": 1,
+        "cores_per_worker": 18,
+        "source": "D-3 프록시(wall_max) × 앵커 보정",
+        "wall_per_permutation_s": 604.23390010983,
+        "throughput_perm_per_hour": 5.95795767060676,
+        "total_wall_days_raw": 13.986895835875693,
+        "total_wall_days_thermal": 13.986895835875693,
+        "total_cpu_hours": null,
+        "total_cpu_hours_note": "CPU-시간은 전량 실측 지점(W_BEST)에서만 보고 — 프록시 행은 wall 투영만 유효",
+        "sum_peak_rss_gib": 0.59112548828125,
+        "ram_budget_ok": true,
+        "bitwise_gate": true,
+        "measured_full": false,
+        "worker_wall_min_s": 21.985112667025533,
+        "worker_wall_median_s": 21.985112667025533,
+        "worker_wall_max_s": 21.985112667025533,
+        "worker_wall_spread_over_median": 0.0,
+        "throughput_basis": "w / wall_max (마지막 워커 완료) — 평균 기반 아님"
+      },
+      {
+        "config": "D",
+        "workers": 3,
+        "cores_per_worker": 6,
+        "source": "D-3 프록시(wall_max) × 앵커 보정",
+        "wall_per_permutation_s": 691.5176680083827,
+        "throughput_perm_per_hour": 15.617822218635029,
+        "total_wall_days_raw": 5.335784475373323,
+        "total_wall_days_thermal": 5.335784475373323,
+        "total_cpu_hours": null,
+        "total_cpu_hours_note": "CPU-시간은 전량 실측 지점(W_BEST)에서만 보고 — 프록시 행은 wall 투영만 유효",
+        "sum_peak_rss_gib": 1.770233154296875,
+        "ram_budget_ok": true,
+        "bitwise_gate": true,
+        "measured_full": false,
+        "worker_wall_min_s": 25.060370083956514,
+        "worker_wall_median_s": 25.096604541002307,
+        "worker_wall_max_s": 25.132111167011317,
+        "worker_wall_spread_over_median": 0.0028585971834394664,
+        "throughput_basis": "w / wall_max (마지막 워커 완료) — 평균 기반 아님"
+      },
+      {
+        "config": "D",
+        "workers": 6,
+        "cores_per_worker": 3,
+        "source": "D-3 프록시(wall_max) × 앵커 보정",
+        "wall_per_permutation_s": 926.5931212558216,
+        "throughput_perm_per_hour": 23.311202624432703,
+        "total_wall_days_raw": 3.57481914064746,
+        "total_wall_days_thermal": 3.57481914064746,
+        "total_cpu_hours": null,
+        "total_cpu_hours_note": "CPU-시간은 전량 실측 지점(W_BEST)에서만 보고 — 프록시 행은 wall 투영만 유효",
+        "sum_peak_rss_gib": 3.5353546142578125,
+        "ram_budget_ok": true,
+        "bitwise_gate": true,
+        "measured_full": false,
+        "worker_wall_min_s": 33.22328237496549,
+        "worker_wall_median_s": 33.3981382495258,
+        "worker_wall_max_s": 33.648403458006214,
+        "worker_wall_spread_over_median": 0.01272888566016873,
+        "throughput_basis": "w / wall_max (마지막 워커 완료) — 평균 기반 아님"
+      },
+      {
+        "config": "D",
+        "workers": 9,
+        "cores_per_worker": 2,
+        "source": "D-3 프록시(wall_max) × 앵커 보정",
+        "wall_per_permutation_s": 1021.835323767844,
+        "throughput_perm_per_hour": 31.70765312803095,
+        "total_wall_days_raw": 2.6281772730654427,
+        "total_wall_days_thermal": 2.6281772730654427,
+        "total_cpu_hours": null,
+        "total_cpu_hours_note": "CPU-시간은 전량 실측 지점(W_BEST)에서만 보고 — 프록시 행은 wall 투영만 유효",
+        "sum_peak_rss_gib": 5.301483154296875,
+        "ram_budget_ok": true,
+        "bitwise_gate": true,
+        "measured_full": false,
+        "worker_wall_min_s": 36.58575712505262,
+        "worker_wall_median_s": 36.78924787498545,
+        "worker_wall_max_s": 37.074795334017836,
+        "worker_wall_spread_over_median": 0.01329296566831228,
+        "throughput_basis": "w / wall_max (마지막 워커 완료) — 평균 기반 아님"
+      },
+      {
+        "config": "D",
+        "workers": 12,
+        "cores_per_worker": 1,
+        "source": "D-3 프록시(wall_max) × 앵커 보정",
+        "wall_per_permutation_s": 1177.3252156009294,
+        "throughput_perm_per_hour": 36.69334473393564,
+        "total_wall_days_raw": 2.271074875773398,
+        "total_wall_days_thermal": 2.271074875773398,
+        "total_cpu_hours": null,
+        "total_cpu_hours_note": "CPU-시간은 전량 실측 지점(W_BEST)에서만 보고 — 프록시 행은 wall 투영만 유효",
+        "sum_peak_rss_gib": 7.0632476806640625,
+        "ram_budget_ok": true,
+        "bitwise_gate": true,
+        "measured_full": false,
+        "worker_wall_min_s": 41.96848337497795,
+        "worker_wall_median_s": 42.1941968750034,
+        "worker_wall_max_s": 42.717420500004664,
+        "worker_wall_spread_over_median": 0.017749766093317867,
+        "throughput_basis": "w / wall_max (마지막 워커 완료) — 평균 기반 아님"
+      },
+      {
+        "config": "D",
+        "workers": 18,
+        "cores_per_worker": 1,
+        "source": "D-4 전량 실측(wall_max)",
+        "wall_per_permutation_s": 1389.855894457025,
+        "throughput_perm_per_hour": 46.62353864054044,
+        "total_wall_days_raw": 1.7873661194148984,
+        "total_wall_days_thermal": 1.7873661194148984,
+        "total_cpu_hours": 716.3211423765433,
+        "total_cpu_hours_note": null,
+        "sum_peak_rss_gib": 10.592742919921875,
+        "ram_budget_ok": true,
+        "bitwise_gate": true,
+        "measured_full": true,
+        "worker_wall_min_s": 50.62949204200413,
+        "worker_wall_median_s": 51.70282629149733,
+        "worker_wall_max_s": 52.330802291980945,
+        "worker_wall_spread_over_median": 0.032905556078983614,
+        "throughput_basis": "w / wall_max (마지막 워커 완료) — 평균 기반 아님"
+      }
+    ],
+    "recommendation": {
+      "config": "D",
+      "workers": 18,
+      "cores_per_worker": 1,
+      "source": "D-4 전량 실측(wall_max)",
+      "wall_per_permutation_s": 1389.855894457025,
+      "throughput_perm_per_hour": 46.62353864054044,
+      "total_wall_days_raw": 1.7873661194148984,
+      "total_wall_days_thermal": 1.7873661194148984,
+      "total_cpu_hours": 716.3211423765433,
+      "total_cpu_hours_note": null,
+      "sum_peak_rss_gib": 10.592742919921875,
+      "ram_budget_ok": true,
+      "bitwise_gate": true,
+      "measured_full": true,
+      "worker_wall_min_s": 50.62949204200413,
+      "worker_wall_median_s": 51.70282629149733,
+      "worker_wall_max_s": 52.330802291980945,
+      "worker_wall_spread_over_median": 0.032905556078983614,
+      "throughput_basis": "w / wall_max (마지막 워커 완료) — 평균 기반 아님"
+    },
+    "over_7_days": false,
+    "decay_factor": 1.0,
+    "n_perm_total": 2000,
+    "anchor_correction": 1.1137628662159573,
+    "throughput_definition": "w / wall_max — 워커 중 마지막 완료 wall 기준. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+    "thermal_baseline_source": "D-4a 단독(w=1) 1 permutation 완주 — baseline 규칙 준수",
+    "power_measurement_valid": true,
+    "projection_valid": true,
+    "excluded_inputs": [
+      "블록 C(§13-5 반복2·3·consensus) wall-clock — 배터리·저전력 모드 구간 측정치라 비교 불가(바이트 동일성에는 영향 없음)"
+    ],
+    "d1_correction": {
+      "total_cpu_hours_A": 551.6387472222223,
+      "total_wall_hours_A": 269.1598597221956,
+      "total_wall_days_A": 11.214994155091484
+    },
+    "ts_kst": "2026-07-28 18:15:05 KST"
+  },
+  "d6": {
+    "sealed_unchanged": true,
+    "changed": [],
+    "freeze_sha16": "b885585aefbabb32",
+    "ts_kst": "2026-07-28 18:15:05 KST"
+  }
+}

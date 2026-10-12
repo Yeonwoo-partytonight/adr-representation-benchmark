@@ -1,0 +1,94 @@
+{
+  "_doc": "A5(mechanism-target indicator) 축의 **경계 명료화**. `docs/81` [블록 Z] Z-2. Δ 를 한 건도 산출하기 **전에** 기입한다 — 층별 표본수를 보고 경계를 바꾸는 것을 구조적으로 막기 위함이다. 본 파일은 경계만 명료화하며 A5 층화 계산·Δ·CI·p 는 여기서 하지 않는다.",
+  "block": "Z (docs/81_axes_a3a4a5a6_stratification_prompt_for_vscode.md)",
+  "amended_at_kst": "2026-08-07 12:05:16 KST",
+  "amended_before_any_delta": true,
+  "amended_before_any_delta_evidence": "본 파일은 층화 러너(axes_stratification_run.py)보다 먼저 실행되며, 종료검증이 본 파일의 amended_at_kst 가 `_sealed/checkpoint.jsonl` 의 **최소 ts_kst**(= 최초 Δ 산출 시각)보다 이르다는 것을 기계 확인한다(종료검증 #2).",
+  "supersedes_nothing": true,
+  "supersedes_nothing_explained": "동결 문면을 **바꾸지 않는다**. `a5_mechanism_freeze.json` 의 `definition`·`bins` 는 1바이트도 수정하지 않으며, 본 파일은 그 문면이 **판정하지 못하는 경우**에 대해 문면 자체가 이미 채택한 기준(= 「**표적**이 없으면」)을 적용한 결과를 적는다. 따라서 이것은 정의 변경(supersede)이 아니라 **경계 명료화(clarification)** 다. 새 층 `not_estimable` 은 기존 세 구간 중 어느 것도 그 경우를 담을 수 없어서 생기는 **estimability 부재 표기**이지, 새 효과 구간이 아니다.",
+  "decided_by": "사용자, 2026-08-07",
+  "decision_basis": {
+    "trigger": "블록 Y 리포트 §4-4 — mechanism 레코드가 있는 약물 550종 중 UniProt 이 하나 이상 해석된 약물은 494종이고, 표적이 전부 미해석인 약물이 56종, `target_chembl_id` 자체가 비어 있는 레코드가 28행 있다.",
+    "trigger_source": "docs/80_a5_mechanism_requery_report.md §4-4",
+    "instruction": "docs/81_axes_a3a4a5a6_stratification_prompt_for_vscode.md Z-2",
+    "cowork_decomposition_referenced": true,
+    "independent_reproduction_required": "러너는 cowork 참고값을 베끼지 않고 847 내부 A/B/C/D 분해를 독립 재현하고, 어긋나면 중단한다(지시서 Z-4 · 중단 조건)."
+  },
+  "predecessor": {
+    "path": "v3_Multimodal/config/a5_mechanism_freeze.json",
+    "sha256": "3419b2f793d74051df29ce3285a3c50d4d7a07f2fd15ec0b6d6fb645c4118dbd",
+    "definition_verbatim": "약물의 mechanism 표적 중 unseen 이 하나라도 있으면 1, 전부 seen 이면 0, mechanism 표적이 없으면 no_mechanism",
+    "bins_verbatim": [
+      "{0}",
+      "{1}",
+      "no_mechanism"
+    ],
+    "frozen_at_kst": "2026-08-07 10:36:00 KST",
+    "bytes_modified_by_this_amendment": 0
+  },
+  "cases": {
+    "A": {
+      "condition": "mechanism **레코드** 없음",
+      "assignment": "no_mechanism",
+      "rationale": "동결 문면 그대로 — 표적이 없다."
+    },
+    "B": {
+      "condition": "레코드는 있으나 `target_chembl_id` **없음**",
+      "assignment": "no_mechanism",
+      "rationale": "동결 문면이 「**표적**이 없으면」 이라고 적었다. 기준은 레코드 유무가 아니라 **표적 유무**이므로 이 경우도 `no_mechanism` 이다."
+    },
+    "C": {
+      "condition": "`target_chembl_id` 는 있으나 UniProt **전부 미해석**",
+      "assignment": "not_estimable",
+      "rationale": "표적이 **있으므로** `no_mechanism` 이 아니고, unseen 판정이 UniProt accession 대조로 이뤄지는데 대조할 accession 이 없어 `{0}`/`{1}` 도 아니다. 선례 = 블록 H·L 의 `not_estimable` 표기.",
+      "must_not_leak_into": [
+        "{0}",
+        "{1}",
+        "no_mechanism"
+      ]
+    },
+    "D": {
+      "condition": "UniProt 1개 이상 해석",
+      "assignment": "{0} / {1}",
+      "rationale": "동결 문면 그대로 — mechanism 표적 중 unseen 이 하나라도 있으면 1."
+    }
+  },
+  "bins_final": [
+    "{0}",
+    "{1}",
+    "no_mechanism",
+    "not_estimable"
+  ],
+  "bins_added_vs_frozen": [
+    "not_estimable"
+  ],
+  "not_estimable_semantics": "★ `not_estimable` 은 **결과가 아니라 estimability 부재**다. 교수님 2026-08-03 결정(「빈 층 = 효과 부재가 아니라 estimability 부재」)과 같은 취지로 서술한다. 대리지표(proxy) 대체 금지 — 미해석은 미해석으로 남긴다.",
+  "advisor_status": {
+    "explicitly_approved": false,
+    "status": "내선 확정 — 명시적 승인 아님",
+    "why": "A5 의 정의·구간은 A3·A4·A6 과 같은 경로(`no_objection_raised`)로 확정됐고(`a5_mechanism_freeze.json` `advisor_status.definition_status`), 본 경계 명료화도 같은 지위다. 교수님이 명시적으로 승인한 것은 **1회 재조회 행위**뿐이다(`docs/77` §3 주석 1). 승인 범위를 부풀려 적지 않는다.",
+    "predecessor_definition_status": "내선 확정 — A3·A4·A6 과 동일 경로(`no_objection_raised`), 명시적 승인 아님"
+  },
+  "analysis_label": "현재 snapshot 기반 post-interim 보조분석",
+  "analysis_label_scope": {
+    "applies_to": [
+      "A5"
+    ],
+    "does_not_apply_to": [
+      "A3",
+      "A4",
+      "A6"
+    ],
+    "why": "승인 조건 ④ 축자는 **A5** 에 대한 것이다(`a5_mechanism_freeze.json` `analysis_label_source`). A3·A4·A6 은 재조회 없이 기존 동결 파이프라인 산출만 쓰므로 이 라벨을 붙이지 않는다."
+  },
+  "not_performed_here": {
+    "stratification": false,
+    "delta_ci_p": false,
+    "emit_sign": false,
+    "decision_py": false,
+    "unblinding": false,
+    "network": false,
+    "label_join": false,
+    "model_training": false
+  }
+}

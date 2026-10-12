@@ -1,0 +1,10 @@
+2026-09-28 09:27:52 KST	R0	core start · sealed dirs/files/artifacts/access = 30/750/729/21
+2026-09-28 09:27:53 KST	R1	design · rows 1092 · PT 370 · groups 732
+2026-09-28 09:27:53 KST	R2	access.log +1 line · RF consensus 1 · GIN consensus 1
+2026-09-28 09:27:53 KST	R3	inputs verified · matrices 8 · metrics_full 1
+2026-09-28 09:41:36 KST	R4	derived path done · groups 732
+2026-09-28 09:55:57 KST	R4	verbatim path done
+2026-09-28 09:55:57 KST	R4	checks · derived≡verbatim · cross-113 bit-equal · monotone
+2026-09-28 09:55:57 KST	R5	invalidation rules: none triggered
+2026-09-28 09:55:57 KST	R6	sealed written · 1 file + access.log
+2026-09-28 09:55:57 KST	R7	public manifest + run.log · wall_seconds 1685.389

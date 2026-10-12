@@ -1,0 +1,29 @@
+[run] pid=85098 n_coin=100000 rep_seed=860260813 cap=24h started 2026-08-23T11:36:18+09:00
+{
+  "completed": true,
+  "cap_hit": false,
+  "ac_power_lost": false,
+  "wall_hours_total": 19.488727281689645,
+  "d15_verdict": "within_24h",
+  "d15_branch": "완주 & 벽시계 ≤ 24h → (가) 하향 조건 미충족 → B = 동전 100,000(참조분포 200,000) 후보 성립",
+  "determinism_checks": {
+    "ckpt_expected_count": 67262,
+    "ckpt_expected_p": 0.6726232737672623,
+    "obs_expected": {
+      "T_obs": 0.0031802114140302242,
+      "delta_rf": 0.00038510137913283504,
+      "delta_gin": -0.002795110034897389
+    },
+    "ckpt_actual_count": 67262,
+    "ckpt_match": true,
+    "ckpt_p_match": true,
+    "obs_actual": {
+      "T_obs": 0.0031802114140302242,
+      "delta_rf": 0.00038510137913283504,
+      "delta_gin": -0.002795110034897389
+    },
+    "obs_match": true,
+    "reference_distribution_realized": 200000,
+    "reference_distribution_match": true
+  }
+}

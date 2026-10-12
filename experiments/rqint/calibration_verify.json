@@ -1,0 +1,721 @@
+{
+  "_doc": "블록 AE / A21 독립 검증 — 본런 함수 미import, p 원값만 읽어 독립 재계산.",
+  "block": "AE",
+  "independent_of_main_run": true,
+  "main_run_module_imported": false,
+  "sap_imported": false,
+  "design_sha256_now": "42e2f8f9f3f24ec1dfc5fe9ba9b1afe66d30a13c00ef9fce361a3dcaef650b99",
+  "design_sha256_at_freeze": "42e2f8f9f3f24ec1dfc5fe9ba9b1afe66d30a13c00ef9fce361a3dcaef650b99",
+  "design_unchanged_since_freeze": true,
+  "design_frozen_at_kst": "2026-08-12T22:25:21+09:00",
+  "cells": {
+    "C0:prop": {
+      "n_rows": 2000,
+      "expected_R": 2000,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 105,
+          "n": 2000,
+          "rate": 0.0525,
+          "se": 0.004987171041783107,
+          "bound": 0.059974342083566216,
+          "wilson95": [
+            0.04355496702511128,
+            0.06316079029161008
+          ]
+        },
+        "alpha_over_7": {
+          "k": 17,
+          "n": 2000,
+          "rate": 0.0085,
+          "se": 0.0020527725154044713,
+          "bound": 0.054105545030808944,
+          "wilson95": [
+            0.005313767739685552,
+            0.013570689737786079
+          ]
+        },
+        "alpha_over_4": {
+          "k": 25,
+          "n": 2000,
+          "rate": 0.0125,
+          "se": 0.002484325864293974,
+          "bound": 0.05496865172858795,
+          "wilson95": [
+            0.008481081388571086,
+            0.018388039710650523
+          ]
+        }
+      },
+      "ks_recomputed": {
+        "statistic": 0.030086103474131543,
+        "p_value": 0.052474838961301694,
+        "lambda": 1.349175785371711,
+        "implementation": "hand-rolled two-sided KS + Kolmogorov asymptotic Q(λ) (no scipy)"
+      },
+      "mismatches_vs_main_run": {
+        "ks_pvalue_two_implementations": [
+          0.052446940943157605,
+          0.052474838961301694
+        ]
+      },
+      "status": "complete"
+    },
+    "C0:ratio": {
+      "n_rows": 1000,
+      "expected_R": 1000,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 61,
+          "n": 1000,
+          "rate": 0.061,
+          "se": 0.0075682891065286355,
+          "bound": 0.06513657821305727,
+          "wilson95": [
+            0.0477797751260337,
+            0.07758011882428367
+          ]
+        },
+        "alpha_over_7": {
+          "k": 7,
+          "n": 1000,
+          "rate": 0.007,
+          "se": 0.0026364749192814255,
+          "bound": 0.05527294983856285,
+          "wilson95": [
+            0.0033948684009907646,
+            0.014378315465766588
+          ]
+        },
+        "alpha_over_4": {
+          "k": 17,
+          "n": 1000,
+          "rate": 0.017,
+          "se": 0.004087909000944126,
+          "bound": 0.05817581800188826,
+          "wilson95": [
+            0.010640689856816328,
+            0.027055958840229925
+          ]
+        }
+      },
+      "ks_recomputed": {
+        "statistic": 0.02856010997250691,
+        "p_value": 0.3835784821497134,
+        "lambda": 0.90667653707432,
+        "implementation": "hand-rolled two-sided KS + Kolmogorov asymptotic Q(λ) (no scipy)"
+      },
+      "mismatches_vs_main_run": {
+        "ks_pvalue_two_implementations": [
+          0.38126294797214944,
+          0.3835784821497134
+        ]
+      },
+      "status": "complete"
+    },
+    "C1:prop": {
+      "n_rows": 2000,
+      "expected_R": 2000,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 86,
+          "n": 2000,
+          "rate": 0.043,
+          "se": 0.004536022486716748,
+          "bound": 0.0590720449734335,
+          "wilson95": [
+            0.03495107254461269,
+            0.05280110867045247
+          ]
+        },
+        "alpha_over_7": {
+          "k": 21,
+          "n": 2000,
+          "rate": 0.0105,
+          "se": 0.002279226842593778,
+          "bound": 0.05455845368518756,
+          "wilson95": [
+            0.006877887380873444,
+            0.015998901907473176
+          ]
+        },
+        "alpha_over_4": {
+          "k": 32,
+          "n": 2000,
+          "rate": 0.016,
+          "se": 0.0028057084666800293,
+          "bound": 0.05561141693336006,
+          "wilson95": [
+            0.011356235350080627,
+            0.02249946641817221
+          ]
+        }
+      },
+      "mismatches_vs_main_run": {},
+      "status": "complete"
+    },
+    "C1:ratio": {
+      "n_rows": 1000,
+      "expected_R": 1000,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 54,
+          "n": 1000,
+          "rate": 0.054,
+          "se": 0.007147307185227175,
+          "bound": 0.06429461437045435,
+          "wilson95": [
+            0.04162131372306273,
+            0.06979215484605245
+          ]
+        },
+        "alpha_over_7": {
+          "k": 7,
+          "n": 1000,
+          "rate": 0.007,
+          "se": 0.0026364749192814255,
+          "bound": 0.05527294983856285,
+          "wilson95": [
+            0.0033948684009907646,
+            0.014378315465766588
+          ]
+        },
+        "alpha_over_4": {
+          "k": 12,
+          "n": 1000,
+          "rate": 0.012,
+          "se": 0.003443254274665175,
+          "bound": 0.056886508549330354,
+          "wilson95": [
+            0.006877647806403522,
+            0.02085726847549828
+          ]
+        }
+      },
+      "mismatches_vs_main_run": {},
+      "status": "complete"
+    },
+    "C2:prop": {
+      "n_rows": 2000,
+      "expected_R": 2000,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 97,
+          "n": 2000,
+          "rate": 0.0485,
+          "se": 0.004803527349771208,
+          "bound": 0.05960705469954242,
+          "wilson95": [
+            0.03992009344287708,
+            0.05881100025209431
+          ]
+        },
+        "alpha_over_7": {
+          "k": 15,
+          "n": 2000,
+          "rate": 0.0075,
+          "se": 0.0019292161620720473,
+          "bound": 0.0538584323241441,
+          "wilson95": [
+            0.004550377435809225,
+            0.012337914136224913
+          ]
+        },
+        "alpha_over_4": {
+          "k": 26,
+          "n": 2000,
+          "rate": 0.013,
+          "se": 0.0025328837320335094,
+          "bound": 0.05506576746406702,
+          "wilson95": [
+            0.008886895534737305,
+            0.01898030851720305
+          ]
+        }
+      },
+      "mismatches_vs_main_run": {},
+      "status": "complete"
+    },
+    "C2:ratio": {
+      "n_rows": 1000,
+      "expected_R": 1000,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 36,
+          "n": 1000,
+          "rate": 0.036,
+          "se": 0.005891010100144117,
+          "bound": 0.06178202020028824,
+          "wilson95": [
+            0.026115571407387315,
+            0.04943566046720784
+          ]
+        },
+        "alpha_over_7": {
+          "k": 3,
+          "n": 1000,
+          "rate": 0.003,
+          "se": 0.001729450779872038,
+          "bound": 0.05345890155974408,
+          "wilson95": [
+            0.0010207838811386186,
+            0.008783014053503173
+          ]
+        },
+        "alpha_over_4": {
+          "k": 10,
+          "n": 1000,
+          "rate": 0.01,
+          "se": 0.003146426544510455,
+          "bound": 0.05629285308902091,
+          "wilson95": [
+            0.005440754445529249,
+            0.018309468870314774
+          ]
+        }
+      },
+      "mismatches_vs_main_run": {},
+      "status": "complete"
+    },
+    "C3:prop": {
+      "n_rows": 2000,
+      "expected_R": 2000,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 97,
+          "n": 2000,
+          "rate": 0.0485,
+          "se": 0.004803527349771208,
+          "bound": 0.05960705469954242,
+          "wilson95": [
+            0.03992009344287708,
+            0.05881100025209431
+          ]
+        },
+        "alpha_over_7": {
+          "k": 7,
+          "n": 2000,
+          "rate": 0.0035,
+          "se": 0.0013205585939290994,
+          "bound": 0.0526411171878582,
+          "wilson95": [
+            0.0016964316970424177,
+            0.007207196253241745
+          ]
+        },
+        "alpha_over_4": {
+          "k": 20,
+          "n": 2000,
+          "rate": 0.01,
+          "se": 0.0022248595461286987,
+          "bound": 0.054449719092257404,
+          "wilson95": [
+            0.006482767876552687,
+            0.015395938459075187
+          ]
+        }
+      },
+      "mismatches_vs_main_run": {},
+      "status": "complete"
+    },
+    "C3:ratio": {
+      "n_rows": 1000,
+      "expected_R": 1000,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 42,
+          "n": 1000,
+          "rate": 0.042,
+          "se": 0.0063431853196954605,
+          "bound": 0.06268637063939092,
+          "wilson95": [
+            0.031220885546165447,
+            0.056284425226603055
+          ]
+        },
+        "alpha_over_7": {
+          "k": 5,
+          "n": 1000,
+          "rate": 0.005,
+          "se": 0.0022304708023195463,
+          "bound": 0.054460941604639095,
+          "wilson95": [
+            0.0021375355273244596,
+            0.011650955373375113
+          ]
+        },
+        "alpha_over_4": {
+          "k": 10,
+          "n": 1000,
+          "rate": 0.01,
+          "se": 0.003146426544510455,
+          "bound": 0.05629285308902091,
+          "wilson95": [
+            0.005440754445529249,
+            0.018309468870314774
+          ]
+        }
+      },
+      "mismatches_vs_main_run": {},
+      "status": "complete"
+    },
+    "C4:tau0.01": {
+      "n_rows": 400,
+      "expected_R": 400,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 100,
+          "n": 400,
+          "rate": 0.25,
+          "se": 0.021650635094610966,
+          "bound": 0.09330127018922194,
+          "wilson95": [
+            0.2100790142364741,
+            0.2946771329306741
+          ]
+        },
+        "alpha_over_7": {
+          "k": 39,
+          "n": 400,
+          "rate": 0.0975,
+          "se": 0.014831870246196196,
+          "bound": 0.07966374049239239,
+          "wilson95": [
+            0.07214511778538757,
+            0.1305122791537211
+          ]
+        },
+        "alpha_over_4": {
+          "k": 49,
+          "n": 400,
+          "rate": 0.1225,
+          "se": 0.016393119745795794,
+          "bound": 0.08278623949159158,
+          "wilson95": [
+            0.09391315520467675,
+            0.1582686270177171
+          ]
+        }
+      },
+      "power_recomputed": {
+        "power": 0.25,
+        "wilson95": [
+          0.2100790142364741,
+          0.2946771329306741
+        ]
+      },
+      "A12_interim_recomputed": {
+        "power": 0.26,
+        "wilson95": [
+          0.20413830063574687,
+          0.32490745602534116
+        ],
+        "crosses_0.50": false,
+        "crosses_0.80": false
+      },
+      "mismatches_vs_main_run": {},
+      "status": "complete"
+    },
+    "C4:tau0.02": {
+      "n_rows": 400,
+      "expected_R": 400,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 294,
+          "n": 400,
+          "rate": 0.735,
+          "se": 0.02206666037260736,
+          "bound": 0.09413332074521472,
+          "wilson95": [
+            0.6896629392432349,
+            0.7758662824196457
+          ]
+        },
+        "alpha_over_7": {
+          "k": 169,
+          "n": 400,
+          "rate": 0.4225,
+          "se": 0.02469786174955233,
+          "bound": 0.09939572349910467,
+          "wilson95": [
+            0.3750554237475196,
+            0.47141898187429637
+          ]
+        },
+        "alpha_over_4": {
+          "k": 209,
+          "n": 400,
+          "rate": 0.5225,
+          "se": 0.024974674672555798,
+          "bound": 0.0999493493451116,
+          "wilson95": [
+            0.4735694074890401,
+            0.5710025392659165
+          ]
+        }
+      },
+      "power_recomputed": {
+        "power": 0.735,
+        "wilson95": [
+          0.6896629392432349,
+          0.7758662824196457
+        ]
+      },
+      "A12_interim_recomputed": {
+        "power": 0.77,
+        "wilson95": [
+          0.7069169563469642,
+          0.8229065674093119
+        ],
+        "crosses_0.50": false,
+        "crosses_0.80": true
+      },
+      "mismatches_vs_main_run": {},
+      "status": "complete"
+    },
+    "C4:tau0.03": {
+      "n_rows": 400,
+      "expected_R": 400,
+      "duplicate_rep_seeds": 0,
+      "seed_rule_conformant": true,
+      "ncoin_all_expected": true,
+      "nperm_is_2x_ncoin": true,
+      "p_in_unit_interval": true,
+      "rates_recomputed": {
+        "alpha": {
+          "k": 389,
+          "n": 400,
+          "rate": 0.9725,
+          "se": 0.00817675822071314,
+          "bound": 0.06635351644142629,
+          "wilson95": [
+            0.9514345181143852,
+            0.9845763637397046
+          ]
+        },
+        "alpha_over_7": {
+          "k": 348,
+          "n": 400,
+          "rate": 0.87,
+          "se": 0.016815171720800236,
+          "bound": 0.08363034344160047,
+          "wilson95": [
+            0.8334921544792615,
+            0.8994687477133592
+          ]
+        },
+        "alpha_over_4": {
+          "k": 369,
+          "n": 400,
+          "rate": 0.9225,
+          "se": 0.013369157602481916,
+          "bound": 0.07673831520496384,
+          "wilson95": [
+            0.892095045964364,
+            0.9448670653231555
+          ]
+        }
+      },
+      "power_recomputed": {
+        "power": 0.9725,
+        "wilson95": [
+          0.9514345181143852,
+          0.9845763637397046
+        ]
+      },
+      "A12_interim_recomputed": {
+        "power": 0.975,
+        "wilson95": [
+          0.942821659593358,
+          0.9892752803482386
+        ],
+        "crosses_0.50": false,
+        "crosses_0.80": false
+      },
+      "mismatches_vs_main_run": {},
+      "status": "complete"
+    }
+  },
+  "ast_scan": {
+    "v3_Multimodal/src/rqint_calibration.py": {
+      "data_file_literals": [
+        "master_X.parquet",
+        "master_Y.parquet"
+      ],
+      "data_literals_only_allowed": true,
+      "artifact_path_literals": [
+        ".json",
+        ".jsonl",
+        ".py",
+        "/",
+        "__init__.py",
+        "access.log",
+        "bootstrap.py",
+        "budget.json",
+        "calibration_design.json",
+        "calibration_design.sha256.json",
+        "calibration_facts.json",
+        "calibration_sessions.jsonl",
+        "calibration_summary.json",
+        "consensus.py",
+        "decision.py",
+        "docs/93_r1_calibration_audit_prompt_for_vscode.md",
+        "experiments/sap/manifest.json",
+        "freeze.py",
+        "gin_seed_freeze.json",
+        "manifest.json",
+        "metrics.py",
+        "null_generator.py",
+        "redaction.py",
+        "signflip.py",
+        "synthetic.py",
+        "timing.json",
+        "unseen_target.py",
+        "v3_Multimodal/config/gin_seed_freeze.json",
+        "v3_Multimodal/config/ladder_freeze.json",
+        "v3_Multimodal/src/rqint_reduced_fixture.py",
+        "v3_Multimodal/src/rqint_timing.py",
+        "v3_Multimodal/src/run_rqint_audit.py",
+        "v3_Multimodal/src/sap/rqint.py",
+        "v3_Multimodal/src/sap/rqint_audit.py",
+        "v3_Multimodal/src/sap/rqint_synthetic.py"
+      ],
+      "forbidden_literals": [],
+      "excluded_guard_constant_strings": [],
+      "scaffold_of_import_exception": true,
+      "sap_imported": true,
+      "main_run_module_imported": false,
+      "imports": [
+        "__future__",
+        "argparse",
+        "confirmatory_oof_rep1",
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "multiprocessing",
+        "numpy",
+        "os",
+        "pandas",
+        "platform",
+        "psutil",
+        "rqint_reduced_fixture",
+        "sap",
+        "sap.decision",
+        "sap.metrics",
+        "sap.synthetic",
+        "scipy.stats",
+        "subprocess",
+        "sys",
+        "threading",
+        "threadpoolctl",
+        "time"
+      ]
+    },
+    "v3_Multimodal/src/rqint_calibration_verify.py": {
+      "data_file_literals": [],
+      "data_literals_only_allowed": true,
+      "artifact_path_literals": [
+        "/",
+        "calibration_design.json",
+        "calibration_design.sha256.json",
+        "calibration_summary.json",
+        "calibration_verify.json",
+        "v3_Multimodal/src/rqint_calibration.py",
+        "v3_Multimodal/src/rqint_calibration_verify.py"
+      ],
+      "forbidden_literals": [],
+      "excluded_guard_constant_strings": [
+        ".csv",
+        ".feather",
+        ".json",
+        ".jsonl",
+        ".log",
+        ".md",
+        ".npy",
+        ".parquet",
+        ".pkl",
+        ".pt",
+        ".py",
+        "ALLOWED_DATA_LITERALS",
+        "ARTIFACT_EXT",
+        "DATA_EXT",
+        "FORBIDDEN_LITERAL_TOKENS",
+        "GUARD_CONST_NAMES",
+        "T_obs.json",
+        "_sealed",
+        "confirmatory_oof_rep1.py",
+        "master_X.parquet",
+        "master_Y.parquet",
+        "oof_",
+        "p_emp",
+        "scaffold_split.json"
+      ],
+      "scaffold_of_import_exception": false,
+      "sap_imported": false,
+      "main_run_module_imported": false,
+      "imports": [
+        "__future__",
+        "argparse",
+        "ast",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "sys"
+      ]
+    }
+  },
+  "any_mismatch_vs_main_run": false,
+  "all_ast_clean": true
+}

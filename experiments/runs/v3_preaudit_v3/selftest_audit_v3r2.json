@@ -1,0 +1,311 @@
+{
+  "all_pass": true,
+  "block": "BE — 개봉 전 전수 감사 v3 재실행",
+  "cases": [
+    {
+      "expect": "PASS · 9키 정확 · 기록원 불일치 0",
+      "got": {
+        "blocking": [],
+        "keys": true,
+        "n_items": 20,
+        "verdict": "PASS"
+      },
+      "id": "U1",
+      "pass": true,
+      "title": "정상 fixture"
+    },
+    {
+      "expect": "차단 missing",
+      "got": [
+        "f2_changed_at_start",
+        "missing"
+      ],
+      "id": "U2",
+      "pass": true,
+      "title": "기대 파일 1개 삭제"
+    },
+    {
+      "expect": "차단 unexpected",
+      "got": [
+        "f2_changed_at_start",
+        "unexpected"
+      ],
+      "id": "U3",
+      "pass": true,
+      "title": "기대 밖 파일 1개 추가"
+    },
+    {
+      "expect": "차단 sha_mismatch",
+      "got": [
+        "sha_mismatch"
+      ],
+      "id": "U4",
+      "pass": true,
+      "title": "바이트 1개 변조(크기 같음)"
+    },
+    {
+      "expect": "차단 size_mismatch",
+      "got": [
+        "f2_changed_at_start",
+        "sha_mismatch",
+        "size_mismatch"
+      ],
+      "id": "U5",
+      "pass": true,
+      "title": "크기 변조"
+    },
+    {
+      "expect": "차단 source_conflict",
+      "got": [
+        "source_conflict"
+      ],
+      "id": "U6",
+      "pass": true,
+      "title": "기록원 2곳이 같은 파일에 다른 sha"
+    },
+    {
+      "expect": "차단 grid_mismatch",
+      "got": [
+        "expected_count_mismatch",
+        "grid_mismatch",
+        "missing"
+      ],
+      "id": "U7",
+      "pass": true,
+      "title": "기록원 이름 집합 ≠ 설계 격자"
+    },
+    {
+      "expect": "차단 checkpoint_format · checkpoint_sha_mismatch",
+      "got": [
+        [
+          "checkpoint_format",
+          "expected_sha_unresolved",
+          "f2_changed_at_start",
+          "source_conflict",
+          "y4_condition_failed"
+        ],
+        [
+          "checkpoint_sha_mismatch",
+          "expected_sha_unresolved",
+          "sha_mismatch",
+          "source_conflict"
+        ]
+      ],
+      "id": "U8",
+      "pass": true,
+      "title": "checkpoint 키 집합 위반 · checkpoint sha 기록원 불일치"
+    },
+    {
+      "expect": "차단 각각",
+      "got": [
+        [
+          "access_unattributed",
+          "f2_changed_at_start"
+        ],
+        [
+          "access_lines_changed",
+          "f2_changed_at_start"
+        ],
+        [
+          "f2_changed_at_start",
+          "human_exposure"
+        ]
+      ],
+      "id": "U9",
+      "pass": true,
+      "title": "access.log 대응 없음 · 줄 수 감소 · human_exposure"
+    },
+    {
+      "expect": "비차단 no_creation_hash · verdict PASS",
+      "got": {
+        "n_no_creation_hash": 4,
+        "verdict": "PASS"
+      },
+      "id": "U10",
+      "pass": true,
+      "title": "Y4 대상 파일만 기록 없음"
+    },
+    {
+      "expect": "일치",
+      "got": {
+        "equal": true,
+        "n_fp_keys": 10,
+        "oracle_ok": true
+      },
+      "id": "U11",
+      "pass": true,
+      "title": "stat 지문·계수·access 개행 = unblinding_run.stat_summary(오라클)"
+    },
+    {
+      "expect": "스키마 검사 실패",
+      "got": [
+        [
+          "top_level_keys"
+        ],
+        [
+          "top_level_keys"
+        ],
+        [
+          "report_path"
+        ]
+      ],
+      "id": "U12",
+      "pass": true,
+      "title": "9키 외 키 · 키 누락 · report_path 다름"
+    },
+    {
+      "expect": "0 (양성 대조 적발)",
+      "got": {
+        "n_hits": 0,
+        "positive_control_hits": 2
+      },
+      "id": "U13",
+      "pass": true,
+      "title": "출력 누설 스캔(소수 4자리+ · 금지 키 · fixture 심은 값)"
+    },
+    {
+      "expect": "0 · 가드 작동 · 불변",
+      "got": {
+        "ast_violations": [],
+        "guard_trips": true,
+        "real_repo_invariant": true
+      },
+      "id": "U14",
+      "pass": true,
+      "title": "AST 위생 · build-expected 봉인 I/O 가드 · 실저장소 불변(사후 확인)"
+    },
+    {
+      "expect": "작동",
+      "got": [
+        "violation",
+        "violation",
+        "compliant",
+        "a_only",
+        "b_only"
+      ],
+      "id": "U15",
+      "pass": true,
+      "title": "R-d 검사기 — 확대 문장 적발 · 한정 문장 통과 · 비해당 분류"
+    },
+    {
+      "expect": "작동",
+      "got": {
+        "blocking_after_human": [
+          "oog_rule_b"
+        ],
+        "recorded": true
+      },
+      "id": "U16",
+      "pass": true,
+      "title": "범위 밖 사본 — 동일 사본 기록 · 같은 크기 다른 바이트 비사본 · 사본 디렉터리 human_exposure 차단"
+    },
+    {
+      "expect": "동일",
+      "got": true,
+      "id": "U17",
+      "pass": true,
+      "title": "재실행 결정성(audited_at_kst 제외 바이트 동일)"
+    },
+    {
+      "expect": "a = b_manual_documented · b~g = access_unattributed",
+      "got": {
+        "cases": {
+          "a": {
+            "by_rule": {
+              "a_writer": 1,
+              "b_manual_documented": 1
+            },
+            "manual_line": [
+              2
+            ],
+            "n_manual": 1,
+            "unattributed": false,
+            "verdict": "PASS"
+          },
+          "b": {
+            "by_rule": {
+              "a_writer": 1
+            },
+            "manual_line": [],
+            "n_manual": 0,
+            "unattributed": true,
+            "verdict": "FAIL"
+          },
+          "c": {
+            "by_rule": {
+              "a_writer": 1
+            },
+            "manual_line": [],
+            "n_manual": 0,
+            "unattributed": true,
+            "verdict": "FAIL"
+          },
+          "d": {
+            "by_rule": {
+              "a_writer": 1
+            },
+            "manual_line": [],
+            "n_manual": 0,
+            "unattributed": true,
+            "verdict": "FAIL"
+          },
+          "e": {
+            "by_rule": {
+              "a_writer": 1
+            },
+            "manual_line": [],
+            "n_manual": 0,
+            "unattributed": true,
+            "verdict": "FAIL"
+          },
+          "f_length": {
+            "by_rule": {
+              "a_writer": 1
+            },
+            "manual_line": [],
+            "n_manual": 0,
+            "unattributed": true,
+            "verdict": "FAIL"
+          },
+          "f_offset": {
+            "by_rule": {
+              "a_writer": 1
+            },
+            "manual_line": [],
+            "n_manual": 0,
+            "unattributed": true,
+            "verdict": "FAIL"
+          },
+          "g": {
+            "by_rule": {
+              "a_writer": 1
+            },
+            "manual_line": [],
+            "n_manual": 0,
+            "unattributed": true,
+            "verdict": "FAIL"
+          }
+        },
+        "sub_pass": {
+          "a": true,
+          "b": true,
+          "c": true,
+          "d": true,
+          "e": true,
+          "f_length": true,
+          "f_offset": true,
+          "g": true
+        }
+      },
+      "id": "U18",
+      "pass": true,
+      "title": "대응 규칙 (b) — a 전 조건 일치 대응 · b 순번 · c 인용 없음 · d 미등록 문서 · e 인용 값 · f 오프셋/길이 · g 시간창 → 차단"
+    }
+  ],
+  "instruction": "docs/119b_pre_unblinding_reaudit_prompt_for_vscode.md",
+  "leak_hits": 0,
+  "n_cases": 18,
+  "n_pass": 18,
+  "script_sha256": "a5e19ba3f2ade25c7a893ed602343e70de1ad2242a6b04cb76c953b01bb9bcbd",
+  "ts_kst": "2026-10-05 22:00:37.010 KST"
+}

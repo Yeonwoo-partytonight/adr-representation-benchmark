@@ -7,7 +7,7 @@
 [train] XGBoost OvR 라벨 370/370 학습(양성>0), 라벨별 scale_pos_weight 적용
 [train] XGBoost OvR 라벨 370/370 학습(양성>0), 라벨별 scale_pos_weight 적용
 [valid] XGBoost micro PR-AUC(점검용) 0.2321
-[저장] /Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v1_RF/results/_preds.npz (모델: ['RandomForest', 'XGBoost'])
+[저장] <HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/v1_RF/results/_preds.npz (모델: ['RandomForest', 'XGBoost'])
 Matplotlib is building the font cache; this may take a moment.
 [eval] RandomForest: macro PR-AUC 0.188 | micro PR-AUC 0.320 | macro ROC-AUC 0.617 | macro F1 0.025
 [eval] XGBoost: macro PR-AUC 0.158 | micro PR-AUC 0.251 | macro ROC-AUC 0.579 | macro F1 0.094

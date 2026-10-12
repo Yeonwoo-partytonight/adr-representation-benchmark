@@ -1,0 +1,28 @@
+{
+  "python": "3.14.4",
+  "torch": "2.12.1",
+  "torch_geometric": "2.8.0",
+  "rdkit": "2026.03.3",
+  "sklearn": "1.9.0",
+  "numpy": "2.5.0",
+  "pandas": "3.0.3",
+  "machine": "arm64",
+  "os": "Darwin 25.6.0",
+  "device": "mps",
+  "mps_fallback_env": "1 (명령줄에서 고정 — 하네스는 환경변수를 판독하지 않는다)",
+  "split_files_sha256": {
+    "rep1/fold_membership.csv": "7047606f76562ba54b1dadef0518cb8e18ed22dad5b588d22b298bcb892284ad",
+    "rep1/folds.json": "3c1a5d68bfcc6ddfa1de17990194c5beb3c4fe365ee0a123d04c4a34bed871b2",
+    "rep1/split_manifest.json": "d2b6f4891d2e6e95b6f1968404caed097e1cd5b91502b7b54bbf827269396fe0",
+    "rep2/fold_membership.csv": "27f2e01dcb392be4873dc2820fdbb9bb8d0f5c8c85139878f523de6a74056b33",
+    "rep2/folds.json": "786feeca045f603685e190a252636f3815695d2c9e61812c8db1daf063abccfa",
+    "rep2/split_manifest.json": "05343236723ee58e59c4e4500fa5354cd2218da121a58419477c14b35172904f",
+    "rep3/fold_membership.csv": "45762346d825a9f3a630ea34a423c10b49039275f5d4ef28a264e6ae2aa0ad23",
+    "rep3/folds.json": "9db08cf96298b47e182e286fa4ef4b94f74605c6f31f0f9f841bc723c638b4e4",
+    "rep3/split_manifest.json": "2664d80e98865d5e1dbb3e173fba39f10686dcf55cd06ef1c2ea8ff85e806e68"
+  },
+  "contract_sha256": "e50f972674e782f50a2a74890f8b37b3208da77a8cf6c4ac9f8dc6deb4cbce7f",
+  "harness_sha256": "714f98983cceff85409af1597c0d82f8ca2b2027f5f7e94b8a0928351b01107e",
+  "sap_manifest_sha256": "d08dcedf2a22e1c8493c842507422de1f6c705ce54ce995e038e09f604706e10",
+  "ts_kst": "2026-09-22 02:37:37 KST"
+}

@@ -1,0 +1,21 @@
+{"ts_kst": "2026-09-28 20:26:14 KST", "event": "watchdog_start", "restarts": 0, "launch_index": 0}
+{"ts_kst": "2026-09-28 20:26:14 KST", "event": "power_wait"}
+{"ts_kst": "2026-09-28 20:26:28 KST", "event": "watchdog_start", "restarts": 0, "launch_index": 0}
+{"ts_kst": "2026-09-28 20:27:14 KST", "event": "power_ok", "waited_s": 60.1}
+{"ts_kst": "2026-09-28 20:27:39 KST", "event": "watchdog_signal", "note": "signal 15 — 자식에 SIGTERM 전달"}
+{"ts_kst": "2026-09-28 20:27:39 KST", "event": "watchdog_signal", "note": "signal 15 — 자식에 SIGTERM 전달"}
+{"ts_kst": "2026-09-28 20:28:20 KST", "event": "watchdog_start", "restarts": 0, "launch_index": 0}
+{"ts_kst": "2026-09-28 20:30:50 KST", "event": "launch", "launch_index": 1, "waited_s": 150.1}
+{"ts_kst": "2026-09-28 20:30:50 KST", "event": "child_started", "pid": 65283, "launch_index": 1}
+{"ts_kst": "2026-09-29 14:42:01 KST", "event": "watchdog_signal", "note": "signal 15 — 자식에 SIGTERM 전달"}
+{"ts_kst": "2026-09-30 13:08:18 KST", "event": "watchdog_start", "restarts": 0, "launch_index": 1}
+{"ts_kst": "2026-09-30 13:08:18 KST", "event": "power_wait"}
+{"ts_kst": "2026-09-30 21:47:28 KST", "event": "power_ok", "waited_s": 20835.1}
+{"ts_kst": "2026-09-30 21:47:29 KST", "event": "watchdog_start", "restarts": 0, "launch_index": 1}
+{"ts_kst": "2026-09-30 21:50:24 KST", "event": "watchdog_signal", "note": "signal 15 — 자식에 SIGTERM 전달"}
+{"ts_kst": "2026-09-30 21:50:24 KST", "event": "watchdog_signal", "note": "signal 15 — 자식에 SIGTERM 전달"}
+{"ts_kst": "2026-09-30 22:39:16 KST", "event": "watchdog_start", "restarts": 0, "launch_index": 1}
+{"ts_kst": "2026-09-30 22:40:06 KST", "event": "launch", "launch_index": 2, "waited_s": 50.0}
+{"ts_kst": "2026-09-30 22:40:06 KST", "event": "child_started", "pid": 1669, "launch_index": 2}
+{"ts_kst": "2026-10-01 01:11:05 KST", "event": "stall_suspect", "pid": 1669, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-01 02:51:08 KST", "event": "completed", "exit_code": 0, "b_done": 100000, "k_done": 0, "phase": "coins", "ckpt_sha256": "b298c01bc18c0473f7b4010989ecc0190659668444fc7a44bb926a1d86f7fc6d"}

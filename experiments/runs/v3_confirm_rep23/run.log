@@ -1,0 +1,50 @@
+2026-07-27 21:26:46 KST | ==============================================================================
+2026-07-27 21:26:46 KST | [블록 C] §13-5 확증 OOF 반복2·3 + consensus — 부호만 공개. bootstrap/sign-flip/p/SESOI/성공판정/§13-4 null 미실행.
+2026-07-27 21:26:46 KST | [C-1 시작] 반복1 _sealed 3종 sha256 불변 — metrics_full.json=8722a4e1c52d2eae · oof_M1b.npz=b2a61ba846eead5f · oof_M2b.npz=350fa12fac84ef4c
+2026-07-27 21:26:46 KST | [C-1] seed 게이트 PASS — 반복 [2, 3] → seed [202, 203] (204·205 미사용 예비, 결과 기반 교체·재추첨 영구 금지)
+2026-07-27 21:26:46 KST | [data] N=1092 PT=370 (동결 master_X/master_Y 읽기 전용)
+2026-07-27 21:26:47 KST | [동일성] 본 경로 seed=201 재현 folds.json sha256=3c1a5d68bfcc6ddf vs 반복1 원본 3c1a5d68bfcc6ddf → 바이트 동일=True (fold 크기 [218, 218, 219, 218, 219])
+2026-07-27 21:29:00 KST | ==============================================================================
+2026-07-27 21:29:00 KST | [블록 C] §13-5 확증 OOF 반복2·3 + consensus — 부호만 공개. bootstrap/sign-flip/p/SESOI/성공판정/§13-4 null 미실행.
+2026-07-27 21:29:00 KST | [C-1 시작] 반복1 _sealed 3종 sha256 불변 — metrics_full.json=8722a4e1c52d2eae · oof_M1b.npz=b2a61ba846eead5f · oof_M2b.npz=350fa12fac84ef4c
+2026-07-27 21:29:00 KST | [C-1] seed 게이트 PASS — 반복 [2, 3] → seed [202, 203] (204·205 미사용 예비, 결과 기반 교체·재추첨 영구 금지)
+2026-07-27 21:29:00 KST | [data] N=1092 PT=370 (동결 master_X/master_Y 읽기 전용)
+2026-07-27 21:29:01 KST | [동일성] 본 경로 seed=201 재현 folds.json sha256=3c1a5d68bfcc6ddf vs 반복1 원본 3c1a5d68bfcc6ddf → 바이트 동일=True (fold 크기 [218, 218, 219, 218, 219])
+2026-07-27 21:29:01 KST | [반복2] split 생성 — seed=202 (반복1과 동일 코드경로, OOF 미조회)
+2026-07-27 21:29:01 KST | [반복2 fold 0] test=218 groups=54 | train PT-positive min=5 (<1:0, <3:0) | target Jaccard=0.398
+2026-07-27 21:29:01 KST | [반복2 fold 1] test=218 groups=172 | train PT-positive min=6 (<1:0, <3:0) | target Jaccard=0.526
+2026-07-27 21:29:01 KST | [반복2 fold 2] test=219 groups=161 | train PT-positive min=5 (<1:0, <3:0) | target Jaccard=0.446
+2026-07-27 21:29:01 KST | [반복2 fold 3] test=218 groups=168 | train PT-positive min=5 (<1:0, <3:0) | target Jaccard=0.552
+2026-07-27 21:29:01 KST | [반복2 fold 4] test=219 groups=177 | train PT-positive min=4 (<1:0, <3:0) | target Jaccard=0.436
+2026-07-27 21:29:01 KST | [반복2 게이트A] n_drugs_all_1092=True · n_pt_370=True · n_scaffold_groups_all_732=True · every_drug_exactly_one_fold=True · scaffold_group_disjoint_no_fold_crossing=True · all_groups_assigned=True · gate_A_pass=True · bseq_fit_rows_ok=True · rare_pt_min1_all_train_folds=True
+2026-07-27 21:29:01 KST | [반복2] split 저장 — fold 크기 [218, 218, 219, 218, 219] · 게이트A PASS
+2026-07-27 21:29:01 KST | [반복2 게이트B] 무결성 로그 기록 완료 (first_look_log 'opened') | 조회자=vscode-claude(runner)
+2026-07-27 21:33:32 KST | [반복2 fold 0] train=874 test=218 | leak_rows=0(전 블록) | B_seq fit행=692 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 21:38:06 KST | [반복2 fold 1] train=874 test=218 | leak_rows=0(전 블록) | B_seq fit행=678 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 21:42:42 KST | [반복2 fold 2] train=873 test=219 | leak_rows=0(전 블록) | B_seq fit행=678 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 21:47:13 KST | [반복2 fold 3] train=874 test=218 | leak_rows=0(전 블록) | B_seq fit행=671 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 21:51:45 KST | [반복2 fold 4] train=873 test=219 | leak_rows=0(전 블록) | B_seq fit행=669 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 21:51:45 KST | [반복2 OOF] 전체 1092×370 OOF 완성(M1b·M2b) · NaN 0
+2026-07-27 21:51:47 KST | [반복2 결과·공개] Δ(M2b−M1b) 부호 = negative | wall 1365.4s | sealed 3개 sha 기록
+2026-07-27 21:51:47 KST | [반복2 종료] 반복1 _sealed 3종 sha256 불변 — metrics_full.json=8722a4e1c52d2eae · oof_M1b.npz=b2a61ba846eead5f · oof_M2b.npz=350fa12fac84ef4c
+2026-07-27 21:51:47 KST | [반복3] split 생성 — seed=203 (반복1과 동일 코드경로, OOF 미조회)
+2026-07-27 21:51:47 KST | [반복3 fold 0] test=218 groups=174 | train PT-positive min=4 (<1:0, <3:0) | target Jaccard=0.539
+2026-07-27 21:51:47 KST | [반복3 fold 1] test=218 groups=128 | train PT-positive min=4 (<1:0, <3:0) | target Jaccard=0.496
+2026-07-27 21:51:47 KST | [반복3 fold 2] test=219 groups=160 | train PT-positive min=5 (<1:0, <3:0) | target Jaccard=0.495
+2026-07-27 21:51:47 KST | [반복3 fold 3] test=218 groups=164 | train PT-positive min=5 (<1:0, <3:0) | target Jaccard=0.507
+2026-07-27 21:51:47 KST | [반복3 fold 4] test=219 groups=106 | train PT-positive min=5 (<1:0, <3:0) | target Jaccard=0.365
+2026-07-27 21:51:47 KST | [반복3 게이트A] n_drugs_all_1092=True · n_pt_370=True · n_scaffold_groups_all_732=True · every_drug_exactly_one_fold=True · scaffold_group_disjoint_no_fold_crossing=True · all_groups_assigned=True · gate_A_pass=True · bseq_fit_rows_ok=True · rare_pt_min1_all_train_folds=True
+2026-07-27 21:51:47 KST | [반복3] split 저장 — fold 크기 [218, 218, 219, 218, 219] · 게이트A PASS
+2026-07-27 21:51:47 KST | [반복3 게이트B] 무결성 로그 기록 완료 (first_look_log 'opened') | 조회자=vscode-claude(runner)
+2026-07-27 21:56:22 KST | [반복3 fold 0] train=874 test=218 | leak_rows=0(전 블록) | B_seq fit행=664 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 22:01:01 KST | [반복3 fold 1] train=874 test=218 | leak_rows=0(전 블록) | B_seq fit행=692 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 22:05:31 KST | [반복3 fold 2] train=873 test=219 | leak_rows=0(전 블록) | B_seq fit행=671 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 22:10:04 KST | [반복3 fold 3] train=874 test=218 | leak_rows=0(전 블록) | B_seq fit행=687 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 22:14:37 KST | [반복3 fold 4] train=873 test=219 | leak_rows=0(전 블록) | B_seq fit행=674 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 22:14:37 KST | [반복3 OOF] 전체 1092×370 OOF 완성(M1b·M2b) · NaN 0
+2026-07-27 22:14:39 KST | [반복3 결과·공개] Δ(M2b−M1b) 부호 = negative | wall 1371.3s | sealed 3개 sha 기록
+2026-07-27 22:14:39 KST | [반복3 종료] 반복1 _sealed 3종 sha256 불변 — metrics_full.json=8722a4e1c52d2eae · oof_M1b.npz=b2a61ba846eead5f · oof_M2b.npz=350fa12fac84ef4c
+2026-07-27 22:14:39 KST | [consensus] 반복1 sealed OOF 2종 **machine_read**(사람 노출 0)로 로드 — 값 미출력
+2026-07-27 22:14:40 KST | [consensus 결과·공개] Δ(M2b−M1b) 부호 = negative | wall 1.7s
+2026-07-27 22:14:40 KST | [C 종료] 반복1 _sealed 3종 sha256 불변 — metrics_full.json=8722a4e1c52d2eae · oof_M1b.npz=b2a61ba846eead5f · oof_M2b.npz=350fa12fac84ef4c
+2026-07-27 22:14:40 KST | [C-6 누출스캔] 파일 18개 · 확증 경로 엄격 검출 0건

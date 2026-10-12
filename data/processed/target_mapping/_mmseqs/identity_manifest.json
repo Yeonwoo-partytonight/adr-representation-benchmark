@@ -1,0 +1,59 @@
+{
+  "_scope": "공개 — **설계 자산**(층 정의의 전제)이며 결과가 아니다. AP·Δ·CI·p 없음.",
+  "ts_kst": "2026-08-01 16:55:45 KST",
+  "identity_method_frozen": {
+    "tool": "mmseqs2 easy-search (bidirectional best identity)",
+    "sequence_db": "UniProtKB canonical (본 표적셋 accession의 canonical sequence)",
+    "identity_def": "alignment percent identity(%), 양방향 max",
+    "version_pinned_in_manifest": true,
+    "note": "정확 도구/버전은 confirmatory 산출과 manifest에 동일 기록. 경계는 결과 무참조 사전 고정."
+  },
+  "tool": {
+    "name": "mmseqs2",
+    "version": "18-8cc5c",
+    "path": "/opt/homebrew/Cellar/mmseqs2/18-8cc5c/bin/mmseqs",
+    "binary_sha256": "4fbce02c758bc330221565cd3c48c1e26d45bf3a3c36f2422728ee18024b8d05",
+    "install": "brew (사전 설치 상태 — 본 블록에서 네트워크 사용 0)"
+  },
+  "command": [
+    "/opt/homebrew/bin/mmseqs",
+    "easy-search",
+    "<REPO_ROOT>/data/processed/target_mapping/_mmseqs/targets_human.fasta",
+    "<REPO_ROOT>/data/processed/target_mapping/_mmseqs/targets_human.fasta",
+    "<REPO_ROOT>/data/processed/target_mapping/_mmseqs/_easy_search_raw.tsv",
+    "<REPO_ROOT>/data/processed/target_mapping/_mmseqs/tmp_search",
+    "--format-output",
+    "query,target,fident,alnlen,evalue,bits",
+    "-s",
+    "7.5",
+    "--max-seqs",
+    "2000",
+    "-e",
+    "10000",
+    "--threads",
+    "8"
+  ],
+  "input_fasta": {
+    "path": "data/processed/target_mapping/_mmseqs/targets_human.fasta",
+    "n_sequences": 1191,
+    "sha256": "854eda439629f7e7687228e45f99f2e2baa2699551670b8daa98b9278d46acf6"
+  },
+  "symmetrization": "양방향 best identity — max(identity(A→B), identity(B→A)); 자기 자신 제외",
+  "identity_definition": "alignment percent identity = mmseqs fident × 100",
+  "coverage": {
+    "n_aligned_pairs": 201289,
+    "n_total_pairs": 708645,
+    "aligned_fraction": 0.28404772488340424,
+    "n_raw_rows": 318659,
+    "n_self_hits_dropped": 1191,
+    "missing_rule": "미정렬 쌍은 identity 0 으로 대체하지 않고 `missing` 으로 유지 — seqid_max 는 관측된 값만으로 max 를 취한다(H-2-4)."
+  },
+  "wall_s": 15.490847375011072,
+  "outputs": {
+    "identity_pairs.tsv": {
+      "path": "data/processed/target_mapping/_mmseqs/identity_pairs.tsv",
+      "sha256": "7a47e4951207fdf21e960c3cb8ddb6759b2e0454b8f654ee0dd3ff677dd641d6",
+      "rows": 201289
+    }
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "_doc": "블록 AD / AD-5 — 약한-null(H0^int 참·H0^B 거짓) p 분포 재측정. 예측 100% 합성 · 라벨/군만 실제.",
+  "status": "계측 · 판정 아님 (정식 판정 = R1 의 C1~C3)",
+  "NOT_AN_ANALYSIS_RESULT": true,
+  "acceptance_criterion_applied": false,
+  "acceptance_criterion_note": "R1 의 합격기준(기각률 ≤ α + 2·SE)은 **여기서 적용하지 않는다**. 이 수치로 후보 B 를 채택·기각하지 않는다.",
+  "when_kst": "2026-08-12T20:07:17+09:00",
+  "env": {
+    "when_kst": "2026-08-12T20:07:17+09:00",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "logical_cores": 18,
+    "physical_cores": 18,
+    "mem_total_gib": 64.0,
+    "ram_budget_gib": 38.4,
+    "pmset_powermode": "0",
+    "pmset_ps": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22872163)\t100%; finishing charge; 0:00 remaining present: true",
+    "thermal_pressure": "n/a",
+    "loadavg_1_5_15": [
+      5.79,
+      8.45,
+      6.87
+    ],
+    "env_threads_requested": "1",
+    "env_thread_vars": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "threadpool_info": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libomp"
+      }
+    ]
+  },
+  "design": {
+    "scale": "N=400·K=60",
+    "R": 200,
+    "n_coin_vectors": 300,
+    "n_permutation_values": 600,
+    "workers": 18,
+    "threads_per_worker": 1,
+    "generator": "make_rqint_common_effect 형식(공통 서열효과, 상호작용 0)"
+  },
+  "effect_calibration": {
+    "probe_curve": [
+      {
+        "effect": 0.01,
+        "mean_delta_rf": 0.00017612635284829924,
+        "sd": 0.030760637885365986
+      },
+      {
+        "effect": 0.02,
+        "mean_delta_rf": 0.0060918829001140335,
+        "sd": 0.030667071846000028
+      },
+      {
+        "effect": 0.05,
+        "mean_delta_rf": 0.02316172230682606,
+        "sd": 0.030147884635967785
+      },
+      {
+        "effect": 0.1,
+        "mean_delta_rf": 0.052213952960056875,
+        "sd": 0.031035384165815208
+      }
+    ],
+    "slope_delta_per_effect": 0.5002369486829041,
+    "chosen_effect_for_target_delta": {
+      "0.01": 0.019990526542130564,
+      "0.03": 0.05997157962639169
+    },
+    "fit": "origin-through linear least squares (Δ(0)=0 by construction)",
+    "n_probe_replicates": 40
+  },
+  "cells": {
+    "reduced_proportional__target_delta_0.01": {
+      "variant": "reduced_proportional",
+      "target_delta": 0.01,
+      "effect_strength_logit": 0.019990526542130564,
+      "R": 200,
+      "mean_p": 0.5250083194675541,
+      "frac_p_le_0.05": 0.05,
+      "frac_p_le_0.05_over_7": 0.025,
+      "frac_p_le_0.05_over_4": 0.025,
+      "mean_delta_rf": 0.01346990355043593,
+      "mean_delta_gin": 0.011876177352077764,
+      "mean_abs_gap": 0.025093975983155818,
+      "mc_se_frac_p_le_0.05": 0.015411035007422441,
+      "wall_seconds": 682.3524730205536,
+      "ram_sum_peak_gib": 4.874755859375,
+      "per_permutation_seconds_median": 0.1894747756933066
+    },
+    "reduced_proportional__target_delta_0.03": {
+      "variant": "reduced_proportional",
+      "target_delta": 0.03,
+      "effect_strength_logit": 0.05997157962639169,
+      "R": 200,
+      "mean_p": 0.5298668885191349,
+      "frac_p_le_0.05": 0.06,
+      "frac_p_le_0.05_over_7": 0.015,
+      "frac_p_le_0.05_over_4": 0.02,
+      "mean_delta_rf": 0.03630608266089512,
+      "mean_delta_gin": 0.034532528936966574,
+      "mean_abs_gap": 0.025179492366518338,
+      "mc_se_frac_p_le_0.05": 0.016792855623746664,
+      "wall_seconds": 708.6177897453308,
+      "ram_sum_peak_gib": 4.8714141845703125,
+      "per_permutation_seconds_median": 0.1947838130533152
+    },
+    "reduced_ratio_optimal__target_delta_0.01": {
+      "variant": "reduced_ratio_optimal",
+      "target_delta": 0.01,
+      "effect_strength_logit": 0.019990526542130564,
+      "R": 200,
+      "mean_p": 0.5251247920133112,
+      "frac_p_le_0.05": 0.045,
+      "frac_p_le_0.05_over_7": 0.0,
+      "frac_p_le_0.05_over_4": 0.015,
+      "mean_delta_rf": 0.01346990355043593,
+      "mean_delta_gin": 0.011876177352077764,
+      "mean_abs_gap": 0.025093975983155818,
+      "mc_se_frac_p_le_0.05": 0.014658615214269049,
+      "wall_seconds": 742.8901679515839,
+      "ram_sum_peak_gib": 4.87237548828125,
+      "per_permutation_seconds_median": 0.2113895595903159
+    },
+    "reduced_ratio_optimal__target_delta_0.03": {
+      "variant": "reduced_ratio_optimal",
+      "target_delta": 0.03,
+      "effect_strength_logit": 0.05997157962639169,
+      "R": 200,
+      "mean_p": 0.5320133111480865,
+      "frac_p_le_0.05": 0.05,
+      "frac_p_le_0.05_over_7": 0.005,
+      "frac_p_le_0.05_over_4": 0.01,
+      "mean_delta_rf": 0.03630608266089512,
+      "mean_delta_gin": 0.034532528936966574,
+      "mean_abs_gap": 0.025179492366518338,
+      "mc_se_frac_p_le_0.05": 0.015411035007422441,
+      "wall_seconds": 728.3449869155884,
+      "ram_sum_peak_gib": 4.866912841796875,
+      "per_permutation_seconds_median": 0.2008565583398983
+    }
+  },
+  "parallel_throughput_drift": {
+    "note": "AD-5 본 런 중 관측(추가 비용 0). AD-2 의 단독 열감쇠와 달리 **W_BEST 병렬 부하** 조건이다.",
+    "cells": {
+      "reduced_proportional__target_delta_0.01": {
+        "first_quarter_median_pps": 0.17648887043157932,
+        "last_quarter_median_pps": 0.19005516749670884,
+        "slowdown_frac": 0.0768677199415182,
+        "wall_seconds": 682.3524730205536,
+        "workers": 18
+      },
+      "reduced_proportional__target_delta_0.03": {
+        "first_quarter_median_pps": 0.18438724922981542,
+        "last_quarter_median_pps": 0.19392772305659794,
+        "slowdown_frac": 0.0517415052647785,
+        "wall_seconds": 708.6177897453308,
+        "workers": 18
+      },
+      "reduced_ratio_optimal__target_delta_0.01": {
+        "first_quarter_median_pps": 0.17780649724487982,
+        "last_quarter_median_pps": 0.22205448750835785,
+        "slowdown_frac": 0.24885474349420722,
+        "wall_seconds": 742.8901679515839,
+        "workers": 18
+      },
+      "reduced_ratio_optimal__target_delta_0.03": {
+        "first_quarter_median_pps": 0.1863776893797573,
+        "last_quarter_median_pps": 0.1987812297230994,
+        "slowdown_frac": 0.06655056398981873,
+        "wall_seconds": 728.3449869155884,
+        "workers": 18
+      }
+    },
+    "max_slowdown_frac": 0.24885474349420722
+  },
+  "contrast_with_AC_diagnostic": {
+    "AC": {
+      "source": "experiments/rqint/audit_r6.json weak_null_diagnostic (블록 AC)",
+      "scale": "N=100·K=10·G=20 (합성 라벨)",
+      "R": 200,
+      "n_coin_vectors": 150,
+      "mean_p": 0.4585,
+      "frac_p_le_0.05": 0.095,
+      "frac_p_le_0.05_over_7": 0.015,
+      "frac_p_le_0.05_over_4": 0.035,
+      "mean_delta_rf": 0.3251,
+      "mean_delta_gin": 0.3313,
+      "mean_abs_gap": 0.0535
+    },
+    "why": "AC 진단의 공통효과는 Δ≈0.33 으로 C1(0.01)·C2(0.03)보다 10~30배 크다. 공유 동전 arm-swap 의 anti-conservativeness 는 공통효과 크기에 의존하므로 AC 의 1.9~2.8배는 **상한에 가깝고 예측치가 아니다**.",
+    "ratio_vs_nominal": {
+      "reduced_proportional__target_delta_0.01": {
+        "at_0.05": 1.0,
+        "at_0.05/7": 3.5,
+        "at_0.05/4": 2.0
+      },
+      "reduced_proportional__target_delta_0.03": {
+        "at_0.05": 1.2,
+        "at_0.05/7": 2.0999999999999996,
+        "at_0.05/4": 1.5999999999999999
+      },
+      "reduced_ratio_optimal__target_delta_0.01": {
+        "at_0.05": 0.8999999999999999,
+        "at_0.05/7": 0.0,
+        "at_0.05/4": 1.2
+      },
+      "reduced_ratio_optimal__target_delta_0.03": {
+        "at_0.05": 1.0,
+        "at_0.05/7": 0.7,
+        "at_0.05/4": 0.7999999999999999
+      }
+    },
+    "AC_ratio_vs_nominal": {
+      "at_0.05": 1.9,
+      "at_0.05/7": 2.0999999999999996,
+      "at_0.05/4": 2.8000000000000003
+    }
+  },
+  "block": "AD",
+  "instruction": "docs/90_rqint_timing_calibration_budget_prompt_for_vscode.md",
+  "predictions_are_synthetic": true,
+  "confirmatory_predictions_loaded": false,
+  "confirmatory_data_accessed": false,
+  "sealed_accessed": false,
+  "unblinding_performed": false,
+  "gin_start_still_blocked": true,
+  "sap_version_unchanged": "1.1",
+  "manifest_sha16": "756d485feb4715e9",
+  "B_definition_status": "still_unspecified — `B` 가 n_coin_vectors 인지 n_permutation_values 인지 본 모듈에서 정하지 않는다. SAP 1.2 에서 확정 필요.",
+  "_assembled_kst": "2026-08-12T20:56:37+09:00"
+}

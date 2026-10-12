@@ -1,0 +1,97 @@
+{
+  "_doc": "GIN 착수 «권한» 이벤트 — 이 파일 하나만 권한을 만든다. 차단 플래그 ①②③ 은 해제하지 않고 true 인 채로 0바이트 보존하며, 신규 v2 실행계약이 「①②③ 이 원래 해시 그대로이고 여전히 true 인가 + 승인 이벤트가 유효한가」를 확인한 뒤 실행한다(= legacy block was valid, then superseded). ★ 본 파일은 AS-3 에서 한 번 쓰고 이후 0바이트 불변이다 — 종료 시점 재해싱 결과를 여기에 적으면 자기 sha256 이 바뀌어 v2 의 PINNED_SHA256 이 즉시 stale 이 되고 게이트가 영구 exit 12 가 된다.",
+  "block": "AS",
+  "decided_at_kst": "2026-09-16 14:18:57 KST",
+  "instruction": "docs/109_gin_start_supersession_prompt_for_vscode.md §AS-3",
+  "is_authorization": true,
+  "supersedes": {
+    "target": "execution_contract",
+    "from": "gin_confirm_harness_freeze.json",
+    "to": "gin_confirm_harness_freeze_v2.json",
+    "scope": "execution_contract_only"
+  },
+  "reason": "교수님 명시 승인(2026-09-15 12:42:00 KST · 메시지 <GMAIL-MSGID>)이 확보됐으나 차단 플래그를 false 로 바꿀 수 없다. 플래그를 든 3파일 중 ②·③ 이 하네스 confirmatory_gin_rep.py 의 FREEZE_SHA256 에 해시 상수로 박혀 있어(L75) 값을 바꾸면 하네스가 load_frozen() 에서 스스로 exit 2(EXIT_FREEZE_MISMATCH) 로 멈춘다. 게다가 ①②③ 3파일 전부 「동결 파일 0바이트 수정」 규율 대상이다. 따라서 v1 을 무수정 보존하고 append-only supersession 으로 신규 실행계약을 만든다. ★ 이것은 가드 완화도 축소도 아니며 v1 과 논리적으로 비교 불가다 — v1 은 「플래그 false ⇒ 실행」, v2 는 「플래그 true + 6조건 ⇒ 실행」이므로 두 허용집합은 서로소다. 안전성 근거는 다음 문장이다: v1 의 단일 플래그 조건을, 해시 고정 + 외부 승인 이벤트 + 봉인 계수 + 비개봉을 함께 요구하는 조건으로 «교체»했고, 교체된 조건이 요구하는 증거가 더 많다.",
+  "blocking_artifacts_verified": [
+    {
+      "role": "①",
+      "path": "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+      "sha256": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+      "gin_start_still_blocked": true
+    },
+    {
+      "role": "②",
+      "path": "v3_Multimodal/config/gin_seed_freeze.json",
+      "sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+      "gin_start_still_blocked": true
+    },
+    {
+      "role": "③",
+      "path": "v3_Multimodal/config/gin_inner_valid_freeze.json",
+      "sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+      "gin_start_still_blocked": true
+    }
+  ],
+  "approval": {
+    "authority": "advisor",
+    "message_id": "<GMAIL-MSGID>",
+    "message_verbatim": "착수는 바로 진행합시다. 본 메일은 <EXTERNAL-REVIEWER> 박사에게 전달하겠습니다. 진홍 드림.",
+    "message_sha256": "c9b094d23db9608c6adfd79624e4ba84104c27e9251329940bdb40e03f2951f3",
+    "received_at_kst": "2026-09-15 12:42:00 KST",
+    "thread_id": "<GMAIL-MSGID>"
+  },
+  "sealed_counts": {
+    "n_sealed_dirs": 25,
+    "n_sealed_files_total": 291,
+    "n_sealed_artifacts": 275,
+    "n_access_log": 16
+  },
+  "artifacts_not_modified": {
+    "v3_Multimodal/config/rqint_procedure_decisions_v1.json": {
+      "sha256_at_entry": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca"
+    },
+    "v3_Multimodal/config/gin_seed_freeze.json": {
+      "sha256_at_entry": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7"
+    },
+    "v3_Multimodal/config/gin_inner_valid_freeze.json": {
+      "sha256_at_entry": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea"
+    },
+    "v3_Multimodal/config/gin_confirm_harness_freeze.json": {
+      "sha256_at_entry": "1af993fde7330e1d48e6d10fee157c1310f42dacc5c1d65a4834b9020e5b7072"
+    },
+    "v3_Multimodal/config/gin_confirm_harness_freeze.status.json": {
+      "sha256_at_entry": "5df9a7c4bfa64749f2b37f5b1984cfcca85d8f609e6c8c444097ff78e24c819a"
+    },
+    "v3_Multimodal/src/confirmatory_gin_rep.py": {
+      "sha256_at_entry": "1e6642bf9ecac5a272fdb49c441668d2f6f3ec97e87528831aad75a9c40d995a"
+    },
+    "experiments/runs/v3_gin_harness_selftest/selftest.json": {
+      "sha256_at_entry": "37b0af4d2ef74ad410c76603a143c7089161c6f35a75d68271a8a8cf94c78e09"
+    },
+    "experiments/runs/v3_gin_budget/gin_budget_estimate.json": {
+      "sha256_at_entry": "f42e839d154611f2050124fdf2902cbec5a02988860de185622236113b139605"
+    },
+    "experiments/runs/v3_gin_budget/README.md": {
+      "sha256_at_entry": "6fd60d4a59c48b49341bd3cd41f92f5c620d1789b20995e44c68205b31c51796"
+    }
+  },
+  "artifacts_not_modified_note": "종료 시점 재해싱 결과(`sha256_at_exit`·`unchanged`)는 `manifest_t2_pre_exec.json` 과 리포트 §3 에 있다. 본 파일은 착수 시점 기록이며 이후 0바이트 불변이다.",
+  "other_artifacts_retaining_old_label": [
+    "v3_Multimodal/config/gin_confirm_harness_freeze.json",
+    "v3_Multimodal/config/holm7_latefusion_freeze.json",
+    "v3_Multimodal/config/post_interim_freeze_v1_0.json",
+    "v3_Multimodal/config/post_interim_freeze_v1_0.status.json",
+    "v3_Multimodal/config/r3_second_party_freeze.json",
+    "v3_Multimodal/config/rqint_procedure_decisions_v0.json"
+  ],
+  "applies_to": "본 기입 시각 이후의 GIN 확증 실행. 기존 산출물과 기록물은 소급 재작성하지 않는다.",
+  "no_retroactive_rewrite": true,
+  "recomputed": false,
+  "models_trained": 0,
+  "network_calls": 0,
+  "network_calls_note": "본 블록의 VS Code 세션에 Gmail 도구가 연결돼 있지 않아 Gmail 읽기 전용 호출을 0회 했다. 승인 이벤트의 message_id·thread_id·received_at_kst·message_verbatim 은 docs/109 배너·F11 공급값이며 본 블록에서 재측정하지 않았다.",
+  "unblinding_performed": false,
+  "decided_by": "사용자 확정 2026-09-16(docs/108 §7) + 교수님 명시 승인 2026-09-15 12:42",
+  "advisor_status": "명시 승인 — 메시지 `<GMAIL-MSGID>` 축자",
+  "defect_attribution": "cowork — `selftest.json` 바이트 오기(11,246→11,399) 기록 결함. 러너 행위 아님.",
+  "executed_by": "vscode-claude(runner), 블록 AS"
+}

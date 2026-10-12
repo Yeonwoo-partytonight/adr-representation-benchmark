@@ -1,0 +1,50 @@
+2026-08-01 16:52:53 KST | [H-1] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치 · sealed guard 12종 · 입력 전건 존재(FASTA 1191) · open_sealed 0건 · seed 교집합 0
+2026-08-01 16:52:53 KST | [bounds] 구조축(H-0-5) max Morgan Tanimoto 분위 경계 — 구조 전용(sealed 미접근)
+2026-08-01 16:52:53 KST | [bounds] Morgan r=2 bits=2048 생성 — 파싱실패 0
+2026-08-01 16:52:54 KST | [bounds] 경계 q25=0.2500 q50=0.3284 q75=0.4658 → <REPO_ROOT>/experiments/runs/v3_stratification/struct_bounds.json
+2026-08-01 16:55:21 KST | [H-1] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치 · sealed guard 12종 · 입력 전건 존재(FASTA 1191) · open_sealed 0건 · seed 교집합 0
+2026-08-01 16:55:29 KST | [H-1] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치 · sealed guard 12종 · 입력 전건 존재(FASTA 1191) · open_sealed 0건 · seed 교집합 0
+2026-08-01 16:55:29 KST | [identity] mmseqs2 easy-search all-vs-all (IDENTITY_METHOD 동결 문면 그대로)
+2026-08-01 16:55:29 KST | [identity] mmseqs 18-8cc5c · /opt/homebrew/Cellar/mmseqs2/18-8cc5c/bin/mmseqs · sha256 4fbce02c758bc330
+2026-08-01 16:55:29 KST | [identity] /opt/homebrew/bin/mmseqs easy-search <REPO_ROOT>/data/processed/target_mapping/_mmseqs/targets_human.fasta <REPO_ROOT>/data/processed/target_mapping/_mmseqs/targets_human.fasta <REPO_ROOT>/data/processed/target_mapping/_mmseqs/_easy_search_raw.tsv <REPO_ROOT>/data/processed/target_mapping/_mmseqs/tmp_search --format-output query,target,fident,alnlen,evalue,bits -s 7.5 --max-seqs 2000 -e 10000 --threads 8
+2026-08-01 16:55:45 KST | [identity] 정렬쌍 201,289/708,645 (28.40%) · self 1191 · wall 15.5s · tsv sha16 7a47e4951207fdf2
+2026-08-01 16:57:05 KST | [H-1] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치 · sealed guard 12종 · 입력 전건 존재(FASTA 1191) · open_sealed 0건 · seed 교집합 0
+2026-08-01 16:57:05 KST | [strata] fold-local 층 배정 (sap/unseen_target.py 호출만)
+2026-08-01 16:57:06 KST | [strata] <REPO_ROOT>/experiments/runs/v3_stratification/strata_assignment.csv — 3276행 (1,092 × 3반복)
+2026-08-01 16:57:06 KST | [strata] drug_class: all-seen n=552(formal) · all-unseen n=18(descriptive) · mixed n=206(formal)
+2026-08-01 16:57:06 KST | [strata] seq_stratum: seen n=820(formal) · unseen_ge90 n=2(descriptive) · unseen_70_90 n=15(descriptive) · unseen_40_70 n=0(empty) · unseen_lt40 n=0(empty)
+2026-08-01 16:57:06 KST | [strata] struct_bin: struct_q1 n=144(formal) · struct_q2 n=174(formal) · struct_q3 n=150(formal) · struct_q4 n=175(formal)
+2026-08-01 16:57:06 KST | [strata] unstable — drug_class: 71 · seq_stratum: 10 · struct_bin: 204
+2026-08-01 16:57:06 KST | [strata] seqid 관측 0건 약물(반복별) = {'1': 0, '2': 0, '3': 0}
+2026-08-01 16:57:19 KST | [H-1] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치 · sealed guard 12종 · 입력 전건 존재(FASTA 1191) · open_sealed 0건 · seed 교집합 0
+2026-08-01 16:57:19 KST | [verify] H-4 정합 하드 assert
+2026-08-01 16:57:20 KST | [verify] PASS — 약물 1092 · scaffold 732 · fold 교차 0 · no-target 제외 245 · consensus shape [1092, 370] NaN 0 · seed 교집합 0
+2026-08-01 16:57:28 KST | [H-1] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치 · sealed guard 12종 · 입력 전건 존재(FASTA 1191) · open_sealed 0건 · seed 교집합 0
+2026-08-01 16:57:28 KST | [pilot] H-5-0 계측 — B=100, 최대 표본 층 1개. 산출은 전량 폐기(시간만 기록).
+2026-08-01 16:57:28 KST | [pilot] 대상 = seq_stratum/seen (n_drugs=820)
+2026-08-01 17:00:51 KST | [pilot] 전 층(13) × B=10000 총 추정 wall = 4.62h (0.193일) · 7일 초과 = False
+2026-08-01 17:08:24 KST | [H-1] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치 · sealed guard 12종 · 입력 전건 존재(FASTA 1191) · open_sealed 0건 · seed 교집합 0
+2026-08-01 17:08:24 KST | [estimate] H-5-1 본계산 — B=10000, seed boot=6001 flip=6002. 산출 전량 `_sealed/`.
+2026-08-01 18:31:59 KST | [estimate] 1/13 drug_class::all-seen n=552 clusters=398 ci_primary=estimable wall=5014.2s
+2026-08-01 18:52:45 KST | [estimate] 2/13 drug_class::all-unseen n=18 clusters=16 ci_primary=estimable wall=1246.7s
+2026-08-01 21:00:35 KST | [estimate] 3/13 drug_class::mixed n=206 clusters=167 ci_primary=estimable wall=2850.1s
+2026-08-01 21:35:15 KST | [estimate] 4/13 drug_class::unstable_stratum n=71 clusters=65 ci_primary=estimable wall=2051.4s
+2026-08-01 22:32:11 KST | [estimate] 5/13 seq_stratum::seen n=820 clusters=571 ci_primary=estimable wall=3415.9s
+2026-08-01 22:34:04 KST | [estimate] 6/13 seq_stratum::unseen_ge90 n=2 clusters=2 ci_primary=not_estimable wall=113.4s
+2026-08-01 22:46:50 KST | [estimate] 7/13 seq_stratum::unseen_70_90 n=15 clusters=13 ci_primary=estimable wall=764.5s
+2026-08-01 22:57:25 KST | [estimate] 8/13 seq_stratum::unstable_stratum n=10 clusters=9 ci_primary=estimable wall=635.0s
+2026-08-01 23:38:23 KST | [estimate] 9/13 struct_bin::struct_q1 n=144 clusters=107 ci_primary=estimable wall=2457.5s
+2026-08-02 00:20:09 KST | [estimate] 10/13 struct_bin::struct_q2 n=174 clusters=137 ci_primary=estimable wall=2505.5s
+2026-08-02 01:02:11 KST | [estimate] 11/13 struct_bin::struct_q3 n=150 clusters=117 ci_primary=estimable wall=2522.4s
+2026-08-02 01:45:39 KST | [estimate] 12/13 struct_bin::struct_q4 n=175 clusters=130 ci_primary=estimable wall=2608.0s
+2026-08-02 02:30:48 KST | [estimate] 13/13 struct_bin::unstable_stratum n=204 clusters=161 ci_primary=estimable wall=2708.8s
+2026-08-02 02:30:48 KST | [estimate] 완료 — 층 13 · 총 wall 8.03h · sealed sha16 cd2969c73ed6bae7 · guard 12종
+2026-08-04 09:29:43 KST | [K] 착수 — sealed guard 157종 스냅샷
+2026-08-04 09:29:43 KST | [K] 독립 재현 PASS — 3276행 전 컬럼 일치(불일치 0)
+2026-08-04 09:29:44 KST | [K] K-2 회계 assert PASS — 축별 Σ stable + unstable = 847 · 847 + 245 = 1092 · 축 간 모수 동일
+2026-08-04 09:29:44 KST | [K] stratification_public.json 대조 PASS — 축별 units 합 847 · unstable 일치
+2026-08-04 09:29:44 KST | [K] K-3 drug_class: unstable 71 — set_change 71
+2026-08-04 09:29:44 KST | [K] K-3 seq_stratum: unstable 10 — boundary_adjacent 1 · set_change 9
+2026-08-04 09:29:44 KST | [K] K-3 struct_bin: unstable 204 — boundary_adjacent 204
+2026-08-04 09:29:44 KST | [K] K-3 관측 결손(all-unseen & n_seqid_observed==0) 반복별 = {'1': 0, '2': 0, '3': 0} · 분류 불가 0행 · 특수 사례 약물 1건
+2026-08-04 09:29:44 KST | [K] 완료 — sealed guard 157종 불변(True) · 신규 4파일

@@ -1,0 +1,233 @@
+{
+  "_doc": "docs/116 블록 BA / BA-3 — 합성 자체검사 K1~K13. 확증 입력 판독 0. 모든 수치는 합성 fixture 산출물.",
+  "provenance": "synthetic_fixture",
+  "block": "BA (docs/116)",
+  "harness_path": "v3_Multimodal/src/stability_ss15_run.py",
+  "harness_sha256": "1e39d07117327b1cf026be31c002f01dfc7c236ccfdb6c20be3b4880388e51d1",
+  "spec_path": "v3_Multimodal/config/rqint_downstream_spec_v1.json",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "implementation_module_path": "v3_Multimodal/src/rqint_downstream.py",
+  "implementation_module_sha256": "3e92a4ded1ea60b777c460b1b120232ae3051fe3a80e2e7c4f12d943c92ea680",
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "ts_kst": "2026-10-04 11:15:28.570 KST",
+  "n_tests": 13,
+  "n_pass": 13,
+  "n_skip": 0,
+  "all_pass": true,
+  "tests": [
+    {
+      "name": "K1 상수·해시",
+      "checks": {
+        "spec": true,
+        "module": true,
+        "seed_freeze": true,
+        "contract": true,
+        "compute_lock": true,
+        "sap:__init__.py": true,
+        "sap:metrics.py": true,
+        "sap:consensus.py": true,
+        "sap:decision.py": true,
+        "sap:rqint.py": true,
+        "manifest_t4": true,
+        "manifest_s2": true,
+        "rest_public": true,
+        "master_X": true,
+        "master_Y": true,
+        "split_rep1": true,
+        "split_rep2": true,
+        "split_rep3": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "K2 S6 결속",
+      "checks": {
+        "units_from_spec": true,
+        "rep_map_from_contract": true,
+        "seeds_from_seed_freeze": true,
+        "n_units_3_seeds_5": true,
+        "patterns_from_spec": true,
+        "n_cells_15": true,
+        "forbidden_5": true,
+        "contrast_from_spec": true,
+        "no_seed_list_literals": true,
+        "no_path_pattern_literals": true
+      },
+      "pass": true,
+      "fails": [],
+      "seed_list_literals": [],
+      "pattern_literals": []
+    },
+    {
+      "name": "K3 fold 행",
+      "checks": {
+        "te_equals_where_fold_k": true,
+        "folds_csv_mismatch_aborts": true,
+        "rows_mismatch_aborts": true,
+        "messages_no_decimal": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "K4 Δ 정의",
+      "checks": {
+        "delta_equals_macro_ap_diff_exact": true,
+        "distinct_from_reversed_direction": true,
+        "cell_keys_15": true,
+        "contrast_label": true,
+        "orientation_cols_from_json": true,
+        "orientation_source_from_json": true,
+        "orientation_rows_from_json": true
+      },
+      "pass": true,
+      "fails": [],
+      "max_abs_diff": 0.0,
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "K5 SS",
+      "checks": {
+        "equals_direct_two_way_ss": true,
+        "provenance_overwritten": true,
+        "orientation_distinct_from_transpose": true,
+        "two_way_ss_imported": true,
+        "two_way_ss_called_once_in_core": true,
+        "no_self_ss_impl": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "K6 undefined",
+      "checks": {
+        "run_ok": true,
+        "n_eval_368_all": true,
+        "n_excluded_2_all": true,
+        "n_eligible_370_all": true,
+        "variable_denominator": true,
+        "no_zero_substitution": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "K7 무효 8종",
+      "checks": {
+        "a_conf_sha": true,
+        "b_stab_manifest": true,
+        "c_ckpt_sha": true,
+        "d_cid_shuffle": true,
+        "e_nan": true,
+        "f_missing": true,
+        "g_keys": true,
+        "h_drop_cell": true,
+        "messages_no_decimal": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "K8 SST=0",
+      "checks": {
+        "run_ok": true,
+        "all_delta_exact_zero": true,
+        "sst_zero_true": true,
+        "frac_not_defined": true,
+        "sst_zero_rule_spec_verbatim": true,
+        "module_sst_zero_rule_present": true,
+        "provenance_confirmatory_sealed": true,
+        "module_provenance_constant": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "K9 덮어쓰기 금지·원자성",
+      "checks": {
+        "preexisting_output_aborts": true,
+        "preexisting_abort_before_r2": true,
+        "no_tmp_left": true,
+        "tree_access_log_plus_one": true,
+        "new_access_log_one_line": true,
+        "sealed_names": true,
+        "n_files_7_7_7_13": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "K10 누설 가드",
+      "checks": {
+        "nondegenerate_fixture": true,
+        "value_strings_absent": true,
+        "public_keys_whitelist_exact": true,
+        "new_file_keys_no_sign_words": true
+      },
+      "pass": true,
+      "fails": [],
+      "n_patterns": 109,
+      "hits": {
+        "stdout": 0,
+        "run.log": 0,
+        "manifest_public": 0,
+        "exceptions": 0
+      },
+      "bad_keys": []
+    },
+    {
+      "name": "K11 AST",
+      "checks": {
+        "forbidden_calls_zero": true,
+        "stat_test_imports_zero": true,
+        "network_imports_zero": true,
+        "os_environ_zero": true,
+        "cli_options_exact": true,
+        "best_ep_best_v_not_held": true
+      },
+      "pass": true,
+      "fails": [],
+      "forbidden_hits": [],
+      "held_lines": []
+    },
+    {
+      "name": "K12 위생",
+      "checks": {
+        "runtime_write_guard_violations_zero": true,
+        "core_write_paths_root_derived": true,
+        "cl_calls_only_in_stage_run": true,
+        "cl_calls_during_selftest_zero": true,
+        "real_sealed_counts_unchanged": true,
+        "real_fp7_unchanged": true,
+        "ss15_dir_not_created": true,
+        "pycache_unchanged": true
+      },
+      "pass": true,
+      "fails": [],
+      "bad_write_lines": [],
+      "guard_violations": []
+    },
+    {
+      "name": "K13 gate",
+      "checks": {
+        "a_normal_pass": true,
+        "b_docs33_last_not_74_fail": true,
+        "c_item74_no_sha_fail": true,
+        "d_selftest_dir_exists_pass": true,
+        "e_out_dir_exists_fail": true,
+        "f_fp_mismatch_fail": true,
+        "g_holm8_incomplete_fail": true
+      },
+      "pass": true,
+      "fails": []
+    }
+  ],
+  "confirmatory_values_read": 0,
+  "sealed_human_read": 0,
+  "network_calls": 0
+}

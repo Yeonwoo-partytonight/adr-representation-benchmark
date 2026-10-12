@@ -1,0 +1,25 @@
+{
+  "_scope": "공개 — 기록(docs/33·45·ledger·사이드카) 기입 사실·개수만. 지표·부호 값 없다.",
+  "block": "Y (docs/80) — 기록",
+  "checks": {
+    "docs33_prefix_preserved": true,
+    "docs33_bytes_added": 6191,
+    "docs33_item_number": 38,
+    "docs33_no_duplicate_item_number": true,
+    "docs45_all_old_lines_present": true,
+    "docs45_lines_added": 1,
+    "docs45_section5_unchanged": true,
+    "ledger_timeline": 40,
+    "ledger_top_keys": 11,
+    "ledger_existing_39_identical": true,
+    "ledger_first_look_register_unchanged": true,
+    "status_a5_requery_executed": true,
+    "status_history_preserved": true,
+    "status_target_sha256_matches_live": true,
+    "pif_json_unmodified": true,
+    "unblinding_performed": false,
+    "gin_start_still_blocked": true,
+    "sealed_artifacts_end": 273,
+    "sealed_total_end": 288
+  }
+}

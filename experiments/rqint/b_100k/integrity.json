@@ -1,0 +1,48 @@
+{
+  "block": "AJ (docs/98)",
+  "unblinding_performed": false,
+  "gin_start_still_blocked": true,
+  "confirmatory_predictions_loaded": false,
+  "confirmatory_data_accessed": false,
+  "sealed_accessed": false,
+  "sealed_access_mode": "stat-only snapshot (os.stat) — 내용 읽기 0",
+  "open_sealed_calls": 0,
+  "emit_sign_calls": 0,
+  "decision_py_calls": 0,
+  "B_definition_status": "still_unspecified (본 블록에서 확정·동결 0 — R2 의 일)",
+  "B_frozen_by_this_block": false,
+  "B_definition_adopted_by_this_block": false,
+  "sap_version": "1.1",
+  "sap_1_2_refreeze": false,
+  "rqint_py_sha256_unchanged": true,
+  "block_AI_artifacts_unchanged": true,
+  "block_AI_artifacts": {
+    "v3_Multimodal/config/b_dryrun_prespec.json": {
+      "sha256": "9a2545eb0d897f304f23350e1363415bc9642a7895fca87b8306f1eadcfa7939",
+      "size": 9191
+    },
+    "experiments/rqint/b_dryrun/stair.json": {
+      "sha256": "3640b553d62c3c04becf4c48a9a7ef3921a8ff57953ffa4d99689e8336eb12ba",
+      "size": 6866
+    },
+    "experiments/rqint/b_dryrun/decisive.json": {
+      "sha256": "9e34887f9584d954078cce9c2bbb1d2a979b27f74b5660891d8613247ea965cf",
+      "size": 3029
+    },
+    "v3_Multimodal/src/b_dryrun.py": {
+      "sha256": "d03301f06b1cafb816e7d422be5e12fb036d0c7c96455fcde2db0496fd59d32e",
+      "size": 12315
+    }
+  },
+  "ai_prespec_modified": false,
+  "network_calls": 0,
+  "data_raw_modified": false,
+  "git_commit_push": 0,
+  "git_head": "566f487f2157e6d22b9727dc961478835af7a1d1",
+  "files_created_by_this_block": [
+    "v3_Multimodal/config/b_100k_prespec.json",
+    "v3_Multimodal/src/b_100k_run.py",
+    "experiments/rqint/b_100k/ (실주행 산출·검증 스크립트)",
+    "docs/98_b_definition_100k_run_report.md"
+  ]
+}

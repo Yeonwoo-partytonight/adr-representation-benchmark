@@ -1,0 +1,887 @@
+{
+  "_doc": "블록 AD — 단가·병렬 스윕·열감쇠·RAM·환경. **계측 전용 · 판정 0**. 예측행렬 100% 합성(라벨·scaffold 군만 실제 설계량).",
+  "block": "AD",
+  "instruction": "docs/90_rqint_timing_calibration_budget_prompt_for_vscode.md",
+  "predictions_are_synthetic": true,
+  "confirmatory_predictions_loaded": false,
+  "confirmatory_data_accessed": false,
+  "sealed_accessed": false,
+  "unblinding_performed": false,
+  "gin_start_still_blocked": true,
+  "sap_version_unchanged": "1.1",
+  "manifest_sha16": "756d485feb4715e9",
+  "B_definition_status": "still_unspecified — `B` 가 n_coin_vectors 인지 n_permutation_values 인지 본 모듈에서 정하지 않는다. SAP 1.2 에서 확정 필요.",
+  "when_kst": "2026-08-12T20:56:37+09:00",
+  "power_gate": {
+    "pmset_powermode": "0",
+    "pmset_ps": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22872163)\t76%; charging; (no estimate) present: true",
+    "on_ac_power": true,
+    "low_power_mode_off": true,
+    "battery_or_lowpower_measurements_used_in_budget": false
+  },
+  "unit_costs_single_worker_w1": {
+    "threads_1": {
+      "full": {
+        "N": 1092,
+        "K": 370,
+        "G": 732,
+        "n_coin_vectors": 60,
+        "n_permutation_values": 120,
+        "per_permutation_seconds": 0.7166503799495937,
+        "per_reference_value_seconds": 0.35832518997479684,
+        "replicate_wall_seconds": 43.80587270799879,
+        "fixture_build_seconds": 0.8068499110231642,
+        "n_groups_G": 732,
+        "measured_not_extrapolated": true
+      },
+      "small": {
+        "N": 400,
+        "K": 60,
+        "G": 313,
+        "n_coin_vectors": 400,
+        "n_permutation_values": 800,
+        "per_permutation_seconds": 0.09966293053515983,
+        "per_reference_value_seconds": 0.049831465267579915,
+        "replicate_wall_seconds": 39.97295316599775,
+        "fixture_build_seconds": 0.10778095193381887,
+        "n_groups_G": 313,
+        "measured_not_extrapolated": true
+      },
+      "reference_AC": {
+        "N": 100,
+        "K": 10,
+        "G": 20,
+        "fixture": "make_rqint_exchangeable(seed=99) — 합성 전용",
+        "n_coin_vectors": 200,
+        "per_permutation_seconds": 0.015707038795007976,
+        "replicate_wall_seconds": 3.1580175420021988,
+        "F_PPS_block_AC": 0.015305511464939628,
+        "ratio_vs_F_PPS": 1.0262341661033758,
+        "same_order_of_magnitude": true,
+        "measured_not_extrapolated": true
+      }
+    },
+    "threads_18": {
+      "full": {
+        "N": 1092,
+        "K": 370,
+        "G": 732,
+        "n_coin_vectors": 60,
+        "n_permutation_values": 120,
+        "per_permutation_seconds": 0.7071311277507145,
+        "per_reference_value_seconds": 0.35356556387535726,
+        "replicate_wall_seconds": 43.23843108300207,
+        "fixture_build_seconds": 0.8105634179592016,
+        "n_groups_G": 732,
+        "measured_not_extrapolated": true
+      },
+      "small": {
+        "N": 400,
+        "K": 60,
+        "G": 313,
+        "n_coin_vectors": 400,
+        "n_permutation_values": 800,
+        "per_permutation_seconds": 0.09828849854002328,
+        "per_reference_value_seconds": 0.04914424927001164,
+        "replicate_wall_seconds": 39.42338666699652,
+        "fixture_build_seconds": 0.10798725098720752,
+        "n_groups_G": 313,
+        "measured_not_extrapolated": true
+      },
+      "reference_AC": {
+        "N": 100,
+        "K": 10,
+        "G": 20,
+        "fixture": "make_rqint_exchangeable(seed=99) — 합성 전용",
+        "n_coin_vectors": 200,
+        "per_permutation_seconds": 0.01525217795460776,
+        "replicate_wall_seconds": 3.0665512919949833,
+        "F_PPS_block_AC": 0.015305511464939628,
+        "ratio_vs_F_PPS": 0.9965154048948943,
+        "same_order_of_magnitude": true,
+        "measured_not_extrapolated": true
+      }
+    },
+    "baseline_definition": "단독(w=1) 실행만 baseline. 병렬 배치의 워커0 wall 은 baseline 금지."
+  },
+  "thermal": {
+    "threads_1": {
+      "scale": "full",
+      "sustained_seconds": 614.5575170516968,
+      "meets_600s_minimum": true,
+      "requested_seconds": 600.0,
+      "n_segments": 21,
+      "segment_n_coin": 40,
+      "first_quarter_median_rate": 1.4071563763741806,
+      "last_quarter_median_rate": 1.4099912685301865,
+      "throughput_change_frac": 0.0020146248161208025,
+      "decay_frac_for_budget": 0.0,
+      "decay_note": "decay_frac_for_budget = 처리율 저하로 인한 **소요시간 증가율**(= first/last − 1, 음수는 0 으로 절단). AD-6 총시간에 (1+이 값)으로 반영.",
+      "segments": [
+        {
+          "i": 0,
+          "t_rel": 0.10304808616638184,
+          "per_permutation_seconds": 0.7109896102501807,
+          "rate_evals_per_s": 1.4064903137587668
+        },
+        {
+          "i": 1,
+          "t_rel": 29.28486204147339,
+          "per_permutation_seconds": 0.7106530708240826,
+          "rate_evals_per_s": 1.4071563763741806
+        },
+        {
+          "i": 2,
+          "t_rel": 58.429664850234985,
+          "per_permutation_seconds": 0.7033878751250086,
+          "rate_evals_per_s": 1.4216906992067164
+        },
+        {
+          "i": 3,
+          "t_rel": 87.2695300579071,
+          "per_permutation_seconds": 0.7090124780994301,
+          "rate_evals_per_s": 1.4104124128824747
+        },
+        {
+          "i": 4,
+          "t_rel": 116.33910489082336,
+          "per_permutation_seconds": 0.720388658374759,
+          "rate_evals_per_s": 1.3881395665723852
+        },
+        {
+          "i": 5,
+          "t_rel": 145.86307191848755,
+          "per_permutation_seconds": 0.7152211136743063,
+          "rate_evals_per_s": 1.3981690149815331
+        },
+        {
+          "i": 6,
+          "t_rel": 175.19831895828247,
+          "per_permutation_seconds": 0.7108462269752636,
+          "rate_evals_per_s": 1.4067740139173568
+        },
+        {
+          "i": 7,
+          "t_rel": 204.3530421257019,
+          "per_permutation_seconds": 0.7133506051750373,
+          "rate_evals_per_s": 1.4018352164355794
+        },
+        {
+          "i": 8,
+          "t_rel": 233.5960259437561,
+          "per_permutation_seconds": 0.7234078239245718,
+          "rate_evals_per_s": 1.3823461219632425
+        },
+        {
+          "i": 9,
+          "t_rel": 263.2496109008789,
+          "per_permutation_seconds": 0.7236400667496128,
+          "rate_evals_per_s": 1.3819024760357979
+        },
+        {
+          "i": 10,
+          "t_rel": 292.961275100708,
+          "per_permutation_seconds": 0.7134022188005474,
+          "rate_evals_per_s": 1.4017337956718345
+        },
+        {
+          "i": 11,
+          "t_rel": 322.2230718135834,
+          "per_permutation_seconds": 0.7138982822751132,
+          "rate_evals_per_s": 1.4007597788484838
+        },
+        {
+          "i": 12,
+          "t_rel": 351.49229097366333,
+          "per_permutation_seconds": 0.7103688064251401,
+          "rate_evals_per_s": 1.4077194704429659
+        },
+        {
+          "i": 13,
+          "t_rel": 380.6264841556549,
+          "per_permutation_seconds": 0.7191851165998742,
+          "rate_evals_per_s": 1.3904625901155294
+        },
+        {
+          "i": 14,
+          "t_rel": 410.11765694618225,
+          "per_permutation_seconds": 0.7312820375251249,
+          "rate_evals_per_s": 1.3674614562998106
+        },
+        {
+          "i": 15,
+          "t_rel": 440.0883512496948,
+          "per_permutation_seconds": 0.712580377024642,
+          "rate_evals_per_s": 1.40335046016208
+        },
+        {
+          "i": 16,
+          "t_rel": 469.3087909221649,
+          "per_permutation_seconds": 0.7092242500497378,
+          "rate_evals_per_s": 1.4099912685301865
+        },
+        {
+          "i": 17,
+          "t_rel": 498.4098641872406,
+          "per_permutation_seconds": 0.7106970864504547,
+          "rate_evals_per_s": 1.4070692269113638
+        },
+        {
+          "i": 18,
+          "t_rel": 527.5531492233276,
+          "per_permutation_seconds": 0.7111692261758435,
+          "rate_evals_per_s": 1.4061350845807552
+        },
+        {
+          "i": 19,
+          "t_rel": 556.7142131328583,
+          "per_permutation_seconds": 0.706628313600595,
+          "rate_evals_per_s": 1.4151711454987443
+        },
+        {
+          "i": 20,
+          "t_rel": 585.6886730194092,
+          "per_permutation_seconds": 0.703968309274569,
+          "rate_evals_per_s": 1.4205184904281958
+        }
+      ],
+      "loadavg_after": [
+        2.31,
+        2.44,
+        2.51
+      ],
+      "pmset_ps_after": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22872163)\t85%; charging; 0:49 remaining present: true"
+    },
+    "threads_18": {
+      "skipped": true,
+      "reason": "지속부하 열감쇠는 **단독 baseline(threads=1) 런에서 1회** 측정한다. 본 런은 스레드 감도 대조용이라 열감쇠를 재측정하지 않았다.",
+      "meets_600s_minimum": null
+    },
+    "parallel_drift_from_AD5": {
+      "note": "AD-5 본 런 중 관측(추가 비용 0). AD-2 의 단독 열감쇠와 달리 **W_BEST 병렬 부하** 조건이다.",
+      "cells": {
+        "reduced_proportional__target_delta_0.01": {
+          "first_quarter_median_pps": 0.17648887043157932,
+          "last_quarter_median_pps": 0.19005516749670884,
+          "slowdown_frac": 0.0768677199415182,
+          "wall_seconds": 682.3524730205536,
+          "workers": 18
+        },
+        "reduced_proportional__target_delta_0.03": {
+          "first_quarter_median_pps": 0.18438724922981542,
+          "last_quarter_median_pps": 0.19392772305659794,
+          "slowdown_frac": 0.0517415052647785,
+          "wall_seconds": 708.6177897453308,
+          "workers": 18
+        },
+        "reduced_ratio_optimal__target_delta_0.01": {
+          "first_quarter_median_pps": 0.17780649724487982,
+          "last_quarter_median_pps": 0.22205448750835785,
+          "slowdown_frac": 0.24885474349420722,
+          "wall_seconds": 742.8901679515839,
+          "workers": 18
+        },
+        "reduced_ratio_optimal__target_delta_0.03": {
+          "first_quarter_median_pps": 0.1863776893797573,
+          "last_quarter_median_pps": 0.1987812297230994,
+          "slowdown_frac": 0.06655056398981873,
+          "wall_seconds": 728.3449869155884,
+          "workers": 18
+        }
+      },
+      "max_slowdown_frac": 0.24885474349420722
+    }
+  },
+  "parallel_sweep": {
+    "small": {
+      "N": 400,
+      "K": 60,
+      "G": 313,
+      "n_coin_per_replicate": 60,
+      "n_replicates": 36,
+      "per_worker_count": {
+        "1": {
+          "workers": 1,
+          "threads_per_worker_env": 18,
+          "effective_threads_observed": {
+            "libomp": 18
+          },
+          "n_workers_observed": 1,
+          "worker_wall_min": 217.37525510787964,
+          "worker_wall_median": 217.37525510787964,
+          "worker_wall_max": 217.37525510787964,
+          "worker_wall_imbalance": 0.0,
+          "pool_wall_seconds": 217.38181591033936,
+          "tasks_per_worker": [
+            36
+          ],
+          "throughput_w_over_wallmax": 0.00460033962699074,
+          "evals_per_second": 9.936733594299998,
+          "total_evals": 2160,
+          "ram_samples": 22,
+          "ram_sum_peak_gib": 0.5201873779296875,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.263,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.519,
+            0.52,
+            0.52,
+            0.52,
+            0.52
+          ]
+        },
+        "3": {
+          "workers": 3,
+          "threads_per_worker_env": 6,
+          "effective_threads_observed": {
+            "libomp": 6
+          },
+          "n_workers_observed": 3,
+          "worker_wall_min": 76.1407470703125,
+          "worker_wall_median": 76.5378110408783,
+          "worker_wall_max": 76.68205404281616,
+          "worker_wall_imbalance": 0.007072412512745549,
+          "pool_wall_seconds": 76.69054794311523,
+          "tasks_per_worker": [
+            12,
+            12,
+            12
+          ],
+          "throughput_w_over_wallmax": 0.03912258268831611,
+          "evals_per_second": 28.168259535587598,
+          "total_evals": 2160,
+          "ram_samples": 8,
+          "ram_sum_peak_gib": 0.997772216796875,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.281,
+            0.994,
+            0.995,
+            0.998,
+            0.998,
+            0.998,
+            0.998,
+            0.998
+          ]
+        },
+        "6": {
+          "workers": 6,
+          "threads_per_worker_env": 3,
+          "effective_threads_observed": {
+            "libomp": 3
+          },
+          "n_workers_observed": 6,
+          "worker_wall_min": 47.71748399734497,
+          "worker_wall_median": 47.95985400676727,
+          "worker_wall_max": 48.442891120910645,
+          "worker_wall_imbalance": 0.015125298827292443,
+          "pool_wall_seconds": 48.45556688308716,
+          "tasks_per_worker": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "throughput_w_over_wallmax": 0.12385718236808675,
+          "evals_per_second": 44.58858565251123,
+          "total_evals": 2160,
+          "ram_samples": 5,
+          "ram_sum_peak_gib": 1.744384765625,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.281,
+            1.736,
+            1.743,
+            1.744,
+            1.744
+          ]
+        },
+        "9": {
+          "workers": 9,
+          "threads_per_worker_env": 2,
+          "effective_threads_observed": {
+            "libomp": 2
+          },
+          "n_workers_observed": 9,
+          "worker_wall_min": 35.06719183921814,
+          "worker_wall_median": 35.37843871116638,
+          "worker_wall_max": 35.51763391494751,
+          "worker_wall_imbalance": 0.01273210724212085,
+          "pool_wall_seconds": 35.535573959350586,
+          "tasks_per_worker": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "throughput_w_over_wallmax": 0.25339525773456356,
+          "evals_per_second": 60.81486185629525,
+          "total_evals": 2160,
+          "ram_samples": 4,
+          "ram_sum_peak_gib": 2.5218963623046875,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.282,
+            2.488,
+            2.509,
+            2.522
+          ]
+        },
+        "12": {
+          "workers": 12,
+          "threads_per_worker_env": 1,
+          "effective_threads_observed": {
+            "libomp": 1
+          },
+          "n_workers_observed": 12,
+          "worker_wall_min": 30.611086130142212,
+          "worker_wall_median": 30.84269416332245,
+          "worker_wall_max": 31.078864097595215,
+          "worker_wall_imbalance": 0.015166572834913874,
+          "pool_wall_seconds": 31.102813243865967,
+          "tasks_per_worker": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "throughput_w_over_wallmax": 0.3861144976958319,
+          "evals_per_second": 69.50060958524973,
+          "total_evals": 2160,
+          "ram_samples": 4,
+          "ram_sum_peak_gib": 3.2595977783203125,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.282,
+            3.209,
+            3.238,
+            3.26
+          ]
+        },
+        "18": {
+          "workers": 18,
+          "threads_per_worker_env": 1,
+          "effective_threads_observed": {
+            "libomp": 1
+          },
+          "n_workers_observed": 18,
+          "worker_wall_min": 24.10591197013855,
+          "worker_wall_median": 24.323428869247437,
+          "worker_wall_max": 24.436778783798218,
+          "worker_wall_imbalance": 0.013602803101415897,
+          "pool_wall_seconds": 24.51640009880066,
+          "tasks_per_worker": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "throughput_w_over_wallmax": 0.7365946289096886,
+          "evals_per_second": 88.39135546916263,
+          "total_evals": 2160,
+          "ram_samples": 3,
+          "ram_sum_peak_gib": 4.753753662109375,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.282,
+            4.677,
+            4.754
+          ]
+        }
+      },
+      "determinism_tstar_sha_identical_to_w1": {
+        "1": true,
+        "3": true,
+        "6": true,
+        "9": true,
+        "12": true,
+        "18": true
+      },
+      "determinism_all_pass": true,
+      "W_BEST": 18,
+      "W_BEST_basis": "RAM 게이트 통과 워커 중 evals_per_second(= total_evals / wall_max) 최대"
+    },
+    "full": {
+      "N": 1092,
+      "K": 370,
+      "G": 732,
+      "n_coin_per_replicate": 9,
+      "n_replicates": 36,
+      "per_worker_count": {
+        "1": {
+          "workers": 1,
+          "threads_per_worker_env": 18,
+          "effective_threads_observed": {
+            "libomp": 18
+          },
+          "n_workers_observed": 1,
+          "worker_wall_min": 263.23456501960754,
+          "worker_wall_median": 263.23456501960754,
+          "worker_wall_max": 263.23456501960754,
+          "worker_wall_imbalance": 0.0,
+          "pool_wall_seconds": 263.24320888519287,
+          "tasks_per_worker": [
+            36
+          ],
+          "throughput_w_over_wallmax": 0.0037988932035787665,
+          "evals_per_second": 1.2308413979595203,
+          "total_evals": 324,
+          "ram_samples": 27,
+          "ram_sum_peak_gib": 0.6704254150390625,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.282,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67,
+            0.67
+          ]
+        },
+        "3": {
+          "workers": 3,
+          "threads_per_worker_env": 6,
+          "effective_threads_observed": {
+            "libomp": 6
+          },
+          "n_workers_observed": 3,
+          "worker_wall_min": 92.4728262424469,
+          "worker_wall_median": 92.7864019870758,
+          "worker_wall_max": 93.01729798316956,
+          "worker_wall_imbalance": 0.0058680122201364765,
+          "pool_wall_seconds": 93.02817797660828,
+          "tasks_per_worker": [
+            12,
+            12,
+            12
+          ],
+          "throughput_w_over_wallmax": 0.03225206563775715,
+          "evals_per_second": 3.483223088877772,
+          "total_evals": 324,
+          "ram_samples": 10,
+          "ram_sum_peak_gib": 1.44610595703125,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.282,
+            1.445,
+            1.446,
+            1.446,
+            1.446,
+            1.446,
+            1.446,
+            1.446,
+            1.446,
+            1.446
+          ]
+        },
+        "6": {
+          "workers": 6,
+          "threads_per_worker_env": 3,
+          "effective_threads_observed": {
+            "libomp": 3
+          },
+          "n_workers_observed": 6,
+          "worker_wall_min": 59.11871004104614,
+          "worker_wall_median": 59.31175148487091,
+          "worker_wall_max": 59.41595005989075,
+          "worker_wall_imbalance": 0.005011486111996266,
+          "pool_wall_seconds": 59.43527603149414,
+          "tasks_per_worker": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "throughput_w_over_wallmax": 0.10098298510672729,
+          "evals_per_second": 5.453081195763274,
+          "total_evals": 324,
+          "ram_samples": 6,
+          "ram_sum_peak_gib": 2.6119384765625,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.282,
+            2.609,
+            2.609,
+            2.609,
+            2.61,
+            2.612
+          ]
+        },
+        "9": {
+          "workers": 9,
+          "threads_per_worker_env": 2,
+          "effective_threads_observed": {
+            "libomp": 2
+          },
+          "n_workers_observed": 9,
+          "worker_wall_min": 49.46749806404114,
+          "worker_wall_median": 49.6336669921875,
+          "worker_wall_max": 49.78247284889221,
+          "worker_wall_imbalance": 0.006345990613602099,
+          "pool_wall_seconds": 49.82840609550476,
+          "tasks_per_worker": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "throughput_w_over_wallmax": 0.1807865195310456,
+          "evals_per_second": 6.508314703117642,
+          "total_evals": 324,
+          "ram_samples": 5,
+          "ram_sum_peak_gib": 3.780609130859375,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.282,
+            3.341,
+            3.78,
+            3.781,
+            3.781
+          ]
+        },
+        "12": {
+          "workers": 12,
+          "threads_per_worker_env": 1,
+          "effective_threads_observed": {
+            "libomp": 1
+          },
+          "n_workers_observed": 12,
+          "worker_wall_min": 43.31484079360962,
+          "worker_wall_median": 43.49658000469208,
+          "worker_wall_max": 43.6895592212677,
+          "worker_wall_imbalance": 0.00861489403575314,
+          "pool_wall_seconds": 43.72247505187988,
+          "tasks_per_worker": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "throughput_w_over_wallmax": 0.27466516517654643,
+          "evals_per_second": 7.4159594597667535,
+          "total_evals": 324,
+          "ram_samples": 5,
+          "ram_sum_peak_gib": 4.946746826171875,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.282,
+            2.576,
+            4.946,
+            4.946,
+            4.947
+          ]
+        },
+        "18": {
+          "workers": 18,
+          "threads_per_worker_env": 1,
+          "effective_threads_observed": {
+            "libomp": 1
+          },
+          "n_workers_observed": 18,
+          "worker_wall_min": 40.60315299034119,
+          "worker_wall_median": 40.90196359157562,
+          "worker_wall_max": 41.1228711605072,
+          "worker_wall_imbalance": 0.012706435694765995,
+          "pool_wall_seconds": 41.17880606651306,
+          "tasks_per_worker": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "throughput_w_over_wallmax": 0.43771262784021014,
+          "evals_per_second": 7.878827301123783,
+          "total_evals": 324,
+          "ram_samples": 5,
+          "ram_sum_peak_gib": 7.2786102294921875,
+          "ram_gate_threshold_gib": 30.72,
+          "ram_gate_exceeded": false,
+          "eliminated": false,
+          "ram_series_gib": [
+            0.282,
+            2.639,
+            6.888,
+            7.279,
+            7.279
+          ]
+        }
+      },
+      "determinism_tstar_sha_identical_to_w1": {
+        "1": true,
+        "3": true,
+        "6": true,
+        "9": true,
+        "12": true,
+        "18": true
+      },
+      "determinism_all_pass": true,
+      "W_BEST": 18,
+      "W_BEST_basis": "RAM 게이트 통과 워커 중 evals_per_second(= total_evals / wall_max) 최대"
+    }
+  },
+  "throughput_definition": "w / wall_max (F-THR) · wall_max = 워커 중 마지막 완료. 평균·중앙값 기반 계산 0건.",
+  "ram_gate": {
+    "budget_gib": 38.4,
+    "gate_frac": 0.8,
+    "sample_period_seconds": 10.0,
+    "eliminated_worker_counts": {
+      "small": [],
+      "full": []
+    }
+  },
+  "timing_proxy_used": false,
+  "timing_proxy_note": "본 블록은 프록시(축소 K 등)를 단가 표에 섞지 않았다. 축소규모(N=400·K=60)는 프록시가 아니라 **C0~C3 의 실제 실행 규모**이며 별도 행으로 보고한다.",
+  "env": {
+    "when_kst": "2026-08-12T19:00:53+09:00",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "logical_cores": 18,
+    "physical_cores": 18,
+    "mem_total_gib": 64.0,
+    "ram_budget_gib": 38.4,
+    "pmset_powermode": "0",
+    "pmset_ps": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22872163)\t60%; charging; 0:58 remaining present: true",
+    "thermal_pressure": "n/a",
+    "loadavg_1_5_15": [
+      2.69,
+      2.23,
+      2.15
+    ],
+    "env_threads_requested": "1",
+    "env_thread_vars": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "threadpool_info": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libomp"
+      }
+    ]
+  }
+}

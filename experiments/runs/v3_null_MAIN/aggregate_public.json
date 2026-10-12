@@ -1,0 +1,120 @@
+{
+  "_scope": "공개 — 개수·해시·시간·메모리·PASS/FAIL 만. p_emp·유의 여부·null 분포·T_obs·T_b·AP·Δ 는 _sealed/null_result.json (개봉 = 성공판정 단계 일괄).",
+  "ts_kst": "2026-08-01 01:17:33 KST",
+  "aggregation_asserts": {
+    "global": {
+      "n_records": 1000,
+      "n_unique": 1000,
+      "expected": 1000,
+      "n_duplicates": 0,
+      "n_missing": 0,
+      "n_unexpected": 0,
+      "pass": true
+    },
+    "family": {
+      "n_records": 1000,
+      "n_unique": 1000,
+      "expected": 1000,
+      "n_duplicates": 0,
+      "n_missing": 0,
+      "n_unexpected": 0,
+      "pass": true
+    },
+    "family_ALT": {
+      "n_records": 100,
+      "n_unique": 100,
+      "expected": 100,
+      "n_duplicates": 0,
+      "n_missing": 0,
+      "n_unexpected": 0,
+      "pass": true
+    },
+    "global_ALT": {
+      "n_records": 10,
+      "n_unique": 10,
+      "expected": 10,
+      "n_duplicates": 0,
+      "n_missing": 0,
+      "n_unexpected": 0,
+      "pass": true
+    },
+    "B_equals_NULL_B": {
+      "NULL_B": 1000,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "empirical_p_called": true,
+  "empirical_p_calls": {
+    "global": 1,
+    "family": 1,
+    "ALT_separate": 2
+  },
+  "n_permutations": {
+    "global": 1000,
+    "family": 1000,
+    "family_ALT": 100,
+    "global_ALT": 10
+  },
+  "null_result_sealed_sha256": "9b7b47e6a495585da5a7a679d3933d5c41807f727af699d0f50751edf359df4d",
+  "global_ALT_negative_control_all_identical": true,
+  "total_wall_s_sum_of_permutations": 2640549.3298113085,
+  "total_wall_hours_sum_of_permutations": 733.4859249475857,
+  "total_cpu_s": 2531164.599395,
+  "max_worker_peak_rss_bytes": 1981366272,
+  "n_sessions": 6,
+  "session_decay_F3b": [
+    {
+      "session_seq": 1,
+      "n": 415,
+      "first20_mean_wall_s": 1288.7976349082978,
+      "last20_mean_wall_s": 1235.4839032604068,
+      "decay_frac": -0.04136703094716997,
+      "insufficient": false
+    },
+    {
+      "session_seq": 2,
+      "n": 94,
+      "first20_mean_wall_s": 1266.1204620001577,
+      "last20_mean_wall_s": 1133.7604566081457,
+      "decay_frac": -0.10453982015496051,
+      "insufficient": false
+    },
+    {
+      "session_seq": 3,
+      "n": 576,
+      "first20_mean_wall_s": 1520.336714502002,
+      "last20_mean_wall_s": 1191.3973244374442,
+      "decay_frac": -0.2163595649088198,
+      "insufficient": false
+    },
+    {
+      "session_seq": 4,
+      "n": 801,
+      "first20_mean_wall_s": 1182.6641138687496,
+      "last20_mean_wall_s": 1046.040094133201,
+      "decay_frac": -0.11552225025973101,
+      "insufficient": false
+    },
+    {
+      "session_seq": 5,
+      "n": 216,
+      "first20_mean_wall_s": 1266.714100489649,
+      "last20_mean_wall_s": 1213.8850024373992,
+      "decay_frac": -0.041705620890956065,
+      "insufficient": false
+    },
+    {
+      "session_seq": 6,
+      "n": 8,
+      "insufficient": true,
+      "note": "세션 내 permutation < 40 — 감쇠율 미산출"
+    }
+  ],
+  "session_decay_median_frac": -0.10453982015496051,
+  "decay_reporting_rule": "분할 실행에서는 세션 경계가 섞이므로 세션 **내부** 첫 20 / 마지막 20 permutation 평균 wall 로 감쇠를 보고하고, 전체는 세션 내 감쇠율의 **중앙값**으로 보고한다. 세션 간 비교는 하지 않는다.",
+  "sealed_guard_n_files": 12,
+  "ladder_freeze_sha16": "b885585aefbabb32",
+  "sap_manifest_sha16": "756d485feb4715e9",
+  "redaction": "공개 파일에 p_emp·유의 여부·null 분포·T_obs·T_b·AP·Δ 없음"
+}

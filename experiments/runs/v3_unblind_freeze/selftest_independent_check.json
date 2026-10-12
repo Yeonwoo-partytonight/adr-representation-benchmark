@@ -1,0 +1,20 @@
+{
+  "all_pass": true,
+  "checks": {
+    "K10_bca_symmetric": true,
+    "K11_scaffold": true,
+    "K1_import_ban": true,
+    "K2_holm_hand": true,
+    "K3_holm_ties_boundary": true,
+    "K4_bh_hand": true,
+    "K5_tost": true,
+    "K6_macro_ap_hand": true,
+    "K7_perm_deterministic_antisym": true,
+    "K8_p_formula": true,
+    "K9_jackknife_units": true
+  },
+  "n_checks": 11,
+  "n_pass": 11,
+  "script_sha256": "10075502901efbcc370edad527169dd8da5928a2abfd6bb799fc4d4a5700939e",
+  "stage": "selftest"
+}

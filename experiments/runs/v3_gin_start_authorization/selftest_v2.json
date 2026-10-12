@@ -1,0 +1,331 @@
+{
+  "_doc": "블록 AS — v2 supersession 하네스 자체검사 10건(docs/109 AS-6).",
+  "block": "AS",
+  "harness": "v3_Multimodal/src/confirmatory_gin_rep_v2.py",
+  "as_of_kst": "2026-09-16 14:25:29 KST",
+  "confirmatory_training_runs_performed": 0,
+  "unblinding_performed": false,
+  "is_authorization": false,
+  "sys_path_after_v1_import": [
+    "<REPO_ROOT>/v2_GNN/src",
+    "<REPO_ROOT>/v3_Multimodal/src/..",
+    "<REPO_ROOT>/v3_Multimodal/src"
+  ],
+  "originals_intact_after_T5_T7": {
+    "sha256_before": {
+      "v3_Multimodal/config/rqint_procedure_decisions_v1.json": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+      "v3_Multimodal/config/gin_seed_freeze.json": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+      "v3_Multimodal/config/gin_inner_valid_freeze.json": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+      "v3_Multimodal/config/gin_start_supersede.json": "c061d033ae35bea3df269d37c1a45174fc48f70bfe37ace4f159a8cb36d4a32c"
+    },
+    "sha256_after": {
+      "v3_Multimodal/config/rqint_procedure_decisions_v1.json": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+      "v3_Multimodal/config/gin_seed_freeze.json": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+      "v3_Multimodal/config/gin_inner_valid_freeze.json": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+      "v3_Multimodal/config/gin_start_supersede.json": "c061d033ae35bea3df269d37c1a45174fc48f70bfe37ace4f159a8cb36d4a32c"
+    },
+    "intact": true,
+    "note": "T5~T7 은 합성 cfg 디렉터리로만 수행했다. 원본 ①②③ 과 승인 이벤트는 읽기 외 접근 0 · 이동·개명·삭제·수정 0."
+  },
+  "n_cases": 10,
+  "n_pass": 10,
+  "n_skip": 0,
+  "all_pass": true,
+  "all_pass_definition": "all_pass = (n_pass + n_skip == n_cases)",
+  "cases": [
+    {
+      "case": "T1",
+      "desc": "v1 산출물 6종 + gin_inner_valid_freeze.status.json sha256 = F5",
+      "pass": true,
+      "skip": false,
+      "detail": {
+        "v3_Multimodal/config/gin_confirm_harness_freeze.json": {
+          "expected": "1af993fde7330e1d48e6d10fee157c1310f42dacc5c1d65a4834b9020e5b7072",
+          "actual": "1af993fde7330e1d48e6d10fee157c1310f42dacc5c1d65a4834b9020e5b7072",
+          "match": true,
+          "bytes": 21968
+        },
+        "v3_Multimodal/config/gin_confirm_harness_freeze.status.json": {
+          "expected": "5df9a7c4bfa64749f2b37f5b1984cfcca85d8f609e6c8c444097ff78e24c819a",
+          "actual": "5df9a7c4bfa64749f2b37f5b1984cfcca85d8f609e6c8c444097ff78e24c819a",
+          "match": true,
+          "bytes": 1439
+        },
+        "v3_Multimodal/src/confirmatory_gin_rep.py": {
+          "expected": "1e6642bf9ecac5a272fdb49c441668d2f6f3ec97e87528831aad75a9c40d995a",
+          "actual": "1e6642bf9ecac5a272fdb49c441668d2f6f3ec97e87528831aad75a9c40d995a",
+          "match": true,
+          "bytes": 42450
+        },
+        "experiments/runs/v3_gin_harness_selftest/selftest.json": {
+          "expected": "37b0af4d2ef74ad410c76603a143c7089161c6f35a75d68271a8a8cf94c78e09",
+          "actual": "37b0af4d2ef74ad410c76603a143c7089161c6f35a75d68271a8a8cf94c78e09",
+          "match": true,
+          "bytes": 11399
+        },
+        "experiments/runs/v3_gin_budget/gin_budget_estimate.json": {
+          "expected": "f42e839d154611f2050124fdf2902cbec5a02988860de185622236113b139605",
+          "actual": "f42e839d154611f2050124fdf2902cbec5a02988860de185622236113b139605",
+          "match": true,
+          "bytes": 11151
+        },
+        "experiments/runs/v3_gin_budget/README.md": {
+          "expected": "6fd60d4a59c48b49341bd3cd41f92f5c620d1789b20995e44c68205b31c51796",
+          "actual": "6fd60d4a59c48b49341bd3cd41f92f5c620d1789b20995e44c68205b31c51796",
+          "match": true,
+          "bytes": 1224
+        },
+        "v3_Multimodal/config/gin_inner_valid_freeze.status.json": {
+          "expected": "bd329fefe613971f59bde8b13ea3f1c4929be04541655ad8e27e9922aa6cb0d0",
+          "actual": "bd329fefe613971f59bde8b13ea3f1c4929be04541655ad8e27e9922aa6cb0d0",
+          "match": true,
+          "bytes": 677
+        }
+      }
+    },
+    {
+      "case": "T2",
+      "desc": "①②③ sha256 = F4 및 v1.gin_block_status() 3/3 true",
+      "pass": true,
+      "skip": false,
+      "detail": {
+        "sha256": {
+          "v3_Multimodal/config/rqint_procedure_decisions_v1.json": {
+            "expected": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+            "actual": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+            "match": true
+          },
+          "v3_Multimodal/config/gin_seed_freeze.json": {
+            "expected": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+            "actual": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+            "match": true
+          },
+          "v3_Multimodal/config/gin_inner_valid_freeze.json": {
+            "expected": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+            "actual": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+            "match": true
+          }
+        },
+        "v1_gin_block_status": [
+          {
+            "file": "rqint_procedure_decisions_v1.json",
+            "gin_start_still_blocked": true
+          },
+          {
+            "file": "gin_seed_freeze.json",
+            "gin_start_still_blocked": true
+          },
+          {
+            "file": "gin_inner_valid_freeze.json",
+            "gin_start_still_blocked": true
+          }
+        ],
+        "n_true": 3
+      }
+    },
+    {
+      "case": "T3",
+      "desc": "승인 이벤트 sha256 = PINNED_SHA256 · is_authorization true · blocking_artifacts_verified 3건 = T2 실측",
+      "pass": true,
+      "skip": false,
+      "detail": {
+        "expected": "c061d033ae35bea3df269d37c1a45174fc48f70bfe37ace4f159a8cb36d4a32c",
+        "actual": "c061d033ae35bea3df269d37c1a45174fc48f70bfe37ace4f159a8cb36d4a32c",
+        "is_authorization": true,
+        "consistency": {
+          "v3_Multimodal/config/rqint_procedure_decisions_v1.json": {
+            "claimed": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+            "observed": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+            "claimed_flag": true,
+            "consistent": true
+          },
+          "v3_Multimodal/config/gin_seed_freeze.json": {
+            "claimed": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+            "observed": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+            "claimed_flag": true,
+            "consistent": true
+          },
+          "v3_Multimodal/config/gin_inner_valid_freeze.json": {
+            "claimed": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+            "observed": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+            "claimed_flag": true,
+            "consistent": true
+          }
+        }
+      }
+    },
+    {
+      "case": "T4",
+      "desc": "v1↔v2 과학 명세 기계 diff — 지정 9키 전건 바이트 동일 (harness.stages·default_stage 는 대상 아님)",
+      "pass": true,
+      "skip": false,
+      "detail": {
+        "keys": [
+          {
+            "key": "spec",
+            "identical": true,
+            "v1_bytes": 8209,
+            "v2_bytes": 8209
+          },
+          {
+            "key": "output_scale",
+            "identical": true,
+            "v1_bytes": 2736,
+            "v2_bytes": 2736
+          },
+          {
+            "key": "harness.inner_split",
+            "identical": true,
+            "v1_bytes": 1447,
+            "v2_bytes": 1447
+          },
+          {
+            "key": "harness.feature_block_fit_population",
+            "identical": true,
+            "v1_bytes": 238,
+            "v2_bytes": 238
+          },
+          {
+            "key": "harness.rng_scope",
+            "identical": true,
+            "v1_bytes": 338,
+            "v2_bytes": 338
+          },
+          {
+            "key": "harness.recipe_constants_A_wd",
+            "identical": true,
+            "v1_bytes": 416,
+            "v2_bytes": 416
+          },
+          {
+            "key": "harness.early_stopping",
+            "identical": true,
+            "v1_bytes": 423,
+            "v2_bytes": 423
+          },
+          {
+            "key": "harness.reuse_import_not_reimplement",
+            "identical": true,
+            "v1_bytes": 786,
+            "v2_bytes": 786
+          },
+          {
+            "key": "harness.code_level_prohibition_guards",
+            "identical": true,
+            "v1_bytes": 294,
+            "v2_bytes": 294
+          }
+        ],
+        "n_identical": 9,
+        "excluded_from_diff": [
+          "harness.stages",
+          "harness.default_stage"
+        ]
+      }
+    },
+    {
+      "case": "T5",
+      "desc": "음성 1 — 승인 이벤트 부재 합성 cfg → exit 12 거부 (원본 이동·개명·삭제 0)",
+      "pass": true,
+      "skip": false,
+      "detail": {
+        "returncode": 12,
+        "stderr": "supersession 미충족 — 실행 거부(exit 12): 3:supersede_event, 4:blocking_artifacts_verified_consistent, 5:not_unblinded_and_sealed_counts",
+        "rejected": true
+      }
+    },
+    {
+      "case": "T6",
+      "desc": "음성 2 — blocking_artifacts_verified 변조 합성 사본 → 거부 (원본 무수정)",
+      "pass": true,
+      "skip": false,
+      "detail": {
+        "returncode": 12,
+        "stderr": "supersession 미충족 — 실행 거부(exit 12): 3:supersede_event, 4:blocking_artifacts_verified_consistent",
+        "rejected": true
+      }
+    },
+    {
+      "case": "T7",
+      "desc": "음성 3 — ①의 플래그를 false 로 만든 합성 사본 → 거부(조건 2 = 여전히 true 여야 함 · 원본 무수정)",
+      "pass": true,
+      "skip": false,
+      "detail": {
+        "returncode": 12,
+        "stderr": "supersession 미충족 — 실행 거부(exit 12): 1:blocking_flag_files_sha256, 2:blocking_flags_still_all_true, 4:blocking_artifacts_verified_consistent",
+        "rejected": true
+      }
+    },
+    {
+      "case": "T8",
+      "desc": "v1.build_plan(v1.frozen_design(...)) = 315/42/357 · OOF 63/primary 18 · [1092,370]",
+      "pass": true,
+      "skip": false,
+      "detail": {
+        "n_confirmatory": 315,
+        "n_stability": 42,
+        "n_total": 357,
+        "oof_matrices_total": 63,
+        "oof_matrices_primary_rqint": 18,
+        "oof_matrix_shape": [
+          1092,
+          370
+        ]
+      }
+    },
+    {
+      "case": "T9",
+      "desc": "금지 가드 AST — (a) 금지 import 0 · (b) enforce_gin_block 호출 0(모듈 전역 — train·verify 경로 포함 부재) · (c) train 분기 require_supersession 인자 0개 · (d) 모든 import 가 v1 import 앞",
+      "pass": true,
+      "skip": false,
+      "detail": {
+        "a_banned_imports": [],
+        "b_enforce_gin_block_calls_module_wide": [],
+        "c_train_require_supersession": {
+          "found": true,
+          "n_args": 0,
+          "n_kwargs": 0
+        },
+        "d_v1_import_lineno": 58,
+        "d_imports_after_v1": [],
+        "imported": [
+          "__future__",
+          "__future__.annotations",
+          "argparse",
+          "ast",
+          "confirmatory_gin_rep",
+          "json",
+          "os",
+          "shutil",
+          "subprocess",
+          "sys",
+          "tempfile"
+        ]
+      }
+    },
+    {
+      "case": "T10",
+      "desc": "위생 — __pycache__ 착수=종료 · 봉인 25/291/275/16 불변 · _sealed 디렉터리 생성 0",
+      "pass": true,
+      "skip": false,
+      "detail": {
+        "pycache_dirs_before": 4541,
+        "pycache_dirs_after": 4541,
+        "sealed_before": {
+          "n_sealed_dirs": 25,
+          "n_sealed_files_total": 291,
+          "n_sealed_artifacts": 275,
+          "n_access_log": 16
+        },
+        "sealed_after": {
+          "n_sealed_dirs": 25,
+          "n_sealed_files_total": 291,
+          "n_sealed_artifacts": 275,
+          "n_access_log": 16
+        },
+        "sealed_dirs_created": 0,
+        "counting_convention": "__pycache__ = archive/ 포함 (블록 AR 4,541 규약)"
+      }
+    }
+  ]
+}

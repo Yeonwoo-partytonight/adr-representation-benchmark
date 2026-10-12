@@ -1,0 +1,68 @@
+{
+  "_scope": "공개 — 판정·개수·해시 대조 건수·경로 종류 뿐. 지표·부호 값·λ·Δ·CI·p 는 없다.",
+  "ts_kst": "2026-08-07 09:52:21 KST",
+  "block": "X — 개봉 전 점검(봉인 완전성 + 부호 인지 기록표)",
+  "instruction": "docs/78_pre_unblinding_audit_prompt_for_vscode.md",
+  "gates": {
+    "G0_pass": true,
+    "G_HOLM_n_labels": 7,
+    "G_IDLE_B_competitors": 0,
+    "sealed_artifacts_start": 273,
+    "sealed_total_start": 288
+  },
+  "sealing_completeness": {
+    "n_expected": 273,
+    "n_live_artifacts": 273,
+    "n_missing": 0,
+    "n_unexpected": 0,
+    "n_sealed_directories": 24,
+    "n_hashed": 273,
+    "n_hash_compared": 312,
+    "n_hash_mismatch": 0,
+    "n_files_with_recorded_hash": 193,
+    "model_fold_seed_all_set_equal": true,
+    "n_access_log_files": 15,
+    "n_access_log_entries": 91,
+    "n_human_exposure_true": 0,
+    "access_log_types": [
+      "machine_read"
+    ],
+    "n_known_failure_restart_events": 3,
+    "verdict": "PASS"
+  },
+  "sign_disclosure": {
+    "n_rows": 4,
+    "route_kinds": [
+      "advisor",
+      "local_commit_unpushed",
+      "public_repository_pushed",
+      "runner_first_look"
+    ],
+    "advisor_route_determination": "unknown_as_of_2026-08-06",
+    "n_open_questions": 1,
+    "values_withheld": true,
+    "note": "부호 값은 sign_disclosure_matrix.json 과 docs/79 에만 둔다."
+  },
+  "not_performed": {
+    "unblinding_performed": false,
+    "open_sealed_calls": 0,
+    "emit_sign_calls": 0,
+    "decision_py_calls": 0,
+    "model_training": 0,
+    "model_inference": 0,
+    "new_estimates": 0,
+    "network": 0,
+    "git_commit": 0,
+    "git_push": 0,
+    "files_added_to_sealed": 0
+  },
+  "artifacts": {
+    "sealing_completeness_audit.json": "b189f77f30dce9b59fc77519a22cfb4322daa669ab7801569f3672de8a197550",
+    "sign_disclosure_matrix.json": "d20415256c087825483b52740731e15fd5343227bfc520fc08b491849f6dffb6"
+  },
+  "defensive_scan": {
+    "n_forbidden_keys": 0,
+    "n_value_scan_hits": 0,
+    "method": "★ 키 이름이 아니라 값으로 판정 — 본 블록은 'sign' 낱말이 도처에 나오므로 키 기반 판정은 오탐."
+  }
+}

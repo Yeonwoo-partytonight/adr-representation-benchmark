@@ -1,0 +1,196 @@
+{
+  "stage": "precheck",
+  "ts_kst": "2026-07-27 13:31:12 KST",
+  "gate0": {
+    "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "ladder_freeze_match": true,
+    "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_manifest_match": true,
+    "sap_version": "1.1",
+    "sap_all_validation_pass": true,
+    "sap_modules_match": {
+      "__init__.py": true,
+      "metrics.py": true,
+      "redaction.py": true,
+      "consensus.py": true,
+      "bootstrap.py": true,
+      "signflip.py": true,
+      "decision.py": true,
+      "null_generator.py": true,
+      "unseen_target.py": true,
+      "synthetic.py": true,
+      "freeze.py": true
+    },
+    "sap_n_modules_verified": 11,
+    "sap_integrity_confirmatory_untouched": true,
+    "primary_B_m1b_dim": 10,
+    "A0_primary_dim": 10,
+    "A1_all_blocks_train_only_fit": true,
+    "A1_bseq_pca_fit_rows": 671,
+    "A5_target_count_mismatch": 0,
+    "gate0_pass": true
+  },
+  "seed_isolation": {
+    "probe_seeds": [
+      9000001,
+      9000002
+    ],
+    "main_seed_namespace_max": 1000000,
+    "reserved_seeds": [
+      42,
+      201,
+      202,
+      203,
+      204,
+      205
+    ],
+    "intersection_with_main_namespace": 0,
+    "rule": "PROBE seed > 본실행 namespace 상한 → 교집합 공집합(범위 비교로 증명)",
+    "asserted": true
+  },
+  "target_structure": {
+    "n_unique_targets": 1191,
+    "n_targets_without_embedding_dropped": 0,
+    "n_families": 42,
+    "n_targets_multi_family_in_source": 14,
+    "n_targets_without_family": 0,
+    "tiebreak_rule": "표적이 복수 family에 속하면 family_id 문자열 사전순 최소값 1개를 교환 family로 배정(결정적·결과 무참조). B_fam(P-FAM) multi-hot 정의는 불변 — 본 규칙은 null 교환 단위 partition 전용.",
+    "source": "data/processed/target_mapping/10_target_family_biological.csv"
+  },
+  "null_incidence_report": {
+    "n_targets": 1191,
+    "n_drugs": 1092,
+    "n_edges": 12613,
+    "incidence_ratio": 0.009698040554463728,
+    "n_drugs_with_target": 847,
+    "frac_drugs_with_target": 0.7756410256410257,
+    "note": "eligible target = unique target(교환 단위). incidence_ratio = edges/(drugs×targets)."
+  },
+  "family_report": {
+    "n_families": 42,
+    "n_fixed_families_singleton_or_size2": 11,
+    "n_exchangeable_families": 31,
+    "n_fixed_targets": 13,
+    "n_exchangeable_targets": 1178,
+    "n_targets": 1191,
+    "fixed_target_frac": 0.0109151973131822,
+    "rule": "|family|≤2 → 원위치 고정(가능 permutation ≤2!·서열 미파괴); |family|≥3 → family 내 full permutation"
+  },
+  "identity_meanpool_bitwise_equals_frozen": true,
+  "permutation_checks": [
+    {
+      "mode": "global",
+      "seed": 9000001,
+      "preservation": {
+        "embedding_distribution_preserved": true,
+        "mapping_is_bijection": true,
+        "target_embedding_shared_across_drugs": true,
+        "n_shared_target_checks": 11422,
+        "graph_untouched_degree_incidence_preserved": true,
+        "n_drug_missing_targets": 245,
+        "n_unique_targets": 1191,
+        "note": "그래프(edges)는 재배치에서 미변경 → drug/target degree·incidence·결측 패턴 자동 보존."
+      },
+      "report": {
+        "mode": "global",
+        "n_exchange_units": 1191,
+        "n_fixed_points": 0,
+        "rule": "full permutation(fixed point 허용, derangement 아님)"
+      },
+      "seed_determinism_same_mapping": true
+    },
+    {
+      "mode": "global",
+      "seed": 9000002,
+      "preservation": {
+        "embedding_distribution_preserved": true,
+        "mapping_is_bijection": true,
+        "target_embedding_shared_across_drugs": true,
+        "n_shared_target_checks": 11422,
+        "graph_untouched_degree_incidence_preserved": true,
+        "n_drug_missing_targets": 245,
+        "n_unique_targets": 1191,
+        "note": "그래프(edges)는 재배치에서 미변경 → drug/target degree·incidence·결측 패턴 자동 보존."
+      },
+      "report": {
+        "mode": "global",
+        "n_exchange_units": 1191,
+        "n_fixed_points": 1,
+        "rule": "full permutation(fixed point 허용, derangement 아님)"
+      },
+      "seed_determinism_same_mapping": true
+    },
+    {
+      "mode": "family",
+      "seed": 9000001,
+      "preservation": {
+        "embedding_distribution_preserved": true,
+        "mapping_is_bijection": true,
+        "target_embedding_shared_across_drugs": true,
+        "n_shared_target_checks": 11422,
+        "graph_untouched_degree_incidence_preserved": true,
+        "n_drug_missing_targets": 245,
+        "n_unique_targets": 1191,
+        "note": "그래프(edges)는 재배치에서 미변경 → drug/target degree·incidence·결측 패턴 자동 보존."
+      },
+      "report": {
+        "mode": "family",
+        "n_families": 42,
+        "n_fixed_families_singleton_or_size2": 11,
+        "n_exchangeable_families": 31,
+        "n_fixed_targets": 13,
+        "n_exchangeable_targets": 1178,
+        "n_targets": 1191,
+        "fixed_target_frac": 0.0109151973131822,
+        "rule": "|family|≤2 → 원위치 고정(가능 permutation ≤2!·서열 미파괴); |family|≥3 → family 내 full permutation",
+        "n_fixed_points": 47
+      },
+      "seed_determinism_same_mapping": true
+    },
+    {
+      "mode": "family",
+      "seed": 9000002,
+      "preservation": {
+        "embedding_distribution_preserved": true,
+        "mapping_is_bijection": true,
+        "target_embedding_shared_across_drugs": true,
+        "n_shared_target_checks": 11422,
+        "graph_untouched_degree_incidence_preserved": true,
+        "n_drug_missing_targets": 245,
+        "n_unique_targets": 1191,
+        "note": "그래프(edges)는 재배치에서 미변경 → drug/target degree·incidence·결측 패턴 자동 보존."
+      },
+      "report": {
+        "mode": "family",
+        "n_families": 42,
+        "n_fixed_families_singleton_or_size2": 11,
+        "n_exchangeable_families": 31,
+        "n_fixed_targets": 13,
+        "n_exchangeable_targets": 1178,
+        "n_targets": 1191,
+        "fixed_target_frac": 0.0109151973131822,
+        "rule": "|family|≤2 → 원위치 고정(가능 permutation ≤2!·서열 미파괴); |family|≥3 → family 내 full permutation",
+        "n_fixed_points": 49
+      },
+      "seed_determinism_same_mapping": true
+    }
+  ],
+  "cross_seed_independence": {
+    "global": {
+      "n_targets": 1191,
+      "n_identical_assignments_across_seeds": 0,
+      "frac_identical": 0.0
+    },
+    "family": {
+      "n_targets": 1191,
+      "n_identical_assignments_across_seeds": 42,
+      "frac_identical": 0.03526448362720403
+    }
+  },
+  "sealed_sha256_verified": {
+    "oof_M1b.npz": true,
+    "oof_M2b.npz": true
+  }
+}

@@ -1,0 +1,562 @@
+{
+  "_scope": "§13-4 타이밍 프로브(B=2) — 결과-독립 계측치만. AP·Δ·T_b·p 없음.",
+  "ts_kst": "2026-07-27 14:27:19 KST",
+  "probe_only": true,
+  "enters_null_distribution": false,
+  "per_permutation": [
+    {
+      "mode": "global",
+      "seed": 9000001,
+      "sec_total": 669.1427193749696,
+      "sec_permutation_build_and_assert": 0.11957208398962393,
+      "sec_meanpool_recompute": 0.011557875026483089,
+      "sec_block_build": 0.12110908300383016,
+      "sec_folds": [
+        135.30145433399593,
+        134.60446104197763,
+        132.60609579196898,
+        132.67772116698325,
+        133.69975841703126
+      ],
+      "permutation_report": {
+        "mode": "global",
+        "n_exchange_units": 1191,
+        "n_fixed_points": 0,
+        "rule": "full permutation(fixed point 허용, derangement 아님)"
+      },
+      "preservation_shared_checks": 11422,
+      "oof_npz_bytes_if_saved": 554534
+    },
+    {
+      "mode": "global",
+      "seed": 9000002,
+      "sec_total": 683.5622747500311,
+      "sec_permutation_build_and_assert": 0.1214772910461761,
+      "sec_meanpool_recompute": 0.012129541952162981,
+      "sec_block_build": 0.12357695901300758,
+      "sec_folds": [
+        136.04468254197855,
+        133.6322075839853,
+        141.65279570798157,
+        135.69407725002384,
+        136.28035604202887
+      ],
+      "permutation_report": {
+        "mode": "global",
+        "n_exchange_units": 1191,
+        "n_fixed_points": 1,
+        "rule": "full permutation(fixed point 허용, derangement 아님)"
+      },
+      "preservation_shared_checks": 11422,
+      "oof_npz_bytes_if_saved": 554559
+    },
+    {
+      "mode": "family",
+      "seed": 9000001,
+      "sec_total": 672.7467698340188,
+      "sec_permutation_build_and_assert": 0.12111500004539266,
+      "sec_meanpool_recompute": 0.011853749980218709,
+      "sec_block_build": 0.12243512499844655,
+      "sec_folds": [
+        133.87039875000482,
+        134.08737920800922,
+        134.45954700000584,
+        133.98316662502475,
+        136.09013674996095
+      ],
+      "permutation_report": {
+        "mode": "family",
+        "n_families": 42,
+        "n_fixed_families_singleton_or_size2": 11,
+        "n_exchangeable_families": 31,
+        "n_fixed_targets": 13,
+        "n_exchangeable_targets": 1178,
+        "n_targets": 1191,
+        "fixed_target_frac": 0.0109151973131822,
+        "rule": "|family|≤2 → 원위치 고정(가능 permutation ≤2!·서열 미파괴); |family|≥3 → family 내 full permutation",
+        "n_fixed_points": 47
+      },
+      "preservation_shared_checks": 11422,
+      "oof_npz_bytes_if_saved": 553796
+    },
+    {
+      "mode": "family",
+      "seed": 9000002,
+      "sec_total": 674.5883421669714,
+      "sec_permutation_build_and_assert": 0.12314095895271748,
+      "sec_meanpool_recompute": 0.012129500042647123,
+      "sec_block_build": 0.12288266594987363,
+      "sec_folds": [
+        137.54709987499518,
+        134.77366920904024,
+        133.9838722079876,
+        134.0331644580001,
+        133.99164895899594
+      ],
+      "permutation_report": {
+        "mode": "family",
+        "n_families": 42,
+        "n_fixed_families_singleton_or_size2": 11,
+        "n_exchangeable_families": 31,
+        "n_fixed_targets": 13,
+        "n_exchangeable_targets": 1178,
+        "n_targets": 1191,
+        "fixed_target_frac": 0.0109151973131822,
+        "rule": "|family|≤2 → 원위치 고정(가능 permutation ≤2!·서열 미파괴); |family|≥3 → family 내 full permutation",
+        "n_fixed_points": 49
+      },
+      "preservation_shared_checks": 11422,
+      "oof_npz_bytes_if_saved": null
+    }
+  ],
+  "fold_breakdown": {
+    "global_seed9000001": [
+      {
+        "fold": 0,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 689,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 135.30145433399593,
+        "sec_pca_fit": 0.06490137503715232,
+        "sec_assemble": 0.006735374976415187,
+        "sec_rf": 135.22904562496115
+      },
+      {
+        "fold": 1,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 671,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 134.60446104197763,
+        "sec_pca_fit": 0.0633018750231713,
+        "sec_assemble": 0.007048290979582816,
+        "sec_rf": 134.53334575000918
+      },
+      {
+        "fold": 2,
+        "n_train": 873,
+        "n_test": 219,
+        "bseq_fit_rows": 695,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 132.60609579196898,
+        "sec_pca_fit": 0.06714037497295067,
+        "sec_assemble": 0.007022249978035688,
+        "sec_rf": 132.53115650004474
+      },
+      {
+        "fold": 3,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 669,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 132.67772116698325,
+        "sec_pca_fit": 0.06306625000433996,
+        "sec_assemble": 0.007196666963864118,
+        "sec_rf": 132.60674462502357
+      },
+      {
+        "fold": 4,
+        "n_train": 873,
+        "n_test": 219,
+        "bseq_fit_rows": 664,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 133.69975841703126,
+        "sec_pca_fit": 0.057148708030581474,
+        "sec_assemble": 0.006952500029001385,
+        "sec_rf": 133.63491837499896
+      }
+    ],
+    "global_seed9000002": [
+      {
+        "fold": 0,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 689,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 136.04468254197855,
+        "sec_pca_fit": 0.06537833297625184,
+        "sec_assemble": 0.006544750009197742,
+        "sec_rf": 135.9720523749711
+      },
+      {
+        "fold": 1,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 671,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 133.6322075839853,
+        "sec_pca_fit": 0.06311066704802215,
+        "sec_assemble": 0.0070089580258354545,
+        "sec_rf": 133.56132379098563
+      },
+      {
+        "fold": 2,
+        "n_train": 873,
+        "n_test": 219,
+        "bseq_fit_rows": 695,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 141.65279570798157,
+        "sec_pca_fit": 0.06733987497864291,
+        "sec_assemble": 0.006899041996803135,
+        "sec_rf": 141.57777224999154
+      },
+      {
+        "fold": 3,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 669,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 135.69407725002384,
+        "sec_pca_fit": 0.06215004198020324,
+        "sec_assemble": 0.007219542050734162,
+        "sec_rf": 135.62399129197001
+      },
+      {
+        "fold": 4,
+        "n_train": 873,
+        "n_test": 219,
+        "bseq_fit_rows": 664,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 136.28035604202887,
+        "sec_pca_fit": 0.057510375045239925,
+        "sec_assemble": 0.00708950002444908,
+        "sec_rf": 136.2150404159911
+      }
+    ],
+    "family_seed9000001": [
+      {
+        "fold": 0,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 689,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 133.87039875000482,
+        "sec_pca_fit": 0.06508299999404699,
+        "sec_assemble": 0.006502499978523701,
+        "sec_rf": 133.79805304197362
+      },
+      {
+        "fold": 1,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 671,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 134.08737920800922,
+        "sec_pca_fit": 0.06300895800814033,
+        "sec_assemble": 0.00697845802642405,
+        "sec_rf": 134.01664283301216
+      },
+      {
+        "fold": 2,
+        "n_train": 873,
+        "n_test": 219,
+        "bseq_fit_rows": 695,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 134.45954700000584,
+        "sec_pca_fit": 0.06793458299944177,
+        "sec_assemble": 0.007184749993029982,
+        "sec_rf": 134.38364608300617
+      },
+      {
+        "fold": 3,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 669,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 133.98316662502475,
+        "sec_pca_fit": 0.06268983299378306,
+        "sec_assemble": 0.007317792042158544,
+        "sec_rf": 133.91237245802768
+      },
+      {
+        "fold": 4,
+        "n_train": 873,
+        "n_test": 219,
+        "bseq_fit_rows": 664,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 136.09013674996095,
+        "sec_pca_fit": 0.05784645804669708,
+        "sec_assemble": 0.0069604580057784915,
+        "sec_rf": 136.02454266697168
+      }
+    ],
+    "family_seed9000002": [
+      {
+        "fold": 0,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 689,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 137.54709987499518,
+        "sec_pca_fit": 0.06481558398809284,
+        "sec_assemble": 0.00674387498293072,
+        "sec_rf": 137.4747645839816
+      },
+      {
+        "fold": 1,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 671,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 134.77366920904024,
+        "sec_pca_fit": 0.06435079203220084,
+        "sec_assemble": 0.0074266670271754265,
+        "sec_rf": 134.70115749997785
+      },
+      {
+        "fold": 2,
+        "n_train": 873,
+        "n_test": 219,
+        "bseq_fit_rows": 695,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 133.9838722079876,
+        "sec_pca_fit": 0.06823795899981633,
+        "sec_assemble": 0.00731958297546953,
+        "sec_rf": 133.9075651249732
+      },
+      {
+        "fold": 3,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 669,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 134.0331644580001,
+        "sec_pca_fit": 0.0624578749993816,
+        "sec_assemble": 0.007306959014385939,
+        "sec_rf": 133.96265541698085
+      },
+      {
+        "fold": 4,
+        "n_train": 873,
+        "n_test": 219,
+        "bseq_fit_rows": 664,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 133.99164895899594,
+        "sec_pca_fit": 0.05829120799899101,
+        "sec_assemble": 0.007484041037969291,
+        "sec_rf": 133.92509058403084
+      }
+    ]
+  },
+  "identity_control": {
+    "sec_wall_clock": 666.0673251670087,
+    "verdict": "PASS",
+    "fold_breakdown": [
+      {
+        "fold": 0,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 689,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 133.9858775419998,
+        "sec_pca_fit": 0.06508108298294246,
+        "sec_assemble": 0.007099625014234334,
+        "sec_rf": 133.91293466702336
+      },
+      {
+        "fold": 1,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 671,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 133.72306549997302,
+        "sec_pca_fit": 0.06319508398883045,
+        "sec_assemble": 0.007314959017094225,
+        "sec_rf": 133.6516447920003
+      },
+      {
+        "fold": 2,
+        "n_train": 873,
+        "n_test": 219,
+        "bseq_fit_rows": 695,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 132.5436546659912,
+        "sec_pca_fit": 0.06729754200205207,
+        "sec_assemble": 0.0070075420080684125,
+        "sec_rf": 132.46861849998822
+      },
+      {
+        "fold": 3,
+        "n_train": 874,
+        "n_test": 218,
+        "bseq_fit_rows": 669,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 132.47871350002242,
+        "sec_pca_fit": 0.061639083025511354,
+        "sec_assemble": 0.005511415947694331,
+        "sec_rf": 132.4108535000123
+      },
+      {
+        "fold": 4,
+        "n_train": 873,
+        "n_test": 219,
+        "bseq_fit_rows": 664,
+        "dim_M2b": 2124,
+        "rf_random_state": 42,
+        "sec_total": 133.2013830000069,
+        "sec_pca_fit": 0.05730833299458027,
+        "sec_assemble": 0.0069622499868273735,
+        "sec_rf": 133.1364227909944
+      }
+    ]
+  },
+  "wall_clock_sec": {
+    "per_permutation_all": [
+      669.1427193749696,
+      683.5622747500311,
+      672.7467698340188,
+      674.5883421669714
+    ],
+    "global": [
+      669.1427193749696,
+      683.5622747500311
+    ],
+    "family": [
+      672.7467698340188,
+      674.5883421669714
+    ],
+    "median_all": 673.6675560004951,
+    "min": 669.1427193749696,
+    "max": 683.5622747500311,
+    "median_global": 676.3524970625003,
+    "median_family": 673.6675560004951
+  },
+  "projection_2000_permutations": {
+    "definition": "NULL_B=1000 × 2 모드(global·family) = 2000 permutation, 단일 프로세스 순차",
+    "n_permutations": 2000,
+    "median_sec_per_perm": 673.6675560004951,
+    "total_sec_median": 1347335.1120009902,
+    "total_hours_median": 374.2597533336084,
+    "total_days_median": 15.59415638890035,
+    "total_hours_lower_bound_min": 371.74595520831645,
+    "total_hours_upper_bound_max": 379.75681930557283,
+    "note": "프로브 B=2의 표본이 작아 구간은 관측 min/max 기반의 거친 경계임."
+  },
+  "memory": {
+    "peak_rss_gb": 2.022309888,
+    "platform_rss_unit": "bytes"
+  },
+  "compute": {
+    "cpu_count": 18,
+    "rf_n_jobs_config": -1,
+    "rf_n_jobs_effective": 18,
+    "multioutput_wrapper": "MultiOutputClassifier(n_jobs=None → 370 PT 순차, 각 RF는 n_jobs=-1 병렬)",
+    "rf_share_of_fold_time": {
+      "min": 0.9994304756105575,
+      "max": 0.9995207260390659,
+      "median": 0.9994709948683046
+    },
+    "blas_env": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null
+    },
+    "threadpool_info": [
+      {
+        "internal_api": "openmp",
+        "prefix": "libomp",
+        "num_threads": 18
+      }
+    ]
+  },
+  "disk": {
+    "oof_npz_bytes_per_permutation": 554534,
+    "design_T_b_scalar_only": true,
+    "projected_bytes_T_b_only": 128000,
+    "projected_bytes_if_all_oof_saved": 1109068000,
+    "projected_gb_if_all_oof_saved": 1.109068,
+    "audit_exception": "최초 3개 permutation OOF만 감사용 보관, 나머지는 T_b 스칼라만 저장",
+    "actual_audit_oof_saved": 3
+  },
+  "null_incidence_report": {
+    "n_targets": 1191,
+    "n_drugs": 1092,
+    "n_edges": 12613,
+    "incidence_ratio": 0.009698040554463728,
+    "n_drugs_with_target": 847,
+    "frac_drugs_with_target": 0.7756410256410257,
+    "note": "eligible target = unique target(교환 단위). incidence_ratio = edges/(drugs×targets)."
+  },
+  "family_report": {
+    "n_families": 42,
+    "n_fixed_families_singleton_or_size2": 11,
+    "n_exchangeable_families": 31,
+    "n_fixed_targets": 13,
+    "n_exchangeable_targets": 1178,
+    "n_targets": 1191,
+    "fixed_target_frac": 0.0109151973131822,
+    "rule": "|family|≤2 → 원위치 고정(가능 permutation ≤2!·서열 미파괴); |family|≥3 → family 내 full permutation"
+  },
+  "target_structure": {
+    "n_unique_targets": 1191,
+    "n_targets_without_embedding_dropped": 0,
+    "n_families": 42,
+    "n_targets_multi_family_in_source": 14,
+    "n_targets_without_family": 0,
+    "tiebreak_rule": "표적이 복수 family에 속하면 family_id 문자열 사전순 최소값 1개를 교환 family로 배정(결정적·결과 무참조). B_fam(P-FAM) multi-hot 정의는 불변 — 본 규칙은 null 교환 단위 partition 전용.",
+    "source": "data/processed/target_mapping/10_target_family_biological.csv"
+  },
+  "cross_seed_independence": {
+    "global": {
+      "n_targets": 1191,
+      "n_identical_assignments_across_seeds": 0,
+      "frac_identical": 0.0
+    },
+    "family": {
+      "n_targets": 1191,
+      "n_identical_assignments_across_seeds": 42,
+      "frac_identical": 0.03526448362720403
+    }
+  },
+  "parallelization_diagnosis": {
+    "permutations_independent": true,
+    "evidence": "permutation은 seed만으로 결정(같은 seed→같은 mapping, assert 확인)되고 M1b는 permutation 불변이며 fold split은 고정 → b 간 상태 공유 0.",
+    "seed_determinism_verified": true,
+    "rf_dominates": "RF 학습이 fold 시간의 대부분(rf_share_of_fold_time) — PCA 재적합·행렬조립은 무시 가능. 따라서 permutation-불변 블록 캐싱은 실효 없음(측정으로 기각).",
+    "intra_rf_parallelism": "RF n_jobs=-1이 이미 전 코어 사용 → permutation 병렬화 시 코어 분할 필요(초선형 이득 없음)",
+    "unused_axis_multioutput_njobs": "MultiOutputClassifier(n_jobs=None) = 370 PT 순차 학습이 현재 미활용 병렬 축. 각 PT RF는 random_state=42 고정·상호 독립이므로 n_jobs 상향은 **수치 불변**(identity control로 재검증 가능). 본실행 전 1-permutation 마이크로벤치로 실측 권장 — 프로브에서는 미변경."
+  },
+  "not_performed": [
+    "empirical_p 호출·p 계산",
+    "T_obs와 T_b 비교",
+    "null 분포 시각화",
+    "NULL_B 변경·조기중단·재시도",
+    "bootstrap CI",
+    "sign-flip",
+    "SESOI/TOST",
+    "성공판정",
+    "반복 2·3 split 생성",
+    "M0/M1/M2/P-ID/P-FAM/C-CAP·GIN·late-fusion·shift",
+    "sealed 수치의 사람 열람",
+    "docs/30 수정",
+    "RF/PCA 하이퍼 변경"
+  ],
+  "elapsed_total_sec": 3368.3030929169618
+}

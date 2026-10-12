@@ -1,0 +1,25 @@
+{
+  "_doc": "R3 제2자 환경 명세 회신(메일 1 한 줄 명령 출력) — 원문 값 그대로. PII 없음(hostname·경로 미포함). 기록: cowork 2026-09-10.",
+  "source": {
+    "kind": "email_reply_plaintext",
+    "reply_message_id": "<GMAIL-MSGID>",
+    "reply_received_kst": "2026-09-10 20:36:40",
+    "thread_id": "<GMAIL-MSGID>",
+    "request_message_id": "<GMAIL-MSGID>",
+    "request_sent_kst": "2026-09-10 16:03:50",
+    "request_note": "사용자 리마인드 재발송본(메일 1 문면 재사용, 신규 스레드). 원 메일 1 = <GMAIL-MSGID> / 스레드 <GMAIL-MSGID> (회신 없음)",
+    "second_party": "<SECOND-PARTY>",
+    "second_party_request": "후속 요청은 새 메일이 아니라 이 스레드 답장으로 보내 달라"
+  },
+  "collector": "docs/96 §3 한 줄 명령 (collect_env.py 아님 → host_id·os_cpu_count·BLAS·thread_env 미수집)",
+  "env": {
+    "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 158 Stepping 12, GenuineIntel",
+    "numpy": "2.4.0",
+    "sklearn": "not installed",
+    "scipy": "1.16.3"
+  },
+  "ledger_status": "미기입 — 블록 AO(docs/103) 게이트가 ledger sha16 068c3cf18cf65008·correspondence 22 를 상수로 잡고 있어 AO 완료 후 기입"
+}

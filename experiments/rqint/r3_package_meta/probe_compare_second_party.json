@@ -1,0 +1,48 @@
+{
+  "_doc": "R3 프로브(메일 2) 제2자 회수 결과 대조 — cowork 2026-09-10. ★ R3 판정 아님(프로브 = 플랫폼 적합성 전용, r3_second_party_freeze.json probe_package._doc).",
+  "source": {
+    "sent_message_id": "<GMAIL-MSGID>",
+    "sent_kst": "2026-09-10 21:29:42",
+    "reply_message_id": "<GMAIL-MSGID>",
+    "reply_kst": "2026-09-10 23:16:36",
+    "thread_id": "<GMAIL-MSGID>",
+    "files_sha256": {
+      "env_second_party_e2c3a7fa6723.json": "7a404edba225af64be7c4f3dbcf9014b2aaf39bd04c3fe8023e0df8a31065106",
+      "probe_result_second_party.json": "a9b453745fa9373ba3aec672a5c4157403861aab69acca35084431cb88775189",
+      "probe_numeric_core_second_party.sha256": "397266971a5636ede1e3a947a42959018e43d10f8d4d0925d305a06aa6fb4ec1"
+    }
+  },
+  "second_party_env": {
+    "python": "3.12.9",
+    "numpy": "2.5.0",
+    "sklearn": "1.9.0",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "blas": "scipy-openblas 0.3.33.112.0",
+    "note": "메일 1 회신(3.14.2/np2.4.0)과 다름 — venv 를 'python'(=3.12.9)으로 생성했기 때문으로 보임. 본 드라이런은 같은 r3env 사용 요청할 것"
+  },
+  "local_reference": {
+    "numeric_core_sha256": "3745438643aa1c53a3356813a2c85dcad52b0f23b8e8025202ed252ec06919f4",
+    "canonical_bytes": 12774,
+    "env": "macOS arm64 / Accelerate / py3.14.4 / np2.5.0",
+    "file": "probe_numeric_core_local.sha256"
+  },
+  "stage1_like_byte_identity": {
+    "second_party_sha256": "8b5fb0bf28c4131ed6be045fe3d9bc347476fb3d599ec9e14cd7c07089360a96",
+    "canonical_bytes": 12794,
+    "identical": false
+  },
+  "cause_of_mismatch": {
+    "finding": "code_scan 파일 라벨의 경로 구분자만 다름 — run_rqint_probe.py:134 os.path.join('sap', f) 가 Windows 에서 'sap\\\\x.py' 생성",
+    "occurrences": 20,
+    "where": [
+      "/code_scan/per_file 키 14개",
+      "/code_scan/s2_string_literal_hits[i]/file 6개"
+    ],
+    "byte_delta": "+20 B (JSON 이스케이프 \\\\ 1자 추가 × 20)",
+    "other_non_excluded_differences": 0,
+    "after_separator_normalization_sha256": "3745438643aa1c53a3356813a2c85dcad52b0f23b8e8025202ed252ec06919f4",
+    "after_normalization_identical": true
+  },
+  "numeric_values": "R6 6항 pass·T_obs·Δ·p·d6 키 등 모든 수치 필드 = 로컬과 비트 동일(구분자 정규화 후 해시 일치로 입증)",
+  "implication_for_main_dry_run": "본 드라이런 대상 run_rqint_audit.py 는 NEW_FILES 리터럴 'sap/rqint.py' 사용(L36) → 이 결함 없음. 본 패키지 러너를 새로 만들 때 라벨에 os.path.join 금지(리터럴 '/' 또는 as_posix)."
+}

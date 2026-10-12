@@ -1,0 +1,666 @@
+{
+  "_schema": "rqint_downstream_spec/1.0",
+  "_doc": "RQ-int 후속 계산(블록 113~116) 실행 명세. 블록 AV(docs/112)에서 **확증 지표가 하나도 산출되기 전에** 동결한다. 이 파일에는 확증 입력에서 유래한 수치가 **하나도 없다** — 들어 있는 수치는 검토자 문면, 라벨 무관 설계량(scaffold 군 구성·G_eff), 기존 공개 산출물의 호출 파라미터, 코드 상수뿐이다.",
+  "spec_id": "rqint_downstream_spec_v1",
+  "version": "1.0",
+  "block": "AV (docs/112)",
+  "frozen_at_kst": "2026-09-23",
+  "status": "frozen",
+  "frozen_once_then_immutable": true,
+  "is_authorization": false,
+  "is_sap_freeze": false,
+  "modifies_sap_manifest": false,
+  "relation": "SAP 1.2 가 반영하지 못한 검토자 요구 D11·D12 의 실행 명세를, 확증 지표 산출 이전에 사전지정한다. SAP 1.2 문면·manifest·11모듈은 0바이트 불변이며 본 파일은 그 아래 계층의 실행 명세다.",
+  "prespecified_before": "GIN consensus·macro AP·Δ 산출(블록 113) 이전",
+  "upper_level_decisions_this_spec_implements": {
+    "note": "상위 «결정 문면» 은 이미 존재한다. 본 파일은 그 재지정이 아니라 «실행» 명세다. P7 전수 검색(docs/112 §3-0)에서 입력 경로·출력 스키마·수식·호출규약을 갖춘 실행 명세는 저장소 어디에도 없음이 실측됐다.",
+    "source_file": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+    "source_status": "decisions_recorded_not_frozen",
+    "D11": {
+      "decision_verbatim": "레버리지 진단 λ_k (k=1,2,10)·ρ 사전규정. 게이트 아님, 보고·주석용",
+      "reviewer_section": "§3(a)",
+      "our_status_in_v0": "new_blocked_on_gin"
+    },
+    "D12": {
+      "decision_verbatim": "민감도 분석 2종 — (i) no-scaffold 버킷 싱글톤 분해 (ii) 벤젠군 사전규정 결정적 2분할(정규화 SMILES 사전순). 폴드 배정 불변",
+      "reviewer_section": "§3(b)",
+      "our_status_in_v0": "new"
+    },
+    "D22": {
+      "source": "docs/100_sap_1_2_amendment.md §7",
+      "verbatim": "`e_g` 프로파일에 기반한 **선형화 부호뒤집기 검정은 보조 진단으로만** 사용한다."
+    }
+  },
+  "evidence_of_blindness": {
+    "sealed_counts_at_freeze": {
+      "n_sealed_dirs": 29,
+      "n_sealed_files_total": 727,
+      "n_sealed_artifacts": 707,
+      "n_access_log": 20
+    },
+    "confirmatory_3tree_stat_fingerprint": "5440aefcded112bcd425f61968f9974898f26efe2beab69155f7a5a47cf3333b",
+    "stability_1tree_stat_fingerprint_at_entry": "dd546d64bffc265246005937e97d0d8dbaf8ac21e71ee01788c8bcd1d90f5267",
+    "fingerprint_rule": "대상 `_sealed` 트리의 모든 파일에 대해 '<저장소 루트 기준 상대경로>\\t<바이트>' 줄 → 파이썬 기본 문자열 정렬(코드포인트) → '\\n'.join + '\\n' → UTF-8 → sha256. 파일을 열지 않는다.",
+    "consensus_directories_present": 0,
+    "unblinding_performed": false,
+    "blocking_flags_gin_start_still_blocked": "3/3 true (①②③)",
+    "access_ledger_modified": false,
+    "what_this_block_actually_read": [
+      "검토자 회신 docx 문면(word/document.xml)",
+      "동결 JSON·코드 파일의 문면과 해시",
+      "data/processed/master_X.parquet 의 SMILES (라벨 무관 설계량 재계산 — master_Y 미접근)",
+      "기존 공개 산출물의 호출 파라미터(B·seed·unit·CI 방법)",
+      "봉인 파일의 stat(이름·바이트) 및 checkpoint.jsonl 1종의 sha256(기계 판독)"
+    ],
+    "confirmatory_values_read": 0
+  },
+  "reviewer_verbatim_formulas": {
+    "source": {
+      "path": "RQint_Reviewer_Response_<EXTERNAL-REVIEWER>_20260810.docx",
+      "sha256": "0c29ddf201eb6751a47f420d0c405fdafd0a6baf0ae7705059b0a85fa296aa99",
+      "bytes": 63649,
+      "n_oMath": 135
+    },
+    "canonical_crosscheck": "부록 A(«Word 삽입용 수식»)의 선형식·LaTeX 평문이 정본 대조본이다. OMML 복원결과는 반드시 그 문자열과 대조한다.",
+    "extract_artifact": "experiments/runs/v3_rqint_downstream_spec/reviewer_verbatim_extract.json",
+    "n_unresolved": 0,
+    "d_F_g": {
+      "omml_restored": "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}",
+      "appendix_item": "A4",
+      "appendix_linear_input": "d_(F,g)=1/2 [Δ_F (0)-Δ_F (1_g )],  e_g=d_(\"RF\",g)-d_(\"GIN\",g)",
+      "appendix_latex": "d_{F,g}=\\frac12[\\Delta_F(\\mathbf 0)-\\Delta_F(\\mathbf 1_g)],\\quad e_g=d_{\\mathrm{RF},g}-d_{\\mathrm{GIN},g}",
+      "reviewer_section": "2.3",
+      "paragraph_index": 41
+    },
+    "e_g": {
+      "omml_restored": "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}",
+      "appendix_item": "A4",
+      "appendix_linear_input": "d_(F,g)=1/2 [Δ_F (0)-Δ_F (1_g )],  e_g=d_(\"RF\",g)-d_(\"GIN\",g)",
+      "appendix_latex": "d_{F,g}=\\frac12[\\Delta_F(\\mathbf 0)-\\Delta_F(\\mathbf 1_g)],\\quad e_g=d_{\\mathrm{RF},g}-d_{\\mathrm{GIN},g}",
+      "reviewer_section": "2.3",
+      "paragraph_index": 41
+    },
+    "T_z_hajek": {
+      "omml_restored": "Δ_F(z)≈∑_{g=1}^G (1-2z_g) d_{F,g},  T(z)≈∑_{g=1}^G (1-2z_g) e_g",
+      "appendix_item": "A5",
+      "appendix_linear_input": "T(z)≈∑_(g=1)^G (1-2z_g ) e_g",
+      "appendix_latex": "T(z)\\approx\\sum_{g=1}^{G}(1-2z_g)e_g",
+      "reviewer_section": "2.3",
+      "paragraph_index": 43
+    },
+    "lambda_k": {
+      "omml_restored": "λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2) (k=1,2,10),  ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))",
+      "appendix_item": "A11",
+      "appendix_linear_input": "λ_k=(∑_(g∈T_k) e_g^2 )/(∑_(g=1)^G e_g^2 )",
+      "appendix_latex": "\\lambda_k=\\frac{\\sum_{g\\in\\mathcal T_k}e_g^{2}}{\\sum_{g=1}^{G}e_g^{2}}",
+      "reviewer_section": "3(a)",
+      "paragraph_index": 88
+    },
+    "rho": {
+      "omml_restored": "λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2) (k=1,2,10),  ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))",
+      "appendix_item": "A12",
+      "appendix_linear_input": "ρ=|T_\"obs\" -∑_(g=1)^G e_g |/√(∑_(g=1)^G e_g^2 )",
+      "appendix_latex": "\\rho=\\frac{|T_{\\mathrm{obs}}-\\sum_{g}e_g|}{\\sqrt{\\sum_{g}e_g^{2}}}",
+      "reviewer_section": "3(a)",
+      "paragraph_index": 88
+    },
+    "G_eff": {
+      "omml_restored": "G_{eff}=((∑_{g=1}^G n_g)^2)/(∑_{g=1}^G n_g^2)=85.3",
+      "appendix_item": "A10",
+      "appendix_linear_input": "G_\"eff\" =(∑_(g=1)^G n_g )^2/(∑_(g=1)^G n_g^2 )",
+      "appendix_latex": "G_{\\mathrm{eff}}=\\frac{(\\sum_{g=1}^{G}n_g)^2}{\\sum_{g=1}^{G}n_g^{2}}",
+      "reviewer_section": "3(c)",
+      "paragraph_index": 93
+    },
+    "p_two_sided": {
+      "omml_restored": "p_{two-sided}=(1+∑_{b=1}^B I(|Δ_b|≥|Δ_{obs}|))/(B+1)",
+      "appendix_item": "A7",
+      "appendix_linear_input": "p=(1+∑_(b=1)^B I(|T_b |≥|T_\"obs\" |))/(B+1)",
+      "appendix_latex": "p=\\frac{1+\\sum_{b=1}^{B}\\mathbb I(|T_b|\\ge|T_{\\mathrm{obs}}|)}{B+1}",
+      "reviewer_section": "9.1",
+      "paragraph_index": 218
+    },
+    "se_p_hat": {
+      "omml_restored": "SE(p̂)=√((p̂ (1-p̂))/(B))≈0.00084",
+      "appendix_item": "A8",
+      "appendix_linear_input": "SE(p\\hat )=√((p\\hat (1-p\\hat ))/B)",
+      "appendix_latex": "\\mathrm{SE}(\\hat p)=\\sqrt{\\hat p(1-\\hat p)/B}",
+      "reviewer_section": "9.2",
+      "paragraph_index": 222
+    },
+    "holm_adjusted": {
+      "omml_restored": "p̃_{(k)}=max_{j≤k}[(8-j) p_{(j)}],  k=1,…,7",
+      "appendix_item": "A9",
+      "appendix_linear_input": "p\\tilde _((k))=max_(j≤k) [(8-j) p_((j)) ]",
+      "appendix_latex": "\\tilde p_{(k)}=\\max_{j\\le k}[(8-j)p_{(j)}]",
+      "reviewer_section": "5.1",
+      "paragraph_index": 120
+    },
+    "T_k_definition_verbatim": "여기서 T_k 는 |e_g| 가 큰 상위 k 개 군의 집합입니다.",
+    "T_k_definition_paragraph_index": 89,
+    "T_k_is_unambiguous": true,
+    "T_k_no_signed_variant": "λ_k^signed 는 만들지 않는다 — 검토자가 요구한 적 없는 양이며 OMML `m:d`(m:begChr='|')와 부록 A11·A12 가 절댓값을 명시한다.",
+    "rho_is_not_a_gate_verbatim": "ρ 는 게이트로 사용하지 말고 보고 및 주석용으로만 사용하십시오(결과 의존적 분기 회피)."
+  },
+  "design_quantities_label_free": {
+    "provenance": "data/processed/master_X.parquet 의 smiles_canonical 에서 재계산. 라벨(master_Y)·확증 예측 미접근이므로 개봉이 아니다.",
+    "scaffold_definition": "RDKit MurckoScaffold.MurckoScaffoldSmiles(mol=..., includeChirality=False); 실패·무고리 → ''",
+    "same_as": "pipeline/src/step6_scaffold_split.py · v3_Multimodal/src/confirmatory_oof_rep1.py scaffold_of()",
+    "n_drugs": 1092,
+    "n_groups_G": 732,
+    "kish_G_eff": 85.34669338677355,
+    "kish_G_eff_matches_reviewer_85_3": true,
+    "kish_G_eff_matches_A2_split_diagnostics": true,
+    "empty_scaffold_group_size": 77,
+    "max_group_scaffold": "c1ccccc1",
+    "max_group_size": 78,
+    "max_group_frac": 0.07142857142857142,
+    "reviewer_verbatim_benzene": "벤젠군(78개, 7.1%)과 no-scaffold군(77개)",
+    "n_singleton_groups": 627,
+    "corroborating_sources": [
+      "experiments/audits/A2_split_diagnostics.json",
+      "experiments/rqint/_parts/profile.json"
+    ]
+  },
+  "S1_metrics_contract": {
+    "executed_in_block": 113,
+    "inputs": {
+      "gin_oof": {
+        "pattern": "experiments/runs/v3_gin_confirm_rep{r}_seed{s}/_sealed/oof_{model}_seed{t}.npz",
+        "rep_seed_pairs": {
+          "1": 201,
+          "2": 202,
+          "3": 203
+        },
+        "models": [
+          "C-CAP",
+          "M0",
+          "M1",
+          "M1b",
+          "M2b",
+          "P-FAM",
+          "P-ID"
+        ],
+        "t_values": [
+          42,
+          1,
+          2
+        ],
+        "n_files": 63
+      },
+      "rf_consensus_absolute_paths": [
+        "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+        "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz"
+      ],
+      "rf_consensus_filename_note": "RF 선례 파일명은 시드 접미사가 «없다»(consensus_M1b.npz).",
+      "labels": "data/processed/master_Y.parquet",
+      "folds": "확증 split(seed 201/202/203) 의 fold 배정 — 하네스가 기록한 것을 그대로 쓴다. 재생성 금지."
+    },
+    "delta_rf_is_not_a_cell": {
+      "rule": "Δ_RF 는 S1 의 셀이 아니다. 블록 115 의 `sap.rqint.observed_statistic` 이 위 RF consensus 행렬에서 **재계산**한다.",
+      "reason": "두 family 의 eligible_pt·undefined 회계를 동일 경로로 맞추기 위함.",
+      "forbidden": "봉인 RF metrics_full.json 을 판독하지 않는다."
+    },
+    "aggregation": {
+      "repeat_axis": "prediction-then-metric (양 family 공통)",
+      "seed_axis": "metric-then-average (GIN 전용)",
+      "consensus_operator": "sap.consensus.build_consensus 를 그대로 호출(재구현 0)",
+      "reviewer_verbatim_4_1": "정리: repeat 축 = prediction-then-metric (양 모델군 공통), seed 축 = metric-then-average (GIN 전용).",
+      "noncommutativity_verbatim_appendix": "T(z)\\approx\\sum_{g=1}^{G}(1-2z_g)e_g"
+    },
+    "notation_freeze": {
+      "seed_t_is_training_seed_value": true,
+      "confirmatory_t_domain": [
+        42,
+        1,
+        2
+      ],
+      "source": "v3_Multimodal/config/gin_seed_freeze.json confirmatory_seed_prefix",
+      "s_is_order_index": {
+        "1": 42,
+        "2": 1,
+        "3": 2
+      },
+      "rule": "파일명·키의 `seed{t}` 의 t = 학습 시드 «값». Δ_GIN,s 의 s = 그 순서 인덱스. 두 표기를 섞어 쓰지 않는다."
+    },
+    "cells_frozen_here_no_additions_later": {
+      "cell_1_seed_consensus_macro_ap": {
+        "count": 21,
+        "definition": "seed별 consensus 7모델 macro AP (7 models × 3 seeds)"
+      },
+      "cell_2_delta_gin_per_seed": {
+        "count": 3,
+        "definition": "Δ_GIN,s = AP(M2b) − AP(M1b), s = 1,2,3"
+      },
+      "cell_3_delta_gin": {
+        "count": 1,
+        "definition": "Δ_GIN = mean_s Δ_GIN,s"
+      },
+      "cell_4_auxiliary_sealed_per_repeat": {
+        "count": 63,
+        "definition": "7 models × 3 seeds × 3 repeats"
+      },
+      "delta_direction": "M2b − M1b 고정"
+    },
+    "macro_ap_rules": {
+      "operator": "sap.metrics.macro_ap",
+      "eligible_pt": "np.arange(370) 을 **명시 호출**한다 (eligible_pt=None 금지 — None 이면 전체 K열을 쓴다)",
+      "shape_assert": "assert P.shape[1] == 370",
+      "why_explicit": "sap.metrics.macro_ap 는 eligible_pt=None 이면 전체 K열을 적격으로 본다(우연히 K=370). 명시 호출로 고정한다.",
+      "undefined_rule": "셀 내 양성 0 PT 제외(가변 분모). AP=0 대입 금지.",
+      "per_cell_record": [
+        "n_eval",
+        "n_excluded_undefined"
+      ]
+    },
+    "outputs": {
+      "dir": "experiments/runs/v3_gin_confirm_consensus_rep123/",
+      "dir_source_verbatim": "gin_confirm_harness_freeze_v2.json spec.a_run_directories.consensus",
+      "consensus_files": "_sealed/consensus_{model}_seed{t}.npz",
+      "consensus_filename_convention_note": "RF 선례는 `consensus_{model}.npz` 다. GIN 은 시드 축이 있어 `_seed{t}` 를 붙여 확장한다. 이 관례를 여기 못박아 블록 113 이 재작명하지 않게 한다.",
+      "metrics": "_sealed/metrics_full.json",
+      "metrics_precision": "반올림 금지. float 는 repr 왕복 가능한 전체 정밀도로 기록한다.",
+      "access_log": "_sealed/access.log"
+    },
+    "invalidation_rules_value_independent": [
+      "입력 sha 불일치",
+      "행 순서/cid_order 불일치",
+      "비유한 값",
+      "OOF 결손",
+      "셀 수 불일치"
+    ],
+    "invalidation_consequence": "전체 무효·상신. 불리한 셀만 재생성하거나 제외하는 것은 금지한다.",
+    "access_ledger_rule": "조회행 1줄 추가 · type=machine_read · human_exposure=false · Δ·부호 «미산출» 명시 · 사람 열람 0 (G6)"
+  },
+  "S2_d11_leverage": {
+    "executed_in_block": 114,
+    "is_gate": false,
+    "purpose_verbatim": "게이트 아님, 보고·주석용",
+    "e_g_definition_verbatim": "d_(F,g)=1/2 [Δ_F (0)-Δ_F (1_g )],  e_g=d_(\"RF\",g)-d_(\"GIN\",g)",
+    "e_g_definition_is_exact_not_approximate": true,
+    "e_g_computation_derived": {
+      "identity": "T(z^{(g)}) = T_obs − 2·e_g  ⟹  e_g := (T_obs − T(z^{(g)})) / 2",
+      "status": "도출(축자와 동치). 합성에서 두 경로의 수치 일치를 assert 한다(T3).",
+      "implementation": "sap.rqint._apply_swap · sap.rqint.observed_statistic 을 그대로 호출(재구현 0)"
+    },
+    "cost": {
+      "macro_ap_calls": "G × 8 = 732 × 8",
+      "reviewer_estimate_verbatim": "약 13분"
+    },
+    "lambda_k": {
+      "formula_verbatim": "λ_k=(∑_(g∈T_k) e_g^2 )/(∑_(g=1)^G e_g^2 )",
+      "k_values": [
+        1,
+        2,
+        10
+      ],
+      "T_k": "|e_g| 가 큰 상위 k 개 군의 집합 (검토자 §3(a) 축자)",
+      "key_name": "lambda_k",
+      "monotonicity_assert": "0 ≤ λ_1 ≤ λ_2 ≤ λ_10 ≤ 1"
+    },
+    "rho": {
+      "formula_verbatim": "ρ=|T_\"obs\" -∑_(g=1)^G e_g |/√(∑_(g=1)^G e_g^2 )",
+      "numerator_has_absolute_value": true,
+      "interpretation_verbatim": "§2.3의 1차 근사 논증이 실제로 성립하는 정도",
+      "must_not_be_a_gate": true
+    },
+    "inputs": {
+      "consensus_matrices": 8,
+      "labels": "master_Y",
+      "scaffold_group": 732
+    },
+    "outputs": {
+      "sealed": "leverage_diagnostics.json",
+      "contains": [
+        "전 e_g 프로파일(G=732)",
+        "lambda_k (k=1,2,10)",
+        "rho",
+        "T_obs"
+      ],
+      "public_allowed": [
+        "완료 여부 불리언",
+        "개수",
+        "해시",
+        "wall_seconds"
+      ]
+    },
+    "no_result_dependent_branching": "λ·ρ 값으로 주 검정·판정·집계·모델선택을 바꾸지 않는다.",
+    "invalidation_rules": "무결성 사유만(입력 sha·행 순서·비유한 값). 값을 보고 무효화하지 않는다."
+  },
+  "S3_d12_sensitivity": {
+    "executed_in_block": 115,
+    "reviewer_verbatim": "주 분석은 frozen 정의를 유지하되, 민감도 분석으로 (i) no-scaffold 버킷의 싱글톤 분해, (ii) 벤젠군의 사전규정된 결정적 2분할(예: 정규화 SMILES 사전순)을 병기하십시오. 폴드 배정은 변경하지 않으므로 누출 방지 성질은 그대로 유지됩니다.",
+    "does_not_replace_primary": true,
+    "i_no_scaffold_singleton_split": {
+      "target": "scaffold 문자열이 **빈 문자열**인 버킷(비고리형 + 파싱 실패)",
+      "n_drugs_in_bucket": 77,
+      "rule": "그 버킷의 각 약물을 독립 군으로 분해한다",
+      "G_prime": 808,
+      "arithmetic": "G' = 732 − 1 + 77 = 808",
+      "fold_assignment_unchanged": true,
+      "bucket_cids_sha256": "bd99dfa392442ccf888cf5842c1e074fea52d9487efa000c270060955284765f"
+    },
+    "ii_benzene_deterministic_bisection": {
+      "target_scaffold": "c1ccccc1",
+      "n_drugs_in_group": 78,
+      "sort_key": "정규화 SMILES(master_X.smiles_canonical) 사전순, 동률 시 cid 오름차순",
+      "rule": "정렬 후 앞 절반 / 뒤 절반. 홀수면 앞쪽이 1 많다.",
+      "n_first": 39,
+      "n_second": 39,
+      "first_cids_sha256": "63d8049de17a9dbd83e299d8e114fdba95026308410e4ab714cd3aaf779b9444",
+      "second_cids_sha256": "9879e90d7abb4309c1f8405d15ab0910e4c4726e932f20e21bd0ea67f86fa883",
+      "G_second": 733,
+      "arithmetic": "G'' = 732 + 1 = 733",
+      "deterministic": true,
+      "fold_assignment_unchanged": true
+    },
+    "permutation_scale": {
+      "B": 100000,
+      "same_as_primary": true,
+      "reference_distribution": 200000,
+      "pair_complement": true
+    },
+    "reporting": "주 분석 p 와 **병기**한다. 주 분석을 대체하지 않는다.",
+    "asserts": [
+      "폴드 배정 불변",
+      "군 재구성 전후 행 집합 동일",
+      "라벨 행렬 불변"
+    ],
+    "no_result_dependent_branching": "민감도 결과로 주 검정·판정·집계·모델선택을 바꾸지 않는다."
+  },
+  "S4_holm8_main_run": {
+    "executed_in_block": 115,
+    "B": 100000,
+    "B_definition": "B = 동전 벡터 수 (n_coin_vectors)",
+    "reference_distribution": 200000,
+    "pair_complement": true,
+    "B_is_inherited_not_newly_specified": {
+      "source": "v3_Multimodal/config/rqint_procedure_decisions_v1.json closures[id='b_monte_carlo_sample_size_and_definition']",
+      "decided_by": "사용자 확정 2026-08-24",
+      "frozen_in": "R2 동결",
+      "note": "본 명세는 신규 지정이 아니라 그 승계다."
+    },
+    "sidedness": "two-sided",
+    "p_formula_implementation_verbatim": "p = (1.0 + count) / (n_permutation_values + 1.0), count = sum(abs(perm) >= abs(T_obs) - _EPS)",
+    "p_formula_reviewer_verbatim": "p=(1+∑_(b=1)^B I(|T_b |≥|T_\"obs\" |))/(B+1)",
+    "eps": 1e-12,
+    "eps_source": "sap.rqint._EPS",
+    "monte_carlo_se": {
+      "required": true,
+      "formula_verbatim": "SE(p\\hat )=√((p\\hat (1-p\\hat ))/B)",
+      "decision": "D15"
+    },
+    "coin_sharing_D4": "동일 동전 z^(b) 를 3 seed × 3 repeat 전체에 공동 적용",
+    "consensus_outside_loop_D5": "consensus 8행렬은 순열 루프 밖에서 1회 산출",
+    "commutativity_unit_test_required": true,
+    "commutativity_verbatim_4_2": "팔 교환은 행 단위 치환이고 repeat 평균은 동일 팔에 대한 행 단위 선형연산이므로, consensus 행렬에 교환을 적용한 결과와 교환 후 평균한 결과가 동일합니다.",
+    "rng": {
+      "generator": "np.random.default_rng(seed)",
+      "seed_fixed_in_run_config": true,
+      "repeat_index_determinism": "반복 인덱스는 결정적이어야 한다(재개 시 동일 순서 재현)"
+    },
+    "checkpointing": {
+      "interval_required": true,
+      "resume_rule": "체크포인트 지점부터 이어서 실행. 재개가 난수열을 바꾸면 안 된다."
+    },
+    "progress_display_rule": "진행률은 반복 개수와 시간만. 중간 p·T·히스토그램 표시 금지.",
+    "invalidation_rules": "값과 무관한 무결성 사유만.",
+    "adjudication": {
+      "rule": "Holm 조정 p 단독 (D7)",
+      "non_significant_verbatim": "A non-significant RQ-int is reported as inconclusive and must not be interpreted as evidence of equal sequence effects across model families.",
+      "D8": "비유의 = inconclusive 문장",
+      "D14_dual_reporting": {
+        "required": true,
+        "판1": "구현 p",
+        "판2": "해당 슬롯 p=1.0 폴백판",
+        "rule": "두 판을 모두 산출하고, 결론이 다른 항목은 본문에 명시한다."
+      },
+      "D17": "실패 시 슬롯 p = 1.0",
+      "D19_three_rung_ladder": {
+        "tau": 0.02,
+        "power": 0.735,
+        "rung": "중간단 (0.50~0.80)",
+        "rule": "0.80 미달이므로 관례적 충족을 주장하지 않는다 — 검정력 0.735 를 그대로 병기하고 유보문장을 함께 싣는다.",
+        "source": "docs/100_sap_1_2_amendment.md §5"
+      },
+      "D22": "선형화 부호뒤집기는 **보조 진단 한정**."
+    },
+    "holm_family": {
+      "operator": "sap.decision.holm",
+      "family_size_fixed": 7,
+      "labels_slots_2_to_8": [
+        "M2b-P-ID",
+        "M2b-P-FAM",
+        "M2b-realloc_null",
+        "M2b-M0",
+        "M2b-RF_tuned",
+        "RFseq-RF",
+        "RQ-int"
+      ],
+      "manifest": "sap.decision.MULTIPLICITY_MANIFEST (②~⑧)",
+      "undefined_fill": 1.0,
+      "alpha": 0.05,
+      "multiplier_identity": "구현 (m − rank) × p, m=7, rank 0-기반 == 검토자 축자 (8 − j) × p_(j), j 1-기반",
+      "multiplier_verbatim": "p\\tilde _((k))=max_(j≤k) [(8-j) p_((j)) ]",
+      "no_reselection": "①~⑦ 의 기존 p·계산규칙을 재선택하지 않는다. 값이 들어온 뒤 정렬·조정 방식을 바꾸지 않는다."
+    }
+  },
+  "S5_d9_delta_bca": {
+    "executed_in_block": 115,
+    "operator": "sap.bootstrap.paired_scaffold_bootstrap",
+    "call_convention": {
+      "unit": "scaffold_cluster",
+      "alpha": 0.05,
+      "B": 10000,
+      "seed": 6001
+    },
+    "B_seed_provenance": {
+      "measured_from_public_artifacts": [
+        "experiments/runs/v3_stratification/stratification_public.json",
+        "experiments/runs/v3_stratification_axes/axes_public.json",
+        "experiments/runs/v3_stratification_pid/stratification_pid_public.json"
+      ],
+      "observed": {
+        "B": 10000,
+        "seed_bootstrap": 6001,
+        "bootstrap_unit": "scaffold_cluster",
+        "primary_ci_method": "BCa"
+      },
+      "note": "RF 확증 계열에서 실제 사용된 값을 공개 산출물에서 실측해 동일하게 고정했다. 모듈 기본값은 B=10000, seed=0 이나, 실측된 seed 6001 을 따른다."
+    },
+    "ci_rule": "BCa primary · percentile 대체 금지 · 실패 시 not_estimable 그대로 봉인",
+    "reporting": "Δ_RF·Δ_GIN 및 각각의 BCa 를 **유의성과 무관하게 항상 병기**한다.",
+    "reporting_verbatim": "등록문언 'if significant, report effects separately by model family'와 별개로, Δ_RF 와 Δ_GIN 및 각각의 BCa 구간은 유의성과 무관하게 항상 병기하십시오.",
+    "not_used_for_adjudication": true,
+    "not_used_verbatim": "BCa 구간은 보고하되 판정 조건에 넣지 마십시오.",
+    "candidate_C_excluded_from_adjudication": "후보 C 는 판정에서 제외 (§2.5 축자)",
+    "direction_mismatch_rule": "Δ 와 CI 의 방향이 어긋나도 유리한 쪽을 선택하지 않는다."
+  },
+  "S6_stability_15cell_ss": {
+    "executed_in_block": 116,
+    "execution_timing": "Holm ⑧ 봉인 **이후**",
+    "why_after": "firewall 을 시간 순서로 입증한다. 명세는 블록 AV 에서 미리 동결하되, 실행은 주 검정이 봉인된 뒤다.",
+    "firewall_verbatim": "Stability results must not change the primary results, hypothesis adjudication, model/hyperparameter/seed selection, or the aggregation method. Stability outputs are written to a directory separate from the confirmatory run outputs.",
+    "cells": {
+      "representative_units": [
+        [
+          201,
+          "f4"
+        ],
+        [
+          202,
+          "f1"
+        ],
+        [
+          203,
+          "f0"
+        ]
+      ],
+      "seeds": 5,
+      "n_cells": 15
+    },
+    "inputs": {
+      "confirmatory_partial": "experiments/runs/v3_gin_confirm_rep{r}_seed{s}/_sealed/_partial/{model}_fold{k}_seed{t}.npz",
+      "confirmatory_t_domain": [
+        42,
+        1,
+        2
+      ],
+      "stability_partial": "experiments/runs/v3_gin_stability/_sealed/_partial/{model}_rep{r}_fold{k}_seed{t}.npz",
+      "stability_t_domain": [
+        3,
+        4
+      ],
+      "note": "두 스키마가 다르다(안정성만 rep 접두가 파일명에 있다). 둘 다 명세에 박는다."
+    },
+    "fold_level_delta": "Δ_ij = macroAP_ij(M2b) − macroAP_ij(M1b)",
+    "analysis": "서술적 two-way SS 분해",
+    "reported": [
+      "SS_unit/SST",
+      "SS_seed/SST",
+      "SS_res/SST",
+      "unit별 seed 평균/SD/범위",
+      "15셀 값",
+      "셀별 n_eval",
+      "셀별 n_excluded_undefined"
+    ],
+    "sst_zero_rule": "SST = 0 이면 비율을 정의하지 않고 not_defined 로 기록한다(0 나눗셈 금지).",
+    "forbidden": [
+      "REML",
+      "ICC",
+      "분산성분 추정",
+      "유의성 검정",
+      "확증 CI"
+    ],
+    "descriptive_only": true,
+    "no_result_dependent_branching": "SS 결과로 주 검정·판정·집계·모델선택을 바꾸지 않는다."
+  },
+  "S7_public_sealed_boundary_and_access_ledger": {
+    "boundary": [
+      {
+        "artifact": "consensus 예측 행렬",
+        "before_unblinding": "봉인",
+        "reason": "라벨과 결합하면 지표 재계산이 가능하다"
+      },
+      {
+        "artifact": "metrics_full.json (AP·Δ·best_ep·best_v)",
+        "before_unblinding": "전부 봉인"
+      },
+      {
+        "artifact": "λ·ρ·e_g 프로파일 · D12 결과",
+        "before_unblinding": "봉인",
+        "public_allowed": "완료 여부 불리언만"
+      },
+      {
+        "artifact": "순열 참조분포·히스토그램",
+        "before_unblinding": "봉인",
+        "reason": "관측 T 표시·꼬리 표시는 효과크기·판정을 누설한다"
+      },
+      {
+        "artifact": "원 p · Holm 조정 p · 판정",
+        "before_unblinding": "봉인"
+      },
+      {
+        "artifact": "실행 메타데이터",
+        "before_unblinding": "공개",
+        "public_allowed": [
+          "개수",
+          "분할 진단",
+          "환경",
+          "wall_seconds",
+          "사전 정의된 게이트 불리언"
+        ]
+      }
+    ],
+    "n_eval_and_n_excluded_undefined_narrowed_to_sealed": {
+      "decision": "봉인",
+      "v2_public_allowed_verbatim": [
+        "개수(행·열·fold·unit·model·seed 카운트)",
+        "분할 진단(split_diagnostics · scaffold group 수 · leak_rows)",
+        "환경 명세(env_fingerprint 공개 사본)",
+        "타이밍(wall seconds · epoch 수)",
+        "게이트 통과 여부(불리언)",
+        "n_eval",
+        "n_excluded_undefined",
+        "재시도 로그(failure_policy 기록)"
+      ],
+      "v2_source": "gin_confirm_harness_freeze_v2.json spec.b_public_sealed_boundary.public_allowed",
+      "not_an_amendment_because": "공개를 «줄이는» 방향이다. 완화가 아니라 강화이므로 동결 설계의 amendment 에 해당하지 않는다 — v2 자신의 `not_an_amendment_because` 선례와 같은 논리다.",
+      "v2_precedent_verbatim": "기존 RF 확증 관례(metrics_public.json 24 B · 키 `sign` 1개)보다 «공개를 줄이는» 방향이다. 완화가 아니라 강화이므로 동결 설계의 amendment 에 해당하지 않는다.",
+      "runner_instruction": "블록 113 러너는 어느 문면을 따를지 판단하지 않는다 — 봉인 쪽으로 좁힌 이 문장을 따른다."
+    },
+    "forbidden_words_in_logs_and_exceptions": [
+      "macro AP 값",
+      "Δ 의 크기",
+      "Δ 의 부호",
+      "PT별 AP/Δ",
+      "fold별 수치",
+      "예측 확률 분포",
+      "p 값",
+      "Holm 조정 p",
+      "λ 값",
+      "ρ 값",
+      "CI 상하한",
+      "best_v"
+    ],
+    "filename_rule": "파일명에 수치·부호를 넣지 않는다.",
+    "emit_sign_calls_allowed": 0,
+    "access_ledger_rule": {
+      "when": "봉인 파일을 기계 판독할 때마다 그 반복 디렉터리의 _sealed/access.log 에 1줄",
+      "fields": {
+        "type": "machine_read",
+        "human_exposure": false,
+        "actor": "<실행 주체>",
+        "step": "<블록·단계>"
+      },
+      "block_113_row": "조회행 1줄 · 기계 판독 · Δ·부호 «미산출» 명시 · 사람 열람 0 (G6)",
+      "precedent": "블록 H·I·L 과 동일 형식"
+    }
+  },
+  "S8_prespecification_integrity": {
+    "written_before_any_gin_metric_existed": true,
+    "evidence": {
+      "sealed_counts": {
+        "n_sealed_dirs": 29,
+        "n_sealed_files_total": 727,
+        "n_sealed_artifacts": 707,
+        "n_access_log": 20
+      },
+      "confirmatory_3tree_stat_fingerprint": "5440aefcded112bcd425f61968f9974898f26efe2beab69155f7a5a47cf3333b",
+      "consensus_directories_present": 0,
+      "access_ledger_modified": false,
+      "unblinding_performed": false
+    },
+    "what_was_read_in_this_block": [
+      "설계량(라벨 무관)",
+      "코드",
+      "동결 JSON 문면",
+      "검토자 회신 문면",
+      "기존 공개 산출물의 호출 파라미터",
+      "봉인 파일의 stat 및 1종의 sha256"
+    ],
+    "confirmatory_derived_numbers_produced": 0,
+    "amendment_obligation": {
+      "rule": "이후 변경은 amendment 의무다.",
+      "required": [
+        "docs/33 신규 항목",
+        "변경 사유",
+        "변경 전후 해시"
+      ],
+      "forbidden": "결과를 보고 난 뒤 변경 금지."
+    }
+  },
+  "global_no_result_dependent_branching": "D11 λ·ρ 값, D12 민감도 결과, 안정성 SS 결과로 주 검정·판정·집계·모델선택을 바꾸지 않는다.",
+  "implementation_module": "v3_Multimodal/src/rqint_downstream.py",
+  "integrity": {
+    "computation_performed": "synthetic_fixture_only",
+    "confirmatory_metrics_computed": 0,
+    "models_trained": 0,
+    "network_calls": 0,
+    "sealed_values_human_read": 0,
+    "git_commit": false,
+    "sap_manifest_rehashed": false,
+    "this_file_is_not_an_authorization": true
+  },
+  "executed_by": "vscode-claude (블록 AV · docs/112)"
+}

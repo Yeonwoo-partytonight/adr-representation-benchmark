@@ -1,0 +1,226 @@
+{
+  "_doc": "블록 AS 1시점(v2 생성 «전») manifest. docs/109 AS-2. 비열람 증거 A-plus 의 1시점 스냅샷이며 지도교수 서명·OSF 업데이트 등록은 실행 «후» 첨부로 미룬다(사용자 확정 2026-09-16, docs/108 §7).",
+  "block": "AS",
+  "timepoint": "t1_pre_v2",
+  "instruction": "docs/109_gin_start_supersession_prompt_for_vscode.md §AS-2",
+  "ts_kst": "2026-09-16 14:18:01 KST",
+  "unblinding_performed": false,
+  "blocking_flag_files": [
+    {
+      "path": "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+      "sha256": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+      "bytes": 22062,
+      "role": "①",
+      "gin_start_still_blocked": true
+    },
+    {
+      "path": "v3_Multimodal/config/gin_seed_freeze.json",
+      "sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+      "bytes": 4637,
+      "role": "②",
+      "gin_start_still_blocked": true
+    },
+    {
+      "path": "v3_Multimodal/config/gin_inner_valid_freeze.json",
+      "sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+      "bytes": 6913,
+      "role": "③",
+      "gin_start_still_blocked": true
+    }
+  ],
+  "v1_artifacts": [
+    {
+      "path": "v3_Multimodal/config/gin_confirm_harness_freeze.json",
+      "sha256": "1af993fde7330e1d48e6d10fee157c1310f42dacc5c1d65a4834b9020e5b7072",
+      "bytes": 21968
+    },
+    {
+      "path": "v3_Multimodal/config/gin_confirm_harness_freeze.status.json",
+      "sha256": "5df9a7c4bfa64749f2b37f5b1984cfcca85d8f609e6c8c444097ff78e24c819a",
+      "bytes": 1439
+    },
+    {
+      "path": "v3_Multimodal/src/confirmatory_gin_rep.py",
+      "sha256": "1e6642bf9ecac5a272fdb49c441668d2f6f3ec97e87528831aad75a9c40d995a",
+      "bytes": 42450
+    },
+    {
+      "path": "experiments/runs/v3_gin_harness_selftest/selftest.json",
+      "sha256": "37b0af4d2ef74ad410c76603a143c7089161c6f35a75d68271a8a8cf94c78e09",
+      "bytes": 11399
+    },
+    {
+      "path": "experiments/runs/v3_gin_budget/gin_budget_estimate.json",
+      "sha256": "f42e839d154611f2050124fdf2902cbec5a02988860de185622236113b139605",
+      "bytes": 11151
+    },
+    {
+      "path": "experiments/runs/v3_gin_budget/README.md",
+      "sha256": "6fd60d4a59c48b49341bd3cd41f92f5c620d1789b20995e44c68205b31c51796",
+      "bytes": 1224
+    }
+  ],
+  "frozen_files_no_modify": {
+    "derived_from": "docs/109 §1 「동결 파일 무수정」 목록 그대로 (중복 제거 후)",
+    "n": 22,
+    "files": [
+      {
+        "path": "v3_Multimodal/src/sap/__init__.py",
+        "sha256": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+        "bytes": 1635
+      },
+      {
+        "path": "v3_Multimodal/src/sap/bootstrap.py",
+        "sha256": "05437c516e606a053e02acefb23c2597365472201b6c70ff2814278d6597a31e",
+        "bytes": 14214
+      },
+      {
+        "path": "v3_Multimodal/src/sap/consensus.py",
+        "sha256": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+        "bytes": 3124
+      },
+      {
+        "path": "v3_Multimodal/src/sap/decision.py",
+        "sha256": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+        "bytes": 16353
+      },
+      {
+        "path": "v3_Multimodal/src/sap/freeze.py",
+        "sha256": "8bef5f70d168c50d7860d5e1d70f78b771d76405fafe2c4d256ac04d08078bc9",
+        "bytes": 42927
+      },
+      {
+        "path": "v3_Multimodal/src/sap/metrics.py",
+        "sha256": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+        "bytes": 4256
+      },
+      {
+        "path": "v3_Multimodal/src/sap/null_generator.py",
+        "sha256": "90886abce256a130531a0ab0cd8edd17abc27ff1b62ee56f24248aa76fa204c7",
+        "bytes": 11119
+      },
+      {
+        "path": "v3_Multimodal/src/sap/redaction.py",
+        "sha256": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+        "bytes": 3647
+      },
+      {
+        "path": "v3_Multimodal/src/sap/signflip.py",
+        "sha256": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+        "bytes": 6772
+      },
+      {
+        "path": "v3_Multimodal/src/sap/synthetic.py",
+        "sha256": "ddf715e6fba7503e817c6435c9220f7a83a5e5e31375603fddd522570f2a27d7",
+        "bytes": 8444
+      },
+      {
+        "path": "v3_Multimodal/src/sap/unseen_target.py",
+        "sha256": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+        "bytes": 5610
+      },
+      {
+        "path": "v3_Multimodal/src/sap/rqint.py",
+        "sha256": "eb842bc98140e9c55b67bc1563cd5573c3b294885778f23744468b712c498b26",
+        "bytes": 12970
+      },
+      {
+        "path": "v3_Multimodal/src/sap/rqint_audit.py",
+        "sha256": "ddffe6d128de4d180aeab9be18d6b1a9b5281523bc24cd8a3b4f48f20a2aa4a3",
+        "bytes": 19573
+      },
+      {
+        "path": "v3_Multimodal/src/sap/rqint_synthetic.py",
+        "sha256": "27ef0011ee041920a6e7b63eb4dcfef13c7fd2a70ac017f2324e671df8b0f985",
+        "bytes": 5572
+      },
+      {
+        "path": "v3_Multimodal/src/ladder_confirmatory.py",
+        "sha256": "13a17129db6a6679bd6dbdc28a12c0f31e2e8d6b0811130450add602daf5137c",
+        "bytes": 65515
+      },
+      {
+        "path": "v3_Multimodal/src/train_ladder.py",
+        "sha256": "1d0a5357aafe57bd36f03bf67f1ba63e9e8b36d32a9bb49b1aafc4907a204fd9",
+        "bytes": 35386
+      },
+      {
+        "path": "v3_Multimodal/config/ladder_freeze.json",
+        "sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+        "bytes": 16896
+      },
+      {
+        "path": "experiments/sap/sap_1_2_hash_registry.json",
+        "sha256": "855616a27ff1f8faa508f1da5f2bac3f886d5cbb745020770e9e9f1ea41e0683",
+        "bytes": 17578
+      },
+      {
+        "path": "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+        "sha256": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+        "bytes": 22062
+      },
+      {
+        "path": "v3_Multimodal/config/gin_seed_freeze.json",
+        "sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+        "bytes": 4637
+      },
+      {
+        "path": "v3_Multimodal/config/gin_inner_valid_freeze.json",
+        "sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+        "bytes": 6913
+      },
+      {
+        "path": "v3_Multimodal/config/gin_inner_valid_freeze.status.json",
+        "sha256": "bd329fefe613971f59bde8b13ea3f1c4929be04541655ad8e27e9922aa6cb0d0",
+        "bytes": 677
+      }
+    ]
+  },
+  "sealed_snapshot_counts_only": {
+    "n_sealed_dirs": 25,
+    "n_sealed_files_total": 291,
+    "n_sealed_artifacts": 275,
+    "n_access_log": 16,
+    "method": "디렉터리 열거 + stat 만 사용 — `_sealed/` 파일을 열지도 해싱하지도 않았다(블록 AO stat-only 관례).",
+    "files_opened": 0,
+    "files_hashed": 0,
+    "sealed_dirs_created": 0
+  },
+  "git": {
+    "head": "566f487f2157e6d22b9727dc961478835af7a1d1",
+    "head_short": "566f487",
+    "n_commits": 21,
+    "ls_files_modified": [
+      "experiments/sap/freeze.log",
+      "experiments/sap/manifest.json",
+      "v3_Multimodal/src/rqint_package_gates.py",
+      "v3_Multimodal/src/sap/freeze.py"
+    ]
+  },
+  "git_index_lock": {
+    "present": true,
+    "bytes": 0,
+    "mtime_kst": "2026-08-06 19:59:28 KST",
+    "policy": "docs/104 L86 축자 「.git/index.lock(0 B, 2026-08-06 선재)은 건드리지 않는다.」 — 제거·이동 0",
+    "opened": false
+  },
+  "venv": {
+    "python": "3.14.4",
+    "torch": "2.12.1",
+    "torch_geometric": "2.8.0",
+    "rdkit": "2026.03.3",
+    "sklearn": "1.9.0",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3"
+  },
+  "pycache_dirs_at_entry": {
+    "count": 4541,
+    "counting_convention": "archive/ 포함 (블록 AR 이 4,541 로 보고한 것과 동일 규약). 제외 시 4,540."
+  },
+  "access_log_evidence_note": "`_sealed/`의 `access.log` 는 운영 코드가 자체 생성한 응용계층 로그로서, 기록 대상 경로를 통한 접근이 관찰되지 않았음을 보조적으로 보여 준다. 다만 OS 수준의 독립 감사로그가 아니므로 관리자 접근, 우회 경로 또는 로그 외 접근의 부재를 독립적으로 증명하지는 않는다.",
+  "non_reading_claim_boundary": "연구팀은 실행 전후 manifest 의 해시 일치, 봉인 루트의 불변 확인, 응용계층 접근로그 및 실행 전 승인 기록을 통해 결과 비열람 절차를 문서화하였다. 그러나 봉인이 암호학적 키 통제나 OS 수준 독립 감사로 강제된 것은 아니므로, 이 자료는 절차 준수에 대한 감사추적을 제공하지만 절대적 비열람을 기술적으로 증명하지는 않는다.",
+  "deferred_to_post_execution": [
+    "advisor signature on manifest",
+    "OSF update timestamp"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "block": "AJ (docs/98)",
+  "rows": [
+    {
+      "no": 1,
+      "item": "FACTS 14행 전건 일치",
+      "expect": "14/14 pass",
+      "got": "14/14",
+      "pass": true
+    },
+    {
+      "no": 2,
+      "item": "델타 prespec 동결 < 실주행 시작 · 이후 sha256 불변",
+      "expect": "2026-08-22T22:12:40+09:00 < 2026-08-23T11:36:18+09:00 · e7406c23b8d61b0c",
+      "got": "e7406c23b8d61b0c · run.prespec_sha256 e7406c23b8d61b0c",
+      "pass": true
+    },
+    {
+      "no": 3,
+      "item": "블록 AI 산출물 4종 0바이트",
+      "expect": "4/4 동일",
+      "got": "4/4",
+      "pass": true
+    },
+    {
+      "no": 4,
+      "item": "b=50,000 러닝 카운트 = 67,262 (독립 재계산)",
+      "expect": "67262",
+      "got": "러너 67262 · 독립재계산 67262",
+      "pass": true
+    },
+    {
+      "no": 5,
+      "item": "T_obs·delta_rf·delta_gin = F-AIOBS 바이트 동일",
+      "expect": "{\"T_obs\": 0.0031802114140302242, \"delta_rf\": 0.00038510137913283504, \"delta_gin\": -0.002795110034897389}",
+      "got": "{\"T_obs\": 0.0031802114140302242, \"delta_rf\": 0.00038510137913283504, \"delta_gin\": -0.002795110034897389}",
+      "pass": true
+    },
+    {
+      "no": 6,
+      "item": "실현 참조분포 = 2 × 동전 수(200,000)",
+      "expect": "200000",
+      "got": "200000",
+      "pass": true
+    },
+    {
+      "no": 7,
+      "item": "여집합 항등식 감사 실패 0",
+      "expect": "0",
+      "got": "1000 draw · 실패 0 · max_abs_dev 0.0",
+      "pass": true
+    },
+    {
+      "no": 8,
+      "item": "SE_MC 식 축자 + 양 해석 병기",
+      "expect": "식 축자 일치 · 양쪽 존재 · 비 ≈ 1/√2",
+      "got": "(가) 0.00105101 · (나) 0.00148392 · 비 0.70827 (1/√2 = 0.70711)",
+      "pass": true
+    },
+    {
+      "no": 9,
+      "item": "예측 100% 합성 · 효과 주입 0",
+      "expect": "false · 0.0",
+      "got": "False · 0.0",
+      "pass": true
+    },
+    {
+      "no": 10,
+      "item": "AST — 입력 데이터 경로 master_X·master_Y 뿐 · 금지리터럴 0 · 산출 t_star.npy 는 쓰기전용",
+      "expect": "input_data_literals ⊆ {master_X,master_Y} · forbidden 0 · np.save 전용(np.load 0)",
+      "got": "input [] · own_output ['t_star.npy'] · forbidden [] · save_only True",
+      "pass": true
+    },
+    {
+      "no": 11,
+      "item": "_sealed stat-only 착수=종료 동일 · guard 275/291",
+      "expect": "275/291 · 741feb8e52a3cf00",
+      "got": "275/291 · 741feb8e52a3cf00",
+      "pass": true
+    },
+    {
+      "no": 12,
+      "item": "동결 11모듈 + AC4 + AD2 0바이트 · manifest sha16 · sap_version · sap/rqint.py",
+      "expect": "동일 · 756d485feb4715e9 · 1.1 · eb842bc98140e9c5",
+      "got": "동일 · 756d485feb4715e9 · 1.1 · eb842bc98140e9c5",
+      "pass": true
+    },
+    {
+      "no": 13,
+      "item": "docs/33 접두사 바이트 동일 · 삭제 0 · 번호 실측 · 중복 assert",
+      "expect": "prefix 299442B 동일 · 최종 항목번호 51(실측) · unexpected {}",
+      "got": "prefix 동일 · 최종 항목번호 51 · dup {16: 2} · unexpected {}",
+      "pass": true
+    },
+    {
+      "no": 14,
+      "item": "docs/45 삽입행 제거 시 착수 sha256 복원",
+      "expect": "638b89580a9d7767",
+      "got": "638b89580a9d7767",
+      "pass": true
+    },
+    {
+      "no": 15,
+      "item": "ledger 목표치(timeline 49 · auth 26) · 기존 entry 불변",
+      "expect": "keys 11 · timeline 49 · auth 26 · corr 22 · first_look 6 · 기존 entry 불변",
+      "got": "keys 11 · timeline 49 · auth 26 · corr 22 · first_look 6 · 기존 entry 불변",
+      "pass": true
+    },
+    {
+      "no": 16,
+      "item": "`B` 정의 채택·동결 선언 0건 · 개봉 0 · 네트워크 0 · HEAD·커밋 불변 · commit/push 0",
+      "expect": "hits [] · false/true · 전 호출 0 · 566f487 · 21",
+      "got": "hits [] · unblinding False · gin_blocked True · adopted False · calls {'emit_sign': 0, 'open_sealed': 0, 'sap.decision': 0, 'from sap import decision': 0, 'requests': 0, 'urllib': 0, 'http': 0} · 566f487 · 21",
+      "pass": true
+    }
+  ],
+  "n_pass": 16,
+  "n_total": 16,
+  "all_pass": true
+}

@@ -1,0 +1,230 @@
+{
+  "_doc": "블록 AU 착수 시점 manifest (docs/111 §3 AU-3 (2)). 1회 기록 후 0바이트 불변.",
+  "ts_kst": "2026-09-22 23:48:56 KST",
+  "v2_gate": {
+    "returncode": 12,
+    "parsed_failures": [
+      "5:not_unblinded_and_sealed_counts"
+    ],
+    "stdout_token": null
+  },
+  "sealed_counts_at_launch": {
+    "total": {
+      "n_sealed_dirs": 28,
+      "n_sealed_files_total": 681,
+      "n_sealed_artifacts": 662,
+      "n_access_log": 19
+    },
+    "legacy_excluding_confirm_and_stability": {
+      "n_sealed_dirs": 25,
+      "n_sealed_files_total": 291,
+      "n_sealed_artifacts": 275,
+      "n_access_log": 16
+    },
+    "confirmatory_three_trees": {
+      "n_sealed_dirs": 3,
+      "n_sealed_files_total": 390,
+      "n_sealed_artifacts": 387,
+      "n_access_log": 3
+    }
+  },
+  "confirm_stat_fingerprint": "5440aefcded112bcd425f61968f9974898f26efe2beab69155f7a5a47cf3333b",
+  "confirm_stat_lines": 390,
+  "harness_sha256": "c68a4a242a7344084daab336212bab35ef4c82eab2becd704d387d2801722621",
+  "contract_sha256": "e092c18ff7afd4f21361be54901bce5828925b042d2b59bdf30a3f46cce67286",
+  "at_harness_sha256": "714f98983cceff85409af1597c0d82f8ca2b2027f5f7e94b8a0928351b01107e",
+  "preconditions": {
+    "measured_at_kst": "2026-09-22 16:37:50 KST",
+    "f4_authority_chain": {
+      "v3_Multimodal/config/rqint_procedure_decisions_v1.json": {
+        "sha256": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+        "bytes": 22062
+      },
+      "v3_Multimodal/config/gin_seed_freeze.json": {
+        "sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+        "bytes": 4637
+      },
+      "v3_Multimodal/config/gin_inner_valid_freeze.json": {
+        "sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+        "bytes": 6913
+      },
+      "v3_Multimodal/config/gin_start_supersede.json": {
+        "sha256": "c061d033ae35bea3df269d37c1a45174fc48f70bfe37ace4f159a8cb36d4a32c",
+        "bytes": 6359
+      },
+      "v3_Multimodal/config/gin_confirm_harness_freeze_v2.json": {
+        "sha256": "ec43025a61378e18b77d6f1ae11a7c5c6085f46b0b7bdcc975bf136d6af3c612",
+        "bytes": 26558
+      },
+      "v3_Multimodal/config/gin_confirm_harness_freeze_v2.status.json": {
+        "sha256": "73c0a69c571fb075fc6c744b2b396268f45c967a869c13ed24a1f3451f4532fd",
+        "bytes": 2056
+      },
+      "v3_Multimodal/src/confirmatory_gin_rep_v2.py": {
+        "sha256": "644abf4f272c51e673dfb3be2915792502552ba4baad610aaa62fee58101860a",
+        "bytes": 28331
+      },
+      "v3_Multimodal/src/confirmatory_gin_rep.py": {
+        "sha256": "1e6642bf9ecac5a272fdb49c441668d2f6f3ec97e87528831aad75a9c40d995a",
+        "bytes": 42450
+      },
+      "v3_Multimodal/config/gin_confirm_harness_freeze.json": {
+        "sha256": "1af993fde7330e1d48e6d10fee157c1310f42dacc5c1d65a4834b9020e5b7072",
+        "bytes": 21968
+      },
+      "experiments/runs/v3_gin_budget/gin_budget_estimate_v2.json": {
+        "sha256": "8325c6d00bfb6f100ab70ba83073cbfe539e62aab8def2cddf4f3d5fdd5d5948",
+        "bytes": 13865
+      },
+      "experiments/runs/v3_gin_start_authorization/manifest_t1_pre_v2.json": {
+        "sha256": "d471756459d6eb370f7f270b9837ec70e258e62b282af78f5e402e60afa2fe92",
+        "bytes": 8843
+      },
+      "experiments/runs/v3_gin_start_authorization/manifest_t2_pre_exec.json": {
+        "sha256": "e5230d159515b726f498975ddd90804349ce5dd43af6703d77a277b5af3880c4",
+        "bytes": 15191
+      },
+      "experiments/runs/v3_gin_start_authorization/selftest_v2.json": {
+        "sha256": "adcc143c29ac44d7cfcdef984bee0f8d38b1c217f472638e2fc08166d535a4ac",
+        "bytes": 12476
+      }
+    },
+    "f5_reused_modules": {
+      "v3_Multimodal/src/train_ladder.py": {
+        "sha256": "1d0a5357aafe57bd36f03bf67f1ba63e9e8b36d32a9bb49b1aafc4907a204fd9",
+        "bytes": 35386
+      },
+      "v3_Multimodal/src/ladder_confirmatory.py": {
+        "sha256": "13a17129db6a6679bd6dbdc28a12c0f31e2e8d6b0811130450add602daf5137c",
+        "bytes": 65515
+      },
+      "v3_Multimodal/src/confirmatory_oof_rest.py": {
+        "sha256": "78de238ff2fac8e22ab09618bb67388ec86e4872acd44ee9456150d4c9ecbdfa",
+        "bytes": 47649
+      },
+      "v3_Multimodal/src/confirmatory_oof_rep1.py": {
+        "sha256": "afb894c09fdaad6f1c75df789c5e2ede1dbbc2151a8c30b8eda6044cd6f336b6",
+        "bytes": 34897
+      },
+      "v3_Multimodal/src/compute_lock.py": {
+        "sha256": "b03a0b0012948b340f410670d6b045f279e1b21b4faa293bb45bbc2e99a6d738",
+        "bytes": 16356
+      },
+      "v3_Multimodal/src/drug_branch.py": {
+        "sha256": "cad5c3acb53538f67f947d3cfc2f3fb341d7471e3d030ac11cd66975882b8252",
+        "bytes": 6045
+      },
+      "v2_GNN/src/train.py": {
+        "sha256": "c3d52ea3062a7c85e4605df238aa0b949f75d60f2100a6e486d236e1e504f17a",
+        "bytes": 8234
+      },
+      "v2_GNN/src/graph_features.py": {
+        "sha256": "dc317adfe6e60c880f767c2c00cfc3a15c25adfcc8e852749b04139375797f58",
+        "bytes": 3590
+      },
+      "v3_Multimodal/src/sap/metrics.py": {
+        "sha256": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+        "bytes": 4256
+      },
+      "experiments/sap/manifest.json": {
+        "sha256": "d08dcedf2a22e1c8493c842507422de1f6c705ce54ce995e038e09f604706e10",
+        "bytes": 55303
+      },
+      "data/processed/master_X.parquet": {
+        "sha256": "788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6",
+        "bytes": 41733
+      },
+      "data/processed/master_Y.parquet": {
+        "sha256": "bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018",
+        "bytes": 239497
+      }
+    },
+    "f6_block_at_outputs": {
+      "v3_Multimodal/config/gin_train_contract.json": {
+        "sha256": "e50f972674e782f50a2a74890f8b37b3208da77a8cf6c4ac9f8dc6deb4cbce7f",
+        "bytes": 26915
+      },
+      "v3_Multimodal/src/confirmatory_gin_train.py": {
+        "sha256": "714f98983cceff85409af1597c0d82f8ca2b2027f5f7e94b8a0928351b01107e",
+        "bytes": 81844
+      },
+      "experiments/runs/v3_gin_start_authorization/selftest_train.json": {
+        "sha256": "f715add2e49afd23d39ed6cb68fbe05523c58aaaaf3f43fe976cece821ea17d6",
+        "bytes": 15347
+      },
+      "experiments/runs/v3_gin_start_authorization/plan_confirmatory_315.json": {
+        "sha256": "121d6db4d1e2a4be6a6b139401bfd56c24c378ceec809e13e306e72a7b4f1271",
+        "bytes": 29138
+      },
+      "experiments/runs/v3_gin_start_authorization/manifest_t3_launch.json": {
+        "sha256": "9231f918ca6b349a219227c478e546314fa4ad449cd035e444e46a533938207b",
+        "bytes": 5979
+      },
+      "experiments/runs/v3_gin_start_authorization/manifest_t4_post_confirmatory.json": {
+        "sha256": "a59ab54afd51508543a3ca952a5147ffc0c8687f997aacf42362ab699683ea59",
+        "bytes": 8660
+      },
+      "experiments/runs/v3_gin_start_authorization/sessions.jsonl": {
+        "sha256": "5ee5170840c5a38fb2a907fc500aa4fb2a2a028695290146ef0cbdd7ff59d1c8",
+        "bytes": 994
+      }
+    },
+    "gin_start_still_blocked": {
+      "rqint_procedure_decisions_v1.json": true,
+      "gin_seed_freeze.json": true,
+      "gin_inner_valid_freeze.json": true
+    },
+    "legacy_sealed_counts": {
+      "n_sealed_dirs": 25,
+      "n_sealed_files_total": 291,
+      "n_sealed_artifacts": 275,
+      "n_access_log": 16
+    },
+    "confirm_sealed_counts": {
+      "n_sealed_dirs": 3,
+      "n_sealed_files_total": 390,
+      "n_sealed_artifacts": 387,
+      "n_access_log": 3
+    },
+    "total_sealed_counts_at_freeze": {
+      "n_sealed_dirs": 28,
+      "n_sealed_files_total": 681,
+      "n_sealed_artifacts": 662,
+      "n_access_log": 19
+    },
+    "confirm_stat_fingerprint": "5440aefcded112bcd425f61968f9974898f26efe2beab69155f7a5a47cf3333b",
+    "confirm_stat_fingerprint_rule": "확증 3개 _sealed 트리의 모든 파일에 대해 \"<저장소 루트 기준 상대경로>\\t<바이트>\" 줄을 만들어 정렬 → \"\\n\".join(lines) + \"\\n\" 을 UTF-8 로 sha256. 390줄. 파일을 열지 않는다 — 이름·크기만.",
+    "v2_harness_sha256": "644abf4f272c51e673dfb3be2915792502552ba4baad610aaa62fee58101860a",
+    "v2_gate_expected": {
+      "returncode": 12,
+      "parsed_failures": [
+        "5:not_unblinded_and_sealed_counts"
+      ]
+    },
+    "pycache_dirs": 4541
+  },
+  "ac_power": {
+    "pmset_ps": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=35127395)\t100%; charged; 0:00 remaining present: true",
+    "pmset_adapter": "Wattage = 94W\n Current = 4690mA\n Voltage = 20000mV\n AdapterID = 28674\n Manufacturer = Apple Inc.\n Family Code = 0xe000400a\n Serial String = C4H614600LKL4YRA2\n Adapter Name = 96W USB-C Power Adapter\n Hardware Version = 1.0\n Firmware Version = 01090058",
+    "wattage": 94
+  },
+  "load1": 0.7,
+  "env": {
+    "python": "3.14.4",
+    "torch": "2.12.1",
+    "torch_geometric": "2.8.0",
+    "rdkit": "2026.03.3",
+    "sklearn": "1.9.0",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "machine": "arm64",
+    "os": "Darwin 25.6.0",
+    "device": "mps",
+    "mps_fallback_env": "1 (명령줄에서 고정 — 하네스는 환경변수를 판독하지 않는다)"
+  },
+  "plan_sha256": "b42cbf9603f668adefcda9396ee4aee8dd7a086d506670d7b7c8cd04658c998f",
+  "n_units_planned": 42,
+  "oof_assembled": false,
+  "metrics_computed": false,
+  "unblinding_performed": false
+}

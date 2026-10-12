@@ -1,0 +1,286 @@
+{
+  "_scope": "공개 — 층 배정·표본수·클러스터수·formal/descriptive 라벨 뿐. 층별 macro AP·Δ·CI·p 는 `_sealed/`(본 파일에 없음).",
+  "ts_kst": "2026-08-07 17:18:16 KST",
+  "block": "Z (docs/81)",
+  "axis_labels": {
+    "A3": "unseen target count / total target count",
+    "A4": "pChEMBL-weighted unseen proportion",
+    "A5": "mechanism-target indicator",
+    "A6": "dominant-target unseen indicator"
+  },
+  "axis_bins_frozen": {
+    "A3": [
+      "{0}",
+      "(0,0.5)",
+      "[0.5,1)",
+      "{1}"
+    ],
+    "A4": [
+      "{0}",
+      "(0,0.5)",
+      "[0.5,1)",
+      "{1}",
+      "no_evidence"
+    ],
+    "A5": [
+      "{0}",
+      "{1}",
+      "no_mechanism",
+      "not_estimable"
+    ],
+    "A6": [
+      "{0}",
+      "{1}",
+      "no_evidence"
+    ]
+  },
+  "bin_rule": "A3·A4 = `{0}` p==0 · `(0,0.5)` 0<p<0.5 · `[0.5,1)` 0.5<=p<1 · `{1}` p==1. 0·1 은 부동소수 비교가 아니라 **집합 판정**으로 확정한다.",
+  "bin_mid_boundary": 0.5,
+  "a4_missing_rule": "결측 pair 는 분자·분모 **양쪽에서 제외**. 약물의 모든 pair 가 결측이면 `no_evidence`(동결 문면).",
+  "a6_rule": "dominant = pchembl_median 최대 · 동점 시 UniProt 사전순 최소",
+  "a5_boundary_amendment": {
+    "population_chembl_matched": 943,
+    "estimation_denominator": 847,
+    "intersection_943_and_847": 847,
+    "in_847_not_in_943": 0,
+    "in_943_not_in_847": 96,
+    "in_943_not_in_847_note": "847 밖 = 비매핑 245(no_target) 사전 제외 집합의 일부. A5 모집단(943)과 추정 모수(847)는 서로 다른 집합이다.",
+    "decomposition_943": {
+      "A": 393,
+      "B": 27,
+      "C": 29,
+      "D": 494
+    },
+    "decomposition_847": {
+      "A": 326,
+      "B": 21,
+      "C": 24,
+      "D": 476
+    },
+    "decomposition_847_sum": 847,
+    "decomposition_case_map": {
+      "A": "no_mechanism",
+      "B": "no_mechanism",
+      "C": "not_estimable",
+      "D": "{0}/{1}"
+    },
+    "canonicalization": {
+      "function": "sap.unseen_target.canonicalize_set(t, None, None)",
+      "args": "secondary_to_primary=None, seq_representative=None (isoform 절단만)",
+      "identical_to_block_H": "stratification_run.py:284-285 와 동일 함수·동일 인자",
+      "n_unique_uniprot_before": 758,
+      "n_unique_uniprot_after": 758,
+      "applied_before_unseen_comparison": true
+    },
+    "amendment_sha256": "860f5a4529dfb57b64c796dc0463cbab70551de875a9a79a255f0bdf9cf5f3cf",
+    "amendment_at_kst": "2026-08-07 12:05:16 KST",
+    "analysis_label": "현재 snapshot 기반 post-interim 보조분석",
+    "analysis_label_applies_to": [
+      "A5"
+    ]
+  },
+  "pchembl_source": {
+    "_rule": "동결 문면은 파일을 지목하지 않는다(`pchembl_median as produced by the existing frozen pipeline`). 러너가 임의로 고르지 않고 **동결 커버리지 상수를 재현하는 파일**로 판정했다 — 비순환 판정.",
+    "frozen_coverage_verbatim": {
+      "pair_level": "12514 of 12613",
+      "drug_level": "16 of 847 mapped drugs have no pChEMBL at all"
+    },
+    "candidates": {
+      "05b_affinity_values.csv": {
+        "key_rule": "(chembl_id, uniprot) → 02_chembl.csv 로 cid 결합",
+        "n_pairs_filled": 12514,
+        "n_pairs_total": 12613,
+        "n_drugs_without_any_pchembl_of_847": 16,
+        "reproduces_frozen_pair_level": true,
+        "reproduces_frozen_drug_level": true,
+        "reproduces_frozen_coverage": true
+      },
+      "07_agg_topk.csv": {
+        "key_rule": "(cid, uniprot) 직접",
+        "n_pairs_filled": 3436,
+        "n_pairs_total": 12613,
+        "n_drugs_without_any_pchembl_of_847": 0,
+        "reproduces_frozen_pair_level": false,
+        "reproduces_frozen_drug_level": false,
+        "reproduces_frozen_coverage": false
+      }
+    },
+    "canonical_file": "05b_affinity_values.csv",
+    "canonical_file_sha256": "9abf3972100f168d88d98e03c95c53f5a703fcbb23358f03446c8465e59c739a",
+    "n_weight_pairs_after_canonicalization": 12514,
+    "canonicalization_collisions": 0
+  },
+  "min_support": {
+    "min_drugs": 20,
+    "min_positive_pt_support": 5
+  },
+  "eligible_pt": "None (370 PT 전열 · 층 내부 재선정 금지)",
+  "excluded_no_target_drugs": 245,
+  "denominator_estimated": 847,
+  "accounting": {
+    "n_total_drugs": 1092,
+    "n_excluded_no_target": 245,
+    "denominator_estimated": 847,
+    "per_axis": {
+      "A3": 847,
+      "A4": 847,
+      "A5": 847,
+      "A6": 847
+    },
+    "axes_estimation_sets_identical": true,
+    "pass": true
+  },
+  "axes": {
+    "A3": {
+      "{0}": {
+        "n_drugs": 552,
+        "n_scaffold_clusters": 398,
+        "n_pt_meeting_positive_support": 337,
+        "inference_mode": "formal",
+        "estimable": true
+      },
+      "(0,0.5)": {
+        "n_drugs": 184,
+        "n_scaffold_clusters": 154,
+        "n_pt_meeting_positive_support": 206,
+        "inference_mode": "formal",
+        "estimable": true
+      },
+      "[0.5,1)": {
+        "n_drugs": 14,
+        "n_scaffold_clusters": 9,
+        "n_pt_meeting_positive_support": 5,
+        "inference_mode": "descriptive",
+        "estimable": true
+      },
+      "{1}": {
+        "n_drugs": 18,
+        "n_scaffold_clusters": 16,
+        "n_pt_meeting_positive_support": 10,
+        "inference_mode": "descriptive",
+        "estimable": true
+      },
+      "unstable_stratum": {
+        "n_drugs": 79,
+        "n_scaffold_clusters": 72,
+        "n_pt_meeting_positive_support": 103,
+        "inference_mode": "formal",
+        "estimable": true
+      }
+    },
+    "A4": {
+      "{0}": {
+        "n_drugs": 557,
+        "n_scaffold_clusters": 400,
+        "n_pt_meeting_positive_support": 335,
+        "inference_mode": "formal",
+        "estimable": true
+      },
+      "(0,0.5)": {
+        "n_drugs": 172,
+        "n_scaffold_clusters": 149,
+        "n_pt_meeting_positive_support": 177,
+        "inference_mode": "formal",
+        "estimable": true
+      },
+      "[0.5,1)": {
+        "n_drugs": 12,
+        "n_scaffold_clusters": 9,
+        "n_pt_meeting_positive_support": 6,
+        "inference_mode": "descriptive",
+        "estimable": true
+      },
+      "{1}": {
+        "n_drugs": 12,
+        "n_scaffold_clusters": 12,
+        "n_pt_meeting_positive_support": 6,
+        "inference_mode": "descriptive",
+        "estimable": true
+      },
+      "no_evidence": {
+        "n_drugs": 16,
+        "n_scaffold_clusters": 12,
+        "n_pt_meeting_positive_support": 16,
+        "inference_mode": "descriptive",
+        "estimable": true
+      },
+      "unstable_stratum": {
+        "n_drugs": 78,
+        "n_scaffold_clusters": 68,
+        "n_pt_meeting_positive_support": 100,
+        "inference_mode": "formal",
+        "estimable": true
+      }
+    },
+    "A5": {
+      "{0}": {
+        "n_drugs": 264,
+        "n_scaffold_clusters": 208,
+        "n_pt_meeting_positive_support": 251,
+        "inference_mode": "formal",
+        "estimable": true
+      },
+      "{1}": {
+        "n_drugs": 181,
+        "n_scaffold_clusters": 142,
+        "n_pt_meeting_positive_support": 202,
+        "inference_mode": "formal",
+        "estimable": true
+      },
+      "no_mechanism": {
+        "n_drugs": 347,
+        "n_scaffold_clusters": 258,
+        "n_pt_meeting_positive_support": 231,
+        "inference_mode": "formal",
+        "estimable": true
+      },
+      "not_estimable": {
+        "n_drugs": 24,
+        "n_scaffold_clusters": 16,
+        "n_pt_meeting_positive_support": 21,
+        "inference_mode": "formal",
+        "estimable": true
+      },
+      "unstable_stratum": {
+        "n_drugs": 31,
+        "n_scaffold_clusters": 27,
+        "n_pt_meeting_positive_support": 36,
+        "inference_mode": "formal",
+        "estimable": true
+      }
+    },
+    "A6": {
+      "{0}": {
+        "n_drugs": 741,
+        "n_scaffold_clusters": 525,
+        "n_pt_meeting_positive_support": 367,
+        "inference_mode": "formal",
+        "estimable": true
+      },
+      "{1}": {
+        "n_drugs": 48,
+        "n_scaffold_clusters": 46,
+        "n_pt_meeting_positive_support": 46,
+        "inference_mode": "formal",
+        "estimable": true
+      },
+      "no_evidence": {
+        "n_drugs": 16,
+        "n_scaffold_clusters": 12,
+        "n_pt_meeting_positive_support": 16,
+        "inference_mode": "descriptive",
+        "estimable": true
+      },
+      "unstable_stratum": {
+        "n_drugs": 42,
+        "n_scaffold_clusters": 36,
+        "n_pt_meeting_positive_support": 76,
+        "inference_mode": "formal",
+        "estimable": true
+      }
+    }
+  },
+  "n_units": 20,
+  "unstable_note": "3반복에서 층이 일치하는 약물만 primary 층화 대상. 불일치 약물은 제외가 아니라 `unstable_stratum` 으로 분리 집계·별도 보고(H-0-1 계승).",
+  "boundary_adjustment": "층별 표본수를 보고 구간을 조정하지 않았다(동결 구간 그대로)."
+}

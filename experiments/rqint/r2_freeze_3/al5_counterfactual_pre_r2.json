@@ -1,0 +1,58 @@
+{
+  "pass": false,
+  "mismatched": [
+    "v3_Multimodal/config/post_interim_freeze_v1_0.status.json"
+  ],
+  "detail": {
+    "v3_Multimodal/config/ladder_freeze.json": {
+      "expected_sha16": "b885585aefbabb32",
+      "observed_sha16": "b885585aefbabb32",
+      "match": true
+    },
+    "v3_Multimodal/config/gin_seed_freeze.json": {
+      "expected_sha16": "10828447c6d33118",
+      "observed_sha16": "10828447c6d33118",
+      "match": true
+    },
+    "v3_Multimodal/config/gin_inner_valid_freeze.json": {
+      "expected_sha16": "038599c3e1576022",
+      "observed_sha16": "038599c3e1576022",
+      "match": true
+    },
+    "v3_Multimodal/config/gin_inner_valid_freeze.status.json": {
+      "expected_sha16": "bd329fefe613971f",
+      "observed_sha16": "bd329fefe613971f",
+      "match": true
+    },
+    "v3_Multimodal/config/post_interim_freeze_v1_0.json": {
+      "expected_sha16": "502db732bd5e45cb",
+      "observed_sha16": "502db732bd5e45cb",
+      "match": true
+    },
+    "v3_Multimodal/config/post_interim_freeze_v1_0.status.json": {
+      "expected_sha16": "a12fee2cdfd71350",
+      "observed_sha16": "dbb00d540d7436e5",
+      "match": false
+    },
+    "v3_Multimodal/config/rf_tuned_freeze.json": {
+      "expected_sha16": "c1ef6406fbb48b7f",
+      "observed_sha16": "c1ef6406fbb48b7f",
+      "match": true
+    },
+    "v3_Multimodal/config/holm7_latefusion_freeze.json": {
+      "expected_sha16": "d89f8c52412b656e",
+      "observed_sha16": "d89f8c52412b656e",
+      "match": true
+    },
+    "experiments/sap/manifest.json": {
+      "expected_sha16": "756d485feb4715e9",
+      "observed_sha16": "756d485feb4715e9",
+      "match": true
+    },
+    "_sap": {
+      "sap_version": "1.1",
+      "n_modules": 11,
+      "n_module_mismatch": 0
+    }
+  }
+}

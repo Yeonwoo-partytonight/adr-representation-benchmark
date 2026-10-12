@@ -1,0 +1,55 @@
+{
+  "_doc": "R3 본 드라이런 기준값 — 트리거(메일 3 발송) 이전 등록. 제2자에게 공유하지 않는다.",
+  "block": "AP",
+  "instruction": "docs/104_r3_main_package_prompt_for_vscode.md",
+  "registered_at_kst": "2026-09-14 00:46:59 KST",
+  "trigger_event_status": "not_yet — 메일 3 미발송",
+  "package": {
+    "zip_path": "experiments/rqint/r3_main_package.zip",
+    "zip_sha256": "4b474b3d7f098c67fa3bae1c1d8a9dadb0bce3ad7f978ae911ad450307999948",
+    "zip_bytes": 73746,
+    "n_files": 20,
+    "manifest_sha256": "5cc58d1fc9356414b83050d33e237f1035c01b30425794644555f062868fe895"
+  },
+  "local_run": {
+    "audit_sha256": "c53e15c26fdc3dc028f5b101da5cf32ed3c705cd5c85c5e904542c1c83767cec",
+    "audit_path": "experiments/rqint/r3_main_package_meta/audit_r6_local_main.json",
+    "numeric_core_sha256": "fd488eb429a71990d47ebf321efeb1f34083bbeb4813730a76777262b1ba878b",
+    "canonical_bytes": 7493,
+    "env_sha256": "fa2bd54d5ae40ed2b69c081e42b19b7dca46ebc39d6767a0ef6f94c8695d9502",
+    "env_path": "experiments/rqint/r3_main_package_meta/env_local_main.json",
+    "package_hashes_sha256": "021c8e5ffde7456e467d934c65b711b77ba503ce0146df5b6e7b8298f2240cd3",
+    "wall_clock_seconds": 1030.18,
+    "python_version": "3.14.4",
+    "numpy": "2.5.0",
+    "sklearn": "1.9.0",
+    "blas_name": [
+      "accelerate",
+      "accelerate"
+    ]
+  },
+  "consistency_with_block_AC": {
+    "ac_audit_path": "experiments/rqint/audit_r6.json",
+    "ac_audit_sha256": "921e16ea8191bc9b5ecdeeab7f40a42df89e6e4bdc3cd180273b6c91da8e6dfd",
+    "ac_numeric_core_sha256": "fd488eb429a71990d47ebf321efeb1f34083bbeb4813730a76777262b1ba878b",
+    "equal": true
+  },
+  "g_env_reference": {
+    "path": "experiments/rqint/r3_main_package_meta/env_local_main.json",
+    "supersedes_for_R3_main": "experiments/rqint/r3_package_meta/env_local.json",
+    "five_fields_equal": true
+  },
+  "acceptance_criteria": {
+    "path": "v3_Multimodal/config/r3_second_party_freeze.json",
+    "sha256": "0624d3ddb852c4e9a2f7f070024814653264eb49c2652dd3e7a947ac38ff27d0"
+  },
+  "judge": {
+    "path": "v3_Multimodal/src/r3_judge.py",
+    "sha256": "df26e946d17cd0b5ea20c741008bbdfbe19ee8b2b7d92b0de7664943ea4bcd12",
+    "selftest_path": "experiments/rqint/r3_main_package_meta/judge_selftest.json",
+    "selftest_sha256": "aace4c227aee7bbbc051d8e012466cc68f4a3129c5bd19e00f5e9ebc23b98bf2",
+    "selftest_n_pass": 16
+  },
+  "operationalization": "docs/33 항목55 — 전 리프 타입 규칙 · 잔차 7개는 소속 R6 pass · G-ENV 알려진 값만 · 입력 결속 검사 · package_hashes 대조 · freeze 목록 항목 대비 느슨해지는 방향 0",
+  "not_shared_with_second_party": true
+}

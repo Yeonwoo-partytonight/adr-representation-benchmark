@@ -1,0 +1,72 @@
+{
+  "ts_kst": "2026-08-01 16:57:19 KST",
+  "G0": {
+    "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "ladder_freeze_match": true,
+    "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_manifest_match": true,
+    "sap_version": "1.1",
+    "sap_all_validation_pass": true,
+    "sap_modules_match": {
+      "__init__.py": true,
+      "metrics.py": true,
+      "redaction.py": true,
+      "consensus.py": true,
+      "bootstrap.py": true,
+      "signflip.py": true,
+      "decision.py": true,
+      "null_generator.py": true,
+      "unseen_target.py": true,
+      "synthetic.py": true,
+      "freeze.py": true
+    },
+    "sap_n_modules_verified": 11,
+    "sap_integrity_confirmatory_untouched": true,
+    "primary_B_m1b_dim": 10,
+    "A0_primary_dim": 10,
+    "A1_all_blocks_train_only_fit": true,
+    "A1_bseq_pca_fit_rows": 671,
+    "A5_target_count_mismatch": 0,
+    "gate0_pass": true
+  },
+  "sealed_guard_n_files": 12,
+  "sealed_guard": {
+    "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json": "8722a4e1c52d2eae5cbbebf6b5a5ff5cb145dd591ea5648731d7c481ed15c1b8",
+    "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+    "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+    "experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json": "66be535755ca9f4a174a15b45fd2af34fb5f2283d0dab71acc579c6fc66a9621",
+    "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M1b.npz": "9155569ac2581613312c7608a4d9cfcfc7bfe25798b24003a0f6a9116a4fcb33",
+    "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M2b.npz": "05a51b16002b8c0fbfd68a9b5f1fa1d578b9b0b491e6944f098588d70fad0298",
+    "experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json": "b4d80cb9acceb8de6b05da1b0a247d0de94197ffebf24c9309d004d9b722c1cd",
+    "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M1b.npz": "0bb7a951246f85ab37b5d1536073a491c9857cd255593fdef0206c3f8b8b22c4",
+    "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M2b.npz": "c850e55c64309c5cae763f6388459206270a106efc70d7a11322b14c0c3091c8",
+    "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+    "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+    "experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json": "6a861640a05940533ad75b97626929c321689929c9609ec3c08972ac87b8dc8d"
+  },
+  "consensus_sha256": {
+    "consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+    "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+    "metrics_full.json": "6a861640a05940533ad75b97626929c321689929c9609ec3c08972ac87b8dc8d"
+  },
+  "inputs": {
+    "rep1_fold_membership_rows": 1092,
+    "rep2_fold_membership_rows": 1092,
+    "rep3_fold_membership_rows": 1092,
+    "targets_human_fasta_sequences": 1191
+  },
+  "open_sealed_events": 0,
+  "seed_isolation": {
+    "stratification_seeds": [
+      6001,
+      6002
+    ],
+    "n_forbidden_checked": 2033,
+    "intersection": [],
+    "intersection_size": 0,
+    "pass": true
+  },
+  "pass": true
+}

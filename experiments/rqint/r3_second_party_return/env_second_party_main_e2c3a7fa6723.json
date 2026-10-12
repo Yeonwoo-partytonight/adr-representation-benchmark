@@ -1,0 +1,97 @@
+{
+  "_doc": "R3 제2자 독립 재실행 — 환경 명세(블록 AG · docs/91 AG-5). PII 금지 규칙 적용: hostname 원문·절대경로 미수집.",
+  "host_id": "e2c3a7fa6723",
+  "host_id_note": "sha256(hostname)[:12] — 원문 미저장(docs/56 redaction)",
+  "python_version": "3.12.9",
+  "sys_version": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "sys_implementation": "CPython",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 158 Stepping 12, GenuineIntel",
+  "byteorder": "little",
+  "os_cpu_count": 8,
+  "numpy": "2.5.0",
+  "sklearn": "1.9.0",
+  "scipy": "1.18.1",
+  "numpy_build_config": {
+    "available": true,
+    "config": {
+      "Compilers": {
+        "c": {
+          "name": "msvc",
+          "linker": "link",
+          "version": "19.44.35228",
+          "commands": "cl"
+        },
+        "cython": {
+          "name": "cython",
+          "linker": "cython",
+          "version": "3.2.5",
+          "commands": "cython"
+        },
+        "c++": {
+          "name": "msvc",
+          "linker": "link",
+          "version": "19.44.35228",
+          "commands": "cl"
+        }
+      },
+      "Machine Information": {
+        "host": {
+          "cpu": "x86_64",
+          "family": "x86_64",
+          "endian": "little",
+          "system": "windows"
+        },
+        "build": {
+          "cpu": "x86_64",
+          "family": "x86_64",
+          "endian": "little",
+          "system": "windows"
+        }
+      },
+      "Build Dependencies": {
+        "blas": {
+          "name": "scipy-openblas",
+          "found": true,
+          "version": "0.3.33.112.0",
+          "detection method": "pkgconfig",
+          "include directory": "<path-redacted>",
+          "lib directory": "<path-redacted>",
+          "openblas configuration": "OpenBLAS 0.3.33.112.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24",
+          "pc file directory": "D:/a/numpy-release/numpy-release/.openblas"
+        },
+        "lapack": {
+          "name": "scipy-openblas",
+          "found": true,
+          "version": "0.3.33.112.0",
+          "detection method": "pkgconfig",
+          "include directory": "<path-redacted>",
+          "lib directory": "<path-redacted>",
+          "openblas configuration": "OpenBLAS 0.3.33.112.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=24",
+          "pc file directory": "D:/a/numpy-release/numpy-release/.openblas"
+        }
+      },
+      "Python Information": {
+        "path": "<path-redacted>",
+        "version": "3.12"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "X86_V2"
+        ],
+        "found": [
+          "X86_V3"
+        ]
+      }
+    }
+  },
+  "thread_env": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null,
+    "NUMEXPR_NUM_THREADS": null
+  },
+  "collected_by": "collect_env.py (블록 AG · docs/91 AG-5)"
+}

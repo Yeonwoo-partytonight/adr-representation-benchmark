@@ -1,0 +1,446 @@
+{
+  "block": "BI (docs/123) E2",
+  "plan": "docs/118b_external_validation_plan.md",
+  "plan_sha256": "4f06d39e9aa827bd63a2ac28e6dbedbedec2430bbde10aaadd567c81c726f60e",
+  "tier": "tier-3 · 비판정 · 다중성 보정 없음",
+  "access_log_ts_kst": "2026-10-08 16:07:56.183 KST",
+  "bootstrap_started_kst": "2026-10-08 16:07:58.473 KST",
+  "bootstrap_finished_kst": "2026-10-08 16:53:12.429 KST",
+  "reference_delta_C1": -0.006324167855457974,
+  "reference_sign": "negative",
+  "p_computed": false,
+  "bootstrap_spec": {
+    "B": 10000,
+    "seed": 6001,
+    "unit": "scaffold_cluster",
+    "alpha": 0.05
+  },
+  "rows": {
+    "R8-main": {
+      "answer": "EU∪UK",
+      "model": "RF",
+      "n_eval_drugs": 669,
+      "n_eligible_pt": 273,
+      "eligible_rule": "pos≥10 & neg≥1",
+      "ap_M1b": 0.14578630072645915,
+      "ap_M2b": 0.14269314429018792,
+      "delta": -0.003093156436271227,
+      "undefined_ap": {
+        "M1b": 0,
+        "M2b": 0,
+        "n_eval_pt": 273
+      },
+      "ci": {
+        "low": -0.012241562194163577,
+        "high": 0.0028489898826414414,
+        "status": "estimable",
+        "bca_status": "bca",
+        "method": "BCa (ci_primary)"
+      },
+      "bootstrap": {
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "n_clusters": 483,
+        "n_eff_clusters": 97.65677503818459,
+        "cluster_size": {
+          "median": 1.0,
+          "max": 43,
+          "min": 1
+        },
+        "ci_percentile": {
+          "low": -0.009643029719969524,
+          "high": 0.004904193567796461,
+          "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+        },
+        "undefined_ap_exclusion": {
+          "mean_frac": 8.717948717948718e-05,
+          "max_frac": 0.01098901098901099,
+          "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+        },
+        "pt_diagnostics": {
+          "n_eligible_pt": 273,
+          "included_pt_per_replicate": {
+            "min": 270,
+            "median": 273.0,
+            "max": 273
+          },
+          "pt_undefined_replicate_frac": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0183
+          },
+          "n_pt_ever_undefined": 14,
+          "frac_replicates_excluding_ge1_pt": 0.022
+        },
+        "bca_diagnostics": {
+          "acceleration": -0.034115290739136876,
+          "acceleration_finite": true,
+          "z0": -0.22034817986241456,
+          "adj_quantile_low": 0.004999431421169902,
+          "adj_quantile_high": 0.9224592433107119,
+          "adj_quantile_saturated_01": false
+        },
+        "boot_summary": {
+          "mean": -0.002321893587596025,
+          "sd": 0.003669435561321174
+        }
+      }
+    },
+    "R8-eu": {
+      "answer": "EU",
+      "model": "RF",
+      "n_eval_drugs": 318,
+      "n_eligible_pt": 205,
+      "eligible_rule": "pos≥10 & neg≥1",
+      "ap_M1b": 0.17896202073706777,
+      "ap_M2b": 0.1798627940319891,
+      "delta": 0.000900773294921331,
+      "undefined_ap": {
+        "M1b": 0,
+        "M2b": 0,
+        "n_eval_pt": 205
+      },
+      "ci": {
+        "low": -0.01384207894806113,
+        "high": 0.010360243516239761,
+        "status": "estimable",
+        "bca_status": "bca",
+        "method": "BCa (ci_primary)"
+      },
+      "bootstrap": {
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "n_clusters": 271,
+        "n_eff_clusters": 108.96982758620689,
+        "cluster_size": {
+          "median": 1.0,
+          "max": 18,
+          "min": 1
+        },
+        "ci_percentile": {
+          "low": -0.009553157845721427,
+          "high": 0.013901803277505209,
+          "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+        },
+        "undefined_ap_exclusion": {
+          "mean_frac": 6.341463414634146e-06,
+          "max_frac": 0.004878048780487805,
+          "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+        },
+        "pt_diagnostics": {
+          "n_eligible_pt": 205,
+          "included_pt_per_replicate": {
+            "min": 204,
+            "median": 205.0,
+            "max": 205
+          },
+          "pt_undefined_replicate_frac": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0003
+          },
+          "n_pt_ever_undefined": 8,
+          "frac_replicates_excluding_ge1_pt": 0.0013
+        },
+        "bca_diagnostics": {
+          "acceleration": -0.03154908549054429,
+          "acceleration_finite": true,
+          "z0": -0.25360594929271557,
+          "adj_quantile_low": 0.004227118478168011,
+          "adj_quantile_high": 0.9139652972836352,
+          "adj_quantile_saturated_01": false
+        },
+        "boot_summary": {
+          "mean": 0.002307433890703335,
+          "sd": 0.005978822620342506
+        }
+      }
+    },
+    "R8-uk": {
+      "answer": "UK",
+      "model": "RF",
+      "n_eval_drugs": 471,
+      "n_eligible_pt": 208,
+      "eligible_rule": "pos≥10 & neg≥1",
+      "ap_M1b": 0.15564635596495777,
+      "ap_M2b": 0.15079014964542076,
+      "delta": -0.00485620631953701,
+      "undefined_ap": {
+        "M1b": 0,
+        "M2b": 0,
+        "n_eval_pt": 208
+      },
+      "ci": {
+        "low": -0.014843986482134116,
+        "high": 0.0029110880389883564,
+        "status": "estimable",
+        "bca_status": "bca",
+        "method": "BCa (ci_primary)"
+      },
+      "bootstrap": {
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "n_clusters": 330,
+        "n_eff_clusters": 82.07214206437293,
+        "cluster_size": {
+          "median": 1.0,
+          "max": 33,
+          "min": 1
+        },
+        "ci_percentile": {
+          "low": -0.012743859078401766,
+          "high": 0.004793055484401139,
+          "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+        },
+        "undefined_ap_exclusion": {
+          "mean_frac": 5.1923076923076914e-05,
+          "max_frac": 0.009615384615384616,
+          "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+        },
+        "pt_diagnostics": {
+          "n_eligible_pt": 208,
+          "included_pt_per_replicate": {
+            "min": 206,
+            "median": 208.0,
+            "max": 208
+          },
+          "pt_undefined_replicate_frac": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0028
+          },
+          "n_pt_ever_undefined": 18,
+          "frac_replicates_excluding_ge1_pt": 0.0107
+        },
+        "bca_diagnostics": {
+          "acceleration": -0.023834272449686687,
+          "acceleration_finite": true,
+          "z0": -0.17128458593150664,
+          "adj_quantile_low": 0.007833385399883772,
+          "adj_quantile_high": 0.9387370809044723,
+          "adj_quantile_saturated_01": false
+        },
+        "boot_summary": {
+          "mean": -0.004046444969675744,
+          "sd": 0.004464439000846311
+        }
+      }
+    },
+    "R8-pt1": {
+      "answer": "EU∪UK",
+      "model": "RF",
+      "n_eval_drugs": 669,
+      "n_eligible_pt": 364,
+      "eligible_rule": "pos≥1 & neg≥1",
+      "ap_M1b": 0.1279522046962637,
+      "ap_M2b": 0.12067923360846634,
+      "delta": -0.007272971087797356,
+      "undefined_ap": {
+        "M1b": 0,
+        "M2b": 0,
+        "n_eval_pt": 364
+      },
+      "ci": {
+        "low": -0.01685581891429389,
+        "high": -0.0010324007142801133,
+        "status": "estimable",
+        "bca_status": "bca",
+        "method": "BCa (ci_primary)"
+      },
+      "bootstrap": {
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "n_clusters": 483,
+        "n_eff_clusters": 97.65677503818459,
+        "cluster_size": {
+          "median": 1.0,
+          "max": 43,
+          "min": 1
+        },
+        "ci_percentile": {
+          "low": -0.014064965035848205,
+          "high": 0.0018705352102291134,
+          "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+        },
+        "undefined_ap_exclusion": {
+          "mean_frac": 0.010767032967032967,
+          "max_frac": 0.03571428571428571,
+          "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+        },
+        "pt_diagnostics": {
+          "n_eligible_pt": 364,
+          "included_pt_per_replicate": {
+            "min": 351,
+            "median": 360.0,
+            "max": 364
+          },
+          "pt_undefined_replicate_frac": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.3759
+          },
+          "n_pt_ever_undefined": 97,
+          "frac_replicates_excluding_ge1_pt": 0.9745
+        },
+        "bca_diagnostics": {
+          "acceleration": -0.03404090803386313,
+          "acceleration_finite": true,
+          "z0": -0.29315981276649167,
+          "adj_quantile_low": 0.003133732804849376,
+          "adj_quantile_high": 0.900455021204662,
+          "adj_quantile_saturated_01": false
+        },
+        "boot_summary": {
+          "mean": -0.0061516075781848515,
+          "sd": 0.003995430811029515
+        }
+      }
+    },
+    "R8-gin": {
+      "answer": "EU∪UK",
+      "model": "GIN",
+      "n_eval_drugs": 669,
+      "n_eligible_pt": 273,
+      "eligible_rule": "pos≥10 & neg≥1",
+      "per_seed": {
+        "seed42": {
+          "ap_M1b": 0.1254782178958943,
+          "ap_M2b": 0.13087630281057452,
+          "delta": 0.005398084914680218,
+          "undefined_ap": {
+            "M1b": 0,
+            "M2b": 0
+          }
+        },
+        "seed1": {
+          "ap_M1b": 0.12334226350584605,
+          "ap_M2b": 0.13263970219047014,
+          "delta": 0.009297438684624085,
+          "undefined_ap": {
+            "M1b": 0,
+            "M2b": 0
+          }
+        },
+        "seed2": {
+          "ap_M1b": 0.12685833362082405,
+          "ap_M2b": 0.13327837405238702,
+          "delta": 0.006420040431562968,
+          "undefined_ap": {
+            "M1b": 0,
+            "M2b": 0
+          }
+        }
+      },
+      "delta": 0.007038521343622424,
+      "aggregation": "S-GIN cell_3: Δ_t = macroAP(M2b_seed t) − macroAP(M1b_seed t), Δ_GIN = mean_t (metric-then-average)",
+      "ci": {
+        "status": "not_computed",
+        "reason": "S-GIN 은 CI 없이 방향만 보고 — 새 절차 신설 금지(docs/123 §4-3)"
+      }
+    },
+    "R8-int": {
+      "answer": "US(master_Y)",
+      "model": "RF",
+      "n_eval_drugs": 669,
+      "n_eligible_pt": 296,
+      "eligible_rule": "pos≥10 & neg≥1",
+      "ap_M1b": 0.17212759460017166,
+      "ap_M2b": 0.167191242022728,
+      "delta": -0.004936352577443653,
+      "undefined_ap": {
+        "M1b": 0,
+        "M2b": 0,
+        "n_eval_pt": 296
+      },
+      "ci": {
+        "low": -0.017644416847492756,
+        "high": 0.003973833031618855,
+        "status": "estimable",
+        "bca_status": "bca",
+        "method": "BCa (ci_primary)"
+      },
+      "bootstrap": {
+        "B": 10000,
+        "seed": 6001,
+        "unit": "scaffold_cluster",
+        "alpha": 0.05,
+        "n_clusters": 483,
+        "n_eff_clusters": 97.65677503818459,
+        "cluster_size": {
+          "median": 1.0,
+          "max": 43,
+          "min": 1
+        },
+        "ci_percentile": {
+          "low": -0.014958461677127392,
+          "high": 0.006011637183135083,
+          "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+        },
+        "undefined_ap_exclusion": {
+          "mean_frac": 7.500000000000001e-05,
+          "max_frac": 0.013513513513513514,
+          "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+        },
+        "pt_diagnostics": {
+          "n_eligible_pt": 296,
+          "included_pt_per_replicate": {
+            "min": 292,
+            "median": 296.0,
+            "max": 296
+          },
+          "pt_undefined_replicate_frac": {
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0062
+          },
+          "n_pt_ever_undefined": 23,
+          "frac_replicates_excluding_ge1_pt": 0.0154
+        },
+        "bca_diagnostics": {
+          "acceleration": -0.010194596608489025,
+          "acceleration_finite": true,
+          "z0": -0.19677962021846676,
+          "adj_quantile_low": 0.008152633298647332,
+          "adj_quantile_high": 0.9376413886900383,
+          "adj_quantile_saturated_01": false
+        },
+        "boot_summary": {
+          "mean": -0.0040786415565964495,
+          "sd": 0.0053491184499184895
+        }
+      }
+    }
+  },
+  "verdict_R8_main": {
+    "category": "방향 재현",
+    "reason": "sign(Δ_ext) == sign(Δ_①) = negative",
+    "rule": "118b §4 — sign 일치 & ≠0 → 방향 재현 / 그 밖 → 방향 비재현 / 적격 PT<20 또는 평가 약물<100 → not_estimable · CI 0 포함 여부 미사용"
+  },
+  "delta_sign_R8_main": "negative",
+  "label_concordance": {
+    "scope": "R8-main 평가 약물 × 370 PT",
+    "both": 5381,
+    "external_only": 8763,
+    "internal_only": 9361,
+    "jaccard": 0.22893001489044884
+  },
+  "e1_manifest_sha256": "6fb735fb3a58f51c303375d8b49f04a7ceee42ac4ffe3cca4002f7e587641dbd",
+  "prediction_sha256": {
+    "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+    "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+    "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M1b_seed42.npz": "9b5f16ac16c1d857f89291ebec21e2ea15e287d07edd784089db39521973a025",
+    "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M1b_seed1.npz": "1bdf93519825873936762d4fe9c4b8e16ab67a543a2921b807ae686a4ae9cf29",
+    "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M1b_seed2.npz": "32a5f1bc701e2f102d0726dfaefa86e9ca862ec316ba6964a25bf0494b642425",
+    "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M2b_seed42.npz": "b36ff282b410295bb7170ee2f87c3574d0046765c15ee1c76ba62b4a26c1df5b",
+    "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M2b_seed1.npz": "9ae11e2d072da87b18b7c5458f9f0b4414600d22179ce674898303b1bc4ebd28",
+    "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M2b_seed2.npz": "03a0db458b4d4f4808041f1610e0870b57acaaf5996a5a20b584b82043674265"
+  }
+}

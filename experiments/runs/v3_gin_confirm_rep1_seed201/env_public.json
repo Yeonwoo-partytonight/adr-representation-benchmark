@@ -1,0 +1,13 @@
+{
+  "python": "3.14.4",
+  "torch": "2.12.1",
+  "torch_geometric": "2.8.0",
+  "rdkit": "2026.03.3",
+  "sklearn": "1.9.0",
+  "numpy": "2.5.0",
+  "pandas": "3.0.3",
+  "machine": "arm64",
+  "os": "Darwin 25.6.0",
+  "device": "mps",
+  "mps_fallback_env": "1 (명령줄에서 고정 — 하네스는 환경변수를 판독하지 않는다)"
+}

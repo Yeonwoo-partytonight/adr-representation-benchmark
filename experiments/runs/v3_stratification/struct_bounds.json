@@ -1,0 +1,50 @@
+{
+  "_scope": "공개 — 설계 자산(구조축 경계). 결과(AP·Δ·CI·p) 아님.",
+  "ts_kst": "2026-08-01 16:52:54 KST",
+  "rule": "H-0-5 사전확정 — 약물 d 의 구조 유사도 = fold-train 약물집합에 대한 max Morgan Tanimoto(동결 fingerprint: ladder_freeze.json morgan r=2, 2048bit; 재계산·파라미터 변경 없음). 층 경계 = 반복1 기준 25/50/75 분위 → 3반복 공통 적용. 결과를 본 뒤 조정 금지.",
+  "fingerprint": {
+    "radius": 2,
+    "n_bits": 2048,
+    "source": "ladder_freeze.json morgan (v1_RF pilot 정의)",
+    "generator": "rdFingerprintGenerator.GetMorganGenerator",
+    "n_parse_fail": 0
+  },
+  "reference_repeat": 1,
+  "quantiles": [
+    25,
+    50,
+    75
+  ],
+  "boundaries": {
+    "q25": 0.25,
+    "q50": 0.3283582089552239,
+    "q75": 0.4658045977011494
+  },
+  "bins": [
+    "struct_q1",
+    "struct_q2",
+    "struct_q3",
+    "struct_q4"
+  ],
+  "bin_rule": "q1: x<q25 · q2: q25<=x<q50 · q3: q50<=x<q75 · q4: x>=q75",
+  "max_tanimoto_summary_by_repeat": {
+    "1": {
+      "n": 1092,
+      "min": 0.02702702702702703,
+      "median": 0.3283582089552239,
+      "max": 0.9636363636363636
+    },
+    "2": {
+      "n": 1092,
+      "min": 0.022727272727272728,
+      "median": 0.32824160447761197,
+      "max": 0.9636363636363636
+    },
+    "3": {
+      "n": 1092,
+      "min": 0.0196078431372549,
+      "median": 0.32558139534883723,
+      "max": 0.9636363636363636
+    }
+  }
+}

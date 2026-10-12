@@ -1,0 +1,23 @@
+{
+  "python_version": "3.14.4",
+  "numpy": "2.5.0",
+  "scipy": "1.18.0",
+  "scikit_learn": "1.9.0",
+  "joblib": "1.5.3",
+  "pandas": "3.0.3",
+  "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+  "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+  "split_files_sha256": {
+    "rep1/fold_membership.csv": "7047606f76562ba54b1dadef0518cb8e18ed22dad5b588d22b298bcb892284ad",
+    "rep1/folds.json": "3c1a5d68bfcc6ddfa1de17990194c5beb3c4fe365ee0a123d04c4a34bed871b2",
+    "rep1/split_manifest.json": "d2b6f4891d2e6e95b6f1968404caed097e1cd5b91502b7b54bbf827269396fe0",
+    "rep2/fold_membership.csv": "27f2e01dcb392be4873dc2820fdbb9bb8d0f5c8c85139878f523de6a74056b33",
+    "rep2/folds.json": "786feeca045f603685e190a252636f3815695d2c9e61812c8db1daf063abccfa",
+    "rep2/split_manifest.json": "05343236723ee58e59c4e4500fa5354cd2218da121a58419477c14b35172904f",
+    "rep3/fold_membership.csv": "45762346d825a9f3a630ea34a423c10b49039275f5d4ef28a264e6ae2aa0ad23",
+    "rep3/folds.json": "9db08cf96298b47e182e286fa4ef4b94f74605c6f31f0f9f841bc723c638b4e4",
+    "rep3/split_manifest.json": "2664d80e98865d5e1dbb3e173fba39f10686dcf55cd06ef1c2ea8ff85e806e68"
+  },
+  "machine": "arm64",
+  "os": "Darwin 25.5.0"
+}

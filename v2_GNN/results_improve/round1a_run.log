@@ -34,41 +34,41 @@
   [focal_g2_sqrt] early stop @ ep 112 (best 0.1776@92)
   → valid macroPR 0.1776 @ep92
 Traceback (most recent call last):
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train_improve.py", line 147, in <module>
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train_improve.py", line 147, in <module>
     main()
     ~~~~^^
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train_improve.py", line 138, in main
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train_improve.py", line 138, in main
     run_round("1a", ROUND1A, epochs=150, patience=20, label="1a",
     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
               title="v2_GNN 개선 Round 1a — (다) 손실/불균형 단독")
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train_improve.py", line 122, in run_round
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train_improve.py", line 122, in run_round
     res = evaluate_round(preds, valids, Yte, ycols, outdir, label,
                          thr=cfg["eval"]["threshold"], expected_pt=cfg["eval"]["expected_eval_pt"],
                          alpha=cfg["stats"]["alpha"])
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/eval_improve.py", line 59, in evaluate_round
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/eval_improve.py", line 59, in evaluate_round
     m = per_pt[best][["meddra_pt", "n_pos_test", "pr_auc"]].rename(columns={"pr_auc": "gnn"}).merge(
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
         v1pp[["meddra_pt", "RandomForest_pr_auc"]].rename(columns={"RandomForest_pr_auc": "rf"}),
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         on="meddra_pt").dropna(subset=["gnn", "rf"])
         ^^^^^^^^^^^^^^^
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/frame.py", line 12900, in merge
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/frame.py", line 12900, in merge
     return merge(
         self,
     ...<10 lines>...
         validate=validate,
     )
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/merge.py", line 385, in merge
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/merge.py", line 385, in merge
     op = _MergeOperation(
         left_df,
     ...<10 lines>...
         validate=validate,
     )
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/merge.py", line 1031, in __init__
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/merge.py", line 1031, in __init__
     self._maybe_coerce_merge_keys()
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/merge.py", line 1835, in _maybe_coerce_merge_keys
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/merge.py", line 1835, in _maybe_coerce_merge_keys
     raise ValueError(msg)
 ValueError: You are trying to merge on str and int64 columns for key 'meddra_pt'. If you wish to proceed you should use pd.concat
 EXIT=1

@@ -1,0 +1,151 @@
+{
+  "_scope": "공개 진행 파일 — 개수·시간·메모리·해시·PASS/FAIL 만. T_b·macro AP·Δ·p_emp·null 분포 **기입 금지**(docs/33 항목18 redaction).",
+  "ts_kst": "2026-07-31 21:18:17 KST",
+  "_session_start_ts": "2026-07-31 21:05:43 KST",
+  "completed": 2110,
+  "total": 2110,
+  "remaining": 0,
+  "completed_by_mode": {
+    "global": 1000,
+    "family": 1000,
+    "family_ALT": 100,
+    "global_ALT": 10
+  },
+  "expected_by_mode": {
+    "global": 1000,
+    "family": 1000,
+    "family_ALT": 100,
+    "global_ALT": 10
+  },
+  "session_seq": 6,
+  "session_completed": 8,
+  "workers": 18,
+  "rolling_throughput_perm_per_hour": 86.32270674437197,
+  "rolling_window": 8,
+  "rolling_valid": true,
+  "rolling_definition": "w / wall_max — 직전 50개 permutation 단가의 최댓값 기준(블록 D 동결 정의; 평균·중앙값 기반 계산 금지).",
+  "rolling_note": "도착 시각 기반 (N-1)/span 은 18 워커가 동시에 끝나 배치 경계에서 크게 왜곡되므로 쓰지 않는다 — permutation 단가 기반은 배치 정렬과 무관하다.",
+  "session_throughput_perm_per_hour": 38.21362801546553,
+  "eta_hours": 0.0,
+  "eta_basis": "rolling",
+  "sum_peak_rss_gib_observed": 17.523178100585938,
+  "ram_budget_gib": 38.4,
+  "ram_gate_G4": {
+    "exceeded": false,
+    "observed_gib": null,
+    "ts_kst": null,
+    "samples": 75
+  },
+  "power": {
+    "samples": 12,
+    "excursion": 0,
+    "battery_sustained_abort": false,
+    "last": {
+      "ts_kst": "2026-07-31 21:17:44 KST",
+      "on_ac_power": true,
+      "powermode_live": 0,
+      "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+    }
+  },
+  "gates": {
+    "G0": true,
+    "G3_identity": true,
+    "G1_G2": true,
+    "env_fingerprint_match": true
+  },
+  "stop_reason": "done",
+  "sessions": [
+    {
+      "seq": 1,
+      "start_ts": "2026-07-28 23:38:10 KST",
+      "stop_ts": "2026-07-29 08:19:59 KST",
+      "completed_delta": 415,
+      "workers": 18,
+      "power_state": {
+        "ts_kst": "2026-07-29 08:19:20 KST",
+        "on_ac_power": true,
+        "powermode_live": 0,
+        "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+      },
+      "graceful_stop": true,
+      "stop_reason": "stop_file"
+    },
+    {
+      "seq": 2,
+      "start_ts": "2026-07-29 17:38:05 KST",
+      "stop_ts": "2026-07-29 19:33:39 KST",
+      "completed_delta": 94,
+      "workers": 18,
+      "power_state": {
+        "ts_kst": "2026-07-29 19:33:17 KST",
+        "on_ac_power": true,
+        "powermode_live": 0,
+        "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+      },
+      "graceful_stop": true,
+      "stop_reason": "stop_file"
+    },
+    {
+      "seq": 3,
+      "start_ts": "2026-07-29 20:32:19 KST",
+      "stop_ts": "2026-07-30 08:17:07 KST",
+      "completed_delta": 576,
+      "workers": 18,
+      "power_state": {
+        "ts_kst": "2026-07-30 08:16:49 KST",
+        "on_ac_power": true,
+        "powermode_live": 0,
+        "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+      },
+      "graceful_stop": true,
+      "stop_reason": "stop_file"
+    },
+    {
+      "seq": 4,
+      "start_ts": "2026-07-30 17:22:45 KST",
+      "stop_ts": "2026-07-31 08:15:25 KST",
+      "completed_delta": 801,
+      "workers": 18,
+      "power_state": {
+        "ts_kst": "2026-07-31 08:15:11 KST",
+        "on_ac_power": true,
+        "powermode_live": 0,
+        "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+      },
+      "graceful_stop": true,
+      "stop_reason": "stop_file"
+    },
+    {
+      "seq": 5,
+      "start_ts": "2026-07-31 16:32:10 KST",
+      "stop_ts": "2026-07-31 20:38:57 KST",
+      "completed_delta": 216,
+      "workers": 18,
+      "power_state": {
+        "ts_kst": "2026-07-31 20:38:36 KST",
+        "on_ac_power": true,
+        "powermode_live": 0,
+        "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+      },
+      "graceful_stop": true,
+      "stop_reason": "stop_file"
+    },
+    {
+      "seq": 6,
+      "start_ts": "2026-07-31 21:05:43 KST",
+      "stop_ts": "2026-07-31 21:18:17 KST",
+      "completed_delta": 8,
+      "workers": 18,
+      "power_state": {
+        "ts_kst": "2026-07-31 21:17:44 KST",
+        "on_ac_power": true,
+        "powermode_live": 0,
+        "raw_pmset_ps_head": "Now drawing from 'AC Power'"
+      },
+      "graceful_stop": true,
+      "stop_reason": "done"
+    }
+  ],
+  "stop_hint": "touch experiments/runs/v3_null_MAIN/STOP",
+  "graceful_stop": true
+}

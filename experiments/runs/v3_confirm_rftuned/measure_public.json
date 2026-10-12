@@ -1,0 +1,14 @@
+{
+  "measured_model": "RF_tuned",
+  "measured_dim": 2048,
+  "measured_wall_s": 296.6527947499999,
+  "n_model_fold_total": 15,
+  "estimated_total_wall_s": 4449.791921249998,
+  "estimated_total_wall_hours": 1.2360533114583327,
+  "estimated_total_wall_days": 0.05150222131076387,
+  "abort_threshold_days": 7.0,
+  "exceeds_threshold": false,
+  "peak_rss_gib": 4.689788818359375,
+  "docs48_prior_estimate_note": "docs/48 §7 의 '약 24분' 은 동결 RF(n_estimators=300) 단가 외삽값이라 본 모델(n_estimators=1000·min_samples_leaf=2)에 적용하지 않는다 — 실측으로 대체.",
+  "scaling_note": "본 블록은 arm 1개·차원 고정(2048)이라 model-fold 단가가 균일하다. 따라서 차원비 스케일 없이 실측 단가 × 15 로 추정한다."
+}

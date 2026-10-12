@@ -1,0 +1,126 @@
+[G-IDLE A] PASS [AY run entry] load1=1.75 < 2.0
+[LOCK] 획득 pid=65283 script=rqint_holm8_run.py role=runner
+2026-09-28 20:30:53 KST	R0'	mode first · tree created (out/_sealed/_tmp)
+2026-09-28 20:30:54 KST	R1	design · rows 1092 · PT 370 · groups 732
+2026-09-28 20:30:54 KST	R2	access.log +1 line · RF consensus 1 · GIN consensus 1 · leverage 1 · launch 1
+2026-09-28 20:30:54 KST	R3	inputs verified · matrices 8 · leverage 1
+2026-09-28 20:30:55 KST	R4a	T_obs bit-equal to block AX record
+2026-09-28 20:30:55 KST	R4b	start · coins 0/100000
+2026-09-28 20:43:07 KST	R4b	checkpoint · phase coins · coins 1000/100000 · fallback 0 · elapsed 733.3s
+2026-09-28 20:55:12 KST	R4b	checkpoint · phase coins · coins 2000/100000 · fallback 0 · elapsed 1458.6s
+2026-09-28 21:07:17 KST	R4b	checkpoint · phase coins · coins 3000/100000 · fallback 0 · elapsed 2183.9s
+2026-09-28 21:19:25 KST	R4b	checkpoint · phase coins · coins 4000/100000 · fallback 0 · elapsed 2911.4s
+2026-09-28 21:31:34 KST	R4b	checkpoint · phase coins · coins 5000/100000 · fallback 0 · elapsed 3640.5s
+2026-09-28 21:43:42 KST	R4b	checkpoint · phase coins · coins 6000/100000 · fallback 0 · elapsed 4368.9s
+2026-09-28 21:55:46 KST	R4b	checkpoint · phase coins · coins 7000/100000 · fallback 0 · elapsed 5093.0s
+2026-09-28 22:07:51 KST	R4b	checkpoint · phase coins · coins 8000/100000 · fallback 0 · elapsed 5817.4s
+2026-09-28 22:19:53 KST	R4b	checkpoint · phase coins · coins 9000/100000 · fallback 0 · elapsed 6539.3s
+2026-09-28 22:31:56 KST	R4b	checkpoint · phase coins · coins 10000/100000 · fallback 0 · elapsed 7262.5s
+2026-09-28 22:43:59 KST	R4b	checkpoint · phase coins · coins 11000/100000 · fallback 0 · elapsed 7985.4s
+2026-09-28 22:56:01 KST	R4b	checkpoint · phase coins · coins 12000/100000 · fallback 0 · elapsed 8708.2s
+2026-09-28 23:08:04 KST	R4b	checkpoint · phase coins · coins 13000/100000 · fallback 0 · elapsed 9430.6s
+2026-09-28 23:20:07 KST	R4b	checkpoint · phase coins · coins 14000/100000 · fallback 0 · elapsed 10154.1s
+2026-09-28 23:32:12 KST	R4b	checkpoint · phase coins · coins 15000/100000 · fallback 0 · elapsed 10879.1s
+2026-09-28 23:44:18 KST	R4b	checkpoint · phase coins · coins 16000/100000 · fallback 0 · elapsed 11604.4s
+2026-09-28 23:56:20 KST	R4b	checkpoint · phase coins · coins 17000/100000 · fallback 0 · elapsed 12326.4s
+2026-09-29 00:08:23 KST	R4b	checkpoint · phase coins · coins 18000/100000 · fallback 0 · elapsed 13049.3s
+2026-09-29 00:20:24 KST	R4b	checkpoint · phase coins · coins 19000/100000 · fallback 0 · elapsed 13770.9s
+2026-09-29 00:32:25 KST	R4b	checkpoint · phase coins · coins 20000/100000 · fallback 0 · elapsed 14491.8s
+2026-09-29 00:44:24 KST	R4b	checkpoint · phase coins · coins 21000/100000 · fallback 0 · elapsed 15211.1s
+2026-09-29 00:56:32 KST	R4b	checkpoint · phase coins · coins 22000/100000 · fallback 0 · elapsed 15938.4s
+2026-09-29 01:08:38 KST	R4b	checkpoint · phase coins · coins 23000/100000 · fallback 0 · elapsed 16664.9s
+2026-09-29 01:20:45 KST	R4b	checkpoint · phase coins · coins 24000/100000 · fallback 0 · elapsed 17391.6s
+2026-09-29 01:32:58 KST	R4b	checkpoint · phase coins · coins 25000/100000 · fallback 0 · elapsed 18124.2s
+2026-09-29 01:45:05 KST	R4b	checkpoint · phase coins · coins 26000/100000 · fallback 0 · elapsed 18851.4s
+2026-09-29 01:57:05 KST	R4b	checkpoint · phase coins · coins 27000/100000 · fallback 0 · elapsed 19572.1s
+2026-09-29 02:09:12 KST	R4b	checkpoint · phase coins · coins 28000/100000 · fallback 0 · elapsed 20299.0s
+2026-09-29 02:21:17 KST	R4b	checkpoint · phase coins · coins 29000/100000 · fallback 0 · elapsed 21024.2s
+2026-09-29 02:33:21 KST	R4b	checkpoint · phase coins · coins 30000/100000 · fallback 0 · elapsed 21747.7s
+2026-09-29 02:45:21 KST	R4b	checkpoint · phase coins · coins 31000/100000 · fallback 0 · elapsed 22467.9s
+2026-09-29 02:57:37 KST	R4b	checkpoint · phase coins · coins 32000/100000 · fallback 0 · elapsed 23204.0s
+2026-09-29 03:09:46 KST	R4b	checkpoint · phase coins · coins 33000/100000 · fallback 0 · elapsed 23932.3s
+2026-09-29 03:21:57 KST	R4b	checkpoint · phase coins · coins 34000/100000 · fallback 0 · elapsed 24663.4s
+2026-09-29 03:34:01 KST	R4b	checkpoint · phase coins · coins 35000/100000 · fallback 0 · elapsed 25387.3s
+2026-09-29 03:46:10 KST	R4b	checkpoint · phase coins · coins 36000/100000 · fallback 0 · elapsed 26116.5s
+2026-09-29 03:58:16 KST	R4b	checkpoint · phase coins · coins 37000/100000 · fallback 0 · elapsed 26842.5s
+2026-09-29 04:10:19 KST	R4b	checkpoint · phase coins · coins 38000/100000 · fallback 0 · elapsed 27565.9s
+2026-09-29 04:22:30 KST	R4b	checkpoint · phase coins · coins 39000/100000 · fallback 0 · elapsed 28296.4s
+2026-09-29 04:34:35 KST	R4b	checkpoint · phase coins · coins 40000/100000 · fallback 0 · elapsed 29021.5s
+2026-09-29 04:46:38 KST	R4b	checkpoint · phase coins · coins 41000/100000 · fallback 0 · elapsed 29744.9s
+2026-09-29 04:58:39 KST	R4b	checkpoint · phase coins · coins 42000/100000 · fallback 0 · elapsed 30465.4s
+2026-09-29 05:10:43 KST	R4b	checkpoint · phase coins · coins 43000/100000 · fallback 0 · elapsed 31189.3s
+2026-09-29 05:22:47 KST	R4b	checkpoint · phase coins · coins 44000/100000 · fallback 0 · elapsed 31913.4s
+2026-09-29 05:34:57 KST	R4b	checkpoint · phase coins · coins 45000/100000 · fallback 0 · elapsed 32643.8s
+2026-09-29 05:47:02 KST	R4b	checkpoint · phase coins · coins 46000/100000 · fallback 0 · elapsed 33368.3s
+2026-09-29 05:59:02 KST	R4b	checkpoint · phase coins · coins 47000/100000 · fallback 0 · elapsed 34088.5s
+2026-09-29 06:11:01 KST	R4b	checkpoint · phase coins · coins 48000/100000 · fallback 0 · elapsed 34807.7s
+2026-09-29 06:23:05 KST	R4b	checkpoint · phase coins · coins 49000/100000 · fallback 0 · elapsed 35531.7s
+2026-09-29 06:35:06 KST	R4b	checkpoint · phase coins · coins 50000/100000 · fallback 0 · elapsed 36253.1s
+2026-09-29 06:47:06 KST	R4b	checkpoint · phase coins · coins 51000/100000 · fallback 0 · elapsed 36973.0s
+2026-09-29 06:59:10 KST	R4b	checkpoint · phase coins · coins 52000/100000 · fallback 0 · elapsed 37696.8s
+2026-09-29 07:11:08 KST	R4b	checkpoint · phase coins · coins 53000/100000 · fallback 0 · elapsed 38414.4s
+2026-09-29 07:23:16 KST	R4b	checkpoint · phase coins · coins 54000/100000 · fallback 0 · elapsed 39142.2s
+2026-09-29 07:35:21 KST	R4b	checkpoint · phase coins · coins 55000/100000 · fallback 0 · elapsed 39867.4s
+2026-09-29 07:47:24 KST	R4b	checkpoint · phase coins · coins 56000/100000 · fallback 0 · elapsed 40590.8s
+2026-09-29 07:59:29 KST	R4b	checkpoint · phase coins · coins 57000/100000 · fallback 0 · elapsed 41316.0s
+2026-09-29 08:11:32 KST	R4b	checkpoint · phase coins · coins 58000/100000 · fallback 0 · elapsed 42038.8s
+2026-09-29 08:23:38 KST	R4b	checkpoint · phase coins · coins 59000/100000 · fallback 0 · elapsed 42764.6s
+2026-09-29 08:35:40 KST	R4b	checkpoint · phase coins · coins 60000/100000 · fallback 0 · elapsed 43486.9s
+2026-09-29 08:47:41 KST	R4b	checkpoint · phase coins · coins 61000/100000 · fallback 0 · elapsed 44208.0s
+2026-09-29 08:59:50 KST	R4b	checkpoint · phase coins · coins 62000/100000 · fallback 0 · elapsed 44936.3s
+2026-09-29 09:11:50 KST	R4b	checkpoint · phase coins · coins 63000/100000 · fallback 0 · elapsed 45656.4s
+2026-09-29 09:23:53 KST	R4b	checkpoint · phase coins · coins 64000/100000 · fallback 0 · elapsed 46379.5s
+2026-09-29 09:35:56 KST	R4b	checkpoint · phase coins · coins 65000/100000 · fallback 0 · elapsed 47102.9s
+2026-09-29 09:48:00 KST	R4b	checkpoint · phase coins · coins 66000/100000 · fallback 0 · elapsed 47827.0s
+2026-09-29 10:00:09 KST	R4b	checkpoint · phase coins · coins 67000/100000 · fallback 0 · elapsed 48557.6s
+2026-09-29 10:12:18 KST	R4b	checkpoint · phase coins · coins 68000/100000 · fallback 0 · elapsed 49286.8s
+2026-09-29 10:24:25 KST	R4b	checkpoint · phase coins · coins 69000/100000 · fallback 0 · elapsed 50011.6s
+2026-09-29 10:36:37 KST	R4b	checkpoint · phase coins · coins 70000/100000 · fallback 0 · elapsed 50743.1s
+2026-09-29 10:48:47 KST	R4b	checkpoint · phase coins · coins 71000/100000 · fallback 0 · elapsed 51473.3s
+2026-09-29 11:00:56 KST	R4b	checkpoint · phase coins · coins 72000/100000 · fallback 0 · elapsed 52202.5s
+2026-09-29 11:13:03 KST	R4b	checkpoint · phase coins · coins 73000/100000 · fallback 0 · elapsed 52929.9s
+2026-09-29 11:25:15 KST	R4b	checkpoint · phase coins · coins 74000/100000 · fallback 0 · elapsed 53661.1s
+2026-09-29 11:37:33 KST	R4b	checkpoint · phase coins · coins 75000/100000 · fallback 0 · elapsed 54400.1s
+2026-09-29 11:49:43 KST	R4b	checkpoint · phase coins · coins 76000/100000 · fallback 0 · elapsed 55129.4s
+2026-09-29 12:01:53 KST	R4b	checkpoint · phase coins · coins 77000/100000 · fallback 0 · elapsed 55859.4s
+2026-09-29 12:14:02 KST	R4b	checkpoint · phase coins · coins 78000/100000 · fallback 0 · elapsed 56588.6s
+2026-09-29 12:26:15 KST	R4b	checkpoint · phase coins · coins 79000/100000 · fallback 0 · elapsed 57322.0s
+2026-09-29 12:38:29 KST	R4b	checkpoint · phase coins · coins 80000/100000 · fallback 0 · elapsed 58055.6s
+2026-09-29 12:50:41 KST	R4b	checkpoint · phase coins · coins 81000/100000 · fallback 0 · elapsed 58787.5s
+2026-09-29 13:02:54 KST	R4b	checkpoint · phase coins · coins 82000/100000 · fallback 0 · elapsed 59520.5s
+2026-09-29 13:15:20 KST	R4b	checkpoint · phase coins · coins 83000/100000 · fallback 0 · elapsed 60266.8s
+2026-09-29 13:27:39 KST	R4b	checkpoint · phase coins · coins 84000/100000 · fallback 0 · elapsed 61006.0s
+2026-09-29 13:39:59 KST	R4b	checkpoint · phase coins · coins 85000/100000 · fallback 0 · elapsed 61745.3s
+2026-09-29 13:52:13 KST	R4b	checkpoint · phase coins · coins 86000/100000 · fallback 0 · elapsed 62480.0s
+2026-09-29 14:04:27 KST	R4b	checkpoint · phase coins · coins 87000/100000 · fallback 0 · elapsed 63213.8s
+2026-09-29 14:16:42 KST	R4b	checkpoint · phase coins · coins 88000/100000 · fallback 0 · elapsed 63949.0s
+2026-09-29 14:29:06 KST	R4b	checkpoint · phase coins · coins 89000/100000 · fallback 0 · elapsed 64692.5s
+2026-09-29 14:41:30 KST	R4b	checkpoint · phase coins · coins 90000/100000 · fallback 0 · elapsed 65436.1s
+[LOCK] 해제 pid=65283
+[G-IDLE A] PASS [AY run entry] load1=1.76 < 2.0
+[LOCK] 획득 pid=1669 script=rqint_holm8_run.py role=runner
+2026-09-30 22:40:13 KST	R0	mode reentry · tmp cleaned 0
+2026-09-30 22:40:14 KST	R1	design · rows 1092 · PT 370 · groups 732
+2026-09-30 22:40:14 KST	R2	access.log +1 line · RF consensus 1 · GIN consensus 1 · leverage 1 · launch 2
+2026-09-30 22:40:14 KST	R3	inputs verified · matrices 8 · leverage 1
+2026-09-30 22:40:14 KST	R4a	T_obs bit-equal to block AX record
+2026-09-30 22:40:15 KST	R4b	resume · phase coins · coins 90000/100000 · fallback 0
+2026-09-30 22:52:10 KST	R4b	checkpoint · phase coins · coins 91000/100000 · fallback 0 · elapsed 717.1s
+2026-09-30 23:04:11 KST	R4b	checkpoint · phase coins · coins 92000/100000 · fallback 0 · elapsed 1438.2s
+2026-09-30 23:16:09 KST	R4b	checkpoint · phase coins · coins 93000/100000 · fallback 0 · elapsed 2156.3s
+2026-09-30 23:28:18 KST	R4b	checkpoint · phase coins · coins 94000/100000 · fallback 0 · elapsed 2884.9s
+2026-09-30 23:40:22 KST	R4b	checkpoint · phase coins · coins 95000/100000 · fallback 0 · elapsed 3608.7s
+2026-09-30 23:52:25 KST	R4b	checkpoint · phase coins · coins 96000/100000 · fallback 0 · elapsed 4332.1s
+2026-10-01 00:04:30 KST	R4b	checkpoint · phase coins · coins 97000/100000 · fallback 0 · elapsed 5057.3s
+2026-10-01 00:16:37 KST	R4b	checkpoint · phase coins · coins 98000/100000 · fallback 0 · elapsed 5783.8s
+2026-10-01 00:28:36 KST	R4b	checkpoint · phase coins · coins 99000/100000 · fallback 0 · elapsed 6503.3s
+2026-10-01 00:40:41 KST	R4b	checkpoint · phase coins · coins 100000/100000 · fallback 0 · elapsed 7228.1s
+2026-10-01 00:40:41 KST	R4b	coin loop complete · coins 100000/100000
+2026-10-01 00:40:41 KST	R4c	aggregation done (sealed only)
+2026-10-01 00:40:41 KST	R4d	BCa RF start
+2026-10-01 01:12:29 KST	R4d	BCa RF done · GIN composite start
+2026-10-01 02:50:33 KST	R4d	BCa GIN composite done
+2026-10-01 02:50:33 KST	R6	sealed written · 3 files + checkpoint + access.log
+2026-10-01 02:50:35 KST	R7	public manifest · wall_seconds_last_launch 15021.7
+[LOCK] 해제 pid=1669
+{"stage": "run", "completed": true, "mode_at_entry": "reentry"}

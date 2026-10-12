@@ -1,0 +1,10 @@
+{
+  "_doc": "매니페스트 erratum(D20) 의 «패치 후» sha256. 자기참조를 피하기 위해 매니페스트 밖에 둔다. 생성 = v3_Multimodal/src/sap_manifest_erratum.py",
+  "manifest_path": "experiments/sap/manifest.json",
+  "manifest_sha256_v1_1_baseline_before_R2": "756d485feb4715e9",
+  "manifest_sha256_before_patch": "26071a10944bfc3bfeb99ac041205b0a2e63a7fb6e7f046d1c2ba40c2fb43439",
+  "manifest_sha256_after_patch": "d08dcedf2a22e1c8493c842507422de1f6c705ce54ce995e038e09f604706e10",
+  "manifest_bytes_after_patch": 55303,
+  "sap_version": "1.2",
+  "erratum_script_sha256": "9cd4bb6f2b8f253d9422e9e4816337a27b77f1cbc7a700528320c3b247b48204"
+}

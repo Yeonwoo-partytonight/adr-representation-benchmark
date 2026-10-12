@@ -1,0 +1,92 @@
+{
+  "v3_Multimodal/src/pre_unblinding_audit.py": {
+    "sha256_before": "eb76712aab2c7339269ea3a1289b974aa2e4e77eb04e588e2448e6b441fc9e93",
+    "sha256_after": "224a5c8b81cf0b58ebb79560f566470b4792af030f0865a3d0910855dbfdf996",
+    "bytes_before": 63529,
+    "bytes_after": 63529,
+    "changed_lines": [
+      64,
+      121
+    ],
+    "changes": [
+      {
+        "line": 64,
+        "before": "\"experiments/sap/manifest.json\": \"756d485feb4715e9\",",
+        "after": "\"experiments/sap/manifest.json\": \"d08dcedf2a22e1c8\","
+      },
+      {
+        "line": 121,
+        "before": "ok = not bad and not mbad and man.get(\"sap_version\") == \"1.1\" and len(mods) == 11",
+        "after": "ok = not bad and not mbad and man.get(\"sap_version\") == \"1.2\" and len(mods) == 11"
+      }
+    ]
+  },
+  "v3_Multimodal/src/rqint_package_gates.py": {
+    "sha256_before": "f6b6adef63ab55cd89f36febc7796f76b6edb17b807e8c4dc258754ccaea6f3b",
+    "sha256_after": "7d0823b8060a6ab9767685c3e4203bbaad7a3f357e85c18b5e8c344f61c3090c",
+    "bytes_before": 12719,
+    "bytes_after": 12719,
+    "changed_lines": [
+      35
+    ],
+    "changes": [
+      {
+        "line": 35,
+        "before": "\"sap_manifest_sha16\": \"756d485feb4715e9\",",
+        "after": "\"sap_manifest_sha16\": \"d08dcedf2a22e1c8\","
+      }
+    ]
+  },
+  "v3_Multimodal/src/rqint_calibration.py": {
+    "sha256_before": "0e9b98c41432621b44c7fd9ff027645add7ccc78346353050960c6b2e31d28e4",
+    "sha256_after": "1adf999f6a2ea19ec5609663d25b18703859e478645b48fe15eac874e1392d18",
+    "bytes_before": 76223,
+    "bytes_after": 76223,
+    "changed_lines": [
+      138,
+      717,
+      892,
+      1328
+    ],
+    "changes": [
+      {
+        "line": 138,
+        "before": "\"F-MANI16\": {\"sha16\": \"756d485feb4715e9\", \"sap_version\": \"1.1\"},",
+        "after": "\"F-MANI16\": {\"sha16\": \"d08dcedf2a22e1c8\", \"sap_version\": \"1.2\"},"
+      },
+      {
+        "line": 717,
+        "before": "mani_sha[:16] == ex[\"F-MANI16\"][\"sha16\"] and mani.get(\"sap_version\") == \"1.1\"),",
+        "after": "mani_sha[:16] == ex[\"F-MANI16\"][\"sha16\"] and mani.get(\"sap_version\") == \"1.2\"),"
+      },
+      {
+        "line": 892,
+        "before": "\"sap_version_unchanged\": \"1.1\", \"manifest_sha16\": \"756d485feb4715e9\",",
+        "after": "\"sap_version_unchanged\": \"1.2\", \"manifest_sha16\": \"d08dcedf2a22e1c8\","
+      },
+      {
+        "line": 1328,
+        "before": "\"sap_version_unchanged\": \"1.1\", \"manifest_sha16\": \"756d485feb4715e9\",",
+        "after": "\"sap_version_unchanged\": \"1.2\", \"manifest_sha16\": \"d08dcedf2a22e1c8\","
+      }
+    ]
+  },
+  "_scope": {
+    "source": "docs/99_r2_hash_registry_spec.md §3",
+    "in_scope_only": true,
+    "out_of_scope_left_unchanged": [
+      {
+        "file": "v3_Multimodal/src/pre_unblinding_audit.py",
+        "line": 959,
+        "kind": "로그 표시 문자열",
+        "note": "docs/102 §4-30 「docs/99 §3 대상 2곳만 변경」 준수 위해 미변경"
+      },
+      {
+        "file": "v3_Multimodal/src/rqint_package_gates.py",
+        "line": 5,
+        "kind": "docstring",
+        "note": "동상 — 게이트 아님"
+      }
+    ]
+  }
+}

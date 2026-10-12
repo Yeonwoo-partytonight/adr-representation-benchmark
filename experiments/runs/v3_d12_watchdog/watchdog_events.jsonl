@@ -1,0 +1,4 @@
+{"ts_kst": "2026-10-02 12:08:34 KST", "event": "watchdog_start", "restarts": 0, "launch_index": 0}
+{"ts_kst": "2026-10-02 12:26:35 KST", "event": "launch", "launch_index": 1, "waited_s": 1080.5}
+{"ts_kst": "2026-10-02 12:26:35 KST", "event": "child_started", "pid": 20446, "launch_index": 1}
+{"ts_kst": "2026-10-04 04:52:59 KST", "event": "completed", "exit_code": 0, "variant": "ii", "b_done": 100000, "k_done": 0, "phase": "coins", "ckpt_sha256": "1e55328b77b8dc9e65541df59506943361fbbe5642bd606151e160774a7d3db6"}

@@ -1,0 +1,167 @@
+{
+  "step": "§13-4 사전작업 — 재배치 null 타이밍 프로브(B=2, probe seed 격리)",
+  "purpose": "permutation 1회당 실측 wall-clock·메모리·디스크 확보 → 2,000 permutation 인프라 결정",
+  "probe_only": true,
+  "enters_null_distribution": false,
+  "probe_seeds": [
+    9000001,
+    9000002
+  ],
+  "seed_isolation": {
+    "probe_seeds": [
+      9000001,
+      9000002
+    ],
+    "main_seed_namespace_max": 1000000,
+    "reserved_seeds": [
+      42,
+      201,
+      202,
+      203,
+      204,
+      205
+    ],
+    "intersection_with_main_namespace": 0,
+    "rule": "PROBE seed > 본실행 namespace 상한 → 교집합 공집합(범위 비교로 증명)",
+    "asserted": true
+  },
+  "sap_frozen_values_used": {
+    "NULL_B": 1000,
+    "NULL_RF_COMMON_SEED": 42,
+    "PRESERVED": [
+      "protein_embedding_vectors",
+      "drug_degree",
+      "target_degree",
+      "incidence_matrix",
+      "missing_target_pattern",
+      "m1b_covariates",
+      "embedding_distribution"
+    ],
+    "PCA_RF_REFIT_SCOPE": "permuted embedding마다 B_seq PCA를 fold-train에서 재적합(사전등록 파이프라인 일부 → null에도 동일 적용), RF도 fold별 재학습(random_state=NULL_RF_COMMON_SEED 공통). 이 재학습 범위를 null 가설 정의의 일부로 문서화.",
+    "modes": [
+      "global",
+      "family-constrained"
+    ],
+    "pass_rule": "둘 다 p_emp<α (본실행에서 적용 — 프로브에서는 미적용)",
+    "p_emp_formula": "(1 + #{T_b ≥ T_obs}) / (B+1)",
+    "modified_by_probe": false
+  },
+  "family_partition_rule_for_null": "표적이 복수 family에 속하면 family_id 문자열 사전순 최소값 1개를 교환 family로 배정(결정적·결과 무참조). B_fam(P-FAM) multi-hot 정의는 불변 — 본 규칙은 null 교환 단위 partition 전용.",
+  "models": {
+    "recomputed": [
+      "M2b"
+    ],
+    "reused_from_sealed": [
+      "M1b"
+    ]
+  },
+  "m1b_reuse": {
+    "path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz",
+    "sha256_expected": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+    "sha256_verified": true,
+    "rationale": "target-embedding 재배치는 B_seq만 교란 → M1b OOF는 permutation 불변",
+    "access_type": "machine_read (human_exposure=false) — open_sealed(사람 열람) 아님"
+  },
+  "split": {
+    "reused": "data/processed/splits/confirmatory/rep1_seed201",
+    "seed": 201,
+    "n_fold": 5,
+    "regenerated": false
+  },
+  "rf": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "n_jobs": -1,
+    "class_weight": "balanced_subsample",
+    "random_state": 42,
+    "retuned": false
+  },
+  "pca": {
+    "k": 64,
+    "svd_solver": "full",
+    "random_state": 42,
+    "refit_scope": "permutation마다 fold-train(∩매핑)에서 재적합"
+  },
+  "gate0": {
+    "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "ladder_freeze_match": true,
+    "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_manifest_match": true,
+    "sap_version": "1.1",
+    "sap_all_validation_pass": true,
+    "sap_modules_match": {
+      "__init__.py": true,
+      "metrics.py": true,
+      "redaction.py": true,
+      "consensus.py": true,
+      "bootstrap.py": true,
+      "signflip.py": true,
+      "decision.py": true,
+      "null_generator.py": true,
+      "unseen_target.py": true,
+      "synthetic.py": true,
+      "freeze.py": true
+    },
+    "sap_n_modules_verified": 11,
+    "sap_integrity_confirmatory_untouched": true,
+    "primary_B_m1b_dim": 10,
+    "A0_primary_dim": 10,
+    "A1_all_blocks_train_only_fit": true,
+    "A1_bseq_pca_fit_rows": 671,
+    "A5_target_count_mismatch": 0,
+    "gate0_pass": true
+  },
+  "identity_control": {
+    "verdict": "PASS",
+    "file_sha256_match": true,
+    "array_bitwise_match": true
+  },
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "scipy": "1.18.0",
+    "rdkit": "2026.03.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O"
+  },
+  "not_performed": [
+    "empirical_p 호출·p 계산",
+    "T_obs와 T_b 비교",
+    "null 분포 시각화",
+    "NULL_B 변경·조기중단·재시도",
+    "bootstrap CI",
+    "sign-flip",
+    "SESOI/TOST",
+    "성공판정",
+    "반복 2·3 split 생성",
+    "M0/M1/M2/P-ID/P-FAM/C-CAP·GIN·late-fusion·shift",
+    "sealed 수치의 사람 열람",
+    "docs/30 수정",
+    "RF/PCA 하이퍼 변경"
+  ],
+  "integrity": {
+    "network_calls": 0,
+    "raw_data_modified": false,
+    "docs30_modified": false,
+    "frozen_blocks_recomputed": false,
+    "confirmatory_split_regenerated": false,
+    "sealed_values_human_read": false,
+    "git_commit": false
+  },
+  "outputs": {
+    "public": [
+      "config.json",
+      "timing_public.json",
+      "identity_control.json",
+      "run.log"
+    ],
+    "sealed": [
+      "_sealed/probe_stats.json (T_b 4개, 폐기 예정)",
+      "_sealed/oof_M2b_identity.npz",
+      "_sealed/oof_M2b_perm_*.npz (감사용 3개)"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "_doc": "블록 AZ (docs/115b) — D12 민감도 2종 RQ-int 봉인 산출. 주 분석 p 와 병기 · 판정 미사용 · 주 분석 대체 금지. 개봉 전 사람 열람 금지. Holm 조정·판정 미수행.",
+  "adjudication_performed": false,
+  "amendment1_sha256": "63c29d6b6a9e22951f2e2891b54f4251d5e4f679fc1d3b3f110cfdf510aab05c",
+  "amendment2_sha256": "c8e1e2569e7f62fe14a49bdd5581baf3d2d9da9fb411e15099cd85a01bf1a3d8",
+  "amendment3_sha256": "ed054b4a374d8cce69163ff3c3913c3188ad1f436253068ba65dd682198b3fd2",
+  "audit_seed": 2968772711,
+  "block": "AZ (docs/115b)",
+  "coin_seed": 2967772708,
+  "eps": 1e-12,
+  "eps_source": "sap.rqint._EPS",
+  "holm_adjustment_performed": false,
+  "implementation_module_sha256": "3e92a4ded1ea60b777c460b1b120232ae3051fe3a80e2e7c4f12d943c92ea680",
+  "input_sha256": {
+    "gin/consensus_M1b_seed1.npz": "1bdf93519825873936762d4fe9c4b8e16ab67a543a2921b807ae686a4ae9cf29",
+    "gin/consensus_M1b_seed2.npz": "32a5f1bc701e2f102d0726dfaefa86e9ca862ec316ba6964a25bf0494b642425",
+    "gin/consensus_M1b_seed42.npz": "9b5f16ac16c1d857f89291ebec21e2ea15e287d07edd784089db39521973a025",
+    "gin/consensus_M2b_seed1.npz": "9ae11e2d072da87b18b7c5458f9f0b4414600d22179ce674898303b1bc4ebd28",
+    "gin/consensus_M2b_seed2.npz": "03a0db458b4d4f4808041f1610e0870b57acaaf5996a5a20b584b82043674265",
+    "gin/consensus_M2b_seed42.npz": "b36ff282b410295bb7170ee2f87c3574d0046765c15ee1c76ba62b4a26c1df5b",
+    "leverage/leverage_diagnostics.json": "0832ef65aa59c16973f5776c9dbcd917cb9e0b4b76202a64e271f357fb5206ac",
+    "master_X": "788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6",
+    "master_Y": "bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018",
+    "rf/consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+    "rf/consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf"
+  },
+  "n_audit": 1000,
+  "n_consensus_matrices": 8,
+  "provenance": "confirmatory_sealed",
+  "reporting": "주 분석 p 와 병기 · 판정 미사용",
+  "rng_per_variant": "fresh default_rng(coin_seed) · 감사 fresh default_rng(coin_seed + 1_000_003)",
+  "run_id": "AZ-2026-10-02T12:26:38+09:00",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "t_obs": -0.014483129679583909,
+  "t_obs_bit_equal_block_ax": true,
+  "t_obs_hex": "-0x1.da954c28a5255p-7",
+  "variant_order": [
+    "i",
+    "ii"
+  ],
+  "variants": {
+    "i": {
+      "B": 100000,
+      "c_abs_ge_obs_first_B": 15,
+      "cids_sha256": {
+        "i": "bd99dfa392442ccf888cf5842c1e074fea52d9487efa000c270060955284765f",
+        "ii_first": "63d8049de17a9dbd83e299d8e114fdba95026308410e4ab714cd3aaf779b9444",
+        "ii_second": "9879e90d7abb4309c1f8405d15ab0910e4c4726e932f20e21bd0ea67f86fa883"
+      },
+      "complement_audit": {
+        "draws_checked": 1000,
+        "failures": 0,
+        "fallback_to_explicit": false,
+        "max_abs_dev": 0.0,
+        "tol": 1e-12
+      },
+      "complement_identity_used": true,
+      "count_abs_ge_obs": 30,
+      "label_rule": "rqint_downstream.split_no_scaffold — 빈 문자열 버킷 각 행 → \"__singleton_{행 인덱스}\"",
+      "mc_se_rule": "sqrt(p(1-p)/B), B=100000 — 불변",
+      "n_coin_vectors": 100000,
+      "n_groups_G": 808,
+      "n_permutation_values": 200000,
+      "p_primary": 0.00015999840001599985,
+      "p_primary_rule": "(1 + c) / (B + 1)",
+      "p_secondary": 0.00015499922500387497,
+      "p_secondary_rule": "(1 + count) / (n_permutation_values + 1) — 구현식 · 봉인 병기",
+      "se_primary": 3.999659992149235e-05,
+      "se_secondary": 3.93668896719214e-05
+    },
+    "ii": {
+      "B": 100000,
+      "c_abs_ge_obs_first_B": 14,
+      "cids_sha256": {
+        "i": "bd99dfa392442ccf888cf5842c1e074fea52d9487efa000c270060955284765f",
+        "ii_first": "63d8049de17a9dbd83e299d8e114fdba95026308410e4ab714cd3aaf779b9444",
+        "ii_second": "9879e90d7abb4309c1f8405d15ab0910e4c4726e932f20e21bd0ea67f86fa883"
+      },
+      "complement_audit": {
+        "draws_checked": 1000,
+        "failures": 0,
+        "fallback_to_explicit": false,
+        "max_abs_dev": 0.0,
+        "tol": 1e-12
+      },
+      "complement_identity_used": true,
+      "count_abs_ge_obs": 28,
+      "label_rule": "rqint_downstream.split_benzene — 최대 군을 (smiles, 행 인덱스) 사전순 앞/뒤 절반 → \"{target}__A\" / \"{target}__B\"",
+      "mc_se_rule": "sqrt(p(1-p)/B), B=100000 — 불변",
+      "n_coin_vectors": 100000,
+      "n_groups_G": 733,
+      "n_permutation_values": 200000,
+      "p_primary": 0.00014999850001499985,
+      "p_primary_rule": "(1 + c) / (B + 1)",
+      "p_secondary": 0.00014499927500362497,
+      "p_secondary_rule": "(1 + count) / (n_permutation_values + 1) — 구현식 · 봉인 병기",
+      "se_primary": 3.872673501148698e-05,
+      "se_secondary": 3.807600953538506e-05
+    }
+  }
+}

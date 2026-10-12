@@ -1,0 +1,41 @@
+{
+  "_doc": "블록 BB (docs/117) verify 결과 — run 은 이 파일과 repro sha 대조 후에만 착수한다.",
+  "model": "M2b",
+  "repeat": 1,
+  "fold": 0,
+  "n_test_rows": 218,
+  "n_pt": 370,
+  "dim": 2124,
+  "dtype": "float64",
+  "blocks_fit": [
+    "B0",
+    "B1",
+    "B_seq",
+    "B_m1b"
+  ],
+  "leak_rows": {
+    "B0": 0,
+    "B1": 0,
+    "B_seq": 0,
+    "B_m1b": 0
+  },
+  "byte_identical": true,
+  "sha256_repro_npy": "3151e927e96853a83891b2f5944a348b176a53a2c22da80f6f065be5611cf4b7",
+  "sha256_repro_slice_bytes": "cd3c2d7cff6b6d3c8eb3cd6ff25210a707ad15dc2479ee294d666088b88715f4",
+  "ref_path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz",
+  "ref_npz_sha256": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+  "ts_read_kst": "2026-10-04 13:31:32.732 KST",
+  "i3_consistency_ok": true,
+  "j6a_dims_ok": true,
+  "j6a_dims": {
+    "B_m1b_pchembl": 13,
+    "B_fam_selfclust": 835,
+    "M1b_pchembl": 2063,
+    "M2b_pchembl": 2127,
+    "P-FAM_selfclust": 2895
+  },
+  "j6b_pfam_crosscheck_identical": true,
+  "harness_sha256": "967f3749cb0796e7202de6723e1694d96c4605dc2e5374972f739c6f812e76d9",
+  "selftest_sha256": "96ab3332fd5bbf91ad833aaaf4f76f70c786d9ea63903b699f2533c8ec53fe70",
+  "wall_seconds": 277.654
+}

@@ -1,0 +1,101 @@
+{
+  "_doc": "블록 AZ (docs/115b) 공개 manifest — 개수·환경·검증 불리언·봉인 파일 이름/바이트/sha256·시간뿐. 값은 기록하지 않는다.",
+  "block": "AZ (docs/115b)",
+  "provenance": "confirmatory_sealed",
+  "run_id": "AZ-2026-10-02T12:26:38+09:00",
+  "variants_completed": [
+    "i",
+    "ii"
+  ],
+  "n_coin_vectors_per_variant": 100000,
+  "n_reference_per_variant": 200000,
+  "n_audit": 1000,
+  "n_groups_by_variant": {
+    "base": 732,
+    "i": 808,
+    "ii": 733
+  },
+  "n_launches": 1,
+  "n_resumes": 0,
+  "n_checkpoint_loads": 2,
+  "n_checkpoints": 200,
+  "n_checkpoints_by_variant": {
+    "i": 100,
+    "ii": 100
+  },
+  "n_sealed_files": 5,
+  "n_input_matrices": 8,
+  "completed": true,
+  "sealed_files": [
+    {
+      "name": "_sealed/checkpoint_i.npz",
+      "bytes": 808306,
+      "sha256": "135e6960bf9f4dcaffaa4564f4b8108bbdf451847e02b7a0e0fc8579e4a069c1"
+    },
+    {
+      "name": "_sealed/checkpoint_ii.npz",
+      "bytes": 808310,
+      "sha256": "38c5665b7bf0b5442a13f9aff0422d75f388746e6ae424b3e86ff56db4e302e4"
+    },
+    {
+      "name": "_sealed/t_star_i.npy",
+      "bytes": 800128,
+      "sha256": "e2257561f635a754cb650fd0c30a703d4b2080593226f1189487f4a720156ffe"
+    },
+    {
+      "name": "_sealed/t_star_ii.npy",
+      "bytes": 800128,
+      "sha256": "77970055f5f7d3faa1d1e28ab9dc9e21b95184e6b3d5aa46ca9b51aacd651212"
+    },
+    {
+      "name": "_sealed/d12_result.json",
+      "bytes": 4926,
+      "sha256": "9c8754aac63207954cf4a2122aeb3d22f0d7f8b546487744fe600fd55316f22f"
+    }
+  ],
+  "input_checks": {
+    "input_sha_all_match": true,
+    "cid_order_match": true,
+    "finite_inputs": true,
+    "observed_hex_match_block_ax": true,
+    "d12_groups_match_spec": true,
+    "rows_cids_labels_unchanged": true,
+    "checkpoint_integrity_ok": true,
+    "sealed_end_counts_expected": true,
+    "conf_stab_h8_fingerprints_unchanged": true
+  },
+  "power_history": {
+    "n_checkpoints_on_ac": 200,
+    "n_power_lost": 0
+  },
+  "wall_seconds_last_launch": 145553.3,
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "sklearn": "1.9.0",
+  "pandas": "3.0.3",
+  "threadpool_info": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "version": null
+    }
+  ],
+  "harness_sha256": "9f12e4307316e30a7373ad7d2460da945c245e11f34c806864e923133d09bbe7",
+  "watchdog_sha256": "f2f6c70a5a674ef341f0bf7cf049fd59466908dd1a051231125cb0bf1ab2f47b",
+  "selftest_sha256": "2deeee468d2f42716b1c29446446e44b6d97b2681387eed1d3d8a4f17efe33c7",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "amendment1_sha256": "63c29d6b6a9e22951f2e2891b54f4251d5e4f679fc1d3b3f110cfdf510aab05c",
+  "amendment2_sha256": "c8e1e2569e7f62fe14a49bdd5581baf3d2d9da9fb411e15099cd85a01bf1a3d8",
+  "amendment3_sha256": "ed054b4a374d8cce69163ff3c3913c3188ad1f436253068ba65dd682198b3fd2",
+  "implementation_module_sha256": "3e92a4ded1ea60b777c460b1b120232ae3051fe3a80e2e7c4f12d943c92ea680",
+  "values_disclosed": false,
+  "unblinding_performed": false,
+  "sealed_counts_end": {
+    "n_sealed_dirs": 33,
+    "n_sealed_files_total": 763,
+    "n_sealed_artifacts": 739,
+    "n_access_log": 24
+  },
+  "ts_completed_kst": "2026-10-04 04:52:31 KST"
+}

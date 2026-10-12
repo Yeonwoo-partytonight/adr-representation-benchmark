@@ -1,0 +1,214 @@
+{
+  "_doc": "확증 GIN 예산 추정(블록 AR · docs/106 AR-5). ★ 허가가 아니다. 확증 GIN 학습 0회로 산출했다.",
+  "block": "AR",
+  "as_of_kst": "2026-09-15 12:55:30 KST",
+  "measured_by": "vscode-claude (docs/106 AR-5 사전지정 규칙)",
+  "not_an_authorization": true,
+  "confirmatory_training_runs_performed": 0,
+  "s9_smoke_not_used_in_unit_cost": true,
+  "method": "기존 실측치만 사용한다. 개발 3-way ladder 런(50 run)의 파일 mtime 인접차를 run 지속시간으로 대응시키고, Tukey 상단 울타리로 유휴·열감쇠 구간을 제외한 뒤 per-epoch 단가 u 를 얻는다. 행 수 보정 k_rows 와 epoch 3지점 × derating 3지점으로 총 시간 표를 만들고, unit 단위 선행비용을 별도로 더한 표를 함께 싣는다. 신규 학습·신규 계산은 단가에 섞지 않았다.",
+  "inputs": [
+    {
+      "path": "experiments/runs/v3_ladder/run.log",
+      "sha256": "47c57f8f551b2a465f627c5a0779a5f923836eb08bd8e1dcd80cc7734efa3c34",
+      "use": "early stop @ep 50건 · 로그 등장 순서"
+    },
+    {
+      "path": "v3_Multimodal/results/ladder/*_seed*.csv (perpt 제외)",
+      "n_files": 50,
+      "use": "파일 mtime → run 지속시간 인접차 49개",
+      "sha256_first": "05eda78a7e91c341e95ffe8449f0eaa8509cf7d7c3b0cb008d569fff43955034",
+      "sha256_last": "7eec49b4c59107c79d39494b2d3da575910d54ea1e8e8e2507a538ac054cbabc"
+    },
+    {
+      "path": "experiments/runs/v3_confirm_rest/run.log",
+      "sha256": "b20af2da0096c6b48d5a7634cf1ce39279e8a6ab88bba21bf5c79eb4d22e9921",
+      "use": "본계산 wall 90건 (모델별·fold별 직접 측정) → unit 단위 선행비용"
+    },
+    {
+      "path": "experiments/runs/v3_gin_inner_valid_freeze/inner_split_check.json",
+      "sha256": "87fa1f92c23916ab2b2b7e51c103e2e9096175e53eabf687d7cc67a93ab61c2c",
+      "use": "행 수(inner_train 777 / outer_train 873-874)"
+    }
+  ],
+  "duration_epoch_mapping_rule": "파일 mtime 정렬 = 로그 등장 순서(F14 확정 사실 2). 파일 i−1 과 i 의 mtime 차 = run i 의 지속시간(i = 1…49). run 0(M0_seed42, epoch 195)은 지속시간을 관측할 수 없으므로 단가의 분자·분모에서 모두 제외한다.",
+  "duration_epoch_mapping_verified": {
+    "file_mtime_order_equals_log_order": true,
+    "n_files": 50,
+    "n_log_runs": 50,
+    "n_adjacent_diffs": 49
+  },
+  "run0_excluded_and_why": "run 0 = M0_seed42(epoch 195). 인접차는 파일 i−1 → i 로만 정의되므로 run 0 의 지속시간은 관측할 수 없다. 따라서 단가 산식의 분자(지속시간 합)와 분모(epoch 합) 양쪽에서 제외했다. 단, 개발 epoch 분포(3지점 산출)에는 50건 전부를 포함한다.",
+  "outlier_rule": "49개 지속시간에 Tukey 상단 울타리 Q3 + 1.5·IQR 를 적용해 초과분을 제외한다. 분위수는 numpy.quantile 기본(linear interpolation).",
+  "n_durations": 49,
+  "q1": 86.9,
+  "q3": 360.655,
+  "iqr": 273.754,
+  "fence_value": 771.286,
+  "excluded_points": [
+    {
+      "run_index_1based": 15,
+      "duration_seconds": 812.909,
+      "epochs": 73,
+      "model_seed": "M3_seed42"
+    },
+    {
+      "run_index_1based": 42,
+      "duration_seconds": 1125.371,
+      "epochs": 48,
+      "model_seed": "A_top1_seed2"
+    },
+    {
+      "run_index_1based": 44,
+      "duration_seconds": 3661.775,
+      "epochs": 84,
+      "model_seed": "A_top1_seed4"
+    }
+  ],
+  "n_excluded": 3,
+  "n_kept": 46,
+  "kept_duration_sum_seconds": 9890.713,
+  "kept_epoch_sum": 3460,
+  "unit_cost_rule": "u = (잔존 run 지속시간 합) / (그 run 들의 epoch 합). 폴백 없음.",
+  "unit_cost_seconds_per_epoch": 2.858588,
+  "fallback_used": false,
+  "k_rows": 0.89,
+  "k_rows_detail": {
+    "value_exact": 0.8900343642611683,
+    "numerator": 777,
+    "denominator": 873,
+    "note": "개발 train 873 → 확증 inner_train 777. valid 추론분은 97/109 = 0.8899 로 사실상 같고, 동결 비율 1/9 로부터의 8/9 = 0.8889 와도 근사 일치한다."
+  },
+  "epoch_scenarios": {
+    "lower_median_dev": 65.0,
+    "mid_mean_dev": 77.2,
+    "upper_max_epoch": 200,
+    "basis": "개발 50 run 의 early-stop epoch 분포(중앙값·평균, run 0 포함) + 동결 EPOCHS=200(early stop 없음)."
+  },
+  "derating_scenarios": [
+    1.0,
+    1.3,
+    2.0
+  ],
+  "derating_0_2489_not_applied_and_why": "블록 AE 의 열감쇠 계수 0.2489 는 «캘리브레이션 감사» 라는 다른 작업부하의 실측치다. GIN 학습(MPS · 그래프 배치)과 부하 프로파일이 다르므로 본 예산에 적용하지 않고 별항으로만 병기한다. 본 예산은 derating 1.0/1.3/2.0 의 3지점 시나리오를 쓴다.",
+  "run_counts": {
+    "confirmatory": 315,
+    "stability": 42,
+    "total": 357
+  },
+  "oof_matrices": {
+    "total": 63,
+    "primary_rqint": 18,
+    "shape": [
+      1092,
+      370
+    ]
+  },
+  "registered_budget_clause_exceeded": {
+    "exceeded": true,
+    "registered_clause_runs_approx": 189,
+    "this_design_runs": 357,
+    "verbatim": "등록 §13 예산절보다 많은 계산을 쓴다(189 → 357). 근거 = 등록 §6 + docs/50 §결정. 완화가 아니라 증가 방향",
+    "docs30_s13_verbatim": "GIN(robustness) 동일 세트 × fold당 1 seed + 대표 3 fold × 5 seed.",
+    "docs30_s6_L105_verbatim": "RF는 결정적, GIN은 outer fold당 3 training seed 평균.",
+    "docs50_L36_verbatim": "결정: 확증 GIN estimand = 모든 outer fold에서 사전지정 3 training seed 평균(§7).",
+    "runner_verified": [
+      "docs/30 §6 L105",
+      "docs/50 L36",
+      "gin_inner_valid_freeze.rf_asymmetry.rejected_alternative 「roughly doubles GIN training (357 to 714 runs)」"
+    ]
+  },
+  "unit_level_overhead": {
+    "method": "②",
+    "method_1_possible": false,
+    "method_1_why_not": "산출법 ① 은 «fold 당 7모델 합» 을 요구하지만 v3_confirm_rest/run.log 의 모델 집합은 6개(C-CAP·M0·M1·M2·P-FAM·P-ID)이고 GIN 7모델 집합(M0·M1·M1b·M2b·P-ID·P-FAM·C-CAP)과 다르다(M1b·M2b 없음 · M2 여분). 따라서 ② 를 채택했다.",
+    "per_model_median_wall_seconds": {
+      "C-CAP": 93.1,
+      "M0": 94.1,
+      "M1": 93.2,
+      "M2": 93.2,
+      "P-FAM": 93.1,
+      "P-ID": 94.3
+    },
+    "median_of_per_model_medians_seconds": 93.2,
+    "per_unit_overhead_seconds": 652.4,
+    "n_units_charged": 18,
+    "n_units_charged_why": "확증 15 unit + 안정성 대표 3 unit. 안정성은 gin_seed_freeze.firewall 에 따라 «확증과 분리된 디렉터리» 에 쓰므로 블록 fit 을 다시 한다고 보수적으로 계상한다.",
+    "reference_only_6model_fold_sum_median_seconds": 561.1,
+    "reference_only_rep1_fold_interval": "v3_confirm_rep1_seed201/run.log 의 fold 타임스탬프 4구간 평균 ≈ 4분 29초. ★ 이 구간에는 B_pid·B_fam·C_ccap fit 이 없으므로 «7모델 unit 부대비용의 상한» 이라고 부르지 않는다 — 참고값이다."
+  },
+  "unit_level_overhead_hours": 3.262,
+  "total_hours_table_excl_overhead": {
+    "lower_median_dev": {
+      "1.0": 16.4,
+      "1.3": 21.32,
+      "2.0": 32.8
+    },
+    "mid_mean_dev": {
+      "1.0": 19.48,
+      "1.3": 25.32,
+      "2.0": 38.96
+    },
+    "upper_max_epoch": {
+      "1.0": 50.46,
+      "1.3": 65.6,
+      "2.0": 100.92
+    }
+  },
+  "total_hours_table_incl_overhead": {
+    "lower_median_dev": {
+      "1.0": 19.66,
+      "1.3": 24.58,
+      "2.0": 36.06
+    },
+    "mid_mean_dev": {
+      "1.0": 22.74,
+      "1.3": 28.58,
+      "2.0": 42.22
+    },
+    "upper_max_epoch": {
+      "1.0": 53.72,
+      "1.3": 68.86,
+      "2.0": 104.18
+    }
+  },
+  "total_hours_table_note": "행 = epoch 3지점 · 열 = derating 3지점. 칸 = 357 × epoch × u × k_rows × derating (시간). incl 표는 여기에 unit_level_overhead_hours 를 더한 값이다.",
+  "assumptions": [
+    "per-epoch 비용이 «행 수에 선형» 이라고 가정한다(k_rows = 777/873 = 0.8900). 가정이다.",
+    "등록 §13 예산절보다 많은 계산을 쓴다(189 → 357). 근거 = 등록 §6 + docs/50 §결정. 완화가 아니라 증가 방향",
+    "unit 단위 선행비용은 v3_confirm_rest/run.log 의 RF model-fold wall 에서 유도했으므로 RF 학습 시간이 섞여 있다. GIN 의 «블록 fit + 그래프 빌드» 만을 분리할 수 없어 과대추정 방향(보수적)이다.",
+    "개발 런은 3-way split(train 873 / valid 109 / test 110) 기준이고 확증은 5-fold outer CV 안의 inner split(777/97) 기준이다. 아키텍처·레시피·배치·디바이스는 동일(A_wd · GIN · MPS)하다고 가정한다.",
+    "mtime 인접차는 유휴·열감쇠·타 작업 시간을 포함한다. Tukey 울타리가 그 극단을 제외하지만 울타리 이하의 유휴는 단가에 남아 있어 역시 과대추정 방향이다.",
+    "S9 합성 smoke 의 초/epoch 는 참고값이며 단가 u 에 투입하지 않았다."
+  ],
+  "risks": [
+    "inner-valid 가 97행(개발 109행)이라 early-stopping monitor 가 더 시끄러울 수 있다 → epoch 수가 «늘어날» 위험이 있다. 이 위험을 하한을 낮추는 방향으로 쓰지 않는다.",
+    "gin_inner_valid_freeze.known_quirk 의 (202, f2) 는 inner-valid 97 약물이 15 scaffold group 에만 들어 있고 그중 77이 빈-문자열 유사군이다 → 그 unit 의 monitor 가 특히 불안정해 epoch 이 상한(200)에 붙을 수 있다.",
+    "357 run 은 단일 세션으로 감당할 수 없을 가능성이 높다 → session_partition_plan 필요.",
+    "MPS 열감쇠는 장시간 연속 실행에서 실측 감쇠가 derating 상한(2.0)을 넘을 수 있다.",
+    "배터리 전원에서는 착수 금지(블록 AE 선례) · 45W 어댑터로는 고부하 장시간 런이 유지되지 않은 선례가 있다."
+  ],
+  "session_partition_plan": {
+    "ac_power_required": true,
+    "ac_power_basis": "블록 AE 가 배터리로 140.03h 작업을 착수하려다 보류된 선례. 배터리 측정치를 예산에 투입하지 않는다. 착수 전 `pmset -g ps` 와 `pmset -g adapter` 로 어댑터 용량·충전 방향을 실측한다.",
+    "checkpoint_unit": [
+      "rep",
+      "fold",
+      "model",
+      "train_seed"
+    ],
+    "checkpoint_file": "_sealed/checkpoint.jsonl (append-only · key 중복 금지 assert)",
+    "resume_rule": "checkpoint.jsonl 에 등재된 4-튜플은 건너뛰고 미등재 단위부터 재개한다. 재개 시 동결 해시 3종 재대조 → 불일치면 exit 2.",
+    "compute_lock": {
+      "path": "experiments/runs/.compute_lock.json",
+      "LOAD_HARD_MAX": 2.0,
+      "LOAD_ABORT": 4.0,
+      "EXIT_LOCK_BUSY": 9,
+      "EXIT_NOT_IDLE": 10,
+      "gate_c_settle": "열 안정화 대기 후 게이트 C 재측정"
+    },
+    "caffeinate": "caffeinate 하에 백그라운드 실행 + 로그 tail (블록 AP 의 17분 초과 선례)",
+    "session_cap_hours_recommended": 8,
+    "budget_supports_partition": "본 예산의 총 시간 표가 세션 분할의 필요성을 뒷받침한다. ★ 이 서술은 예산 파일과 리포트에만 있고, 규격 파일 AR-2(d) 의 근거로는 쓰지 않는다(순환 방지)."
+  }
+}

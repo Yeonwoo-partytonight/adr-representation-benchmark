@@ -1,0 +1,7 @@
+{
+  "file": "calibration_design.json",
+  "sha256": "42e2f8f9f3f24ec1dfc5fe9ba9b1afe66d30a13c00ef9fce361a3dcaef650b99",
+  "sha16": "42e2f8f9f3f24ec1",
+  "frozen_at_kst": "2026-08-12T22:25:21+09:00",
+  "note": "이 시각 이후 첫 본런 시뮬레이션이 시작된다(기입 시각 < 첫 시뮬레이션 시각)."
+}

@@ -1,0 +1,8 @@
+seq=1	2026-10-04 11:16:58.105 KST	R0	gate passed · core start · sealed dirs/files/artifacts/access = 33/763/739/24
+seq=2	2026-10-04 11:16:58.161 KST	R1	labels 1092 x 370 · fold rows 219/218/218
+seq=3	2026-10-04 11:16:58.161 KST	R2	access.log +1 line per tree · 4 trees
+seq=4	2026-10-04 11:16:58.175 KST	R3	inputs verified · checkpoint 4 · partial 30
+seq=5	2026-10-04 11:17:00.197 KST	R4	cells computed · 15 cells · two_way_ss called once
+seq=6	2026-10-04 11:17:00.197 KST	R5	invalidation rules: none triggered
+seq=7	2026-10-04 11:17:00.198 KST	R6	sealed written · 1 file + access.log
+seq=8	2026-10-04 11:17:00.650 KST	R7	public manifest + run.log · wall_seconds 2.998

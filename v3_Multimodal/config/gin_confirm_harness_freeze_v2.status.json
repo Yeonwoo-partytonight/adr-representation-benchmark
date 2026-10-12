@@ -1,0 +1,11 @@
+{
+  "target": "v3_Multimodal/config/gin_confirm_harness_freeze_v2.json",
+  "target_sha256": "ec43025a61378e18b77d6f1ae11a7c5c6085f46b0b7bdcc975bf136d6af3c612",
+  "status": "frozen",
+  "delegated_by_advisor": false,
+  "basis": "교수님 명시 승인 2026-09-15 12:42:00 KST(메시지 <GMAIL-MSGID> · 축자 「착수는 바로 진행합시다. 본 메일은 <EXTERNAL-REVIEWER> 박사에게 전달하겠습니다. 진홍 드림.」) + 사용자 확정 2026-09-16(docs/108 §7). 차단 플래그 ①②③ 은 하네스 FREEZE_SHA256 상수와 「동결 파일 0바이트 수정」 규율 때문에 값을 바꿀 수 없으므로, v1 을 무수정 보존한 채 실행계약만 supersede 한다(docs/109 블록 AS). 과학 명세는 v1 에서 그대로 옮겼고 T4 가 바이트 동일성을 기계 증명한다.",
+  "reversibility": "선행 sidecar(gin_confirm_harness_freeze.status.json)의 문면을 대체하지 않고 기초로 삼는다 — 그 문면이 든 세 조건 중 ① 교수님 회신은 2026-09-15 12:42 명시 승인으로 충족됐고, ② Holm ⑧ RQ-int 와 ③ 개봉 승인·시점 은 그대로 남는다. 여기에 v2 가 조건을 «추가» 한다: 본 실행계약은 require_supersession() 6조건이 매 실행마다 충족되는 동안에만 유효하며, ①②③ 중 하나라도 해시가 바뀌거나 플래그가 false 로 바뀌면 게이트가 exit 12 로 거부한다. 따라서 본 결정은 ①②③ 과 승인 이벤트를 원상 보존하는 한 되돌릴 수 있다.",
+  "advisor_notified_in": "고지됨 — 2026-09-15 스레드 <GMAIL-MSGID>(12:39:31 발신 · 12:42:00 회신 · 12:44:19 발신). 회신 축자가 착수 승인이다. 다만 manifest 에 대한 지도교수 서명은 A-plus 결정에 따라 실행 «후» 첨부한다.",
+  "item_requiring_advisor_confirmation": "manifest 지도교수 서명 · OSF 업데이트 등록 — 둘 다 실행 «후» 첨부이며 첫 run 을 지연시키지 않는다(사용자 확정 2026-09-16 · docs/109 F13-1).",
+  "as_of_kst": "2026-09-16 14:24:28 KST"
+}

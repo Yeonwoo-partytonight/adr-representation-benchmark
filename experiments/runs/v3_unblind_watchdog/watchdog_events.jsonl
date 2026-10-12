@@ -1,0 +1,41 @@
+{"ts_kst": "2026-10-07 13:11:46 KST", "event": "watchdog_start", "restarts": 0, "launch_index": 0}
+{"ts_kst": "2026-10-07 13:11:46 KST", "event": "power_wait", "note": "배터리 또는 어댑터 < 90W — 자식 기동 거부"}
+{"ts_kst": "2026-10-07 13:12:46 KST", "event": "power_ok", "waited_s": 60.1}
+{"ts_kst": "2026-10-07 13:15:26 KST", "event": "launch", "launch_index": 1, "waited_s": 160.1}
+{"ts_kst": "2026-10-07 13:15:26 KST", "event": "child_started", "pid": 19688, "launch_index": 1}
+{"ts_kst": "2026-10-07 13:16:26 KST", "event": "progress", "n_done": 0, "n_total": 38, "eta_s": null}
+{"ts_kst": "2026-10-07 13:46:26 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-07 14:17:26 KST", "event": "progress", "n_done": 1, "n_total": 38, "eta_s": 135431}
+{"ts_kst": "2026-10-07 14:47:27 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-07 15:19:27 KST", "event": "progress", "n_done": 2, "n_total": 38, "eta_s": 132778}
+{"ts_kst": "2026-10-07 15:49:27 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-07 16:21:28 KST", "event": "progress", "n_done": 4, "n_total": 38, "eta_s": 94444}
+{"ts_kst": "2026-10-07 16:51:28 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-07 17:23:28 KST", "event": "progress", "n_done": 5, "n_total": 38, "eta_s": 97951}
+{"ts_kst": "2026-10-07 17:53:29 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-07 18:25:29 KST", "event": "progress", "n_done": 6, "n_total": 38, "eta_s": 99183}
+{"ts_kst": "2026-10-07 18:55:29 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-07 19:28:30 KST", "event": "progress", "n_done": 8, "n_total": 38, "eta_s": 83742}
+{"ts_kst": "2026-10-07 19:58:30 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-07 20:29:30 KST", "event": "progress", "n_done": 9, "n_total": 38, "eta_s": 83822}
+{"ts_kst": "2026-10-07 20:59:30 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-07 21:30:31 KST", "event": "progress", "n_done": 10, "n_total": 38, "eta_s": 83150}
+{"ts_kst": "2026-10-07 22:00:31 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-07 22:32:32 KST", "event": "progress", "n_done": 11, "n_total": 38, "eta_s": 81986}
+{"ts_kst": "2026-10-07 23:02:32 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-07 23:34:32 KST", "event": "progress", "n_done": 12, "n_total": 38, "eta_s": 80369}
+{"ts_kst": "2026-10-08 00:04:32 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-08 00:36:33 KST", "event": "progress", "n_done": 13, "n_total": 38, "eta_s": 78521}
+{"ts_kst": "2026-10-08 01:06:33 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-08 01:38:33 KST", "event": "progress", "n_done": 14, "n_total": 38, "eta_s": 76396}
+{"ts_kst": "2026-10-08 02:08:34 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-08 02:40:34 KST", "event": "progress", "n_done": 15, "n_total": 38, "eta_s": 73983}
+{"ts_kst": "2026-10-08 03:10:34 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-08 03:41:35 KST", "event": "progress", "n_done": 16, "n_total": 38, "eta_s": 71423}
+{"ts_kst": "2026-10-08 04:11:35 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-08 04:14:35 KST", "event": "progress", "n_done": 17, "n_total": 38, "eta_s": 66621}
+{"ts_kst": "2026-10-08 04:44:35 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-08 05:37:36 KST", "event": "progress", "n_done": 18, "n_total": 38, "eta_s": 65417}
+{"ts_kst": "2026-10-08 06:22:36 KST", "event": "progress", "n_done": 38, "n_total": 38, "eta_s": 0}
+{"ts_kst": "2026-10-08 06:52:37 KST", "event": "stall_suspect", "pid": 19688, "note": "heartbeat 30분 이상 미갱신(기록만)"}
+{"ts_kst": "2026-10-08 07:06:37 KST", "event": "completed", "exit_code": 0, "hb_event": "r7_done", "item": ""}

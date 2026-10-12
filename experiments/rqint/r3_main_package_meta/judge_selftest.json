@@ -1,0 +1,193 @@
+{
+  "_doc": "r3_judge.py 자기검사 — 교란은 메모리 사본에서만 수행(원본 파일 무수정).",
+  "run_at_kst": "2026-09-14 00:46:50 KST",
+  "judge_sha256": "df26e946d17cd0b5ea20c741008bbdfbe19ee8b2b7d92b0de7664943ea4bcd12",
+  "freeze": {
+    "freeze_sha256": "0624d3ddb852c4e9a2f7f070024814653264eb49c2652dd3e7a947ac38ff27d0",
+    "rel_tol": 1e-09,
+    "exclude_pointers": [
+      "/run_at_kst",
+      "/wall_clock_seconds",
+      "/timing/per_permutation_seconds",
+      "/timing/per_reference_value_seconds",
+      "/versions",
+      "/_doc",
+      "/block",
+      "/instruction"
+    ],
+    "g_env_fields": [
+      "python_version",
+      "numpy",
+      "sklearn",
+      "machine",
+      "numpy_build_config(BLAS/LAPACK 구현)"
+    ]
+  },
+  "reference_numeric_core_sha256": "fd488eb429a71990d47ebf321efeb1f34083bbeb4813730a76777262b1ba878b",
+  "cases": [
+    {
+      "case": "T1 identical",
+      "expected": "R3_satisfied_stage1",
+      "got": "R3_satisfied_stage1",
+      "pass": true,
+      "n_leaf_failures": null,
+      "failure_kinds": null,
+      "package_hashes_pass": true
+    },
+    {
+      "case": "T2 float 1e-12 rel · 다른 환경",
+      "expected": "R3_satisfied_stage2",
+      "got": "R3_satisfied_stage2",
+      "pass": true,
+      "n_leaf_failures": 0,
+      "failure_kinds": [],
+      "package_hashes_pass": true
+    },
+    {
+      "case": "T3 float 1e-6 rel · 다른 환경",
+      "expected": "R3_not_satisfied",
+      "got": "R3_not_satisfied",
+      "pass": true,
+      "n_leaf_failures": 1,
+      "failure_kinds": [
+        "continuous"
+      ],
+      "package_hashes_pass": true
+    },
+    {
+      "case": "T4 bool 반전 /r6_all_pass",
+      "expected": "R3_not_satisfied",
+      "got": "R3_not_satisfied",
+      "pass": true,
+      "n_leaf_failures": 1,
+      "failure_kinds": [
+        "boolean"
+      ],
+      "package_hashes_pass": true
+    },
+    {
+      "case": "T5 float 1e-12 rel · 같은 환경",
+      "expected": "stage2_forbidden_same_environment",
+      "got": "stage2_forbidden_same_environment",
+      "pass": true,
+      "n_leaf_failures": null,
+      "failure_kinds": null,
+      "package_hashes_pass": true
+    },
+    {
+      "case": "T6 float 1e-12 rel · 패키지 해시 1건 불일치",
+      "expected": "R3_not_satisfied",
+      "got": "R3_not_satisfied",
+      "pass": true,
+      "n_leaf_failures": 0,
+      "failure_kinds": [],
+      "package_hashes_pass": false
+    },
+    {
+      "case": "T7 키 삭제 /weak_null_diagnostic/note",
+      "expected": "R3_not_satisfied",
+      "got": "R3_not_satisfied",
+      "pass": true,
+      "n_leaf_failures": 1,
+      "failure_kinds": [
+        "keys"
+      ],
+      "package_hashes_pass": true
+    },
+    {
+      "case": "T8 int +1 /r6/R6-8/count_abs_ge_obs",
+      "expected": "R3_not_satisfied",
+      "got": "R3_not_satisfied",
+      "pass": true,
+      "n_leaf_failures": 1,
+      "failure_kinds": [
+        "discrete"
+      ],
+      "package_hashes_pass": true
+    },
+    {
+      "case": "T9 제외 필드만 변경",
+      "expected": "R3_satisfied_stage1",
+      "got": "R3_satisfied_stage1",
+      "pass": true,
+      "n_leaf_failures": null,
+      "failure_kinds": null,
+      "package_hashes_pass": true
+    },
+    {
+      "case": "T14 잔차 리프 0.0→1.1e-16 · 다른 환경",
+      "expected": "R3_satisfied_stage2",
+      "got": "R3_satisfied_stage2",
+      "pass": true,
+      "n_leaf_failures": 0,
+      "failure_kinds": [],
+      "package_hashes_pass": true
+    },
+    {
+      "case": "T15 목록 항목 /r6/R6-2/T_obs 0.0→1e-17 · 다른 환경",
+      "expected": "R3_not_satisfied",
+      "got": "R3_not_satisfied",
+      "pass": true,
+      "n_leaf_failures": 1,
+      "failure_kinds": [
+        "continuous"
+      ],
+      "package_hashes_pass": true
+    },
+    {
+      "case": "T10 env 빈 객체",
+      "expected": "input_invalid",
+      "got": "input_invalid",
+      "pass": true,
+      "problems": [
+        "collected_by 가 collect_env.py 산출물이 아님",
+        "python_version 누락",
+        "numpy 누락",
+        "sklearn 누락",
+        "machine 누락",
+        "platform 누락",
+        "host_id 누락",
+        "numpy_build_config BLAS/LAPACK 이름 누락"
+      ]
+    },
+    {
+      "case": "T11 env BLAS 정보 없음",
+      "expected": "input_invalid",
+      "got": "input_invalid",
+      "pass": true,
+      "problems": [
+        "numpy_build_config BLAS/LAPACK 이름 누락"
+      ]
+    },
+    {
+      "case": "T12 audit 가 기준 사본",
+      "expected": "input_invalid",
+      "got": "input_invalid",
+      "pass": true,
+      "problems": [
+        "제2자 audit 파일이 우리 기준 audit 와 바이트 동일(사본)",
+        "audit versions.python='3.14.4' ≠ env python_version='3.12.9'",
+        "audit versions.platform='macOS-26.6.2-arm64-arm-64bit-Mach-O' ≠ env platform='Windows-10-10.0.19045-SP0'"
+      ]
+    },
+    {
+      "case": "T13 audit versions ≠ env",
+      "expected": "input_invalid",
+      "got": "input_invalid",
+      "pass": true,
+      "problems": [
+        "audit versions.numpy='0.0.0' ≠ env numpy='2.5.0'"
+      ]
+    },
+    {
+      "case": "T16 정상 입력 대조군",
+      "expected": "valid",
+      "got": "valid",
+      "pass": true,
+      "problems": []
+    }
+  ],
+  "n_cases": 16,
+  "n_pass": 16,
+  "all_pass": true
+}

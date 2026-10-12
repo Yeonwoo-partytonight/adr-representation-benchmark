@@ -1,0 +1,140 @@
+{
+  "_scope": "공개 — **표본수 회계 전용**. 층별 macro AP·Δ·CI·sign-flip p 는 본 파일에 한 값도 없다(전량 `_sealed/`). 개봉·성공판정·다중성 보정 없음.",
+  "_relation": "`strata_summary.json`·`stratification_public.json` 을 **덮어쓰지 않는 신규 보강 파일**. 원본은 바이트 불변.",
+  "ts_kst": "2026-08-04 09:29:44 KST",
+  "block": "K (docs/54)",
+  "n_total_drugs": 1092,
+  "n_excluded_no_target": 245,
+  "denominator_estimated": 847,
+  "accounting_identity": "Σ stable(no-target 제외) + unstable_stratum = 847 · 847 + 245 = 1,092",
+  "axes": {
+    "drug_class": {
+      "n_drugs_by_stratum": {
+        "all-seen": 552,
+        "all-unseen": 18,
+        "mixed": 206
+      },
+      "unstable_stratum": 71,
+      "denominator_estimated": 847,
+      "sum_check": true,
+      "unstable_reason_counts": {
+        "set_change": 71
+      },
+      "role": "data_characteristic",
+      "basis": "docs/53 §1 — all-seen/mixed/all-unseen 세 집단의 **구조적 분포 자체는 데이터 특성으로 보고**하되, **재분할 결과 분석은 exploratory**.",
+      "resplit_result_analysis": "exploratory"
+    },
+    "seq_stratum": {
+      "n_drugs_by_stratum": {
+        "seen": 820,
+        "unseen_70_90": 15,
+        "unseen_ge90": 2
+      },
+      "unstable_stratum": 10,
+      "denominator_estimated": 847,
+      "sum_check": true,
+      "unstable_reason_counts": {
+        "set_change": 9,
+        "boundary_adjacent": 1
+      },
+      "role": "confirmatory",
+      "basis": "docs/53 §1 — 사전등록된 '연속 표적 유사도' 축은 확증 분석으로 유지"
+    },
+    "struct_bin": {
+      "n_drugs_by_stratum": {
+        "struct_q1": 144,
+        "struct_q2": 174,
+        "struct_q3": 150,
+        "struct_q4": 175
+      },
+      "unstable_stratum": 204,
+      "denominator_estimated": 847,
+      "sum_check": true,
+      "unstable_reason_counts": {
+        "boundary_adjacent": 204
+      },
+      "role": "confirmatory",
+      "basis": "docs/53 §1 — 사전등록된 '연속 표적 유사도' 축은 확증 분석으로 유지"
+    }
+  },
+  "cross_tab_drug_class_x_seq_stratum": {
+    "all-unseen": {
+      "unseen_70_90": 15,
+      "unseen_ge90": 2,
+      "unstable_stratum": 1
+    },
+    "mixed": {
+      "seen": 206
+    },
+    "all-seen": {
+      "seen": 552
+    },
+    "unstable_stratum": {
+      "seen": 62,
+      "unstable_stratum": 9
+    }
+  },
+  "cross_tab_note": "표본수만. 라벨 = 3반복 일치 시 해당 층, 불일치 시 `unstable_stratum`. 행·열 합계는 각각 847.",
+  "boundary_cases": {
+    "n_rows": 855,
+    "n_unclassified_rows": 0,
+    "seqid_zero_observation_drugs": {
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    "special_case_cids": [
+      16139605
+    ],
+    "detail_file": "experiments/runs/v3_stratification/unstable_cases.csv"
+  },
+  "asserts": {
+    "row_count_3276": "PASS",
+    "unique_drugs_1092": "PASS",
+    "repeats_123_complete": "PASS",
+    "no_target_245": "PASS",
+    "stable_column_matches_recomputation": "PASS",
+    "sum_stable_plus_unstable_eq_847_per_axis": "PASS",
+    "847_plus_245_eq_1092": "PASS",
+    "axis_denominators_equal": "PASS",
+    "estimation_drug_set_identical_across_axes": "PASS",
+    "stratification_public_units_sum_847": "PASS",
+    "independent_reproduction_of_assignment": "PASS",
+    "no_result_keys_in_public_output": "PASS"
+  },
+  "axis_role_basis": "docs/53 §1·§4 (교수님 2026-08-03 회신) — 라벨만 부착, 해석·판정 없음",
+  "not_performed": [
+    "개봉(open_sealed)",
+    "성공판정 함수 호출",
+    "다중성 보정",
+    "층별 AP·Δ·CI·p 재산출",
+    "기존 sealed 산출물 수정",
+    "미실행 축(unseen-target proportion 등) 계산"
+  ],
+  "public_units_crosscheck": {
+    "units_sum_per_axis": {
+      "drug_class": 847,
+      "seq_stratum": 847,
+      "struct_bin": 847
+    },
+    "excluded_no_target_drugs": 245,
+    "unstable_stratum_counts": {
+      "drug_class": 71,
+      "seq_stratum": 10,
+      "struct_bin": 204
+    },
+    "pass": true
+  },
+  "public_redaction_assert": {
+    "forbidden_prefixes": [
+      "macro_ap",
+      "delta",
+      "sign",
+      "ci_",
+      "p_",
+      "boot_"
+    ],
+    "hits": [],
+    "pass": true
+  }
+}

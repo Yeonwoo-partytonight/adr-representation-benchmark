@@ -1,0 +1,1810 @@
+{
+  "_doc": "블록 AE / §1 FACTS registry (A20) 착수 실측 대조 + 동결물 baseline. 예측 100% 합성 · 확증/봉인 미접근.",
+  "block": "AE",
+  "instruction": "docs/93_r1_calibration_audit_prompt_for_vscode.md",
+  "when_kst": "2026-08-14T22:23:24+09:00",
+  "env": {
+    "when_kst": "2026-08-14T22:23:23+09:00",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "logical_cores": 18,
+    "mem_total_gib": 64.0,
+    "mem_available_gib": 29.73,
+    "pmset_powermode": "0",
+    "pmset_ps": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22872163)\t15%; charging; (no estimate) present: true",
+    "on_ac_power": true,
+    "caffeinate_running": false,
+    "loadavg_1_5_15": [
+      1.71,
+      2.36,
+      2.21
+    ],
+    "env_thread_vars": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "threadpool_info": [
+      {
+        "user_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libomp"
+      }
+    ]
+  },
+  "predictions_are_synthetic": true,
+  "confirmatory_predictions_loaded": false,
+  "confirmatory_data_accessed": false,
+  "sealed_accessed": false,
+  "unblinding_performed": false,
+  "gin_start_still_blocked": true,
+  "facts": [
+    {
+      "fact": "F-N",
+      "expect": 1092,
+      "measured": 1092,
+      "pass": true
+    },
+    {
+      "fact": "F-K",
+      "expect": 370,
+      "measured": 370,
+      "pass": true
+    },
+    {
+      "fact": "F-G",
+      "expect": 732,
+      "measured": 732,
+      "pass": true
+    },
+    {
+      "fact": "F-SCAF",
+      "expect": "confirmatory_oof_rep1.scaffold_of (import 재사용)",
+      "measured": "confirmatory_oof_rep1.scaffold_of",
+      "pass": true
+    },
+    {
+      "fact": "F-ROWIDX",
+      "expect": "c659db38abbd8154",
+      "measured": "c659db38abbd8154",
+      "pass": true
+    },
+    {
+      "fact": "F-PTCOL",
+      "expect": "b24f0588c9f0c53c",
+      "measured": "b24f0588c9f0c53c",
+      "pass": true
+    },
+    {
+      "fact": "F-PROF-P",
+      "expect": {
+        "G": 313,
+        "G_eff": 77.595,
+        "ratio": 0.24791,
+        "top2": 0.1425
+      },
+      "measured": {
+        "G": 313,
+        "G_eff": 77.595,
+        "ratio": 0.24791,
+        "top2": 0.1425
+      },
+      "pass": true
+    },
+    {
+      "fact": "F-PROF-R",
+      "expect": {
+        "G": 210,
+        "G_eff": 27.836,
+        "ratio": 0.13255,
+        "sum_sq": 5748
+      },
+      "measured": {
+        "G": 210,
+        "G_eff": 27.836,
+        "ratio": 0.13255,
+        "sum_sq": 5748
+      },
+      "pass": true
+    },
+    {
+      "fact": "F-GEFF",
+      "expect": {
+        "G_eff": 85.34669,
+        "ratio": 0.116594,
+        "top2": 0.14194
+      },
+      "measured": {
+        "G_eff": 85.34669,
+        "ratio": 0.116594,
+        "top2": 0.14194
+      },
+      "pass": true
+    },
+    {
+      "fact": "F-UNIT",
+      "expect": {
+        "full": 0.7166503799495937,
+        "small": 0.09966293053515983
+      },
+      "measured": {
+        "full": 0.7166503799495937,
+        "small": 0.09966293053515983
+      },
+      "pass": true
+    },
+    {
+      "fact": "F-THRU",
+      "expect": {
+        "small": 89.25498762598825,
+        "full": 8.932070676515567,
+        "W_BEST": 18
+      },
+      "measured": {
+        "evals_per_second_small_at_W_BEST": 89.25498762598825,
+        "evals_per_second_full_at_W_BEST": 8.932070676515567,
+        "W_BEST_small": 18
+      },
+      "pass": true
+    },
+    {
+      "fact": "F-DECAY",
+      "expect": 0.2489,
+      "measured": 0.24885474349420722,
+      "pass": true
+    },
+    {
+      "fact": "F-HOLM",
+      "expect": 7,
+      "measured": 7,
+      "pass": true
+    },
+    {
+      "fact": "F-CORE",
+      "expect": {
+        "logical": 18,
+        "ram_budget_gib": 38.4,
+        "ram_gate_gib": 30.72
+      },
+      "measured": {
+        "logical": 18,
+        "mem_total_gib": 64.0
+      },
+      "pass": true
+    },
+    {
+      "fact": "F-MANI16",
+      "expect": {
+        "sha16": "756d485feb4715e9",
+        "sap_version": "1.1"
+      },
+      "measured": {
+        "sha16": "756d485feb4715e9",
+        "sap_version": "1.1"
+      },
+      "pass": true
+    },
+    {
+      "fact": "F-SEALED",
+      "expect": {
+        "excl_access_log": 275,
+        "all": 291
+      },
+      "measured": {
+        "excl_access_log": 275,
+        "all": 291
+      },
+      "pass": true
+    },
+    {
+      "fact": "macro_ap.n_eligible(small)",
+      "expect": 60,
+      "measured": 60,
+      "pass": true
+    },
+    {
+      "fact": "macro_ap.n_eligible(full)",
+      "expect": 370,
+      "measured": 370,
+      "pass": true
+    }
+  ],
+  "all_facts_pass": true,
+  "fixture_hashes": {
+    "row_idx_sha256": "c659db38abbd8154546a2c583345e54def969d520acbae26c382f8eb6884c178",
+    "pt_cols_sha256": "b24f0588c9f0c53ccaf805b1eec0a93a57e3725ca052f1cea71854bc74693e42",
+    "lab_prop_sha256": "40477a4d7e5744ef21239e0cb7a0d9113ed2143c29cb60fe1203e5e9ef7da153",
+    "lab_ratio_sha256": "32415c5f547fee2a7864dd9e8446b5b8e72c986784169ef08822a7115ffc9dfb"
+  },
+  "profiles": {
+    "full": {
+      "N": 1092,
+      "G": 732,
+      "size_min": 1,
+      "size_median": 1.0,
+      "size_max": 78,
+      "n_singletons": 627,
+      "singleton_frac": 0.8565573770491803,
+      "sum_sq": 13972.0,
+      "G_eff_kish": 85.34669338677355,
+      "G_eff_over_G": 0.11659384342455403,
+      "top1_row_share": 0.07142857142857142,
+      "top2_row_share": 0.14194139194139194,
+      "top5_sizes": [
+        78,
+        77,
+        17,
+        10,
+        7
+      ],
+      "max_nsq_over_sum_nsq": 0.4354423131978242,
+      "size_skewness": 17.436109879026933
+    },
+    "reduced_proportional": {
+      "N": 400,
+      "G": 313,
+      "size_min": 1,
+      "size_median": 1.0,
+      "size_max": 29,
+      "n_singletons": 287,
+      "singleton_frac": 0.9169329073482428,
+      "sum_sq": 2062.0,
+      "G_eff_kish": 77.59456838021339,
+      "G_eff_over_G": 0.24790596926585748,
+      "top1_row_share": 0.0725,
+      "top2_row_share": 0.1425,
+      "top5_sizes": [
+        29,
+        28,
+        6,
+        4,
+        3
+      ],
+      "max_nsq_over_sum_nsq": 0.40785645004849663,
+      "size_skewness": 11.739069491422299
+    },
+    "reduced_ratio_optimal": {
+      "N": 400,
+      "G": 210,
+      "size_min": 1,
+      "size_median": 1.0,
+      "size_max": 29,
+      "n_singletons": 203,
+      "singleton_frac": 0.9666666666666667,
+      "sum_sq": 5748.0,
+      "G_eff_kish": 27.835768963117605,
+      "G_eff_over_G": 0.1325512807767505,
+      "top1_row_share": 0.0725,
+      "top2_row_share": 0.1425,
+      "top5_sizes": [
+        29,
+        28,
+        28,
+        28,
+        28
+      ],
+      "max_nsq_over_sum_nsq": 0.1463117606123869,
+      "size_skewness": 5.200930989212472
+    }
+  },
+  "regroup_info": {
+    "block_size": 28,
+    "n_blocks": 5,
+    "n_singletons": 203,
+    "G": 210,
+    "ratio": 0.13255128077675052,
+    "top_sizes": [
+      29,
+      28
+    ]
+  },
+  "freeze_baseline": {
+    "sap_modules": {
+      "__init__.py": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+      "metrics.py": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+      "redaction.py": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+      "consensus.py": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+      "bootstrap.py": "05437c516e606a053e02acefb23c2597365472201b6c70ff2814278d6597a31e",
+      "signflip.py": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+      "decision.py": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+      "null_generator.py": "90886abce256a130531a0ab0cd8edd17abc27ff1b62ee56f24248aa76fa204c7",
+      "unseen_target.py": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+      "synthetic.py": "ddf715e6fba7503e817c6435c9220f7a83a5e5e31375603fddd522570f2a27d7",
+      "freeze.py": "94e6369fa952be7f4ac41f79da6d3b63f80a1a7c2192873a499e3ccd4a2f1cc9"
+    },
+    "other": {
+      "experiments/sap/manifest.json": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+      "v3_Multimodal/config/ladder_freeze.json": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+      "v3_Multimodal/config/gin_seed_freeze.json": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+      "v3_Multimodal/src/sap/rqint.py": "eb842bc98140e9c55b67bc1563cd5573c3b294885778f23744468b712c498b26",
+      "v3_Multimodal/src/sap/rqint_synthetic.py": "27ef0011ee041920a6e7b63eb4dcfef13c7fd2a70ac017f2324e671df8b0f985",
+      "v3_Multimodal/src/sap/rqint_audit.py": "ddffe6d128de4d180aeab9be18d6b1a9b5281523bc24cd8a3b4f48f20a2aa4a3",
+      "v3_Multimodal/src/run_rqint_audit.py": "ab831c2726a36e8a671fc412b06072d5fb267d0de3ef38cd5b1b98eee8e80b5f",
+      "v3_Multimodal/src/rqint_timing.py": "fdb0dcd4822b2f888b3751f5158acff7e32bab81291e4d585b35c5218ae3a04e",
+      "v3_Multimodal/src/rqint_reduced_fixture.py": "e5a46bc38cdb887927215cb27f7535f7721a0b80d5fcd2dab53fb3aaa3869dc6"
+    },
+    "sap_dir_listing": [
+      "__init__.py",
+      "bootstrap.py",
+      "consensus.py",
+      "decision.py",
+      "freeze.py",
+      "metrics.py",
+      "null_generator.py",
+      "redaction.py",
+      "rqint.py",
+      "rqint_audit.py",
+      "rqint_synthetic.py",
+      "signflip.py",
+      "synthetic.py",
+      "unseen_target.py"
+    ]
+  },
+  "sealed_snapshot": {
+    "n_files_all": 291,
+    "n_files_excl_access_log": 275,
+    "snapshot_sha256": "741feb8e52a3cf000ea75c4a26488c658a7eae0433cab6f8dffd792ccf8d3e71",
+    "rows": [
+      {
+        "path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/access.log",
+        "size": 6453,
+        "mtime_ns": 1785764342873797578
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json",
+        "size": 37843,
+        "mtime_ns": 1785118677634728945
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz",
+        "size": 547482,
+        "mtime_ns": 1785118677526857303
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz",
+        "size": 552904,
+        "mtime_ns": 1785118677633568530
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json",
+        "size": 37722,
+        "mtime_ns": 1785156707240998033
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M1b.npz",
+        "size": 546917,
+        "mtime_ns": 1785156707133436085
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M2b.npz",
+        "size": 553486,
+        "mtime_ns": 1785156707240004393
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json",
+        "size": 37701,
+        "mtime_ns": 1785158079222973062
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M1b.npz",
+        "size": 548523,
+        "mtime_ns": 1785158079114673884
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M2b.npz",
+        "size": 553831,
+        "mtime_ns": 1785158079221984797
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_equivalence/repro_M2b_rep1_fold0.npy",
+        "size": 645408,
+        "mtime_ns": 1785764342876497216
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785766883523323130
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785766976767556067
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785767069604195918
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785767163032979698
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785767256133713752
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785764531453728910
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785764625554685540
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785764719545694642
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785764813622160865
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785764910600609915
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785765006963170828
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785765103194783151
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785765196701950837
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785765289857348743
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785765382939025919
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785765476105125294
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785765569343352391
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785765662172277265
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785765755528417973
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785765848631958379
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785766413434324030
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785766506250332156
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785766599044392536
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785766692286325994
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785766787711951235
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785765943155278920
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785766037358773234
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785766131583268335
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785766225905834852
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785766320213329032
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785769690141525872
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785769783219205487
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785769876252842886
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785769969462614682
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785770062404869070
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785767350231728714
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785767444413155734
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785767538651319676
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785767632736508436
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785767726927004565
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785767820206566764
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785767913534551100
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785768006750236809
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785768100094692477
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785768193242915725
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785768286618699335
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785768380014882222
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785768473052360436
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785768566688135776
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785768660193033806
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785769225080094779
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785769317999895075
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785769410882638387
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785769504013124377
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785769597003292273
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785768754843434749
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785768849055331631
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785768943775103840
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785769038080496502
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785769132061325496
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785772494625878072
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785772587774368328
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785772681024741809
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785772774580601469
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785772867826547491
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785770156863153242
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785770250486067629
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785770344493070547
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785770438900937874
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785770533232272382
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785770626912234242
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785770719986300608
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785770813162971849
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785770906435383632
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785770999660392451
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785771092859725374
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785771186162835908
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785771279150241496
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785771372300209813
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785771465064602534
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785772029490219260
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785772122158825640
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785772215277107959
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785772308480018408
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785772401550875196
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785771559638601566
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785771653745010862
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785771747511258706
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1785771841891436923
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1785771936203297577
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/checkpoint.jsonl",
+        "size": 26163,
+        "mtime_ns": 1785772867829249232
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest/_sealed/env_fingerprint.json",
+        "size": 1279,
+        "mtime_ns": 1785764437356318797
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log",
+        "size": 4212,
+        "mtime_ns": 1786173772179574322
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_C-CAP.npz",
+        "size": 902012,
+        "mtime_ns": 1785772879733995738
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz",
+        "size": 1074819,
+        "mtime_ns": 1785772877416410413
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M1.npz",
+        "size": 889476,
+        "mtime_ns": 1785772877878600920
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M2.npz",
+        "size": 906013,
+        "mtime_ns": 1785772878343754246
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-FAM.npz",
+        "size": 894089,
+        "mtime_ns": 1785772879268382254
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-ID.npz",
+        "size": 884310,
+        "mtime_ns": 1785772878806143831
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/metrics_full.json",
+        "size": 40704,
+        "mtime_ns": 1785772880094579430
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/access.log",
+        "size": 3487,
+        "mtime_ns": 1786017799459704570
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/metrics_full.json",
+        "size": 223518,
+        "mtime_ns": 1785772871042011905
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_C-CAP.npz",
+        "size": 555268,
+        "mtime_ns": 1785772870590736154
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M0.npz",
+        "size": 671669,
+        "mtime_ns": 1785772867966419550
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M1.npz",
+        "size": 543707,
+        "mtime_ns": 1785772868497427939
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M2.npz",
+        "size": 554687,
+        "mtime_ns": 1785772869028762614
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_P-FAM.npz",
+        "size": 549259,
+        "mtime_ns": 1785772870068344437
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_P-ID.npz",
+        "size": 543152,
+        "mtime_ns": 1785772869550439970
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/access.log",
+        "size": 2658,
+        "mtime_ns": 1786020588393990437
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/metrics_full.json",
+        "size": 223521,
+        "mtime_ns": 1785772874146293768
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_C-CAP.npz",
+        "size": 555526,
+        "mtime_ns": 1785772873697459554
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M0.npz",
+        "size": 669080,
+        "mtime_ns": 1785772871116694679
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M1.npz",
+        "size": 543117,
+        "mtime_ns": 1785772871635160803
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M2.npz",
+        "size": 554036,
+        "mtime_ns": 1785772872151864168
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_P-FAM.npz",
+        "size": 548856,
+        "mtime_ns": 1785772873182049666
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_P-ID.npz",
+        "size": 542182,
+        "mtime_ns": 1785772872667173850
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/access.log",
+        "size": 2658,
+        "mtime_ns": 1786023477628213370
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/metrics_full.json",
+        "size": 223467,
+        "mtime_ns": 1785772877297967622
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_C-CAP.npz",
+        "size": 555814,
+        "mtime_ns": 1785772876841733963
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M0.npz",
+        "size": 668685,
+        "mtime_ns": 1785772874221472533
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M1.npz",
+        "size": 544412,
+        "mtime_ns": 1785772874751106781
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M2.npz",
+        "size": 554451,
+        "mtime_ns": 1785772875274945055
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_P-FAM.npz",
+        "size": 549144,
+        "mtime_ns": 1785772876316828126
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_P-ID.npz",
+        "size": 543481,
+        "mtime_ns": 1785772875796760283
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1785998074770865081
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1785998288267342855
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1785998530956500043
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1786004170631143790
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1786004386921230673
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1786004586794755019
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1786004786304793359
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1786004994142237452
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1786005212416259525
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1786005424079835789
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold0.npy",
+        "size": 322768,
+        "mtime_ns": 1786005637195259259
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold1.npy",
+        "size": 322768,
+        "mtime_ns": 1786005852205213861
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold2.npy",
+        "size": 324248,
+        "mtime_ns": 1786006062214179405
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold3.npy",
+        "size": 322768,
+        "mtime_ns": 1786006267968881750
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold4.npy",
+        "size": 324248,
+        "mtime_ns": 1786006476104165183
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/checkpoint.jsonl",
+        "size": 4439,
+        "mtime_ns": 1786006476104718278
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned/_sealed/env_fingerprint.json",
+        "size": 1399,
+        "mtime_ns": 1785997805079099569
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/consensus_RF_tuned.npz",
+        "size": 1850756,
+        "mtime_ns": 1786006478507136926
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/metrics_full.json",
+        "size": 12141,
+        "mtime_ns": 1786006478904359510
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/access.log",
+        "size": 389,
+        "mtime_ns": 1786006478360152498
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/metrics_full.json",
+        "size": 42637,
+        "mtime_ns": 1786006476996549093
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/oof_RF_tuned.npz",
+        "size": 1688332,
+        "mtime_ns": 1786006476502745962
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/access.log",
+        "size": 389,
+        "mtime_ns": 1786006478364536548
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/metrics_full.json",
+        "size": 42640,
+        "mtime_ns": 1786006477649614449
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/oof_RF_tuned.npz",
+        "size": 1688599,
+        "mtime_ns": 1786006477161681981
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/access.log",
+        "size": 389,
+        "mtime_ns": 1786006478369071183
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/metrics_full.json",
+        "size": 42631,
+        "mtime_ns": 1786006478297901455
+      },
+      {
+        "path": "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/oof_RF_tuned.npz",
+        "size": 1688715,
+        "mtime_ns": 1786006477816048447
+      },
+      {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/access.log",
+        "size": 8594,
+        "mtime_ns": 1786173772179445693
+      },
+      {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+        "size": 893375,
+        "mtime_ns": 1785158080757006347
+      },
+      {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "size": 903794,
+        "mtime_ns": 1785158080906501520
+      },
+      {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json",
+        "size": 37876,
+        "mtime_ns": 1785158080907592533
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_meta.json",
+        "size": 409,
+        "mtime_ns": 1786018356176401542
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_prf.npy",
+        "size": 322768,
+        "mtime_ns": 1786018356175821127
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_pseq.npy",
+        "size": 322768,
+        "mtime_ns": 1786018356176134543
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_pseqsens.npy",
+        "size": 322768,
+        "mtime_ns": 1786018356176278875
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_meta.json",
+        "size": 409,
+        "mtime_ns": 1786018917719460501
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_prf.npy",
+        "size": 322768,
+        "mtime_ns": 1786018917719020458
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_pseq.npy",
+        "size": 322768,
+        "mtime_ns": 1786018917719243000
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_pseqsens.npy",
+        "size": 322768,
+        "mtime_ns": 1786018917719351626
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_meta.json",
+        "size": 409,
+        "mtime_ns": 1786019481363884813
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_prf.npy",
+        "size": 324248,
+        "mtime_ns": 1786019481361815888
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_pseq.npy",
+        "size": 324248,
+        "mtime_ns": 1786019481363518770
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_pseqsens.npy",
+        "size": 324248,
+        "mtime_ns": 1786019481363663229
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_meta.json",
+        "size": 409,
+        "mtime_ns": 1786020033905871192
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_prf.npy",
+        "size": 322768,
+        "mtime_ns": 1786020033905462941
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_pseq.npy",
+        "size": 322768,
+        "mtime_ns": 1786020033905645233
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_pseqsens.npy",
+        "size": 322768,
+        "mtime_ns": 1786020033905767733
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_meta.json",
+        "size": 409,
+        "mtime_ns": 1786020588311683608
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_prf.npy",
+        "size": 324248,
+        "mtime_ns": 1786020588311240148
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_pseq.npy",
+        "size": 324248,
+        "mtime_ns": 1786020588311445941
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_pseqsens.npy",
+        "size": 324248,
+        "mtime_ns": 1786020588311568441
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_meta.json",
+        "size": 409,
+        "mtime_ns": 1786021144939072556
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_prf.npy",
+        "size": 322768,
+        "mtime_ns": 1786021144936771880
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_pseq.npy",
+        "size": 322768,
+        "mtime_ns": 1786021144936983047
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_pseqsens.npy",
+        "size": 322768,
+        "mtime_ns": 1786021144937102714
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_meta.json",
+        "size": 407,
+        "mtime_ns": 1786021713445918484
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_prf.npy",
+        "size": 322768,
+        "mtime_ns": 1786021713445448961
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_pseq.npy",
+        "size": 322768,
+        "mtime_ns": 1786021713445651643
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_pseqsens.npy",
+        "size": 322768,
+        "mtime_ns": 1786021713445791375
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_meta.json",
+        "size": 407,
+        "mtime_ns": 1786022280813989262
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_prf.npy",
+        "size": 324248,
+        "mtime_ns": 1786022280813546261
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_pseq.npy",
+        "size": 324248,
+        "mtime_ns": 1786022280813734761
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_pseqsens.npy",
+        "size": 324248,
+        "mtime_ns": 1786022280813866553
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_meta.json",
+        "size": 409,
+        "mtime_ns": 1786022858301005410
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_prf.npy",
+        "size": 322768,
+        "mtime_ns": 1786022858300525075
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_pseq.npy",
+        "size": 322768,
+        "mtime_ns": 1786022858300735700
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_pseqsens.npy",
+        "size": 322768,
+        "mtime_ns": 1786022858300880492
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_meta.json",
+        "size": 409,
+        "mtime_ns": 1786023477536940903
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_prf.npy",
+        "size": 324248,
+        "mtime_ns": 1786023477536016993
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_pseq.npy",
+        "size": 324248,
+        "mtime_ns": 1786023477536182242
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_pseqsens.npy",
+        "size": 324248,
+        "mtime_ns": 1786023477536625905
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_meta.json",
+        "size": 407,
+        "mtime_ns": 1786024041094386568
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_prf.npy",
+        "size": 322768,
+        "mtime_ns": 1786024041093932988
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_pseq.npy",
+        "size": 322768,
+        "mtime_ns": 1786024041094139237
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_pseqsens.npy",
+        "size": 322768,
+        "mtime_ns": 1786024041094263736
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_meta.json",
+        "size": 409,
+        "mtime_ns": 1786024599235216459
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_prf.npy",
+        "size": 322768,
+        "mtime_ns": 1786024599234820004
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_pseq.npy",
+        "size": 322768,
+        "mtime_ns": 1786024599234996086
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_pseqsens.npy",
+        "size": 322768,
+        "mtime_ns": 1786024599235107002
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_meta.json",
+        "size": 409,
+        "mtime_ns": 1786025150314488682
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_prf.npy",
+        "size": 324248,
+        "mtime_ns": 1786025150314031729
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_pseq.npy",
+        "size": 324248,
+        "mtime_ns": 1786025150314233143
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_pseqsens.npy",
+        "size": 324248,
+        "mtime_ns": 1786025150314371600
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_meta.json",
+        "size": 407,
+        "mtime_ns": 1786025715913136598
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_prf.npy",
+        "size": 322768,
+        "mtime_ns": 1786025715912624853
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_pseq.npy",
+        "size": 322768,
+        "mtime_ns": 1786025715912789602
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_pseqsens.npy",
+        "size": 322768,
+        "mtime_ns": 1786025715913021183
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_meta.json",
+        "size": 409,
+        "mtime_ns": 1786026273677988514
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_prf.npy",
+        "size": 324248,
+        "mtime_ns": 1786026273676918608
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_pseq.npy",
+        "size": 324248,
+        "mtime_ns": 1786026273677470019
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_pseqsens.npy",
+        "size": 324248,
+        "mtime_ns": 1786026273677730266
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/checkpoint.jsonl",
+        "size": 8697,
+        "mtime_ns": 1786026273678935670
+      },
+      {
+        "path": "experiments/runs/v3_latefusion/_sealed/env_fingerprint.json",
+        "size": 1504,
+        "mtime_ns": 1786017799430856634
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens.npz",
+        "size": 2225773,
+        "mtime_ns": 1786026286795710620
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_half.npz",
+        "size": 1975460,
+        "mtime_ns": 1786026287312513433
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_sens.npz",
+        "size": 2203812,
+        "mtime_ns": 1786026288319957667
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq.npz",
+        "size": 1781223,
+        "mtime_ns": 1786026286294687308
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq_sens.npz",
+        "size": 1739928,
+        "mtime_ns": 1786026287822181529
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/metrics_full.json",
+        "size": 35105,
+        "mtime_ns": 1786026288697190520
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/access.log",
+        "size": 1920,
+        "mtime_ns": 1786026288193835524
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/lambda_selected.json",
+        "size": 2864,
+        "mtime_ns": 1786026274348776512
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/metrics_full.json",
+        "size": 224457,
+        "mtime_ns": 1786026277865827880
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens.npz",
+        "size": 1902689,
+        "mtime_ns": 1786026273998938788
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens_half.npz",
+        "size": 1627193,
+        "mtime_ns": 1786026274132529643
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens_sens.npz",
+        "size": 1791359,
+        "mtime_ns": 1786026274347291236
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_seq.npz",
+        "size": 1276309,
+        "mtime_ns": 1786026273886506462
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_seq_sens.npz",
+        "size": 1174406,
+        "mtime_ns": 1786026274238585829
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/access.log",
+        "size": 1920,
+        "mtime_ns": 1786026288198087730
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/lambda_selected.json",
+        "size": 2860,
+        "mtime_ns": 1786026278463814221
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/metrics_full.json",
+        "size": 224464,
+        "mtime_ns": 1786026281991513187
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens.npz",
+        "size": 1894640,
+        "mtime_ns": 1786026278109915915
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens_half.npz",
+        "size": 1627001,
+        "mtime_ns": 1786026278244722634
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens_sens.npz",
+        "size": 1802545,
+        "mtime_ns": 1786026278462613901
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_seq.npz",
+        "size": 1280600,
+        "mtime_ns": 1786026277993856960
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_seq_sens.npz",
+        "size": 1176229,
+        "mtime_ns": 1786026278351931598
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/access.log",
+        "size": 1920,
+        "mtime_ns": 1786026288202350685
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/lambda_selected.json",
+        "size": 2860,
+        "mtime_ns": 1786026282561742235
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/metrics_full.json",
+        "size": 224415,
+        "mtime_ns": 1786026286093863321
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens.npz",
+        "size": 1698867,
+        "mtime_ns": 1786026282218465859
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens_half.npz",
+        "size": 1629243,
+        "mtime_ns": 1786026282351458388
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens_sens.npz",
+        "size": 1628419,
+        "mtime_ns": 1786026282560589080
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_seq.npz",
+        "size": 1280318,
+        "mtime_ns": 1786026282113378081
+      },
+      {
+        "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_seq_sens.npz",
+        "size": 1178933,
+        "mtime_ns": 1786026282457449574
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/access.log",
+        "size": 3111,
+        "mtime_ns": 1785514652960028974
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl",
+        "size": 747129,
+        "mtime_ns": 1785500296829321251
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/env_fingerprint.json",
+        "size": 866,
+        "mtime_ns": 1785499543820131863
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/g3_identity.json",
+        "size": 1196,
+        "mtime_ns": 1785249991780956923
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/gates_first_session.json",
+        "size": 2013,
+        "mtime_ns": 1785251806528229310
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/null_result.json",
+        "size": 3433,
+        "mtime_ns": 1785514653261177853
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11000.npz",
+        "size": 552289,
+        "mtime_ns": 1785491850292218857
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11001.npz",
+        "size": 552667,
+        "mtime_ns": 1785491864130124037
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11002.npz",
+        "size": 552743,
+        "mtime_ns": 1785491866278007185
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11000.npz",
+        "size": 552741,
+        "mtime_ns": 1785361666737973377
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11001.npz",
+        "size": 553401,
+        "mtime_ns": 1785361681622658266
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11002.npz",
+        "size": 552838,
+        "mtime_ns": 1785361688381465132
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1000.npz",
+        "size": 553778,
+        "mtime_ns": 1785497929640892215
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1001.npz",
+        "size": 553924,
+        "mtime_ns": 1785497936801996127
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1002.npz",
+        "size": 554271,
+        "mtime_ns": 1785500294277547185
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1000.npz",
+        "size": 553778,
+        "mtime_ns": 1785251806525613362
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1001.npz",
+        "size": 553924,
+        "mtime_ns": 1785251806654946980
+      },
+      {
+        "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1002.npz",
+        "size": 554271,
+        "mtime_ns": 1785251808305575260
+      },
+      {
+        "path": "experiments/runs/v3_null_probe/_sealed/oof_M2b_identity.npz",
+        "size": 552904,
+        "mtime_ns": 1785127338923033968
+      },
+      {
+        "path": "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_family_seed9000001.npz",
+        "size": 553796,
+        "mtime_ns": 1785129365163868199
+      },
+      {
+        "path": "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_global_seed9000001.npz",
+        "size": 554534,
+        "mtime_ns": 1785128008319786334
+      },
+      {
+        "path": "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_global_seed9000002.npz",
+        "size": 554559,
+        "mtime_ns": 1785128692123318627
+      },
+      {
+        "path": "experiments/runs/v3_null_probe/_sealed/probe_stats.json",
+        "size": 973,
+        "mtime_ns": 1785130039894196618
+      },
+      {
+        "path": "experiments/runs/v3_null_probe2_compute/_sealed/fold_pred_reference.npy",
+        "size": 322768,
+        "mtime_ns": 1785227767906836026
+      },
+      {
+        "path": "experiments/runs/v3_stratification/_sealed/access.log",
+        "size": 2574,
+        "mtime_ns": 1785571704501615884
+      },
+      {
+        "path": "experiments/runs/v3_stratification/_sealed/stratification_result.json",
+        "size": 249725,
+        "mtime_ns": 1785605448070911825
+      },
+      {
+        "path": "experiments/runs/v3_stratification_axes/_sealed/access.log",
+        "size": 7035,
+        "mtime_ns": 1786173772179623698
+      },
+      {
+        "path": "experiments/runs/v3_stratification_axes/_sealed/axes_result.json",
+        "size": 757810,
+        "mtime_ns": 1786171749248299399
+      },
+      {
+        "path": "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl",
+        "size": 384031,
+        "mtime_ns": 1786171749208830757
+      },
+      {
+        "path": "experiments/runs/v3_stratification_pid/_sealed/access.log",
+        "size": 2805,
+        "mtime_ns": 1785853013765343227
+      },
+      {
+        "path": "experiments/runs/v3_stratification_pid/_sealed/checkpoint.jsonl",
+        "size": 126070,
+        "mtime_ns": 1785879459241492529
+      },
+      {
+        "path": "experiments/runs/v3_stratification_pid/_sealed/stratification_pid_result.json",
+        "size": 250888,
+        "mtime_ns": 1785879459280670288
+      }
+    ]
+  }
+}

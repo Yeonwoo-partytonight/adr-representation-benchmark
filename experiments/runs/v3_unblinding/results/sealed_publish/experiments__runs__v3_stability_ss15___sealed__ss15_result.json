@@ -1,0 +1,225 @@
+{
+  "_doc": "블록 BA (docs/116) — S6 안정성 15셀 fold 수준 Δ + 서술적 two-way SS 분해 봉인 산출. 개봉 전 사람 열람 금지. 부호는 따로 산출하지 않았다. 서술 전용(REML·ICC·검정·CI 0).",
+  "block": "BA (docs/116)",
+  "provenance": "confirmatory_sealed",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "implementation_module_sha256": "3e92a4ded1ea60b777c460b1b120232ae3051fe3a80e2e7c4f12d943c92ea680",
+  "module_function": "rqint_downstream.two_way_ss",
+  "module_provenance_constant": "synthetic_fixture",
+  "contrast_definition": "M2b − M1b",
+  "estimand_level": "fold (held-out fold of outer unit i under training seed j)",
+  "delta_definition_verbatim": "Delta_ij = macroAP_ij(M2b) - macroAP_ij(M1b), computed on the held-out fold of outer unit i under training seed j.",
+  "delta_unit_caveat_verbatim": "This fold-level evaluation unit differs from the confirmatory estimand, which is the complete-OOF metric over all 1,092 drugs.",
+  "firewall_verbatim": "Stability results must not change the primary results, hypothesis adjudication, model/hyperparameter/seed selection, or the aggregation method. Stability outputs are written to a directory separate from the confirmatory run outputs.",
+  "eligible_pt": "np.arange(370) explicit",
+  "orientation": {
+    "rows_units": [
+      "rep1|fold4|split_seed201",
+      "rep2|fold1|split_seed202",
+      "rep3|fold0|split_seed203"
+    ],
+    "cols_train_seed_values": [
+      42,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source_by_train_seed": {
+      "42": "confirmatory",
+      "1": "confirmatory",
+      "2": "confirmatory",
+      "3": "stability",
+      "4": "stability"
+    }
+  },
+  "cells": {
+    "rep1|fold4|seed42": {
+      "delta": 0.013489053737422096,
+      "n_eval": 355,
+      "n_excluded_undefined": 15,
+      "n_eligible": 370
+    },
+    "rep1|fold4|seed1": {
+      "delta": 0.01213138705418454,
+      "n_eval": 355,
+      "n_excluded_undefined": 15,
+      "n_eligible": 370
+    },
+    "rep1|fold4|seed2": {
+      "delta": 0.033869978788123006,
+      "n_eval": 355,
+      "n_excluded_undefined": 15,
+      "n_eligible": 370
+    },
+    "rep1|fold4|seed3": {
+      "delta": 0.02157890659509383,
+      "n_eval": 355,
+      "n_excluded_undefined": 15,
+      "n_eligible": 370
+    },
+    "rep1|fold4|seed4": {
+      "delta": 0.00025351838033418894,
+      "n_eval": 355,
+      "n_excluded_undefined": 15,
+      "n_eligible": 370
+    },
+    "rep2|fold1|seed42": {
+      "delta": 0.02507009560727677,
+      "n_eval": 349,
+      "n_excluded_undefined": 21,
+      "n_eligible": 370
+    },
+    "rep2|fold1|seed1": {
+      "delta": 0.013348634775199847,
+      "n_eval": 349,
+      "n_excluded_undefined": 21,
+      "n_eligible": 370
+    },
+    "rep2|fold1|seed2": {
+      "delta": 0.03096891802368583,
+      "n_eval": 349,
+      "n_excluded_undefined": 21,
+      "n_eligible": 370
+    },
+    "rep2|fold1|seed3": {
+      "delta": 0.023100493469652955,
+      "n_eval": 349,
+      "n_excluded_undefined": 21,
+      "n_eligible": 370
+    },
+    "rep2|fold1|seed4": {
+      "delta": 0.042189878638515074,
+      "n_eval": 349,
+      "n_excluded_undefined": 21,
+      "n_eligible": 370
+    },
+    "rep3|fold0|seed42": {
+      "delta": 0.018928350251576798,
+      "n_eval": 361,
+      "n_excluded_undefined": 9,
+      "n_eligible": 370
+    },
+    "rep3|fold0|seed1": {
+      "delta": -0.007725160139578163,
+      "n_eval": 361,
+      "n_excluded_undefined": 9,
+      "n_eligible": 370
+    },
+    "rep3|fold0|seed2": {
+      "delta": 0.012793384853132084,
+      "n_eval": 361,
+      "n_excluded_undefined": 9,
+      "n_eligible": 370
+    },
+    "rep3|fold0|seed3": {
+      "delta": 0.008569492725666455,
+      "n_eval": 361,
+      "n_excluded_undefined": 9,
+      "n_eligible": 370
+    },
+    "rep3|fold0|seed4": {
+      "delta": 0.02493003960848031,
+      "n_eval": 361,
+      "n_excluded_undefined": 9,
+      "n_eligible": 370
+    }
+  },
+  "two_way_ss": {
+    "n_unit": 3,
+    "n_seed": 5,
+    "grand_mean": 0.01823313149125104,
+    "SST": 0.002311270412083641,
+    "SS_unit": 0.000624769062495401,
+    "SS_seed": 0.0006871082157887045,
+    "SS_res": 0.0009993931337995354,
+    "frac_unit": 0.2703141351306286,
+    "frac_seed": 0.29728594810733,
+    "frac_res": 0.43239991676204137,
+    "sst_zero": false,
+    "sst_zero_rule": "SST = 0 이면 비율을 정의하지 않고 not_defined 로 기록한다(0 나눗셈 금지).",
+    "unit_seed_mean": [
+      0.01626456891103153,
+      0.026935604102866096,
+      0.011499221459855496
+    ],
+    "unit_seed_sd": [
+      0.012443201535355398,
+      0.010627257922670727,
+      0.012403768056224746
+    ],
+    "unit_seed_range": [
+      0.03361646040778882,
+      0.028841243863315227,
+      0.03265519974805847
+    ],
+    "descriptive_only": true,
+    "provenance": "confirmatory_sealed"
+  },
+  "module_sst_zero_rule": "SST = 0 이면 비율을 정의하지 않고 None 으로 둔다(0 나눗셈 금지).",
+  "not_computed": [
+    "REML",
+    "ICC",
+    "분산성분 추정",
+    "유의성 검정",
+    "확증 CI"
+  ],
+  "input_sha256": {
+    "partials": {
+      "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M1b_fold4_seed1.npz": "73c9b95b34b8a633094c52db56a11996333c051466bf0fd8da1dba6b7ebb8969",
+      "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M1b_fold4_seed2.npz": "f52e7ffcd10f817ae34deb328a97f74185080627fedae4a164a03e525bd1ee2f",
+      "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M1b_fold4_seed42.npz": "b32c92a2d796cca965e425a92907a07af0909250cd0961eba17f7f23d70a26c4",
+      "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M2b_fold4_seed1.npz": "073f6df8ea0beba7f014073598c2a4f918218d433aed4f1be8cecd8bb64296cd",
+      "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M2b_fold4_seed2.npz": "d3a2fb11d4154fa2be9948745e2a49dff4b6f28d86cde8400c7ebcbbc8d0707a",
+      "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M2b_fold4_seed42.npz": "d4e2cf44ca7f974e58413c5b58e51182bf63d358f34ad9edafddf2dc6064a0d4",
+      "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M1b_fold1_seed1.npz": "d8b5b63ec660c0f4a3adbebcb90ae6aedbd0eb7022324125fd692a5baea7d157",
+      "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M1b_fold1_seed2.npz": "82492ab6f9aa7b1c175f962c7dd7e30c9b1c614c530966a81492680f914c4766",
+      "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M1b_fold1_seed42.npz": "e3b1bcd36794c2f0510f34feaed2dd4b9abe2a52d2ce5295b174b1f07010a8cb",
+      "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M2b_fold1_seed1.npz": "998a73944fde2eda64e7ff26c74753353ff56853d8691651c1dd2a8f99774a0d",
+      "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M2b_fold1_seed2.npz": "d8d6d4cd410733ed42c41797a1e24205842fb7b507c195bd854aa7859b753529",
+      "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M2b_fold1_seed42.npz": "c97ca176cfa6ff4158a165743bf485f4b69a432a8b430b7e2ba257b45dc2c3b6",
+      "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M1b_fold0_seed1.npz": "14a11961507ae63b60934f11247beab589363005436081f6a9e8eee6784ed3af",
+      "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M1b_fold0_seed2.npz": "64abefdd81147e19a578c43717abdb259255fda1fa864a6743f91e0a20210696",
+      "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M1b_fold0_seed42.npz": "9e6b9353fe88152b4d3448c41772b47decc1c314084132a01ced866f27123ed4",
+      "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M2b_fold0_seed1.npz": "1a3faf6cb26a45718c643741d8644c1c342bb9edd4c8c02b47d3a4c14ced3deb",
+      "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M2b_fold0_seed2.npz": "97c53cbe531096161583ac4c10ecaa017d9f51c781f85981421fb36a38e748ef",
+      "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M2b_fold0_seed42.npz": "bc5c1993f5c7d19d468350daf86838a47686472321750703fc0f0ad1a28216d5",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep1_fold4_seed3.npz": "6bc7086b3d3198e93c058f250c05627a085ed6ee633fd7ba08b49271d80c6f25",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep1_fold4_seed4.npz": "b757c8a6d85b1bb441bd3d1e21e8dfb84fd8c1cdadb73a21e3ce33c1a1dffe0f",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep2_fold1_seed3.npz": "77499c6a53eef5832c8028047172797c86fc434f730c8f3d27ea6cb961376ba2",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep2_fold1_seed4.npz": "6e60e894478e25f98f6aa067b76c225c7b4900c29769b90bc95a66aa35395542",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep3_fold0_seed3.npz": "49115d03e50aca77b84ce9ffca57c21246d9fde1e2c6c8c7a3dadc267b51e39d",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep3_fold0_seed4.npz": "8d406cf30241acd47557539cedda90f5f86ade53838f6ca432c1418be5e82286",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep1_fold4_seed3.npz": "5151fe00a34904cc123de75ddb336cc252fcd802c7e4f6c2abca637a149c3877",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep1_fold4_seed4.npz": "c9aceef246ed3bf2dfd1eaf8251327b98a2380b16f8e233d1972601bc42fee57",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep2_fold1_seed3.npz": "f7084a05e77886225dcbd117d4dd4ddfe9aa056f77cfa25016320d21c2b3111b",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep2_fold1_seed4.npz": "40ac91e281caad5bec9180854020741e9c5859c17fbc039962da78ab5ea9d176",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep3_fold0_seed3.npz": "1e2f70421d1b6d7139be5609c8243a9710a95d7a3339e823409dea1e9c8d6932",
+      "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep3_fold0_seed4.npz": "424ca9aaf8da0abe40ddf2dc2841f87c4cbb4c7952996ae1a92a35497f3aa9ac"
+    },
+    "checkpoints": {
+      "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/checkpoint.jsonl": "f078df96e4957de35d50ebc33062f333ba490ae3a3b0d485cad5a54370b3529d",
+      "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/checkpoint.jsonl": "1b50c30573db67d76adffc919b8ef09507a5507149752ab15d74b1dab0287e45",
+      "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/checkpoint.jsonl": "049ba9dff26de76125bafa59e10aae19a29ee74df0320fb540c588906ecacd76",
+      "experiments/runs/v3_gin_stability/_sealed/checkpoint.jsonl": "1c1618e790ce33ef3e93879b271e5395ca74453a4920715e534e510c09229666"
+    },
+    "master_X": "788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6",
+    "master_Y": "bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018",
+    "splits": {
+      "rep1_seed201/folds.json": "3c1a5d68bfcc6ddfa1de17990194c5beb3c4fe365ee0a123d04c4a34bed871b2",
+      "rep1_seed201/fold_membership.csv": "7047606f76562ba54b1dadef0518cb8e18ed22dad5b588d22b298bcb892284ad",
+      "rep2_seed202/folds.json": "786feeca045f603685e190a252636f3815695d2c9e61812c8db1daf063abccfa",
+      "rep2_seed202/fold_membership.csv": "27f2e01dcb392be4873dc2820fdbb9bb8d0f5c8c85139878f523de6a74056b33",
+      "rep3_seed203/folds.json": "9db08cf96298b47e182e286fa4ef4b94f74605c6f31f0f9f841bc723c638b4e4",
+      "rep3_seed203/fold_membership.csv": "45762346d825a9f3a630ea34a423c10b49039275f5d4ef28a264e6ae2aa0ad23"
+    },
+    "manifest_t4": "a59ab54afd51508543a3ca952a5147ffc0c8687f997aacf42362ab699683ea59",
+    "manifest_s2": "223209a99c694da0ddb03b4e5da021adae6c7eaaec75a89ffe553d0ffcf036cd",
+    "rest_public": "ccfb7b9b8986ffd3d57f55ffe1e27213ba2b08fc8af7d3ce0c95fc2d50b0abf3"
+  },
+  "counts": {
+    "cells": 15,
+    "partials_read": 30,
+    "checkpoints_read": 4
+  }
+}

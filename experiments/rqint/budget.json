@@ -1,0 +1,255 @@
+{
+  "_doc": "블록 AD / AD-6 — 비용 모델 + C0~C4 복제·순열 확정 + B 드라이런 추정. 확정 근거는 **단가뿐**이며 기각률·검정력은 일절 참조하지 않았다.",
+  "when_kst": "2026-08-12T20:56:36+09:00",
+  "cost_model": {
+    "formula_evals": "총 평가 횟수 = Σ_시나리오 (복제 수 × 내부 순열 수)   # 순열 수 = n_coin_vectors",
+    "formula_wall": "총 벽시계 = 총 평가 횟수 / 처리량(W_BEST) × (1 + 열감쇠율)",
+    "cost_axis": "n_coin_vectors (F-COIN)",
+    "footnote_complement": "★ 여집합 항등식 T*(z̄) = −T*(z) 때문에 **참조분포 크기는 평가 횟수의 2배**(n_permutation_values = 2 × n_coin_vectors)다. 비용에는 **n_coin_vectors 를 쓴다** — 여집합 값은 평가 0회로 도출된다.",
+    "footnote_audit": "여집합 항등식 감사(`complement_audit_draws`)는 감사 draw 당 평가 1회를 **추가**한다. 블록 AC 가 1,000 draw 전건 편차 0.0 으로 항등식을 이미 실증했으므로, R1 본런은 감사 draw 를 복제마다 반복하지 말고 **시나리오당 1회(예: 1,000 draw)** 로 두는 것을 권한다. 위 추정은 감사 비용을 **제외**한 값이다.",
+    "one_eval_definition": "T* 1회 평가 = consensus 8행렬 위의 macro-AP 8회(D5)."
+  },
+  "measured_anchors": {
+    "t_full_seconds_per_eval_w1": 0.7166503799495937,
+    "t_small_seconds_per_eval_w1": 0.09966293053515983,
+    "reference_scale_check": {
+      "N": 100,
+      "K": 10,
+      "G": 20,
+      "fixture": "make_rqint_exchangeable(seed=99) — 합성 전용",
+      "n_coin_vectors": 200,
+      "per_permutation_seconds": 0.015707038795007976,
+      "replicate_wall_seconds": 3.1580175420021988,
+      "F_PPS_block_AC": 0.015305511464939628,
+      "ratio_vs_F_PPS": 1.0262341661033758,
+      "same_order_of_magnitude": true,
+      "measured_not_extrapolated": true
+    },
+    "W_BEST_small": 18,
+    "W_BEST_full": 18,
+    "evals_per_second_small_at_W_BEST": 89.25498762598825,
+    "evals_per_second_full_at_W_BEST": 8.932070676515567,
+    "effective_parallel_speedup_small": 8.895413631685416,
+    "effective_parallel_speedup_full": 6.401171844061505,
+    "thermal_decay_single_worker": 0.0,
+    "throughput_drift_parallel_W_BEST": 0.24885474349420722,
+    "throughput_drift_parallel_cells_sorted": [
+      0.0517415052647785,
+      0.06655056398981873,
+      0.0768677199415182,
+      0.24885474349420722
+    ],
+    "throughput_drift_parallel_median": 0.07170914196566847,
+    "thermal_inflation_used_in_budget": 0.24885474349420722,
+    "thermal_inflation_choice": "보수적 — 단독 열감쇠(≥600s 지속부하)와 병렬 4셀 드리프트 중 최댓값. 중앙값을 썼다면 총 벽시계는 약 0.858 배가 된다.",
+    "threads_1_vs_all": {
+      "t_full_threads_1": 0.7166503799495937,
+      "t_full_threads_all": 0.7071311277507145,
+      "t_small_threads_1": 0.09966293053515983,
+      "t_small_threads_all": 0.09828849854002328
+    },
+    "measured_not_extrapolated": true
+  },
+  "scenarios_confirmed": {
+    "C0": {
+      "replicates": 2000,
+      "n_coin_vectors": 2000,
+      "n_permutation_values": 4000,
+      "scale": "small",
+      "total_evals": 4000000,
+      "evals_per_second_at_W_BEST": 89.25498762598825,
+      "wall_seconds": 55967.95324099423,
+      "wall_hours": 15.546653678053953,
+      "wall_days": 0.6477772365855814,
+      "estimate_not_measurement": true,
+      "anchors": {
+        "unit_cost_seconds_per_eval_w1": 0.09966293053515983,
+        "measured_throughput_evals_per_second": 89.25498762598825,
+        "thermal_inflation_applied": 0.24885474349420722
+      }
+    },
+    "C1": {
+      "replicates": 2000,
+      "n_coin_vectors": 2000,
+      "n_permutation_values": 4000,
+      "scale": "small",
+      "total_evals": 4000000,
+      "evals_per_second_at_W_BEST": 89.25498762598825,
+      "wall_seconds": 55967.95324099423,
+      "wall_hours": 15.546653678053953,
+      "wall_days": 0.6477772365855814,
+      "estimate_not_measurement": true,
+      "anchors": {
+        "unit_cost_seconds_per_eval_w1": 0.09966293053515983,
+        "measured_throughput_evals_per_second": 89.25498762598825,
+        "thermal_inflation_applied": 0.24885474349420722
+      }
+    },
+    "C2": {
+      "replicates": 2000,
+      "n_coin_vectors": 2000,
+      "n_permutation_values": 4000,
+      "scale": "small",
+      "total_evals": 4000000,
+      "evals_per_second_at_W_BEST": 89.25498762598825,
+      "wall_seconds": 55967.95324099423,
+      "wall_hours": 15.546653678053953,
+      "wall_days": 0.6477772365855814,
+      "estimate_not_measurement": true,
+      "anchors": {
+        "unit_cost_seconds_per_eval_w1": 0.09966293053515983,
+        "measured_throughput_evals_per_second": 89.25498762598825,
+        "thermal_inflation_applied": 0.24885474349420722
+      }
+    },
+    "C3": {
+      "replicates": 2000,
+      "n_coin_vectors": 2000,
+      "n_permutation_values": 4000,
+      "scale": "small",
+      "total_evals": 4000000,
+      "evals_per_second_at_W_BEST": 89.25498762598825,
+      "wall_seconds": 55967.95324099423,
+      "wall_hours": 15.546653678053953,
+      "wall_days": 0.6477772365855814,
+      "estimate_not_measurement": true,
+      "anchors": {
+        "unit_cost_seconds_per_eval_w1": 0.09966293053515983,
+        "measured_throughput_evals_per_second": 89.25498762598825,
+        "thermal_inflation_applied": 0.24885474349420722
+      }
+    },
+    "C4": {
+      "replicates": 400,
+      "n_coin_vectors": 1000,
+      "n_permutation_values": 2000,
+      "scale": "full",
+      "tau_grid": [
+        0.01,
+        0.02,
+        0.03
+      ],
+      "tau_prespecified": 0.02,
+      "n_tau_arms": 3,
+      "total_evals": 1200000,
+      "evals_per_second_at_W_BEST": 8.932070676515567,
+      "wall_seconds": 167780.3217716665,
+      "wall_hours": 46.60564493657402,
+      "wall_days": 1.9419018723572512,
+      "estimate_not_measurement": true,
+      "anchors": {
+        "unit_cost_seconds_per_eval_w1": 0.7166503799495937,
+        "measured_throughput_evals_per_second": 8.932070676515567,
+        "thermal_inflation_applied": 0.24885474349420722
+      }
+    }
+  },
+  "confirmation_basis": "단가(t_small·t_full)와 실측 처리량만으로 F-C03(1,000~2,000)·F-C4(200~400) 범위 안에서 선택했다. **기각률·검정력·p 분포를 근거로 쓰지 않았다.**",
+  "A12_adaptive_stopping_prespecified": {
+    "applies_to": "C4",
+    "rule": "최대 400 복제. 200 복제 시점에 검정력 추정의 신뢰구간을 산출해 0.50·0.80 경계를 **가로지르지 않으면 중단**, 가로지르면 400 까지 진행. 400 에서도 가로지르면 D19 사다리의 **낮은 지위**를 채택한다.",
+    "interval_type": "Wilson score interval (이항 비율)",
+    "confidence_level": 0.95,
+    "note": "사전 기술이며 본 블록에서 적용·실행하지 않았다."
+  },
+  "total": {
+    "wall_seconds": 391652.1347356434,
+    "wall_hours": 108.79225964878984,
+    "wall_days": 4.533010818699577,
+    "exceeds_7d": false,
+    "estimate_not_measurement": true
+  },
+  "B_dryrun_estimate": {
+    "status": "추정만 — **B 는 본 블록에서 확정하지 않는다**(SAP 1.2 블록의 일).",
+    "B_definition_status": "still_unspecified — `B` 가 n_coin_vectors 인지 n_permutation_values 인지 본 모듈에서 정하지 않는다. SAP 1.2 에서 확정 필요.",
+    "estimates": {
+      "100000": {
+        "n_coin_vectors": 100000,
+        "scale": "full",
+        "total_evals": 100000,
+        "evals_per_second_at_W_BEST": 8.932070676515567,
+        "wall_seconds": 13981.69348097221,
+        "wall_hours": 3.883803744714503,
+        "wall_days": 0.16182515602977093,
+        "estimate_not_measurement": true,
+        "anchors": {
+          "unit_cost_seconds_per_eval_w1": 0.7166503799495937,
+          "measured_throughput_evals_per_second": 8.932070676515567,
+          "thermal_inflation_applied": 0.24885474349420722
+        }
+      },
+      "50000": {
+        "n_coin_vectors": 50000,
+        "scale": "full",
+        "total_evals": 50000,
+        "evals_per_second_at_W_BEST": 8.932070676515567,
+        "wall_seconds": 6990.846740486105,
+        "wall_hours": 1.9419018723572514,
+        "wall_days": 0.08091257801488547,
+        "estimate_not_measurement": true,
+        "anchors": {
+          "unit_cost_seconds_per_eval_w1": 0.7166503799495937,
+          "measured_throughput_evals_per_second": 8.932070676515567,
+          "thermal_inflation_applied": 0.24885474349420722
+        }
+      }
+    },
+    "threshold_hours": 24.0,
+    "verdict_preview": {
+      "100000": "24h 이내",
+      "50000": "24h 이내"
+    },
+    "F_BREC": "docs/84 §1 D15 — B 권고 100,000, 전규모 드라이런 24h 초과 시에만 50,000",
+    "estimate_not_measurement": true
+  },
+  "range_sensitivity_not_a_choice": {
+    "note": "F-C03 범위의 **하한**(복제 1,000)을 택했을 때의 참고 추정. 확정값은 위 `scenarios_confirmed`(2,000)이며, 본 항목은 범위 감도를 보이기 위한 참고치다.",
+    "C0_C3_replicates_1000_each_hours": 7.773326839026977,
+    "total_with_C0_C3_at_1000_hours": 77.69895229268194,
+    "estimate_not_measurement": true
+  },
+  "alternatives_if_over_7d": [
+    "워커 재조정(W_BEST 상향 또는 스레드 재배분)",
+    "C4 복제 하향(400 → 200, A12 적응적 중지의 하한)",
+    "C4 τ 격자 축소(사전지정 τ=0.02 우선 실행 후 나머지 분할)",
+    "분할 실행(세션 분할 — 블록 D 선례)"
+  ],
+  "inputs_used": {
+    "unit_t1": "experiments/rqint/_parts/unit_t1.json",
+    "unit_tall": "experiments/rqint/_parts/unit_t18.json",
+    "sweep": "experiments/rqint/_parts/sweep.json",
+    "fixture": "experiments/rqint/_parts/fixture.json",
+    "weaknull": "experiments/rqint/_parts/weaknull.json",
+    "bridge": "experiments/rqint/_parts/bridge.json"
+  },
+  "fixture_primary_variant": "reduced_proportional",
+  "bridge_summary": {
+    "full__target_delta_0.01": {
+      "mean_p": 0.44658901830282866,
+      "frac_p_le_0.05": 0.1
+    },
+    "full__target_delta_0.03": {
+      "mean_p": 0.45224625623960063,
+      "frac_p_le_0.05": 0.1
+    }
+  },
+  "not_decided_here": [
+    "B 값",
+    "B 정의(n_coin_vectors vs n_permutation_values)",
+    "SAP 1.2 동결",
+    "축소 fixture 규칙 동결",
+    "R1 착수 허가"
+  ],
+  "block": "AD",
+  "instruction": "docs/90_rqint_timing_calibration_budget_prompt_for_vscode.md",
+  "predictions_are_synthetic": true,
+  "confirmatory_predictions_loaded": false,
+  "confirmatory_data_accessed": false,
+  "sealed_accessed": false,
+  "unblinding_performed": false,
+  "gin_start_still_blocked": true,
+  "sap_version_unchanged": "1.1",
+  "manifest_sha16": "756d485feb4715e9",
+  "B_definition_status": "still_unspecified — `B` 가 n_coin_vectors 인지 n_permutation_values 인지 본 모듈에서 정하지 않는다. SAP 1.2 에서 확정 필요.",
+  "_assembled_kst": "2026-08-12T20:56:37+09:00"
+}

@@ -1,0 +1,15 @@
+[입력] product_adverse_effect 행: 6,928,666
+[PT] vocab PT 수: 3,550
+[콤보필터] 단일성분 product: 5,355 / 전체 6,520
+[소스] US 라벨: 35,340
+  US 필터 후 부작용행: 6,540,259
+  PMB 필터 후: 6,540,259
+  PT 필터 후: 4,138,319
+[브리지] (label,ingredient) 쌍: 37,635
+  성분 귀속 후 부작용행: 3,898,269
+
+[산출] (ingredient,PT) 양성쌍: 23,111
+  distinct ingredient: 1,115
+  distinct PT: 1,722
+  성분당 평균 PT 수: 20.7
+[저장] data/processed/labels_ingredient_meddra.parquet

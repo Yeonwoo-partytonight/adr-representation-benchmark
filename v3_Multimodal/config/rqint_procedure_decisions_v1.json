@@ -1,0 +1,415 @@
+{
+  "_schema": "rqint_procedure_decisions/v1",
+  "_doc": "SAP 1.2 재동결(블록 AN · docs/102, 정본 docs/100 · 1차 델타 docs/101)에서 확정된 동결본. v0 의 `still_unspecified` 3건(B 정의·값 / C0~C3 복제수 / R3 제2자)을 종결한다. v0 는 0바이트 수정이며 `supersedes` 관계로만 연결한다. ★ 본 파일은 개봉·GIN 착수 허가가 아니다.",
+  "status": "frozen",
+  "is_sap_freeze": true,
+  "is_authorization": false,
+  "sap_version": "1.2",
+  "frozen_at_kst": "2026-08-25T15:25:27+09:00",
+  "block": "AN — R2 SAP 1.2 재동결 완주",
+  "instruction": [
+    "docs/100_r2_sap12_freeze_prompt_for_vscode.md (정본)",
+    "docs/101_r2_sap12_freeze_resume_prompt_for_vscode.md (1차 델타)",
+    "docs/102_r2_al5_verification_delta_prompt_for_vscode.md (2차 델타)"
+  ],
+  "drafted_in_block": "AK — docs/99 R2P-5 (R2 준비 · 무동결 · 계산 0)",
+  "drafted_at_kst": "2026-08-24T11:50:08+09:00",
+  "supersedes": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+  "supersede_relation": {
+    "target": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+    "target_sha256": "951b302a2d474361feb51ef785fd7c0fb016027cd8d8e319f6c4018d36ef3626",
+    "relation": "superseding — v0 의 still_unspecified 3건을 종결한다. v0 문면은 0바이트 수정이며 이력으로 보존한다.",
+    "target_status": "decisions_recorded_not_frozen",
+    "target_is_sap_freeze": false,
+    "v0_bytes_modified_by_this_block": 0
+  },
+  "sap_state_at_freeze": {
+    "manifest_sha256": "d08dcedf2a22e1c8493c842507422de1f6c705ce54ce995e038e09f604706e10",
+    "manifest_sha16": "d08dcedf2a22e1c8",
+    "sap_version": "1.2",
+    "modules_registered": 11,
+    "modules_modified_bytes": "freeze.py L581 1행(sap_version 리터럴)만 · 나머지 10모듈 0바이트",
+    "freeze_py_sha256": "8bef5f70d168c50d7860d5e1d70f78b771d76405fafe2c4d256ac04d08078bc9",
+    "decision_py_sha256": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+    "manifest_erratum_applied": "d20 (B-2) — primary_model_family / families_compared 14곳 추가, 기존 model_family 14곳 보존",
+    "manifest_sha256_pre_erratum": "26071a10944bfc3bfeb99ac041205b0a2e63a7fb6e7f046d1c2ba40c2fb43439",
+    "sap_state_at_draft_was": {
+      "manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+      "manifest_sha16": "756d485feb4715e9",
+      "sap_version": "1.1",
+      "modules_registered": 11,
+      "modules_modified_bytes": 0
+    }
+  },
+  "closures": [
+    {
+      "id": "b_monte_carlo_sample_size_and_definition",
+      "v0_status": "still_unspecified",
+      "proposed_resolution": {
+        "B_definition": "B = 동전 벡터 수 (n_coin_vectors)",
+        "B_value": 100000,
+        "implied_reference_distribution": 200000,
+        "note": "pair_complement = true 이므로 참조분포 = 2 × 동전 수."
+      },
+      "decided_by": "사용자 확정 2026-08-24",
+      "evidence": [
+        {
+          "fact": "F-BMEAS (가)",
+          "source": "experiments/rqint/b_100k/run.json",
+          "value": {
+            "n_coin_vectors": 100000,
+            "reference_distribution": 200000,
+            "wall_hours_total": 19.488727281689645
+          },
+          "reading": "19.4887 h ≤ 24 h → D15 의 '벽시계 24h 초과 시 50,000 으로 하향' 조항 **미발동**."
+        },
+        {
+          "fact": "F-BMEAS (나)",
+          "source": "experiments/rqint/b_dryrun/decisive.json",
+          "value": {
+            "n_coin_vectors": 50000,
+            "reference_distribution": 100000,
+            "wall_hours_total": 9.884754196736548
+          },
+          "reading": "대안 해석도 24 h 이내라, 24h 게이트로는 두 해석이 갈리지 않는다 → 정의 선택은 게이트가 아니라 **문면 결정**이다."
+        },
+        {
+          "fact": "검토자 §9-2 함의 단가",
+          "source": "docs/84_rqint_reviewer_response_triage.md",
+          "value": "B=100,000 = 단일코어 약 30시간 → 1.08 s/동전",
+          "reading": "검토자가 `B` 를 **동전 수**로 상정했음을 시사한다(실측 단가 0.6946 s/동전은 그보다 낮다)."
+        },
+        {
+          "fact": "SE 대비",
+          "source": "experiments/rqint/b_100k/se_comparison.json",
+          "reading": "참조분포 2배 → SE 는 1/√2 배. (가)는 정밀도 √2 배 · 비용 2배."
+        }
+      ],
+      "sap_1_2_text_location": "sap/rqint.py `B_DEFINITION_STATUS` (L63-64) 및 SAP 1.2 §RQ-int",
+      "not_a_post_hoc_choice_because": "판정식 2분기가 `b_100k_prespec.json`(동결 2026-08-22T22:12:40+09:00)에 실주행 시작(2026-08-23T11:36:18+09:00) **이전에** 고정되어 있었고, 실현된 가지를 그대로 따랐다. 3분기 신설·캡 연장·재실행 0.",
+      "v1_status": "closed",
+      "closed_in_block": "AN",
+      "closed_at_kst": "2026-08-25T15:25:27+09:00",
+      "freeze_action": "본 파일에서 동결(R2 완료)"
+    },
+    {
+      "id": "c0_c3_replicates",
+      "v0_status": "still_unspecified",
+      "proposed_resolution": {
+        "primary_R": 2000,
+        "sensitivity_R": 1000
+      },
+      "decided_by": "이미 동결된 설계값의 사후 기록 — 새 선택이 아니다",
+      "evidence": [
+        {
+          "fact": "F-C0C3",
+          "source": "experiments/rqint/calibration_design.json",
+          "value": {
+            "sha256": "42e2f8f9f3f24ec1dfc5fe9ba9b1afe66d30a13c00ef9fce361a3dcaef650b99",
+            "frozen_at_kst": "2026-08-12T22:25:21+09:00",
+            "primary_variant": "reduced_proportional (prop)",
+            "primary_R": 2000,
+            "sensitivity_variant": "reduced_ratio_optimal (ratio)",
+            "sensitivity_R": 1000
+          }
+        },
+        {
+          "fact": "첫 시뮬레이션 시각",
+          "source": "experiments/rqint/calibration_sessions.jsonl",
+          "value": {
+            "event": "session_start",
+            "cell": "C0:prop",
+            "when_kst": "2026-08-12T22:46:44+09:00"
+          }
+        }
+      ],
+      "★_key_rationale": "**결과를 보고 정한 것이 아니다.** 설계 동결 2026-08-12 22:25:21 KST 가 첫 시뮬레이션 세션 시작 2026-08-12 22:46:44 KST 보다 **21분 23초 앞선다**. 즉 복제수는 어떤 시뮬레이션 산출도 존재하지 않는 시점에 고정되었다. v0 의 `why_unspecified` 축자('계측 블록 산출(단가) 이후 확정한다. 결과를 보고 정하는 것은 금지.')는 준수되었다 — 단가는 블록 AD 계측 산출이고, 이는 C0~C4 **시뮬레이션 결과가 아니다**.",
+      "reviewer_range_compliance": "검토자 권고 1,000~2,000 범위 안 (primary 2,000 · sensitivity 1,000)",
+      "v1_status": "closed",
+      "closed_in_block": "AN",
+      "closed_at_kst": "2026-08-25T15:25:27+09:00",
+      "freeze_action": "본 파일에서 동결(R2 완료)"
+    },
+    {
+      "id": "r3_second_party",
+      "v0_status": "escalated_awaiting_advisor_reply",
+      "v0_confirmed_second_party": null,
+      "proposed_resolution": {
+        "confirmed_second_party": "<SECOND-PARTY> 학생",
+        "second_party_environment": "별도 환경 재실행"
+      },
+      "decided_by": "지도교수 승인 2026-08-12 18:34:47 KST (이미 접수 완료)",
+      "evidence": [
+        {
+          "fact": "F-R3 승인 서신",
+          "source": "experiments/provenance/ledger.json:correspondence[19]",
+          "value": {
+            "message_id": "<GMAIL-MSGID>",
+            "ts_kst": "2026-08-12 18:34:47 KST",
+            "verbatim": "네 <SECOND-PARTY>씨에게 부탁해서 처리하시죠.",
+            "approval_scope": "수행 주체(<SECOND-PARTY>)만. 합격기준·일정·패키지 구성은 내선 결정.",
+            "supersedes": "correspondence[16].advisor_reply = none_as_of_2026-08-12"
+          }
+        },
+        {
+          "fact": "R3 패키지 동결파일 존재",
+          "source": "v3_Multimodal/config/r3_second_party_freeze.json",
+          "value": {
+            "sha256": "0624d3ddb852c4e9a2f7f070024814653264eb49c2652dd3e7a947ac38ff27d0",
+            "recorded_by": "블록 AG (docs/91)"
+          }
+        }
+      ],
+      "★_omission_found_by_this_block": {
+        "what": "블록 AG 가 `r3_second_party_freeze.json` 을 만들면서 `rqint_procedure_decisions_v0.json` 의 `still_unspecified[4]` 는 갱신하지 않았다. 그 결과 v0 는 2026-08-24 현재까지도 `status` = `escalated_awaiting_advisor_reply` · `confirmed_second_party` = null 로 남아 있다.",
+        "measured_at": "2026-08-24 (블록 AK)",
+        "measured_source": "v3_Multimodal/config/rqint_procedure_decisions_v0.json:still_unspecified[4]",
+        "v0_note_verbatim": "상신은 완료됐으나 수행 주체 확정은 미완이므로 still_unspecified 에서 빼지 않는다(escalated: true · resolved: false).",
+        "why_this_is_stale": "그 note 는 승인 서신 접수(2026-08-12 18:34:47) **이전** 기준이다. 승인은 그날 저녁에 도착했고 블록 AG(2026-08-14)가 접수·기록했으나 v0 의 해당 항목에는 반영되지 않았다.",
+        "corrective_action": "본 초안이 채택되는 R2 에서 해소한다. **본 블록은 v0 를 0바이트 수정한다.**",
+        "cowork_note_verified": "메모 등에 있던 `ledger.open_question.r3_second_party` 는 **존재하지 않는 키**다 — ledger 최상위 11키에 `open_question` 없음(실측). 그쪽은 조치 불요."
+      },
+      "approval_scope_caveat": "승인 범위는 **수행 주체가 <SECOND-PARTY>이라는 것뿐**이다. 합격 기준·게이트 G-ENV· numeric_core 제외 목록·패키지 구성·일정은 승인 대상이 아니며 내선 결정이다.",
+      "v1_status": "closed",
+      "closed_in_block": "AN",
+      "closed_at_kst": "2026-08-25T15:25:27+09:00",
+      "freeze_action": "본 파일에서 동결(R2 완료)"
+    }
+  ],
+  "n_closures": 3,
+  "still_unspecified_v0_disposition": [
+    {
+      "v0_index": 0,
+      "id": "y1_replacement_count_unit",
+      "v0_status": "resolved_by_our_pre_specified_reading_2026-08-12",
+      "v1_disposition": "v0 에서 이미 종결(우리 사전 명시) — 본 블록 무처리"
+    },
+    {
+      "v0_index": 1,
+      "id": "y2_r1_failure_fallback_decision_rule",
+      "v0_status": "resolved_by_our_pre_specified_reading_2026-08-12",
+      "v1_disposition": "v0 에서 이미 종결(우리 사전 명시) — 본 블록 무처리"
+    },
+    {
+      "v0_index": 2,
+      "id": "b_monte_carlo_sample_size_and_definition",
+      "v0_status": "still_unspecified",
+      "v1_disposition": "closed — B = 동전 벡터 수 100,000 (참조분포 200,000)"
+    },
+    {
+      "v0_index": 3,
+      "id": "c0_c3_replicates",
+      "v0_status": "still_unspecified",
+      "v1_disposition": "closed — primary R=2,000 / sensitivity R=1,000"
+    },
+    {
+      "v0_index": 4,
+      "id": "r3_second_party",
+      "v0_status": "escalated_awaiting_advisor_reply",
+      "v1_disposition": "closed — <SECOND-PARTY> 학생(별도 환경 재실행). 지도교수 승인 2026-08-12 18:34:47 KST"
+    }
+  ],
+  "still_unspecified": [],
+  "n_still_unspecified": 0,
+  "still_unspecified_semantics": "v0 의 5건 중 [0]·[1] 은 v0 시점에 이미 우리 사전 명시로 종결됐고, [2]·[3]·[4] 3건을 본 동결에서 종결했다. 잔여 0건.",
+  "conditions": {
+    "R1": {
+      "id": "R1",
+      "requirement": "아래 §6.3의 캘리브레이션 감사 C0–C4 완료 및 결과표 기록. C1–C3에서 경험적 1종오류가 [α + 2·SE] 를 초과하면 본 승인은 무효이며 후보 C로 회귀",
+      "status": "satisfied",
+      "blocking": "SAP 1.2 동결(R2) · GIN 착수 · 개봉",
+      "planned_block": "R1 캘리브레이션 감사 블록(장시간 계산) — docs/93·94",
+      "failure_action": "후보 C(paired scaffold-cluster BCa)로 회귀. 단 회귀 적용 전 검토자 재자문 의무(§6-2 R1 '본 승인은 무효').",
+      "satisfied_at_kst": "2026-08-18",
+      "evidence": {
+        "source": "experiments/rqint/calibration_summary.json",
+        "r1_passed": true,
+        "sha256": "8f5204b53b82a063e70137ea2931069074ac5acb2038c148bc25ceaa6f032f86",
+        "note": "C0~C4 완주(13,200 복제 · 107.11 h). C0:prop KS p = 0.052446940943157605 — 기준 0.05 바로 위(여유 +0.002447)임을 정직 기재한다."
+      },
+      "v0_status_was": "pending"
+    },
+    "R2": {
+      "id": "R2",
+      "requirement": "RQ-int 구현 코드 · 난수시드 · B · 시드집합 · 대표폴드 · 실패처리 규칙을 GIN 학습 착수 이전에 v1.2로 동결하고 해시 기록",
+      "status": "satisfied",
+      "blocking": "GIN 착수",
+      "must_precede": "gin_training_start",
+      "planned_block": "SAP 1.2 동결 블록(R1 통과 후)",
+      "satisfied_at_kst": "2026-08-25T15:25:27+09:00",
+      "evidence": {
+        "sap_version": "1.2",
+        "manifest_sha256": "d08dcedf2a22e1c8493c842507422de1f6c705ce54ce995e038e09f604706e10",
+        "freeze_py_sha256": "8bef5f70d168c50d7860d5e1d70f78b771d76405fafe2c4d256ac04d08078bc9",
+        "hash_registry": "experiments/sap/sap_1_2_hash_registry.json",
+        "note": "RQ-int 구현 코드·난수시드·B·시드집합·대표폴드·실패처리 규칙 동결. GIN 학습 착수 이전이다(gin_start_still_blocked = true)."
+      },
+      "v0_status_was": "pending"
+    },
+    "R3": {
+      "id": "R3",
+      "requirement": "제2자에 의한 독립 재실행(합성 데이터 드라이런)으로 동결 해시로부터 동일 산출 확인",
+      "status": "pending",
+      "blocking": "개봉 이전 승인 조건 완결",
+      "planned_block": "R2 이후 별도 블록",
+      "second_party": "<SECOND-PARTY> 학생 (확정)",
+      "second_party_confirmed_by": "지도교수 승인 2026-08-12 18:34:47 KST · message_id <GMAIL-MSGID>",
+      "approval_scope_caveat": "승인 범위는 수행 주체가 <SECOND-PARTY>이라는 것뿐이다. 합격기준·게이트 G-ENV·numeric_core 제외 목록·패키지 구성·일정은 승인 대상이 아니며 내선 결정이다.",
+      "package": {
+        "path": "experiments/rqint/r3_package.zip",
+        "sha256": "a94b04f53ba5e392fad4e51c82fb6be1ca2ae0aace0e69554625eca60645c4ca",
+        "supersedes_sha256": "fcbcaeea6c6158de8bbe7da60fe7d5410e15db9a97f6e804a26c62cc146e9351",
+        "regenerated_in_block": "AN — SAP 1.2 로 sap/freeze.py 사본이 발산하여 재동기화·재생성",
+        "externally_distributed_before_regeneration": false,
+        "externally_distributed_note": "메일 2 미발송 — 외부에 배포된 구 패키지는 없다."
+      },
+      "remaining": "제2자 독립 재실행 자체는 미이행. R3 본 드라이런은 후속 블록.",
+      "v0_status_was": "pending"
+    },
+    "R4": {
+      "id": "R4",
+      "requirement": "§5.1의 Holm 이중 보고(A/B) 를 SAP v1.2 문언에 포함",
+      "status": "satisfied",
+      "blocking": "SAP 1.2 문면 확정",
+      "planned_block": "SAP 1.2 동결 블록",
+      "satisfied_at_kst": "2026-08-25T15:25:27+09:00",
+      "evidence": {
+        "document": "docs/100_sap_1_2_amendment.md",
+        "section": "Holm dual reporting (A/B)",
+        "code_change": "holm() 코드 수정 0 — 입력만 달리 호출한다."
+      },
+      "v0_status_was": "pending"
+    },
+    "R5": {
+      "id": "R5",
+      "requirement": "기지 부호 4건, 공개일자(2026-07-27), 노출 인원을 개정문에 명시 (§8 초안은 이미 충족)",
+      "status": "satisfied",
+      "blocking": "SAP 1.2 문면 확정",
+      "planned_block": "SAP 1.2 동결 블록",
+      "runner_measurement": {
+        "docs55b_section8_range": "docs/55b_rqint_external_statreview_package_v2.md §8 (457~479행)",
+        "known_signs_four_present": true,
+        "known_signs_verbatim": "the only confirmatory information known to the investigators was the **sign** of Δ(M2b−M1b) for four artifacts",
+        "disclosure_date_2026_07_27_in_section8": false,
+        "disclosure_date_found_elsewhere": "docs/55b:137 (§2 무결성·공개 상태)",
+        "n_exposed_persons_in_section8": false,
+        "verdict": "cowork·회신서가 적은 '§8 초안 이미 충족'은 **부호 4건에 대해서만** 맞다. 공개일자 2026-07-27 은 §8 개정문 문면 안에 없고(§2 본문에만 있음), 노출 인원 수는 문서 어디에도 없다 → our_status = partial. SAP 1.2 개정문에 두 요소를 추가해야 R5 가 완결된다."
+      },
+      "satisfied_at_kst": "2026-08-25T15:25:27+09:00",
+      "evidence": {
+        "document": "docs/100_sap_1_2_amendment.md",
+        "disclosure_date": "2026-07-27",
+        "n_persons_knowing_direction": 1,
+        "n_persons_basis": "사용자 결정 2026-08-24(docs/100 §0 R5) — 서신 22행 전수 스캔에서 부호 방향 어휘 0건이고 sign_disclosure_matrix.advisor_route = unknown_as_of_2026-08-06 이며 연구자 확인 결과 전달한 적 없음. 지도교수는 부호 4건의 존재·상호 동일성만 고지받았다.",
+        "reviewer_direction_disclosed": false,
+        "public_repository_exposure": "4건 중 3건(반복2·반복3·consensus)이 2026-07-28 부터 공개 저장소 커밋으로 열람 가능 · 반복1 미공개",
+        "sources": [
+          "experiments/provenance/sign_disclosure_matrix.json",
+          "experiments/provenance/ledger.json:first_look_register"
+        ]
+      },
+      "v0_status_was": "partial"
+    },
+    "R6": {
+      "id": "R6",
+      "requirement": "가환성 단위테스트(§4.2), 동일 입력 시 p = 1 재확인, 대칭 할당 하 균등성 재확인 — A6 감사 2종을 RQ-int 코드경로에 대해 재실행",
+      "status": "satisfied",
+      "blocking": "R2 동결 전 검증 완결",
+      "planned_block": "RQ-int 구현 블록(docs/89 = 블록 AC 에서 선행 수행)",
+      "satisfied_at_kst": "2026-08-12",
+      "evidence": {
+        "block": "AC — docs/89_rqint_implementation_r6_report.md",
+        "result": "R6-1~R6-9 9/9 PASS",
+        "artifact": "experiments/rqint/audit_r6.json",
+        "note": "가환성(800쌍 array_equal) · zero-effect p=1.0 · 대칭 할당 균등성(mean p 0.49505 · KS 0.05143) 전건 통과."
+      },
+      "v0_status_was": "pending"
+    }
+  },
+  "n_conditions": 6,
+  "conditions_summary": {
+    "satisfied": [
+      "R1",
+      "R2",
+      "R4",
+      "R5",
+      "R6"
+    ],
+    "pending": [
+      "R3"
+    ]
+  },
+  "stale_in_v0_resolved_here": [
+    {
+      "path": "conditions.R1.status",
+      "v0_value": "pending",
+      "measured": "experiments/rqint/calibration_summary.json:r1_passed = true (2026-08-18 완주)",
+      "action": "R2 에서 갱신"
+    },
+    {
+      "path": "conditions.R6.status",
+      "v0_value": "pending",
+      "measured": "블록 AC(docs/89)에서 RQ-int 코드경로 감사 2종 수행",
+      "action": "R2 에서 갱신 — 본 블록은 R6 완료를 선언하지 않는다"
+    },
+    {
+      "path": "conditions.R5.status",
+      "v0_value": "partial",
+      "measured": "docs/99_amendment_section8_draft.md 로 문안 초안 작성(미삽입)",
+      "action": "R2 에서 §8 삽입 후 갱신"
+    }
+  ],
+  "v0_fields_carried_unchanged": {
+    "reserve_seeds": [
+      3,
+      4
+    ],
+    "reserve_seeds_overlap_with_stability_seeds": {
+      "overlap": [
+        3,
+        4
+      ],
+      "accepted": true,
+      "reason": "데이터 재사용이나 검정 중복이 아니라 동일 난수 초기화값 사용일 뿐이다."
+    },
+    "stability_analysis_is_independent_replication": false,
+    "on_r1_failure_reconsult_reviewer": true,
+    "conflicts_with_llm_review_round5": {
+      "X1": "BCa 유효 replicate 임계 게이트 **신설 안 함** — A7 은 이미 동결·사용된 모듈이라 판정규칙 신설은 부호 인지 후 변경이 된다(실질 버킷 D). 진단값은 보고한다.",
+      "X2": "R1 실패 폴백 = <EXTERNAL-REVIEWER> §10 대로 후보 C 회귀(ChatGPT 대안 기각). 단 판정규칙은 Y2 의 사전 명시로 채운다."
+    },
+    "n_decisions": 22,
+    "source_review": {
+      "file": "docs/RQint_Reviewer_Response_<EXTERNAL-REVIEWER>_20260810.docx",
+      "sha256": "0c29ddf201eb6751a47f420d0c405fdafd0a6baf0ae7705059b0a85fa296aa99",
+      "cover_table_verbatim": {
+        "reviewer": "<EXTERNAL-REVIEWER>, Ph.D.",
+        "degree_specialty": "Ph.D., Department of Information and Communications Engineering, KAIST — resampling-based inference, multiple testing, evaluation metrics for predictive models",
+        "affiliation": "Gyeongnam Intelligence Innovation Center (GIIC)",
+        "date_of_review": "2026-08-10",
+        "access_to_sealed": "None. §11.2의 results-blind 조건 하에 검토하였으며, 봉인된 효과크기 · p-값 · 신뢰구간 · 귀무분포 · 층별 결과를 요청하거나 열람한 사실이 없음",
+        "determination": "Approved with revisions (조건부 승인)"
+      },
+      "appendix_b_verbatim": {
+        "reviewer_name": "<EXTERNAL-REVIEWER>",
+        "affiliation": "",
+        "date_of_review": "2026-08-06",
+        "determination": "Approved with revisions — conditional on requirements R1 through R6 (§6.2)"
+      },
+      "n_approved_with_revisions_occurrences": 2,
+      "discriminator_present": "reverts to the paired scaffold-cluster BCa interval",
+      "extracted_by": "러너 독립 판독(zipfile → word/document.xml) — cowork 요약 미사용"
+    }
+  },
+  "gin_start_still_blocked": true,
+  "unblinding_performed": false,
+  "computation_performed": false,
+  "models_trained": 0,
+  "network_calls": 0,
+  "sealed_read": 0,
+  "open_sealed_calls": 0,
+  "emit_sign_calls": 0,
+  "decision_py_calls_on_confirmatory_or_sealed": 0,
+  "this_file_is_not_an_authorization": "본 동결은 R3 이행·GIN 착수·개봉 중 어느 것에 대한 허가도 아니다. R3(제2자 독립 재실행)이 미이행이므로 개봉 이전 승인조건은 아직 완결되지 않았다. 전부 차단 유지.",
+  "executed_by": "Claude Code (VS Code) — 블록 AN"
+}

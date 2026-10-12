@@ -1,0 +1,26 @@
+{
+  "numeric_core_sha256": "fd488eb429a71990d47ebf321efeb1f34083bbeb4813730a76777262b1ba878b",
+  "canonical_bytes": 7493,
+  "excluded_pointers_applied": [
+    "/run_at_kst",
+    "/wall_clock_seconds",
+    "/timing/per_permutation_seconds",
+    "/timing/per_reference_value_seconds",
+    "/versions",
+    "/_doc",
+    "/block",
+    "/instruction"
+  ],
+  "exclude_pointers_declared": [
+    "/run_at_kst",
+    "/wall_clock_seconds",
+    "/timing/per_permutation_seconds",
+    "/timing/per_reference_value_seconds",
+    "/versions",
+    "/_doc",
+    "/block",
+    "/instruction"
+  ],
+  "serialization": "json.dumps(obj, sort_keys=True, ensure_ascii=False, separators=(\",\", \":\")).encode(\"utf-8\")",
+  "source_file": "experiments\\rqint\\audit_r6.json"
+}

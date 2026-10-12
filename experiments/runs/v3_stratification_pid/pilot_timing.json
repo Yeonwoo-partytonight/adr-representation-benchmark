@@ -1,0 +1,162 @@
+{
+  "_scope": "공개 — 시간·표본수 뿐. 파일럿 통계 산출은 전량 폐기(봉인 저장 없음).",
+  "ts_kst": "2026-08-04 23:16:53 KST",
+  "B_pilot": 100,
+  "B_main": 10000,
+  "pilot_unit": {
+    "axis": "seq_stratum",
+    "stratum": "seen",
+    "n_drugs": 820,
+    "n_clusters": 571,
+    "n_pt_with_positive": 370
+  },
+  "pilot_timing_s": {
+    "t_delta_once_s": 0.16596308298176154,
+    "bootstrap_B100": 110.83638812502613,
+    "signflip_B100": 16.671201916004065
+  },
+  "calibration_constants": {
+    "c_bootstrap": 0.9952870441359765,
+    "c_signflip": 1.0045126673042186
+  },
+  "scaling_model": "층 wall ≈ [c_bootstrap × (B + n_clusters) + c_signflip × B] × t_delta_once(층). **t_delta_once 는 층마다 직접 실측**한다 — 블록 H 는 이를 n_drugs 선형으로 **가정**해 1.74배 과소추정했다. 실제 지배변수는 층 내 **양성≥1 PT 수**(동결 undefined-AP 규칙상 양성 0 PT 는 건너뛴다)이며, 층마다 Δ 1회를 실측하면 그 변수를 가정 없이 반영한다. c_* 는 최대 표본 층 B=100 실측에서 보정한 비례상수(1 근처면 모형 적합).",
+  "n_units": 13,
+  "estimate_per_unit": [
+    {
+      "axis": "drug_class",
+      "stratum": "all-seen",
+      "kind": "stable",
+      "n_drugs": 552,
+      "n_clusters": 398,
+      "n_pt_with_positive": 369,
+      "t_delta_once_s": 0.15798287501093,
+      "est_wall_s": 3221.9219254536074
+    },
+    {
+      "axis": "drug_class",
+      "stratum": "all-unseen",
+      "kind": "stable",
+      "n_drugs": 18,
+      "n_clusters": 16,
+      "n_pt_with_positive": 124,
+      "t_delta_once_s": 0.044972875009989366,
+      "est_wall_s": 900.0835993934869
+    },
+    {
+      "axis": "drug_class",
+      "stratum": "mixed",
+      "kind": "stable",
+      "n_drugs": 206,
+      "n_clusters": 167,
+      "n_pt_with_positive": 362,
+      "t_delta_once_s": 0.13817399999243207,
+      "est_wall_s": 2786.1695594028597
+    },
+    {
+      "axis": "drug_class",
+      "stratum": "unstable_stratum",
+      "kind": "unstable",
+      "n_drugs": 71,
+      "n_clusters": 65,
+      "n_pt_with_positive": 298,
+      "t_delta_once_s": 0.10935499999322928,
+      "est_wall_s": 2193.9555492658337
+    },
+    {
+      "axis": "seq_stratum",
+      "stratum": "seen",
+      "kind": "stable",
+      "n_drugs": 820,
+      "n_clusters": 571,
+      "n_pt_with_positive": 370,
+      "t_delta_once_s": 0.16596308298176154,
+      "est_wall_s": 3413.247552061884
+    },
+    {
+      "axis": "seq_stratum",
+      "stratum": "unseen_ge90",
+      "kind": "stable",
+      "n_drugs": 2,
+      "n_clusters": 2,
+      "n_pt_with_positive": 17,
+      "t_delta_once_s": 0.006315917009487748,
+      "est_wall_s": 126.31826243128094
+    },
+    {
+      "axis": "seq_stratum",
+      "stratum": "unseen_70_90",
+      "kind": "stable",
+      "n_drugs": 15,
+      "n_clusters": 13,
+      "n_pt_with_positive": 118,
+      "t_delta_once_s": 0.04270474999793805,
+      "est_wall_s": 854.5620125271702
+    },
+    {
+      "axis": "seq_stratum",
+      "stratum": "unstable_stratum",
+      "kind": "unstable",
+      "n_drugs": 10,
+      "n_clusters": 9,
+      "n_pt_with_positive": 98,
+      "t_delta_once_s": 0.035262458986835554,
+      "est_wall_s": 705.4944194826204
+    },
+    {
+      "axis": "struct_bin",
+      "stratum": "struct_q1",
+      "kind": "stable",
+      "n_drugs": 144,
+      "n_clusters": 107,
+      "n_pt_with_positive": 341,
+      "t_delta_once_s": 0.12882970902137458,
+      "est_wall_s": 2590.055961069592
+    },
+    {
+      "axis": "struct_bin",
+      "stratum": "struct_q2",
+      "kind": "stable",
+      "n_drugs": 174,
+      "n_clusters": 137,
+      "n_pt_with_positive": 341,
+      "t_delta_once_s": 0.1300109580042772,
+      "est_wall_s": 2617.6863194375073
+    },
+    {
+      "axis": "struct_bin",
+      "stratum": "struct_q3",
+      "kind": "stable",
+      "n_drugs": 150,
+      "n_clusters": 117,
+      "n_pt_with_positive": 344,
+      "t_delta_once_s": 0.12994366700877436,
+      "est_wall_s": 2613.744833920516
+    },
+    {
+      "axis": "struct_bin",
+      "stratum": "struct_q4",
+      "kind": "stable",
+      "n_drugs": 175,
+      "n_clusters": 130,
+      "n_pt_with_positive": 352,
+      "t_delta_once_s": 0.13442058398504741,
+      "est_wall_s": 2705.5347691909196
+    },
+    {
+      "axis": "struct_bin",
+      "stratum": "unstable_stratum",
+      "kind": "unstable",
+      "n_drugs": 204,
+      "n_clusters": 161,
+      "n_pt_with_positive": 358,
+      "t_delta_once_s": 0.13712183298775926,
+      "est_wall_s": 2764.1345894091
+    }
+  ],
+  "estimated_total_wall_s": 27492.909353046376,
+  "estimated_total_wall_hours": 7.636919264735105,
+  "estimated_total_wall_days": 0.3182049693639627,
+  "abort_threshold_days": 7.0,
+  "exceeds_threshold": false,
+  "pilot_artifacts_discarded": true
+}

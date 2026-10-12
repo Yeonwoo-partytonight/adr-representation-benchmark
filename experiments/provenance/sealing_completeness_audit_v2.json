@@ -1,0 +1,2378 @@
+{
+  "_warning": "점검 전용 — 지표·부호·λ·Δ·CI·p 값 일체 없음(경로·개수·크기·mtime·해시·조합·세션 메타만).",
+  "ts_kst": "2026-09-10 21:03:59 KST",
+  "block": "AO — 개봉 전 감사 재수행(봉인 완전성 점검 v2)",
+  "instruction": "docs/103_pre_unblinding_reaudit_prompt_for_vscode.md",
+  "spec_source": {
+    "path": "v3_Multimodal/config/post_interim_freeze_v1_0.json",
+    "sha256": "502db732bd5e45cbe0d1da78106f639c0f65261e1215af9912250e1ffa284258",
+    "key_path": "pre_unblinding_procedures_specified.sealing_completeness_audit",
+    "verbatim": "before unblinding, mechanically verify that every expected artifact exists and none was opened: expected file list, hashes, model x fold x seed manifest cross-check, failure and restart log. TO BE IMPLEMENTED in a later block; specified here."
+  },
+  "supersedes": {
+    "v1_audit_path": "experiments/provenance/sealing_completeness_audit.json",
+    "v1_audit_sha256": "b189f77f30dce9b59fc77519a22cfb4322daa669ab7801569f3672de8a197550",
+    "v1_coverage": {
+      "artifacts": 273,
+      "total": 288
+    },
+    "v1_script_path": "v3_Multimodal/src/pre_unblinding_audit.py",
+    "v1_script_sha256": "224a5c8b81cf0b58ebb79560f566470b4792af030f0865a3d0910855dbfdf996",
+    "v1_outputs_byte_preserved": true,
+    "v1_outputs": {
+      "experiments/provenance/sealing_completeness_audit.json": "b189f77f30dce9b59fc77519a22cfb4322daa669ab7801569f3672de8a197550",
+      "experiments/provenance/sign_disclosure_matrix.json": "147d5d5f62edf84a10f31f7395237f2790e350711fd9f76dada24f067a11ff51",
+      "experiments/runs/v3_pre_unblinding_audit/audit_public.json": "3d07cc6bacba719cd251d70b3504806a58489fbcfcc57370afe7c59493fa7dc5",
+      "experiments/runs/v3_pre_unblinding_audit/record_public.json": "f67ee01ce6c2c10b1e650f91b10930347435bd3e8ea2a0c9652655b001923af7"
+    },
+    "reason": "블록 X 감사(2026-08-07 09:52:20 KST) 이후 블록 Z 가 봉인 산출물 2건과 access.log entry 30건을 남겨 live 275/291 가운데 273 개만 대조된 상태였다(개봉 전제 결손). v1 은 1회성 가드로 재실행이 막혀 있고 v1 상수는 블록 X 가 대조한 범위를 적은 역사 기록이므로 고치지 않고, v1 을 읽기 전용으로 import 하는 v2 를 신설해 현행 전체를 다시 대조했다.",
+    "divergences_addressed": [
+      "항목53 ⑦ divergence-A SEALED_BASELINE",
+      "항목53 ⑦ divergence-B G0_EXPECT status",
+      "항목53 ⑦ 개봉 전제 결손"
+    ]
+  },
+  "gates": {
+    "G0_v2": {
+      "pass": true,
+      "n_rows": 13,
+      "mismatched": [],
+      "detail": {
+        "v3_Multimodal/config/ladder_freeze.json": {
+          "expected_sha16": "b885585aefbabb32",
+          "observed_sha16": "b885585aefbabb32",
+          "match": true
+        },
+        "v3_Multimodal/config/gin_seed_freeze.json": {
+          "expected_sha16": "10828447c6d33118",
+          "observed_sha16": "10828447c6d33118",
+          "match": true
+        },
+        "v3_Multimodal/config/gin_inner_valid_freeze.json": {
+          "expected_sha16": "038599c3e1576022",
+          "observed_sha16": "038599c3e1576022",
+          "match": true
+        },
+        "v3_Multimodal/config/gin_inner_valid_freeze.status.json": {
+          "expected_sha16": "bd329fefe613971f",
+          "observed_sha16": "bd329fefe613971f",
+          "match": true
+        },
+        "v3_Multimodal/config/post_interim_freeze_v1_0.json": {
+          "expected_sha16": "502db732bd5e45cb",
+          "observed_sha16": "502db732bd5e45cb",
+          "match": true
+        },
+        "v3_Multimodal/config/post_interim_freeze_v1_0.status.json": {
+          "expected_sha16": "dbb00d540d7436e5",
+          "observed_sha16": "dbb00d540d7436e5",
+          "match": true
+        },
+        "v3_Multimodal/config/rf_tuned_freeze.json": {
+          "expected_sha16": "c1ef6406fbb48b7f",
+          "observed_sha16": "c1ef6406fbb48b7f",
+          "match": true
+        },
+        "v3_Multimodal/config/holm7_latefusion_freeze.json": {
+          "expected_sha16": "d89f8c52412b656e",
+          "observed_sha16": "d89f8c52412b656e",
+          "match": true
+        },
+        "experiments/sap/manifest.json": {
+          "expected_sha16": "d08dcedf2a22e1c8",
+          "observed_sha16": "d08dcedf2a22e1c8",
+          "match": true
+        },
+        "v3_Multimodal/config/a5_mechanism_freeze.json": {
+          "expected_sha16": "3419b2f793d74051",
+          "observed_sha16": "3419b2f793d74051",
+          "match": true
+        },
+        "v3_Multimodal/config/rqint_procedure_decisions_v1.json": {
+          "expected_sha16": "16776f21df6ae29b",
+          "observed_sha16": "16776f21df6ae29b",
+          "match": true
+        },
+        "experiments/sap/sap_1_2_hash_registry.json": {
+          "expected_sha16": "855616a27ff1f8fa",
+          "observed_sha16": "855616a27ff1f8fa",
+          "match": true
+        },
+        "_sap": {
+          "sap_version": "1.2",
+          "n_modules": 11,
+          "n_module_mismatch": 0,
+          "mismatched_modules": [],
+          "match": true
+        }
+      }
+    },
+    "G0_v2_at_exit": {
+      "pass": true,
+      "mismatched": []
+    },
+    "G_HOLM": {
+      "pass": true,
+      "lineno": 44,
+      "n_labels": 7,
+      "labels": [
+        "M2b-P-ID",
+        "M2b-P-FAM",
+        "M2b-realloc_null",
+        "M2b-M0",
+        "M2b-RF_tuned",
+        "RFseq-RF",
+        "RQ-int"
+      ],
+      "method": "ast.literal_eval (import/실행 아님)"
+    },
+    "G_IDLE_B": {
+      "entry": {
+        "gate": "B",
+        "label": "pre_unblinding_audit_v2:entry",
+        "competitors": 0,
+        "pass": true
+      },
+      "exit": {
+        "gate": "B",
+        "label": "pre_unblinding_audit_v2:exit",
+        "competitors": 0,
+        "pass": true
+      },
+      "note": "계산 0 이므로 G-IDLE A 는 면제 · B 는 유지"
+    },
+    "sealed_baseline": {
+      "pass": true,
+      "expected": {
+        "n_artifacts": 275,
+        "n_access_logs": 16,
+        "n_total": 291,
+        "n_sealed_directories": 25
+      },
+      "observed": {
+        "n_artifacts": 275,
+        "n_access_logs": 16,
+        "n_total": 291,
+        "n_sealed_directories": 25
+      }
+    },
+    "sealed_baseline_at_exit": {
+      "pass": true,
+      "expected": {
+        "n_artifacts": 275,
+        "n_access_logs": 16,
+        "n_total": 291,
+        "n_sealed_directories": 25
+      },
+      "observed": {
+        "n_artifacts": 275,
+        "n_access_logs": 16,
+        "n_total": 291,
+        "n_sealed_directories": 25
+      }
+    },
+    "status_sidecar_transition": {
+      "pass": true,
+      "observed_sha16": "dbb00d540d7436e5",
+      "history_is_list": true,
+      "history_len": 1,
+      "from": false,
+      "to": true,
+      "ts_kst": "2026-08-07 11:13:28 KST",
+      "basis_block": "Y",
+      "method": "superseding append — 기존 키의 값만 갱신하고 전이 이력·근거를 신규 키에 보존한다. 기존 문면 삭제 0.",
+      "recorded_g0_pass_in": "docs/82_docs55b_m1b_fix_and_a5_relabel_report.md:26 (G0 동결 10종 표에 post_interim_freeze_v1_0.status `dbb00d540d7436e5` 로 PASS 기록)",
+      "note": "v1 G0_EXPECT 의 a12fee2cdfd71350 → 현행 dbb00d540d7436e5 전이 = 블록 Y 의 superseding append(항목53 ⑦ divergence-B)."
+    },
+    "unblinding_state_at_start": {
+      "unblinding_performed": false,
+      "gin_start_still_blocked": true
+    }
+  },
+  "expected_manifest": [
+    {
+      "group": "main_13_3_13_5",
+      "expected_from": [
+        "experiments/provenance/first_look_log.json — delta_sign != null entry 의 sealed_path + sealed_sha256 키 (실행 시점 기록, live 목록 아님)",
+        "v3_Multimodal/config/ladder_freeze.json:models_frozen{M1b,M2b}",
+        "docs/45 §5 확증 조회 대장 4행"
+      ],
+      "expected_grid": {
+        "repeats": [
+          1,
+          2,
+          3
+        ],
+        "seeds": [
+          201,
+          202,
+          203
+        ],
+        "models": [
+          "M1b",
+          "M2b"
+        ],
+        "consensus": true
+      },
+      "expected_paths": [
+        "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz",
+        "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz",
+        "experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M1b.npz",
+        "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M2b.npz",
+        "experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M1b.npz",
+        "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M2b.npz",
+        "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+        "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+        "experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json"
+      ],
+      "n_expected": 12
+    },
+    {
+      "group": "ladder_remaining_final",
+      "expected_from": [
+        "docs/48_v3_rf_remaining_oof_report.md §3 봉인 표(디렉터리 4 × 파일명 규칙)",
+        "v3_Multimodal/src/confirmatory_oof_rest.py:REST_MODELS·SEED_MAP·N_FOLD (동결 러너 상수)",
+        "experiments/runs/v3_confirm_rest/_run_state.json:sealed_sha256 키 21 · _consensus_state.json:sealed_sha256 키 7 (실행 시점 기록)"
+      ],
+      "expected_grid": {
+        "models": [
+          "M0",
+          "M1",
+          "M2",
+          "P-ID",
+          "P-FAM",
+          "C-CAP"
+        ],
+        "repeats": [
+          1,
+          2,
+          3
+        ],
+        "folds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "n_model_fold": 90
+      },
+      "expected_paths": [
+        "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_C-CAP.npz",
+        "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz",
+        "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M1.npz",
+        "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M2.npz",
+        "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-FAM.npz",
+        "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-ID.npz",
+        "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_C-CAP.npz",
+        "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M0.npz",
+        "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M1.npz",
+        "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M2.npz",
+        "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_P-FAM.npz",
+        "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_P-ID.npz",
+        "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_C-CAP.npz",
+        "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M0.npz",
+        "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M1.npz",
+        "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M2.npz",
+        "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_P-FAM.npz",
+        "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_P-ID.npz",
+        "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_C-CAP.npz",
+        "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M0.npz",
+        "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M1.npz",
+        "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M2.npz",
+        "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_P-FAM.npz",
+        "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_P-ID.npz"
+      ],
+      "n_expected": 28
+    },
+    {
+      "group": "ladder_remaining_intermediate",
+      "expected_from": [
+        "v3_Multimodal/src/confirmatory_oof_rest.py:PARTIAL_DIR·partial_path()·EQUIV_MODEL/EQUIV_REP/EQUIV_FOLD·CKPT·ENV_FP (동결 러너 상수)",
+        "docs/48_v3_rf_remaining_oof_report.md §3 — checkpoint.jsonl 90행 · env_fingerprint.json"
+      ],
+      "expected_grid": {
+        "n_partial": 90,
+        "checkpoint_rows": 90
+      },
+      "expected_paths": [
+        "experiments/runs/v3_confirm_rest/_sealed/_equivalence/repro_M2b_rep1_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold0.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold1.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold2.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold3.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold4.npy",
+        "experiments/runs/v3_confirm_rest/_sealed/checkpoint.jsonl",
+        "experiments/runs/v3_confirm_rest/_sealed/env_fingerprint.json"
+      ],
+      "n_expected": 93
+    },
+    {
+      "group": "holm6_rftuned_final",
+      "expected_from": [
+        "docs/60_v3_rf_tuned_report.md §3 봉인 표(최종 8종)",
+        "v3_Multimodal/src/confirmatory_oof_rftuned.py:MODEL·SEED_MAP·CONS_DIR",
+        "v3_Multimodal/config/rf_tuned_freeze.json (sha16 c1ef6406fbb48b7f)",
+        "experiments/runs/v3_confirm_rftuned/_run_state.json + _consensus_state.json"
+      ],
+      "expected_grid": {
+        "repeats": [
+          1,
+          2,
+          3
+        ],
+        "folds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "n_model_fold": 15
+      },
+      "expected_paths": [
+        "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/consensus_RF_tuned.npz",
+        "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/oof_RF_tuned.npz",
+        "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/oof_RF_tuned.npz",
+        "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/metrics_full.json",
+        "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/oof_RF_tuned.npz"
+      ],
+      "n_expected": 8
+    },
+    {
+      "group": "holm6_rftuned_intermediate",
+      "expected_from": [
+        "v3_Multimodal/src/confirmatory_oof_rftuned.py:WORK_DIR·partial_path()·CKPT·ENV_FP",
+        "docs/60_v3_rf_tuned_report.md §3 — 중간물 17종"
+      ],
+      "expected_grid": {
+        "n_partial": 15,
+        "checkpoint_rows": 15
+      },
+      "expected_paths": [
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold0.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold1.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold2.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold3.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold4.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold0.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold1.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold2.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold3.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold4.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold0.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold1.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold2.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold3.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold4.npy",
+        "experiments/runs/v3_confirm_rftuned/_sealed/checkpoint.jsonl",
+        "experiments/runs/v3_confirm_rftuned/_sealed/env_fingerprint.json"
+      ],
+      "n_expected": 17
+    },
+    {
+      "group": "holm7_latefusion_final",
+      "expected_from": [
+        "docs/61_v3_late_fusion_report.md §3 봉인 표(최종 27종)",
+        "v3_Multimodal/src/confirmatory_latefusion.py:ARM_FILES·SEED_MAP·CONS_DIR",
+        "v3_Multimodal/config/holm7_latefusion_freeze.json (sha16 d89f8c52412b656e)",
+        "experiments/runs/v3_latefusion/_run_state.json + _consensus_state.json"
+      ],
+      "expected_grid": {
+        "repeats": [
+          1,
+          2,
+          3
+        ],
+        "folds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "n_outer_unit": 15,
+        "n_arm": 5
+      },
+      "expected_paths": [
+        "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens.npz",
+        "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_half.npz",
+        "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_sens.npz",
+        "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq.npz",
+        "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq_sens.npz",
+        "experiments/runs/v3_latefusion_consensus_rep123/_sealed/metrics_full.json",
+        "experiments/runs/v3_latefusion_rep1_seed201/_sealed/lambda_selected.json",
+        "experiments/runs/v3_latefusion_rep1_seed201/_sealed/metrics_full.json",
+        "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens.npz",
+        "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens_half.npz",
+        "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens_sens.npz",
+        "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_seq.npz",
+        "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_seq_sens.npz",
+        "experiments/runs/v3_latefusion_rep2_seed202/_sealed/lambda_selected.json",
+        "experiments/runs/v3_latefusion_rep2_seed202/_sealed/metrics_full.json",
+        "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens.npz",
+        "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens_half.npz",
+        "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens_sens.npz",
+        "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_seq.npz",
+        "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_seq_sens.npz",
+        "experiments/runs/v3_latefusion_rep3_seed203/_sealed/lambda_selected.json",
+        "experiments/runs/v3_latefusion_rep3_seed203/_sealed/metrics_full.json",
+        "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens.npz",
+        "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens_half.npz",
+        "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens_sens.npz",
+        "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_seq.npz",
+        "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_seq_sens.npz"
+      ],
+      "n_expected": 27
+    },
+    {
+      "group": "holm7_latefusion_intermediate",
+      "expected_from": [
+        "v3_Multimodal/src/confirmatory_latefusion.py:WORK_DIR·pp()·meta_path()·CKPT·ENV_FP",
+        "docs/61_v3_late_fusion_report.md §3 — 중간물 62종(unit 별 부분 산출 60)"
+      ],
+      "expected_grid": {
+        "n_partial": 60,
+        "checkpoint_rows": 15
+      },
+      "expected_paths": [
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_meta.json",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_prf.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_pseq.npy",
+        "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_pseqsens.npy",
+        "experiments/runs/v3_latefusion/_sealed/checkpoint.jsonl",
+        "experiments/runs/v3_latefusion/_sealed/env_fingerprint.json"
+      ],
+      "n_expected": 62
+    },
+    {
+      "group": "null_realloc_main",
+      "expected_from": [
+        "v3_Multimodal/src/null_main_run.py:SEED_BASE·ALT_N·AUDIT_KEEP_FIRST_N_OOF·NULL_RESULT·G3_SEALED·GATES_FIRST·CKPT·ENV_FP (동결 러너 상수)",
+        "docs/46_v3_null_aggregate_prompt_for_vscode.md — `_sealed/null_result.json` 1회성 산출",
+        "docs/33 항목18 ③·항목19 — 집계 산출 전량 봉인 규정"
+      ],
+      "expected_grid": {
+        "modes": [
+          "global",
+          "family",
+          "family_ALT",
+          "global_ALT"
+        ],
+        "audit_keep_first_n_oof": 3,
+        "NULL_B": 1000,
+        "ALT_N": {
+          "family_ALT": 100,
+          "global_ALT": 10
+        },
+        "checkpoint_rows": 2110
+      },
+      "expected_paths": [
+        "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl",
+        "experiments/runs/v3_null_MAIN/_sealed/env_fingerprint.json",
+        "experiments/runs/v3_null_MAIN/_sealed/g3_identity.json",
+        "experiments/runs/v3_null_MAIN/_sealed/gates_first_session.json",
+        "experiments/runs/v3_null_MAIN/_sealed/null_result.json",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11000.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11001.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11002.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11000.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11001.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11002.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1000.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1001.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1002.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1000.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1001.npz",
+        "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1002.npz"
+      ],
+      "n_expected": 17
+    },
+    {
+      "group": "null_timing_probe",
+      "expected_from": [
+        "v3_Multimodal/src/null_timing_probe.py:PROBE_SEEDS·AUDIT_KEEP_FIRST_N_OOF·루프순서(global→family)·SEALED_DIR 파일명 규칙"
+      ],
+      "expected_grid": {
+        "probe_seeds": [
+          9000001,
+          9000002
+        ],
+        "modes": [
+          "global",
+          "family"
+        ],
+        "audit_keep_first_n_oof": 3
+      },
+      "expected_paths": [
+        "experiments/runs/v3_null_probe/_sealed/oof_M2b_identity.npz",
+        "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_family_seed9000001.npz",
+        "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_global_seed9000001.npz",
+        "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_global_seed9000002.npz",
+        "experiments/runs/v3_null_probe/_sealed/probe_stats.json"
+      ],
+      "n_expected": 5
+    },
+    {
+      "group": "null_compute_probe2",
+      "expected_from": [
+        "v3_Multimodal/src/null_compute_probe2.py:SEALED_DIR/fold_pred_reference.npy",
+        "v3_Multimodal/src/null_probe2_record.py:196 — 동일 경로 참조"
+      ],
+      "expected_grid": {
+        "n_reference_array": 1
+      },
+      "expected_paths": [
+        "experiments/runs/v3_null_probe2_compute/_sealed/fold_pred_reference.npy"
+      ],
+      "n_expected": 1
+    },
+    {
+      "group": "stratification_m2b_m1b",
+      "expected_from": [
+        "docs/47_v3_stratification_report.md §3 — `_sealed/stratification_result.json` (sha256 cd2969c73ed6bae7…)",
+        "docs/33 항목21 ④ · docs/45 §2·§5 블록 H 행"
+      ],
+      "expected_grid": {
+        "n_strata": 13,
+        "formal": 9,
+        "descriptive": 4
+      },
+      "expected_paths": [
+        "experiments/runs/v3_stratification/_sealed/stratification_result.json"
+      ],
+      "n_expected": 1
+    },
+    {
+      "group": "stratification_m2b_pid",
+      "expected_from": [
+        "docs/57_v3_pid_stratification_report.md §3 — `_sealed/stratification_pid_result.json` (sha256 d38151f60b141ea2…) + checkpoint.jsonl",
+        "docs/33 항목26 · docs/45 §2·§5 블록 L 행"
+      ],
+      "expected_grid": {
+        "n_strata": 13,
+        "checkpoint_rows": 13
+      },
+      "expected_paths": [
+        "experiments/runs/v3_stratification_pid/_sealed/stratification_pid_result.json",
+        "experiments/runs/v3_stratification_pid/_sealed/checkpoint.jsonl"
+      ],
+      "n_expected": 2
+    },
+    {
+      "group": "stratification_axes_a3_a6",
+      "expected_from": [
+        "docs/81_axes_a3a4a5a6_stratification_report.md L81·L83 — 봉인 경로 2종",
+        "v3_Multimodal/src/axes_stratification_run.py:SEALED_DIR(L135)·F_CKPT(L143) + 리터럴 'axes_result.json' (L1044·L1052) — AST 판독, import 0",
+        "experiments/provenance/first_look_log.json[12].sealed_path",
+        "experiments/runs/v3_stratification_axes/axes_public.json:sealed_result_path"
+      ],
+      "expected_grid": {
+        "n_units": 20,
+        "contrasts": [
+          "C1",
+          "C2"
+        ],
+        "n_unit_runs": 40,
+        "checkpoint_rows": 40
+      },
+      "expected_paths": [
+        "experiments/runs/v3_stratification_axes/_sealed/axes_result.json",
+        "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl"
+      ],
+      "n_expected": 2,
+      "source_agreement": {
+        "axes_result.json": {
+          "docs81": true,
+          "runner_ast": true,
+          "first_look_log": true,
+          "axes_public": true
+        },
+        "checkpoint.jsonl": {
+          "docs81": true,
+          "runner_ast": true
+        },
+        "runner_ast_detail": {
+          "sealed_dir": "experiments/runs/v3_stratification_axes/_sealed",
+          "checkpoint": "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl",
+          "axes_result": "experiments/runs/v3_stratification_axes/_sealed/axes_result.json",
+          "axes_result_literal_linenos": [
+            1044,
+            1052
+          ],
+          "contrasts": [
+            "C1",
+            "C2"
+          ],
+          "linenos": {
+            "CONTRASTS": 123,
+            "NO_TARGET_LABEL": 128,
+            "RUNS": 133,
+            "RUN_DIR": 134,
+            "SEALED_DIR": 135,
+            "RUN_LOG": 136,
+            "F_GATES": 137,
+            "F_ASSIGN": 138,
+            "F_ASSIGN_SUM": 139,
+            "F_PILOT": 140,
+            "F_PUBLIC": 141,
+            "F_SCAN": 142,
+            "F_CKPT": 143,
+            "F_ENVFP": 144,
+            "CONS_MAIN_DIR": 146,
+            "CONS_PID_DIR": 147,
+            "TM": 152,
+            "F_TARGETS": 153,
+            "F_CHEMBL": 154,
+            "F_AFF05B": 155,
+            "F_AGG07": 156,
+            "F_A5": 157,
+            "CFG": 159,
+            "F_A5_FREEZE": 160,
+            "F_A5_AMEND": 161,
+            "F_POST_FREEZE": 162
+          },
+          "method": "ast.parse — import·실행 0"
+        },
+        "docs81_detail": {
+          "experiments/runs/v3_stratification_axes/_sealed/axes_result.json": {
+            "path_lineno": 81,
+            "hash_lineno": 82,
+            "sha16": "5c1aa8e24cd5ca9c",
+            "size": 757810
+          },
+          "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl": {
+            "path_lineno": 83,
+            "hash_lineno": 84,
+            "sha16": "a3db641becb16b3e",
+            "size": 384031
+          }
+        },
+        "all_agree": true
+      }
+    }
+  ],
+  "expected_manifest_note": "G1~G12 는 v1 build_expected() 를 그대로 재사용하고 G13 만 v2 가 기록물 4곳에서 새로 구성했다. 어느 군도 live 디렉터리 열거로 만들지 않았다(비순환).",
+  "live_inventory": {
+    "n_sealed_files": 275,
+    "n_access_logs": 16,
+    "n_total": 291,
+    "n_sealed_directories": 25,
+    "by_directory": {
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed": {
+        "n_files": 3,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_confirm_rep2_seed202/_sealed": {
+        "n_files": 3,
+        "n_access_log": 0
+      },
+      "experiments/runs/v3_confirm_rep3_seed203/_sealed": {
+        "n_files": 3,
+        "n_access_log": 0
+      },
+      "experiments/runs/v3_confirm_rest/_sealed": {
+        "n_files": 93,
+        "n_access_log": 0
+      },
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed": {
+        "n_files": 7,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed": {
+        "n_files": 7,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed": {
+        "n_files": 7,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed": {
+        "n_files": 7,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_confirm_rftuned/_sealed": {
+        "n_files": 17,
+        "n_access_log": 0
+      },
+      "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed": {
+        "n_files": 2,
+        "n_access_log": 0
+      },
+      "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed": {
+        "n_files": 2,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed": {
+        "n_files": 2,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed": {
+        "n_files": 2,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_consensus_rep123/_sealed": {
+        "n_files": 3,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_latefusion/_sealed": {
+        "n_files": 62,
+        "n_access_log": 0
+      },
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed": {
+        "n_files": 6,
+        "n_access_log": 0
+      },
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed": {
+        "n_files": 7,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed": {
+        "n_files": 7,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed": {
+        "n_files": 7,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_null_MAIN/_sealed": {
+        "n_files": 17,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_null_probe/_sealed": {
+        "n_files": 5,
+        "n_access_log": 0
+      },
+      "experiments/runs/v3_null_probe2_compute/_sealed": {
+        "n_files": 1,
+        "n_access_log": 0
+      },
+      "experiments/runs/v3_stratification/_sealed": {
+        "n_files": 1,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_stratification_axes/_sealed": {
+        "n_files": 2,
+        "n_access_log": 1
+      },
+      "experiments/runs/v3_stratification_pid/_sealed": {
+        "n_files": 2,
+        "n_access_log": 1
+      }
+    }
+  },
+  "crosscheck": {
+    "scope": "access.log 제외 산출물 275종 (sealed guard 기준선 규약과 동일)",
+    "n_expected": 275,
+    "n_live": 275,
+    "missing": [],
+    "n_missing": 0,
+    "unexpected": [],
+    "n_unexpected": 0,
+    "delta_vs_block_X": {
+      "added": [
+        "experiments/runs/v3_stratification_axes/_sealed/axes_result.json",
+        "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl"
+      ],
+      "removed": [],
+      "baseline": "experiments/provenance/sealing_completeness_audit.json (블록 X, 2026-08-07 09:52:20 KST)"
+    },
+    "verdict": "PASS"
+  },
+  "model_fold_seed_crosscheck": [
+    {
+      "group": "ladder_remaining_final+intermediate",
+      "source": "experiments/runs/v3_confirm_rest/_sealed/checkpoint.jsonl (키 화이트리스트 투영: repeat/model/fold/session_seq/ts_kst/wall_s)",
+      "criterion": "set equality (개수 대조 아님)",
+      "expected_grid": {
+        "repeat_fold": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n_repeat_model_fold": 90
+      },
+      "observed_grid": {
+        "repeat_fold": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "n_repeat_model_fold": 90
+      },
+      "set_equal": true,
+      "n_rows": 90
+    },
+    {
+      "group": "holm6_rftuned",
+      "source": "experiments/runs/v3_confirm_rftuned/_sealed/checkpoint.jsonl",
+      "criterion": "set equality (개수 대조 아님)",
+      "expected_grid": {
+        "repeat_fold": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "model": [
+          "RF_tuned"
+        ]
+      },
+      "observed_grid": {
+        "repeat_fold": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "model": [
+          "RF_tuned"
+        ]
+      },
+      "set_equal": true,
+      "n_rows": 15
+    },
+    {
+      "group": "holm7_latefusion",
+      "source": "experiments/runs/v3_latefusion/_sealed/checkpoint.jsonl",
+      "criterion": "set equality (개수 대조 아님)",
+      "expected_grid": {
+        "repeat_fold": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "observed_grid": {
+        "repeat_fold": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "set_equal": true,
+      "n_rows": 15
+    },
+    {
+      "group": "null_realloc_main",
+      "source": "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl (키 화이트리스트 — macro_AP·delta 는 적재하지 않음)",
+      "criterion": "set equality on (mode, seed) — 개수 대조 아님",
+      "expected_grid": {
+        "n_mode_seed": 2110,
+        "modes": [
+          "global",
+          "family",
+          "family_ALT",
+          "global_ALT"
+        ]
+      },
+      "observed_grid": {
+        "n_mode_seed": 2110,
+        "modes": [
+          "family",
+          "family_ALT",
+          "global",
+          "global_ALT"
+        ]
+      },
+      "set_equal": true,
+      "n_rows": 2110
+    },
+    {
+      "group": "stratification_axes_a3_a6",
+      "source": "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl (키 화이트리스트 투영: key·ts_kst — sealed·public 은 적재하지 않음)",
+      "criterion": "set equality on axis::stratum::contrast (개수 대조 아님)",
+      "expected_grid": {
+        "n_keys": 40,
+        "contrasts": [
+          "C1",
+          "C2"
+        ],
+        "n_axis_stratum_pairs": 20,
+        "n_unit_runs": 40
+      },
+      "observed_grid": {
+        "n_keys": 40,
+        "contrasts": [
+          "C1",
+          "C2"
+        ],
+        "n_axis_stratum_pairs": 20
+      },
+      "set_equal": true,
+      "n_rows": 40,
+      "n_duplicate_keys": 0,
+      "auxiliary_conditions": {
+        "contrast_set_matches_runner_ast": true,
+        "n_axis_stratum_pairs_is_20": true,
+        "every_pair_has_both_contrasts": true
+      }
+    }
+  ],
+  "hashes": {
+    "sha256_all_sealed_artifacts": {
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json": "8722a4e1c52d2eae5cbbebf6b5a5ff5cb145dd591ea5648731d7c481ed15c1b8",
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+      "experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json": "66be535755ca9f4a174a15b45fd2af34fb5f2283d0dab71acc579c6fc66a9621",
+      "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M1b.npz": "9155569ac2581613312c7608a4d9cfcfc7bfe25798b24003a0f6a9116a4fcb33",
+      "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M2b.npz": "05a51b16002b8c0fbfd68a9b5f1fa1d578b9b0b491e6944f098588d70fad0298",
+      "experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json": "b4d80cb9acceb8de6b05da1b0a247d0de94197ffebf24c9309d004d9b722c1cd",
+      "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M1b.npz": "0bb7a951246f85ab37b5d1536073a491c9857cd255593fdef0206c3f8b8b22c4",
+      "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M2b.npz": "c850e55c64309c5cae763f6388459206270a106efc70d7a11322b14c0c3091c8",
+      "experiments/runs/v3_confirm_rest/_sealed/_equivalence/repro_M2b_rep1_fold0.npy": "3151e927e96853a83891b2f5944a348b176a53a2c22da80f6f065be5611cf4b7",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold0.npy": "a0e0f18f210e790161fbcb7d8f3bc76dd7f06b96a3c0eb03025a51c9c75550b4",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold1.npy": "4e4566931c28a3a04d34a4160c852a982ad658471e6ae8ff6a2d515364a93152",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold2.npy": "4b84f5a2d86c9e8c6ca9abd7ae2389639f9a34c071b34b7956dffff594b9f139",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold3.npy": "0469f4164b938dc65e9881331caef1b477c938185b01da878957aa8f43d15349",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold4.npy": "548feb21ea6b5735aa8d04f29d9efde573ba2f0a7b2c3d6faa7ebfb14b0ae1f7",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold0.npy": "905af49d8fbd8ac2a6786d1d87310a7abdd31e51a397dfc30b3bbad95fbb2100",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold1.npy": "43d74c4456f293e0c3b1ace72795727bff0bb716d38b2497756b1bf3fba512ae",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold2.npy": "cdadd79ddcc60828a9561b73238c8daaedcfb53ec826a0a240f90c9ac58e6bf9",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold3.npy": "5f7a605e665dd74a385ce1173f44e85f61ab370d575ae2c0424052d0fe698b18",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold4.npy": "2a736b4822d92703362d15fd479f7393de8f1010e6cbb5a9163ef821d829aa66",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold0.npy": "e23ff303a59db24cc3c1745dad55c1c88b41ef5b8cea0bc65532b69e64f82b43",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold1.npy": "d5b761b2057cc2be75425bb6ca58a971de01cbb9c290259efac5f2dbd37ddb0b",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold2.npy": "3ec69ee5c0e2ad429aa53973d08825c6bfb866fc3970834f2305617eba378e4d",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold3.npy": "ccafebe7ddfc09daef88cb90313c4765bd8548623b24129cbfd48c86c3c05d69",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold4.npy": "deb75ec940e43da4fa8919a2d089e0891154dc2c5214e82d260eb83872a9bf10",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold0.npy": "2f0447253a2f5587e3fa959fd64dfdac3b0bc9d041bc269228d72dd91b53b316",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold1.npy": "e4c89c1e5232b3bbf6ccf34a13d8abd59abeb488b662a0531e34fb7a500b1010",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold2.npy": "014d1e66ba5a38caad48fd66b747e4b0d1e25bd73124136fb74de506728001ac",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold3.npy": "5801accbdd6023ee8f3e04a58ce606ebd27a17b61b6e55c9b634f2a0b9eb96e2",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold4.npy": "fa2c671cf4e937f736e7782392bcc4bac107e90417ed673782d8c1086871b1d2",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold0.npy": "44f630eb918e128f53d647f6727c7f78c73bf52ae77b0d931e1934d4f73f5733",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold1.npy": "f8d20f40a782495b9f7fd966210009e1eafbc67fbd3fb3bdb1f586364f64aabb",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold2.npy": "e8700ad11ed209df06b612fcdb0d2f41097ab7c32a17b3bab2d42cadcc1d745b",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold3.npy": "ca29a57da2dbc4d95eceb9da276f2ac7dae149cda31ab236a0b7055ea18fb69b",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold4.npy": "2a0c83df98a66c3a1437afa3317efb7c434732a9087fb13deefbe159707ba283",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold0.npy": "79730834316ea5cdf746e06a6c3b98e9fa8a01ef84fc5d488e2e2d49f454e722",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold1.npy": "debef842b9e2c661b484e6219ca356c8455d706007be590cfb7e109aa1cc1408",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold2.npy": "1b341fa96f03772cdc801fbbcf98d8040990be0fff23448e44c4fc2a2ec6f1d2",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold3.npy": "987fb53f56d0a47e812c3909d61224f0b138ca0572c49d0704849ed100e1715c",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold4.npy": "4de60be980129cbd20446fd6274d919cdbcf4ee9ad454600ffc89d7119a1f626",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold0.npy": "581cf70007d628d4dcefdb5f15dd473118174ce5ac7a113823f2cce8ee291181",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold1.npy": "c56c939da2b8372bc762cad474af64cec3dfce3b188b2aa24ca69a91f149b895",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold2.npy": "a35fe2f62135c8a8b0e6670761f3c42b4007974361e4bd4807d987712106ad45",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold3.npy": "3222171a19da9e54d77f5518ecdb8d3cf03c39cd01452faa99ed798d351510f7",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold4.npy": "85ba7102c98ebef80d2837bc2cc56f3d7c1fffcce433aededae037d0ccbaf4b0",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold0.npy": "e9aa57d32d8daa6569c6374085cc6afb31e1ba19678466feb498c97187b31dbd",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold1.npy": "5159e0943d912f717cc1e836bb639e9f614d856f16e80360a9ce523302b5b3b4",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold2.npy": "42000695fd301c46cd2fa2bd11f59884e18276a348e44bcad1338645f3140de6",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold3.npy": "e70789ff16f07a6d51b62858bcb29c0a789a40a79c01c12367e2268672a08089",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold4.npy": "5b4a807d34bc7454e88b476f87550189d19501b6149a743ed75ae22082fcd42b",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold0.npy": "c75ff68727cb595e2c3ce5fab1dc5d919bd4eef366b92ef5cb710e6871e8d33a",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold1.npy": "815ebb284fe88591b51bf3903fb5c246e9220d79bf033ccf36c9a183ea38ff42",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold2.npy": "1f033ea5204f049303d13046ea4e6683d7e0a20c061d0d13e02d11fad7044ae3",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold3.npy": "bb49b0a79063ded75a1dd04245058955e9412ecce74dfe26ed873306880ec531",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold4.npy": "185cbe5c6742ba25445c5760fca9960192cbbd39c21ddac9f3516369191008a6",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold0.npy": "483c93a281dd2d9088e4eb72e3e57280b257d576d69d8ebdbb28b89ed1018b96",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold1.npy": "bc99c1b7f5e2433fe0a099ec27157cc00e9f04bb03cee6fd842fadbc3b7e1437",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold2.npy": "f93adbaa5c9b14038ba4cc43d32e7efd0ce76d002f31a131488968ac87917ab9",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold3.npy": "b47555f62e530183cb797ab0c0619fd544db5128bfc39ecac7adce32b98cebb2",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold4.npy": "dc172bb1739de7b4c4c145ff898a5c39441604032040389653c93aa3fc316fc2",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold0.npy": "ba84e354703bea711af1efbfb7fc198c3feb02d383c8a65070bb657fe4f8c426",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold1.npy": "24251f87d659bc603237557af1c977de027c6ee276f2fc0ee0e0ce84345de9a8",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold2.npy": "e4691976243e83a70a5127bdc5fff53097727400312b9eed06b52ddd95e893fe",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold3.npy": "2cb252ce96fc98e5c2d5dab3592f4c01044612e9a66aa3eaad5777175187e173",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold4.npy": "a416894278c480d7d2c7eb1b4167e234a18741347909c6ec33c2c6fa336f6203",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold0.npy": "15b9dfdc91eabd0c96edc4d8a2ee54f7f658e500c5fb574093c4186448f9d155",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold1.npy": "44ded2872846bf09eae6be5543448ee197851e7b9be6ed225ee3a1bd03e86b31",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold2.npy": "4bdffa2249fe414893c67d0bc27b6a013471b7d1594a9b7b2d87be702ad47273",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold3.npy": "c075e4c4fb5b0e6fdc21c56eb0fa687963a28544264c5bcbb8f39cfe28e59a4a",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold4.npy": "5f7797b6b0ac3707f72be2eff394513f266b86abdafcdc04d0eeacc9b9f81bb5",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold0.npy": "80bf94268adeee8eb866561eaee980e8dd8c982d6789c1df8a591aff38a0ab31",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold1.npy": "c7b7d96eb446aa4663e182398969604a87c61939359abb1d7748f7f871b5c0c7",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold2.npy": "8ea0b2b49abdbd8f734aa1169f9ca7860e705c5af2601312f69722a5aafee54b",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold3.npy": "9f26bbe9f7eb213768bc1e7024e94080399e31460feb0ee6e4cb213b38cb5830",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold4.npy": "8af5a4d51ee04e038cb4bfeae95ccd74882d953a19e6789422a645bca4c5335d",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold0.npy": "67753bbf486a6fc1d01442c502c111f85091675142b787bf79dda73af6e68531",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold1.npy": "bde2e99b9ebeae782e95d08ee68891e14b98aa28e46330fa2bf9f4747b18b35e",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold2.npy": "058b4c1460494dba7ec0c9502b30ac3a2b62143aa6ca72f3062a3b20d0a949cc",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold3.npy": "5dbdcada52a932bc88e3442f091171b9c9ab0ca0768204be33814e74491324b3",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold4.npy": "7ea3ffb0125053432238cd0ad719ab487e64f9594f4a134805d5b33486ed6931",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold0.npy": "53cc83979ebff607930996b51c8b8bb80c409be0cb5ce711c27d83aedd47be3f",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold1.npy": "81564a5c9044b5f0fc407f466430a5ece6007c35cc5973466fd2abbecc34472a",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold2.npy": "19e5483b2d36e9aaa29bafcb1110b244cc61c450b25f75a283fc77683a4c7b04",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold3.npy": "f9ed9023b3bb90b07b8703721088662c74af25b399cc8deec94edb48da244840",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold4.npy": "c084d1fe41dd2ada28acadd832fce5b6db785ae1c26636930310040b5ce392b0",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold0.npy": "82cd78076a3cc907404b6e2fc42a8ae34b40010ca6e022836a87675d8c9307c9",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold1.npy": "8782487088c96b00ec245c23aebe69605a266ddfed5c579d0c1348e23e1dce7d",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold2.npy": "38c323444b52ca94902ab76a279368a96ea21e8f3303630a815f26579c6f9ecc",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold3.npy": "5da2e57a692fb9b9dc201854074f166e57ba5ad94c85b66145aef62d51d443e7",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold4.npy": "5d790333b82233ca991a7dcae445569e92e73d6da3c85ae0317aafad5bd9641d",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold0.npy": "d8276d3af891194790f71b6d13a20cd4e1577eb3b72b748c56cd927cda063b81",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold1.npy": "8bcd96649e9b94a6bac3ed538f3ab4fd305efa7b97bb72d55eb5d05e2e670fe8",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold2.npy": "69378cff5be936985b3379c0884be234d624239a990408cb6488d8ad00580dec",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold3.npy": "f6aeae5c5c1442b230541275f2861de60f77f4a43f5ccf361e0796b881866b9c",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold4.npy": "91c4e4852e317479637af75858e371168d741503374b6a0dab36463cdbe7dd96",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold0.npy": "87cd85090638ee1e54452635b8ea0dd7b59a2bc3e7f6d32e2606544777e25273",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold1.npy": "aae960fe66380f595a1644389f3ce3b10e5ce8ca661ae66840d060d1491694ac",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold2.npy": "ce65f0c034e7faf9b0f44f79a3c36f8225e31bff98fbdc9180576c3bf33b4590",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold3.npy": "318751a048f92506048ae311e0ab131b048305161ed2c28ac3c661409556f854",
+      "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold4.npy": "9a44255f0eaee73d61030747e587ac5bfd8345b0187ec1ac455a8a8029ecf541",
+      "experiments/runs/v3_confirm_rest/_sealed/checkpoint.jsonl": "009bbdf3ddc5d9ab5d090736782c061155f0eda108b2bb927900280aded59c75",
+      "experiments/runs/v3_confirm_rest/_sealed/env_fingerprint.json": "2d90573474a53f5e34f7603cefc04a5358474eaca4d3916bee8cc5861c48ce17",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_C-CAP.npz": "33e4d34c7e483e24673d01d7e6bebe992d366f1f6b4d2234dd3aacba9f2b6eb0",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz": "257de8d10e3a22d35e2de7a6245870fc4ca3e5309c92a8a74502aa8228d0bf1e",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M1.npz": "6ebd5dd9a8023a8e165abc2d1c0ddd1337ce9ac147dcd96b547ec5b2f4cc69b4",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M2.npz": "286ae904dbba9fc578bc0faa51af9b1e2e30a98e7f5667e8472e548614618c56",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-FAM.npz": "904bbeb3a8a7acca8f38ed24833515c8d92921afa88576a73038d33f335d8127",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-ID.npz": "9598da3498b1d3cecb1119950e58e43a5f9a7be9981740f0f315de85f56b1f0c",
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/metrics_full.json": "48b39fa5524f372ff91518148f7bc5120f99b362caf7508528520ba3b87063dc",
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/metrics_full.json": "b85b0d35fdc186979184f33ff966669b52a51bf7f8d8dd1d7c5195a124b28534",
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_C-CAP.npz": "e89941191c24cfb388759b8ccbde54f550ed332beaf9e7e0e599c7df05503ab9",
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M0.npz": "9d6cdaac86c7f9fc68509c00e43a51648c739b4c4bd8a11e45711aeeccc8052d",
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M1.npz": "27a273ca581ddd20a2ecd0583c71efc107e77b1d31145ee17eeb6a5c5c249c5c",
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M2.npz": "5298187b4fa3765ce3fbd090d7117c6b4bcfdf155c2e2b8183a5e53b8984110d",
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_P-FAM.npz": "97c80beda28c71666ff6b24e680787f4b1c8fe1bd725398090d44d6a45ce590c",
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_P-ID.npz": "24fc4de5bde8130eead1bd1021cf3363f34d82fa14a43f4915cb6707a9e091d5",
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/metrics_full.json": "7f9f6572a5f86d3794c9ce46d2a79be2c697a007f33b27116b884ccaa155e89e",
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_C-CAP.npz": "2585f17dfb7fcafa72060a09897c350d0326a0fdb182dd33a35793547fc2777e",
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M0.npz": "640ac1a52e5d8d805cdada74171bdef85aacdf23f1bac3b795dca9d7071a20c2",
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M1.npz": "9c19b40928cb82c4b1c29a883f631b0700e5b846d232afecc15d34c81fce55ac",
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M2.npz": "f11b8c24bbc156454622633592e92b66f631041b50737f0a3a569a5621969256",
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_P-FAM.npz": "18528b38ba2f733ab2e3857e5537dbf1403e626a09e56cd2c13f87b844d9ff5a",
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_P-ID.npz": "2da2adad9b9c4e2badfc8e16e2b5c9114180bbdca13f528e134d969fa0d90839",
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/metrics_full.json": "7851ddd847fd3d580fc98df2d829dffb4ae87af6ed411563b7bf15ccc7b3d31c",
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_C-CAP.npz": "9d6670e0bd2a010ec73d902ded5da6d8caa352953a8424f55a1affe68ee97d2e",
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M0.npz": "10e5b68f4fe1c04998a79ab0056ffb83dd9932641ac150636b6445963d92f08d",
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M1.npz": "22618a1580f27ea8a8eb28fd3f6bbac9338e45a3f954fbdcb447f76d91259aa2",
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M2.npz": "01fce973cd1d9b33b123cc960c8031209b79cc62d2d44d0c6bcb650408a9258e",
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_P-FAM.npz": "e6188e149a1960abd132328fa645505d7fa773ff3a1ea3e58f8e6f7a72fabc7e",
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_P-ID.npz": "af053bb4392723ee73b7e3901083bd8408b26b6df980ced9abcd19e4426a2766",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold0.npy": "25e9e0b3fdbc4ffb670411147463e78b84c9cece334f633c64334ad7921588da",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold1.npy": "9085a3d032a812c31759f09f1fb3e6edf3d54ae9b5739d8f82d5e658be290d51",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold2.npy": "d0ad6f2c981e0db98f9fe45071ee078920105bf37b87536f71911f9dc5c84cc4",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold3.npy": "05ee63b9f76b6e59229915321aa6a94b559eab1c556cd960f4da4fed620212a2",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold4.npy": "6c2044ce5f472faeea655b1aea18c5e254caec60affa47f2647ec93b946ec892",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold0.npy": "0005764356886ddad60b950eda4f519e7499e83d20d4aa3969af69fb90663b3a",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold1.npy": "f738eb5a864d1152609c2e239429b052bfd714694c78417f0f3bf9183fd14350",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold2.npy": "2d337dd63a6f6d5afd798d360fda8d1ab23605a7e01f13969664c69722ba3b43",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold3.npy": "c4d761fdda8d1575e437842fc0a7afaf8744a5225438483786c5d1ac6fa5be05",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold4.npy": "8ec90a4b447c63514761cb8f5fade3374d0a56e1895552b50c9a0b3a7a80101d",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold0.npy": "8d77bda900157a83ad6d22aec737b7ea52ffcec59e744e5c62c642e232c48903",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold1.npy": "f57e2c28aa1b923d91e6886679880f4be513bf3f779f97716d5793dc96875276",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold2.npy": "04dc34bdd35ba24e9e3717a4b9183d04e7b578264b79a3a65f3d44f41bed0d06",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold3.npy": "4bee182a605fb99d92dbaae175db9a1d6dc6477c1deceebbfbddf6f1efaecb8e",
+      "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold4.npy": "d54f951bd32fb2ceb4f9bc1493b3f5c066b37ede39a1a1eb19978271d558cb08",
+      "experiments/runs/v3_confirm_rftuned/_sealed/checkpoint.jsonl": "859f2332fea0a66501c16acbbc4f372bab81fa0a2afe3689883dfd333c349d8b",
+      "experiments/runs/v3_confirm_rftuned/_sealed/env_fingerprint.json": "9dff26ace25a9310ae8278872c8c3e1cde9b0e93386dac4fb72e5e4d720c3002",
+      "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/consensus_RF_tuned.npz": "41080e1be7072b08c46027dd4590cb1d9112b904a4a3645b1812a5f26ad5d081",
+      "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/metrics_full.json": "771c25d2850efa90fccc1f922945c9f5878310b94fe6e2c6210da5deedab0551",
+      "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/metrics_full.json": "b8957352de9ad07be1cbcac271596ce6b28c7f5ffaa4b4d9d86aca25403b09c7",
+      "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/oof_RF_tuned.npz": "f2b8c41f65af8b04d6d04bfb09c406c2a8855bdfd7a1622fa84ff8e5ebd7dc1d",
+      "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/metrics_full.json": "3a60c5ed9cebc4b5a573ca4769ea635f7a29af8675cd8535fdb574cc308bdbab",
+      "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/oof_RF_tuned.npz": "c584196347e77019e71acf5da57a5fc6d22b5df8a8b4935602cf22c79b2b1b92",
+      "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/metrics_full.json": "45698102b0803c5dd4e737bbb85fc9886d6f393e15e06742a3d549d5a2ea3ec0",
+      "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/oof_RF_tuned.npz": "394ddf94a2ce44cccd8fdff72bd96f9d9a2755dac7cb2c3eca8aa35a3a5a3148",
+      "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+      "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+      "experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json": "6a861640a05940533ad75b97626929c321689929c9609ec3c08972ac87b8dc8d",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_meta.json": "55a992eb46bd2ff91e3bfc91cadc65370227276652947412420e78bdb2ea8743",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_prf.npy": "905af49d8fbd8ac2a6786d1d87310a7abdd31e51a397dfc30b3bbad95fbb2100",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_pseq.npy": "f6cb85acdbb4a4f9dd992132c4c5e0ad78aa16463deb48b8064c15c454d7c2a1",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_pseqsens.npy": "e89cf830f11da2397ecc8355002fcdec2aa0521ffde6d3025a119aef82436ecf",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_meta.json": "1d144b775a94b779900780dd9f29d1e33f25d5808bd1ba58be0f23d425d38806",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_prf.npy": "43d74c4456f293e0c3b1ace72795727bff0bb716d38b2497756b1bf3fba512ae",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_pseq.npy": "b52fb60ba38355fc92875e51ad613661bb9e1e6b7c71d877dd295179fe4f6a7b",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_pseqsens.npy": "b6b099923d92c85f2c68482af2e95d78064e71326d40aa41ed5cedd3e06207d5",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_meta.json": "dc58536490c23e3916838152a534bcd787014dc677115139f8d94f38a34ec2f3",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_prf.npy": "cdadd79ddcc60828a9561b73238c8daaedcfb53ec826a0a240f90c9ac58e6bf9",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_pseq.npy": "2f026066777736ec723178b37105241f548b7457cbf97ff10e7c3e8848eec722",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_pseqsens.npy": "f5b76deb7b1e95ec4086803c1a26eb201794adcc1e50d71a00d7281b31a4369c",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_meta.json": "fe3e382506007e40224204bad9b922ceff2b8fad672f508dc9a6ff920fa4290f",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_prf.npy": "5f7a605e665dd74a385ce1173f44e85f61ab370d575ae2c0424052d0fe698b18",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_pseq.npy": "2a44b3a102651a6f12f1358e1d7a2b413c849d7203accccaaff805b97227bcff",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_pseqsens.npy": "f2fb6258d5da2993c154d6cfc97854bcd2c1aa641392f1e71675bd356d67ca4f",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_meta.json": "08ec689e8b4f5aa873e992ef8b629e0d5f7161f8b5f5b0eea0a7492e7da09e46",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_prf.npy": "2a736b4822d92703362d15fd479f7393de8f1010e6cbb5a9163ef821d829aa66",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_pseq.npy": "82fe19ef92cba39a1f81cd84603622fe40b98eef672264c8d5394806adc421a6",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_pseqsens.npy": "35e69707d132e66060c80ab6683ede653c6e53d8daf1e975c84c7cef41a1574e",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_meta.json": "26fbbc21b7a6110e00f1863c297ebecd5e7dc7db52d7c000246c0daa18d81199",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_prf.npy": "e9aa57d32d8daa6569c6374085cc6afb31e1ba19678466feb498c97187b31dbd",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_pseq.npy": "cfd09b4518ad55d2bd3b16e150b3bd11518742968d07242b292cf00acd521b0c",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_pseqsens.npy": "bb41630a536c63ccb8104131199313e1d5515c6d9e0dd1c0f32e3d694fcba0fe",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_meta.json": "bb8948bd0712dc1a9110a59672492cc9007cd4f150e3ecd2546acb961edf8b6f",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_prf.npy": "5159e0943d912f717cc1e836bb639e9f614d856f16e80360a9ce523302b5b3b4",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_pseq.npy": "b0a0910fad09527bc26645cbb791ac1371d3013a3b942ee6616f65437e4f89e0",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_pseqsens.npy": "d87e8fd4a6a8c7f08766d611d414c01167abac51e2f221fc59b841c39d20199e",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_meta.json": "744fcc77370ca3958a7d6ce991dfb1f8b3c5925f036fb7f55aa3355036b868dd",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_prf.npy": "42000695fd301c46cd2fa2bd11f59884e18276a348e44bcad1338645f3140de6",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_pseq.npy": "45343ecde89d149a661e3a1c3c091ca87324871140c0eb64b7ac6622198229fc",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_pseqsens.npy": "6fe7d50654db4a78f404e86e935bba6bf5f34ac9e7ccf372cd1e73b21b749b13",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_meta.json": "0b7d7b2a7a74a72233b3f9e00d8b8f039b065e037c458b060d2442c256eb4b05",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_prf.npy": "e70789ff16f07a6d51b62858bcb29c0a789a40a79c01c12367e2268672a08089",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_pseq.npy": "06672aedfd6052400d3768c076ec18904fb9279dff1edecf5310b8ae3ed82fb1",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_pseqsens.npy": "8efbd48ac29bbe9a7d606719bdafe636d673950fd2ce58f2d95e0bff72eb15c7",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_meta.json": "6e975764eed962a21764d87c4ac19f813687a5b95b01062ddee9d78dfa7affff",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_prf.npy": "5b4a807d34bc7454e88b476f87550189d19501b6149a743ed75ae22082fcd42b",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_pseq.npy": "53be7a21832bf1dd7f221576779f049da415fdb94a52db9e508a6b9adcdcea78",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_pseqsens.npy": "376e8118937afa507d0f70126dbbb300b3d52d20367dfcc5fe9fe6308361ceda",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_meta.json": "6747f652bc11475a7e3240ff6e5f5ad1a6a8ae69bb10974872d8017fa49144e3",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_prf.npy": "67753bbf486a6fc1d01442c502c111f85091675142b787bf79dda73af6e68531",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_pseq.npy": "9696d34cdf1e3094a71081b84b3e53a00219a3bf62d5a5799d5f580623a59680",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_pseqsens.npy": "aea2050e72fff986d7f481354756227014021b164138e2d69b9fa8624a246060",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_meta.json": "a4665af016e0af3b537c8144c3948fbb1bcdff1c5e72827f8bb468c9242b8e5a",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_prf.npy": "bde2e99b9ebeae782e95d08ee68891e14b98aa28e46330fa2bf9f4747b18b35e",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_pseq.npy": "38ce459440baeecb91e97ec0d0a4d0c5e5cf486643f48c19c024721e4a666398",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_pseqsens.npy": "61f12b1f34153f2370bb0fa4114ff72d26709f3fba2d9c4e187f606e93d4ad91",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_meta.json": "4279dc053b9d0f615bc0e1e51156092b6d34caf8e05660f0e8327cfa39b93f60",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_prf.npy": "058b4c1460494dba7ec0c9502b30ac3a2b62143aa6ca72f3062a3b20d0a949cc",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_pseq.npy": "b0cc1be35de00f2c9a1dfbd4c7e920123b1686db9cedd9d6ac194658f1ef634b",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_pseqsens.npy": "ba2e74d6ca6b094f936251c2c0bd11eabfdf5788707c54310c1ba945278a6cde",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_meta.json": "68cd9e316b72376365b051577f14c7210c8c41510906ba59443b188238af9e2c",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_prf.npy": "5dbdcada52a932bc88e3442f091171b9c9ab0ca0768204be33814e74491324b3",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_pseq.npy": "1e9337d3db33b7a60cad76e34f19147c0658db427011cc196b9b0d06ca157935",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_pseqsens.npy": "bd36da67721af5f2d615e6549dfc158608887138c4eb2a32a23f5eab73b274e7",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_meta.json": "5c19589d0161ce02f52086b1dc3f9bcf5391dfd25e0e77e3017a5657051c6285",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_prf.npy": "7ea3ffb0125053432238cd0ad719ab487e64f9594f4a134805d5b33486ed6931",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_pseq.npy": "de9f5c03315fdb055d34b58933e6680d5a2c4d81b8a3b805e9899fe144061880",
+      "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_pseqsens.npy": "736e6a4f9908209549cab258ad1fba523cf431bccdb48fe43c92dbb8a4493257",
+      "experiments/runs/v3_latefusion/_sealed/checkpoint.jsonl": "67e3dacbdaefca739fdbea9cdbe20ebf575cbebf4cb1820fbe45149bf523f95c",
+      "experiments/runs/v3_latefusion/_sealed/env_fingerprint.json": "fcf98eb5dcfc15e598dae0f5a82760dbd842d23024be8c56d433cf3a365b4643",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens.npz": "fa51440c9014b0fc945dba8c2fc144c8d070f0c83a47fd6e495194c3add0488c",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_half.npz": "24ad49cfa92252b2dff134511b2b6af65f9964cdc38e514aeca25f95f8123c4a",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_sens.npz": "5ea65c20b8a7c74a2b79c2bb88e7dc4795245f7822ec2b8a792784da315b7adf",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq.npz": "f5dcd1a5e458b5100e98e6ceae88d5841baab37406296f3f7b92757456f63818",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq_sens.npz": "6a6ad46f55582a84c48d31a8772a4535d5c642bbfb9f44a8cfc496c7f91e7e09",
+      "experiments/runs/v3_latefusion_consensus_rep123/_sealed/metrics_full.json": "03d744f82f14f5af49c52a5e645cc1493e1f000ef8a1937824c43cff7eb0969a",
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/lambda_selected.json": "55ae57ffda38c272c8f01245ea229ce040f3beb6e2c8b4dcd82c610ed654aa63",
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/metrics_full.json": "f8158add8ddaefcf52adae9f89ff9f0a042cd572b6c71f0aaf23bf00c0911803",
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens.npz": "fc39f1cebea7b7309a061e65a8197903ed521ee1e16d4c9fddcdee0a3a9dcd07",
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens_half.npz": "9ad1a13275905241c674c039fa057811c9121c09f03b9e2a39d4fff177ab4bf1",
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens_sens.npz": "e5ac87e3c14443b164eab3a2337df67765d1f3dcdb5d0f44b11378f86f347360",
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_seq.npz": "cf88a0b14f1b957e5bdb79d92eeeb4534cef9c33fc249fd80fe76ceb61c61413",
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_seq_sens.npz": "f9b34600df0c60ca5414b4d25884848edbbf9e0bd7d39256f451a87782e26e6d",
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/lambda_selected.json": "4e61e2ae64d5cecf5df85321808ff1b20d564126765bcc783373941326564c34",
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/metrics_full.json": "b71258cff3f34a1eb4f4aaaf0ee12509c2bee68f18d36bda332fdad7dc67b9f2",
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens.npz": "c3e1709fa36c17649766625c99a6722acb3e681fc10eccb7c932d44ddd1007e1",
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens_half.npz": "21f306001ed4d185dd549f810a9b25946f8e9ca8f181499bb9d9b96b804e7dc5",
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens_sens.npz": "3fc2587cc93b50dfc693d1a596b85c88b339f57c8c7554fa4c79405d4a820ae8",
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_seq.npz": "16dcd534752e710bca8c316ccb9b7ab41971591cabeff08f3f8a51102592ad4b",
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_seq_sens.npz": "6802771cc6276a8bb132dd21a8bdf3f3cf82d34e14895cb01943e8101b78f214",
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/lambda_selected.json": "0388ded8a82798e113e59cb0ecec8b63cd7fb49c6a5d5843af255bad54c3ae7f",
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/metrics_full.json": "abf2e0cfa8263b37824970f25be75d4e9042906f1ce3ed7863e427c49660d4c4",
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens.npz": "3829ba88e851547de8c2ad5184bba71f02e3338377b0e833dae3cd066467b49c",
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens_half.npz": "f7aecd7b93f0b0015b5b6d084aebe929517ec5d01b34d4f6e59355900fcccbeb",
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens_sens.npz": "58ae036f20a785c2b12b6b8f95411ea089a48fcf7d5221437dc6abe7b3442042",
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_seq.npz": "d7d49962cb7c4ae959d7b7de4fd46684732b729af9734f2c076ff5109e73d8e2",
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_seq_sens.npz": "4c493fd969f88d7d2e9443ae7b254d5876de3fff1d7ddb16c9423f350f640eb3",
+      "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl": "c196ab5a5555dbac7cbdab8279725d0040e872874bfb4a71496445032d9fcc32",
+      "experiments/runs/v3_null_MAIN/_sealed/env_fingerprint.json": "34f5f8537e9ab185a896dd01db0e431ac24317483f8df9486daa41e9e4b9cc88",
+      "experiments/runs/v3_null_MAIN/_sealed/g3_identity.json": "4eaa101d06a69f701615e44c4c8967c67ea41eaaad19df7405ca0a2389bc9d4a",
+      "experiments/runs/v3_null_MAIN/_sealed/gates_first_session.json": "224883bd5306f3fc5a292c88d32e716597436368d7a4cdda276818f9839afa41",
+      "experiments/runs/v3_null_MAIN/_sealed/null_result.json": "9b7b47e6a495585da5a7a679d3933d5c41807f727af699d0f50751edf359df4d",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11000.npz": "1dc61edd58a97497f464c86a804c9d9b0c7cfc655183cdbb8ff5e0cbedb6878d",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11001.npz": "c33dce1f1e698e1089ccff4bb31f011fdf066f0c438e803a4d361f3c236b8aed",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11002.npz": "fbaa21d70e7e47a8823cbc785afed960d8df67e98eb5439e3de26227e01f08bd",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11000.npz": "3b635e5b1c49d2f2d403b9b87721cb6d8bea9448ec5f1027e16adedc455d9885",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11001.npz": "31a50c89e83da13a06e29b8b2481c67df7ae4c8dc1fac0972eb51e8bb8678a8f",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11002.npz": "c2e36fabaaac718daae03cd7edb7879c2ebc979e5ac3a04c34f2ee01f40bec27",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1000.npz": "31826e0d0ef6c06e8084ffadaddbb70828cf01ea487c192b0cb69ae42346b52a",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1001.npz": "cf5427084c443ad7f66d61dfe858a5dc2f307d3a4619d846b299cca267db8fa2",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1002.npz": "f35cd77a9ed244b20c6523443687bc9838b068ab04185d42777170048b33b139",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1000.npz": "31826e0d0ef6c06e8084ffadaddbb70828cf01ea487c192b0cb69ae42346b52a",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1001.npz": "cf5427084c443ad7f66d61dfe858a5dc2f307d3a4619d846b299cca267db8fa2",
+      "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1002.npz": "f35cd77a9ed244b20c6523443687bc9838b068ab04185d42777170048b33b139",
+      "experiments/runs/v3_null_probe/_sealed/oof_M2b_identity.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+      "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_family_seed9000001.npz": "5c4c0f75d6e62ed4d223b13b91c56426804568f821f25760138a203a5f1f1bf2",
+      "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_global_seed9000001.npz": "73bed570a69b911ed82e413292c7562d7155dbcb84df62881d7d6bcbc543e4ba",
+      "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_global_seed9000002.npz": "e851a3cbfefdc9ae48ee152493397327ee595daca4fac8ee9e21576c950877ae",
+      "experiments/runs/v3_null_probe/_sealed/probe_stats.json": "b2163bb5edc4a3c022bd5df5397e4cfcc9c62a46a73016404982443f1d0ab8f6",
+      "experiments/runs/v3_null_probe2_compute/_sealed/fold_pred_reference.npy": "7f9e5b0452ad3a6e71ad18902c3873cea6d9773af86edc705d1c8145c6af1001",
+      "experiments/runs/v3_stratification/_sealed/stratification_result.json": "cd2969c73ed6bae720df5ffacae8dbba7d6ce8c6e7e6f10b95fa0f91937196ef",
+      "experiments/runs/v3_stratification_axes/_sealed/axes_result.json": "5c1aa8e24cd5ca9ca0c3a61049d22d01fb13a17fca7b3af3510f2bc01a3a009c",
+      "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl": "a3db641becb16b3ee90ae149165561a4c2c06bf86cd61043cfe772982cdbc4ef",
+      "experiments/runs/v3_stratification_pid/_sealed/checkpoint.jsonl": "344bfc391ae2d47c1d0205b15de6ceda4d1d2435c14ef02fbfda67facccaeaab",
+      "experiments/runs/v3_stratification_pid/_sealed/stratification_pid_result.json": "d38151f60b141ea291d0f78ff8171675534fe80e8761c7c02e75f4f069da6706"
+    },
+    "n_sealed_artifacts_hashed": 275,
+    "recorded_sources": [
+      "docs/81_axes_a3a4a5a6_stratification_report.md L82",
+      "docs/81_axes_a3a4a5a6_stratification_report.md L84",
+      "experiments/provenance/first_look_log.json",
+      "experiments/provenance/sealing_completeness_audit.json:hashes.sha256_all_sealed_artifacts (블록 X, 2026-08-07 09:52:20 KST)",
+      "experiments/runs/v3_confirm_rest/_consensus_state.json",
+      "experiments/runs/v3_confirm_rest/_run_state.json",
+      "experiments/runs/v3_confirm_rftuned/_consensus_state.json",
+      "experiments/runs/v3_confirm_rftuned/_run_state.json",
+      "experiments/runs/v3_latefusion/_consensus_state.json",
+      "experiments/runs/v3_latefusion/_run_state.json",
+      "experiments/runs/v3_null_MAIN/aggregate_public.json",
+      "experiments/runs/v3_stratification/gates_public.json:sealed_guard_start",
+      "experiments/runs/v3_stratification/stratification_public.json",
+      "experiments/runs/v3_stratification_axes/axes_public.json:sealed_result_sha256",
+      "experiments/runs/v3_stratification_axes/gates_public.json:sealed_guard_start (블록 Z, 2026-08-07 16:56:39 KST)",
+      "experiments/runs/v3_stratification_pid/gates_public.json:sealed_guard_start",
+      "experiments/runs/v3_stratification_pid/stratification_pid_public.json"
+    ],
+    "recorded_source_ids": {
+      "R-a": "experiments/provenance/sealing_completeness_audit.json:hashes.sha256_all_sealed_artifacts",
+      "R-b": "experiments/runs/v3_stratification_axes/gates_public.json:sealed_guard_start",
+      "R-c": "experiments/runs/v3_stratification_axes/axes_public.json:sealed_result_sha256",
+      "R-d": "docs/81_axes_a3a4a5a6_stratification_report.md L82·L84 (sha16 접두 + 크기)"
+    },
+    "n_files_with_recorded_hash": 275,
+    "files_without_recorded_hash": [],
+    "n_compared": 862,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "recorded_but_absent_in_live": [],
+    "changed_since_block_X": [],
+    "double_counted_note": "R-a 와 R-b 는 같은 값의 표(273행)를 서로 다른 주체·시각이 쓴 독립 기록이라 둘 다 대조한다 → 862 쌍 가운데 546 쌍은 이중 대조다."
+  },
+  "opened_check": {
+    "n_access_log_files": 16,
+    "n_access_log_entries": 121,
+    "entries_per_file": {
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed/access.log": 17,
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log": 9,
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/access.log": 9,
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/access.log": 7,
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/access.log": 7,
+      "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/access.log": 1,
+      "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/access.log": 1,
+      "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/access.log": 1,
+      "experiments/runs/v3_consensus_rep123/_sealed/access.log": 19,
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/access.log": 5,
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/access.log": 5,
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/access.log": 5,
+      "experiments/runs/v3_null_MAIN/_sealed/access.log": 8,
+      "experiments/runs/v3_stratification/_sealed/access.log": 6,
+      "experiments/runs/v3_stratification_axes/_sealed/access.log": 15,
+      "experiments/runs/v3_stratification_pid/_sealed/access.log": 6
+    },
+    "type_distribution": {
+      "machine_read": 121
+    },
+    "n_human_exposure_true": 0,
+    "human_exposure_entries": [],
+    "verdict": "PASS",
+    "n_open_sealed_substring": 0,
+    "delta_since_block_X": {
+      "baseline_source": "experiments/provenance/sealing_completeness_audit.json:opened_check.entries_per_file (15파일 · 91 entries)",
+      "per_file": {
+        "experiments/runs/v3_confirm_rep1_seed201/_sealed/access.log": {
+          "n0": 17,
+          "n_now": 17,
+          "n_new": 0
+        },
+        "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log": {
+          "n0": 4,
+          "n_now": 9,
+          "n_new": 5
+        },
+        "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/access.log": {
+          "n0": 9,
+          "n_now": 9,
+          "n_new": 0
+        },
+        "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/access.log": {
+          "n0": 7,
+          "n_now": 7,
+          "n_new": 0
+        },
+        "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/access.log": {
+          "n0": 7,
+          "n_now": 7,
+          "n_new": 0
+        },
+        "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/access.log": {
+          "n0": 1,
+          "n_now": 1,
+          "n_new": 0
+        },
+        "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/access.log": {
+          "n0": 1,
+          "n_now": 1,
+          "n_new": 0
+        },
+        "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/access.log": {
+          "n0": 1,
+          "n_now": 1,
+          "n_new": 0
+        },
+        "experiments/runs/v3_consensus_rep123/_sealed/access.log": {
+          "n0": 9,
+          "n_now": 19,
+          "n_new": 10
+        },
+        "experiments/runs/v3_latefusion_rep1_seed201/_sealed/access.log": {
+          "n0": 5,
+          "n_now": 5,
+          "n_new": 0
+        },
+        "experiments/runs/v3_latefusion_rep2_seed202/_sealed/access.log": {
+          "n0": 5,
+          "n_now": 5,
+          "n_new": 0
+        },
+        "experiments/runs/v3_latefusion_rep3_seed203/_sealed/access.log": {
+          "n0": 5,
+          "n_now": 5,
+          "n_new": 0
+        },
+        "experiments/runs/v3_null_MAIN/_sealed/access.log": {
+          "n0": 8,
+          "n_now": 8,
+          "n_new": 0
+        },
+        "experiments/runs/v3_stratification/_sealed/access.log": {
+          "n0": 6,
+          "n_now": 6,
+          "n_new": 0
+        },
+        "experiments/runs/v3_stratification_axes/_sealed/access.log": {
+          "n0": 0,
+          "n_now": 15,
+          "n_new": 15
+        },
+        "experiments/runs/v3_stratification_pid/_sealed/access.log": {
+          "n0": 6,
+          "n_now": 6,
+          "n_new": 0
+        }
+      },
+      "n_new_entries": 30,
+      "grouped": {
+        "machine_read | vscode-claude | 등록 §11 세 번째 축 — A3·A4·A5·A6 층화(블록 Z) | human_exposure=False": 30
+      },
+      "ts_min": "2026-08-07 12:29:55 KST",
+      "ts_max": "2026-08-08 16:22:52 KST",
+      "unattributed": [],
+      "files_shrunk": []
+    }
+  },
+  "failure_and_restart_log": {
+    "per_run_sessions": [
+      {
+        "run": "v3_confirm_rest",
+        "source": "experiments/runs/v3_confirm_rest/_run_state.json",
+        "total": 90,
+        "session_seq": 1,
+        "n_done_this_session": 90,
+        "env_fingerprint_match": true,
+        "single_session": true
+      },
+      {
+        "run": "v3_confirm_rftuned",
+        "source": "experiments/runs/v3_confirm_rftuned/_run_state.json",
+        "total": 15,
+        "session_seq": 1,
+        "n_done_this_session": 15,
+        "env_fingerprint_match": true,
+        "single_session": true
+      },
+      {
+        "run": "v3_latefusion",
+        "source": "experiments/runs/v3_latefusion/_run_state.json",
+        "total": 15,
+        "session_seq": 1,
+        "n_done_this_session": 15,
+        "env_fingerprint_match": true,
+        "single_session": true
+      },
+      {
+        "run": "v3_confirm_rest",
+        "checkpoint": "experiments/runs/v3_confirm_rest/_sealed/checkpoint.jsonl",
+        "n_rows": 90,
+        "session_seq_values": [
+          1
+        ],
+        "n_sessions": 1,
+        "n_timestamp_regressions": 0,
+        "n_duplicate_keys": 0,
+        "wall_s_summary": {
+          "n": 90,
+          "median_s": 93.3,
+          "min_s": 92.67,
+          "max_s": 96.98,
+          "n_gt_5x_median": 0
+        }
+      },
+      {
+        "run": "v3_confirm_rftuned",
+        "checkpoint": "experiments/runs/v3_confirm_rftuned/_sealed/checkpoint.jsonl",
+        "n_rows": 15,
+        "session_seq_values": [
+          1
+        ],
+        "n_sessions": 1,
+        "n_timestamp_regressions": 0,
+        "n_duplicate_keys": 0,
+        "wall_s_summary": {
+          "n": 15,
+          "median_s": 212.6,
+          "min_s": 199.51,
+          "max_s": 287.91,
+          "n_gt_5x_median": 0
+        }
+      },
+      {
+        "run": "v3_latefusion",
+        "checkpoint": "experiments/runs/v3_latefusion/_sealed/checkpoint.jsonl",
+        "n_rows": 15,
+        "session_seq_values": [
+          1
+        ],
+        "n_sessions": 1,
+        "n_timestamp_regressions": 0,
+        "n_duplicate_keys": 0,
+        "wall_s_summary": {
+          "n": 15,
+          "median_s": 561.52,
+          "min_s": 551.09,
+          "max_s": 619.28,
+          "n_gt_5x_median": 0
+        }
+      },
+      {
+        "run": "v3_null_MAIN",
+        "checkpoint": "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl",
+        "n_rows": 2110,
+        "session_seq_values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "n_sessions": 6,
+        "n_timestamp_regressions": 6,
+        "n_duplicate_keys": 0,
+        "wall_s_summary": {
+          "n": 2110,
+          "median_s": 1265.02,
+          "min_s": 616.78,
+          "max_s": 1568.98,
+          "n_gt_5x_median": 0
+        },
+        "timestamp_regression_detail": [
+          {
+            "row_index": 6,
+            "prev_ts": "2026-07-29 00:16:46 KST",
+            "ts": "2026-07-29 00:16:45 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 1
+          },
+          {
+            "row_index": 130,
+            "prev_ts": "2026-07-29 02:47:48 KST",
+            "ts": "2026-07-29 02:47:47 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 1
+          },
+          {
+            "row_index": 186,
+            "prev_ts": "2026-07-29 03:52:51 KST",
+            "ts": "2026-07-29 03:52:50 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 1
+          },
+          {
+            "row_index": 427,
+            "prev_ts": "2026-07-29 17:59:14 KST",
+            "ts": "2026-07-29 17:59:13 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 2
+          },
+          {
+            "row_index": 1125,
+            "prev_ts": "2026-07-30 18:22:51 KST",
+            "ts": "2026-07-30 18:22:50 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 4
+          },
+          {
+            "row_index": 1379,
+            "prev_ts": "2026-07-30 23:06:00 KST",
+            "ts": "2026-07-30 23:05:59 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 4
+          }
+        ],
+        "max_regression_s": 1,
+        "n_cross_session_regressions": 0
+      },
+      {
+        "run": "v3_stratification_axes",
+        "checkpoint": "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl",
+        "n_rows": 40,
+        "duplicate_key_field": "key (★ v1 의 (mode, seed)/(repeat, model, fold) 로직을 쓰면 (None, None)×40 이 되어 중복 39 로 오판한다)",
+        "n_unique_keys": 40,
+        "n_duplicate_keys": 0,
+        "n_timestamp_regressions": 0,
+        "ts_min": "2026-08-07 19:14:27 KST",
+        "ts_max": "2026-08-08 15:49:09 KST",
+        "launcher_estimate_sessions": [
+          {
+            "stage": "estimate",
+            "start_ts_kst": "2026-08-07 18:19:50 KST",
+            "stop_ts_kst": "2026-08-08 15:49:09 KST",
+            "rc": "0"
+          },
+          {
+            "stage": "estimate",
+            "start_ts_kst": "2026-08-08 16:22:50 KST",
+            "stop_ts_kst": "2026-08-08 16:22:53 KST",
+            "rc": "0"
+          }
+        ],
+        "n_estimate_sessions": 2,
+        "n_launcher_sessions_all_stages": 7,
+        "source_launcher_log": "experiments/runs/v3_stratification_axes/launcher.log"
+      }
+    ],
+    "anomalies_detected": [
+      {
+        "run": "v3_null_MAIN",
+        "checkpoint": "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl",
+        "n_rows": 2110,
+        "session_seq_values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "n_sessions": 6,
+        "n_timestamp_regressions": 6,
+        "n_duplicate_keys": 0,
+        "wall_s_summary": {
+          "n": 2110,
+          "median_s": 1265.02,
+          "min_s": 616.78,
+          "max_s": 1568.98,
+          "n_gt_5x_median": 0
+        },
+        "timestamp_regression_detail": [
+          {
+            "row_index": 6,
+            "prev_ts": "2026-07-29 00:16:46 KST",
+            "ts": "2026-07-29 00:16:45 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 1
+          },
+          {
+            "row_index": 130,
+            "prev_ts": "2026-07-29 02:47:48 KST",
+            "ts": "2026-07-29 02:47:47 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 1
+          },
+          {
+            "row_index": 186,
+            "prev_ts": "2026-07-29 03:52:51 KST",
+            "ts": "2026-07-29 03:52:50 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 1
+          },
+          {
+            "row_index": 427,
+            "prev_ts": "2026-07-29 17:59:14 KST",
+            "ts": "2026-07-29 17:59:13 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 2
+          },
+          {
+            "row_index": 1125,
+            "prev_ts": "2026-07-30 18:22:51 KST",
+            "ts": "2026-07-30 18:22:50 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 4
+          },
+          {
+            "row_index": 1379,
+            "prev_ts": "2026-07-30 23:06:00 KST",
+            "ts": "2026-07-30 23:05:59 KST",
+            "regression_s": 1,
+            "same_session": true,
+            "session_seq": 4
+          }
+        ],
+        "max_regression_s": 1,
+        "n_cross_session_regressions": 0
+      }
+    ],
+    "multi_session_runs": [
+      {
+        "run": "v3_null_MAIN (§13-4 표적 재배치 null 본런)",
+        "source": "experiments/runs/v3_null_MAIN/progress_public.json",
+        "session_seq": 6,
+        "completed": 2110,
+        "total": 2110,
+        "workers": 18,
+        "graceful_stop": true,
+        "stop_reason": "done",
+        "env_fingerprint_match": true,
+        "sessions": [
+          {
+            "seq": 1,
+            "start_ts": "2026-07-28 23:38:10 KST",
+            "stop_ts": "2026-07-29 08:19:59 KST",
+            "completed_delta": 415,
+            "workers": 18
+          },
+          {
+            "seq": 2,
+            "start_ts": "2026-07-29 17:38:05 KST",
+            "stop_ts": "2026-07-29 19:33:39 KST",
+            "completed_delta": 94,
+            "workers": 18
+          },
+          {
+            "seq": 3,
+            "start_ts": "2026-07-29 20:32:19 KST",
+            "stop_ts": "2026-07-30 08:17:07 KST",
+            "completed_delta": 576,
+            "workers": 18
+          },
+          {
+            "seq": 4,
+            "start_ts": "2026-07-30 17:22:45 KST",
+            "stop_ts": "2026-07-31 08:15:25 KST",
+            "completed_delta": 801,
+            "workers": 18
+          },
+          {
+            "seq": 5,
+            "start_ts": "2026-07-31 16:32:10 KST",
+            "stop_ts": "2026-07-31 20:38:57 KST",
+            "completed_delta": 216,
+            "workers": 18
+          },
+          {
+            "seq": 6,
+            "start_ts": "2026-07-31 21:05:43 KST",
+            "stop_ts": "2026-07-31 21:18:17 KST",
+            "completed_delta": 8,
+            "workers": 18
+          }
+        ],
+        "interpretation": "설계상 중단·재개가 허용된 장기 런이며(`STOP` 파일 기반 graceful stop), 완주 카운트는 2110/2110 로 기대 격자와 집합 동일하다. 세션 6개는 장애가 아니라 예정된 분할 실행이다."
+      }
+    ],
+    "n_multi_session_runs": 1,
+    "timestamp_regression_interpretation": "v3_null_MAIN 의 시각 역행 6건은 전부 **동일 세션 내 1초** 역행이고 세션 경계를 가로지르는 역행은 0건이다. 18 워커가 배치로 완료를 수집해 기록하므로 도착 순서와 기록 순서가 초 단위에서 어긋나는 것이 원인이며, 중복 (mode, seed) 는 0건이고 (mode, seed) 집합은 기대 격자 2,110 과 완전히 같다 → 재시작 결손·중복 아님.",
+    "known_failure_and_restart_events": [
+      {
+        "event": "블록 O 본계산 중 임계 배터리 강제 절전 — 약 89분 공백",
+        "when_kst": "2026-08-06 (블록 O `stage_run` 구간 15:30:05 → 17:54:36)",
+        "evidence": "docs/60_v3_rf_tuned_report.md §4-4 · experiments/runs/v3_confirm_rftuned/suspend_fold_recheck_public.json",
+        "affected_unit": "rep1 RF_tuned fold3 (절전 경계를 걸친 model-fold 1개)",
+        "verdict": "산출 바이트 무영향(절전 경계 fold 동일 코드경로 재계산 = byte_identical True로 실증) · 경과시간만 오염 → wall-clock 비교 불가",
+        "caffeinate_note": "caffeinate -i -s 의 절전 억제 보증 2건이 정상 생성돼 있었으나 임계 잔량 강제 절전은 그 보증으로 막지 못함(docs/60 §4-4)."
+      },
+      {
+        "event": "블록 C(반복2·3 + consensus) 배터리 전원·저전력 모드(powermode=1) 실행",
+        "when_kst": "2026-07-27 (docs/45 §5 추기 2026-07-27 22:19 KST)",
+        "evidence": "docs/45_research_integrity_ledger.md §5 추기 · power_state_block_C.json",
+        "affected_unit": "블록 C 전 구간",
+        "verdict": "산출 바이트 무영향(RF random_state=42 고정·연산 순서 불변) · wall-clock 비교 불가 → 블록 D·§13-4 시간 추정에 미투입",
+        "caffeinate_note": null
+      },
+      {
+        "event": "락 stale 인수 1회 — 합성 자가시험 레코드(실제 사고 아님)",
+        "when_kst": "2026-07-28 19:43:33 KST (주석 19:58:55 KST)",
+        "evidence": "experiments/runs/.compute_lock.stale.jsonl (kind=ANNOTATION, synthetic_selftest=true, block=E-1)",
+        "affected_unit": "없음 — 블록 E-1 락 자가시험",
+        "verdict": "의도된 합성 레코드 · 산출물 무영향",
+        "caffeinate_note": null
+      },
+      {
+        "event": "블록 Z 선행 세션 → 재개 (2회차 실행 아님)",
+        "when_kst": "2026-08-07 12:05~12:29 KST 선행 세션 → 같은 블록이 체크포인트 설계에 따라 재개 (재개 세션 게이트 기록 2026-08-07 16:56:39 KST)",
+        "evidence": "docs/81_axes_a3a4a5a6_stratification_report.md §5 편차 1 · experiments/runs/v3_stratification_axes/gates_public.json:ts_kst",
+        "affected_unit": "블록 Z 전 구간",
+        "verdict": "산출 결손·중복 아님 — 선행 세션은 Z-2(경계 amendment + docs/33 항목39)와 --stage verify 까지만 수행했고 checkpoint.jsonl · axes_result.json · axes_public.json 은 전부 부재였다. 재개 세션이 게이트 전항을 다시 실측하고 --stage verify 를 재실행했다. 체크포인트 40행 · key 중복 0.",
+        "caffeinate_note": null
+      },
+      {
+        "event": "블록 Z 공개요약 코드 결함 교정 재진입 (통계 재계산 0)",
+        "when_kst": "2026-08-08 16:22:50 → 16:22:53 KST (stage=estimate, rc=0)",
+        "evidence": "docs/81_axes_a3a4a5a6_stratification_report.md §5 편차 2 · experiments/runs/v3_stratification_axes/launcher.log · experiments/runs/v3_stratification_axes/axes_public.json:sealed_result_rewritten_this_run",
+        "affected_unit": "axes_public.json 의 estimability 판정 필드 (봉인 산출물 무관)",
+        "verdict": "체크포인트 40건 전건 SKIP 으로 교정 → 통계 재계산 0 · 봉인 재작성 0 (sealed_result_rewritten_this_run false · axes_result.json sha16 5c1aa8e24cd5ca9c 가 docs/81 §3 기록과 동일) · 봉인 판독 0. 이 재진입이 2026-08-08 16:22:52 KST access.log entry 6건 / 3파일을 남겼다.",
+        "caffeinate_note": null
+      }
+    ],
+    "n_known_events": 5
+  },
+  "out_of_glob_sealed_copies": {
+    "scan_scope": "저장소 루트 전체(.git 제외 · experiments/runs/**/_sealed/** 원본 제외 · 심볼릭 링크 미추적) 중 live 봉인 산출물과 크기가 같은 파일만 sha256 계산",
+    "n_files_scanned": 131562,
+    "n_files_hashed": 245,
+    "n_copy_files": 3,
+    "n_copy_pairs": 4,
+    "copies": [
+      {
+        "copy_path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/metrics_full.json",
+        "original_path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json",
+        "sha16": "8722a4e1c52d2eae",
+        "size": 37843,
+        "byte_identical": true
+      },
+      {
+        "copy_path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M1b.npz",
+        "original_path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz",
+        "sha16": "b2a61ba846eead5f",
+        "size": 547482,
+        "byte_identical": true
+      },
+      {
+        "copy_path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M2b.npz",
+        "original_path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz",
+        "sha16": "350fa12fac84ef4c",
+        "size": 552904,
+        "byte_identical": true
+      },
+      {
+        "copy_path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M2b.npz",
+        "original_path": "experiments/runs/v3_null_probe/_sealed/oof_M2b_identity.npz",
+        "sha16": "350fa12fac84ef4c",
+        "size": 552904,
+        "byte_identical": true
+      }
+    ],
+    "copy_files": [
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/metrics_full.json",
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M1b.npz",
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M2b.npz"
+    ],
+    "sealed_named_dirs": [
+      "backup/v3_sealed_backup_20260727",
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed"
+    ],
+    "files_in_sealed_named_dirs": [
+      {
+        "path": "backup/v3_sealed_backup_20260727/SHA256SUMS.txt",
+        "size": 595,
+        "mtime": 1785154929.934904,
+        "sha256": "5f74ae7a7260769750d4f61463f9a8ce839eea4ae85dd3aca71ee890c48c1f79",
+        "sha16": "5f74ae7a72607697",
+        "class": "백업 체크섬"
+      },
+      {
+        "path": "backup/v3_sealed_backup_20260727/provenance/first_look_log.json",
+        "size": 1259,
+        "mtime": 1785118677.827857,
+        "sha256": "a77b38413f79252c86a0126878fe4ac10acb37abe192218cd6a6609b77bf744b",
+        "sha16": "a77b38413f79252c",
+        "class": "기록물 구본(봉인 아님 · 해싱만, 파싱 0)"
+      },
+      {
+        "path": "backup/v3_sealed_backup_20260727/provenance/ledger.json",
+        "size": 18652,
+        "mtime": 1785154802.048847,
+        "sha256": "27de61d130125bb1004934657e5ae12aa2ea1db950aea4ad19382da363fc0add",
+        "sha16": "27de61d130125bb1",
+        "class": "기록물 구본(봉인 아님 · 해싱만, 파싱 0)"
+      },
+      {
+        "path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/access.log",
+        "size": 2208,
+        "mtime": 1785154578.210521,
+        "sha256": "9a182b691f3713250e1623663681b92bba5935808c694d1c798d37c673265abd",
+        "sha16": "9a182b691f371325",
+        "class": "사본 디렉터리 열람 기록"
+      },
+      {
+        "path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/metrics_full.json",
+        "size": 37843,
+        "mtime": 1785118677.634729,
+        "sha256": "8722a4e1c52d2eae5cbbebf6b5a5ff5cb145dd591ea5648731d7c481ed15c1b8",
+        "sha16": "8722a4e1c52d2eae",
+        "class": "봉인 사본"
+      },
+      {
+        "path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M1b.npz",
+        "size": 547482,
+        "mtime": 1785118677.526857,
+        "sha256": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+        "sha16": "b2a61ba846eead5f",
+        "class": "봉인 사본"
+      },
+      {
+        "path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M2b.npz",
+        "size": 552904,
+        "mtime": 1785118677.633569,
+        "sha256": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+        "sha16": "350fa12fac84ef4c",
+        "class": "봉인 사본"
+      }
+    ],
+    "n_files_in_sealed_named_dirs": 7,
+    "backup_access_log_check": {
+      "present": true,
+      "path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/access.log",
+      "n_entries": 6,
+      "types": [
+        "machine_read"
+      ],
+      "n_human_exposure_true": 0,
+      "n_open_sealed_substring": 0,
+      "last_ts_kst": "2026-07-27 21:16:18 KST"
+    },
+    "backup_sha256sums_check": {
+      "present": true,
+      "path": "backup/v3_sealed_backup_20260727/SHA256SUMS.txt",
+      "n_ok": 6,
+      "n_bad": 0,
+      "verdict": "OK"
+    },
+    "rule": "ⓐ 모든 사본이 live 봉인 원본과 바이트 동일 ⓑ 사본 디렉터리 access.log 에 human_exposure true 0 · type 이 machine_read 만 ⓒ sealed 이름 디렉터리 안에 기대 7파일 말고 다른 파일 0 ⓓ 사본 파일 3개가 전부 AO-5 에서 이미 대조된 원본에 대응 — 모두 만족하면 non_blocking_recorded, 하나라도 어기면 blocking.",
+    "rule_conditions": {
+      "a_all_byte_identical": true,
+      "b_access_log_machine_only": true,
+      "c_no_other_files": true,
+      "d_copies_covered_by_ao5": true
+    },
+    "verdict": "non_blocking_recorded",
+    "disposition": "보존 + 문서화 — 사용자 확정 2026-09-10. 근거: 원본과 바이트 동일·열람 흔적은 기계 판독뿐이며, 2026-07-27 시점 해시를 담은 독립 사본이라 원본 무변경의 보조 증거가 된다. 문제는 사본 존재가 기록되지 않았던 점이므로 본 감사 산출물과 docs/33 항목54 기재로 해소한다.",
+    "note": "원본끼리의 바이트 동일(identity 대조 설계)은 사본으로 세지 않는다 — copy_path 가 _sealed 원본 밖일 때만 사본이다."
+  },
+  "sign_disclosure_consistency": {
+    "n_first_look_entries": 13,
+    "n_sign_known": 4,
+    "matrix_n_rows_field": 4,
+    "matrix_len_rows": 4,
+    "three_values_agree": true,
+    "n_entries_after_block_X": 1,
+    "entry_indices_after_block_X": [
+      12
+    ],
+    "new_sign_known_contrasts_since_block_X": 0,
+    "artifacts_sha256": {
+      "sign_disclosure_matrix.json": "147d5d5f62edf84a10f31f7395237f2790e350711fd9f76dada24f067a11ff51",
+      "docs/79_sign_disclosure_matrix.md": "99d3292aa0f0dabd3d7690fc47c49a4d143c0160fc98881d5204eb9fab93d833",
+      "first_look_log.json": "4f6d8bd9c286ebc64a86bdee228840670d9bafb8840de3aa9080e9ae833a3a37"
+    },
+    "regenerated": false,
+    "note": "이 블록은 기록표를 다시 만들지도 고치지도 않는다 — 개수와 sha 만 적는다."
+  },
+  "unblinding_state": {
+    "unblinding_performed": false,
+    "unblinding_approver": "양진홍 교수님",
+    "timing": "still_undecided — 별도 승인 필요",
+    "remaining_requirements": [
+      "봉인 완전성 점검 — 이 블록의 판정으로 충족(275/291 전체 대조)",
+      "부호 인지 기록표 — 작성됨(블록 X, 이후 블록 AB·AH 가 append)",
+      "Holm ⑧ RQ-int — 미확보(R3 → GIN → λ·ρ 진단이 선행)",
+      "개봉 별도 승인·시점 — 미정"
+    ],
+    "note": "이 점검을 통과해도 개봉 허가가 아니다."
+  },
+  "verdict": "PASS",
+  "blocking_findings": [],
+  "defensive_scan_self": {
+    "n_forbidden_keys": 0,
+    "forbidden_keys": [],
+    "n_value_scan_hits": 0,
+    "value_scan_kinds": []
+  }
+}

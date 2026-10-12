@@ -1,0 +1,183 @@
+{
+  "_scope": "공개 — 층 배정·표본수·클러스터수·formal/descriptive 라벨 뿐. 층별 macro AP·Δ·CI·p 는 `_sealed/` (본 파일에 없음).",
+  "ts_kst": "2026-08-01 16:57:06 KST",
+  "min_support": {
+    "min_drugs": 20,
+    "min_positive_pt_support": 5
+  },
+  "seqid_boundaries": {
+    "high": 90.0,
+    "mid": 70.0,
+    "low": 40.0
+  },
+  "seqid_strata": [
+    "seen",
+    "unseen_ge90",
+    "unseen_70_90",
+    "unseen_40_70",
+    "unseen_lt40",
+    "no-target"
+  ],
+  "struct_bins": [
+    "struct_q1",
+    "struct_q2",
+    "struct_q3",
+    "struct_q4"
+  ],
+  "eligible_pt": "None (370 PT 전열 · 층 내부 재선정 금지 — H-0-3)",
+  "excluded_no_target_drugs": 245,
+  "axes": {
+    "drug_class": {
+      "all-seen": {
+        "n_drugs": 552,
+        "n_scaffold_clusters": 398,
+        "n_eff_clusters": 83.75590984057175,
+        "n_pt_meeting_positive_support": 337,
+        "inference_mode": "formal",
+        "meets_min_support": true,
+        "frozen_inference_mode": null,
+        "estimable": true
+      },
+      "all-unseen": {
+        "n_drugs": 18,
+        "n_scaffold_clusters": 16,
+        "n_eff_clusters": 13.5,
+        "n_pt_meeting_positive_support": 10,
+        "inference_mode": "descriptive",
+        "meets_min_support": false,
+        "frozen_inference_mode": null,
+        "estimable": true
+      },
+      "mixed": {
+        "n_drugs": 206,
+        "n_scaffold_clusters": 167,
+        "n_eff_clusters": 72.41638225255973,
+        "n_pt_meeting_positive_support": 221,
+        "inference_mode": "formal",
+        "meets_min_support": true,
+        "frozen_inference_mode": null,
+        "estimable": true
+      }
+    },
+    "seq_stratum": {
+      "seen": {
+        "n_drugs": 820,
+        "n_scaffold_clusters": 571,
+        "n_eff_clusters": 97.56239117817759,
+        "n_pt_meeting_positive_support": 369,
+        "inference_mode": "formal",
+        "meets_min_support": true,
+        "frozen_inference_mode": "formal (primary seen-target 주장)",
+        "estimable": true
+      },
+      "unseen_ge90": {
+        "n_drugs": 2,
+        "n_scaffold_clusters": 2,
+        "n_eff_clusters": 2.0,
+        "n_pt_meeting_positive_support": 0,
+        "inference_mode": "descriptive",
+        "meets_min_support": false,
+        "frozen_inference_mode": "descriptive (근접 상동 — 전이 주장 약함)",
+        "estimable": true
+      },
+      "unseen_70_90": {
+        "n_drugs": 15,
+        "n_scaffold_clusters": 13,
+        "n_eff_clusters": 10.714285714285714,
+        "n_pt_meeting_positive_support": 6,
+        "inference_mode": "descriptive",
+        "meets_min_support": false,
+        "frozen_inference_mode": "descriptive-to-formal (표본 충분 시 formal)",
+        "estimable": true
+      },
+      "unseen_40_70": {
+        "n_drugs": 0,
+        "n_scaffold_clusters": 0,
+        "n_eff_clusters": 0.0,
+        "n_pt_meeting_positive_support": 0,
+        "inference_mode": "empty",
+        "estimable": false
+      },
+      "unseen_lt40": {
+        "n_drugs": 0,
+        "n_scaffold_clusters": 0,
+        "n_eff_clusters": 0.0,
+        "n_pt_meeting_positive_support": 0,
+        "inference_mode": "empty",
+        "estimable": false
+      }
+    },
+    "struct_bin": {
+      "struct_q1": {
+        "n_drugs": 144,
+        "n_scaffold_clusters": 107,
+        "n_eff_clusters": 31.803680981595093,
+        "n_pt_meeting_positive_support": 139,
+        "inference_mode": "formal",
+        "meets_min_support": true,
+        "frozen_inference_mode": null,
+        "estimable": true
+      },
+      "struct_q2": {
+        "n_drugs": 174,
+        "n_scaffold_clusters": 137,
+        "n_eff_clusters": 39.01546391752577,
+        "n_pt_meeting_positive_support": 153,
+        "inference_mode": "formal",
+        "meets_min_support": true,
+        "frozen_inference_mode": null,
+        "estimable": true
+      },
+      "struct_q3": {
+        "n_drugs": 150,
+        "n_scaffold_clusters": 117,
+        "n_eff_clusters": 51.60550458715596,
+        "n_pt_meeting_positive_support": 157,
+        "inference_mode": "formal",
+        "meets_min_support": true,
+        "frozen_inference_mode": null,
+        "estimable": true
+      },
+      "struct_q4": {
+        "n_drugs": 175,
+        "n_scaffold_clusters": 130,
+        "n_eff_clusters": 79.54545454545455,
+        "n_pt_meeting_positive_support": 184,
+        "inference_mode": "formal",
+        "meets_min_support": true,
+        "frozen_inference_mode": null,
+        "estimable": true
+      }
+    }
+  },
+  "unstable": {
+    "drug_class": {
+      "n_drugs": 71,
+      "n_scaffold_clusters": 65,
+      "n_eff_clusters": 55.395604395604394,
+      "n_pt_meeting_positive_support": 92,
+      "inference_mode": "formal"
+    },
+    "seq_stratum": {
+      "n_drugs": 10,
+      "n_scaffold_clusters": 9,
+      "n_eff_clusters": 8.333333333333334,
+      "n_pt_meeting_positive_support": 11,
+      "inference_mode": "descriptive"
+    },
+    "struct_bin": {
+      "n_drugs": 204,
+      "n_scaffold_clusters": 161,
+      "n_eff_clusters": 88.92307692307692,
+      "n_pt_meeting_positive_support": 202,
+      "inference_mode": "formal"
+    }
+  },
+  "unstable_note": "H-0-1 — 3반복에서 층이 일치하는 약물만 primary 층화 대상. 불일치 약물은 제외가 아니라 `unstable_stratum` 으로 분리 집계·별도 보고.",
+  "seqid_zero_observation_drugs": {
+    "1": 0,
+    "2": 0,
+    "3": 0
+  },
+  "seqid_zero_observation_note": "all-unseen 약물 중 train 표적과의 identity 가 한 건도 관측되지 않은 약물 수(반복별). 미정렬 쌍은 0 으로 채우지 않았으며(H-2-4), 이 약물들은 동결 연산자 `drug_sequence_stratum` 의 내부 규칙에 따라 배정된다(연산자 수정 없음). 한계로 명시한다."
+}

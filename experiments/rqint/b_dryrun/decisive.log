@@ -1,0 +1,8 @@
+[decisive] pid=66892 n_coin=50000 rep_seed=860260813 cap=24h started
+{
+  "completed": true,
+  "cap_hit": false,
+  "ac_power_lost": false,
+  "wall_hours_total": 9.884754196736548,
+  "d15_verdict": "within_24h"
+}

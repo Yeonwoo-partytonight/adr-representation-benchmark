@@ -27,13 +27,13 @@
 [diag] ep 240 loss 0.4318 validMacro 0.1634 validMicro 0.1302 | best 0.1720@222
 [diag] ep 250 loss 0.4358 validMacro 0.1668 validMicro 0.1279 | best 0.1720@222
 Traceback (most recent call last):
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/diagnose.py", line 173, in <module>
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/diagnose.py", line 173, in <module>
     main()
     ~~~~^^
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/diagnose.py", line 115, in main
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/diagnose.py", line 115, in main
     m["tertile"] = pd.qcut(m["pos_total"], 3, labels=["저빈도", "중빈도", "고빈도"])
                    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/tile.py", line 384, in qcut
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/tile.py", line 384, in qcut
     fac, bins = _bins_to_cuts(
                 ~~~~~~~~~~~~~^
         x_idx,
@@ -43,7 +43,7 @@ Traceback (most recent call last):
         ^^^^^^^^^^^^^^^^^^^^^^
     )
     ^
-  File "/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/tile.py", line 487, in _bins_to_cuts
+  File "<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/.venv/lib/python3.14/site-packages/pandas/core/reshape/tile.py", line 487, in _bins_to_cuts
     raise ValueError(
     ...<2 lines>...
     )

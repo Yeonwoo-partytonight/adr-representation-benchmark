@@ -1,0 +1,19 @@
+{
+  "python_version": "3.14.4",
+  "numpy": "2.5.0",
+  "scipy": "1.18.0",
+  "scikit_learn": "1.9.0",
+  "joblib": "1.5.3",
+  "pandas": "3.0.3",
+  "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+  "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+  "split_files_sha256": {
+    "fold_membership.csv": "7047606f76562ba54b1dadef0518cb8e18ed22dad5b588d22b298bcb892284ad",
+    "folds.json": "3c1a5d68bfcc6ddfa1de17990194c5beb3c4fe365ee0a123d04c4a34bed871b2",
+    "split_manifest.json": "d2b6f4891d2e6e95b6f1968404caed097e1cd5b91502b7b54bbf827269396fe0"
+  },
+  "partition_sha256": "a95e26f9a527e9451ee12f9bccf851e0c8912f57ea7b36920d91d6c7281b0a51",
+  "partition_alt_sha256": "aee6c742c52ce77c0ef50b1c629b3501fa4441fb5a3c0b38cf194b107ca0e1a7",
+  "machine": "arm64",
+  "os": "Darwin 25.5.0"
+}

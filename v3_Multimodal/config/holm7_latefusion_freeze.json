@@ -1,0 +1,178 @@
+{
+  "_doc": "Holm ⑦ `RFseq − RF`(RQ7) late-fusion 의 **실행수준** 명세 동결. 설계 확정본은 post_interim_freeze_v1_0.json 의 holm7_late_fusion 이며 본 파일은 그것을 바꾸지 않고 러너가 실행할 수준으로만 고정한다. post_interim_freeze_v1_0.json 은 0바이트 수정.",
+  "spec": "docs/61_v3_late_fusion_prompt_for_vscode.md (개정판 v2.1, 2026-08-06)",
+  "frozen_at_kst": "2026-08-06 20:28:05 KST",
+  "frozen_before_any_arm_computed": true,
+  "predecessor": {
+    "file": "post_interim_freeze_v1_0.json",
+    "sha256": "502db732bd5e45cbe0d1da78106f639c0f65261e1215af9912250e1ffa284258",
+    "key": "holm7_late_fusion"
+  },
+  "predecessor_modified_bytes": 0,
+  "arms": {
+    "p_rf": {
+      "model": "M0",
+      "blocks": [
+        "B0"
+      ],
+      "definition": "Morgan-only RF (분자 지문 단독) — 동결 사다리 모델 M0",
+      "reuse_path": "experiments/runs/v3_confirm_rest_rep{1,2,3}_seed20{1,2,3}/_sealed/oof_M0.npz (블록 I 산출 · 읽기 전용 대조)",
+      "recomputed_each_unit": true,
+      "recompute_rationale": "재적합 바이트 동일성 assert 를 매 outer unit 수행하기 위해 재적합을 생략하지 않는다(지시서 §P-3)."
+    },
+    "p_seq_primary": {
+      "blocks": [
+        "B_seq"
+      ],
+      "definition": "표적 서열 블록 단독(mean-pool ProtBERT → PCA-64)"
+    },
+    "p_seq_sensitivity": {
+      "blocks": [
+        "B1",
+        "B_seq"
+      ],
+      "definition": "표적 수·매핑 여부 + 서열 (판정 미포함)"
+    },
+    "learner": {
+      "harness": "ladder_confirmatory.rf_fit_predict (동결 확증 RF 하네스)",
+      "estimator": "MultiOutputClassifier(RandomForestClassifier)",
+      "hyperparameters_verbatim": {
+        "n_estimators": 300,
+        "max_depth": null,
+        "n_jobs": -1,
+        "class_weight": "balanced_subsample",
+        "random_state": 42
+      },
+      "hyperparameters_source": "ladder_confirmatory.RF_KW + SEED (무수정 인용)",
+      "changed_vs_confirmatory": "none — 피처 블록만 바꾼다"
+    }
+  },
+  "rejected_alternatives": [
+    "p_RF = M1b — ① 과 축 중복 + 등록 §14 'fingerprint' 문면 이탈",
+    "p_seq 학습기 = ridge/MLP/신경망 — 부호 공개 후 새 하이퍼 선택 유발",
+    "λ 내부 5-fold CV — 새 분할 규칙·새 적합 모집단 추가",
+    "λ 재적합 생략 — 학습표본 크기가 대비에 혼입"
+  ],
+  "lambda": {
+    "formula": "p_ens = lambda * p_RF + (1 - lambda) * p_seq",
+    "grid": {
+      "min": 0.0,
+      "max": 1.0,
+      "step": 0.05,
+      "n_points": 21,
+      "construction": "k/20 for k in 0..20 (정수 인덱스 생성 — 부동소수 누적 금지)"
+    },
+    "scope": "one per outer unit (split_seed, fold_index)",
+    "selection_metric": "inner-valid macro AP (sap.metrics.macro_ap, eligible_pt=None, 동결 미정의-AP 제외 규칙)",
+    "tie_break": [
+      "1단계: |lambda - 0.5| 최소",
+      "2단계: 그래도 동점이면 작은 lambda"
+    ],
+    "inner_split": {
+      "shared_with": "v3_Multimodal/config/gin_inner_valid_freeze.json",
+      "shared_sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+      "rule": "1/9 scaffold-group 분할 · 새 추첨 없이 재현",
+      "inner_seed": "inner_seed = 1000 * split_seed + fold_index",
+      "presort_key": "(-group_size, str(첫 **행 인덱스**)) — cid 가 아니다 (동결 master 테이블 cid 오름차순 위치, outer-train 재색인 없음)",
+      "reproduction_reference": "experiments/runs/v3_gin_inner_valid_freeze/inner_split_check.json",
+      "expected_inner_valid": 97,
+      "expected_inner_train": [
+        776,
+        777
+      ]
+    },
+    "refit": "λ 선택 후 두 base learner 를 outer-train 전체로 재적합",
+    "refit_assert": "재적합된 p_RF 는 해당 fold 의 봉인 M0 OOF 와 dtype·shape·tobytes 3중 일치(불일치 = 즉시 중단·산출 폐기)",
+    "lambda_half": "λ=0.5 고정판을 항상 병기하며 선택 λ 와 교체하지 않는다",
+    "lambda_is_sealed": true,
+    "lambda_sealed_rationale": "λ 는 결과-의존 선택량이므로 값 자체가 조각 개봉이다. 공개 요약에는 격자 정의만 적는다.",
+    "block_fit_population": {
+      "inner_stage": "inner-train ∩ 매핑 (B_seq)",
+      "refit_stage": "outer-train 전체 ∩ 매핑 (B_seq)",
+      "note": "두 단계를 혼동하지 않는다(지시서 §P-2-5)."
+    },
+    "no_leakage": "λ 선택에 쓰인 행과 해당 fold 의 test 행은 교집합 0 (assert)"
+  },
+  "sensitivity_firewall": "[B1, B_seq] sensitivity 결과는 ⑦ 성공판정에 쓰지 않으며 primary 를 대체하지 않는다. 별도 파일로 봉인한다.",
+  "zero_vector_caveat": "표적 미매핑 245 약물은 B_seq 가 정확히 0 벡터가 된다. 이 0 은 결측의 명시적 표시가 아니다. 상보성 추정치는 사실상 매핑된 847 약물이 이끈다 — 결과와 함께 보고한다.",
+  "outputs_all_sealed": [
+    "oof_seq.npz",
+    "oof_ens.npz",
+    "oof_ens_half.npz",
+    "oof_seq_sens.npz",
+    "oof_ens_sens.npz",
+    "lambda_selected.json",
+    "metrics_full.json"
+  ],
+  "delta_not_computed": "Δ(ensemble − RF) 는 본 블록에서 산출하지 않는다 — 개봉 단계에서 일괄. 본 블록은 arm 만 만든다.",
+  "holm_family_size": 7,
+  "holm_family_labels": [
+    "M2b-P-ID",
+    "M2b-P-FAM",
+    "M2b-realloc_null",
+    "M2b-M0",
+    "M2b-RF_tuned",
+    "RFseq-RF",
+    "RQ-int"
+  ],
+  "holm_label": "RFseq-RF",
+  "success_criteria_changed": false,
+  "gin_start_still_blocked": true,
+  "gates_at_freeze": {
+    "g0": {
+      "v3_Multimodal/config/ladder_freeze.json": "b885585aefbabb32",
+      "v3_Multimodal/config/gin_seed_freeze.json": "10828447c6d33118",
+      "v3_Multimodal/config/gin_inner_valid_freeze.json": "038599c3e1576022",
+      "v3_Multimodal/config/gin_inner_valid_freeze.status.json": "bd329fefe613971f",
+      "v3_Multimodal/config/post_interim_freeze_v1_0.json": "502db732bd5e45cb",
+      "v3_Multimodal/config/rf_tuned_freeze.json": "c1ef6406fbb48b7f",
+      "experiments/sap/manifest.json": "756d485feb4715e9",
+      "sap_version": "1.1",
+      "sap_n_modules": 11
+    },
+    "g_holm": {
+      "line": 44,
+      "n_labels": 7,
+      "labels": [
+        "M2b-P-ID",
+        "M2b-P-FAM",
+        "M2b-realloc_null",
+        "M2b-M0",
+        "M2b-RF_tuned",
+        "RFseq-RF",
+        "RQ-int"
+      ]
+    },
+    "g_block": {
+      "holm67_start_still_blocked_until_reply": false,
+      "holm67_start_requires": [
+        "docs/60 개정 (docs/70 §1-2 확정본)",
+        "docs/61 개정 (docs/70 §1-4·§1-5 + 단일 홀드아웃 20% 폐기 + ⑦ 기준 RF 의 [기각] M1b 기준안 필드 보충)"
+      ],
+      "nine_internal_decisions_advisor_response": "no_objection_raised"
+    },
+    "authority": {
+      "post_interim_holm7_keys": [
+        "formula",
+        "lambda",
+        "p_rf",
+        "p_rf_rule",
+        "p_seq_features_primary",
+        "p_seq_features_sensitivity",
+        "p_seq_learner",
+        "p_seq_learner_rule",
+        "p_seq_rejected",
+        "sensitivity_firewall",
+        "zero_vector_caveat"
+      ],
+      "docs33_item31_par3": true,
+      "docs70_sections": [
+        "1-3",
+        "1-4",
+        "1-5"
+      ],
+      "three_sources_agree": true
+    }
+  },
+  "repository_policy": "untracked 유지 — git commit·push 0"
+}

@@ -1,0 +1,1059 @@
+{
+  "_doc": "v3 SAP(A6~A11 + redaction) 동결 매니페스트 — docs/41 동결 + docs/43 재-동결 amendment(A1~A6). 확증 OOF 미조회 시점 동결(설계·가설·집계·성공기준 불변, 구현 자유도만 제거).",
+  "sap_version": "1.1",
+  "frozen_at_kst": "2026-07-25 18:20:26 KST",
+  "basis": [
+    "docs/30 §5~§9 (등록 설계·불변)",
+    "docs/40 §2·§6 (2차 리뷰 필터링)",
+    "docs/41 (SAP 스펙)",
+    "docs/42 (3차 리뷰 A버킷 triage)",
+    "docs/43 (재-동결 amendment 스펙)"
+  ],
+  "sap_amendment": {
+    "amendment_id": "docs/43 A1~A6 (확증 조회 전 재-동결)",
+    "confirmatory_accessed_at_amendment": false,
+    "design_hypothesis_criteria_unchanged": true,
+    "items": {
+      "A1": "BCa 불능 → ci_primary=not_estimable(NaN); rq2/rq3/tost 성공 불가; percentile 대체 금지",
+      "A2": "Holm family 크기 7 고정; 결측 p→1.0(드롭 금지); MULTIPLICITY_MANIFEST hash 포함",
+      "A3": "PT별 BH-FDR eligibility=결과-독립 수치정의(양성≥10 AND 양성-scaffold-cluster≥3)",
+      "A4": "NULL_B 정확값 동결(1000)·MC SE 반환·full permutation·common RF seed 42·결과-기반 상향 금지",
+      "A5": "bootstrap undefined-PT 진단(min/median/max·undefined 비율·BCa accel/quantile)·고정교집합 sensitivity",
+      "A6": "ESTIMAND(drug-weighted macro AP)·sign-flip prediction-swap caveat·metrics edge assert·B_seq PCA 모집단"
+    },
+    "module_sha_before": {
+      "__init__.py": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+      "metrics.py": "16fa0d23282396453a5b95a67b808a0db091f53dc9f745d9c55f650598096743",
+      "redaction.py": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+      "consensus.py": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+      "bootstrap.py": "df601d0cb04c256c0974d8e230fa3be4f36fae07ad04e60eb63e215ae8ef6e27",
+      "signflip.py": "f0dfa68448b4fc2ddd946ac991443f02a0e56b19fa3ac6d62271a0be2319e4ff",
+      "decision.py": "953732284ca94b1bf185b0df8c155bbb3572b192e4b9f41b8458f7ee8d8526d7",
+      "null_generator.py": "b77504652e097b005f40349c9aca6a21e0ceff71d01aef7eee60f7a5e79059e9",
+      "unseen_target.py": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+      "synthetic.py": "55a248f9d7165d8c4ba8eaab5c6ad17a740c5ce305fcbaf45ffd477689bfdf02",
+      "freeze.py": "19ba25beaf4a12ed580d0cddb31bc73da671745bf6647022459875d5ba7be8ca"
+    },
+    "n_modules_changed": 7
+  },
+  "primary_target": "primary = pChEMBL 제외판(10차원 B_m1b) M1b·M2b 하나로만. pChEMBL 포함판(13차원)은 동일 함수로 sensitivity(판정 미포함).",
+  "config_binding": {
+    "path": "v3_Multimodal/config/ladder_freeze.json",
+    "sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "sha16": "b885585aefbabb32",
+    "expected_sha16_docs41": "b885585aefbabb32",
+    "sha16_match": true,
+    "primary_B_m1b_dim": 10,
+    "sensitivity_B_m1b_pchembl_dim": 13,
+    "b_seq_pca_population": "train∩mapped per-drug mean-pool rows(약물당 1행, svd_solver=full, random_state=42)"
+  },
+  "frozen_parameters": {
+    "consensus_A8": {
+      "method": "A (등록 §6-(ii)): drug-PT별 raw OOF probability 산술평균 → consensus → 그 위에서 추론",
+      "average_target": "raw RF probability (calibration 후 아님)",
+      "rf_random_state_all_repeats": 42,
+      "single_repeat": "그 자체 반환"
+    },
+    "bootstrap_A7": {
+      "B": 10000,
+      "primary_ci_method": "BCa",
+      "units": {
+        "primary": "scaffold_cluster",
+        "sensitivity": [
+          "drug",
+          "size_weighted"
+        ]
+      },
+      "jackknife_unit_primary": "scaffold delete-one (약물 단위 혼용 금지)",
+      "undefined_ap_rule": "replicate test-positive 0 PT는 macro에서 제외(제외율 기록)",
+      "eligible_pt": "원 전체 평가셋 고정(§7 global 양성≥10 370 PT); replicate 재선정 금지",
+      "estimand": "conditional OOF evaluation — 고정된 consensus OOF 예측 위에서의 macro AP Δ. 모델 재학습 미포함(예측을 고정한 조건부 평가). A6: cluster 복원추출→멤버 약물행 복제→pooled AP = drug-weighted macro AP.",
+      "ci_primary_status_rule": "ci_primary는 BCa 성공('bca')시에만 estimable. BCa 불능(z0/accel degenerate·유효 B<2·jackknife undefined) → not_estimable(NaN). percentile은 sensitivity로만 보고(ci_percentile), 성공판정에 절대 투입 금지.",
+      "a5_diagnostics": "pt_diagnostics(replicate당 포함PT min/median/max·PT별 undefined replicate 비율·≥1 PT 제외 replicate 비율), bca_diagnostics(acceleration finite·adjusted-quantile 0/1 포화), fixed_intersection_sensitivity(고정교집합 PT macro Δ, primary 대체 아님)"
+    },
+    "signflip_A6": {
+      "B": 10000,
+      "test_statistic": "관측 macro AP Δ 그 자체 (M2b − M1b); additive surrogate 대체 금지 = CI와 동일 estimand",
+      "two_sided": true,
+      "exchange_unit": "Bemis–Murcko scaffold group",
+      "H0": "두 알고리즘의 예측 block이 scaffold group 단위로 교환 가능(conditional randomization). 모델 재학습 미포함.",
+      "name_caveat": "scaffold-blocked paired prediction-swap test (contribution sign-flip 아님), conditional exchangeability null, 모델 재학습 미포함. 'distribution-free exact test of equal algorithm performance' 표기 금지.",
+      "calibration_audit": "zero-effect p==1 · fair-coin p≈uniform (필수·프로토콜 불변)"
+    },
+    "null_A9": {
+      "NULL_B": 1000,
+      "B_note": "결과 조회 후 B 상향·조기중단·재시도 금지(selective precision); 한 값으로 잠금",
+      "mc_se": "empirical_p가 sqrt(p(1−p)/B) 반환(A4)",
+      "rf_seed": "42 (common random numbers, all permutations & repeats)",
+      "rf_seed_assert": "docs/36 runner가 전 permutation·전 반복 random_state=42 동일을 assert",
+      "preserved": [
+        "protein_embedding_vectors",
+        "drug_degree",
+        "target_degree",
+        "incidence_matrix",
+        "missing_target_pattern",
+        "m1b_covariates",
+        "embedding_distribution"
+      ],
+      "exchange": "target identity ↔ embedding 대응만; 동일 target 공유",
+      "global_unit": "unique target",
+      "global_permutation": "full permutation (fixed point 허용, derangement 아님)",
+      "family_unit": "family 내 unique target; |family|≤2 고정(가능 permutation ≤2!·서열 미파괴)",
+      "logging": "eligible target 수·고정 target 수·incidence 비율(null_incidence_report·family_report)",
+      "pca_rf_refit_scope": "permuted embedding마다 B_seq PCA를 fold-train에서 재적합(사전등록 파이프라인 일부 → null에도 동일 적용), RF도 fold별 재학습(random_state=NULL_RF_COMMON_SEED 공통). 이 재학습 범위를 null 가설 정의의 일부로 문서화.",
+      "p_emp": "(1 + #{T_b ≥ T_obs}) / (B+1)",
+      "pass_rule": "global·family-constrained 둘 다 p_emp<α"
+    },
+    "decision_A11": {
+      "SESOI": 0.01,
+      "ALPHA": 0.05,
+      "rq2": "IU: (1) CI하한>0 & (2) sign-flip p<α & (3) |Δ|≥SESOI",
+      "rq3": "(M2b−P-ID) 및 (M2b−P-FAM) 각각 (1)·(2) (max 금지)",
+      "rq4": "재배치 null global·family 둘 다 p_emp<α",
+      "not_estimable_rule": "primary CI not_estimable(BCa 불능) → rq2/rq3/tost 성공 불가; percentile 대체 금지",
+      "multiplicity": "① M2b−M1b 무보정; ②~⑧ Holm(family=7 고정); PT별 BH-FDR 별도",
+      "holm_family": [
+        "M2b-P-ID",
+        "M2b-P-FAM",
+        "M2b-realloc_null",
+        "M2b-M0",
+        "M2b-RF_tuned",
+        "RFseq-RF",
+        "RQ-int"
+      ],
+      "holm_family_size_fixed": 7,
+      "holm_undefined_fill": 1.0,
+      "multiplicity_manifest": [
+        {
+          "id": "②",
+          "label": "M2b-P-ID",
+          "contrast": "M2b − P-ID",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "③",
+          "label": "M2b-P-FAM",
+          "contrast": "M2b − P-FAM",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "④",
+          "label": "M2b-realloc_null",
+          "contrast": "M2b vs 자연 임베딩 재배치 null",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "empirical reallocation p (global·family-constrained)",
+          "sidedness": "one-sided (upper-tail empirical p)",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "⑤",
+          "label": "M2b-M0",
+          "contrast": "M2b − M0",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "⑥",
+          "label": "M2b-RF_tuned",
+          "contrast": "M2b − tuned-RF baseline",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "⑦",
+          "label": "RFseq-RF",
+          "contrast": "RF-seq − RF",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "⑧",
+          "label": "RQ-int",
+          "contrast": "interaction (RQ-int)",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        }
+      ],
+      "pt_eligibility": {
+        "PT_MIN_POSITIVE": 10,
+        "PT_MIN_POSITIVE_SCAFFOLD_CLUSTERS": 3,
+        "rule": "global 양성 ≥ PT_MIN_POSITIVE AND 양성-포함 scaffold cluster ≥ PT_MIN_POSITIVE_SCAFFOLD_CLUSTERS (효과크기·p 무참조)"
+      },
+      "M2b_RF_naming": "RF = tuned-RF baseline (primary RF-Morgan과 구분)",
+      "tost": "95%CI 기반 등가규칙(D2): Positive/Equivalent/Inconclusive/Not-estimable"
+    },
+    "unseen_A10": {
+      "classes": [
+        "all-seen",
+        "all-unseen",
+        "mixed",
+        "no-target(별도)"
+      ],
+      "canonicalization": "isoform suffix 제거·secondary→primary·동일서열 대표 병합",
+      "seqid_boundaries": {
+        "high": 90.0,
+        "mid": 70.0,
+        "low": 40.0
+      },
+      "strata": [
+        "seen",
+        "unseen_ge90",
+        "unseen_70_90",
+        "unseen_40_70",
+        "unseen_lt40",
+        "no-target"
+      ],
+      "identity_method": {
+        "tool": "mmseqs2 easy-search (bidirectional best identity)",
+        "sequence_db": "UniProtKB canonical (본 표적셋 accession의 canonical sequence)",
+        "identity_def": "alignment percent identity(%), 양방향 max",
+        "version_pinned_in_manifest": true,
+        "note": "정확 도구/버전은 confirmatory 산출과 manifest에 동일 기록. 경계는 결과 무참조 사전 고정."
+      },
+      "drug_aggregation": "보수적: all-unseen 且 s_drug=max_t s(t) 로 bin",
+      "min_support": {
+        "min_drugs": 20,
+        "min_positive_pt_support": 5
+      },
+      "inference_mode": {
+        "seen": "formal (primary seen-target 주장)",
+        "unseen_ge90": "descriptive (근접 상동 — 전이 주장 약함)",
+        "unseen_70_90": "descriptive-to-formal (표본 충분 시 formal)",
+        "unseen_40_70": "formal (전이 주장 핵심 층, 표본 충분 시)",
+        "unseen_lt40": "descriptive (remote homology; 표본 희소 예상 → hypothesis-generating)",
+        "no-target": "excluded (별도 층, 전이 분석 제외)",
+        "rule": "표본<MIN_SUPPORT 층은 formal inference 대신 point estimate+wide CI(descriptive)로만 보고."
+      }
+    },
+    "redaction": {
+      "emit_sign_domain": [
+        "positive",
+        "zero",
+        "negative"
+      ],
+      "zero_tol": 1e-06,
+      "sealed_separation": "원시 AP·Δ크기·per-PT·per-fold·확률 = sealed 경로; 공개=sign만",
+      "access_logging": "sealed 최초 접근 시각·조회자 로깅"
+    }
+  },
+  "modules": {
+    "__init__.py": {
+      "sha256": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+      "sha16": "8dc63e28ffcf93dc",
+      "bytes": 1635,
+      "sha256_before": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+      "changed_by_amendment": false
+    },
+    "metrics.py": {
+      "sha256": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+      "sha16": "a7d3fe4fe9e87983",
+      "bytes": 4256,
+      "sha256_before": "16fa0d23282396453a5b95a67b808a0db091f53dc9f745d9c55f650598096743",
+      "changed_by_amendment": true
+    },
+    "redaction.py": {
+      "sha256": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+      "sha16": "4d4bf221141fbc79",
+      "bytes": 3647,
+      "sha256_before": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+      "changed_by_amendment": false
+    },
+    "consensus.py": {
+      "sha256": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+      "sha16": "9bddb53da5752c46",
+      "bytes": 3124,
+      "sha256_before": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+      "changed_by_amendment": false
+    },
+    "bootstrap.py": {
+      "sha256": "05437c516e606a053e02acefb23c2597365472201b6c70ff2814278d6597a31e",
+      "sha16": "05437c516e606a05",
+      "bytes": 14214,
+      "sha256_before": "df601d0cb04c256c0974d8e230fa3be4f36fae07ad04e60eb63e215ae8ef6e27",
+      "changed_by_amendment": true
+    },
+    "signflip.py": {
+      "sha256": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+      "sha16": "3de1223585ae0f97",
+      "bytes": 6772,
+      "sha256_before": "f0dfa68448b4fc2ddd946ac991443f02a0e56b19fa3ac6d62271a0be2319e4ff",
+      "changed_by_amendment": true
+    },
+    "decision.py": {
+      "sha256": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+      "sha16": "f688b20d816acabe",
+      "bytes": 16353,
+      "sha256_before": "953732284ca94b1bf185b0df8c155bbb3572b192e4b9f41b8458f7ee8d8526d7",
+      "changed_by_amendment": true
+    },
+    "null_generator.py": {
+      "sha256": "90886abce256a130531a0ab0cd8edd17abc27ff1b62ee56f24248aa76fa204c7",
+      "sha16": "90886abce256a130",
+      "bytes": 11119,
+      "sha256_before": "b77504652e097b005f40349c9aca6a21e0ceff71d01aef7eee60f7a5e79059e9",
+      "changed_by_amendment": true
+    },
+    "unseen_target.py": {
+      "sha256": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+      "sha16": "96c0c87911e8c93d",
+      "bytes": 5610,
+      "sha256_before": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+      "changed_by_amendment": false
+    },
+    "synthetic.py": {
+      "sha256": "ddf715e6fba7503e817c6435c9220f7a83a5e5e31375603fddd522570f2a27d7",
+      "sha16": "ddf715e6fba7503e",
+      "bytes": 8444,
+      "sha256_before": "55a248f9d7165d8c4ba8eaab5c6ad17a740c5ce305fcbaf45ffd477689bfdf02",
+      "changed_by_amendment": true
+    },
+    "freeze.py": {
+      "sha256": "94e6369fa952be7f4ac41f79da6d3b63f80a1a7c2192873a499e3ccd4a2f1cc9",
+      "sha16": "94e6369fa952be7f",
+      "bytes": 42927,
+      "sha256_before": "19ba25beaf4a12ed580d0cddb31bc73da671745bf6647022459875d5ba7be8ca",
+      "changed_by_amendment": true
+    }
+  },
+  "validation": {
+    "metrics": {
+      "sklearn_mean_match": true,
+      "undefined_excluded_when_zero_positive": true,
+      "macro_ap_in_unit_interval": true,
+      "pass": true,
+      "definition": "macro AP = average_precision_score over eligible PTs with in-sample positive>0, arithmetic mean (sklearn.metrics.average_precision_score). Matches ladder_confirmatory.macro_ap and preregistration §7."
+    },
+    "consensus_A8": {
+      "method": "A (등록 §6-(ii)): drug-PT별 raw OOF probability 산술평균 → consensus → 그 위에서 추론",
+      "arithmetic_mean_match": true,
+      "single_repeat_identity": true,
+      "per_repeat_count": 3,
+      "pass": true
+    },
+    "bootstrap_A7": {
+      "units": {
+        "scaffold_cluster": {
+          "delta_obs": 0.29560968999513076,
+          "ci_bca": {
+            "low": 0.25520719037296785,
+            "high": 0.35546391455281995,
+            "status": "bca",
+            "jackknife_unit": "scaffold delete-one"
+          },
+          "ci_percentile": {
+            "low": 0.23527841332414576,
+            "high": 0.3367481070409288,
+            "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+          },
+          "ci_primary": {
+            "low": 0.25520719037296785,
+            "high": 0.35546391455281995,
+            "status": "estimable",
+            "bca_status": "bca"
+          },
+          "primary_ci_method": "BCa",
+          "n_eff_clusters": 36.32286995515695,
+          "undefined_ap_exclusion": {
+            "mean_frac": 0.0,
+            "max_frac": 0.0,
+            "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+          },
+          "pt_diagnostics": {
+            "n_eligible_pt": 24,
+            "included_pt_per_replicate": {
+              "min": 24,
+              "median": 24.0,
+              "max": 24
+            },
+            "pt_undefined_replicate_frac": {
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            },
+            "n_pt_ever_undefined": 0,
+            "frac_replicates_excluding_ge1_pt": 0.0
+          },
+          "bca_diagnostics": {
+            "acceleration": 0.012105893060172386,
+            "acceleration_finite": true,
+            "z0": 0.3418018729245592,
+            "adj_quantile_low": 0.1065161486985392,
+            "adj_quantile_high": 0.9966312189403816,
+            "adj_quantile_saturated_01": false
+          },
+          "fixed_intersection_sensitivity": {
+            "n_pt_always_defined": 24,
+            "macro_delta_fixed_intersection": 0.29560968999513076,
+            "note": "모든 replicate에서 정의된 PT로만 계산한 Δ — variable-domain 안정성 점검용. primary는 고정 370 eligible PT 불변."
+          },
+          "finite": true,
+          "ci_ordered": true,
+          "ci_primary_estimable_ok": true,
+          "a5_diag_fields_ok": true
+        },
+        "drug": {
+          "delta_obs": 0.29560968999513076,
+          "ci_bca": {
+            "low": 0.25109095427542477,
+            "high": 0.36265750109267175,
+            "status": "bca",
+            "jackknife_unit": "drug delete-one"
+          },
+          "ci_percentile": {
+            "low": 0.2252443801956607,
+            "high": 0.34449421827337523,
+            "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+          },
+          "ci_primary": {
+            "low": 0.25109095427542477,
+            "high": 0.36265750109267175,
+            "status": "estimable",
+            "bca_status": "bca"
+          },
+          "primary_ci_method": "BCa",
+          "n_eff_clusters": 36.32286995515695,
+          "undefined_ap_exclusion": {
+            "mean_frac": 0.0,
+            "max_frac": 0.0,
+            "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+          },
+          "pt_diagnostics": {
+            "n_eligible_pt": 24,
+            "included_pt_per_replicate": {
+              "min": 24,
+              "median": 24.0,
+              "max": 24
+            },
+            "pt_undefined_replicate_frac": {
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            },
+            "n_pt_ever_undefined": 0,
+            "frac_replicates_excluding_ge1_pt": 0.0
+          },
+          "bca_diagnostics": {
+            "acceleration": -0.0028512654006765796,
+            "acceleration_finite": true,
+            "z0": 0.4056497076989145,
+            "adj_quantile_low": 0.12392576287503132,
+            "adj_quantile_high": 0.9970691066784985,
+            "adj_quantile_saturated_01": false
+          },
+          "fixed_intersection_sensitivity": {
+            "n_pt_always_defined": 24,
+            "macro_delta_fixed_intersection": 0.29560968999513076,
+            "note": "모든 replicate에서 정의된 PT로만 계산한 Δ — variable-domain 안정성 점검용. primary는 고정 370 eligible PT 불변."
+          },
+          "finite": true,
+          "ci_ordered": true,
+          "ci_primary_estimable_ok": true,
+          "a5_diag_fields_ok": true
+        },
+        "size_weighted": {
+          "delta_obs": 0.29560968999513076,
+          "ci_bca": {
+            "low": 0.24684406362907282,
+            "high": 0.3329465449290125,
+            "status": "bca",
+            "jackknife_unit": "scaffold delete-one"
+          },
+          "ci_percentile": {
+            "low": 0.25015494959378853,
+            "high": 0.33498354773352723,
+            "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+          },
+          "ci_primary": {
+            "low": 0.24684406362907282,
+            "high": 0.3329465449290125,
+            "status": "estimable",
+            "bca_status": "bca"
+          },
+          "primary_ci_method": "BCa",
+          "n_eff_clusters": 36.32286995515695,
+          "undefined_ap_exclusion": {
+            "mean_frac": 0.0,
+            "max_frac": 0.0,
+            "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+          },
+          "pt_diagnostics": {
+            "n_eligible_pt": 24,
+            "included_pt_per_replicate": {
+              "min": 24,
+              "median": 24.0,
+              "max": 24
+            },
+            "pt_undefined_replicate_frac": {
+              "min": 0.0,
+              "median": 0.0,
+              "max": 0.0
+            },
+            "n_pt_ever_undefined": 0,
+            "frac_replicates_excluding_ge1_pt": 0.0
+          },
+          "bca_diagnostics": {
+            "acceleration": 0.012105893060172386,
+            "acceleration_finite": true,
+            "z0": -0.08155573793071842,
+            "adj_quantile_low": 0.019047208323704126,
+            "adj_quantile_high": 0.96715704708082,
+            "adj_quantile_saturated_01": false
+          },
+          "fixed_intersection_sensitivity": {
+            "n_pt_always_defined": 24,
+            "macro_delta_fixed_intersection": 0.29560968999513076,
+            "note": "모든 replicate에서 정의된 PT로만 계산한 Δ — variable-domain 안정성 점검용. primary는 고정 370 eligible PT 불변."
+          },
+          "finite": true,
+          "ci_ordered": true,
+          "ci_primary_estimable_ok": true,
+          "a5_diag_fields_ok": true
+        }
+      },
+      "estimand": "conditional OOF evaluation — 고정된 consensus OOF 예측 위에서의 macro AP Δ. 모델 재학습 미포함(예측을 고정한 조건부 평가). A6: cluster 복원추출→멤버 약물행 복제→pooled AP = drug-weighted macro AP.",
+      "primary_ci_method": "BCa",
+      "frozen_B_confirmatory": 10000,
+      "dry_run_B": 800,
+      "a1_not_estimable_case": {
+        "ci_primary": {
+          "low": null,
+          "high": null,
+          "status": "not_estimable",
+          "bca_status": "bca_failed_z0_degenerate"
+        },
+        "rq2_success": false,
+        "rq2_reason": "primary CI not estimable (BCa failed)"
+      },
+      "not_estimable_rule": "BCa status≠'bca'(z0/accel degenerate·유효B<2·jackknife undefined) → ci_primary=not_estimable(NaN); rq2/rq3/tost 성공 불가; percentile 대체 금지",
+      "pass": true
+    },
+    "signflip_A6": {
+      "test_statistic": "관측 macro AP Δ 그 자체 (M2b − M1b); additive surrogate 대체 금지 = CI와 동일 estimand",
+      "H0": "두 알고리즘의 예측 block이 scaffold group 단위로 교환 가능(conditional randomization). 모델 재학습 미포함.",
+      "zero_effect_audit": {
+        "p": 1.0,
+        "delta_obs": 0.0,
+        "pass": true,
+        "expected": "p == 1.0 (동일 예측 → 모든 permutation Δ=0)"
+      },
+      "uniform_audit": {
+        "R": 200,
+        "B": 160,
+        "mean_p": 0.5328571428571429,
+        "ks_vs_uniform": 0.10024844720496895,
+        "frac_le": {
+          "le_0.05": 0.03,
+          "le_0.1": 0.095,
+          "le_0.25": 0.19,
+          "le_0.5": 0.455
+        },
+        "pass": true,
+        "expected": "mean(p)≈0.5 · KS<tol (fair-coin 배정은 교환가능 → p uniform)"
+      },
+      "frozen_B_confirmatory": 10000,
+      "pass": true
+    },
+    "null_generator_A9": {
+      "preserved": [
+        "protein_embedding_vectors",
+        "drug_degree",
+        "target_degree",
+        "incidence_matrix",
+        "missing_target_pattern",
+        "m1b_covariates",
+        "embedding_distribution"
+      ],
+      "pca_rf_refit_scope": "permuted embedding마다 B_seq PCA를 fold-train에서 재적합(사전등록 파이프라인 일부 → null에도 동일 적용), RF도 fold별 재학습(random_state=NULL_RF_COMMON_SEED 공통). 이 재학습 범위를 null 가설 정의의 일부로 문서화.",
+      "global_preservation": {
+        "embedding_distribution_preserved": true,
+        "mapping_is_bijection": true,
+        "target_embedding_shared_across_drugs": true,
+        "n_shared_target_checks": 86,
+        "graph_untouched_degree_incidence_preserved": true,
+        "n_drug_missing_targets": 8,
+        "n_unique_targets": 30,
+        "note": "그래프(edges)는 재배치에서 미변경 → drug/target degree·incidence·결측 패턴 자동 보존."
+      },
+      "family_preservation": {
+        "embedding_distribution_preserved": true,
+        "mapping_is_bijection": true,
+        "target_embedding_shared_across_drugs": true,
+        "n_shared_target_checks": 86,
+        "graph_untouched_degree_incidence_preserved": true,
+        "n_drug_missing_targets": 8,
+        "n_unique_targets": 30,
+        "note": "그래프(edges)는 재배치에서 미변경 → drug/target degree·incidence·결측 패턴 자동 보존."
+      },
+      "family_report": {
+        "n_families": 10,
+        "n_fixed_families_singleton_or_size2": 4,
+        "n_exchangeable_families": 6,
+        "n_fixed_targets": 6,
+        "n_exchangeable_targets": 24,
+        "n_targets": 30,
+        "fixed_target_frac": 0.2,
+        "rule": "|family|≤2 → 원위치 고정(가능 permutation ≤2!·서열 미파괴); |family|≥3 → family 내 full permutation"
+      },
+      "incidence_report": {
+        "n_targets": 30,
+        "n_drugs": 60,
+        "n_edges": 116,
+        "incidence_ratio": 0.06444444444444444,
+        "n_drugs_with_target": 52,
+        "frac_drugs_with_target": 0.8666666666666667,
+        "note": "eligible target = unique target(교환 단위). incidence_ratio = edges/(drugs×targets)."
+      },
+      "target_embedding_shared": true,
+      "family_fixed_rule_ok": true,
+      "bijection_guard_catches_bad_null": true,
+      "p_emp_formula_ok": true,
+      "mc_se_ok": true,
+      "null_b_const_ok": true,
+      "family_report_ok": true,
+      "incidence_report_ok": true,
+      "p_emp_formula": "(1 + #{T_b ≥ T_obs}) / (B+1)",
+      "NULL_B": 1000,
+      "NULL_RF_COMMON_SEED": 42,
+      "global_permutation": "full permutation (fixed point 허용, derangement 아님)",
+      "pass_global_and_family_rule": "global·family-constrained 둘 다 p_emp<α 요구",
+      "pass": true
+    },
+    "decision_A11": {
+      "SESOI": 0.01,
+      "ALPHA": 0.05,
+      "primary_target": "primary = pChEMBL 제외판(10차원 B_m1b) M1b·M2b 하나로만. pChEMBL 포함판(13차원)은 동일 함수로 sensitivity(판정 미포함).",
+      "holm_family": [
+        "M2b-P-ID",
+        "M2b-P-FAM",
+        "M2b-realloc_null",
+        "M2b-M0",
+        "M2b-RF_tuned",
+        "RFseq-RF",
+        "RQ-int"
+      ],
+      "holm_family_size_fixed": 7,
+      "holm_undefined_fill": 1.0,
+      "multiplicity_manifest": [
+        {
+          "id": "②",
+          "label": "M2b-P-ID",
+          "contrast": "M2b − P-ID",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "③",
+          "label": "M2b-P-FAM",
+          "contrast": "M2b − P-FAM",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "④",
+          "label": "M2b-realloc_null",
+          "contrast": "M2b vs 자연 임베딩 재배치 null",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "empirical reallocation p (global·family-constrained)",
+          "sidedness": "one-sided (upper-tail empirical p)",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "⑤",
+          "label": "M2b-M0",
+          "contrast": "M2b − M0",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "⑥",
+          "label": "M2b-RF_tuned",
+          "contrast": "M2b − tuned-RF baseline",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "⑦",
+          "label": "RFseq-RF",
+          "contrast": "RF-seq − RF",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        },
+        {
+          "id": "⑧",
+          "label": "RQ-int",
+          "contrast": "interaction (RQ-int)",
+          "model_family": "RF primary confirmatory (RF-Morgan+seq)",
+          "metric": "macro AP",
+          "test": "scaffold-group sign-flip",
+          "sidedness": "two-sided",
+          "undefined_fill": 1.0
+        }
+      ],
+      "pt_eligibility_constants": {
+        "PT_MIN_POSITIVE": 10,
+        "PT_MIN_POSITIVE_SCAFFOLD_CLUSTERS": 3
+      },
+      "truth_table": {
+        "rq2": {
+          "all_pass": true,
+          "ci_low_le0": false,
+          "p_ge_alpha": false,
+          "sesoi_fail": false
+        },
+        "rq3": {
+          "both_pass": true,
+          "pid_fail": false
+        },
+        "rq4": {
+          "both_pass": true,
+          "family_fail": false
+        },
+        "a1_not_estimable": {
+          "rq2": false,
+          "rq3": false,
+          "tost": "Not-estimable"
+        },
+        "holm_family_size": 7,
+        "holm_adjusted_p": {
+          "M2b-P-ID": 0.007,
+          "M2b-P-FAM": 0.024,
+          "M2b-realloc_null": 0.05499999999999999,
+          "M2b-M0": 0.08,
+          "M2b-RF_tuned": 0.09,
+          "RFseq-RF": 1.0,
+          "RQ-int": 1.0
+        },
+        "holm_reject": {
+          "M2b-P-ID": true,
+          "M2b-P-FAM": true,
+          "M2b-realloc_null": false,
+          "M2b-M0": false,
+          "M2b-RF_tuned": false,
+          "RFseq-RF": false,
+          "RQ-int": false
+        },
+        "holm_undefined_filled": {
+          "M2b-P-ID": false,
+          "M2b-P-FAM": false,
+          "M2b-realloc_null": false,
+          "M2b-M0": false,
+          "M2b-RF_tuned": false,
+          "RFseq-RF": false,
+          "RQ-int": true
+        },
+        "pt_eligibility": {
+          "eligible_pt": [
+            0,
+            3
+          ],
+          "n_eligible": 2
+        },
+        "bh_adjusted_p": {
+          "a": 0.03,
+          "b": 0.03,
+          "c": 0.20000000000000004
+        },
+        "bh_reject": {
+          "a": true,
+          "b": true,
+          "c": false
+        },
+        "tost": {
+          "positive": "Positive",
+          "equivalent": "Equivalent",
+          "inconclusive": "Inconclusive",
+          "not_estimable": "Not-estimable"
+        }
+      },
+      "rq2_ok": true,
+      "rq3_ok": true,
+      "rq4_ok": true,
+      "a1_not_estimable_ok": true,
+      "holm_ok": true,
+      "holm_guard_ok": true,
+      "pt_eligibility_ok": true,
+      "bh_ok": true,
+      "tost_ok": true,
+      "pass": true
+    },
+    "unseen_target_A10": {
+      "classify": {
+        "d_all_seen": "all-seen",
+        "d_all_unseen": "all-unseen",
+        "d_mixed": "mixed",
+        "d_no_target": "no-target",
+        "d_isoform_canon": "all-seen"
+      },
+      "classify_ok": true,
+      "canonicalize_ok": true,
+      "sequence_stratum": {
+        "u_ge90": "unseen_ge90",
+        "u_70_90": "unseen_70_90",
+        "u_40_70": "unseen_40_70",
+        "u_lt40": "unseen_lt40",
+        "d_all_seen": "seen",
+        "d_no_target": "no-target",
+        "d_all_unseen_conservative": "unseen_ge90"
+      },
+      "stratum_ok": true,
+      "boundaries": {
+        "high": 90.0,
+        "mid": 70.0,
+        "low": 40.0
+      },
+      "strata": [
+        "seen",
+        "unseen_ge90",
+        "unseen_70_90",
+        "unseen_40_70",
+        "unseen_lt40",
+        "no-target"
+      ],
+      "identity_method": {
+        "tool": "mmseqs2 easy-search (bidirectional best identity)",
+        "sequence_db": "UniProtKB canonical (본 표적셋 accession의 canonical sequence)",
+        "identity_def": "alignment percent identity(%), 양방향 max",
+        "version_pinned_in_manifest": true,
+        "note": "정확 도구/버전은 confirmatory 산출과 manifest에 동일 기록. 경계는 결과 무참조 사전 고정."
+      },
+      "min_support": {
+        "min_drugs": 20,
+        "min_positive_pt_support": 5
+      },
+      "inference_mode": {
+        "seen": "formal (primary seen-target 주장)",
+        "unseen_ge90": "descriptive (근접 상동 — 전이 주장 약함)",
+        "unseen_70_90": "descriptive-to-formal (표본 충분 시 formal)",
+        "unseen_40_70": "formal (전이 주장 핵심 층, 표본 충분 시)",
+        "unseen_lt40": "descriptive (remote homology; 표본 희소 예상 → hypothesis-generating)",
+        "no-target": "excluded (별도 층, 전이 분석 제외)",
+        "rule": "표본<MIN_SUPPORT 층은 formal inference 대신 point estimate+wide CI(descriptive)로만 보고."
+      },
+      "pass": true
+    },
+    "redaction": {
+      "zero_tol": 1e-06,
+      "emit_sign_domain": [
+        "positive",
+        "zero",
+        "negative"
+      ],
+      "nan_rejected": true,
+      "pass": true
+    }
+  },
+  "code_scan": {
+    "method": "AST walk over sap/*.py — import·call·open-literal 검사",
+    "forbidden_imports_checked": [
+      "coverage_mapping",
+      "ladder_confirmatory",
+      "preconfirm_hardening",
+      "prep_features",
+      "target_pipeline",
+      "train_ladder"
+    ],
+    "data_load_calls_checked": [
+      "genfromtxt",
+      "load_frozen",
+      "loadtxt",
+      "read_csv",
+      "read_parquet",
+      "read_table",
+      "np.load"
+    ],
+    "forbidden_path_literals_checked": [
+      "data/processed",
+      "data/raw",
+      "master_X",
+      "master_Y",
+      "scaffold_split.json",
+      "_meanpool.npy",
+      "confirmatory",
+      "oof_M1b",
+      "oof_M2b",
+      "target_mapping"
+    ],
+    "per_file": {
+      "__init__.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [],
+        "ok": true
+      },
+      "metrics.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [
+          "numpy",
+          "sklearn"
+        ],
+        "ok": true
+      },
+      "redaction.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [
+          "datetime",
+          "json",
+          "os"
+        ],
+        "ok": true
+      },
+      "consensus.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [
+          "numpy"
+        ],
+        "ok": true
+      },
+      "bootstrap.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [
+          "metrics",
+          "numpy",
+          "scipy"
+        ],
+        "ok": true
+      },
+      "signflip.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [
+          "metrics",
+          "numpy"
+        ],
+        "ok": true
+      },
+      "decision.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [
+          "numpy"
+        ],
+        "ok": true
+      },
+      "null_generator.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [
+          "numpy"
+        ],
+        "ok": true
+      },
+      "unseen_target.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [],
+        "ok": true
+      },
+      "synthetic.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [
+          "numpy"
+        ],
+        "ok": true
+      },
+      "freeze.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "third_party_imports": [
+          "ast",
+          "datetime",
+          "hashlib",
+          "json",
+          "numpy",
+          "os",
+          "sap",
+          "scipy",
+          "sklearn",
+          "sys"
+        ],
+        "ok": true
+      }
+    },
+    "no_confirmatory_data_access": true,
+    "note": "확증 split(seed 201~205)·OOF·master_X/Y·scaffold_split·meanpool npy 를 import/load/open 하는 코드 경로 없음. docstring 내 해당 명칭은 '미접근 선언'일 뿐 실행 경로 아님(AST 증명)."
+  },
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "scipy": "1.18.0",
+    "sklearn": "1.9.0"
+  },
+  "seeds": {
+    "note": "모든 연산자 seed는 호출 인자(결정적). 확증 B·seed list는 frozen_parameters·docs/30 §8 준수.",
+    "dry_run_seeds": {
+      "metrics": 1,
+      "consensus": 2,
+      "bootstrap": 7,
+      "signflip_zero": 11,
+      "signflip_uniform": 5,
+      "null_global": 13,
+      "null_family": 14
+    }
+  },
+  "integrity": {
+    "confirmatory_split_accessed": false,
+    "confirmatory_split_generated": false,
+    "confirmatory_oof_accessed": false,
+    "master_XY_accessed": false,
+    "inputs": "synthetic (np.random 시드 생성) 뿐",
+    "network_calls": 0,
+    "mock": "synthetic = SAP 검증 전용(확증 데이터 아님)",
+    "no_confirmatory_data_access_ast_proven": true
+  },
+  "all_validation_pass": true,
+  "reproduce": ".venv/bin/python3 v3_Multimodal/src/sap/freeze.py",
+  "next": "docs/36 확증 OOF 반복1(seed 201) — 성공판정 함수는 3반복+null 완료 후에만 호출"
+}

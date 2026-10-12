@@ -1,0 +1,30 @@
+{
+  "_scope": "공개 — **합성 데이터** 위의 부호 규약 검증 결과(PASS/FAIL)뿐. 확증 consensus 는 본 스테이지에서 읽지 않는다.",
+  "ts_kst": "2026-08-05 08:31:07 KST",
+  "synthetic_only": true,
+  "confirmatory_data_used": false,
+  "convention": "Δ_PID = macro AP(M2b) − macro AP(P-ID) (HOLM_FAMILY ② `M2b-P-ID`)",
+  "operator_signature_first_two_args": {
+    "paired_scaffold_bootstrap": [
+      "consensus_M1b",
+      "consensus_M2b"
+    ],
+    "scaffold_signflip": [
+      "cM1b",
+      "cM2b"
+    ]
+  },
+  "slot_mapping": {
+    "arg1_baseline_arm": "P-ID",
+    "arg2_comparison_arm": "M2b"
+  },
+  "checks": {
+    "better_comparison_arm_gives_positive_contrast": true,
+    "better_baseline_arm_gives_negative_contrast": true,
+    "antisymmetric_on_arm_swap": true,
+    "bootstrap_observed_matches_point_estimate": true,
+    "permutation_test_observed_matches_point_estimate": true,
+    "identical_to_block_H_run_unit_slot_mapping": true
+  },
+  "all_pass": true
+}

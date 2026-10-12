@@ -1,0 +1,3 @@
+scope,n_mapped_drugs,median,IQR_q1,IQR_q3,min,max,drugs_0_targets,drugs_1_target,drugs_2_5_targets,drugs_6plus_targets
+human_primary,847,7,3,16,1,331,245,92,249,506
+all_organism,868,10,4,21,1,340,224,68,218,582

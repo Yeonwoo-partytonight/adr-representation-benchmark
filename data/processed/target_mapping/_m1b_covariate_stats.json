@@ -1,0 +1,44 @@
+{
+  "n_drugs_matched": 943,
+  "coverage": {
+    "confidence_present": {
+      "n": 877,
+      "pct": 93.0
+    },
+    "year_present": {
+      "n": 863,
+      "pct": 91.5
+    },
+    "pchembl_present": {
+      "n": 851,
+      "pct": 90.2
+    },
+    "mechanism_present": {
+      "n": 550,
+      "pct": 58.3
+    },
+    "binding_present": {
+      "n": 877,
+      "pct": 93.0
+    }
+  },
+  "missing_rate": {
+    "confidence": 7.0,
+    "year": 8.5,
+    "pchembl": 9.8,
+    "mechanism": 41.7
+  },
+  "assay_confidence": {
+    "uniq_assays": 64161,
+    "fetched": 64161,
+    "non_null": 64161
+  },
+  "first_approval_with_year": 863,
+  "note": "network=§4-A only (mechanism/confidence/first_approval for existing 943 chembl_id, batched). no new targets/molecules, no re-mapping, no label/structure/split access. missing = flag+0 impute (no fabrication).",
+  "source_endpoints": {
+    "mechanism": "https://www.ebi.ac.uk/chembl/api/data/mechanism?molecule_chembl_id__in=..&only=target_chembl_id,action_type,mechanism_of_action",
+    "confidence": "https://www.ebi.ac.uk/chembl/api/data/assay?assay_chembl_id__in=..&only=assay_chembl_id,confidence_score",
+    "first_approval": "https://www.ebi.ac.uk/chembl/api/data/molecule?molecule_chembl_id__in=..&only=molecule_chembl_id,first_approval",
+    "pchembl_strength": "05b_affinity_values.csv (no network)"
+  }
+}

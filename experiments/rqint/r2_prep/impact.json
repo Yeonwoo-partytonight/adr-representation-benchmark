@@ -1,0 +1,335 @@
+{
+ "_doc": "블록 AK(docs/99) R2P-1 — 충돌 A·B 정적 영향 분석. 파일 수정 0 · 계산 0 · 동결 0.",
+ "when_kst": "2026-08-24 11:43:35 KST",
+ "module_hash_table": [
+  {
+   "module": "__init__.py",
+   "live_sha256": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+   "live_sha16": "8dc63e28ffcf93dc",
+   "manifest_sha16": "8dc63e28ffcf93dc",
+   "match": true,
+   "bytes": 1635
+  },
+  {
+   "module": "metrics.py",
+   "live_sha256": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+   "live_sha16": "a7d3fe4fe9e87983",
+   "manifest_sha16": "a7d3fe4fe9e87983",
+   "match": true,
+   "bytes": 4256
+  },
+  {
+   "module": "redaction.py",
+   "live_sha256": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+   "live_sha16": "4d4bf221141fbc79",
+   "manifest_sha16": "4d4bf221141fbc79",
+   "match": true,
+   "bytes": 3647
+  },
+  {
+   "module": "consensus.py",
+   "live_sha256": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+   "live_sha16": "9bddb53da5752c46",
+   "manifest_sha16": "9bddb53da5752c46",
+   "match": true,
+   "bytes": 3124
+  },
+  {
+   "module": "bootstrap.py",
+   "live_sha256": "05437c516e606a053e02acefb23c2597365472201b6c70ff2814278d6597a31e",
+   "live_sha16": "05437c516e606a05",
+   "manifest_sha16": "05437c516e606a05",
+   "match": true,
+   "bytes": 14214
+  },
+  {
+   "module": "signflip.py",
+   "live_sha256": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+   "live_sha16": "3de1223585ae0f97",
+   "manifest_sha16": "3de1223585ae0f97",
+   "match": true,
+   "bytes": 6772
+  },
+  {
+   "module": "decision.py",
+   "live_sha256": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+   "live_sha16": "f688b20d816acabe",
+   "manifest_sha16": "f688b20d816acabe",
+   "match": true,
+   "bytes": 16353
+  },
+  {
+   "module": "null_generator.py",
+   "live_sha256": "90886abce256a130531a0ab0cd8edd17abc27ff1b62ee56f24248aa76fa204c7",
+   "live_sha16": "90886abce256a130",
+   "manifest_sha16": "90886abce256a130",
+   "match": true,
+   "bytes": 11119
+  },
+  {
+   "module": "unseen_target.py",
+   "live_sha256": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+   "live_sha16": "96c0c87911e8c93d",
+   "manifest_sha16": "96c0c87911e8c93d",
+   "match": true,
+   "bytes": 5610
+  },
+  {
+   "module": "synthetic.py",
+   "live_sha256": "ddf715e6fba7503e817c6435c9220f7a83a5e5e31375603fddd522570f2a27d7",
+   "live_sha16": "ddf715e6fba7503e",
+   "manifest_sha16": "ddf715e6fba7503e",
+   "match": true,
+   "bytes": 8444
+  },
+  {
+   "module": "freeze.py",
+   "live_sha256": "94e6369fa952be7f4ac41f79da6d3b63f80a1a7c2192873a499e3ccd4a2f1cc9",
+   "live_sha16": "94e6369fa952be7f",
+   "manifest_sha16": "94e6369fa952be7f",
+   "match": true,
+   "bytes": 42927
+  }
+ ],
+ "module_hash_all_match_manifest": true,
+ "conflict_A": {
+  "sap_version_literal_lines_in_freeze_py": [
+   {
+    "line": 581,
+    "text": "\"sap_version\": \"1.1\",  # 1.0(docs/41) → 1.1(docs/43 amendment A1~A6)"
+   },
+   {
+    "line": 698,
+    "text": "f\"sap_version={manifest['sap_version']}, 변경 모듈={n_changed})\")"
+   }
+  ],
+  "hypothetical_freeze_py_hashes": {
+   "current_sha256": "94e6369fa952be7f4ac41f79da6d3b63f80a1a7c2192873a499e3ccd4a2f1cc9",
+   "current_bytes": 42927,
+   "variant_literal_only": {
+    "sha256": "8bef5f70d168c50d7860d5e1d70f78b771d76405fafe2c4d256ac04d08078bc9",
+    "bytes": 42927,
+    "diff": "1 char: L581 \"1.1\" -> \"1.2\""
+   },
+   "variant_literal_plus_comment": {
+    "sha256": "37442f6db2717746ba05c68002bac5d29df433e4d9fa4496c3f96514668b0ca2",
+    "bytes": 42959,
+    "diff": "L581 literal + trailing comment extended"
+   },
+   "note": "가상 산출 — 파일은 0바이트 수정이다. 해시는 메모리 내 치환으로 계산했다."
+  },
+  "hardcoded_sap_version_1_1_gates": [
+   "./experiments/rqint/r2_prep/_impact.py:35:old_line = ('        \"sap_version\": \"1.1\",  # 1.0(docs/41) → 1.1(docs/43 amendment A1~A6)\\n').encode()",
+   "./experiments/rqint/r2_prep/_impact.py:39:va = b.replace(b'\"sap_version\": \"1.1\",', b'\"sap_version\": \"1.2\",', 1)   # 리터럴 1문자만",
+   "./experiments/rqint/r2_prep/_impact.py:108:# ── (5) 하드코딩 게이트: sap_version==\"1.1\" / manifest sha16 을 기대하는 곳",
+   "./experiments/rqint/r2_prep/_facts.py:39:verlit = [i + 1 for i, l in enumerate(lines) if '\"sap_version\": \"1.1\"' in l]",
+   "./experiments/rqint/r2_prep/_facts.py:205:    ms[:16] == \"756d485feb4715e9\" and man[\"sap_version\"] == \"1.1\")",
+   "./experiments/rqint/r3_package/sap/freeze.py:581:        \"sap_version\": \"1.1\",  # 1.0(docs/41) → 1.1(docs/43 amendment A1~A6)",
+   "./experiments/rqint/r3_package/run_rqint_probe.py:346:        \"sap_version_unchanged\": \"1.1\",",
+   "./v3_Multimodal/src/record_block_AH.py:601:            \"sap_version\": \"1.1\", \"manifest_sha16\": pre_manifest[:16],",
+   "./v3_Multimodal/src/run_rqint_audit.py:305:        \"sap_version_unchanged\": \"1.1\",",
+   "./v3_Multimodal/src/sap/freeze.py:581:        \"sap_version\": \"1.1\",  # 1.0(docs/41) → 1.1(docs/43 amendment A1~A6)",
+   "./v3_Multimodal/src/record_block_AB.py:88:assert man[\"sap_version\"] == \"1.1\", man[\"sap_version\"]",
+   "./v3_Multimodal/src/record_block_AB.py:1025:        \"sap_version\": \"1.1\",",
+   "./v3_Multimodal/src/record_block_AB.py:1391:    \"1 manifest 불변·1.1\": sha(MANIFEST) == ENTRY[\"experiments/sap/manifest.json\"] and man[\"sap_version\"] == \"1.1\",",
+   "./v3_Multimodal/src/record_block_P0.py:136:    assert man[\"sap_version\"] == \"1.1\", f\"sap_version {man['sap_version']}\"",
+   "./v3_Multimodal/src/record_block_L0.py:97:    assert m[\"sap_version\"] == \"1.1\" and m[\"all_validation_pass\"] is True",
+   "./v3_Multimodal/src/record_block_O0.py:211:    assert man[\"sap_version\"] == \"1.1\", f\"sap_version {man['sap_version']} != 1.1\"",
+   "./v3_Multimodal/src/rqint_timing.py:1096:        \"sap_version_unchanged\": \"1.1\",",
+   "./v3_Multimodal/src/record_block_I0.py:99:    assert m[\"sap_version\"] == \"1.1\" and m[\"all_validation_pass\"] is True",
+   "./v3_Multimodal/src/rqint_calibration.py:138:    \"F-MANI16\": {\"sha16\": \"756d485feb4715e9\", \"sap_version\": \"1.1\"},",
+   "./v3_Multimodal/src/rqint_calibration.py:717:            mani_sha[:16] == ex[\"F-MANI16\"][\"sha16\"] and mani.get(\"sap_version\") == \"1.1\"),",
+   "./v3_Multimodal/src/rqint_calibration.py:892:        \"sap_version_unchanged\": \"1.1\", \"manifest_sha16\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/rqint_calibration.py:1328:        \"sap_version_unchanged\": \"1.1\", \"manifest_sha16\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/confirmatory_oof_rep1.py:160:    assert man[\"sap_version\"] == \"1.1\", f\"sap_version {man['sap_version']} != 1.1\"",
+   "./v3_Multimodal/src/pre_unblinding_audit.py:121:    ok = not bad and not mbad and man.get(\"sap_version\") == \"1.1\" and len(mods) == 11"
+  ],
+  "hardcoded_manifest_sha16_sites": [
+   "./experiments/rqint/r2_prep/_impact.py:116:gate_mani = grep_repo(r\"756d485feb4715e9\")",
+   "./experiments/rqint/r2_prep/_facts.py:203:add(\"F-MANI16\", \"manifest sha16 756d485feb4715e9 · sap_version 1.1\", MAN,",
+   "./experiments/rqint/r2_prep/_facts.py:205:    ms[:16] == \"756d485feb4715e9\" and man[\"sap_version\"] == \"1.1\")",
+   "./experiments/rqint/b_100k/_verify.py:137:    \"동일 · 756d485feb4715e9 · 1.1 · eb842bc98140e9c5\",",
+   "./experiments/rqint/b_100k/_verify.py:139:    same and mani == \"756d485feb4715e9\" and sapv == \"1.1\" and rq16 == \"eb842bc98140e9c5\")",
+   "./experiments/rqint/b_100k/_record.py:50:   - **⑩ 무결성 — 착수=종료 불변**: SAP 등재 **11모듈 0바이트** · `manifest.json` sha16 **`756d485feb4715e9`** · `sap_version` **1.1** · 블록 AC 4파일 + AD 2파일 **0바이트** · ★ **`sap/rqint.py` sha16 `eb842bc98140e9c5` 착수=종료 동일** · ★ **블록 AI 산출물 4종**(`b_dryrun_prespec.json`·`stair.json`·`decisive.json`·`b_dryrun.py`) **0바이트** · `_sealed/` guard **275종(access.log 제외) / 291종(포함)** 및 stat-only 스냅샷 sha256 **완전 동일**(블록 AI 착수 스냅샷 `741feb8e52a3cf00…` 과도 동일) · HEAD `566f487` · 커밋 21 불변. 본 블록이 만든 파일 = `v3_Multimodal/config/b_100k_prespec.json` · `v3_Multimodal/src/b_100k_run.py` · `experiments/rqint/b_100k/` 산출 뿐이다.",
+   "./experiments/rqint/b_100k/_record.py:57:무수정 대조 = 블록 AI 산출물 4종 **0바이트** · SAP `manifest.json` sha16 `756d485feb4715e9`(`sap_version` **1.1** · 11모듈 **0바이트**) · 블록 AC 4파일 + AD 2파일 **0바이트** · `sap/rqint.py` **0바이트** ·",
+   "./experiments/rqint/b_100k/_record.py:89:         f\"**`B` 동결 0 · SAP 1.2 재동결 0(`sap_version` 1.1 · manifest sha16 `756d485feb4715e9` 불변 · `sap/rqint.py` **0바이트**) · \"",
+   "./experiments/rqint/b_100k/_record.py:157:        f\"⑩ 무결성 착수=종료 불변 — SAP 11모듈 0바이트, manifest sha16 756d485feb4715e9, sap_version 1.1, 블록 AC 4파일 + AD 2파일 0바이트, \"",
+   "./experiments/rqint/b_100k/_facts.py:126:add(\"F-MANI16\", \"manifest sha16 756d485feb4715e9 · sap_version 1.1\",",
+   "./experiments/rqint/b_100k/_facts.py:128:    s_man16 == \"756d485feb4715e9\" and str(sv) == \"1.1\")",
+   "./experiments/rqint/b_dryrun/_report.py:237:- **SAP 1.2 재동결 0** — `sap_version` **1.1** 유지 · `manifest.json` sha16 `756d485feb4715e9` · 동결 11모듈 + 블록 AC 4파일 + AD 2파일 **0바이트**.",
+   "./experiments/rqint/b_dryrun/_verify.py:90:    \"동일 · 756d485feb4715e9 · 1.1\", f\"{'동일' if same else '변경'} · {mani} · {sapv}\",",
+   "./experiments/rqint/b_dryrun/_verify.py:91:    same and mani == \"756d485feb4715e9\" and sapv == \"1.1\")",
+   "./experiments/rqint/b_dryrun/_record.py:47:   - **⑩ 무결성 — 착수=종료 불변**: SAP 등재 **11모듈 0바이트** · `manifest.json` sha16 **`756d485feb4715e9`** · `sap_version` **1.1** · 블록 AC 4파일 + AD 2파일 **0바이트** · ★ **`sap/rqint.py` sha256 `eb842bc98140e9c5…` 착수=종료 동일**(`B_DEFINITION_STATUS` 리터럴 무수정) · `_sealed/` guard **275종(access.log 제외) / 291종(포함)** 및 stat-only 스냅샷 sha256 **완전 동일** · HEAD `566f487` · 커밋 21 불변. 본 블록이 만든 파일 = `v3_Multimodal/config/b_dryrun_prespec.json` · `v3_Multimodal/src/b_dryrun.py` · `experiments/rqint/b_dryrun/` 산출 뿐이다.",
+   "./experiments/rqint/b_dryrun/_record.py:55:무수정 대조 = SAP `manifest.json` sha16 `756d485feb4715e9`(`sap_version` **1.1** · 11모듈 **0바이트**) · 블록 AC 4파일 + AD 2파일 **0바이트** · `sap/rqint.py` **0바이트** ·",
+   "./experiments/rqint/b_dryrun/_record.py:83:         f\"**`B` 동결 0 · SAP 1.2 재동결 0(`sap_version` 1.1 · manifest sha16 `756d485feb4715e9` 불변 · `sap/rqint.py` **0바이트**) · 개봉 0 · GIN 착수 0 · `emit_sign` 0 · 네트워크 0 · git commit·push 0** \"",
+   "./experiments/rqint/b_dryrun/_record.py:143:        f\"⑩ 무결성 착수=종료 불변 — SAP 11모듈 0바이트, manifest sha16 756d485feb4715e9, sap_version 1.1, 블록 AC 4파일 + AD 2파일 0바이트, \"",
+   "./experiments/rqint/b_dryrun/_facts.py:89:add(\"F-MANI16\", \"sha16 756d485feb4715e9 · sap_version 1.1\", p, f\"{h} · {sv}\",",
+   "./experiments/rqint/b_dryrun/_facts.py:90:    h == \"756d485feb4715e9\" and sv == \"1.1\")",
+   "./v3_Multimodal/src/record_block_Y.py:157:`d89f8c52412b656e` · SAP `manifest.json` sha16 `756d485feb4715e9`(v1.1 · 11모듈) · 기존 캐시 \\",
+   "./v3_Multimodal/src/record_block_AH.py:106:check(\"manifest sha16\", \"756d485feb4715e9\", pre_manifest[:16])",
+   "./v3_Multimodal/src/record_block_AH.py:346:    \"SAP 1.2 재동결 0(sap_version 1.1 · manifest sha16 756d485feb4715e9 불변 · 11모듈 0바이트) · \"",
+   "./v3_Multimodal/src/record_block_AH.py:442:        \"manifest_sha16_at_event\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/record_block_AH.py:488:        \"manifest_sha16_at_event\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/record_block_AH.py:679:> 지시서 = `docs/95_reviewer_signature_receipt_prompt_for_vscode.md` · 리포트 = `docs/95_reviewer_signature_receipt_report.md` · 서명본 = `docs/RQint_Reviewer_Record_Signature_20260812_SIGNED.pdf`(sha256 `161dd9d2290df32b`) · 발송본 = `docs/RQint_Reviewer_Record_Signature_20260812.docx`(sha256 `bfb01bfeae87ee3b`) · 발송 전 PDF = `…20260812.pdf`(sha256 `8316c56230b3ccd0`, 미발송 보존) · 회신 원본 = `docs/RQint_Reviewer_Response_<EXTERNAL-REVIEWER>_20260810.docx`(sha256 `0c29ddf201eb6751`) · 신규 = `v3_Multimodal/config/reviewer_identity_resolved.json`(**동결 아님** — `freeze_status` `values_confirmed_not_frozen`) · 무수정 대조 = SAP `manifest.json` sha16 `756d485feb4715e9`(`sap_version` **1.1** · 11모듈 **0바이트**) · 블록 AC 산출 4파일 **0바이트** · sealed guard **275종(access.log 제외) / 291종(포함) 불변**. **미실행**: 계산·재계산 · 모델 학습·추론 · Δ/AP/CI/p/부호 산출 · `emit_sign` · `decision.py` 호출 · 개봉 · `open_sealed` · 봉인 판독·쓰기 · SAP 1.2 재동결 · amendment 문면 동결 · `external_reviews` 항목 추가 · `B` 확정 · R1 감사 · R3 이행 · GIN 학습·착수 · 첨부 재다운로드 · `data/raw/` 변경 · git commit·push. 기입 시각 {NOW_S}.",
+   "./v3_Multimodal/src/record_block_AH.py:724:    \"(`sap_version` 1.1 · manifest sha16 `756d485feb4715e9` 불변 · 11모듈 및 블록 AC 산출 4파일 **0바이트**) · \"",
+   "./v3_Multimodal/src/record_block_X.py:158:`manifest.json` sha16 `756d485feb4715e9`(v1.1 · 11모듈 일치) · `HOLM_FAMILY` 7 라벨\\",
+   "./v3_Multimodal/src/strata_accounting_check.py:577:            \"definition_frozen\": {\"status\": \"frozen\", \"evidence\": \"SAP manifest 756d485feb4715e9 (v1.1)\"},",
+   "./v3_Multimodal/src/record_block_S.py:70:EXPECT_MANIFEST_SHA16 = \"756d485feb4715e9\"",
+   "./v3_Multimodal/src/record_block_AB.py:79:if MANIFEST_SHA16 != \"756d485feb4715e9\":",
+   "./v3_Multimodal/src/record_block_O.py:50:    \"experiments/sap/manifest.json\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/record_block_P0.py:53:    \"experiments/sap/manifest.json\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/stratification_run.py:79:EXPECT_SAP_MANIFEST_SHA16 = \"756d485feb4715e9\"",
+   "./v3_Multimodal/src/rqint_package_gates.py:5:  1. 동결 자산 불변: `ladder_freeze.json` b885585aefbabb32 · SAP manifest 756d485feb4715e9 + 11모듈 sha",
+   "./v3_Multimodal/src/rqint_package_gates.py:35:    \"sap_manifest_sha16\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/record_block_R.py:66:EXPECT_MANIFEST_SHA16 = \"756d485feb4715e9\"",
+   "./v3_Multimodal/src/record_block_L0.py:42:EXPECT_MANIFEST_SHA16 = \"756d485feb4715e9\"",
+   "./v3_Multimodal/src/record_block_O0.py:76:    \"sap_manifest_sha16\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/record_block_Q.py:51:EXPECT_MANIFEST_SHA16 = \"756d485feb4715e9\"",
+   "./v3_Multimodal/src/confirmatory_oof_rest.py:87:EXPECT_MANIFEST_SHA16 = \"756d485feb4715e9\"",
+   "./v3_Multimodal/src/rqint_timing.py:1097:        \"manifest_sha16\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/record_block_P.py:50:    \"experiments/sap/manifest.json\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/record_block_I0.py:40:EXPECT_MANIFEST_SHA16 = \"756d485feb4715e9\"",
+   "./v3_Multimodal/src/record_block_AA.py:326:SAP `manifest.json` sha16 `756d485feb4715e9` · sealed guard **275/291 불변**. **미실행**: 재계산 ·",
+   "./v3_Multimodal/src/rqint_calibration.py:138:    \"F-MANI16\": {\"sha16\": \"756d485feb4715e9\", \"sap_version\": \"1.1\"},",
+   "./v3_Multimodal/src/rqint_calibration.py:892:        \"sap_version_unchanged\": \"1.1\", \"manifest_sha16\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/rqint_calibration.py:1328:        \"sap_version_unchanged\": \"1.1\", \"manifest_sha16\": \"756d485feb4715e9\",",
+   "./v3_Multimodal/src/confirmatory_oof_rep1.py:90:EXPECT_MANIFEST_SHA16 = \"756d485feb4715e9\"   # docs/36 §5 게이트 0 (docs/43 v1.1)",
+   "./v3_Multimodal/src/null_main_run.py:123:EXPECT_SAP_MANIFEST_SHA16 = \"756d485feb4715e9\"",
+   "./v3_Multimodal/src/pre_unblinding_audit.py:64:    \"experiments/sap/manifest.json\": \"756d485feb4715e9\","
+  ],
+  "n_hardcoded_manifest_sha16_files": 32
+ },
+ "conflict_B": {
+  "decision_py_MULTIPLICITY_MANIFEST_refs": [
+   {
+    "kind": "Name",
+    "line": 59,
+    "ctx": "Store"
+   }
+  ],
+  "freeze_py_MULTIPLICITY_MANIFEST_refs": [
+   {
+    "kind": "Attribute",
+    "line": 372,
+    "ctx": "Load"
+   },
+   {
+    "kind": "Attribute",
+    "line": 650,
+    "ctx": "Load"
+   }
+  ],
+  "freeze_L372_is_dict_value_record_only": true,
+  "freeze_L650_is_dict_value_record_only": true,
+  "holm_uses_HOLM_FAMILY_not_manifest": {
+   "HOLM_FAMILY_refs_in_decision_py": [
+    {
+     "kind": "Name",
+     "line": 44,
+     "ctx": "Store"
+    },
+    {
+     "kind": "Name",
+     "line": 193,
+     "ctx": "Load"
+    },
+    {
+     "kind": "Name",
+     "line": 190,
+     "ctx": "Load"
+    },
+    {
+     "kind": "Name",
+     "line": 210,
+     "ctx": "Load"
+    }
+   ],
+   "holm_signature_reads": "holm(pvalues, alpha) — labels = list(HOLM_FAMILY); MULTIPLICITY_MANIFEST 는 참조되지 않는다"
+  },
+  "repo_wide_model_family_lines": 36,
+  "repo_wide_model_family_READ_sites": [],
+  "verdict": "MULTIPLICITY_MANIFEST 는 decision.py 에서 **정의(Store) 1회**뿐이고 읽히지 않는다. freeze.py 는 L372·L650 에서 **dict 값으로 직렬화**할 때만 Load 한다. `model_family` 키를 **읽는** 코드는 저장소 전역에 0곳이다. Holm 계산은 HOLM_FAMILY(라벨 7개)만 쓴다 → D20 의 「비실질 메타데이터」 주장은 코드로 뒷받침된다."
+ },
+ "r3_package_sap_copies": [
+  {
+   "module": "__init__.py",
+   "sha16": "8dc63e28ffcf93dc",
+   "identical_to_live": true
+  },
+  {
+   "module": "metrics.py",
+   "sha16": "a7d3fe4fe9e87983",
+   "identical_to_live": true
+  },
+  {
+   "module": "redaction.py",
+   "sha16": "4d4bf221141fbc79",
+   "identical_to_live": true
+  },
+  {
+   "module": "consensus.py",
+   "sha16": "9bddb53da5752c46",
+   "identical_to_live": true
+  },
+  {
+   "module": "bootstrap.py",
+   "sha16": "05437c516e606a05",
+   "identical_to_live": true
+  },
+  {
+   "module": "signflip.py",
+   "sha16": "3de1223585ae0f97",
+   "identical_to_live": true
+  },
+  {
+   "module": "decision.py",
+   "sha16": "f688b20d816acabe",
+   "identical_to_live": true
+  },
+  {
+   "module": "null_generator.py",
+   "sha16": "90886abce256a130",
+   "identical_to_live": true
+  },
+  {
+   "module": "unseen_target.py",
+   "sha16": "96c0c87911e8c93d",
+   "identical_to_live": true
+  },
+  {
+   "module": "synthetic.py",
+   "sha16": "ddf715e6fba7503e",
+   "identical_to_live": true
+  },
+  {
+   "module": "freeze.py",
+   "sha16": "94e6369fa952be7f",
+   "identical_to_live": true
+  }
+ ],
+ "manifest_nondeterministic_fields": [
+  {
+   "field": "frozen_at_kst",
+   "source": "freeze.py L582 datetime.now(KST)",
+   "current": "2026-07-25 18:20:26 KST"
+  },
+  {
+   "field": "versions",
+   "source": "freeze.py L674 sys.version / np.__version__ 등",
+   "current": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "scipy": "1.18.0",
+    "sklearn": "1.9.0"
+   }
+  }
+ ],
+ "manifest_is_byte_reproducible": false,
+ "integrity": {
+  "files_modified": 0,
+  "network_calls": 0,
+  "sealed_read": 0,
+  "freeze_py_executed": false,
+  "decision_py_imported": false
+ }
+}

@@ -1,0 +1,95 @@
+2026-07-27 13:05:14 KST | ==============================================================================
+2026-07-27 13:05:14 KST | [probe] §13-4 타이밍 프로브 — precheck(게이트0·구조·permutation assert, OOF 미실행)
+2026-07-27 13:05:14 KST | [무결성] p 계산·T_obs 비교·성공판정·B 조정 없음 · 네트워크 0 · data/raw 불변 · git 커밋 없음
+2026-07-27 13:05:14 KST | [seed 격리] PROBE_SEEDS=[9000001, 9000002] · 본실행 namespace(≤1000000)와 교집합 0 — assert PASS
+2026-07-27 13:05:14 KST | [SAP 동결값] NULL_B=1000 · NULL_RF_COMMON_SEED=42 (무수정 확인; 프로브는 B=2로 시간만 측정, 본 분포 미편입)
+2026-07-27 13:05:14 KST | [구조] unique target(교환 단위)=1191 · family=42 · 복수 family 표적=14(사전순 최소로 단일배정) · family 미배정=0
+2026-07-27 13:05:14 KST | [전제] identity mean-pool 재계산 == 동결 drug_target_emb_meanpool.npy **바이트 동일** (mask·n_targets 동일) → 재배치 하네스가 동결 입력을 정확히 재현
+2026-07-27 13:05:14 KST | [incidence] eligible target=1191 · drugs=1092 · edges=12613 · incidence_ratio=0.00970 · 매핑 약물 847(0.776)
+2026-07-27 13:05:14 KST | [family] family=42 · 교환가능 family=31 · 고정(|family|≤2) family=11 · **고정 target=13**(0.011) · 교환가능 target=1178
+2026-07-27 13:05:14 KST | [permutation global seed=9000001] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=0 | 재현성 PASS
+2026-07-27 13:05:14 KST | [permutation global seed=9000002] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=1 | 재현성 PASS
+2026-07-27 13:05:14 KST | [permutation family seed=9000001] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=47 | 재현성 PASS
+2026-07-27 13:05:15 KST | [permutation family seed=9000002] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=49 | 재현성 PASS
+2026-07-27 13:05:15 KST | [병렬화] permutation은 seed만으로 완전 결정 → b별 독립 생성 가능. 교차 seed 동일배정 global 0/1191 · family 42/1191
+2026-07-27 13:05:15 KST | [sealed] §13-3 oof_M1b.npz·oof_M2b.npz sha256 기대값 일치 (파일 무결성만 확인, 값 미판독)
+2026-07-27 13:05:15 KST | [precheck] 완료 — OOF 미실행. 다음: --stage full
+2026-07-27 13:05:27 KST | ==============================================================================
+2026-07-27 13:05:27 KST | [probe] §13-4 타이밍 프로브 — full(identity control + permutation 4회). p·비교·판정 없음.
+2026-07-27 13:05:27 KST | ==============================================================================
+2026-07-27 13:05:27 KST | [probe] §13-4 타이밍 프로브 — precheck(게이트0·구조·permutation assert, OOF 미실행)
+2026-07-27 13:05:27 KST | [무결성] p 계산·T_obs 비교·성공판정·B 조정 없음 · 네트워크 0 · data/raw 불변 · git 커밋 없음
+2026-07-27 13:05:27 KST | [seed 격리] PROBE_SEEDS=[9000001, 9000002] · 본실행 namespace(≤1000000)와 교집합 0 — assert PASS
+2026-07-27 13:05:27 KST | [SAP 동결값] NULL_B=1000 · NULL_RF_COMMON_SEED=42 (무수정 확인; 프로브는 B=2로 시간만 측정, 본 분포 미편입)
+2026-07-27 13:05:27 KST | [구조] unique target(교환 단위)=1191 · family=42 · 복수 family 표적=14(사전순 최소로 단일배정) · family 미배정=0
+2026-07-27 13:05:27 KST | [전제] identity mean-pool 재계산 == 동결 drug_target_emb_meanpool.npy **바이트 동일** (mask·n_targets 동일) → 재배치 하네스가 동결 입력을 정확히 재현
+2026-07-27 13:05:27 KST | [incidence] eligible target=1191 · drugs=1092 · edges=12613 · incidence_ratio=0.00970 · 매핑 약물 847(0.776)
+2026-07-27 13:05:27 KST | [family] family=42 · 교환가능 family=31 · 고정(|family|≤2) family=11 · **고정 target=13**(0.011) · 교환가능 target=1178
+2026-07-27 13:05:27 KST | [permutation global seed=9000001] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=0 | 재현성 PASS
+2026-07-27 13:05:27 KST | [permutation global seed=9000002] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=1 | 재현성 PASS
+2026-07-27 13:05:27 KST | [permutation family seed=9000001] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=47 | 재현성 PASS
+2026-07-27 13:05:27 KST | [permutation family seed=9000002] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=49 | 재현성 PASS
+2026-07-27 13:05:27 KST | [병렬화] permutation은 seed만으로 완전 결정 → b별 독립 생성 가능. 교차 seed 동일배정 global 0/1191 · family 42/1191
+2026-07-27 13:05:27 KST | [sealed] §13-3 oof_M1b.npz·oof_M2b.npz sha256 기대값 일치 (파일 무결성만 확인, 값 미판독)
+2026-07-27 13:05:27 KST | [precheck] 완료 — OOF 미실행. 다음: --stage full
+2026-07-27 13:31:11 KST | ==============================================================================
+2026-07-27 13:31:11 KST | [probe] §13-4 타이밍 프로브 — full(identity control + permutation 4회). p·비교·판정 없음.
+2026-07-27 13:31:11 KST | ==============================================================================
+2026-07-27 13:31:11 KST | [probe] §13-4 타이밍 프로브 — precheck(게이트0·구조·permutation assert, OOF 미실행)
+2026-07-27 13:31:11 KST | [무결성] p 계산·T_obs 비교·성공판정·B 조정 없음 · 네트워크 0 · data/raw 불변 · git 커밋 없음
+2026-07-27 13:31:11 KST | [seed 격리] PROBE_SEEDS=[9000001, 9000002] · 본실행 namespace(≤1000000)와 교집합 0 — assert PASS
+2026-07-27 13:31:11 KST | [SAP 동결값] NULL_B=1000 · NULL_RF_COMMON_SEED=42 (무수정 확인; 프로브는 B=2로 시간만 측정, 본 분포 미편입)
+2026-07-27 13:31:11 KST | [구조] unique target(교환 단위)=1191 · family=42 · 복수 family 표적=14(사전순 최소로 단일배정) · family 미배정=0
+2026-07-27 13:31:12 KST | [전제] identity mean-pool 재계산 == 동결 drug_target_emb_meanpool.npy **바이트 동일** (mask·n_targets 동일) → 재배치 하네스가 동결 입력을 정확히 재현
+2026-07-27 13:31:12 KST | [incidence] eligible target=1191 · drugs=1092 · edges=12613 · incidence_ratio=0.00970 · 매핑 약물 847(0.776)
+2026-07-27 13:31:12 KST | [family] family=42 · 교환가능 family=31 · 고정(|family|≤2) family=11 · **고정 target=13**(0.011) · 교환가능 target=1178
+2026-07-27 13:31:12 KST | [permutation global seed=9000001] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=0 | 재현성 PASS
+2026-07-27 13:31:12 KST | [permutation global seed=9000002] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=1 | 재현성 PASS
+2026-07-27 13:31:12 KST | [permutation family seed=9000001] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=47 | 재현성 PASS
+2026-07-27 13:31:12 KST | [permutation family seed=9000002] assert_preservation PASS (bijection·target별 embedding 공유·degree/incidence/결측 보존, shared checks=11422) | 고정점=49 | 재현성 PASS
+2026-07-27 13:31:12 KST | [병렬화] permutation은 seed만으로 완전 결정 → b별 독립 생성 가능. 교차 seed 동일배정 global 0/1191 · family 42/1191
+2026-07-27 13:31:12 KST | [sealed] §13-3 oof_M1b.npz·oof_M2b.npz sha256 기대값 일치 (파일 무결성만 확인, 값 미판독)
+2026-07-27 13:31:12 KST | [precheck] 완료 — OOF 미실행. 다음: --stage full
+2026-07-27 13:31:12 KST | [split] §13-3 확증 split(seed 201) 재사용 — fold 크기 [218, 218, 219, 218, 219] (재생성 없음)
+2026-07-27 13:31:12 KST | [2-A] §13-3 sealed oof_M1b.npz sha 검증 후 **1회 로드** — 전 permutation 재사용 (target 재배치는 B_seq만 교란 → M1b OOF는 permutation 불변). 값 미출력.
+2026-07-27 13:31:12 KST | [2-B] identity permutation control 시작 — 결과가 §13-3 sealed oof_M2b.npz와 바이트 동일해야 함
+2026-07-27 13:33:26 KST |   [identity] fold 0  134.0s (PCA 0.1s · 조립 0.0s · RF  133.9s) | train=874 test=218 bseq_fit=689 dim=2124
+2026-07-27 13:35:40 KST |   [identity] fold 1  133.7s (PCA 0.1s · 조립 0.0s · RF  133.7s) | train=874 test=218 bseq_fit=671 dim=2124
+2026-07-27 13:37:53 KST |   [identity] fold 2  132.5s (PCA 0.1s · 조립 0.0s · RF  132.5s) | train=873 test=219 bseq_fit=695 dim=2124
+2026-07-27 13:40:05 KST |   [identity] fold 3  132.5s (PCA 0.1s · 조립 0.0s · RF  132.4s) | train=874 test=218 bseq_fit=669 dim=2124
+2026-07-27 13:42:18 KST |   [identity] fold 4  133.2s (PCA 0.1s · 조립 0.0s · RF  133.1s) | train=873 test=219 bseq_fit=664 dim=2124
+2026-07-27 13:42:18 KST | [2-B] identity control = **PASS** (파일 sha 일치=True · 배열 sha 일치=True · 불일치 원소=0) | 666.1s
+2026-07-27 13:42:18 KST | [perm] global_seed9000001 시작 (probe_only — 본 null 분포 미편입)
+2026-07-27 13:44:34 KST |   [global_seed9000001] fold 0  135.3s (PCA 0.1s · 조립 0.0s · RF  135.2s) | train=874 test=218 bseq_fit=689 dim=2124
+2026-07-27 13:46:49 KST |   [global_seed9000001] fold 1  134.6s (PCA 0.1s · 조립 0.0s · RF  134.5s) | train=874 test=218 bseq_fit=671 dim=2124
+2026-07-27 13:49:01 KST |   [global_seed9000001] fold 2  132.6s (PCA 0.1s · 조립 0.0s · RF  132.5s) | train=873 test=219 bseq_fit=695 dim=2124
+2026-07-27 13:51:14 KST |   [global_seed9000001] fold 3  132.7s (PCA 0.1s · 조립 0.0s · RF  132.6s) | train=874 test=218 bseq_fit=669 dim=2124
+2026-07-27 13:53:28 KST |   [global_seed9000001] fold 4  133.7s (PCA 0.1s · 조립 0.0s · RF  133.6s) | train=873 test=219 bseq_fit=664 dim=2124
+2026-07-27 13:53:28 KST | [perm] global_seed9000001 완료 — **669.1s** (재배치+assert 0.1s · mean-pool 0.0s · 블록 0.1s · 5-fold 668.9s) | T_b는 _sealed 기록(값 미출력)
+2026-07-27 13:53:28 KST | [perm] global_seed9000002 시작 (probe_only — 본 null 분포 미편입)
+2026-07-27 13:55:44 KST |   [global_seed9000002] fold 0  136.0s (PCA 0.1s · 조립 0.0s · RF  136.0s) | train=874 test=218 bseq_fit=689 dim=2124
+2026-07-27 13:57:58 KST |   [global_seed9000002] fold 1  133.6s (PCA 0.1s · 조립 0.0s · RF  133.6s) | train=874 test=218 bseq_fit=671 dim=2124
+2026-07-27 14:00:19 KST |   [global_seed9000002] fold 2  141.7s (PCA 0.1s · 조립 0.0s · RF  141.6s) | train=873 test=219 bseq_fit=695 dim=2124
+2026-07-27 14:02:35 KST |   [global_seed9000002] fold 3  135.7s (PCA 0.1s · 조립 0.0s · RF  135.6s) | train=874 test=218 bseq_fit=669 dim=2124
+2026-07-27 14:04:51 KST |   [global_seed9000002] fold 4  136.3s (PCA 0.1s · 조립 0.0s · RF  136.2s) | train=873 test=219 bseq_fit=664 dim=2124
+2026-07-27 14:04:52 KST | [perm] global_seed9000002 완료 — **683.6s** (재배치+assert 0.1s · mean-pool 0.0s · 블록 0.1s · 5-fold 683.3s) | T_b는 _sealed 기록(값 미출력)
+2026-07-27 14:04:52 KST | [perm] family_seed9000001 시작 (probe_only — 본 null 분포 미편입)
+2026-07-27 14:07:06 KST |   [family_seed9000001] fold 0  133.9s (PCA 0.1s · 조립 0.0s · RF  133.8s) | train=874 test=218 bseq_fit=689 dim=2124
+2026-07-27 14:09:20 KST |   [family_seed9000001] fold 1  134.1s (PCA 0.1s · 조립 0.0s · RF  134.0s) | train=874 test=218 bseq_fit=671 dim=2124
+2026-07-27 14:11:34 KST |   [family_seed9000001] fold 2  134.5s (PCA 0.1s · 조립 0.0s · RF  134.4s) | train=873 test=219 bseq_fit=695 dim=2124
+2026-07-27 14:13:48 KST |   [family_seed9000001] fold 3  134.0s (PCA 0.1s · 조립 0.0s · RF  133.9s) | train=874 test=218 bseq_fit=669 dim=2124
+2026-07-27 14:16:04 KST |   [family_seed9000001] fold 4  136.1s (PCA 0.1s · 조립 0.0s · RF  136.0s) | train=873 test=219 bseq_fit=664 dim=2124
+2026-07-27 14:16:05 KST | [perm] family_seed9000001 완료 — **672.7s** (재배치+assert 0.1s · mean-pool 0.0s · 블록 0.1s · 5-fold 672.5s) | T_b는 _sealed 기록(값 미출력)
+2026-07-27 14:16:05 KST | [perm] family_seed9000002 시작 (probe_only — 본 null 분포 미편입)
+2026-07-27 14:18:22 KST |   [family_seed9000002] fold 0  137.5s (PCA 0.1s · 조립 0.0s · RF  137.5s) | train=874 test=218 bseq_fit=689 dim=2124
+2026-07-27 14:20:37 KST |   [family_seed9000002] fold 1  134.8s (PCA 0.1s · 조립 0.0s · RF  134.7s) | train=874 test=218 bseq_fit=671 dim=2124
+2026-07-27 14:22:51 KST |   [family_seed9000002] fold 2  134.0s (PCA 0.1s · 조립 0.0s · RF  133.9s) | train=873 test=219 bseq_fit=695 dim=2124
+2026-07-27 14:25:05 KST |   [family_seed9000002] fold 3  134.0s (PCA 0.1s · 조립 0.0s · RF  134.0s) | train=874 test=218 bseq_fit=669 dim=2124
+2026-07-27 14:27:19 KST |   [family_seed9000002] fold 4  134.0s (PCA 0.1s · 조립 0.0s · RF  133.9s) | train=873 test=219 bseq_fit=664 dim=2124
+2026-07-27 14:27:19 KST | [perm] family_seed9000002 완료 — **674.6s** (재배치+assert 0.1s · mean-pool 0.0s · 블록 0.1s · 5-fold 674.3s) | T_b는 _sealed 기록(값 미출력)
+2026-07-27 14:27:20 KST | [집계] permutation 중앙값 673.7s (global 676.4s · family 673.7s) | min 669.1s max 683.6s
+2026-07-27 14:27:20 KST | [추정] 2,000 permutation(1000×2 모드) 단일 프로세스 순차 = 374.3h (구간 371.7~379.8h)
+2026-07-27 14:27:20 KST | [자원] peak RSS 2.02 GB · cores 18 · RF n_jobs 실효 18
+2026-07-27 14:27:20 KST | [디스크] permutation당 OOF npz 555 KB → 전량 저장 시 1.11 GB / T_b 스칼라만 저장 시 128 KB
+2026-07-27 14:27:20 KST | [무결성] empirical_p 미호출 · T_obs 비교 없음 · 성공판정 없음 · NULL_B 무수정 · 프로브 T_b는 본 분포 미편입(_sealed 격리)
+2026-07-27 21:16 KST | [정정·추기 · 블록 A-4] 위 13:42:18 항목 "불일치 원소=0" 의 **분모(전체 원소 수)를 추가 기재**한다: **0/404,040** (= 1092 약물 × 370 PT). 본 로그에는 오기가 없었고(분모 미기재), 분모 오기 '403,040' 은 experiments/provenance/ledger.json 1개소에만 존재했으며 같은 시각 정정 이력 형식으로 정정되었다. 검증 = §13-3 sealed oof_M2b.npz 의 npz 내부 .npy **헤더만** 판독(shape=(1092,370), dtype=float64; 배열 값 미로드·미출력, access.log 에 machine_read/purpose="shape only"/human_exposure=false 기록). identity control PASS 판정·불일치 개수 0 은 불변.

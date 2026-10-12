@@ -1,0 +1,29 @@
+{
+  "block": "BI (docs/123) 독립 검산",
+  "tol": 1e-12,
+  "1_labels_bytes_identical": {
+    "y": true,
+    "cid": true,
+    "pt": true,
+    "sha256": {
+      "y": "53c5585d86b62d1bdc444ab025f64c3f104bbe33ed68b2408a00263b3d37bebf",
+      "cid": "8e9ec4511f9c848039b741942f0a1021660f117a25ebedbdd8c3b1fbac8fdcea",
+      "pt": "ac53ff0b67eb48718ba796c39cd29f985272fa30111b0c8df2f24638ff12720a"
+    }
+  },
+  "2_R8_main": {
+    "n_eval_drugs": 669,
+    "n_eligible_pt": 273,
+    "n_match": true,
+    "abs_diff_ap_M1b": 0.0,
+    "abs_diff_ap_M2b": 0.0,
+    "abs_diff_delta": 0.0,
+    "within_tol": true
+  },
+  "3_verdict": {
+    "independent": "방향 재현",
+    "runner": "방향 재현",
+    "match": true
+  },
+  "all_match": true
+}

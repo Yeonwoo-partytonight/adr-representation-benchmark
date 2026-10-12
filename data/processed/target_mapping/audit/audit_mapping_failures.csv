@@ -1,0 +1,15 @@
+failure_reason,scope,n
+ChEMBL_compound_미매칭,all(1092),149
+matched이나_SINGLE_PROTEIN_UniProt_표적0,all_organism(matched 943),75
+matched이나_human_SINGLE_PROTEIN_표적0,human(matched 943),96
+human매핑이나_서열_전무,human_primary(847),0
+human매핑이나_ProtBERT임베딩_전무,human_primary(847),0
+human매핑이나_affinity근거_전무,human_primary(847),16
+excluded_target_type::PROTEIN FAMILY,03_raw rows,2174
+excluded_target_type::PROTEIN COMPLEX GROUP,03_raw rows,1271
+excluded_target_type::PROTEIN COMPLEX,03_raw rows,915
+excluded_target_type::PROTEIN NUCLEIC-ACID COMPLEX,03_raw rows,663
+excluded_target_type::PROTEIN-PROTEIN INTERACTION,03_raw rows,250
+excluded_target_type::CHIMERIC PROTEIN,03_raw rows,86
+excluded_target_type::SELECTIVITY GROUP,03_raw rows,32
+excluded_target_type::NUCLEIC-ACID,03_raw rows,30

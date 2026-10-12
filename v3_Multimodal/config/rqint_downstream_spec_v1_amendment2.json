@@ -1,0 +1,150 @@
+{
+  "_doc": "rqint_downstream_spec_v1.json 의 S4 rng 값 공백 보충 · S5 GIN 복합 BCa 정의 · S3 실행 블록 분할을 기록하는 amendment 사이드카(2호). 명세 JSON·사이드카 1호·sap/*.py 는 0바이트 불변. 115·115b 하네스는 이 파일을 명세·사이드카 1호와 함께 읽는다. 1회 기록 후 0바이트 불변.",
+  "amendment_id": "rqint_downstream_spec_v1_amendment2",
+  "block": "AY (docs/115) AY-2",
+  "amends": {
+    "spec_path": "v3_Multimodal/config/rqint_downstream_spec_v1.json",
+    "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+    "amendment1_path": "v3_Multimodal/config/rqint_downstream_spec_v1_amendment1.json",
+    "amendment1_sha256": "63c29d6b6a9e22951f2e2891b54f4251d5e4f679fc1d3b3f110cfdf510aab05c",
+    "sections": [
+      "S4_holm8_main_run.rng",
+      "S5_d9_delta_bca (GIN)",
+      "S3 실행 블록 분할"
+    ]
+  },
+  "coin_seed": {
+    "label": "DTI_ADR_Prediction v3 RQ-int Holm8 confirmatory coin seed",
+    "label_length": 57,
+    "label_encoding": "ascii",
+    "rule": "coin_seed = int(sha256(label.encode(\"ascii\")).hexdigest(), 16) mod 2**32",
+    "value": 2967772708,
+    "audit_seed": 2968772711,
+    "audit_seed_rule": "rqint_test 규약 seed + 1_000_003",
+    "computed_once": true,
+    "computed_once_note": "대체 문자열·인코딩·법 변형 평가 0 — gin_seed_freeze.json 대표 unit 규칙과 같은 자유도 자진신고 형식. cowork 사전 계산 2967772708 과 일치(러너 재계산).",
+    "collision_check": {
+      "point_seeds": {
+        "split_seeds": [
+          42,
+          201,
+          202,
+          203
+        ],
+        "training_seeds": [
+          42,
+          1,
+          2,
+          3,
+          4
+        ],
+        "bootstrap_seed": [
+          6001
+        ],
+        "null_seeds": [
+          1000,
+          1001,
+          1002,
+          11000,
+          11001,
+          11002
+        ],
+        "dryrun_seeds": [
+          860260813,
+          1760260813
+        ]
+      },
+      "ranges_inclusive_upper_bound_conservative": {
+        "null_seed_9000001_up": [
+          9000001,
+          19000001
+        ],
+        "calibration_coin_seed_range(rep_seed 20260813+…+900,000,000)": [
+          920260813,
+          926260813
+        ],
+        "calibration_coin_audit_range(+1,000,003)": [
+          921260816,
+          927260816
+        ],
+        "dryrun_probe_stair_decisive_rep_seed(20260813+8.0e8~8.4e8)": [
+          820260813,
+          861260813
+        ],
+        "dryrun_coin_seed(+900,000,000 ≈ 1.74e9~1.76e9)": [
+          1720260813,
+          1761260813
+        ],
+        "dryrun_coin_audit(+1,000,003)": [
+          1721260816,
+          1762260816
+        ]
+      },
+      "also_checked": "각 점 시드 + 1_000_003 (감사 시드 규약)",
+      "result": "coin_seed·audit_seed 모두 불일치(교집합 0)",
+      "value_independent": true
+    },
+    "applies_to": [
+      "115 S4",
+      "115b S3 (i)(ii)"
+    ],
+    "applies_to_note": "115b(D12) 도 같은 coin_seed 를 쓴다(공통 난수 · 군 수가 달라 동전 벡터 길이는 다르다).",
+    "gap_fact": "명세 S4 `rng.seed_fixed_in_run_config: true` 이고 docs/100 SAP 1.2 개정문 L73 은 「random seeds … were fixed」라고 적었으나, 확증 RQ-int 동전 시드의 «값»은 어느 동결 파일에도 없다(cowork 실측: sap_1_2_hash_registry.json category_4 7항목 · rqint_procedure_decisions_v1.json closures 3건 · 명세 S4 — 값 0건. 존재하는 값은 합성 드라이런용 b_100k_prespec.json coin_seed 1760260813 · b_dryrun_prespec.json 뿐).",
+    "sap_1_2_L73_verbatim": "The test statistic, exchangeability unit, resampling scheme, B, random seeds, and the GIN seed set and aggregation order were fixed without reference to GIN outputs, sealed confirmatory quantities, or fold-level metrics."
+  },
+  "gin_bca_composite": {
+    "why": "동결 함수 sap.bootstrap.paired_scaffold_bootstrap 는 행렬 1쌍만 받으므로 Δ_GIN(= 시드 3개 Δ 의 평균, metric-then-average)의 구간을 직접 못 낸다.",
+    "rf": "동결 함수를 그대로 호출: paired_scaffold_bootstrap(C_RF_M1b, C_RF_M2b, y, gi, eligible_pt=np.arange(370), B=10000, seed=6001, unit='scaffold_cluster', alpha=0.05) — 명세 S5 call_convention",
+    "gin_rng": "rng = np.random.default_rng(6001) · 매 b 마다 rng.choice(np.arange(G), size=G, replace=True, p=None)",
+    "gin_common_sample": "같은 cluster 표본을 3 시드에 공통 적용",
+    "gin_per_seed_delta": "Δ_s = sap.bootstrap._delta_on_rows(C_M1b,s, C_M2b,s, y, rows, eligible)",
+    "gin_boot": "boot[b] = np.mean([Δ_1, Δ_2, Δ_3]) (s 순서 1·2·3 고정)",
+    "gin_jackknife": "scaffold delete-one 에서 같은 시드 평균",
+    "gin_ci": "sap.bootstrap._bca_ci(boot, Δ_GIN_obs, jack, alpha=0.05)",
+    "cluster_index": "sap.bootstrap._cluster_index(gi)",
+    "failure_rule": "BCa 실패 시 not_estimable (percentile 대체 금지)",
+    "rf_gin_share_cluster_sample_stream": "RF 와 GIN 은 같은 seed 6001 을 쓰므로 같은 군 표본 열을 공유한다.",
+    "observed_value_identity": "Δ_GIN_obs = np.mean([Δ_1, Δ_2, Δ_3]) — observed_statistic 의 d_gin 과 비트 일치",
+    "gin_percentile_sensitivity": "RF 와 대칭으로 GIN 복합의 percentile 구간도 민감도로 봉인(primary 대체 금지)",
+    "verification_S1_bit_identity": "S = 1 일 때 동결 함수 paired_scaffold_bootstrap(return_boot=True) 과 boot·delta_obs·ci_bca·bca_diagnostics(acceleration·z0) 비트 일치를 합성에서 assert — 재구현이 아니라 동결 내부 함수의 조립임을 증명",
+    "adjudication_use": "판정 미사용 · 유의성과 무관하게 항상 병기(명세 S5 축자)"
+  },
+  "block_split": {
+    "115": [
+      "S4",
+      "S5"
+    ],
+    "115b": [
+      "S3"
+    ],
+    "reason": "B=100,000 고정 · 총 ≈ 63 h · 주분석 검증 후 민감도"
+  },
+  "holm_adjustment_deferred": "Holm 조정은 7슬롯 p 가 모두 있어야 하므로 개봉·판정 블록에서 한다. 본 블록은 ⑧ 슬롯 p(주·보조)와 D14 판2 폴백 조건 기록까지만. 명세 S4 adjudication·holm_family 는 그 블록이 쓴다.",
+  "b_value_provenance_chain": "docs/30 §8 10,000 = ②~⑦ sign-flip 용 → docs/55b §5 RQ-int 제안 10,000 → 검토자 §9.2 권고 100,000(24 h 초과 시 50,000) → 블록 AJ 합성 실주행 19.4887 h ≤ 24 h(하향 미발동) → rqint_procedure_decisions_v1.json closure b_monte_carlo_sample_size_and_definition 100,000(사용자 2026-08-24 · R2 동결). SAP 1.2 개정문(docs/100)에는 수치가 없다(수치 정본 = closure).",
+  "ap0_rule_source": "AP=0 대입 금지 규칙의 출처 = gin_seed_freeze.json macro_ap_rule · docs/64 §3-1 (1차 출처 4종에는 없음 — docs/113e #8).",
+  "decided_by": "사용자 결정 V1·V2·V3 2026-09-28 (docs/115 §0)",
+  "hash_rule": "before = 명세 sha + 사이드카 1호 sha · after = + 본 파일 sha — 본 파일은 자기 sha 를 담지 않으며 after 는 docs/33 항목 69 ⑥ 에 기록",
+  "evidence_of_blindness": {
+    "sealed_counts_dirs_files_artifacts_access": [
+      31,
+      752,
+      730,
+      22
+    ],
+    "stat_fingerprints_at_start": {
+      "existing_25trees": "6fe853b31a987660593171acb660c4c5a97b5b6b952d96f39ff05e9e781fd9b8",
+      "confirmatory_gin_3trees": "6ed86c86830b664916c80c13fc2b0f355528c963df5b66e9053184316e51a8b9",
+      "stability_1tree": "b4b493d265824709a242a12d37334659bf78a75bd51a46f8b0174f058d6e6cec",
+      "gin_consensus_1tree": "dac246845ed2fbc6b29518c816a39c029478ff14b1550b9de6475d56f9df9ebf",
+      "leverage_1tree": "b19c3e9c369a8f6bb236d324b440024e07adeb67bb718bd30bd52f72fcc3fd4f"
+    },
+    "holm8_p_computed": false,
+    "bca_computed": false,
+    "confirmatory_inputs_read_in_block_AY_before_this_file": 0,
+    "unblinding_performed": false
+  },
+  "code_modified": false,
+  "spec_json_modified": false,
+  "amendment1_modified": false,
+  "frozen_at_kst": "2026-09-28T11:21:41+09:00"
+}

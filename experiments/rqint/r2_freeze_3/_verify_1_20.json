@@ -1,0 +1,123 @@
+[
+  {
+    "n": 1,
+    "item": "FACTS 14행 착수 시 전건 일치 (게이트 단계 기록)",
+    "pass": true,
+    "val": "게이트 19/19 PASS"
+  },
+  {
+    "n": 2,
+    "item": "freeze.py = 사전 예측 8bef5f70… · 42,927 B · 1행",
+    "pass": true,
+    "val": "8bef5f70d168c50d"
+  },
+  {
+    "n": 3,
+    "item": "decision.py 0바이트 f688b20d816acabe",
+    "pass": true,
+    "val": ""
+  },
+  {
+    "n": 4,
+    "item": "나머지 9모듈(=freeze·decision 제외) 0바이트",
+    "pass": true,
+    "val": "identical 10"
+  },
+  {
+    "n": 5,
+    "item": "manifest sap_version 1.2 · all_validation_pass true · n_changed 1",
+    "pass": true,
+    "val": "n_changed=1 (freeze.log 축자 '변경 모듈=1')"
+  },
+  {
+    "n": 6,
+    "item": "freeze.py 외 10모듈 = F-MANI0 등재값 동일",
+    "pass": true,
+    "val": ""
+  },
+  {
+    "n": 7,
+    "item": "erratum 6요소 · model_family 14곳 보존 · 신규 2필드 14곳",
+    "pass": true,
+    "val": "erratum 6요소 전건 존재 · model_family 슬롯 14/14 값 보존 · 신규 2필드 14/14 추가",
+    "correction": "최초 판정식이 원시 문자열 카운트(=16)를 14 와 대조해 FAIL 로 났다. 초과분 2씩은 erratum 블록 안의 스키마 설명 문자열이고 슬롯 구조 카운트는 14 다(블록 AM 리포트 §4-3 판독 주의와 동일). 구조 기준 재검증 결과 PASS."
+  },
+  {
+    "n": 8,
+    "item": "erratum 스크립트 멱등(재적용 = 바이트 0 변경)",
+    "pass": true,
+    "val": "[erratum] 이미 적용됨 — 매니페스트 무변경 (sha256 d08dcedf2a22e1c8)\n[erratum] 사이드카 기록 — exper"
+  },
+  {
+    "n": 9,
+    "item": "manifest 패치 전/후 sha256 둘 다 기록",
+    "pass": true,
+    "val": "26071a10944bfc3b / d08dcedf2a22e1c8"
+  },
+  {
+    "n": 10,
+    "item": "live src 3파일 전후 sha256·변경행 기록 (재실행 → §1-2 대체 검증)",
+    "pass": true,
+    "val": "7행"
+  },
+  {
+    "n": 11,
+    "item": "r3_package/sap 14파일 live 재일치 · 새 zip sha 기록 · 기대해시 0건",
+    "pass": true,
+    "val": "14/14 · zip a94b04f53ba5e392"
+  },
+  {
+    "n": 12,
+    "item": "v1 동결(.DRAFT 제거) · v0 0바이트 · 3건 종결",
+    "pass": true,
+    "val": ""
+  },
+  {
+    "n": 13,
+    "item": "개정문 빈칸 0 · R5 4요소 · R4·D19·D21·D22·KS 전건",
+    "pass": true,
+    "val": ""
+  },
+  {
+    "n": 14,
+    "item": "해시 원장에 reviewer_identity_resolved·sign_disclosure_matrix 포함",
+    "pass": true,
+    "val": "{'reviewer_identity_resolved_json': True, 'sign_disclosure_matrix_json': True}"
+  },
+  {
+    "n": 15,
+    "item": "docs/55b §1~§11 무수정 (말미 append 만)",
+    "pass": true,
+    "val": ""
+  },
+  {
+    "n": 16,
+    "item": "docs/33 접두 바이트 동일 · 삭제 0 · 번호 실측(53)",
+    "pass": true,
+    "val": ""
+  },
+  {
+    "n": 17,
+    "item": "docs/45 삽입행 제거 시 착수 sha256 복원",
+    "pass": true,
+    "val": "§2 1행 + §5 문서이력 1문단 제거 시 d0371d38b6cfd042 복원 확인"
+  },
+  {
+    "n": 18,
+    "item": "ledger timeline 51 · auth 28 · append 제거 시 복원 · indent=2 + 말미 개행",
+    "pass": true,
+    "val": ""
+  },
+  {
+    "n": 19,
+    "item": "봉인 stat-only 착수=종료 · 275/291 · open_sealed 0 · emit_sign 0 · decision.py 호출(docs/101 §2 기준)",
+    "pass": true,
+    "val": "diff 차이 0"
+  },
+  {
+    "n": 20,
+    "item": "gin_start_still_blocked true · unblinding false · 네트워크 0 · HEAD 566f487·21 · commit/push 0",
+    "pass": true,
+    "val": ""
+  }
+]

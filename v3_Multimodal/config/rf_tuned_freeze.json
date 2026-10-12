@@ -1,0 +1,86 @@
+{
+  "_doc": "Holm ⑥ tuned-RF baseline 실행수준 동결 — 확정본은 post_interim_freeze_v1_0.json holm6_rf_tuned",
+  "frozen_at_kst": "2026-08-06 14:21:48 KST",
+  "spec_document": "docs/60_v3_rf_tuned_prompt_for_vscode.md (개정판 v2, 2026-08-06)",
+  "predecessor": {
+    "file": "v3_Multimodal/config/post_interim_freeze_v1_0.json",
+    "sha256": "502db732bd5e45cbe0d1da78106f639c0f65261e1215af9912250e1ffa284258",
+    "key": "holm6_rf_tuned",
+    "recorded_in": "docs/33 항목31 국문 (2)"
+  },
+  "character": "benchmark comparison against a strong structure-only baseline, NOT an ablation isolating radius or hyperparameters",
+  "rejected_alternative": "기존 r=2 지문에 튜닝 하이퍼만 얹기 — 존재한 적 없는 구성을 지금 조립하는 것이라 자유도가 더 크다",
+  "block": {
+    "id": "B0_r3",
+    "type": "morgan",
+    "radius": 3,
+    "n_bits": 2048,
+    "generator": "rdFingerprintGenerator.GetMorganGenerator",
+    "fit_required": false,
+    "implementation": "MorganBlockR3 = ladder_confirmatory.MorganBlock 상속. 동일 __init__ 코드경로를 그대로 실행하되 모듈 상수 MORGAN_RADIUS 만 3 으로 일시 치환 후 원복 — ladder_confirmatory.py 는 한 바이트도 수정하지 않는다."
+  },
+  "fingerprint_spec_measured": {
+    "rdkit_version": "2026.03.3",
+    "include_chirality": false,
+    "include_chirality_source": "MorganBlock 이 includeChirality 를 명시하지 않음 → GetMorganGenerator 시그니처 기본값이 실사용값",
+    "vector_kind": "bit",
+    "vector_kind_source": "MorganBlock 이 GetFingerprintAsNumPy() 호출(count 계열 아님)",
+    "n_bits": 2048,
+    "radius": 3,
+    "radius_frozen_b0": 2,
+    "generator_kwargs_in_frozen_b0": [
+      "fpSize",
+      "radius"
+    ],
+    "generator": "rdFingerprintGenerator.GetMorganGenerator",
+    "dtype": "uint8 (np.zeros(..., dtype=np.uint8) 판독)",
+    "source_of_convention": "ladder_confirmatory.MorganBlock (판독만·무수정)",
+    "source_lineno": 143,
+    "source_sha256": "13a17129db6a6679bd6dbdc28a12c0f31e2e8d6b0811130450add602daf5137c",
+    "differs_from_B0_r2_only_in": "radius",
+    "verified_only_radius_differs": true
+  },
+  "estimator": {
+    "wrapper": "MultiOutputClassifier",
+    "base": "RandomForestClassifier",
+    "n_estimators": 1000,
+    "max_depth": 40,
+    "max_features": "sqrt",
+    "min_samples_leaf": 2,
+    "class_weight": "balanced",
+    "n_jobs": -1,
+    "random_state": 42
+  },
+  "provenance": {
+    "source": "v1_RF/results_fairtune/best_config.yaml",
+    "sha16": "f411602e9a46a34c",
+    "sha256": "f411602e9a46a34c0747af50368c58b1abdd1f3f5399b81271e5d50c93920a12",
+    "selected_by": "valid_macro_pr",
+    "search_budget": 16,
+    "sample_seed": 42,
+    "test_used": false,
+    "retuned": false,
+    "selection_metric_value_not_copied_here": "the selection metric value stored in the same file is a performance figure and is deliberately not reproduced here"
+  },
+  "invariants": {
+    "n_drugs": 1092,
+    "n_pt": 370,
+    "repeats": [
+      201,
+      202,
+      203
+    ],
+    "n_fold": 5,
+    "consensus": "A (등록 §6-(ii)): drug-PT별 raw OOF probability 산술평균 → consensus → 그 위에서 추론",
+    "eligible_pt": null
+  },
+  "scope": "본 파일은 arm 하나(RF_tuned)의 OOF 산출 조건만 동결한다. Δ·macro AP·CI·p·부호는 본 블록에서 산출하지 않으며 개봉 단계에서 일괄 수행한다.",
+  "modifies_nothing": [
+    "v3_Multimodal/config/ladder_freeze.json",
+    "v3_Multimodal/src/ladder_confirmatory.py",
+    "v3_Multimodal/src/sap/*",
+    "docs/29",
+    "docs/30"
+  ],
+  "ladder_freeze_note_reading": "ladder_freeze.json 의 rf_hyperparameters.note 'fairtune tuned RF는 미사용' 은 동결 사다리 8모델의 RF 하네스에 tuned 하이퍼를 쓰지 않는다는 뜻이며(같은 항목의 retuned:false 와 짝), 등록 §4 가 별도 baseline 으로 열거한 ⑥ 을 금지하는 문면이 아니다."
+}

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or the released data, please cite the manuscript below.
+  Source code is released under the MIT licence; data, predictions, results and
+  records of the v3 release are released under CC BY-SA 4.0 — see LICENSE-DATA.md.
+title: >-
+  Testing mean-pooled protein language model target embeddings beyond target
+  identity in drug-label adverse drug reaction annotation: a preregistered
+  controlled representation study
+authors:
+  - family-names: Bae
+    given-names: Yeonwoo
+  - family-names: Yoo
+    given-names: Namhyun
+  - family-names: Yang
+    given-names: Jinhong
+version: v3-plosone-v1.0
+license: MIT
+repository-code: https://github.com/Yeonwoo-partytonight/adr-representation-benchmark

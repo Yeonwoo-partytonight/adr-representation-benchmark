@@ -34,5 +34,5 @@
   [D_wd_drop_res] ep 100 loss 0.0929 validMacro 0.1566 best 0.1695@84
   [D_wd_drop_res] early stop @ ep 114 (best 0.1695@84)
   → valid macroPR 0.1695 @ep84 | train macroPR 0.2897 (gap +0.1202)
-[저장] /Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/results_improve/round1b/ | best(valid)=A_wd | Wilcoxon p=0.00194
+[저장] <HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/results_improve/round1b/ | best(valid)=A_wd | Wilcoxon p=0.00194
 EXIT=0

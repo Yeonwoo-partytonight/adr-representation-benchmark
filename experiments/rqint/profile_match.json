@@ -1,0 +1,483 @@
+{
+  "_doc": "블록 AD — AD-1-1(전규모 군 프로파일 실측) / AD-4(축소 fixture 프로파일 대조).",
+  "block": "AD",
+  "instruction": "docs/90_rqint_timing_calibration_budget_prompt_for_vscode.md",
+  "predictions_are_synthetic": true,
+  "confirmatory_predictions_loaded": false,
+  "confirmatory_data_accessed": false,
+  "sealed_accessed": false,
+  "unblinding_performed": false,
+  "gin_start_still_blocked": true,
+  "sap_version_unchanged": "1.1",
+  "manifest_sha16": "756d485feb4715e9",
+  "B_definition_status": "still_unspecified — `B` 가 n_coin_vectors 인지 n_permutation_values 인지 본 모듈에서 정하지 않는다. SAP 1.2 에서 확정 필요.",
+  "when_kst": "2026-08-12T20:56:37+09:00",
+  "AD_1_1_full_profile": {
+    "N": 1092,
+    "G": 732,
+    "size_min": 1,
+    "size_median": 1.0,
+    "size_max": 78,
+    "n_singletons": 627,
+    "singleton_frac": 0.8565573770491803,
+    "sum_sq": 13972.0,
+    "G_eff_kish": 85.34669338677355,
+    "G_eff_over_G": 0.11659384342455403,
+    "top1_row_share": 0.07142857142857142,
+    "top2_row_share": 0.14194139194139194,
+    "top5_sizes": [
+      78,
+      77,
+      17,
+      10,
+      7
+    ],
+    "max_nsq_over_sum_nsq": 0.4354423131978242,
+    "size_skewness": 17.436109879026933
+  },
+  "AD_1_1_special_buckets": {
+    "no_scaffold_bucket_size": 77,
+    "benzene_group_size": 78,
+    "note": "no-scaffold = Bemis–Murcko 결과가 빈 문자열인 버킷(무고리·파싱실패). 벤젠군 = 'c1ccccc1'. D12 민감도 2종의 대상이다(본 블록에서 실행 0)."
+  },
+  "AD_1_1_size_histogram": {
+    "1": 627,
+    "2": 60,
+    "3": 19,
+    "4": 11,
+    "5": 6,
+    "6": 3,
+    "7": 2,
+    "10": 1,
+    "17": 1,
+    "77": 1,
+    "78": 1
+  },
+  "D13_check": {
+    "G_eff_measured": 85.34669338677355,
+    "G_eff_abs_diff_vs_85_3": 0.046693386773554835,
+    "top2_share_measured": 0.14194139194139194,
+    "G_eff_over_G_measured": 0.11659384342455403,
+    "matches_D13": true
+  },
+  "asserts": {
+    "n_groups_eq_732": true,
+    "n_eligible_eq_370": true,
+    "n_eval_eq_370": true,
+    "n_excluded_undefined": 0
+  },
+  "AD_4_rules": {
+    "rows": "AD-4-2 규칙 R-ROW — 실제 scaffold 군 크기 분포의 **최대잉여법(largest remainder) 비례축소**. 군 g 의 할당량 q_g = n_g × N_target / N_full, m_g = floor(q_g); 남은 정수는 잉여 내림차순 → 군 크기 내림차순 → 군 키 오름차순의 결정적 순서로 1씩 배분. m_g = 0 인 군은 탈락. 군 내부 행은 원본(cid 오름차순) 순서의 앞에서 m_g 개.",
+    "pts": "AD-4-1 규칙 R-PT — 선정된 행 안에서의 **라벨 유병률만** 사용. 표본 내 양성 ≥ 1 인 PT 만 적격 (AP 정의 가능). 적격 PT 를 유병률 오름차순(동률은 PT 컬럼명 오름차순)으로 정렬해 **6 등분위 층**으로 나누고 층마다 10개를 seed 고정 RNG 로 비복원 추출. 가장 낮은 층이 극희귀 PT 를 포함하므로 극희귀 포함이 규칙상 보장된다. 성능·예측·부호 **일절 미참조**.",
+    "regroup_variant": "AD-4-2 규칙 R-GRP(대안) — `G_eff/G` 를 실제값에 최대한 붙이기 위한 **군 재배정 변형**. 상위 2군(비례축소분)은 그대로 두고, 잔여 행의 싱글톤을 크기 s 인 j 개 블록으로 병합한다. (s, j)는 `s ≤ 상위2군의 작은 쪽`, `j·s ≤ 잔여행` 범위의 **전수 탐색**으로 |G_eff/G − target| 최소화. 라벨행렬·행 집합은 **불변**이며 군 라벨만 달라진다."
+  },
+  "AD_4_pt_selection": {
+    "rule": "AD-4-1 규칙 R-PT — 선정된 행 안에서의 **라벨 유병률만** 사용. 표본 내 양성 ≥ 1 인 PT 만 적격 (AP 정의 가능). 적격 PT 를 유병률 오름차순(동률은 PT 컬럼명 오름차순)으로 정렬해 **6 등분위 층**으로 나누고 층마다 10개를 seed 고정 RNG 로 비복원 추출. 가장 낮은 층이 극희귀 PT 를 포함하므로 극희귀 포함이 규칙상 보장된다. 성능·예측·부호 **일절 미참조**.",
+    "seed": 20260812,
+    "n_strata": 6,
+    "per_stratum": 10,
+    "n_eligible": 369,
+    "min_pos_required": 1,
+    "selected_prevalence_min": 1,
+    "selected_prevalence_median": 8.5,
+    "selected_prevalence_max": 222,
+    "n_selected_prevalence_le_2": 3,
+    "strata": [
+      {
+        "stratum": 1,
+        "n_candidates": 61,
+        "prevalence_range": [
+          1,
+          4
+        ],
+        "selected_prevalence": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4
+        ]
+      },
+      {
+        "stratum": 2,
+        "n_candidates": 62,
+        "prevalence_range": [
+          4,
+          6
+        ],
+        "selected_prevalence": [
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "stratum": 3,
+        "n_candidates": 61,
+        "prevalence_range": [
+          6,
+          8
+        ],
+        "selected_prevalence": [
+          6,
+          6,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      {
+        "stratum": 4,
+        "n_candidates": 62,
+        "prevalence_range": [
+          8,
+          13
+        ],
+        "selected_prevalence": [
+          9,
+          9,
+          9,
+          9,
+          9,
+          10,
+          11,
+          11,
+          11,
+          12
+        ]
+      },
+      {
+        "stratum": 5,
+        "n_candidates": 61,
+        "prevalence_range": [
+          13,
+          30
+        ],
+        "selected_prevalence": [
+          13,
+          13,
+          13,
+          14,
+          16,
+          16,
+          18,
+          22,
+          25,
+          30
+        ]
+      },
+      {
+        "stratum": 6,
+        "n_candidates": 62,
+        "prevalence_range": [
+          30,
+          237
+        ],
+        "selected_prevalence": [
+          34,
+          36,
+          46,
+          48,
+          101,
+          110,
+          115,
+          116,
+          119,
+          222
+        ]
+      }
+    ]
+  },
+  "AD_4_row_selection": {
+    "n_rows": 400,
+    "n_groups_kept": 313,
+    "n_groups_dropped": 419,
+    "row_idx_sha256": "c659db38abbd8154546a2c583345e54def969d520acbae26c382f8eb6884c178",
+    "pt_cols_sha256": "b24f0588c9f0c53ccaf805b1eec0a93a57e3725ca052f1cea71854bc74693e42"
+  },
+  "AD_4_profile_comparison": {
+    "full": {
+      "N": 1092,
+      "G": 732,
+      "size_min": 1,
+      "size_median": 1.0,
+      "size_max": 78,
+      "n_singletons": 627,
+      "singleton_frac": 0.8565573770491803,
+      "sum_sq": 13972.0,
+      "G_eff_kish": 85.34669338677355,
+      "G_eff_over_G": 0.11659384342455403,
+      "top1_row_share": 0.07142857142857142,
+      "top2_row_share": 0.14194139194139194,
+      "top5_sizes": [
+        78,
+        77,
+        17,
+        10,
+        7
+      ],
+      "max_nsq_over_sum_nsq": 0.4354423131978242,
+      "size_skewness": 17.436109879026933,
+      "pt_positive_group_count": {
+        "min": 6.0,
+        "median": 19.0,
+        "mean": 44.08918918918919,
+        "max": 493.0
+      },
+      "score_tie_rate": 0.0,
+      "leverage": {
+        "n_groups": 732,
+        "T_obs_synthetic": -0.0017824247114846346,
+        "max_esq_over_sum_esq": 0.26599738418807445,
+        "top5_esq_share": 0.3626298813734646,
+        "definition": "δ_g = T*(z=1_g) − T_obs on the synthetic fixture; NOT D11 λ_k/ρ",
+        "predictions_are_synthetic": true
+      }
+    },
+    "reduced_proportional": {
+      "N": 400,
+      "G": 313,
+      "size_min": 1,
+      "size_median": 1.0,
+      "size_max": 29,
+      "n_singletons": 287,
+      "singleton_frac": 0.9169329073482428,
+      "sum_sq": 2062.0,
+      "G_eff_kish": 77.59456838021339,
+      "G_eff_over_G": 0.24790596926585748,
+      "top1_row_share": 0.0725,
+      "top2_row_share": 0.1425,
+      "top5_sizes": [
+        29,
+        28,
+        6,
+        4,
+        3
+      ],
+      "max_nsq_over_sum_nsq": 0.40785645004849663,
+      "size_skewness": 11.739069491422299,
+      "pt_positive_group_count": {
+        "min": 1.0,
+        "median": 8.0,
+        "mean": 20.25,
+        "max": 180.0
+      },
+      "score_tie_rate": 0.0,
+      "leverage": {
+        "n_groups": 313,
+        "T_obs_synthetic": -0.06500193701377861,
+        "max_esq_over_sum_esq": 0.23127355388010584,
+        "top5_esq_share": 0.4927165578474255,
+        "definition": "δ_g = T*(z=1_g) − T_obs on the synthetic fixture; NOT D11 λ_k/ρ",
+        "predictions_are_synthetic": true
+      }
+    },
+    "reduced_ratio_optimal": {
+      "N": 400,
+      "G": 210,
+      "size_min": 1,
+      "size_median": 1.0,
+      "size_max": 29,
+      "n_singletons": 203,
+      "singleton_frac": 0.9666666666666667,
+      "sum_sq": 5748.0,
+      "G_eff_kish": 27.835768963117605,
+      "G_eff_over_G": 0.1325512807767505,
+      "top1_row_share": 0.0725,
+      "top2_row_share": 0.1425,
+      "top5_sizes": [
+        29,
+        28,
+        28,
+        28,
+        28
+      ],
+      "max_nsq_over_sum_nsq": 0.1463117606123869,
+      "size_skewness": 5.200930989212472,
+      "pt_positive_group_count": {
+        "min": 1.0,
+        "median": 6.5,
+        "mean": 15.45,
+        "max": 128.0
+      },
+      "score_tie_rate": 0.0,
+      "leverage": {
+        "n_groups": 210,
+        "T_obs_synthetic": -0.06500193701377861,
+        "max_esq_over_sum_esq": 0.2566212907961613,
+        "top5_esq_share": 0.6363279245864778,
+        "definition": "δ_g = T*(z=1_g) − T_obs on the synthetic fixture; NOT D11 λ_k/ρ",
+        "predictions_are_synthetic": true
+      }
+    }
+  },
+  "AD_4_match_summary": {
+    "G_eff_over_G": {
+      "full": 0.11659384342455403,
+      "reduced_proportional": 0.24790596926585748,
+      "reduced_ratio_optimal": 0.1325512807767505
+    },
+    "top2_row_share": {
+      "full": 0.14194139194139194,
+      "reduced_proportional": 0.1425,
+      "reduced_ratio_optimal": 0.1425
+    },
+    "max_nsq_over_sum_nsq": {
+      "full": 0.4354423131978242,
+      "reduced_proportional": 0.40785645004849663,
+      "reduced_ratio_optimal": 0.1463117606123869
+    },
+    "size_skewness": {
+      "full": 17.436109879026933,
+      "reduced_proportional": 11.739069491422299,
+      "reduced_ratio_optimal": 5.200930989212472
+    }
+  },
+  "AD_4_attainability": {
+    "claim": "N=400 에서 상위 2군 행 점유율을 실제값(14.2%)에 맞추면 `G_eff/G = 0.117` 은 **도달 불가능**하다. `G_eff/G = (Σm)²/(G·Σm²)` 이고 상위2군이 Σm² 를 지배하므로 G·Σm² 의 상한이 목표에 못 미친다.",
+    "min_attainable_ratio_given_top2": {
+      "min_ratio": 0.13255128077675052,
+      "block_size": 28,
+      "n_blocks": 5,
+      "n_singletons": 203,
+      "G": 210,
+      "sum_sq": 5748,
+      "note": "상위군 고정 + 잔여를 「크기 s 인 j 블록 + 싱글톤」으로 두는 족 위의 전수 탐색 하한"
+    },
+    "target": 0.11659384342455403,
+    "gap": 0.015957437352196485,
+    "consequence": "본 블록은 **형상 충실(비례축소)** 을 primary 로 확정하고, 비율 최적 변형을 sensitivity 로 함께 산출한다. 두 변형은 라벨행렬·행 집합이 동일하고 **군 라벨만** 다르다."
+  },
+  "AD_4_primary_variant": "reduced_proportional",
+  "AD_4_regroup_info": {
+    "block_size": 28,
+    "n_blocks": 5,
+    "n_singletons": 203,
+    "G": 210,
+    "ratio": 0.13255128077675052,
+    "top_sizes": [
+      29,
+      28
+    ]
+  },
+  "AD_4_4_bridge_smoke": {
+    "_doc": "블록 AD / AD-4-4 — 축소↔전규모 p 분포 형상 대조(bridge smoke). **판정 아님 · 기술통계만** · 예측 100% 합성.",
+    "status": "계측 · 판정 아님",
+    "NOT_AN_ANALYSIS_RESULT": true,
+    "when_kst": "2026-08-12T19:56:01+09:00",
+    "design": {
+      "scale": "N=1092·K=370·G=732",
+      "R": 10,
+      "n_coin_vectors": 300,
+      "workers": 18
+    },
+    "effect_calibration_full_scale": {
+      "probe_curve": [
+        {
+          "effect": 0.01,
+          "mean_delta_rf": 0.0053407390924269755,
+          "sd": 0.008164517772167321
+        },
+        {
+          "effect": 0.02,
+          "mean_delta_rf": 0.01122959465002261,
+          "sd": 0.008106453082786354
+        },
+        {
+          "effect": 0.05,
+          "mean_delta_rf": 0.029204101849586727,
+          "sd": 0.00797980774639483
+        },
+        {
+          "effect": 0.1,
+          "mean_delta_rf": 0.05952732843526362,
+          "sd": 0.008133971765636362
+        }
+      ],
+      "slope_delta_per_effect": 0.591610555379263,
+      "chosen_effect_for_target_delta": {
+        "0.01": 0.0169030114643396,
+        "0.03": 0.0507090343930188
+      },
+      "fit": "origin-through linear least squares (Δ(0)=0 by construction)",
+      "n_probe_replicates": 12
+    },
+    "cells": {
+      "full__target_delta_0.01": {
+        "target_delta": 0.01,
+        "effect_strength_logit": 0.0169030114643396,
+        "R": 10,
+        "mean_p": 0.44658901830282866,
+        "frac_p_le_0.05": 0.1,
+        "frac_p_le_0.05_over_7": 0.0,
+        "frac_p_le_0.05_over_4": 0.1,
+        "mean_delta_rf": 0.012021797099006526,
+        "mean_delta_gin": 0.010373815357024387,
+        "mean_abs_gap": 0.007352717791791585,
+        "mc_se_frac_p_le_0.05": 0.09486832980505139,
+        "p_values": [
+          0.3643926788685524,
+          0.23460898502495842,
+          0.10815307820299501,
+          0.011647254575707155,
+          0.7304492512479202,
+          0.9966722129783694,
+          0.09484193011647254,
+          0.3610648918469218,
+          0.9434276206322796,
+          0.6206322795341098
+        ],
+        "wall_seconds": 316.3548529148102,
+        "ram_sum_peak_gib": 6.106781005859375,
+        "per_permutation_seconds_median": 0.9866112131099969
+      },
+      "full__target_delta_0.03": {
+        "target_delta": 0.03,
+        "effect_strength_logit": 0.0507090343930188,
+        "R": 10,
+        "mean_p": 0.45224625623960063,
+        "frac_p_le_0.05": 0.1,
+        "frac_p_le_0.05_over_7": 0.0,
+        "frac_p_le_0.05_over_4": 0.1,
+        "mean_delta_rf": 0.0322107190792731,
+        "mean_delta_gin": 0.030732596858034023,
+        "mean_abs_gap": 0.0072834434980410204,
+        "mc_se_frac_p_le_0.05": 0.09486832980505139,
+        "p_values": [
+          0.41098169717138106,
+          0.2612312811980033,
+          0.1314475873544093,
+          0.011647254575707155,
+          0.757071547420965,
+          1.0,
+          0.10815307820299501,
+          0.40765391014975044,
+          0.8735440931780366,
+          0.5607321131447587
+        ],
+        "wall_seconds": 316.3385078907013,
+        "ram_sum_peak_gib": 6.0244140625,
+        "per_permutation_seconds_median": 0.987099174853344
+      }
+    }
+  },
+  "frozen_here": false,
+  "freeze_note": "축소 fixture 규칙은 **본 블록에서 확정하되 동결하지 않는다**(동결 = SAP 1.2 블록)."
+}

@@ -1,0 +1,145 @@
+2026-07-25 15:26:40 KST | ================================================================================
+2026-07-25 15:26:40 KST | [SAP 동결] docs/41 A6~A11 + redaction — synthetic dry-run 검증 → 코드 스캔 → sha256 manifest
+2026-07-25 15:26:40 KST | [검증] metrics — macro AP 정의(undefined-AP 회계) + sklearn 일치
+2026-07-25 15:26:40 KST | [검증] metrics PASS (sklearn 일치=True, undefined 제외=1)
+2026-07-25 15:26:40 KST | [검증] consensus — A8 방법A 산술평균 일치
+2026-07-25 15:26:40 KST | [검증] consensus PASS (평균 일치=True, 단일반복=자기자신=True, 반복 macroAP 3개=True)
+2026-07-25 15:26:40 KST | [검증] bootstrap — A7 실행·CI 유한(units 3종; dry-run B 축소)
+2026-07-25 15:27:18 KST | [검증] bootstrap PASS (primary_ci=BCa; scaffold Δ_obs=0.2956, BCa=[0.2552,0.3555])
+2026-07-25 15:27:18 KST | [검증] signflip — A6 calibration audit (zero-effect p==1 · fair-coin p≈uniform)
+2026-07-25 15:27:36 KST | [검증]   (i) zero-effect: p=1.0000 (기대 1.0) PASS
+2026-07-25 15:31:19 KST | [검증]   (ii) uniform: mean_p=0.533 KS=0.100 frac≤0.05=0.030 PASS
+2026-07-25 15:31:19 KST | [검증] null_generator — A9 보존 assert·family 고정규칙·p_emp 공식
+2026-07-25 15:31:19 KST | [검증] null_generator PASS (global bijection·공유=True, family 고정 4개, guard=True, p_emp 공식=True)
+2026-07-25 15:31:19 KST | [검증] decision — A11 진리표 (RQ2/RQ3/RQ4/Holm/BH-FDR/TOST)
+2026-07-25 15:31:19 KST | [검증] decision PASS (RQ2=True RQ3=True RQ4=True Holm=True BH=True TOST=True)
+2026-07-25 15:31:19 KST | [검증] unseen_target — A10 4분류·canonicalize·sequence-novelty 보수적 bin
+2026-07-25 15:31:19 KST | [검증] unseen_target PASS (4분류=True, canonicalize=True, novelty bin=True)
+2026-07-25 15:31:19 KST | [검증] redaction — emit_sign 도메인·zero 임계
+2026-07-25 15:31:19 KST | [검증] redaction PASS (positive/negative/zero + NaN 거부)
+2026-07-25 15:31:19 KST | [스캔] 확증 데이터 미접근 (AST: import·data-load call·open 인자 리터럴)
+2026-07-25 15:31:19 KST | [스캔] AST 미접근 증명 = True (금지 import 0·data-load call 0·open 데이터리터럴 0)
+2026-07-25 15:31:19 KST | [동결] experiments/sap/manifest.json 저장 (all_validation_pass=True)
+2026-07-25 15:31:19 KST | [동결] config sha16=b885585aefbabb32 (docs41 기대 일치=True, primary B_m1b.dim=10)
+2026-07-25 15:31:19 KST | [SAP 동결] 완료 — 확증 split·OOF 미조회, 네트워크 0. docs/36 진입 게이트 충족.
+2026-07-25 15:31:19 KST | ================================================================================
+2026-07-25 18:15:32 KST | ================================================================================
+2026-07-25 18:15:32 KST | [SAP 재-동결] docs/41 A6~A11 + docs/43 amendment(A1~A6) — synthetic 재검증 → 코드 스캔 → sha256 재-hash
+2026-07-25 18:15:32 KST | [검증] metrics — macro AP 정의(undefined-AP 회계) + sklearn 일치
+2026-07-25 18:15:32 KST | [검증] metrics PASS (sklearn 일치=True, undefined 제외=1)
+2026-07-25 18:15:32 KST | [검증] consensus — A8 방법A 산술평균 일치
+2026-07-25 18:15:32 KST | [검증] consensus PASS (평균 일치=True, 단일반복=자기자신=True, 반복 macroAP 3개=True)
+2026-07-25 18:15:32 KST | [검증] bootstrap — A7 실행·CI 유한(units 3종) + A5 진단필드 + A1 not_estimable
+2026-07-25 18:16:16 KST | [검증] bootstrap PASS (primary_ci=BCa; scaffold Δ_obs=0.2956, BCa=[0.2552,0.3555]; A1 not_estimable=bca_failed_z0_degenerate → rq2 success=False)
+2026-07-25 18:16:16 KST | [검증] signflip — A6 calibration audit (zero-effect p==1 · fair-coin p≈uniform)
+2026-07-25 18:16:34 KST | [검증]   (i) zero-effect: p=1.0000 (기대 1.0) PASS
+2026-07-25 18:20:26 KST | [검증]   (ii) uniform: mean_p=0.533 KS=0.100 frac≤0.05=0.030 PASS
+2026-07-25 18:20:26 KST | [검증] null_generator — A9 보존 assert·family 고정규칙·p_emp 공식
+2026-07-25 18:20:26 KST | [검증] null_generator PASS (global bijection·공유=True, family 고정 4개/6target, NULL_B=1000, MC_SE=0.2449, incidence=0.064)
+2026-07-25 18:20:26 KST | [검증] decision — A11 진리표 (RQ2/RQ3/RQ4/Holm/BH-FDR/TOST)
+2026-07-25 18:20:26 KST | [검증] decision PASS (RQ2=True RQ3=True RQ4=True A1_not_estimable=True Holm7=True eligibility=True BH=True TOST=True)
+2026-07-25 18:20:26 KST | [검증] unseen_target — A10 4분류·canonicalize·sequence-novelty 보수적 bin
+2026-07-25 18:20:26 KST | [검증] unseen_target PASS (4분류=True, canonicalize=True, novelty bin=True)
+2026-07-25 18:20:26 KST | [검증] redaction — emit_sign 도메인·zero 임계
+2026-07-25 18:20:26 KST | [검증] redaction PASS (positive/negative/zero + NaN 거부)
+2026-07-25 18:20:26 KST | [스캔] 확증 데이터 미접근 (AST: import·data-load call·open 인자 리터럴)
+2026-07-25 18:20:26 KST | [스캔] AST 미접근 증명 = True (금지 import 0·data-load call 0·open 데이터리터럴 0)
+2026-07-25 18:20:26 KST | [재-동결] experiments/sap/manifest.json 저장 (all_validation_pass=True, sap_version=1.1, 변경 모듈=7)
+2026-07-25 18:20:26 KST | [재-동결] config sha16=b885585aefbabb32 (docs41 기대 일치=True, primary B_m1b.dim=10)
+2026-07-25 18:20:26 KST | [SAP 재-동결] 완료 — docs/43 A1~A6 반영, 확증 split·OOF 미조회, 네트워크 0. docs/36 진입 게이트 충족.
+2026-07-25 18:20:26 KST | ================================================================================
+2026-08-25 12:58:06 KST | ================================================================================
+2026-08-25 12:58:06 KST | [SAP 재-동결] docs/41 A6~A11 + docs/43 amendment(A1~A6) — synthetic 재검증 → 코드 스캔 → sha256 재-hash
+2026-08-25 12:58:06 KST | [검증] metrics — macro AP 정의(undefined-AP 회계) + sklearn 일치
+2026-08-25 12:58:06 KST | [검증] metrics PASS (sklearn 일치=True, undefined 제외=1)
+2026-08-25 12:58:06 KST | [검증] consensus — A8 방법A 산술평균 일치
+2026-08-25 12:58:06 KST | [검증] consensus PASS (평균 일치=True, 단일반복=자기자신=True, 반복 macroAP 3개=True)
+2026-08-25 12:58:06 KST | [검증] bootstrap — A7 실행·CI 유한(units 3종) + A5 진단필드 + A1 not_estimable
+2026-08-25 12:58:50 KST | [검증] bootstrap PASS (primary_ci=BCa; scaffold Δ_obs=0.2956, BCa=[0.2552,0.3555]; A1 not_estimable=bca_failed_z0_degenerate → rq2 success=False)
+2026-08-25 12:58:50 KST | [검증] signflip — A6 calibration audit (zero-effect p==1 · fair-coin p≈uniform)
+2026-08-25 12:59:07 KST | [검증]   (i) zero-effect: p=1.0000 (기대 1.0) PASS
+2026-08-25 13:02:54 KST | [검증]   (ii) uniform: mean_p=0.533 KS=0.100 frac≤0.05=0.030 PASS
+2026-08-25 13:02:54 KST | [검증] null_generator — A9 보존 assert·family 고정규칙·p_emp 공식
+2026-08-25 13:02:54 KST | [검증] null_generator PASS (global bijection·공유=True, family 고정 4개/6target, NULL_B=1000, MC_SE=0.2449, incidence=0.064)
+2026-08-25 13:02:54 KST | [검증] decision — A11 진리표 (RQ2/RQ3/RQ4/Holm/BH-FDR/TOST)
+2026-08-25 13:02:54 KST | [검증] decision PASS (RQ2=True RQ3=True RQ4=True A1_not_estimable=True Holm7=True eligibility=True BH=True TOST=True)
+2026-08-25 13:02:54 KST | [검증] unseen_target — A10 4분류·canonicalize·sequence-novelty 보수적 bin
+2026-08-25 13:02:54 KST | [검증] unseen_target PASS (4분류=True, canonicalize=True, novelty bin=True)
+2026-08-25 13:02:54 KST | [검증] redaction — emit_sign 도메인·zero 임계
+2026-08-25 13:02:54 KST | [검증] redaction PASS (positive/negative/zero + NaN 거부)
+2026-08-25 13:02:54 KST | [스캔] 확증 데이터 미접근 (AST: import·data-load call·open 인자 리터럴)
+2026-08-25 13:02:54 KST | [스캔] AST 미접근 증명 = True (금지 import 0·data-load call 0·open 데이터리터럴 0)
+2026-08-25 13:02:54 KST | [재-동결] experiments/sap/manifest.json 저장 (all_validation_pass=True, sap_version=1.2, 변경 모듈=1)
+2026-08-25 13:02:54 KST | [재-동결] config sha16=b885585aefbabb32 (docs41 기대 일치=True, primary B_m1b.dim=10)
+2026-08-25 13:02:54 KST | [SAP 재-동결] 완료 — docs/43 A1~A6 반영, 확증 split·OOF 미조회, 네트워크 0. docs/36 진입 게이트 충족.
+2026-08-25 13:02:54 KST | ================================================================================
+2026-08-25 13:20:00 KST | [블록 AL / R2 롤백] 위 2026-08-25 12:58~13:02 실행은 SAP 1.2 재동결 시도였으나
+2026-08-25 13:20:00 KST | [블록 AL / R2 롤백]   AL-4 게이트(B-2 신규 2필드의 «값» 미확정 · 임의 작명 금지)에서 중단됨.
+2026-08-25 13:20:00 KST | [블록 AL / R2 롤백]   docs/100 §6 절차대로 freeze.py·manifest.json 을 SAP 1.1 원본으로 복원:
+2026-08-25 13:20:00 KST | [블록 AL / R2 롤백]   freeze.py=94e6369fa952be7f(F-FREEZE0) · manifest.json=756d485feb4715e9(F-MANI0).
+2026-08-25 13:20:00 KST | [블록 AL / R2 롤백]   따라서 live sap_version 은 여전히 1.1 이다. 위 로그의 sap_version=1.2 는 롤백된 시도의 기록이다.
+2026-08-25 13:20:00 KST | [블록 AL / R2 롤백]   증거 보존 = experiments/rqint/r2_freeze/ · 리포트 = docs/100_r2_sap12_freeze_report.md
+2026-08-25 13:20:12 KST | ================================================================================
+2026-08-25 13:20:12 KST | [SAP 재-동결] docs/41 A6~A11 + docs/43 amendment(A1~A6) — synthetic 재검증 → 코드 스캔 → sha256 재-hash
+2026-08-25 13:20:12 KST | [검증] metrics — macro AP 정의(undefined-AP 회계) + sklearn 일치
+2026-08-25 13:20:12 KST | [검증] metrics PASS (sklearn 일치=True, undefined 제외=1)
+2026-08-25 13:20:12 KST | [검증] consensus — A8 방법A 산술평균 일치
+2026-08-25 13:20:12 KST | [검증] consensus PASS (평균 일치=True, 단일반복=자기자신=True, 반복 macroAP 3개=True)
+2026-08-25 13:20:12 KST | [검증] bootstrap — A7 실행·CI 유한(units 3종) + A5 진단필드 + A1 not_estimable
+2026-08-25 13:20:56 KST | [검증] bootstrap PASS (primary_ci=BCa; scaffold Δ_obs=0.2956, BCa=[0.2552,0.3555]; A1 not_estimable=bca_failed_z0_degenerate → rq2 success=False)
+2026-08-25 13:20:56 KST | [검증] signflip — A6 calibration audit (zero-effect p==1 · fair-coin p≈uniform)
+2026-08-25 13:21:14 KST | [검증]   (i) zero-effect: p=1.0000 (기대 1.0) PASS
+2026-08-25 13:25:00 KST | [검증]   (ii) uniform: mean_p=0.533 KS=0.100 frac≤0.05=0.030 PASS
+2026-08-25 13:25:00 KST | [검증] null_generator — A9 보존 assert·family 고정규칙·p_emp 공식
+2026-08-25 13:25:00 KST | [검증] null_generator PASS (global bijection·공유=True, family 고정 4개/6target, NULL_B=1000, MC_SE=0.2449, incidence=0.064)
+2026-08-25 13:25:00 KST | [검증] decision — A11 진리표 (RQ2/RQ3/RQ4/Holm/BH-FDR/TOST)
+2026-08-25 13:25:00 KST | [검증] decision PASS (RQ2=True RQ3=True RQ4=True A1_not_estimable=True Holm7=True eligibility=True BH=True TOST=True)
+2026-08-25 13:25:00 KST | [검증] unseen_target — A10 4분류·canonicalize·sequence-novelty 보수적 bin
+2026-08-25 13:25:00 KST | [검증] unseen_target PASS (4분류=True, canonicalize=True, novelty bin=True)
+2026-08-25 13:25:00 KST | [검증] redaction — emit_sign 도메인·zero 임계
+2026-08-25 13:25:00 KST | [검증] redaction PASS (positive/negative/zero + NaN 거부)
+2026-08-25 13:25:00 KST | [스캔] 확증 데이터 미접근 (AST: import·data-load call·open 인자 리터럴)
+2026-08-25 13:25:00 KST | [스캔] AST 미접근 증명 = True (금지 import 0·data-load call 0·open 데이터리터럴 0)
+2026-08-25 13:25:00 KST | [재-동결] experiments/sap/manifest.json 저장 (all_validation_pass=True, sap_version=1.2, 변경 모듈=1)
+2026-08-25 13:25:00 KST | [재-동결] config sha16=b885585aefbabb32 (docs41 기대 일치=True, primary B_m1b.dim=10)
+2026-08-25 13:25:00 KST | [SAP 재-동결] 완료 — docs/43 A1~A6 반영, 확증 split·OOF 미조회, 네트워크 0. docs/36 진입 게이트 충족.
+2026-08-25 13:25:00 KST | ================================================================================
+2026-08-25 14:05 KST | ★ 위 [재-동결] 기록(13:20:12~13:25:00, sap_version=1.2)은 **블록 AM(docs/101)에서 §6 롤백됨**.
+2026-08-25 14:05 KST |   live 상태 = SAP **1.1** · manifest sha256 앞16 `756d485feb4715e9` · freeze.py `94e6369fa952be7f`.
+2026-08-25 14:05 KST |   중단 사유 = AL-5 「pre_unblinding_audit.py 1회 실행 → 통과 확인」 미충족(통과 못 하면 중단·보고 축자).
+2026-08-25 14:05 KST |   ※ 미충족 원인 3건은 전부 **R2 이전부터 존재**했고 R2 와 무관하다(반사실 대조로 확인).
+2026-08-25 14:05 KST |   R2 가 담당하는 부분(manifest sha16·sap_version·11모듈)은 갱신 후 gate_g0() 직접 호출로 **통과 확인됨**.
+2026-08-25 14:05 KST |   상세 = docs/101_r2_sap12_freeze_resume_report.md · 시도 산출물 = experiments/rqint/r2_freeze_2/_attempt_rolled_back/
+2026-08-25 14:05 KST | ================================================================================
+2026-08-25 15:13:35 KST | ================================================================================
+2026-08-25 15:13:35 KST | [SAP 재-동결] docs/41 A6~A11 + docs/43 amendment(A1~A6) — synthetic 재검증 → 코드 스캔 → sha256 재-hash
+2026-08-25 15:13:35 KST | [검증] metrics — macro AP 정의(undefined-AP 회계) + sklearn 일치
+2026-08-25 15:13:35 KST | [검증] metrics PASS (sklearn 일치=True, undefined 제외=1)
+2026-08-25 15:13:35 KST | [검증] consensus — A8 방법A 산술평균 일치
+2026-08-25 15:13:35 KST | [검증] consensus PASS (평균 일치=True, 단일반복=자기자신=True, 반복 macroAP 3개=True)
+2026-08-25 15:13:35 KST | [검증] bootstrap — A7 실행·CI 유한(units 3종) + A5 진단필드 + A1 not_estimable
+2026-08-25 15:14:18 KST | [검증] bootstrap PASS (primary_ci=BCa; scaffold Δ_obs=0.2956, BCa=[0.2552,0.3555]; A1 not_estimable=bca_failed_z0_degenerate → rq2 success=False)
+2026-08-25 15:14:18 KST | [검증] signflip — A6 calibration audit (zero-effect p==1 · fair-coin p≈uniform)
+2026-08-25 15:14:36 KST | [검증]   (i) zero-effect: p=1.0000 (기대 1.0) PASS
+2026-08-25 15:18:21 KST | [검증]   (ii) uniform: mean_p=0.533 KS=0.100 frac≤0.05=0.030 PASS
+2026-08-25 15:18:21 KST | [검증] null_generator — A9 보존 assert·family 고정규칙·p_emp 공식
+2026-08-25 15:18:21 KST | [검증] null_generator PASS (global bijection·공유=True, family 고정 4개/6target, NULL_B=1000, MC_SE=0.2449, incidence=0.064)
+2026-08-25 15:18:21 KST | [검증] decision — A11 진리표 (RQ2/RQ3/RQ4/Holm/BH-FDR/TOST)
+2026-08-25 15:18:21 KST | [검증] decision PASS (RQ2=True RQ3=True RQ4=True A1_not_estimable=True Holm7=True eligibility=True BH=True TOST=True)
+2026-08-25 15:18:21 KST | [검증] unseen_target — A10 4분류·canonicalize·sequence-novelty 보수적 bin
+2026-08-25 15:18:21 KST | [검증] unseen_target PASS (4분류=True, canonicalize=True, novelty bin=True)
+2026-08-25 15:18:21 KST | [검증] redaction — emit_sign 도메인·zero 임계
+2026-08-25 15:18:21 KST | [검증] redaction PASS (positive/negative/zero + NaN 거부)
+2026-08-25 15:18:21 KST | [스캔] 확증 데이터 미접근 (AST: import·data-load call·open 인자 리터럴)
+2026-08-25 15:18:21 KST | [스캔] AST 미접근 증명 = True (금지 import 0·data-load call 0·open 데이터리터럴 0)
+2026-08-25 15:18:21 KST | [재-동결] experiments/sap/manifest.json 저장 (all_validation_pass=True, sap_version=1.2, 변경 모듈=1)
+2026-08-25 15:18:21 KST | [재-동결] config sha16=b885585aefbabb32 (docs41 기대 일치=True, primary B_m1b.dim=10)
+2026-08-25 15:18:21 KST | [SAP 재-동결] 완료 — docs/43 A1~A6 반영, 확증 split·OOF 미조회, 네트워크 0. docs/36 진입 게이트 충족.
+2026-08-25 15:18:21 KST | ================================================================================
+2026-08-25 15:36:34 KST | [블록 AN] ★ 위 재-동결은 «채택»되었다 — 롤백 없음. 지시서 docs/102(2차 델타) · docs/101(1차 델타) · docs/100(정본).
+2026-08-25 15:36:34 KST | [블록 AN] AL-4 erratum(d20 · B-2) 적용: manifest 26071a10944bfc3b…(40,136 B) → d08dcedf2a22e1c8…(55,303 B). 멱등 3회 동일. 기존 model_family 14곳 보존, 신규 2필드 14곳 추가.
+2026-08-25 15:36:34 KST | [블록 AN] AL-5: pre_unblinding_audit.py main() 호출 0(1회성 가드 L948 · 산출물 삭제·이동·가드 무력화 0). gate_g0()·gate_holm() 직접 호출 → 합격 6항 전건 PASS (sap_version 1.2 · n_modules 11 · n_module_mismatch 0 · manifest 대조 OK · G0 나머지 8종 일치 · n_labels 7).
+2026-08-25 15:36:34 KST | [블록 AN] 사전 인정 예외 1건 = G0_EXPECT[post_interim_freeze_v1_0.status.json] a12fee2cdfd71350 vs live dbb00d540d7436e5 → 선재 divergence 로 분류(반사실 대조로 R2 무관 실행 확인). §6 롤백 미발동.
+2026-08-25 15:36:34 KST | [블록 AN] AL-6~AL-8 완료: r3_package 14/14 재일치 + zip 재생성 · 동결 3종(rqint_procedure_decisions_v1.json · docs/100_sap_1_2_amendment.md · sap_1_2_hash_registry.json) · 기입 4곳(docs/33 항목53 · docs/45 · docs/55b 말미 · ledger timeline 51/auth 28).
+2026-08-25 15:36:34 KST | [블록 AN] ★ 이전 두 시도(블록 AL 13:20 · 블록 AM 14:05 주석)는 롤백됐고 본 append 가 그것을 supersede 한다. 기존 문면은 바이트 보존. 개봉 0 · GIN 착수 0 · commit/push 0.
+2026-08-25 15:36:34 KST | ================================================================================

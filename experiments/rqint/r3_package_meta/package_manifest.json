@@ -1,0 +1,92 @@
+{
+  "zip_path": "experiments/rqint/r3_package.zip",
+  "zip_sha256": "a94b04f53ba5e392fad4e51c82fb6be1ca2ae0aace0e69554625eca60645c4ca",
+  "zip_bytes": 72280,
+  "n_files": 19,
+  "files": {
+    "r3_package/README_R3.md": {
+      "sha256": "9cf181872d0e468b8c11b92a6931a3c904b7835e173248a4e685cd7cc4109628",
+      "bytes": 2981
+    },
+    "r3_package/canonical.py": {
+      "sha256": "d58e0f4320c01149b535ffa468c34b93a51213ed1ac9716306775ec20804ba1d",
+      "bytes": 5098
+    },
+    "r3_package/collect_env.py": {
+      "sha256": "948cac55a6337c47f12948631d906fae551563eb22ae05d2c28569d2113f7b64",
+      "bytes": 4199
+    },
+    "r3_package/requirements_probe.txt": {
+      "sha256": "a6b77349285cad27227e8f1a8f7d6ff92e2c9c08219c662548397857a97e4fb5",
+      "bytes": 521
+    },
+    "r3_package/run_rqint_probe.py": {
+      "sha256": "da29196aac60683b73a08ef7beb93b2f1085a01d2036ec7f2f022d0cb1399f19",
+      "bytes": 20222
+    },
+    "r3_package/sap/__init__.py": {
+      "sha256": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+      "bytes": 1635
+    },
+    "r3_package/sap/bootstrap.py": {
+      "sha256": "05437c516e606a053e02acefb23c2597365472201b6c70ff2814278d6597a31e",
+      "bytes": 14214
+    },
+    "r3_package/sap/consensus.py": {
+      "sha256": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+      "bytes": 3124
+    },
+    "r3_package/sap/decision.py": {
+      "sha256": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+      "bytes": 16353
+    },
+    "r3_package/sap/freeze.py": {
+      "sha256": "8bef5f70d168c50d7860d5e1d70f78b771d76405fafe2c4d256ac04d08078bc9",
+      "bytes": 42927
+    },
+    "r3_package/sap/metrics.py": {
+      "sha256": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+      "bytes": 4256
+    },
+    "r3_package/sap/null_generator.py": {
+      "sha256": "90886abce256a130531a0ab0cd8edd17abc27ff1b62ee56f24248aa76fa204c7",
+      "bytes": 11119
+    },
+    "r3_package/sap/redaction.py": {
+      "sha256": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+      "bytes": 3647
+    },
+    "r3_package/sap/rqint.py": {
+      "sha256": "eb842bc98140e9c55b67bc1563cd5573c3b294885778f23744468b712c498b26",
+      "bytes": 12970
+    },
+    "r3_package/sap/rqint_audit.py": {
+      "sha256": "ddffe6d128de4d180aeab9be18d6b1a9b5281523bc24cd8a3b4f48f20a2aa4a3",
+      "bytes": 19573
+    },
+    "r3_package/sap/rqint_synthetic.py": {
+      "sha256": "27ef0011ee041920a6e7b63eb4dcfef13c7fd2a70ac017f2324e671df8b0f985",
+      "bytes": 5572
+    },
+    "r3_package/sap/signflip.py": {
+      "sha256": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+      "bytes": 6772
+    },
+    "r3_package/sap/synthetic.py": {
+      "sha256": "ddf715e6fba7503e817c6435c9220f7a83a5e5e31375603fddd522570f2a27d7",
+      "bytes": 8444
+    },
+    "r3_package/sap/unseen_target.py": {
+      "sha256": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+      "bytes": 5610
+    }
+  },
+  "regenerated_by": {
+    "block": "AN",
+    "instruction": "docs/102_r2_al5_verification_delta_prompt_for_vscode.md",
+    "reason": "R2 SAP 1.2 — freeze.py L581 변경으로 sap/freeze.py 사본 발산 → 재동기화·재생성",
+    "supersedes_zip_sha256": "fcbcaeea6c6158de8bbe7da60fe7d5410e15db9a97f6e804a26c62cc146e9351",
+    "method": "블록 AG 와 동일 결정적 zip (date_time=(2026,8,14,0,0,0)·경로 정렬·external_attr 0o644<<16·create_system 3)",
+    "expected_hash_files_bundled": 0
+  }
+}

@@ -1,0 +1,31 @@
+[00:28:30] ══════════════════════════════════════════════════════════════════════
+[00:28:30] 블록 AC — RQ-int 검정 구현 + R6 검증 (합성 전용 · 확증 접근 0)
+[00:28:30] ══════════════════════════════════════════════════════════════════════
+[00:28:30] [스캔] AST 확증데이터 미접근 = True (금지 import 0 · data-load call 0 · open 리터럴 0)
+[00:28:30] [토폴로지] rqint←signflip=False · rqint_audit←rqint=False · pass=True
+[00:28:30] [텍스트] assert8=True · _EPS 일치=True · p 공식 축자 계승=True
+[00:28:30] [fixture] zero N=100 K=10 G=20 · tiny G=8 (임의값)
+[00:28:30] [R6-1] 가환성 단위테스트 (임의 z 100개)
+[00:28:30]         pass=True max_abs_diff=0.000e+00
+[00:28:30] [R6-2] zero-effect → p = 1.0
+[00:28:35]         pass=True p=1.0
+[00:28:35] [R6-4] 여집합 반대칭 complement_audit (≥1,000 draw 명시적 재계산)
+[00:29:04]         pass=True draws=1000 max_dev=0.000e+00
+[00:29:04] [R6-5] 전체 교환 보존 (z ≡ 1 → T* = −T)
+[00:29:04]         pass=True abs_dev=0.000e+00
+[00:29:04] [R6-6] 군 순서 불변 (순서보존 재라벨 + 행 치환)
+[00:29:17]         pass=True p_base=0.5440931780366056
+[00:29:17] [R6-7] 재실행 결정성 (참조분포 바이트 동일)
+[00:29:26]         pass=True
+[00:29:26] [R6-9] 독립 구현 대조 (소박한 이중 루프 참조 구현)
+[00:29:31]         pass=True max_diff=0.000e+00
+[00:29:31] [R6-8] 완전열거 정답표 (2^8 = 256 전수 vs 몬테카를로)
+[00:30:22]         pass=True p_exact=0.04688 p_MC=0.04762 3SE=0.01003
+[00:30:22] [R6-3] 대칭 할당 균등성 (R=200 realization · F-A6TOL 동일 규격)
+[00:38:02]         pass=True mean_p=0.4950 KS=0.0514
+[00:38:02] [계측] per_permutation_seconds 실측 (macro-AP 8회 포함)
+[00:38:06]         per_permutation_seconds=0.015126s (N=100 K=10 G=20)
+[00:38:06] [진단] 약한-null (Δ_RF ≈ Δ_GIN ≠ 0) — 예비 진단 · 판정 아님
+[00:45:39]         mean_p=0.4585 frac(p≤0.05)=0.0950 (판정 아님)
+[00:45:40] [종합] R6 전항 PASS = True
+[00:45:40] [산출] /private/var/folders/9l/53xkb7dd09j41btx6g8l9jdh0000gn/T/r3_main_local_93vuua6e/r3_main_package/experiments/rqint/audit_r6.json

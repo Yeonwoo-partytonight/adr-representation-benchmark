@@ -1,0 +1,650 @@
+{
+  "_scope": "블록 P 공개 요약 — arm 이름·차원·개수·형상·해시·시간·게이트 판정뿐. Δ·macro AP·CI·p·부호·**λ 값** 전량 봉인(docs/61 §1·§P-5).",
+  "ts_kst": "2026-08-06 23:33:56 KST",
+  "spec": "docs/61_v3_late_fusion_prompt_for_vscode.md (개정판 v2.1)",
+  "hypothesis": "Holm ⑦ (RF+seq − RF, RQ7) 의 arm 산출 — 대비(Δ)는 본 블록 범위 밖",
+  "holm_label": "RFseq-RF",
+  "freeze_file": "v3_Multimodal/config/holm7_latefusion_freeze.json",
+  "freeze_sha256": "d89f8c52412b656e467accbda4e1e9a36aaba14830be5b3d81ca756e54b357c1",
+  "arms": {
+    "p_rf": {
+      "blocks": [
+        "B0"
+      ],
+      "model": "M0",
+      "feature_dim": 2048
+    },
+    "p_seq_primary": {
+      "blocks": [
+        "B_seq"
+      ],
+      "feature_dim": 64
+    },
+    "p_seq_sensitivity": {
+      "blocks": [
+        "B1",
+        "B_seq"
+      ],
+      "feature_dim": 66,
+      "used_for_adjudication": false
+    }
+  },
+  "sealed_arm_files": [
+    "oof_seq",
+    "oof_ens",
+    "oof_ens_half",
+    "oof_seq_sens",
+    "oof_ens_sens"
+  ],
+  "n_repeats": 3,
+  "n_fold": 5,
+  "n_outer_units": 15,
+  "n_completed_units": 15,
+  "n_rf_fits_total": 90,
+  "inner_validation": {
+    "size": 97,
+    "inner_train_sizes": [
+      776,
+      777
+    ],
+    "scaffold_group_cross_between_buckets": 0,
+    "shared_rule": "gin_inner_valid_freeze.json (1/9 scaffold-group · 새 추첨 0)",
+    "reproduction_matches_frozen_check": true,
+    "units": [
+      {
+        "split_seed": 201,
+        "fold": 0,
+        "inner_seed": 201000,
+        "n_outer_train": 874,
+        "n_inner_train": 777,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 79,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 201,
+        "fold": 1,
+        "inner_seed": 201001,
+        "n_outer_train": 874,
+        "n_inner_train": 777,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 82,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 201,
+        "fold": 2,
+        "inner_seed": 201002,
+        "n_outer_train": 873,
+        "n_inner_train": 776,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 78,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 201,
+        "fold": 3,
+        "inner_seed": 201003,
+        "n_outer_train": 874,
+        "n_inner_train": 777,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 82,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 201,
+        "fold": 4,
+        "inner_seed": 201004,
+        "n_outer_train": 873,
+        "n_inner_train": 776,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 77,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 202,
+        "fold": 0,
+        "inner_seed": 202000,
+        "n_outer_train": 874,
+        "n_inner_train": 777,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 66,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 202,
+        "fold": 1,
+        "inner_seed": 202001,
+        "n_outer_train": 874,
+        "n_inner_train": 777,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 81,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 202,
+        "fold": 2,
+        "inner_seed": 202002,
+        "n_outer_train": 873,
+        "n_inner_train": 776,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 15,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 202,
+        "fold": 3,
+        "inner_seed": 202003,
+        "n_outer_train": 874,
+        "n_inner_train": 777,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 79,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 202,
+        "fold": 4,
+        "inner_seed": 202004,
+        "n_outer_train": 873,
+        "n_inner_train": 776,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 84,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 203,
+        "fold": 0,
+        "inner_seed": 203000,
+        "n_outer_train": 874,
+        "n_inner_train": 777,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 79,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 203,
+        "fold": 1,
+        "inner_seed": 203001,
+        "n_outer_train": 874,
+        "n_inner_train": 777,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 73,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 203,
+        "fold": 2,
+        "inner_seed": 203002,
+        "n_outer_train": 873,
+        "n_inner_train": 776,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 78,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 203,
+        "fold": 3,
+        "inner_seed": 203003,
+        "n_outer_train": 874,
+        "n_inner_train": 777,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 68,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      },
+      {
+        "split_seed": 203,
+        "fold": 4,
+        "inner_seed": 203004,
+        "n_outer_train": 873,
+        "n_inner_train": 776,
+        "n_inner_valid": 97,
+        "n_valid_scaffold_groups": 88,
+        "group_cross_between_buckets": 0,
+        "matches_frozen_check": true
+      }
+    ]
+  },
+  "lambda_grid_definition": {
+    "n_points": 21,
+    "min": 0.0,
+    "max": 1.0,
+    "step": 0.05,
+    "construction": "k/20 for k in 0..20",
+    "duplicates": 0,
+    "gaps": 0
+  },
+  "lambda_values_public": false,
+  "lambda_note": "λ 는 결과-의존 선택량이라 값 전량 봉인 — 공개는 격자 정의뿐.",
+  "gate0": {
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_version": "1.1",
+    "sap_n_modules_verified": 11,
+    "sap_modules_all_match": true,
+    "pass": true
+  },
+  "gates": {
+    "A_entry": {
+      "gate": "A",
+      "label": "블록 P 진입",
+      "load1": 1.48583984375,
+      "pass": true
+    },
+    "B_start": {
+      "gate": "B",
+      "label": "블록 P 시작",
+      "competitors": 0,
+      "pass": true
+    },
+    "prelook": {
+      "supplement_recorded": true,
+      "docs33_sha16": "5f328286c8a9eba5"
+    },
+    "G_BLOCK": {
+      "holm67_start_still_blocked_until_reply": false,
+      "post_interim_sha256": "502db732bd5e45cbe0d1da78106f639c0f65261e1215af9912250e1ffa284258",
+      "post_interim_status_sha256": "a12fee2cdfd71350422e20e8ba2b6f4d083dd89f6907296fad944959d7d70083"
+    },
+    "G_HOLM": {
+      "line": 44,
+      "n_labels": 7,
+      "labels": [
+        "M2b-P-ID",
+        "M2b-P-FAM",
+        "M2b-realloc_null",
+        "M2b-M0",
+        "M2b-RF_tuned",
+        "RFseq-RF",
+        "RQ-int"
+      ]
+    },
+    "G0_extra": {
+      "gin_seed_freeze.json": "10828447c6d33118",
+      "gin_inner_valid_freeze.json": "038599c3e1576022",
+      "gin_inner_valid_freeze.status.json": "bd329fefe613971f",
+      "post_interim_freeze_v1_0.json": "502db732bd5e45cb",
+      "rf_tuned_freeze.json": "c1ef6406fbb48b7f"
+    },
+    "freeze": {
+      "sha256": "d89f8c52412b656e467accbda4e1e9a36aaba14830be5b3d81ca756e54b357c1",
+      "arms": [
+        "p_rf",
+        "p_seq_primary",
+        "p_seq_sensitivity",
+        "learner"
+      ]
+    },
+    "no_existing_outputs": {
+      "skipped_for_public_stage": true
+    },
+    "lambda_grid": {
+      "n_points": 21,
+      "min": 0.0,
+      "max": 1.0,
+      "step": 0.05,
+      "construction": "k/20 for k in 0..20",
+      "duplicates": 0,
+      "gaps": 0
+    },
+    "public_stage_sealed_recheck": {
+      "n_preexisting_sealed": 184,
+      "preexisting_unchanged": true,
+      "n_own_sealed": 89,
+      "own_sha_all_match": true
+    },
+    "B_end": {
+      "gate": "B",
+      "label": "블록 P 종료",
+      "competitors": 0,
+      "pass": true
+    }
+  },
+  "inputs_sha256": {
+    "splits": {
+      "rep1_seed201": {
+        "folds_json_sha256": "3c1a5d68bfcc6ddfa1de17990194c5beb3c4fe365ee0a123d04c4a34bed871b2",
+        "fold_membership_sha256": "7047606f76562ba54b1dadef0518cb8e18ed22dad5b588d22b298bcb892284ad",
+        "n_rows": 1092,
+        "n_scaffold_groups": 732,
+        "n_scaffold_groups_split_manifest": 732,
+        "n_rows_empty_scaffold": 77,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep2_seed202": {
+        "folds_json_sha256": "786feeca045f603685e190a252636f3815695d2c9e61812c8db1daf063abccfa",
+        "fold_membership_sha256": "27f2e01dcb392be4873dc2820fdbb9bb8d0f5c8c85139878f523de6a74056b33",
+        "n_rows": 1092,
+        "n_scaffold_groups": 732,
+        "n_scaffold_groups_split_manifest": 732,
+        "n_rows_empty_scaffold": 77,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep3_seed203": {
+        "folds_json_sha256": "9db08cf96298b47e182e286fa4ef4b94f74605c6f31f0f9f841bc723c638b4e4",
+        "fold_membership_sha256": "45762346d825a9f3a630ea34a423c10b49039275f5d4ef28a264e6ae2aa0ad23",
+        "n_rows": 1092,
+        "n_scaffold_groups": 732,
+        "n_scaffold_groups_split_manifest": 732,
+        "n_rows_empty_scaffold": 77,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      }
+    },
+    "sources": {
+      "master_X.parquet": {
+        "path": "data/processed/master_X.parquet",
+        "sha256": "788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6"
+      },
+      "master_Y.parquet": {
+        "path": "data/processed/master_Y.parquet",
+        "sha256": "bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018"
+      },
+      "B_seq_emb": {
+        "path": "data/processed/drug_target_emb_meanpool.npy",
+        "sha256": "052a901f7c2bb91f09b2c4cff4f812a5b3ce65f249f0aaacce759a3d926ea50f"
+      },
+      "B_seq_mask": {
+        "path": "data/processed/drug_target_mask_meanpool.npy",
+        "sha256": "577acfffa7d8df1e16b7e38e9af7a2951cc3e258f355042ede5a353e95b18366"
+      },
+      "B1_ntargets": {
+        "path": "data/processed/drug_n_targets_meanpool.npy",
+        "sha256": "52f8fc8065d43406f9423224a0abe71dedcf928b294c5c3c97a1ff04e1b8b58a"
+      },
+      "B_pid_src": {
+        "path": "data/processed/target_mapping/06_targets_human.csv",
+        "sha256": "2784c1bd0fb8df3b079d5eda460d280d921bb48260e6d11d48f4f8009988bdd4"
+      },
+      "B_m1b_src": {
+        "path": "data/processed/target_mapping/08_m1b_covariates.csv",
+        "sha256": "c302399f32c71083a8947971fdb0826f91234be93dd6ee7483b82fd633597256"
+      },
+      "B_fam_src": {
+        "path": "data/processed/target_mapping/10_target_family_biological.csv",
+        "sha256": "6c8da361a1f689b2f2af9e01fdbfcc78d5f1301220355571cfc0491fe152ea88"
+      },
+      "consensus_M0.npz": {
+        "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz",
+        "sha256": "257de8d10e3a22d35e2de7a6245870fc4ca3e5309c92a8a74502aa8228d0bf1e"
+      }
+    }
+  },
+  "consistency_checks": {
+    "n_drugs": 1092,
+    "n_pt": 370,
+    "reps": {
+      "rep1": {
+        "n_scaffold_groups": 732,
+        "scaffold_fold_cross": 0,
+        "n_pt_train_positive_lt1": 0,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep2": {
+        "n_scaffold_groups": 732,
+        "scaffold_fold_cross": 0,
+        "n_pt_train_positive_lt1": 0,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep3": {
+        "n_scaffold_groups": 732,
+        "scaffold_fold_cross": 0,
+        "n_pt_train_positive_lt1": 0,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      }
+    }
+  },
+  "zero_vector_check": {
+    "n_mapped": 847,
+    "n_unmapped": 245,
+    "unmapped_bseq_exactly_zero": true
+  },
+  "row_alignment": {
+    "p_rf_rows_equal_test_idx": true,
+    "master_X_cid_sorted": true,
+    "sealed_cid_matches_master_X": true
+  },
+  "outer_split_reproduction_calibration": {
+    "rep1_seed201": {
+      "mismatched_rows": 0,
+      "fold_sizes": [
+        218,
+        218,
+        219,
+        218,
+        219
+      ],
+      "n_scaffold_groups": 732
+    },
+    "rep2_seed202": {
+      "mismatched_rows": 0,
+      "fold_sizes": [
+        218,
+        218,
+        219,
+        218,
+        219
+      ],
+      "n_scaffold_groups": 732
+    },
+    "rep3_seed203": {
+      "mismatched_rows": 0,
+      "fold_sizes": [
+        218,
+        218,
+        219,
+        218,
+        219
+      ],
+      "n_scaffold_groups": 732
+    }
+  },
+  "refit_byte_identity_assert": {
+    "verify_stage": true,
+    "every_unit": true,
+    "n_units_asserted": 15,
+    "reference": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M0.npz",
+    "detail": {
+      "model": "M0",
+      "repeat": 1,
+      "fold": 0,
+      "n_test_rows": 218,
+      "dim": 2048,
+      "dtype": "float64",
+      "wall_s": 93.98925504198996
+    }
+  },
+  "oof_shape": [
+    1092,
+    370
+  ],
+  "oof_nan_count": 0,
+  "leak_rows": 0,
+  "measure": {
+    "measured_model_folds": [
+      "p_seq(inner)",
+      "p_RF(inner)",
+      "p_RF(refit, P-2-1)"
+    ],
+    "measured_wall_s_p_seq_inner": 90.1636010830407,
+    "measured_wall_s_p_rf_inner": 92.2227450410137,
+    "measured_wall_s_p_rf_refit": 93.98925504198996,
+    "measured_wall_s_lambda_grid_21": 1.3055847079958767,
+    "dims": {
+      "p_rf": 2048,
+      "p_seq_primary": 64,
+      "p_seq_sensitivity": 66
+    },
+    "n_units": 15,
+    "n_rf_fits_per_unit": 6,
+    "n_rf_fits_total": 90,
+    "estimated_per_unit_wall_s": 549.4775738311582,
+    "estimated_total_wall_s": 8242.163607467373,
+    "estimated_total_wall_hours": 2.2894898909631594,
+    "estimated_total_wall_days": 0.09539541212346497,
+    "abort_threshold_days": 7.0,
+    "exceeds_threshold": false,
+    "peak_rss_gib": 2.3324127197265625,
+    "scaling_note": "비용 지배변수 = RF 적합 횟수(지시서 §P-3). 확정본이 재적합을 요구하므로 unit 당 6 fit(내부 rf·seq·seq_sens + 재적합 rf·seq·seq_sens)로 세고, sensitivity 를 별도로 더하지 않고 이미 포함해 셌다. v1 의 '45' 추정은 재적합 미반영이라 쓰지 않았다. λ 격자 탐색은 행렬 가중합이라 무시 가능 수준임을 실측으로 확인했다."
+  },
+  "run": {
+    "total": 15,
+    "session_seq": 1,
+    "n_done_this_session": 15,
+    "session_wall_s": 8486.744996666966,
+    "env_fingerprint_match": true,
+    "sealed_guard_check": {
+      "n_preexisting": 185,
+      "n_added_own": 82,
+      "n_foreign": 0,
+      "preexisting_unchanged": true
+    },
+    "sealed_guard_n_files": 185,
+    "sealed_guard_unchanged": true
+  },
+  "sealed_sha256_oof": {
+    "rep1/oof_seq.npz": "cf88a0b14f1b957e5bdb79d92eeeb4534cef9c33fc249fd80fe76ceb61c61413",
+    "rep1/oof_ens.npz": "fc39f1cebea7b7309a061e65a8197903ed521ee1e16d4c9fddcdee0a3a9dcd07",
+    "rep1/oof_ens_half.npz": "9ad1a13275905241c674c039fa057811c9121c09f03b9e2a39d4fff177ab4bf1",
+    "rep1/oof_seq_sens.npz": "f9b34600df0c60ca5414b4d25884848edbbf9e0bd7d39256f451a87782e26e6d",
+    "rep1/oof_ens_sens.npz": "e5ac87e3c14443b164eab3a2337df67765d1f3dcdb5d0f44b11378f86f347360",
+    "rep1/lambda_selected.json": "55ae57ffda38c272c8f01245ea229ce040f3beb6e2c8b4dcd82c610ed654aa63",
+    "rep1/metrics_full.json": "f8158add8ddaefcf52adae9f89ff9f0a042cd572b6c71f0aaf23bf00c0911803",
+    "rep2/oof_seq.npz": "16dcd534752e710bca8c316ccb9b7ab41971591cabeff08f3f8a51102592ad4b",
+    "rep2/oof_ens.npz": "c3e1709fa36c17649766625c99a6722acb3e681fc10eccb7c932d44ddd1007e1",
+    "rep2/oof_ens_half.npz": "21f306001ed4d185dd549f810a9b25946f8e9ca8f181499bb9d9b96b804e7dc5",
+    "rep2/oof_seq_sens.npz": "6802771cc6276a8bb132dd21a8bdf3f3cf82d34e14895cb01943e8101b78f214",
+    "rep2/oof_ens_sens.npz": "3fc2587cc93b50dfc693d1a596b85c88b339f57c8c7554fa4c79405d4a820ae8",
+    "rep2/lambda_selected.json": "4e61e2ae64d5cecf5df85321808ff1b20d564126765bcc783373941326564c34",
+    "rep2/metrics_full.json": "b71258cff3f34a1eb4f4aaaf0ee12509c2bee68f18d36bda332fdad7dc67b9f2",
+    "rep3/oof_seq.npz": "d7d49962cb7c4ae959d7b7de4fd46684732b729af9734f2c076ff5109e73d8e2",
+    "rep3/oof_ens.npz": "3829ba88e851547de8c2ad5184bba71f02e3338377b0e833dae3cd066467b49c",
+    "rep3/oof_ens_half.npz": "f7aecd7b93f0b0015b5b6d084aebe929517ec5d01b34d4f6e59355900fcccbeb",
+    "rep3/oof_seq_sens.npz": "4c493fd969f88d7d2e9443ae7b254d5876de3fff1d7ddb16c9423f350f640eb3",
+    "rep3/oof_ens_sens.npz": "58ae036f20a785c2b12b6b8f95411ea089a48fcf7d5221437dc6abe7b3442042",
+    "rep3/lambda_selected.json": "0388ded8a82798e113e59cb0ecec8b63cd7fb49c6a5d5843af255bad54c3ae7f",
+    "rep3/metrics_full.json": "abf2e0cfa8263b37824970f25be75d4e9042906f1ce3ed7863e427c49660d4c4"
+  },
+  "consensus": {
+    "n_arms": 5,
+    "method": "A (등록 §6-(ii)): drug-PT별 raw OOF probability 산술평균 → consensus → 그 위에서 추론",
+    "dir": "experiments/runs/v3_latefusion_consensus_rep123",
+    "sealed_sha256": {
+      "consensus_seq.npz": "f5dcd1a5e458b5100e98e6ceae88d5841baab37406296f3f7b92757456f63818",
+      "consensus_ens.npz": "fa51440c9014b0fc945dba8c2fc144c8d070f0c83a47fd6e495194c3add0488c",
+      "consensus_ens_half.npz": "24ad49cfa92252b2dff134511b2b6af65f9964cdc38e514aeca25f95f8123c4a",
+      "consensus_seq_sens.npz": "6a6ad46f55582a84c48d31a8772a4535d5c642bbfb9f44a8cfc496c7f91e7e09",
+      "consensus_ens_sens.npz": "5ea65c20b8a7c74a2b79c2bb88e7dc4795245f7822ec2b8a792784da315b7adf",
+      "metrics_full.json": "03d744f82f14f5af49c52a5e645cc1493e1f000ef8a1937824c43cff7eb0969a"
+    },
+    "wall_s": 2.538093500013929
+  },
+  "auxiliary_registered_s12_computed_into_sealed_only": true,
+  "auxiliary_registered_s12_items": [
+    "상관",
+    "rank disagreement",
+    "정오 비중복",
+    "개선 fold 비율"
+  ],
+  "peak_rss_gib": 0.2941741943359375,
+  "sealed_guard_n_files": 185,
+  "sealed_guard_unchanged": true,
+  "compute_conditions": {
+    "blas_env": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null
+    },
+    "rf_n_jobs": -1,
+    "rf_random_state": 42,
+    "note": "블록 I·O 와 동일 조건(스레드 환경변수 미설정·병렬 인자 무변경)."
+  },
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "scipy": "1.18.0",
+    "rdkit": "2026.03.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O"
+  },
+  "not_performed": [
+    "개봉(open_sealed)",
+    "성공판정(rq*_decision)",
+    "Holm/BH 다중성",
+    "TOST/SESOI",
+    "bootstrap CI",
+    "sign-flip",
+    "p-value",
+    "Δ(ensemble − RF) 산출",
+    "부호 산출(emit_sign)",
+    "λ 값 공개",
+    "λ 를 test·OOF·Δ·p 로 선택",
+    "기존 동결물 수정",
+    "기존 _sealed 덮어쓰기",
+    "동결 8모델·RF_tuned 재계산",
+    "split·fold·seed 재추첨",
+    "내부 valid 재추첨",
+    "⑧ GIN·RQ-int",
+    "A3·A4·A6 층화",
+    "A5 재조회",
+    "네트워크",
+    "data/raw 변경",
+    "git commit·push"
+  ],
+  "open_sealed_calls": 0,
+  "decision_functions_called": [],
+  "multiplicity_applied": false,
+  "emit_sign_called": false,
+  "gin_start_still_blocked": true
+}

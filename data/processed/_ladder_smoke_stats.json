@@ -1,0 +1,222 @@
+{
+  "leakage_assert": {
+    "B0": {
+      "block": "B0_morgan",
+      "n_fit_rows": 0,
+      "n_train": 873,
+      "leak_rows": 0,
+      "dim": 2048
+    },
+    "B1": {
+      "block": "B1_count_mask",
+      "n_fit_rows": 873,
+      "n_train": 873,
+      "leak_rows": 0,
+      "dim": 2
+    },
+    "B_seq": {
+      "block": "B_seq",
+      "n_fit_rows": 671,
+      "n_train": 873,
+      "leak_rows": 0,
+      "dim": 64
+    },
+    "C_ccap": {
+      "block": "C_ccap",
+      "n_fit_rows": 671,
+      "n_train": 873,
+      "leak_rows": 0,
+      "dim": 64
+    },
+    "B_pid": {
+      "block": "B_pid",
+      "n_fit_rows": 873,
+      "n_train": 873,
+      "leak_rows": 0,
+      "dim": 1099
+    },
+    "B_m1b": {
+      "block": "B_m1b",
+      "n_fit_rows": 873,
+      "n_train": 873,
+      "leak_rows": 0,
+      "dim": 10
+    },
+    "B_m1b_pchembl": {
+      "block": "B_m1b_pchembl",
+      "n_fit_rows": 873,
+      "n_train": 873,
+      "leak_rows": 0,
+      "dim": 13
+    },
+    "B_fam": {
+      "block": "B_fam",
+      "n_fit_rows": 873,
+      "n_train": 873,
+      "leak_rows": 0,
+      "dim": 42
+    },
+    "B_fam_selfclust": {
+      "block": "B_fam_selfclust",
+      "n_fit_rows": 873,
+      "n_train": 873,
+      "leak_rows": 0,
+      "dim": 835
+    }
+  },
+  "ccap_match": {
+    "dim_B_seq": 64,
+    "dim_C_ccap": 64,
+    "dim_match": true,
+    "effrank_B_seq_train": 24.105287551879883,
+    "effrank_C_ccap_train": 23.208782196044922,
+    "effrank_B_seq_valid": 14.959864616394043,
+    "effrank_C_ccap_valid": 21.14209747314453,
+    "featnorm_B_seq_train": 20.821752548217773,
+    "featnorm_C_ccap_train": 23.486953735351562,
+    "featnorm_B_seq_valid": 20.218122482299805,
+    "featnorm_C_ccap_valid": 23.364643096923828,
+    "train_val_gap_effrank_B_seq": 9.14542293548584,
+    "train_val_gap_effrank_C_ccap": 2.0666847229003906,
+    "train_val_gap_featnorm_B_seq": 0.6036300659179688,
+    "train_val_gap_featnorm_C_ccap": 0.12231063842773438,
+    "target_signal": 0
+  },
+  "deferred_check": {
+    "blocks_deferred": [],
+    "models_deferred": [],
+    "all_blocks_assembled": true
+  },
+  "smoke_macro_ap": {
+    "M0": {
+      "macro_ap": 0.18819341304550044,
+      "n_pt_eval": 301,
+      "side_dim": 2048
+    },
+    "M1": {
+      "macro_ap": 0.19574325114979022,
+      "n_pt_eval": 301,
+      "side_dim": 2050
+    },
+    "M2": {
+      "macro_ap": 0.20911893334236814,
+      "n_pt_eval": 301,
+      "side_dim": 2114
+    },
+    "M1b": {
+      "macro_ap": 0.2051602499993418,
+      "n_pt_eval": 301,
+      "side_dim": 2060
+    },
+    "M2b": {
+      "macro_ap": 0.209891982768565,
+      "n_pt_eval": 301,
+      "side_dim": 2124
+    },
+    "P-ID": {
+      "macro_ap": 0.250611176631785,
+      "n_pt_eval": 301,
+      "side_dim": 3159
+    },
+    "P-FAM": {
+      "macro_ap": 0.20693515928045647,
+      "n_pt_eval": 301,
+      "side_dim": 2102
+    },
+    "C-CAP": {
+      "macro_ap": 0.17130092689614143,
+      "n_pt_eval": 301,
+      "side_dim": 2124
+    }
+  },
+  "sensitivity_smoke": {
+    "M1b_pchembl": {
+      "macro_ap": 0.21234209671644488,
+      "n_pt_eval": 301,
+      "side_dim": 2063,
+      "note": "pChEMBL 포함(13차원) B_m1b_pchembl 기반 sensitivity — primary 판정 대상 아님."
+    },
+    "M2b_pchembl": {
+      "macro_ap": 0.2220290554556709,
+      "n_pt_eval": 301,
+      "side_dim": 2127,
+      "note": "pChEMBL 포함(13차원) B_m1b_pchembl 기반 sensitivity — primary 판정 대상 아님."
+    },
+    "P-FAM_selfclust": {
+      "macro_ap": 0.2317874545395289,
+      "n_pt_eval": 301,
+      "side_dim": 2895,
+      "note": "자체클러스터(09) 보존 블록 sanity. 어떤 primary frozen 모델에도 미포함."
+    }
+  },
+  "block_dims_seed42_dev": {
+    "B0_morgan": 2048,
+    "B1_count_mask": 2,
+    "B_seq": 64,
+    "B_pid": 1099,
+    "C_ccap": 64,
+    "B_m1b": 10,
+    "B_m1b_pchembl": 13,
+    "B_fam": 42,
+    "B_fam_selfclust": 835
+  },
+  "b_seq_evr": 0.9300198553190403,
+  "b_pid_vocab_seed42_dev": 1099,
+  "b_fam_vocab_seed42_dev": 42,
+  "b_fam_selfclust_vocab_seed42_dev": 835,
+  "n_families_total_bio": 42,
+  "n_families_total_selfclust": 902,
+  "pfam_family_bio": {
+    "chosen_level": 2,
+    "granularity_chosen": {
+      "n_targets": 1191,
+      "n_families": 42,
+      "family_per_target": 0.0353,
+      "singleton_families": 8,
+      "singleton_family_frac": 0.1905,
+      "coverage_biological": 1.0,
+      "source_breakdown": {
+        "chembl_class": 1191
+      },
+      "top_family_sizes": [
+        376,
+        132,
+        71,
+        65,
+        56,
+        45,
+        39,
+        39,
+        34,
+        34,
+        30,
+        24
+      ]
+    },
+    "gate_decision": "L2 싱글톤% 0.191 < 게이트 0.6 → L2 유지"
+  },
+  "invariant_models_preserved": {
+    "M0": true,
+    "M1": true,
+    "M2": true
+  },
+  "m1b_dependent_recomputed": [
+    "M1b",
+    "M2b",
+    "P-ID",
+    "P-FAM",
+    "C-CAP"
+  ],
+  "m1b_coverage_seed42_dev": {
+    "chembl_unmapped": 149,
+    "confidence_missing": 215,
+    "year_missing": 229,
+    "pchembl_missing": 241
+  },
+  "split_counts": {
+    "train": 873,
+    "valid": 109,
+    "test": 110
+  },
+  "m0_sanity_reference_rf_macro_seed42": 0.18819
+}

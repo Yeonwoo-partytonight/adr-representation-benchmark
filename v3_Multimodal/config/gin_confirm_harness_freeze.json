@@ -1,0 +1,451 @@
+{
+  "_doc": "GIN 확증 하네스 산출물 규격·봉인 규칙 사전 확정(블록 AR · docs/106). gin_seed_freeze.json · gin_inner_valid_freeze.json(+status) · ladder_freeze.json 은 전부 0바이트 무수정이며 본 파일은 그 위에 «산출물 규격»만 추가한다. ★ 본 파일은 GIN 착수 허가가 아니다(is_authorization=false).",
+  "block": "AR",
+  "frozen_at_kst": "2026-09-15 12:46 KST",
+  "supersedes_nothing": true,
+  "resolves": "GIN 확증 하네스의 산출물 규격·봉인 경계·재개 단위·집계 경로 미규정(docs/64 §6-1)",
+  "is_authorization": false,
+  "gin_start_still_blocked": true,
+  "confirmatory_training_runs_performed": 0,
+  "sealed_read": 0,
+  "sealed_dirs_created": 0,
+  "emit_sign_calls": 0,
+  "open_sealed_calls": 0,
+  "unblinding_performed": false,
+  "rqint_test_calls": 0,
+  "nonexecution_declaration_derived_from": "docs/106 §3 AR-2 (g) 「규격 파일에 박는다」 목록 9필드 그대로. gin_seed_freeze.preconditions.gin_training_runs_before_freeze = 0 의 대상인 «확증 GIN 학습» 은 본 블록에서 0회다.",
+  "preconditions": {
+    "gin_training_runs_before_freeze": 0,
+    "sealed_confirmatory_results_viewed": false,
+    "basis": "docs/106_gin_harness_design_freeze_prompt_for_vscode.md §3 AR-2",
+    "gin_seed_freeze_sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+    "gin_inner_valid_freeze_sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+    "gin_inner_valid_freeze_status_sha256": "bd329fefe613971f59bde8b13ea3f1c4929be04541655ad8e27e9922aa6cb0d0"
+  },
+  "spec": {
+    "a_run_directories": {
+      "confirmatory": "experiments/runs/v3_gin_confirm_rep{r}_seed{s}/",
+      "confirmatory_rep_seed_pairs": {
+        "1": 201,
+        "2": 202,
+        "3": 203
+      },
+      "consensus": "experiments/runs/v3_gin_confirm_consensus_rep123/",
+      "stability": "experiments/runs/v3_gin_stability/",
+      "nature": "경로 관례(naming convention). 통계적 선택이 아니다.",
+      "derived_from": {
+        "existing_convention": {
+          "n_existing_run_dirs": 34,
+          "examples": [
+            "v3_confirm_rep1_seed201",
+            "v3_confirm_rest_consensus_rep123",
+            "v3_confirm_rftuned_rep2_seed202",
+            "v3_latefusion_rep3_seed203"
+          ],
+          "pattern": "v3_<family><_variant>_rep{r}_seed{s} · <family>_consensus_rep123"
+        },
+        "gin_seed_freeze_firewall_verbatim": "Stability results must not change the primary results, hypothesis adjudication, model/hyperparameter/seed selection, or the aggregation method. Stability outputs are written to a directory separate from the confirmatory run outputs.",
+        "firewall_consequence": "안정성 산출은 확증 산출 디렉터리와 «분리»되어야 하므로 v3_gin_stability/ 를 확증 rep 디렉터리 밖에 둔다."
+      }
+    },
+    "b_public_sealed_boundary": {
+      "public_allowed": [
+        "개수(행·열·fold·unit·model·seed 카운트)",
+        "분할 진단(split_diagnostics · scaffold group 수 · leak_rows)",
+        "환경 명세(env_fingerprint 공개 사본)",
+        "타이밍(wall seconds · epoch 수)",
+        "게이트 통과 여부(불리언)",
+        "n_eval",
+        "n_excluded_undefined",
+        "재시도 로그(failure_policy 기록)"
+      ],
+      "sealed_required": [
+        "모든 예측 확률(OOF 행렬)",
+        "모든 macro AP",
+        "모든 Δ",
+        "Δ 의 부호",
+        "valid monitor 값",
+        "best_v"
+      ],
+      "emit_sign_calls_allowed": 0,
+      "stronger_than_existing_convention": true,
+      "not_an_amendment_because": "기존 RF 확증 관례(metrics_public.json 24 B · 키 `sign` 1개)보다 «공개를 줄이는» 방향이다. 완화가 아니라 강화이므로 동결 설계의 amendment 에 해당하지 않는다. ★ 본 블록은 그 파일의 «값» 을 읽지 않았고 바이트 수(24)와 키 이름(['sign'])만 확인했다.",
+      "derived_from": {
+        "1_docs36_4R_and_F17": {
+          "docs36_section": "docs/36_v3_confirmatory_oof_prompt_for_vscode.md §4-R",
+          "docs36_verbatim": "노출 금지(사람·리포트·채팅): 원시 macro AP 값, Δ의 크기, PT별 AP/Δ, fold별 수치, 확률 예측 분포. 이들이 로그·CSV로 저장돼 열람 가능하면 블라인딩 인정 불가.",
+          "run_log_verbatim_1": "RF random_state=42 (수치 미기록 — redaction)",
+          "run_log_verbatim_2": "[지표] macro AP 산출 완료 — 원시값·Δ크기 미출력(sealed, 3개 파일 sha 기록)",
+          "run_log_path": "experiments/runs/v3_confirm_rep1_seed201/run.log"
+        },
+        "2_rqint_TEST_STATISTIC": {
+          "source": "v3_Multimodal/src/sap/rqint.py (sha16 eb842bc98140e9c5)",
+          "verbatim": "T = Δ_RF − Δ_GIN, Δ_F = macroAP(y, P_F^{M2b}) − macroAP(y, P_F^{M1b}); 양측. additive surrogate 대체 금지(A6 계승).",
+          "consequence": "Δ_GIN 은 검정통계량 T 의 항이다. 그 부호를 공개하면 «새 공개 사건» 이 되고, 승인조건 R5 가 확정한 문면(기지 부호 4건 · 공개일자 2026-07-27 · n_persons_knowing_direction 1)을 바꾼다.",
+          "r5_evidence_verbatim": {
+            "disclosure_date": "2026-07-27",
+            "n_persons_knowing_direction": 1,
+            "public_repository_exposure": "4건 중 3건(반복2·반복3·consensus)이 2026-07-28 부터 공개 저장소 커밋으로 열람 가능 · 반복1 미공개",
+            "source": "v3_Multimodal/config/rqint_procedure_decisions_v1.json conditions.R5.evidence"
+          }
+        },
+        "3_gin_seed_freeze_firewall": {
+          "verbatim": "Stability results must not change the primary results, hypothesis adjudication, model/hyperparameter/seed selection, or the aggregation method"
+        }
+      }
+    },
+    "c_sealed_layout": {
+      "validated_by": "경로 문자열·키 스키마만 (schema_fixture). 본 블록은 _sealed 디렉터리를 0개 만든다.",
+      "files": {
+        "oof_{model}_seed{t}.npz": {
+          "content": {
+            "P": "OOF 예측 (1092, 370) float32",
+            "y": "라벨 (1092, 370) int8",
+            "pt_index": "PT 열 인덱스 (370,) int32",
+            "cid_order": "행 cid 순서 (1092,) int64"
+          },
+          "model_domain": [
+            "M0",
+            "M1",
+            "M1b",
+            "M2b",
+            "P-ID",
+            "P-FAM",
+            "C-CAP"
+          ],
+          "train_seed_domain_confirmatory": [
+            42,
+            1,
+            2
+          ],
+          "train_seed_domain_stability_additional": [
+            3,
+            4
+          ],
+          "count_per_repeat_confirmatory": 21
+        },
+        "metrics_full.json": {
+          "content": [
+            "셀별 macro AP",
+            "Δ",
+            "n_eval",
+            "n_excluded_undefined",
+            "best_ep",
+            "best_v"
+          ]
+        },
+        "access.log": {
+          "convention": "type=machine_read · human_exposure=false"
+        },
+        "checkpoint.jsonl": {
+          "see": "spec.d_resumability"
+        },
+        "env_fingerprint.json": {
+          "content": "환경 명세(python·torch·pyg·rdkit·sklearn·numpy·pandas·device)"
+        }
+      },
+      "derived_from": {
+        "F17_precedent_layout": {
+          "path": "experiments/runs/v3_confirm_rep1_seed201/",
+          "public": [
+            "config.json",
+            "metrics_public.json",
+            "run.log",
+            "split_diagnostics.csv",
+            "split_manifest.json"
+          ],
+          "sealed": [
+            "access.log",
+            "metrics_full.json",
+            "oof_M1b.npz",
+            "oof_M2b.npz"
+          ]
+        },
+        "matrix_shape_source": "sap/rqint.py build_eight_consensus docstring 축자 「각 원소 (N,K)」 + data/processed master 실측 N=1092 · K=370",
+        "macro_ap_accounting_keys": "sap/metrics.py macro_ap 반환 키 실측 = macro_ap · n_eval · n_excluded_undefined · n_eligible · excl_frac · defined_mask",
+        "per_cell_reporting_verbatim": "gin_seed_freeze.macro_ap_rule 축자: 「AP=0 substitution is NOT used. Report n_eval and n_excluded_undefined per cell.」"
+      }
+    },
+    "d_resumability": {
+      "file": "_sealed/checkpoint.jsonl",
+      "unit_key": [
+        "rep",
+        "fold",
+        "model",
+        "train_seed"
+      ],
+      "append_only": true,
+      "duplicate_key_forbidden_assert": true,
+      "line_fields": [
+        "rep",
+        "fold",
+        "model",
+        "train_seed",
+        "completed_at_kst",
+        "artifact_sha256",
+        "n_epochs",
+        "wall_seconds"
+      ],
+      "derived_from": {
+        "existing_checkpoint_jsonl_precedents": [
+          "experiments/runs/v3_confirm_rest/_sealed/checkpoint.jsonl",
+          "experiments/runs/v3_confirm_rftuned/_sealed/checkpoint.jsonl",
+          "experiments/runs/v3_latefusion/_sealed/checkpoint.jsonl",
+          "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl",
+          "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl",
+          "experiments/runs/v3_stratification_pid/_sealed/checkpoint.jsonl"
+        ],
+        "n_precedents": 6,
+        "session_partition_precedent": "docs/93 (블록 AE — R1 캘리브레이션 감사 세션 분할 운용)",
+        "unit_key_rationale": "(rep, fold, model, train_seed) 4-튜플은 gin_seed_freeze 의 training_seeds_ordered × gin_inner_valid_freeze 의 「one inner split per (split_seed, fold_index)」 × MODEL_BLOCKS 로부터 유일하게 결정되는 최소 실행 단위다.",
+        "budget_not_cited": "본 항의 근거로 AR-5 예산 결과를 인용하지 않는다(AR-2 가 AR-5 보다 먼저 수행되므로 순환이 된다). 예산이 세션 분할을 뒷받침한다는 서술은 gin_budget_estimate.session_partition_plan 과 리포트에만 있다."
+      }
+    },
+    "e_failure_policy": {
+      "verbatim": "Only pre-defined hard technical failures (crash, OOM, NaN loss) may be retried, exactly once, with the SAME seed and SAME configuration. Seed substitution and outcome-driven retraining are forbidden. All failures and retries are logged.",
+      "reimplementation_or_relaxation_or_extension": 0,
+      "derived_from": "v3_Multimodal/config/gin_seed_freeze.json .failure_policy (축자 전문)"
+    },
+    "f_aggregation": {
+      "repeat_axis": "prediction-then-metric",
+      "seed_axis": "metric-then-average",
+      "consensus_matrices": 8,
+      "reimplementation_forbidden_import_only": [
+        "sap.consensus.build_consensus",
+        "sap.metrics.macro_ap"
+      ],
+      "derived_from": {
+        "AGGREGATION_verbatim": "D3: repeat 축 = prediction-then-metric(consensus 평균 후 지표, 양 family 공통); seed 축 = metric-then-average(시드별 Δ 산출 후 평균, GIN 전용).",
+        "module_docstring_verbatim": "repeat 축 = prediction-then-metric(양 family 공통) — 3 반복 OOF 를 consensus 평균한 뒤 지표. / seed 축 = metric-then-average(GIN 전용) — 시드별 Δ 를 먼저 낸 뒤 평균.",
+        "observed_statistic_comment_verbatim": "metric-then-average (D3): 시드축은 지표 산출 후 평균 — 행렬을 먼저 평균하면 D3 위반이다.",
+        "eight_matrices_assert_verbatim": "assert len(mats) == 8, f\"consensus 행렬은 정확히 8개여야 한다(RF 2 + GIN 3seed×2), 실측={len(mats)}\"",
+        "source": "v3_Multimodal/src/sap/rqint.py (sha16 eb842bc98140e9c5)"
+      }
+    }
+  },
+  "output_scale": {
+    "models": [
+      "M0",
+      "M1",
+      "M1b",
+      "M2b",
+      "P-ID",
+      "P-FAM",
+      "C-CAP"
+    ],
+    "n_models": 7,
+    "train_seeds_confirmatory": [
+      42,
+      1,
+      2
+    ],
+    "repeats": [
+      1,
+      2,
+      3
+    ],
+    "outer_units": 15,
+    "oof_matrices_total": 63,
+    "oof_matrix_shape": [
+      1092,
+      370
+    ],
+    "oof_matrices_consumed_by_primary_rqint": 18,
+    "run_counts": {
+      "confirmatory": 315,
+      "stability": 42,
+      "total": 357
+    },
+    "derived_from": {
+      "model_scope": {
+        "docs30_s13_verbatim": "GIN(robustness) 동일 세트 × fold당 1 seed + 대표 3 fold × 5 seed.",
+        "docs64_3_2_verbatim": "\"동일 세트\"가 GIN 절 전체를 수식하므로 `M1b·M2b`로 좁히면 문면 축소 = amendment 기입 의무가 발생한다.",
+        "docs64_5_e_verbatim": "(e) 적용 모델 | 7모델 전부, primary 보고는 Δ(M2b−M1b)",
+        "docs65_verbatim": "3×5 안정성 분석은 등록 §13의 \"동일 세트\" 문면대로 GIN 7모델(M0, M1, M1b, M2b, P-ID, P-FAM, C-CAP) 전부에 적용하며",
+        "not_derived_from": "gin_seed_freeze.model_scope_stability 는 «안정성 범위» 필드이며 확증 범위 필드가 아니다 — 근거로 쓰지 않는다.",
+        "excluded_models_and_why": {
+          "M2": "FROZEN_MODELS 8개에 포함되나 docs/30 §13 GIN 예산절 모델 목록 밖 — GIN 범위 아님",
+          "M1b_pchembl": "사전지정 sensitivity — GIN 범위 밖",
+          "M2b_pchembl": "사전지정 sensitivity — GIN 범위 밖"
+        }
+      },
+      "seeds_verbatim": "gin_seed_freeze.confirmatory_seed_prefix = [42, 1, 2] · docs/64 §5 (d) 「순서 목록의 앞 3개 (42, 1, 2), 15 unit 전부에 적용」",
+      "execution_order_verbatim": "Complete and seal the confirmatory GIN run (15 units x 3 seeds) FIRST; only afterwards add seeds 3 and 4 (the 4th and 5th entries of the ordered list) on the three representative units.",
+      "run_count_357_verbatim": "gin_inner_valid_freeze.rf_asymmetry.rejected_alternative 축자 「roughly doubles GIN training (357 to 714 runs)」",
+      "run_count_arithmetic": {
+        "confirmatory": "7 models × 3 train_seeds × 3 repeats × 5 outer folds = 315",
+        "stability": "3 representative units × 2 additional seeds (4th·5th entries = values 3·4) × 7 models = 42",
+        "total": "315 + 42 = 357"
+      },
+      "oof_matrix_arithmetic": {
+        "total": "7 models × 3 train_seeds × 3 repeats = 63",
+        "primary_rqint": "2 arms (M1b, M2b) × 3 train_seeds × 3 repeats = 18",
+        "basis_verbatim": "P_GIN : {\"M1b\": {s: [rep0, rep1, rep2]}, \"M2b\": [...]}   s = 시드 인덱스(D16)"
+      },
+      "registered_budget_clause_note": "등록 docs/30 §13 예산절의 「fold당 1 seed」(≈189 run)는 같은 등록문 §6 「GIN은 outer fold당 3 training seed 평균」과 docs/50 §결정 「확증 GIN estimand = 모든 outer fold에서 사전지정 3 training seed 평균(§7)」로 대체됐다. 본 규격은 189 → 357 로 «증가» 방향이며 완화가 아니다."
+    }
+  },
+  "harness": {
+    "path": "v3_Multimodal/src/confirmatory_gin_rep.py",
+    "stages": {
+      "selftest": "합성 fixture 자체검사. 확증 학습 0. (기본값)",
+      "plan": "실행 계획 전개(357 단위 4-튜플 목록) + 예산 입력 산출. 학습 0.",
+      "train": "차단됨 — gin_start_still_blocked 가 하나라도 true 면 exit 11."
+    },
+    "default_stage": "selftest",
+    "self_block": {
+      "checked_files": [
+        "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+        "v3_Multimodal/config/gin_seed_freeze.json",
+        "v3_Multimodal/config/gin_inner_valid_freeze.json"
+      ],
+      "flag": "gin_start_still_blocked",
+      "exit_code_when_blocked": 11,
+      "exit_code_on_freeze_hash_mismatch": 2,
+      "bypass_paths": 0,
+      "bypass_paths_explicitly_absent": [
+        "--force",
+        "환경변수",
+        "기본값 우회",
+        "주석 처리"
+      ],
+      "applies_to_stages": [
+        "train"
+      ]
+    },
+    "inner_split": {
+      "algorithm_verbatim": "Reuse of the registered outer-split algorithm (confirmatory_oof_rep1.assign_folds) generalized to two unequal buckets: (1) pre-sort groups by (-group_size, str(first row index)), where the row index is the position in the frozen master_X/master_Y ascending-cid order and the outer-train subset is NOT re-indexed; (2) random.Random(inner_seed).shuffle; (3) cuts = [n_outer_train/9, n_outer_train], assign each group to the first bucket whose running total still fits, else to the last bucket; bucket 0 = inner-valid, bucket 1 = inner-train.",
+      "key_is_first_row_index_not_first_cid": true,
+      "outer_train_subset_not_reindexed": true,
+      "bucket_0_is_inner_valid": true,
+      "inner_seed_formula": "inner_seed = 1000 * split_seed + zero_based_fold_index",
+      "split_unit": "Bemis-Murcko scaffold group; the empty-string scaffold (ring-free or unparseable) counts as one legitimate group",
+      "asserts_verbatim": [
+        "scaffold groups disjoint between buckets",
+        "inner_train + inner_valid == outer_train",
+        "zero eligible PTs with no positives in inner-train (registration section 6 rare-PT constraint)"
+      ],
+      "generalization_equivalence_check": "2버킷 일반화가 동결 함수의 충실한 상위집합임을 «k=5 등간 cuts 로 호출했을 때 import 한 assign_folds 와 동일 결과» 로 assert 한다(재구현이 아님을 기계 증명).",
+      "derived_from": "v3_Multimodal/config/gin_inner_valid_freeze.json .inner_split (축자 전문)"
+    },
+    "feature_block_fit_population": {
+      "verbatim": "the FULL outer-train fold, inner-valid rows included — identical to the RF confirmatory harness",
+      "outer_test_leakage_assert": "none (leak_rows == 0)",
+      "derived_from": "gin_inner_valid_freeze.feature_block_fit_population"
+    },
+    "rng_scope": {
+      "reseed_point": "immediately before each model run",
+      "targets": [
+        "python random",
+        "numpy",
+        "torch CPU",
+        "torch MPS",
+        "DataLoader generator and workers",
+        "model parameter initialization"
+      ],
+      "controls": [
+        "weight initialization",
+        "dropout",
+        "minibatch order",
+        "all stochastic samplers"
+      ],
+      "derived_from": "gin_seed_freeze.rng_scope (축자)"
+    },
+    "recipe_constants_A_wd": {
+      "SEEDS": [
+        42,
+        1,
+        2,
+        3,
+        4
+      ],
+      "THR": 0.5,
+      "ARCH": "gin",
+      "EMBED_DIM": 128,
+      "PCA_K": 64,
+      "EPOCHS": 200,
+      "PATIENCE": 30,
+      "BATCH": 32,
+      "LR": 0.001,
+      "WD": 0.0001,
+      "GAMMA": 2.0,
+      "DROPOUT": 0.2,
+      "hyperparameter_research_forbidden_verbatim": "하이퍼파라미터 재탐색 금지(pilot A_wd 레시피·PCA-64 그대로)",
+      "derived_from": "v3_Multimodal/src/train_ladder.py:61-67 (import 로 재사용 · 재정의 금지)"
+    },
+    "early_stopping": {
+      "max_epoch": 200,
+      "patience": 30,
+      "min_epoch": null,
+      "checkpoint_update_rule": "strict greater-than on validation macro AP (train_ladder.py:237)",
+      "tie_break": "earliest epoch wins, as an automatic consequence of the strict inequality; no new rule introduced",
+      "best_state_restore": "load best_state before predicting the outer test fold",
+      "derived_from": "gin_inner_valid_freeze.already_frozen_not_newly_chosen (축자)"
+    },
+    "reuse_import_not_reimplement": {
+      "ladder_confirmatory": [
+        "MorganBlock",
+        "CountMaskBlock",
+        "SeqBlock",
+        "M1bCovariateBlock",
+        "PidBlock",
+        "FamilyBlock",
+        "CcapBlock",
+        "MODEL_BLOCKS",
+        "PCA_K"
+      ],
+      "confirmatory_oof_rep1": [
+        "assign_folds",
+        "build_scaffold_groups",
+        "scaffold_of"
+      ],
+      "sap": [
+        "sap.metrics.macro_ap",
+        "sap.consensus.build_consensus"
+      ],
+      "v2_GNN.src.train": [
+        "set_seed",
+        "get_device",
+        "compute_pos_weight",
+        "FocalLoss",
+        "predict_proba",
+        "macro_pr_auc"
+      ],
+      "drug_branch": [
+        "GINDrugEncoder"
+      ],
+      "graph_features": [
+        "ATOM_FDIM",
+        "smiles_to_data"
+      ],
+      "build_graphs_not_used_in_synthetic_path": "v2_GNN/src/data.py build_graphs 는 master_X/master_Y/scaffold_split 에 하드와이어(list(X['cid']) == list(Y['cid']) assert)이므로 합성 fixture 에 쓸 수 없다. 합성 경로는 graph_features.smiles_to_data 를 쓴다."
+    },
+    "code_level_prohibition_guards": [
+      "open_sealed 미import",
+      "emit_sign 미import",
+      "sap.decision 미import",
+      "requests/urllib/http 미import",
+      "_sealed/ 경로 읽기 호출 0",
+      "_sealed 디렉터리 생성 0 (쓰기는 train stage 전용이며 차단 중)",
+      "rqint_test 미호출",
+      "sys.dont_write_bytecode = True (최상단)"
+    ]
+  },
+  "still_blocked_after_this_freeze": [
+    "교수님 회신 (사용자 결정 2026-09-14) — 1차 조건",
+    "Holm ⑧ RQ-int (GIN 산출 → λ·ρ 진단 선행 필요)",
+    "개봉 승인·시점 (별건 · unblinding_performed false 유지)",
+    "gin_start_still_blocked 해제 (별도 블록 · 별도 승인)"
+  ],
+  "superseded_still_unspecified_items": {
+    "note": "선행 동결문 2종의 still_unspecified 에 남아 있는 아래 2건은 이미 해소됐다. 그러나 동결 파일은 0바이트 무수정이며 본 필드와 docs/33 항목 57 이 superseding 기록이다.",
+    "SAP 1.2 re-freeze": {
+      "resolved_by": "블록 AN (docs/102)",
+      "evidence": "experiments/sap/manifest.json sap_version 1.2 · sha16 d08dcedf2a22e1c8"
+    },
+    "U1-U7 (RQ-int) pending external statistical review": {
+      "resolved_by": "외부 통계 검토 승인조건 R1~R6 실질 전건 충족",
+      "evidence": "rqint_procedure_decisions_v1.conditions_summary = {\"satisfied\": [\"R1\",\"R2\",\"R4\",\"R5\",\"R6\"], \"pending\": [\"R3\"]} 이고, R3 는 동결 파일상 pending 이나 experiments/rqint/r3_main_package_meta/r3_verdict.json (sha16 5469a076b6659e4d · verdict R3_satisfied_stage1 · 2026-09-14 23:46:55 KST)로 실질 충족이다(docs/33 항목 56 ⑥)."
+    }
+  }
+}

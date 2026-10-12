@@ -1,0 +1,92 @@
+{
+  "schema": "post_interim_freeze_status_sidecar_v1",
+  "target": "v3_Multimodal/config/post_interim_freeze_v1_0.json",
+  "target_sha256": "502db732bd5e45cbe0d1da78106f639c0f65261e1215af9912250e1ffa284258",
+  "target_modified_bytes": 0,
+  "as_of_kst": "2026-08-06 13:25:28 KST",
+  "recorded_by": "블록 W — docs/76",
+  "record_doc": "docs/77_advisor_approval_20260806.md",
+  "evidence": {
+    "thread_id": "<GMAIL-MSGID>",
+    "message_id": "<GMAIL-MSGID>",
+    "received_at_kst": "2026-08-06 12:05:26",
+    "from": "양진홍 교수님 <<EMAIL>>",
+    "to": "<EMAIL>",
+    "subject_verbatim": "Re: [DTI-ADR v3] 승인 요청 3건 (A5 재조회 · 개봉 승인자)",
+    "our_reply_message_id": "<GMAIL-MSGID>",
+    "our_reply_at_kst": "2026-08-06 13:04:02"
+  },
+  "resolves_still_pending_advisor": [
+    {
+      "item": "A5 one-off re-query approval",
+      "status": "approved",
+      "approved_by": "양진홍 교수님",
+      "approved_at_kst": "2026-08-06 12:05:26",
+      "evidence_message_id": "<GMAIL-MSGID>",
+      "verbatim": ">> 승인",
+      "record_doc": "docs/77_advisor_approval_20260806.md"
+    },
+    {
+      "item": "unblinding approver and timing",
+      "status": "approver_confirmed",
+      "approver": "양진홍 교수님",
+      "timing": "still_undecided — separate approval required",
+      "approved_by": "양진홍 교수님",
+      "approved_at_kst": "2026-08-06 12:05:26",
+      "evidence_message_id": "<GMAIL-MSGID>",
+      "verbatim": ">> 네. 승인",
+      "record_doc": "docs/77_advisor_approval_20260806.md",
+      "note": "개봉 승인 ≠ 지금 개봉해도 된다는 뜻이 아니다. 우리 문면이 '조건이 모두 충족됐을 때 별도로 여쭙겠습니다' 였고 교수님은 그 문면째로 승인했다. 선행 = Holm ②~⑧ 전원 확보 + 봉인 완전성 점검 통과 + 별도 승인."
+    }
+  ],
+  "a5_requery_conditions": [
+    "기존 943개 ID 한정 · 1회만 (라벨·성능과 무관한 메타데이터)",
+    "조회일·출처·원응답·해시·ID 매핑 실패율 5항목 기록",
+    "라벨과 결합하기 전에 캐시 봉인",
+    "A5 는 '현재 snapshot 기반 post-interim 보조분석' 으로 표기"
+  ],
+  "a5_requery_executed": true,
+  "unblinding_performed": false,
+  "still_pending_external_review": [
+    "U1-U7 (RQ-int procedure)",
+    "SAP 1.2 re-freeze"
+  ],
+  "gin_start_still_blocked": true,
+  "holm67_start_still_blocked_until_reply": false,
+  "holm67_start_requires": [
+    "docs/60 개정 (docs/70 §1-2 확정본)",
+    "docs/61 개정 (docs/70 §1-4·§1-5 + 단일 홀드아웃 20% 폐기 + ⑦ 기준 RF 의 [기각] M1b 기준안 필드 보충)"
+  ],
+  "nine_internal_decisions_advisor_response": "no_objection_raised",
+  "external_review_forwarded_at": "2026-08-06 (시각 미통보)",
+  "external_review_forwarded_at_derived_upper_bound_kst": "2026-08-06 12:05:26 KST (회신 시각 — 우리 파생 추론, 교수님 통보값 아님)",
+  "external_review_forwarded_verbatim": ">> 금일 2026.08.06 일 메일로 전달 드렸습니다.",
+  "external_reviewer_identity": "unknown_as_of_2026-08-06",
+  "response_deadline": "not_set_as_of_2026-08-06",
+  "deadline_setting": "pending_user_decision",
+  "note": "본 사이드카는 승인 기록이며 어떤 착수 허가도 아니다",
+  "a5_requery_executed_history": [
+    {
+      "from": false,
+      "to": true,
+      "ts_kst": "2026-08-07 11:13:28 KST",
+      "method": "superseding append — 기존 키의 값만 갱신하고 전이 이력·근거를 신규 키에 보존한다. 기존 문면 삭제 0.",
+      "basis": {
+        "block": "Y",
+        "instruction": "docs/80_a5_mechanism_requery_prompt_for_vscode.md",
+        "approval": "docs/77 §3 주석 1 (2026-08-06 12:05:26 KST 축자 「승인」)",
+        "report": "docs/80_a5_mechanism_requery_report.md",
+        "manifest": "experiments/provenance/a5_requery_manifest.json (sha256 66023c1d4403bbb28421fe077b5d1277bdbdfaf907273f03fd2cf74db884c1f0)",
+        "frozen_definition": "v3_Multimodal/config/a5_mechanism_freeze.json (sha256 3419b2f793d74051df29ce3285a3c50d4d7a07f2fd15ec0b6d6fb645c4118dbd)"
+      },
+      "what_executed": "1회 재조회 + target→UniProt 해석 + 캐시 해시 봉인까지. A5 층화·Δ·CI·p·라벨 결합은 **여전히 미실행**(후속 블록).",
+      "conditions_satisfied": {
+        "① 943 한정·1회": true,
+        "② 5항목 기록": true,
+        "③ 라벨 결합 전 봉인": true,
+        "④ post-interim 보조분석 표기": true
+      },
+      "recorded_by": "블록 Y (docs/80)"
+    }
+  ]
+}

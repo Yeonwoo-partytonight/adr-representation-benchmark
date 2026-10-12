@@ -1,0 +1,84 @@
+{
+  "all_pass": true,
+  "checker_sha256": "10075502901efbcc370edad527169dd8da5928a2abfd6bb799fc4d4a5700939e",
+  "checks": {
+    "RUN_A": {
+      "note": "n_items 38",
+      "pass": true
+    },
+    "U1": {
+      "note": "item ids 0 · path literals 0 · arg literals 0",
+      "pass": true
+    },
+    "U10": {
+      "note": "{\"import_ban\": true, \"normal_all_match\": true, \"detect_p\": true, \"detect_holm\": true, \"detect_label\": true}",
+      "pass": true
+    },
+    "U11": {
+      "note": "{\"pt_bh_keys\": true, \"tost_labels\": true, \"sub_not_computable\": true, \"sub_keys\": true, \"d13_bins_symmetric\": true, \"pngs\": true}",
+      "pass": true
+    },
+    "U12": {
+      "note": "{\"no_results_while_staging\": true, \"manifest_sha\": true, \"verbatim_texts\": true, \"event_recorded\": true, \"access_log_r1_r7\": true}",
+      "pass": true
+    },
+    "U13": {
+      "note": "{\"no_network_import\": true, \"no_environ_read\": true, \"no_open_sealed\": true, \"writes_inside_temp_only\": true, \"write_guard_blocks\": true, \"real_sealed_unchanged\": true, \"real_no_unblinding_dir\": true}",
+      "pass": true
+    },
+    "U14": {
+      "note": "{\"max_restarts\": true, \"single_instance\": true, \"dup_exit\": true, \"restart_limit\": true, \"battery_refuses_launch_until_ac\": true, \"integrity_no_restart\": true, \"heartbeat_info_value_free\": true, \"events_value_free\": true}",
+      "pass": true
+    },
+    "U15": {
+      "note": "{\"pt_checkpoint_saved\": true, \"sigterm_resumed\": true, \"pt_resume_equal\": true, \"sha_tamper_stops\": true, \"resume_refused_after_failure\": true, \"status_value_free\": true, \"heartbeat_value_free\": true}",
+      "pass": true
+    },
+    "U16": {
+      "note": "{\"real_complete\": true, \"removed_one_detected\": true, \"n_registered\": 67}",
+      "pass": true
+    },
+    "U2": {
+      "note": "{\"ok_passes\": true, \"no_approval\": true, \"hash_mismatch\": true, \"audit_fail\": true, \"flag\": true, \"output_exists\": true, \"stray_glob\": true, \"stat_changed\": true, \"gate_writes_zero\": true}",
+      "pass": true
+    },
+    "U3": {
+      "note": "{\"ties\": true, \"boundary\": true, \"all_reject\": true, \"none_reject\": true, \"monotone\": true, \"missing_fill\": true, \"boundary_split\": true, \"checker_agrees\": true}",
+      "pass": true
+    },
+    "U4": {
+      "note": "{\"panel2_rqint_is_1\": true, \"panel1_rqint_is_primary\": true, \"others_equal_raw\": true, \"fixture_flag_true\": true}",
+      "pass": true
+    },
+    "U5": {
+      "note": "{\"g2_max\": true, \"rq4_uses_adjusted\": true, \"rq3_uses_adjusted\": true, \"rq2_uses_raw\": true, \"fixture_raw_success_adjusted_fail\": true, \"rq4_fixture\": true}",
+      "pass": true
+    },
+    "U6": {
+      "note": "{\"n_signflip_calls\": true, \"signflip_args\": true, \"bootstrap_args\": true, \"bootstrap_units\": true, \"delta_direction_treat_minus_base\": true}",
+      "pass": true
+    },
+    "U7": {
+      "note": "{\"stopped\": true, \"no_results\": true, \"d9_stopped\": true}",
+      "pass": true
+    },
+    "U8": {
+      "note": "{\"input_missing\": true, \"sha_mismatch\": true, \"nan\": true, \"completeness\": true, \"independent_mismatch\": true, \"independent_mismatch_no_results\": true}",
+      "pass": true
+    },
+    "U9": {
+      "note": "{\"interrupts\": true, \"items_byte_identical\": true, \"results_full_equal\": true}",
+      "pass": true
+    }
+  },
+  "finished_kst": "2026-10-04 23:41:24.922 KST",
+  "n_checks": 17,
+  "n_pass": 17,
+  "plan_sha256": "d5aa594b630992fd10739573409a2008227db72a843f310b001b9ca24ce59764",
+  "plan_sha_matches_constant": true,
+  "script_sha256": "84f773596a01cf3fdc93334ca2f01af977d24e939a911be42f464b3f95cc3737",
+  "skipped": [],
+  "stage": "selftest",
+  "started_kst": "2026-10-04 23:38:53.521 KST",
+  "watchdog_sha256": "334eced17a6db4925c8f9011acc5e28cb326f7081aedb0e0102b8414cdd6fd3e"
+}

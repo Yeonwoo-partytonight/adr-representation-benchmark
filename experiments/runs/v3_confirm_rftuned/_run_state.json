@@ -1,0 +1,23 @@
+{
+  "total": 15,
+  "session_seq": 1,
+  "n_done_this_session": 15,
+  "session_wall_s": 3321.4131165830186,
+  "sealed_sha256": {
+    "rep1/oof_RF_tuned.npz": "f2b8c41f65af8b04d6d04bfb09c406c2a8855bdfd7a1622fa84ff8e5ebd7dc1d",
+    "rep1/metrics_full.json": "b8957352de9ad07be1cbcac271596ce6b28c7f5ffaa4b4d9d86aca25403b09c7",
+    "rep2/oof_RF_tuned.npz": "c584196347e77019e71acf5da57a5fc6d22b5df8a8b4935602cf22c79b2b1b92",
+    "rep2/metrics_full.json": "3a60c5ed9cebc4b5a573ca4769ea635f7a29af8675cd8535fdb574cc308bdbab",
+    "rep3/oof_RF_tuned.npz": "394ddf94a2ce44cccd8fdff72bd96f9d9a2755dac7cb2c3eca8aa35a3a5a3148",
+    "rep3/metrics_full.json": "45698102b0803c5dd4e737bbb85fc9886d6f393e15e06742a3d549d5a2ea3ec0"
+  },
+  "env_fingerprint_match": true,
+  "sealed_guard_check": {
+    "n_preexisting": 160,
+    "n_added_own": 22,
+    "n_foreign": 0,
+    "preexisting_unchanged": true
+  },
+  "sealed_guard_n_files": 160,
+  "sealed_guard_unchanged": true
+}

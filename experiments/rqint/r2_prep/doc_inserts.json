@@ -1,0 +1,16 @@
+{
+ "before": {
+  "docs/33_prereg_deviation_log.md": "99017397ba2b365d500c58806ec900de7bcd348da857b55a00b7b99832579e78",
+  "docs/45_research_integrity_ledger.md": "871a290b35b698b89e991ff55e4ab8d2a55f562ec6dae5c3ce35ef91f2d28b8d",
+  "experiments/provenance/ledger.json": "720c5c02cf52fe7632dfdefb1ed706603a294ab2a4664aeec826358af1b5bc0b"
+ },
+ "docs33_bytes_before": 308047,
+ "docs45_bytes_before": 126782,
+ "docs45_inserted_line_indices_0based": [
+  66,
+  144,
+  145
+ ],
+ "item_number": 52,
+ "_note": "0-based. 1-based 로는 67(§2 행) · 145(공백) · 146(§5 문서이력 행)."
+}

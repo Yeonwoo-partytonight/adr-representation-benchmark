@@ -1,0 +1,50 @@
+{
+  "_doc": "블록 AX (docs/114) 공개 manifest — 개수·환경·게이트 불리언·봉인 파일 이름/바이트/sha256·wall_seconds 뿐. 진단 값은 기록하지 않는다.",
+  "block": "AX (docs/114)",
+  "provenance": "confirmatory_sealed",
+  "n_groups": 732,
+  "n_lambda_k": 3,
+  "n_sealed_files": 1,
+  "n_input_matrices": 8,
+  "completed": true,
+  "sealed_files": [
+    {
+      "name": "_sealed/leverage_diagnostics.json",
+      "bytes": 165593,
+      "sha256": "0832ef65aa59c16973f5776c9dbcd917cb9e0b4b76202a64e271f357fb5206ac"
+    }
+  ],
+  "input_checks": {
+    "input_sha_all_match": true,
+    "cid_order_match": true,
+    "finite_inputs": true,
+    "finite_outputs": true,
+    "derived_equals_verbatim": true,
+    "cross_block113_bit_equal": true,
+    "monotone_check": true
+  },
+  "wall_seconds": 1685.389,
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "sklearn": "1.9.0",
+  "pandas": "3.0.3",
+  "harness_sha256": "4f2537ec228c03a9cf9f42545edbd63c6f73783e931bdbdc0780238b3e36e557",
+  "selftest_sha256": "6baae1e0116feb86044661f4c7a7c71778b1f6a03c0fb6f3a4df7e7eed9d50fb",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "amendment1_sha256": "63c29d6b6a9e22951f2e2891b54f4251d5e4f679fc1d3b3f110cfdf510aab05c",
+  "values_disclosed": false,
+  "unblinding_performed": false,
+  "sealed_counts_start": {
+    "n_sealed_dirs": 30,
+    "n_sealed_files_total": 750,
+    "n_sealed_artifacts": 729,
+    "n_access_log": 21
+  },
+  "sealed_counts_end": {
+    "n_sealed_dirs": 31,
+    "n_sealed_files_total": 752,
+    "n_sealed_artifacts": 730,
+    "n_access_log": 22
+  },
+  "ts_completed_kst": "2026-09-28 09:55:57 KST"
+}

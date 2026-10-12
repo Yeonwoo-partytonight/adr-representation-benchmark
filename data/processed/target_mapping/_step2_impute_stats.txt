@@ -1,0 +1,2 @@
+human {'imputed_drugs': 37, 'imputed_targets': 54, 'no_aff_drugs': 16, 'n_drugs': 847}
+all {'imputed_drugs': 46, 'imputed_targets': 65, 'no_aff_drugs': 17, 'n_drugs': 868}

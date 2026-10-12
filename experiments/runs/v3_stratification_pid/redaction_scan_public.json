@@ -1,0 +1,55 @@
+{
+  "_scope": "공개 — 교차검사 PASS/FAIL·해시·개수 뿐.",
+  "ts_kst": "2026-08-05 08:31:07 KST",
+  "block": "L (docs/57) — recheck",
+  "note": "본계산 종료 직후의 자체 교차검사가 두 번 실패했다. 둘 다 **내 검사코드 결함**이며 봉인 산출물·통계량과 무관하다. ① `signcheck_public.json` 의 **검사 이름** 2개(`delta_…`·`signflip_…`)가 금지어에 걸렸다 → assert 를 완화하지 않고 검사 이름을 바꿔 재생성했다. ② `pilot_timing.json` 의 `signflip_B100`(= sign-flip **소요시간**)이 걸렸다 → 원인은 내가 `sign` 을 통짜 접두사로 쓴 것이다. 지시서 L-5 목록은 `macro_ap`·`delta`·`sign` 이 **정확한 키 이름**이고 별표가 붙은 `ci_*`·`p_*`·`boot_*`·`null_*` 만 접두사이므로, 규칙을 그 문면대로 되돌리고 파생 키 접두사(`delta_`·`macro_ap`·`sign_`)를 추가했다. 대신 부호 유출은 **값 검사**(`positive`/`negative`/`zero` 값 부재)로 직접 막는다 — 이전보다 좁아진 것이 아니라 부호에 대해서는 더 정확해졌다. 통계량·봉인 산출물은 재계산하지 않았다.",
+  "files_scanned": {
+    "gates_public.json": {
+      "sha256": "51c5350e9ae5b819df2ca9a7372cc713ab5a2495abec3f51fad60b848ca04a2f",
+      "hits": 0
+    },
+    "signcheck_public.json": {
+      "sha256": "8ee8bfceb604a71f3f9692f899c7f1df3dfa51a8b03806547e51ce20255615ce",
+      "hits": 0
+    },
+    "pilot_timing.json": {
+      "sha256": "05a25455f5db84ef7e6d5e1487f68d04df0f272e740478fa5ca048fb7c49f006",
+      "hits": 0
+    },
+    "stratification_pid_public.json": {
+      "sha256": "7684cb8db622e9e738dd02eea52d1b05bca87f6f2550ae79114cc2cb168380c0",
+      "hits": 0
+    }
+  },
+  "forbidden_exact": [
+    "delta",
+    "delta_obs",
+    "delta_sign",
+    "macro_ap",
+    "p_two_sided",
+    "sign"
+  ],
+  "forbidden_prefixes": [
+    "ci_",
+    "p_",
+    "boot_",
+    "null_",
+    "delta_",
+    "macro_ap",
+    "sign_"
+  ],
+  "forbidden_values": [
+    "negative",
+    "positive",
+    "zero"
+  ],
+  "total_hits": 0,
+  "sealed_result_sha256_matches_public_record": true,
+  "sealed_guard_n_files": 157,
+  "sealed_guard_unchanged": true,
+  "open_sealed_calls": 0,
+  "checkpoint_rows": 13,
+  "recomputed_statistics": 0,
+  "sealed_artifacts_modified": 0,
+  "all_pass": true
+}

@@ -1,0 +1,20 @@
+{
+  "approver": "양진홍",
+  "approved_at_kst": "2026-10-06 20:55:11 KST",
+  "evidence": {
+    "gmail_message_id": "<GMAIL-MSGID>",
+    "thread_id": "<GMAIL-MSGID>",
+    "quoted_approval_text": "네. 연우씨.\n\n메일 내용 확인하였고, \"개봉 승인\" 합니다.\n<EXTERNAL-REVIEWER> 박사에게도 전달하겠습니다.\n\n양진홍 드림."
+  },
+  "approved_hashes": {
+    "v3_Multimodal/config/unblinding_plan_v1.json": "d5aa594b630992fd10739573409a2008227db72a843f310b001b9ca24ce59764",
+    "v3_Multimodal/src/unblinding_run.py": "84f773596a01cf3fdc93334ca2f01af977d24e939a911be42f464b3f95cc3737",
+    "v3_Multimodal/src/unblinding_independent_check.py": "10075502901efbcc370edad527169dd8da5928a2abfd6bb799fc4d4a5700939e",
+    "docs/118_unblinding_reporting_plan.md": "e3b342e75cfee99a062d67b6cdfe16d3c614dad9b5b4c7333ab89ccee8203abb",
+    "docs/118b_external_validation_plan.md": "4f06d39e9aa827bd63a2ac28e6dbedbedec2430bbde10aaadd567c81c726f60e",
+    "docs/119_pre_unblinding_audit_v3_report.md": "0396a4e8c6177113cfc9db4ce027a57f679ac21c72385f3cb981020ca2406af5",
+    "experiments/provenance/pre_unblinding_audit_v3.json": "6638e0e448db049d621d02dcba9cd3dd37eb436b71bd2e2690cf614b732558fe"
+  },
+  "recorded_by": "vscode-claude (지시서 docs/120 Phase A · 증거 = cowork Gmail get_thread 2026-10-07)",
+  "recorded_at_kst": "2026-10-07 02:45:12.485 KST"
+}

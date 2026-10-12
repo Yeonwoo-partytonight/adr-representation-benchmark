@@ -77,83 +77,83 @@
 [25/25] frac 100% (n_train=873) seed 4 | RF=run GNN=run
     RF : macro PR-AUC 0.1919 | macro ROC-AUC 0.6126
     GNN: macro PR-AUC 0.1490 | macro ROC-AUC 0.5840 (valid 0.1618 @ep38)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 54617 (\N{HANGUL SYLLABLE HAG}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 54617 (\N{HANGUL SYLLABLE HAG}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 49845 (\N{HANGUL SYLLABLE SEUB}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 49845 (\N{HANGUL SYLLABLE SEUB}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 45936 (\N{HANGUL SYLLABLE DE}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 45936 (\N{HANGUL SYLLABLE DE}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 51060 (\N{HANGUL SYLLABLE I}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 51060 (\N{HANGUL SYLLABLE I}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 53552 (\N{HANGUL SYLLABLE TEO}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 53552 (\N{HANGUL SYLLABLE TEO}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 53356 (\N{HANGUL SYLLABLE KEU}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 53356 (\N{HANGUL SYLLABLE KEU}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 44592 (\N{HANGUL SYLLABLE GI}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 44592 (\N{HANGUL SYLLABLE GI}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 48516 (\N{HANGUL SYLLABLE BUN}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 48516 (\N{HANGUL SYLLABLE BUN}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 51088 (\N{HANGUL SYLLABLE JA}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 51088 (\N{HANGUL SYLLABLE JA}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 49688 (\N{HANGUL SYLLABLE SU}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 49688 (\N{HANGUL SYLLABLE SU}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 49828 (\N{HANGUL SYLLABLE SEU}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 49828 (\N{HANGUL SYLLABLE SEU}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 52992 (\N{HANGUL SYLLABLE KE}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 52992 (\N{HANGUL SYLLABLE KE}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 51068 (\N{HANGUL SYLLABLE IL}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 51068 (\N{HANGUL SYLLABLE IL}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 47553 (\N{HANGUL SYLLABLE RING}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 47553 (\N{HANGUL SYLLABLE RING}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 44257 (\N{HANGUL SYLLABLE GOG}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 44257 (\N{HANGUL SYLLABLE GOG}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 49440 (\N{HANGUL SYLLABLE SEON}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 49440 (\N{HANGUL SYLLABLE SEON}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 44256 (\N{HANGUL SYLLABLE GO}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 44256 (\N{HANGUL SYLLABLE GO}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 51221 (\N{HANGUL SYLLABLE JEONG}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 51221 (\N{HANGUL SYLLABLE JEONG}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:370: UserWarning: Glyph 47564 (\N{HANGUL SYLLABLE MAN}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:370: UserWarning: Glyph 47564 (\N{HANGUL SYLLABLE MAN}) missing from font(s) DejaVu Sans.
   fig.tight_layout()
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 45936 (\N{HANGUL SYLLABLE DE}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 45936 (\N{HANGUL SYLLABLE DE}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 51060 (\N{HANGUL SYLLABLE I}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 51060 (\N{HANGUL SYLLABLE I}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 53552 (\N{HANGUL SYLLABLE TEO}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 53552 (\N{HANGUL SYLLABLE TEO}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 49828 (\N{HANGUL SYLLABLE SEU}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 49828 (\N{HANGUL SYLLABLE SEU}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 52992 (\N{HANGUL SYLLABLE KE}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 52992 (\N{HANGUL SYLLABLE KE}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 51068 (\N{HANGUL SYLLABLE IL}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 51068 (\N{HANGUL SYLLABLE IL}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 47553 (\N{HANGUL SYLLABLE RING}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 47553 (\N{HANGUL SYLLABLE RING}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 44257 (\N{HANGUL SYLLABLE GOG}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 44257 (\N{HANGUL SYLLABLE GOG}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 49440 (\N{HANGUL SYLLABLE SEON}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 49440 (\N{HANGUL SYLLABLE SEON}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 44256 (\N{HANGUL SYLLABLE GO}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 44256 (\N{HANGUL SYLLABLE GO}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 51221 (\N{HANGUL SYLLABLE JEONG}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 51221 (\N{HANGUL SYLLABLE JEONG}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 47564 (\N{HANGUL SYLLABLE MAN}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 47564 (\N{HANGUL SYLLABLE MAN}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 54617 (\N{HANGUL SYLLABLE HAG}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 54617 (\N{HANGUL SYLLABLE HAG}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 49845 (\N{HANGUL SYLLABLE SEUB}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 49845 (\N{HANGUL SYLLABLE SEUB}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 53356 (\N{HANGUL SYLLABLE KEU}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 53356 (\N{HANGUL SYLLABLE KEU}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 44592 (\N{HANGUL SYLLABLE GI}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 44592 (\N{HANGUL SYLLABLE GI}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 48516 (\N{HANGUL SYLLABLE BUN}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 48516 (\N{HANGUL SYLLABLE BUN}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 51088 (\N{HANGUL SYLLABLE JA}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 51088 (\N{HANGUL SYLLABLE JA}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-/Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/learning_curve.py:371: UserWarning: Glyph 49688 (\N{HANGUL SYLLABLE SU}) missing from font(s) DejaVu Sans.
+<REPO_ROOT>/experiments/learning_curve.py:371: UserWarning: Glyph 49688 (\N{HANGUL SYLLABLE SU}) missing from font(s) DejaVu Sans.
   fig.savefig(FIG_PATH, dpi=140)
-[그림] 저장 → /Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/figures/learning_curve.png
+[그림] 저장 → <REPO_ROOT>/experiments/figures/learning_curve.png
 # 데이터 스케일링(learning curve) 분석 — RF vs GNN
 
 > 목적: "RF>GNN 이 데이터셋이 작아서 생긴 것 아니냐"는 반박 대응. train(873)을 20/40/60/80/100% 로 iterative-stratified subsample(멀티라벨 분포 보존), seed 5개 반복. valid(109)·test(110) 고정. GNN=동등예산 A_wd(GIN), RF=v1 설정. 주지표=test macro PR-AUC.
@@ -189,4 +189,4 @@
 - `results/learning_curve.csv` (model, train_fraction, n_train, seed, macro_pr_auc, macro_roc_auc)
 - `results/subsample_indices.json` (fraction→seed→선택 train cid), `results/hyperparams.json`
 - `figures/learning_curve.png`
-[요약] 저장 → /Users/qodusdn/Desktop/Papers/DTI_ADR_Prediction/experiments/results/learning_curve_summary.md
+[요약] 저장 → <REPO_ROOT>/experiments/results/learning_curve_summary.md

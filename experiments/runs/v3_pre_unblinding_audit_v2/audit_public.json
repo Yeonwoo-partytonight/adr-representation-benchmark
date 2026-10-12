@@ -1,0 +1,86 @@
+{
+  "_scope": "공개 — 판정·개수·해시 대조 건수만. 지표·부호 값·λ·Δ·CI·p 는 없다.",
+  "ts_kst": "2026-09-10 21:03:59 KST",
+  "block": "AO — 개봉 전 감사 재수행(봉인 완전성 점검 v2)",
+  "instruction": "docs/103_pre_unblinding_reaudit_prompt_for_vscode.md",
+  "gates": {
+    "G0_v2_pass": true,
+    "G0_v2_n_rows": 13,
+    "G0_v2_pass_at_exit": true,
+    "G_HOLM_n_labels": 7,
+    "G_IDLE_B_competitors": 0,
+    "status_sidecar_transition_pass": true,
+    "sealed_artifacts_start": 275,
+    "sealed_total_start": 291,
+    "sealed_directories": 25,
+    "sealed_snapshot_start_equals_exit": true
+  },
+  "sealing_completeness": {
+    "n_expected": 275,
+    "n_live_artifacts": 275,
+    "n_missing": 0,
+    "n_unexpected": 0,
+    "n_added_since_block_X": 2,
+    "n_removed_since_block_X": 0,
+    "n_hashed": 275,
+    "n_files_with_recorded_hash": 275,
+    "n_hash_compared": 862,
+    "n_hash_mismatch": 0,
+    "n_changed_since_block_X": 0,
+    "n_crosscheck_groups": 5,
+    "model_fold_seed_all_set_equal": true,
+    "n_access_log_files": 16,
+    "n_access_log_entries": 121,
+    "n_access_log_entries_new_since_block_X": 30,
+    "n_unattributed_new_entries": 0,
+    "n_human_exposure_true": 0,
+    "n_open_sealed_substring": 0,
+    "access_log_types": [
+      "machine_read"
+    ],
+    "n_known_failure_restart_events": 5,
+    "verdict": "PASS"
+  },
+  "out_of_scope_sealed_copies": {
+    "n_copy_files": 3,
+    "n_copy_pairs": 4,
+    "n_sealed_named_dirs": 2,
+    "n_files_in_sealed_named_dirs": 7,
+    "copy_access_log_entries": 6,
+    "copy_access_log_human_exposure_true": 0,
+    "checksum_manifest_verified": 6,
+    "checksum_manifest_failed": 0,
+    "verdict": "non_blocking_recorded",
+    "disposition": "보존 + 문서화 (사용자 확정 2026-09-10) — 경로는 감사 산출물과 docs/33 항목54 에만 적는다."
+  },
+  "sign_disclosure_consistency": {
+    "n_first_look_entries": 13,
+    "n_sign_known": 4,
+    "matrix_n_rows": 4,
+    "new_sign_known_contrasts_since_block_X": 0,
+    "regenerated": false
+  },
+  "ckpt_projection_files": 5,
+  "not_performed": {
+    "unblinding_performed": false,
+    "open_sealed_calls": 0,
+    "emit_sign_calls": 0,
+    "decision_py_calls": 0,
+    "sealed_value_reads": 0,
+    "model_training": 0,
+    "network": 0,
+    "git_commit": 0,
+    "git_push": 0,
+    "files_added_to_sealed": 0,
+    "backup_disposition": 0
+  },
+  "not_performed_note": "sealed_value_reads = 봉인 산출물을 역직렬화해 지표·배열 값을 적재한 횟수. checkpoint.jsonl 의 키 허용목록 투영은 여기 세지 않고 ckpt_projection_files 로 따로 적는다.",
+  "artifacts": {
+    "sealing_completeness_audit_v2.json": "a7fba492765e799398fc60dbcf9ed91728e14b9ca324b0bfba4fb4fe8cb07294"
+  },
+  "defensive_scan": {
+    "n_forbidden_keys": 0,
+    "n_value_scan_hits": 0,
+    "method": "★ 키 이름이 아니라 값으로 판정 (V1.defensive_scan)."
+  }
+}

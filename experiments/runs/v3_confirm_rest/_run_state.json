@@ -1,0 +1,32 @@
+{
+  "total": 90,
+  "session_seq": 1,
+  "n_done_this_session": 90,
+  "session_wall_s": 8440.024810042,
+  "sealed_sha256": {
+    "rep1/oof_M0.npz": "9d6cdaac86c7f9fc68509c00e43a51648c739b4c4bd8a11e45711aeeccc8052d",
+    "rep1/oof_M1.npz": "27a273ca581ddd20a2ecd0583c71efc107e77b1d31145ee17eeb6a5c5c249c5c",
+    "rep1/oof_M2.npz": "5298187b4fa3765ce3fbd090d7117c6b4bcfdf155c2e2b8183a5e53b8984110d",
+    "rep1/oof_P-ID.npz": "24fc4de5bde8130eead1bd1021cf3363f34d82fa14a43f4915cb6707a9e091d5",
+    "rep1/oof_P-FAM.npz": "97c80beda28c71666ff6b24e680787f4b1c8fe1bd725398090d44d6a45ce590c",
+    "rep1/oof_C-CAP.npz": "e89941191c24cfb388759b8ccbde54f550ed332beaf9e7e0e599c7df05503ab9",
+    "rep1/metrics_full.json": "b85b0d35fdc186979184f33ff966669b52a51bf7f8d8dd1d7c5195a124b28534",
+    "rep2/oof_M0.npz": "640ac1a52e5d8d805cdada74171bdef85aacdf23f1bac3b795dca9d7071a20c2",
+    "rep2/oof_M1.npz": "9c19b40928cb82c4b1c29a883f631b0700e5b846d232afecc15d34c81fce55ac",
+    "rep2/oof_M2.npz": "f11b8c24bbc156454622633592e92b66f631041b50737f0a3a569a5621969256",
+    "rep2/oof_P-ID.npz": "2da2adad9b9c4e2badfc8e16e2b5c9114180bbdca13f528e134d969fa0d90839",
+    "rep2/oof_P-FAM.npz": "18528b38ba2f733ab2e3857e5537dbf1403e626a09e56cd2c13f87b844d9ff5a",
+    "rep2/oof_C-CAP.npz": "2585f17dfb7fcafa72060a09897c350d0326a0fdb182dd33a35793547fc2777e",
+    "rep2/metrics_full.json": "7f9f6572a5f86d3794c9ce46d2a79be2c697a007f33b27116b884ccaa155e89e",
+    "rep3/oof_M0.npz": "10e5b68f4fe1c04998a79ab0056ffb83dd9932641ac150636b6445963d92f08d",
+    "rep3/oof_M1.npz": "22618a1580f27ea8a8eb28fd3f6bbac9338e45a3f954fbdcb447f76d91259aa2",
+    "rep3/oof_M2.npz": "01fce973cd1d9b33b123cc960c8031209b79cc62d2d44d0c6bcb650408a9258e",
+    "rep3/oof_P-ID.npz": "af053bb4392723ee73b7e3901083bd8408b26b6df980ced9abcd19e4426a2766",
+    "rep3/oof_P-FAM.npz": "e6188e149a1960abd132328fa645505d7fa773ff3a1ea3e58f8e6f7a72fabc7e",
+    "rep3/oof_C-CAP.npz": "9d6670e0bd2a010ec73d902ded5da6d8caa352953a8424f55a1affe68ee97d2e",
+    "rep3/metrics_full.json": "7851ddd847fd3d580fc98df2d829dffb4ae87af6ed411563b7bf15ccc7b3d31c"
+  },
+  "env_fingerprint_match": true,
+  "sealed_guard_n_files": 30,
+  "sealed_guard_unchanged": true
+}

@@ -1,0 +1,51 @@
+{
+  "_scope": "공개 — 게이트 PASS/FAIL·개수·해시 뿐.",
+  "ts_kst": "2026-08-01 16:57:20 KST",
+  "H4_checks": {
+    "n_drugs": 1092,
+    "n_scaffold_groups": 732,
+    "scaffold_fold_cross": 0,
+    "assign_total_per_repeat": {
+      "1": 1092,
+      "2": 1092,
+      "3": 1092
+    },
+    "n_excluded_no_target": 245,
+    "n_estimation_target_drugs": 847,
+    "no_target_in_estimation_set": 0,
+    "consensus_shape": [
+      1092,
+      370
+    ],
+    "consensus_nan": 0,
+    "y_shape": [
+      1092,
+      370
+    ],
+    "seed_isolation": {
+      "stratification_seeds": [
+        6001,
+        6002
+      ],
+      "n_forbidden_checked": 2033,
+      "intersection": [],
+      "intersection_size": 0,
+      "pass": true
+    }
+  },
+  "sealed_guard_start": {
+    "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json": "8722a4e1c52d2eae5cbbebf6b5a5ff5cb145dd591ea5648731d7c481ed15c1b8",
+    "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+    "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+    "experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json": "66be535755ca9f4a174a15b45fd2af34fb5f2283d0dab71acc579c6fc66a9621",
+    "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M1b.npz": "9155569ac2581613312c7608a4d9cfcfc7bfe25798b24003a0f6a9116a4fcb33",
+    "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M2b.npz": "05a51b16002b8c0fbfd68a9b5f1fa1d578b9b0b491e6944f098588d70fad0298",
+    "experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json": "b4d80cb9acceb8de6b05da1b0a247d0de94197ffebf24c9309d004d9b722c1cd",
+    "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M1b.npz": "0bb7a951246f85ab37b5d1536073a491c9857cd255593fdef0206c3f8b8b22c4",
+    "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M2b.npz": "c850e55c64309c5cae763f6388459206270a106efc70d7a11322b14c0c3091c8",
+    "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+    "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+    "experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json": "6a861640a05940533ad75b97626929c321689929c9609ec3c08972ac87b8dc8d"
+  },
+  "all_pass": true
+}

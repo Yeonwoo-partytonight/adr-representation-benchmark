@@ -1,5 +1,5 @@
 === v2_GNN run 2026-06-25T01:23:57Z | python=Python 3.14.4 | MPS_FALLBACK=1 ===
-/Users/qodusdn/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train.py:122: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+<HOME>/Desktop/Papers/NaturalBiologics_ADR_Prediction/v2_GNN/src/train.py:122: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
 Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:839.)
   tot += float(loss) * batch.num_graphs
 [env] device=mps | seed=42 | loss=bce | fallback=1

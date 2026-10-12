@@ -1,0 +1,32 @@
+2026-07-27 10:54:53 KST | ==============================================================================
+2026-07-27 10:54:53 KST | [confirm_rep1] stage=split — docs/36 정본 스펙 실행 (사전등록 §13-3)
+2026-07-27 10:54:53 KST | [게이트0] 선행 동결 검증 시작 — docs/38(A0~A5) + docs/41(SAP) + docs/43(재-동결 v1.1)
+2026-07-27 10:54:53 KST | [게이트0] PASS — ladder_freeze=b885585aefbabb32 sap_manifest=756d485feb4715e9(v1.1) 모듈 11/11 sha 일치 · A0~A5 PASS · primary B_m1b dim=10
+2026-07-27 10:54:53 KST | [stage=split] 확증용 scaffold-그룹 5-fold split **최초 생성** (OOF 미조회)
+2026-07-27 10:54:53 KST | [data] N=1092 PT=370 (동결 master_X/master_Y 읽기 전용)
+2026-07-27 10:54:54 KST | [scaffold] group=732 (A2 일치=True) · max=78 · 빈 scaffold group size=77
+2026-07-27 10:54:54 KST | [split] seed=201 · fold 크기 [218, 218, 219, 218, 219] (목표 ≈218/fold)
+2026-07-27 10:54:54 KST | [fold 0] test drugs=218 groups=174 | train PT-positive min=7 (<1: 0, <3: 0) | target Jaccard(train,test)=0.526 | label density test=0.04178 train=0.05065
+2026-07-27 10:54:54 KST | [fold 1] test drugs=218 groups=182 | train PT-positive min=5 (<1: 0, <3: 0) | target Jaccard(train,test)=0.512 | label density test=0.05459 train=0.04745
+2026-07-27 10:54:54 KST | [fold 2] test drugs=219 groups=109 | train PT-positive min=6 (<1: 0, <3: 0) | target Jaccard(train,test)=0.453 | label density test=0.05087 train=0.04838
+2026-07-27 10:54:54 KST | [fold 3] test drugs=218 groups=122 | train PT-positive min=5 (<1: 0, <3: 0) | target Jaccard(train,test)=0.524 | label density test=0.05068 train=0.04843
+2026-07-27 10:54:54 KST | [fold 4] test drugs=219 groups=145 | train PT-positive min=4 (<1: 0, <3: 0) | target Jaccard(train,test)=0.442 | label density test=0.04646 train=0.04948
+2026-07-27 10:54:54 KST | [게이트A] scaffold 무누수=True fold 크기대역=True rare-PT(모든 train fold에 PT별 ≥1 양성)=True B_seq fit행 충분=True → PASS=True
+2026-07-27 10:54:54 KST | [저장] data/processed/splits/confirmatory/rep1_seed201/(folds.json·fold_membership.csv·split_manifest.json) + experiments/runs/v3_confirm_rep1_seed201/(split_manifest.json·split_diagnostics.csv)
+2026-07-27 10:54:54 KST | [stage=split] 완료 — 게이트A PASS. OOF 미조회 유지. 다음: --stage oof (되돌릴 수 없는 최초 조회)
+2026-07-27 10:55:31 KST | ==============================================================================
+2026-07-27 10:55:31 KST | [confirm_rep1] stage=oof — docs/36 정본 스펙 실행 (사전등록 §13-3)
+2026-07-27 10:55:31 KST | [게이트0] 선행 동결 검증 시작 — docs/38(A0~A5) + docs/41(SAP) + docs/43(재-동결 v1.1)
+2026-07-27 10:55:31 KST | [게이트0] PASS — ladder_freeze=b885585aefbabb32 sap_manifest=756d485feb4715e9(v1.1) 모듈 11/11 sha 일치 · A0~A5 PASS · primary B_m1b dim=10
+2026-07-27 10:55:31 KST | [stage=oof] split 재검증 PASS — N=1092 PT=370 fold 크기=[218, 218, 219, 218, 219]
+2026-07-27 10:55:31 KST | [게이트B] 무결성 로그 기록 완료 (docs/33·docs/29 §20 append, first_look_log 'opened') | 조회자=vscode-claude(runner) | 시각=2026-07-27 10:55:31 KST
+2026-07-27 10:55:31 KST | [게이트B] ⚠️ 여기서부터 확증 OOF **최초 조회** — 되돌릴 수 없음
+2026-07-27 10:59:59 KST | [fold 0] train=874 test=218 | leak_rows=0(전 블록) | B_seq fit행=689 EVR64=0.9278 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 11:04:26 KST | [fold 1] train=874 test=218 | leak_rows=0(전 블록) | B_seq fit행=671 EVR64=0.9269 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 11:08:55 KST | [fold 2] train=873 test=219 | leak_rows=0(전 블록) | B_seq fit행=695 EVR64=0.9295 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 11:13:26 KST | [fold 3] train=874 test=218 | leak_rows=0(전 블록) | B_seq fit행=669 EVR64=0.9295 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 11:17:55 KST | [fold 4] train=873 test=219 | leak_rows=0(전 블록) | B_seq fit행=664 EVR64=0.9220 | dim M1b=2060 M2b=2124 | RF random_state=42 (수치 미기록 — redaction)
+2026-07-27 11:17:55 KST | [OOF] 전체 1092×370 OOF 완성 (M1b·M2b) — 반복1 단일이므로 consensus=자기자신(SAP A8)
+2026-07-27 11:17:57 KST | [지표] macro AP 산출 완료 — 원시값·Δ크기 미출력(sealed, 3개 파일 sha 기록)
+2026-07-27 11:17:57 KST | [결과·공개] Δ(M2b−M1b) 부호 = negative
+2026-07-27 11:17:57 KST | [무결성] 통계검정(bootstrap/sign-flip/p/SESOI) 미실행 · 반복2·3 미생성 · 타 모델 미조회 · 네트워크 0

@@ -1,0 +1,318 @@
+{
+  "_scope": "블록 O 공개 요약 — 형상·개수·차원·해시·소요시간·게이트 판정뿐. Δ·macro AP·CI·p·부호 전량 봉인(docs/60 §0·O-0-2 4).",
+  "ts_kst": "2026-08-06 17:54:39 KST",
+  "spec": "docs/60_v3_rf_tuned_prompt_for_vscode.md (개정판 v2)",
+  "model": "RF_tuned",
+  "hypothesis": "Holm ⑥ (M2b − RF_tuned) 의 comparator arm 산출 — 대비는 본 블록 범위 밖",
+  "freeze_file": "v3_Multimodal/config/rf_tuned_freeze.json",
+  "freeze_sha256": "c1ef6406fbb48b7fade599390d75a945360a2f3ce1ee644a8c4e605e6a3703b3",
+  "feature_dim": 2048,
+  "n_repeats": 3,
+  "n_fold": 5,
+  "gate0": {
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_version": "1.1",
+    "sap_n_modules_verified": 11,
+    "sap_modules_all_match": true,
+    "pass": true
+  },
+  "gates": {
+    "A_entry": {
+      "gate": "A",
+      "label": "블록 O 진입",
+      "load1": 1.25927734375,
+      "pass": true
+    },
+    "B_start": {
+      "gate": "B",
+      "label": "블록 O 시작",
+      "competitors": 0,
+      "pass": true
+    },
+    "prelook": {
+      "prelook_recorded": true,
+      "docs33_sha16": "bedc09cd8214c602"
+    },
+    "G_BLOCK": {
+      "holm67_start_still_blocked_until_reply": false,
+      "post_interim_sha256": "502db732bd5e45cbe0d1da78106f639c0f65261e1215af9912250e1ffa284258",
+      "post_interim_status_sha256": "a12fee2cdfd71350422e20e8ba2b6f4d083dd89f6907296fad944959d7d70083"
+    },
+    "G_HOLM": {
+      "line": 44,
+      "n_labels": 7,
+      "labels": [
+        "M2b-P-ID",
+        "M2b-P-FAM",
+        "M2b-realloc_null",
+        "M2b-M0",
+        "M2b-RF_tuned",
+        "RFseq-RF",
+        "RQ-int"
+      ]
+    },
+    "no_existing_outputs": {
+      "preexisting_rftuned_outputs": 0
+    },
+    "B_end": {
+      "gate": "B",
+      "label": "블록 O 종료",
+      "competitors": 0,
+      "pass": true
+    }
+  },
+  "inputs_sha256": {
+    "splits": {
+      "rep1_seed201": {
+        "folds_json_sha256": "3c1a5d68bfcc6ddfa1de17990194c5beb3c4fe365ee0a123d04c4a34bed871b2",
+        "fold_membership_sha256": "7047606f76562ba54b1dadef0518cb8e18ed22dad5b588d22b298bcb892284ad",
+        "n_rows": 1092,
+        "n_scaffold_groups": 732,
+        "n_scaffold_groups_split_manifest": 732,
+        "n_rows_empty_scaffold": 77,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep2_seed202": {
+        "folds_json_sha256": "786feeca045f603685e190a252636f3815695d2c9e61812c8db1daf063abccfa",
+        "fold_membership_sha256": "27f2e01dcb392be4873dc2820fdbb9bb8d0f5c8c85139878f523de6a74056b33",
+        "n_rows": 1092,
+        "n_scaffold_groups": 732,
+        "n_scaffold_groups_split_manifest": 732,
+        "n_rows_empty_scaffold": 77,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep3_seed203": {
+        "folds_json_sha256": "9db08cf96298b47e182e286fa4ef4b94f74605c6f31f0f9f841bc723c638b4e4",
+        "fold_membership_sha256": "45762346d825a9f3a630ea34a423c10b49039275f5d4ef28a264e6ae2aa0ad23",
+        "n_rows": 1092,
+        "n_scaffold_groups": 732,
+        "n_scaffold_groups_split_manifest": 732,
+        "n_rows_empty_scaffold": 77,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      }
+    },
+    "sources": {
+      "master_X.parquet": {
+        "path": "data/processed/master_X.parquet",
+        "sha256": "788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6"
+      },
+      "master_Y.parquet": {
+        "path": "data/processed/master_Y.parquet",
+        "sha256": "bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018"
+      },
+      "B_seq_emb": {
+        "path": "data/processed/drug_target_emb_meanpool.npy",
+        "sha256": "052a901f7c2bb91f09b2c4cff4f812a5b3ce65f249f0aaacce759a3d926ea50f"
+      },
+      "B_seq_mask": {
+        "path": "data/processed/drug_target_mask_meanpool.npy",
+        "sha256": "577acfffa7d8df1e16b7e38e9af7a2951cc3e258f355042ede5a353e95b18366"
+      },
+      "B1_ntargets": {
+        "path": "data/processed/drug_n_targets_meanpool.npy",
+        "sha256": "52f8fc8065d43406f9423224a0abe71dedcf928b294c5c3c97a1ff04e1b8b58a"
+      },
+      "B_pid_src": {
+        "path": "data/processed/target_mapping/06_targets_human.csv",
+        "sha256": "2784c1bd0fb8df3b079d5eda460d280d921bb48260e6d11d48f4f8009988bdd4"
+      },
+      "B_m1b_src": {
+        "path": "data/processed/target_mapping/08_m1b_covariates.csv",
+        "sha256": "c302399f32c71083a8947971fdb0826f91234be93dd6ee7483b82fd633597256"
+      },
+      "B_fam_src": {
+        "path": "data/processed/target_mapping/10_target_family_biological.csv",
+        "sha256": "6c8da361a1f689b2f2af9e01fdbfcc78d5f1301220355571cfc0491fe152ea88"
+      }
+    }
+  },
+  "consistency_checks": {
+    "n_drugs": 1092,
+    "n_pt": 370,
+    "reps": {
+      "rep1": {
+        "n_scaffold_groups": 732,
+        "scaffold_fold_cross": 0,
+        "n_pt_train_positive_lt1": 0,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep2": {
+        "n_scaffold_groups": 732,
+        "scaffold_fold_cross": 0,
+        "n_pt_train_positive_lt1": 0,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep3": {
+        "n_scaffold_groups": 732,
+        "scaffold_fold_cross": 0,
+        "n_pt_train_positive_lt1": 0,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      }
+    }
+  },
+  "b0_r3": {
+    "shape": [
+      1092,
+      2048
+    ],
+    "dtype": "uint8",
+    "n_fail_r3": 0,
+    "n_fail_r2": 0,
+    "identical_to_r2": false,
+    "n_rows_differing_from_r2": 1058,
+    "bit_density_r2": 0.022966657366071428,
+    "bit_density_r3": 0.03131349444826007,
+    "row_order_matches_master_X": true,
+    "fit_rows_mask_empty": true,
+    "leak_rows": 0,
+    "note": "비트 밀도는 결과 계열이 아니라 지문 자체의 성질이므로 공개 가능(지시서 O-3-2)."
+  },
+  "code_path_equivalence_byte_identical": true,
+  "code_path_equivalence_detail": {
+    "model": "M0",
+    "repeat": 1,
+    "fold": 0,
+    "n_test_rows": 218,
+    "dim": 2048,
+    "dtype": "float64",
+    "leak_rows": {
+      "B0": 0
+    },
+    "wall_s": 137.49637849995634,
+    "ref_npz": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M0.npz"
+  },
+  "measure": {
+    "measured_model": "RF_tuned",
+    "measured_dim": 2048,
+    "measured_wall_s": 296.6527947499999,
+    "n_model_fold_total": 15,
+    "estimated_total_wall_s": 4449.791921249998,
+    "estimated_total_wall_hours": 1.2360533114583327,
+    "estimated_total_wall_days": 0.05150222131076387,
+    "abort_threshold_days": 7.0,
+    "exceeds_threshold": false,
+    "peak_rss_gib": 4.689788818359375,
+    "docs48_prior_estimate_note": "docs/48 §7 의 '약 24분' 은 동결 RF(n_estimators=300) 단가 외삽값이라 본 모델(n_estimators=1000·min_samples_leaf=2)에 적용하지 않는다 — 실측으로 대체.",
+    "scaling_note": "본 블록은 arm 1개·차원 고정(2048)이라 model-fold 단가가 균일하다. 따라서 차원비 스케일 없이 실측 단가 × 15 로 추정한다."
+  },
+  "run": {
+    "total": 15,
+    "session_seq": 1,
+    "n_done_this_session": 15,
+    "session_wall_s": 3321.4131165830186,
+    "env_fingerprint_match": true,
+    "sealed_guard_check": {
+      "n_preexisting": 160,
+      "n_added_own": 22,
+      "n_foreign": 0,
+      "preexisting_unchanged": true
+    },
+    "sealed_guard_n_files": 160,
+    "sealed_guard_unchanged": true
+  },
+  "n_completed_model_folds": 15,
+  "sealed_sha256_oof": {
+    "rep1/oof_RF_tuned.npz": "f2b8c41f65af8b04d6d04bfb09c406c2a8855bdfd7a1622fa84ff8e5ebd7dc1d",
+    "rep1/metrics_full.json": "b8957352de9ad07be1cbcac271596ce6b28c7f5ffaa4b4d9d86aca25403b09c7",
+    "rep2/oof_RF_tuned.npz": "c584196347e77019e71acf5da57a5fc6d22b5df8a8b4935602cf22c79b2b1b92",
+    "rep2/metrics_full.json": "3a60c5ed9cebc4b5a573ca4769ea635f7a29af8675cd8535fdb574cc308bdbab",
+    "rep3/oof_RF_tuned.npz": "394ddf94a2ce44cccd8fdff72bd96f9d9a2755dac7cb2c3eca8aa35a3a5a3148",
+    "rep3/metrics_full.json": "45698102b0803c5dd4e737bbb85fc9886d6f393e15e06742a3d549d5a2ea3ec0"
+  },
+  "consensus": {
+    "n_models": 1,
+    "method": "A (등록 §6-(ii)): drug-PT별 raw OOF probability 산술평균 → consensus → 그 위에서 추론",
+    "dir": "experiments/runs/v3_confirm_rftuned_consensus_rep123",
+    "sealed_sha256": {
+      "consensus_RF_tuned.npz": "41080e1be7072b08c46027dd4590cb1d9112b904a4a3645b1812a5f26ad5d081",
+      "metrics_full.json": "771c25d2850efa90fccc1f922945c9f5878310b94fe6e2c6210da5deedab0551"
+    },
+    "wall_s": 0.5447302079992369
+  },
+  "peak_rss_gib": 4.734771728515625,
+  "sealed_guard_n_files": 160,
+  "sealed_guard_unchanged": true,
+  "compute_conditions": {
+    "blas_env": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null
+    },
+    "rf_random_state": 42,
+    "note": "확증 반복1·2·3 및 블록 I 와 동일 조건(스레드 환경변수 미설정)."
+  },
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "scipy": "1.18.0",
+    "rdkit": "2026.03.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O"
+  },
+  "not_performed": [
+    "개봉(open_sealed)",
+    "성공판정(rq*_decision)",
+    "Holm/BH 다중성",
+    "TOST/SESOI",
+    "bootstrap CI",
+    "sign-flip",
+    "p-value",
+    "Δ 산출",
+    "부호 산출(emit_sign)",
+    "재튜닝·재탐색",
+    "기존 동결물 수정",
+    "기존 _sealed 덮어쓰기",
+    "M1b·M2b·M0·M1·M2·P-ID·P-FAM·C-CAP 재계산",
+    "split·fold·seed 재추첨",
+    "⑦ late-fusion",
+    "⑧ GIN·RQ-int",
+    "A3·A4·A6 층화",
+    "네트워크",
+    "data/raw 변경",
+    "git commit·push"
+  ],
+  "open_sealed_calls": 0,
+  "decision_functions_called": [],
+  "multiplicity_applied": false,
+  "emit_sign_called": false
+}

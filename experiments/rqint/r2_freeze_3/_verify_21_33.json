@@ -1,0 +1,80 @@
+[
+  {
+    "n": 21,
+    "item": "docs/101 §1-3 값 검증 6조건 전건 PASS",
+    "pass": true,
+    "val": "[True, True, True, True, True, True]"
+  },
+  {
+    "n": 22,
+    "item": "primary 7/7 \"RF\" · [\"RF\",\"GIN\"] 정확히 1슬롯(id ⑧, 블록당)",
+    "pass": true,
+    "val": "[['⑧'], ['⑧']]"
+  },
+  {
+    "n": 23,
+    "item": "기존 model_family 14곳 문자열·개수 불변",
+    "pass": true,
+    "val": "14/14"
+  },
+  {
+    "n": 24,
+    "item": "erratum 에 도출 규칙 기계 판독 가능 기록",
+    "pass": true,
+    "val": "['_doc', 'primary_model_family', 'families_compared']"
+  },
+  {
+    "n": 25,
+    "item": "블록 AL 증거(r2_freeze/) 12파일 0바이트",
+    "pass": true,
+    "val": "shasum -c 34/34 OK 에 포함"
+  },
+  {
+    "n": 26,
+    "item": "docs/100 리포트 0바이트 · AL 재현 대조표",
+    "pass": true,
+    "val": "6c76699597e86f32"
+  },
+  {
+    "n": 27,
+    "item": "AL-5 = gate_g0()·gate_holm() 직접 호출 · main() 호출 0 · 1회성 산출물 0바이트",
+    "pass": true,
+    "val": "2026-08-07 09:52:20 / 2026-08-14 13:53:25"
+  },
+  {
+    "n": 28,
+    "item": "§1-3 합격기준 6항 전건 PASS",
+    "pass": true,
+    "val": "[True, True, True, True, True, True]"
+  },
+  {
+    "n": 29,
+    "item": "예외 1건 선재 divergence 분류 + 반사실 대조 실행 제시",
+    "pass": true,
+    "val": "반사실 mismatched=['v3_Multimodal/config/post_interim_freeze_v1_0.status.json'] · 현행 mismatched=['v3_Multimodal/config/post_interim_freeze_v1_0.status.json']"
+  },
+  {
+    "n": 30,
+    "item": "pre_unblinding_audit.py L61·L66·L67 무수정 · docs/99 §3 대상 2곳만 변경",
+    "pass": true,
+    "val": "L61/66/67 원문 유지 · 변경행 [64, 121]"
+  },
+  {
+    "n": 31,
+    "item": "docs/33 항목53 에 §2-2 3요소 전건 기입 · 추가 번호 소모 0",
+    "pass": true,
+    "val": ""
+  },
+  {
+    "n": 32,
+    "item": "r2_freeze(12)+r2_freeze_2(22) = 34파일 전건 0바이트",
+    "pass": true,
+    "val": "shasum -c 34/34 OK"
+  },
+  {
+    "n": 33,
+    "item": "freeze.log 신규 append 타임스탬프가 mtime 이하 (미래 시각 0)",
+    "pass": true,
+    "val": "append 15:36:34 ≤ mtime 15:36:34 · 7행"
+  }
+]

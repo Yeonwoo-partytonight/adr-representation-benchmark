@@ -1,0 +1,131 @@
+{
+  "_doc": "rqint_downstream_spec_v1.json 의 S3(D12 민감도 2종) 실행 규약(W1′·W2·W3) · 검토자 2026-09-29 의견 R-b·R-d 문면 보충을 기록하는 amendment 사이드카(3호). 명세 JSON·사이드카 1·2호·rqint_downstream.py·sap/*.py 는 0바이트 불변. 115b 하네스(rqint_d12_run.py)는 이 파일을 명세·사이드카 1·2호와 함께 읽는다. 1회 기록 후 0바이트 불변.",
+  "amendment_id": "rqint_downstream_spec_v1_amendment3",
+  "block": "AZ (docs/115b) AZ-4",
+  "amends": {
+    "spec_path": "v3_Multimodal/config/rqint_downstream_spec_v1.json",
+    "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+    "amendment1_sha256": "63c29d6b6a9e22951f2e2891b54f4251d5e4f679fc1d3b3f110cfdf510aab05c",
+    "amendment2_sha256": "c8e1e2569e7f62fe14a49bdd5581baf3d2d9da9fb411e15099cd85a01bf1a3d8",
+    "sections": [
+      "S3_d12_sensitivity 실행 규약(W1′·W2·W3)",
+      "S4 eps 서술 보충(검토자 R-b)",
+      "개봉·판정 승계 범위 주석(검토자 R-d)"
+    ]
+  },
+  "d12_groups": {
+    "decision_w1_prime_verbatim": "`rqint_downstream.split_no_scaffold` · `split_benzene` 를 import 해 **호출만**(재구현 0 · 새 라벨 규칙 0)",
+    "implementation": {
+      "i": "rqint_downstream.split_no_scaffold",
+      "ii": "rqint_downstream.split_benzene"
+    },
+    "module_path": "v3_Multimodal/src/rqint_downstream.py",
+    "module_sha256": "3e92a4ded1ea60b777c460b1b120232ae3051fe3a80e2e7c4f12d943c92ea680",
+    "base_groups": "confirmatory_oof_rep1.scaffold_of(master_X.smiles_canonical)",
+    "labels": {
+      "i": "\"__singleton_{i}\" (i = 행 인덱스 · split_no_scaffold 의 f\"{empty_label}__singleton_{i}\", empty_label = \"\")",
+      "ii": [
+        "c1ccccc1__A",
+        "c1ccccc1__B"
+      ]
+    },
+    "G": {
+      "base": 732,
+      "i": 808,
+      "ii": 733
+    },
+    "n": {
+      "i_bucket": 77,
+      "ii_group": 78,
+      "ii_first": 39,
+      "ii_second": 39
+    },
+    "ii_tie_rule_note": "split_benzene 의 정렬 키 = (smiles, 행 인덱스). master_X 가 cid 오름차순이므로 행 인덱스 동률 처리 = 명세 「동률 시 cid 오름차순」과 같다(벤젠군 78 SMILES 동률 0 — 러너 Mac 실측).",
+    "cids_sha_rule": "`sha256(json.dumps([int(cid) for cid in L]).encode()).hexdigest()` (파이썬 기본 구분자 `\", \"`)",
+    "cids_sha_values": {
+      "i_bucket": "bd99dfa392442ccf888cf5842c1e074fea52d9487efa000c270060955284765f",
+      "ii_first": "63d8049de17a9dbd83e299d8e114fdba95026308410e4ab714cd3aaf779b9444",
+      "ii_second": "9879e90d7abb4309c1f8405d15ab0910e4c4726e932f20e21bd0ea67f86fa883"
+    },
+    "cids_sha_runner_mac_remeasured": true,
+    "w1_history": "cowork 가 처음에 「새 군의 라벨 문자열이 미정」이라는 전제로 질문했고 사용자가 cowork 추천안(공백 접두 라벨)을 골랐다. 그 직후 cowork 가 명세 `implementation_module` = `v3_Multimodal/src/rqint_downstream.py`(블록 AV · 2026-09-23 동결)에 이미 라벨이 정의돼 있음(`f\"{empty_label}__singleton_{i}\"` · `f\"{target}__A\"`/`f\"{target}__B\"`)을 발견해 정정 질문했고, 사용자가 **동결 함수 사용**으로 확정했다. 두 질문 모두 확증 판독 0 · D12 계산 0 시점이다. 결과적으로 새 자유도는 0 이다(9/23 사전지정을 그대로 집행).",
+    "fold_assignment_note": "명세 asserts 「폴드 배정 불변」은 본 계산에 폴드가 입력되지 않으므로(OOF 행렬은 봉인·고정) 「행 수·행 순서·cid 배열·y 바이트 불변 + 변경 행 = 대상 버킷 행뿐」으로 갈음해 검증한다 — 해석"
+  },
+  "d12_p": {
+    "decision_w2_verbatim": "주 p = `(1 + c)/(B + 1)` · 보조 p = `(1 + count)/(2B + 1)` 봉인 병기 · SE 동일",
+    "w2_rationale_verbatim": "명세 S3 에는 p 식 필드가 없고 `reporting` = 「주 분석 p 와 **병기**」다. 검토자 2026-09-29 의견이 「Holm ⑧ 및 D14 판1 에 확정 주 p 를 **일관되게** 적용」을 요구했으므로 같은 식을 쓴다. 사이드카 3호에 **해석**으로 기록한다(동결물 수정 0).",
+    "primary_p": "(1 + c) / (B + 1)",
+    "secondary_sealed": "(1 + count) / (2B + 1)",
+    "mc_se": "sqrt(p(1-p)/B), B=100000",
+    "c_definition": "사이드카 1호 decision.c_definition 과 동일 — 변형 v 의 동전 벡터 앞쪽 B 개(여집합 제외)",
+    "identity_assert": "complement_identity_used == true 이면 count == 2c assert (R-c 한정)",
+    "aggregation_and_fallback_branch_docs115_R4c_verbatim": "- **R4c ⑧ 집계(루프 완료 후 1회)**: `perm = concat(t_star, −t_star)` **if** `identity_used` **else** `concat(t_star, comp)`(rqint_test L186-199 분기 축자) · `count = #{|perm| ≥ |t_obs| − _EPS}` · `c = #{|t_star| ≥ |t_obs| − _EPS}` · identity 이면 `count == 2c` assert · `p_primary = (1 + c)/(B + 1)` · `p_secondary = (1 + count)/(2B + 1)` · `se_primary = sqrt(p(1−p)/B)`",
+    "d14_d17": "D14·D17 미적용(민감도 · 판정 미사용)",
+    "reporting": "주 분석 p 와 병기 · 주 분석 대체 금지",
+    "spec_S3_reporting_verbatim": "주 분석 p 와 **병기**한다. 주 분석을 대체하지 않는다.",
+    "spec_S3_no_result_dependent_branching_verbatim": "민감도 결과로 주 검정·판정·집계·모델선택을 바꾸지 않는다.",
+    "dynamic_interpretation_note": "명세 S3 에는 p 식 필드가 없다 — 본 필드는 해석(W2)이며 동결물 수정 0."
+  },
+  "d12_execution": {
+    "decision_w3_verbatim": "`experiments/runs/v3_rqint_d12/` 하나에서 (i) → (ii) 순서 · 감시·자동 재개 · Phase B 1회",
+    "w3_verbatim": "변형마다 **새 `np.random.default_rng(COIN_SEED)`** 로 시작한다(공통 난수 · 사이드카 2호 `applies_to_note` 「군 수가 달라 동전 벡터 길이는 다르다」). 감사 rng 도 변형마다 새 `default_rng(COIN_SEED + 1_000_003)`. 즉 변형 v 의 결과는 **`sap.rqint.rqint_test(P_RF, P_GIN, y, scaffold_group=groups_v, eligible_pt=np.arange(370), n_coin_vectors=100000, seed=COIN_SEED, pair_complement=True, complement_audit_draws=1000, return_perm=True)` 와 비트 일치**해야 한다(합성 Q3 로 증명 · 실데이터는 체크포인트 재개 가능한 청크 실행).",
+    "out_tree": "experiments/runs/v3_rqint_d12",
+    "variant_order": [
+      "i",
+      "ii"
+    ],
+    "coin_seed": 2967772708,
+    "coin_seed_source": "사이드카 2호 coin_seed.value (applies_to \"115b S3 (i)(ii)\")",
+    "audit_seed": 2968772711,
+    "rng_per_variant": "fresh default_rng(coin_seed)",
+    "audit_rng_per_variant": "fresh default_rng(coin_seed + 1_000_003)",
+    "B": 100000,
+    "n_audit": 1000,
+    "reference_distribution_per_variant": 200000,
+    "pair_complement": true,
+    "eligible_pt": "np.arange(370)",
+    "consensus_matrices": "D5 consensus 8행렬 — 루프 밖 1회(변형 공통)",
+    "equivalence": "sap.rqint.rqint_test(P_RF, P_GIN, y, scaffold_group=groups_v, eligible_pt=np.arange(370), n_coin_vectors=100000, seed=coin_seed, pair_complement=True, complement_audit_draws=1000, return_perm=True) 와 비트 일치",
+    "aggregation_timing": "두 변형 루프가 모두 끝난 뒤 1회(done 체크포인트를 다시 로드해 집계)"
+  },
+  "reviewer_20260929": {
+    "source": {
+      "path": "docs/113g_reviewer_notice_sent_record.md",
+      "sha256": "3fb6927e5a4c045b6aca77038069a423e47c226f2fad25d4513ed59d84e44831",
+      "section": "§5-1 (축자) · §5-3 (대조)"
+    },
+    "r_b": "eps = sap.rqint._EPS(1e-12) 는 원 수학식의 항이 아니라 수치 비교용 구현 규약이다. 결과에 따라 변경하지 않는다(검토자 2026-09-29 · 사이드카 1호 eps_note 보충).",
+    "r_c_scope": "count = 2c 관계 서술은 complement_identity_used == true 경로에 한정한다.",
+    "r_d": "보정 전 α = 0.05 에서의 기각 경계 일치(R1 캘리브레이션 감사·구현식 대 주 p 비교)를 Holm 보정 후 판정까지 동일하다는 의미로 확대하지 않는다. 기존 감사 결과의 승계 범위는 확인된 조건(보정 전 α = 0.05 경계)으로 한정한다.",
+    "r_e": "Holm ⑧ · D14 판1 = 주 p · 판2 폴백 유지(사이드카 1호 d14_panel1_refers_to 재확인)",
+    "not_unblinding_approval": true,
+    "not_r1_r6_reverification": true
+  },
+  "opening_prep_audit_checklist_additions": [
+    "개봉·판정 블록 문면이 보정 전 경계 일치를 보정 후 판정으로 확대 서술하지 않는지 점검 (검토자 R-d · 2026-09-29)"
+  ],
+  "decided_by": "사용자 결정 W1′·W2·W3 2026-10-02 (docs/115b §0)",
+  "hash_rule": "before = 명세 sha + 사이드카 1·2호 sha · after = + 본 파일 sha — 본 파일은 자기 sha 를 담지 않으며 after 는 docs/33 항목 72 ⑥ 에 기록",
+  "evidence_of_blindness": {
+    "sealed_counts_dirs_files_artifacts_access": [
+      32,
+      757,
+      734,
+      23
+    ],
+    "stat_fingerprints_at_start": {
+      "existing_25trees": "a61e45589227e062b632be2801cf0605845054445b63905ea27d393c008cad9d",
+      "confirmatory_gin_3trees": "6ed86c86830b664916c80c13fc2b0f355528c963df5b66e9053184316e51a8b9",
+      "stability_1tree": "b4b493d265824709a242a12d37334659bf78a75bd51a46f8b0174f058d6e6cec",
+      "gin_consensus_1tree": "c2715eecaf18f995e07177a211df2db2c6010bd5962eab42e0783e76b6cbf10f",
+      "leverage_1tree": "717c7162e774cd0a80c699bb5cc1db8edacb2f3a1067c39555fee4c231e9cfe9",
+      "holm8_1tree": "4177f61de8f3fd60a59d537b0683634a21e3dbe0e508c60da5dc4ee1ebcafc5e"
+    },
+    "d12_p_computed": false,
+    "confirmatory_inputs_read_in_block_AZ_before_this_file": 0,
+    "unblinding_performed": false
+  },
+  "code_modified": false,
+  "spec_json_modified": false,
+  "frozen_at_kst": "2026-10-02T00:40:15+09:00"
+}

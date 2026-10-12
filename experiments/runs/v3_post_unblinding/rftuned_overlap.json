@@ -1,0 +1,182 @@
+{
+  "block": "BH (docs/122 BH-4)",
+  "generated_kst": "2026-10-08 15:07:26 KST",
+  "nature": "metadata only — training 0 · prediction 0 · label read 0 · _sealed access 0",
+  "inputs": {
+    "data/processed/scaffold_split.json": {
+      "bytes": 20425,
+      "sha256": "88369dba24449770d522269fede3c8f82a38d1e98a281e9755b9dc44c4019db1"
+    },
+    "data/processed/splits/confirmatory/rep1_seed201/folds.json": {
+      "bytes": 16167,
+      "sha256": "3c1a5d68bfcc6ddfa1de17990194c5beb3c4fe365ee0a123d04c4a34bed871b2"
+    },
+    "data/processed/splits/confirmatory/rep2_seed202/folds.json": {
+      "bytes": 16167,
+      "sha256": "786feeca045f603685e190a252636f3815695d2c9e61812c8db1daf063abccfa"
+    },
+    "data/processed/splits/confirmatory/rep3_seed203/folds.json": {
+      "bytes": 16167,
+      "sha256": "9db08cf96298b47e182e286fa4ef4b94f74605c6f31f0f9f841bc723c638b4e4"
+    }
+  },
+  "v1_split": {
+    "key": "cid",
+    "n_drugs": 1092,
+    "group_sizes": {
+      "train": 873,
+      "valid": 109,
+      "test": 110
+    }
+  },
+  "v3_confirmatory": {
+    "rep1_seed201": {
+      "fold_key_structure": "{cid(str): outer_fold(int 0..4)}",
+      "per_fold": {
+        "0": {
+          "n_test": 218,
+          "in_v1_train": 172,
+          "in_v1_valid": 19,
+          "in_v1_test": 27,
+          "in_v1_train_or_valid": 191
+        },
+        "1": {
+          "n_test": 218,
+          "in_v1_train": 168,
+          "in_v1_valid": 26,
+          "in_v1_test": 24,
+          "in_v1_train_or_valid": 194
+        },
+        "2": {
+          "n_test": 219,
+          "in_v1_train": 184,
+          "in_v1_valid": 15,
+          "in_v1_test": 20,
+          "in_v1_train_or_valid": 199
+        },
+        "3": {
+          "n_test": 218,
+          "in_v1_train": 185,
+          "in_v1_valid": 18,
+          "in_v1_test": 15,
+          "in_v1_train_or_valid": 203
+        },
+        "4": {
+          "n_test": 219,
+          "in_v1_train": 164,
+          "in_v1_valid": 31,
+          "in_v1_test": 24,
+          "in_v1_train_or_valid": 195
+        }
+      },
+      "total": {
+        "n_test": 1092,
+        "in_v1_train": 873,
+        "in_v1_valid": 109,
+        "in_v1_test": 110,
+        "in_v1_train_or_valid": 982
+      }
+    },
+    "rep2_seed202": {
+      "fold_key_structure": "{cid(str): outer_fold(int 0..4)}",
+      "per_fold": {
+        "0": {
+          "n_test": 218,
+          "in_v1_train": 199,
+          "in_v1_valid": 9,
+          "in_v1_test": 10,
+          "in_v1_train_or_valid": 208
+        },
+        "1": {
+          "n_test": 218,
+          "in_v1_train": 172,
+          "in_v1_valid": 23,
+          "in_v1_test": 23,
+          "in_v1_train_or_valid": 195
+        },
+        "2": {
+          "n_test": 219,
+          "in_v1_train": 178,
+          "in_v1_valid": 22,
+          "in_v1_test": 19,
+          "in_v1_train_or_valid": 200
+        },
+        "3": {
+          "n_test": 218,
+          "in_v1_train": 159,
+          "in_v1_valid": 32,
+          "in_v1_test": 27,
+          "in_v1_train_or_valid": 191
+        },
+        "4": {
+          "n_test": 219,
+          "in_v1_train": 165,
+          "in_v1_valid": 23,
+          "in_v1_test": 31,
+          "in_v1_train_or_valid": 188
+        }
+      },
+      "total": {
+        "n_test": 1092,
+        "in_v1_train": 873,
+        "in_v1_valid": 109,
+        "in_v1_test": 110,
+        "in_v1_train_or_valid": 982
+      }
+    },
+    "rep3_seed203": {
+      "fold_key_structure": "{cid(str): outer_fold(int 0..4)}",
+      "per_fold": {
+        "0": {
+          "n_test": 218,
+          "in_v1_train": 163,
+          "in_v1_valid": 28,
+          "in_v1_test": 27,
+          "in_v1_train_or_valid": 191
+        },
+        "1": {
+          "n_test": 218,
+          "in_v1_train": 172,
+          "in_v1_valid": 20,
+          "in_v1_test": 26,
+          "in_v1_train_or_valid": 192
+        },
+        "2": {
+          "n_test": 219,
+          "in_v1_train": 174,
+          "in_v1_valid": 22,
+          "in_v1_test": 23,
+          "in_v1_train_or_valid": 196
+        },
+        "3": {
+          "n_test": 218,
+          "in_v1_train": 172,
+          "in_v1_valid": 26,
+          "in_v1_test": 20,
+          "in_v1_train_or_valid": 198
+        },
+        "4": {
+          "n_test": 219,
+          "in_v1_train": 192,
+          "in_v1_valid": 13,
+          "in_v1_test": 14,
+          "in_v1_train_or_valid": 205
+        }
+      },
+      "total": {
+        "n_test": 1092,
+        "in_v1_train": 873,
+        "in_v1_valid": 109,
+        "in_v1_test": 110,
+        "in_v1_train_or_valid": 982
+      }
+    }
+  },
+  "fairtune_selection": {
+    "selected_by": "valid_macro_pr",
+    "search_budget": 16,
+    "best_config_path": "v1_RF/results_fairtune/best_config.yaml",
+    "best_config_sha256": "f411602e9a46a34c0747af50368c58b1abdd1f3f5399b81271e5d50c93920a12"
+  },
+  "interpretation_fixed": "RF_tuned 하이퍼파라미터는 v1 valid 분할 성능으로 선택됐고, 그 과정의 학습·선택에 쓰인 약물(train+valid)이 v3 확증 test fold 에 포함된다. 영향 방향은 RF_tuned 기준선에 유리 → ⑥ Δ(M2b − RF_tuned)를 보수적으로 만든다. ⑥ 판정(기각 0)에는 영향 없음."
+}

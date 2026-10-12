@@ -1,0 +1,265 @@
+{
+  "_doc": "블록 M-1 결과-독립 설계량 (docs/58). 예측·봉인 미접근, synthetic 타이밍만 계산.",
+  "generated_kst": "2026-08-04 14:43:43 KST",
+  "inputs": {
+    "master_Y": {
+      "path": "data/processed/master_Y.parquet",
+      "sha256_16": "bd23584342de6482"
+    }
+  },
+  "loadavg_at_start": [
+    2.49658203125,
+    2.7392578125,
+    2.49560546875
+  ],
+  "dataset": {
+    "n_drug": 1092,
+    "n_pt_columns": 370,
+    "n_positive_total": 19748,
+    "label_density": 0.048876
+  },
+  "eligible_pt": {
+    "rule_A_source": "사전등록 §5.2/§7: global 양성 ≥10인 PT (master_Y 열 자체가 이 규칙으로 사전 확정)",
+    "rule_A3_source": "docs/43 A3 / sap/decision.py pt_eligibility — 양성≥10 AND 양성-포함 scaffold cluster ≥3",
+    "PT_MIN_POSITIVE": 10,
+    "PT_MIN_POSITIVE_SCAFFOLD_CLUSTERS": 3,
+    "min_positive_over_all_pts": 10,
+    "n_pt_rule_A_pos_ge_10": 370,
+    "per_repeat": {
+      "rep1": {
+        "split_seed": 201,
+        "n_pt_rule_A_pos_ge_10": 370,
+        "n_pt_rule_A3_both": 370,
+        "n_pt_failing_cluster_condition_only": 0,
+        "min_positive_scaffold_clusters_over_pts": 6,
+        "fold_membership_sha256_16": "7047606f76562ba5"
+      },
+      "rep2": {
+        "split_seed": 202,
+        "n_pt_rule_A_pos_ge_10": 370,
+        "n_pt_rule_A3_both": 370,
+        "n_pt_failing_cluster_condition_only": 0,
+        "min_positive_scaffold_clusters_over_pts": 6,
+        "fold_membership_sha256_16": "27f2e01dcb392be4"
+      },
+      "rep3": {
+        "split_seed": 203,
+        "n_pt_rule_A_pos_ge_10": 370,
+        "n_pt_rule_A3_both": 370,
+        "n_pt_failing_cluster_condition_only": 0,
+        "min_positive_scaffold_clusters_over_pts": 6,
+        "fold_membership_sha256_16": "45762346d825a9f3"
+      }
+    },
+    "a3_identical_across_repeats": true,
+    "note_scope": "A3 는 코드·docs/43 모두 'PT별 BH-FDR eligibility' 로 한정 기술된다. macro AP 의 eligible_pt 는 확증·층화 런 모두 None(=370 전열)으로 호출됐다 (docs/33 항목 §13-6 판독확정 ③, docs/33 블록 I 기록)."
+  },
+  "scaffold_structure": {
+    "n_groups": 732,
+    "n_drugs": 1092,
+    "size_hist": {
+      "size_1": 627,
+      "size_2": 60,
+      "size_3": 19,
+      "size_4plus": 26
+    },
+    "max_group_size": 78,
+    "max_group_share_of_drugs": 0.0714,
+    "n_eff_clusters_kish": 85.3,
+    "singleton_ratio": 0.8566,
+    "group_partition_identical_across_repeats": true,
+    "per_repeat_fold_grid": {
+      "rep1": {
+        "split_seed": 201,
+        "n_groups": 732,
+        "groups_crossing_folds": 0,
+        "folds": {
+          "fold0": {
+            "n_drugs": 218,
+            "n_groups": 174
+          },
+          "fold1": {
+            "n_drugs": 218,
+            "n_groups": 182
+          },
+          "fold2": {
+            "n_drugs": 219,
+            "n_groups": 109
+          },
+          "fold3": {
+            "n_drugs": 218,
+            "n_groups": 122
+          },
+          "fold4": {
+            "n_drugs": 219,
+            "n_groups": 145
+          }
+        }
+      },
+      "rep2": {
+        "split_seed": 202,
+        "n_groups": 732,
+        "groups_crossing_folds": 0,
+        "folds": {
+          "fold0": {
+            "n_drugs": 218,
+            "n_groups": 54
+          },
+          "fold1": {
+            "n_drugs": 218,
+            "n_groups": 172
+          },
+          "fold2": {
+            "n_drugs": 219,
+            "n_groups": 161
+          },
+          "fold3": {
+            "n_drugs": 218,
+            "n_groups": 168
+          },
+          "fold4": {
+            "n_drugs": 219,
+            "n_groups": 177
+          }
+        }
+      },
+      "rep3": {
+        "split_seed": 203,
+        "n_groups": 732,
+        "groups_crossing_folds": 0,
+        "folds": {
+          "fold0": {
+            "n_drugs": 218,
+            "n_groups": 174
+          },
+          "fold1": {
+            "n_drugs": 218,
+            "n_groups": 128
+          },
+          "fold2": {
+            "n_drugs": 219,
+            "n_groups": 160
+          },
+          "fold3": {
+            "n_drugs": 218,
+            "n_groups": 164
+          },
+          "fold4": {
+            "n_drugs": 219,
+            "n_groups": 106
+          }
+        }
+      }
+    },
+    "top2_groups": {
+      "sizes": [
+        78,
+        77
+      ],
+      "labels": [
+        "c1ccccc1 (benzene)",
+        "빈 문자열 그룹(무고리·파싱불가)"
+      ],
+      "combined_drugs": 155,
+      "combined_share": 0.1419,
+      "max_group_fold_by_repeat": {
+        "rep1": 3,
+        "rep2": 0,
+        "rep3": 4
+      },
+      "rep2_fold0_holds_both_top_groups": true
+    }
+  },
+  "permutation_space": {
+    "B": 10000,
+    "min_two_sided_p_with_B": 0.0001,
+    "unit_scaffold_group": {
+      "n_units": 732,
+      "n_sign_assignments": "2^732 ≈ 2.3e+220",
+      "min_achievable_two_sided_p": 0.0001,
+      "binding_constraint": "B (공간이 아니라 표본수가 하한을 정함)"
+    },
+    "unit_outer_fold_single_repeat": {
+      "n_units": 5,
+      "n_sign_assignments": "32",
+      "min_achievable_two_sided_p": 0.030303,
+      "binding_constraint": "공간(2^5=32)이 하한을 정함"
+    },
+    "unit_outer_fold_intersection_3repeats": {
+      "n_units": 124,
+      "n_sign_assignments": "2^124 ≈ 2.1e+37",
+      "min_achievable_two_sided_p": "4.7e-38",
+      "assumption": "consensus OOF 는 반복별 fold 배정이 달라 단일 fold 라벨이 없다. 세 반복의 fold 배정 튜플로 만든 교집합 셀을 교환 단위로 본 경우."
+    },
+    "assumption_note": "sign-flip 은 consensus OOF(1,092×370) 한 장 위에서 수행되므로 교환 단위 수는 반복 수와 무관하다. fold 단위 상향 시 반복 1개 기준 2^5.",
+    "complement_symmetry": {
+      "claim": "후보 A·B 모두 전(全) 단위 flip 은 T*=−T 를 준다(A: 두 family 전면 교환, B: 두 family 에서 arm 전면 교환) → |T*| 는 상보쌍에서 동일.",
+      "implication": "항등 배열과 그 상보 배열 2개는 항상 |T*| ≥ |T_obs| 를 만족하므로, 양측 p 의 하한은 2 / 2^(단위 수) 이다(몬테카를로 기대값 기준).",
+      "min_two_sided_p_fold_unit_5": 0.0625,
+      "min_two_sided_p_fold_unit_5_enumeration_formula": 0.090909,
+      "min_two_sided_p_group_unit_732": "2/2^732 ≪ 1/(B+1) → B 가 하한을 정함",
+      "holm_implication_fold_unit": {
+        "alpha": 0.05,
+        "verdict": "fold(5) 단위에서는 무보정 p 하한(≈0.0625)이 이미 α=0.05 를 넘어 Holm 보정 이전에도 RQ-int 기각이 불가능하다.",
+        "holm_worst_case_multiplier": 7
+      }
+    }
+  },
+  "macro_ap_timing": {
+    "input": "synthetic uniform random predictions (실제 OOF 미사용), 실제 라벨 y 사용",
+    "shape": [
+      1092,
+      370
+    ],
+    "dtype": "float64",
+    "n_calls_measured": 10,
+    "median_s": 0.1346,
+    "iqr_s": [
+      0.1342,
+      0.1347
+    ],
+    "min_s": 0.134,
+    "max_s": 0.1353,
+    "block_swap_median_s": 0.0004,
+    "block_swap_note": "scaffold block 교환(1,092×370 두 장 재구성) 1회 비용. AP 재계산 대비 오버헤드 비교용.",
+    "calls_per_permutation": {
+      "RF": 2,
+      "GIN_3seed": 6,
+      "total_if_seed_average_inside": 8
+    },
+    "calls_per_permutation_variant_ii": {
+      "RF": 2,
+      "GIN_3seed_x_3repeat": 18,
+      "total": 20,
+      "note": "GIN 을 (seed, 반복) 셀마다 metric 산출(=(ii)형)로 두는 경우."
+    },
+    "cost_estimate_B10000": {
+      "serial_hours": 2.99,
+      "hours_at_6_parallel_workers": 0.5,
+      "hours_at_18_parallel_workers": 0.17,
+      "serial_hours_variant_ii": 7.48,
+      "parallel_note": "블록 D 실측 실효 병렬도(2.05/18)는 RF 학습 부하 기준이며 본 추정(순수 AP 재계산)에는 그대로 적용하지 않는다 — 상·하한만 제시."
+    },
+    "multiplier_note": "반복 축을 permutation 안쪽에서 다시 도는 구성이면 위 호출 수에 반복 수가 곱해진다 (예: (ii)형 15셀 → RF 2×3 + GIN 3seed×2×3).",
+    "loadavg_at_measure": [
+      2.49658203125,
+      2.7392578125,
+      2.49560546875
+    ]
+  },
+  "macro_ap_signature": {
+    "signature": "macro_ap(y, P, eligible_pt=None)",
+    "eligible_pt_depends_on_predictions": false,
+    "evidence": "sap/metrics.py — eligible_pt 는 호출자가 주는 열 인덱스이며, 내부 undefined-AP 판정은 y[:, j].sum() > 0 만 본다(P 미참조)."
+  },
+  "integrity": {
+    "sealed_accessed": false,
+    "open_sealed_calls": 0,
+    "decision_functions_called": [],
+    "models_trained": 0,
+    "new_oof": 0,
+    "delta_or_ap_computed_on_real_predictions": false,
+    "network_calls": 0
+  },
+  "elapsed_s": 1.5
+}

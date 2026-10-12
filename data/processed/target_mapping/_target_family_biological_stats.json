@@ -1,0 +1,117 @@
+{
+  "_doc": "P-FAM 생물학적 family 소싱 — 사전등록 §4/§9. 자체클러스터(09) 대체 primary, 09는 §9 sensitivity 보존.",
+  "network_scope": "§3-A only: ChEMBL protein_classification(전체 트리) + target_component (기존 component_id의 protein_classifications). Pfam/InterPro=캐시 target JSON xref(네트워크 0).",
+  "chembl_source_endpoints": {
+    "component_class": "https://www.ebi.ac.uk/chembl/api/data/target_component?component_id__in=..&only=component_id,protein_classifications",
+    "class_tree": "https://www.ebi.ac.uk/chembl/api/data/protein_classification?format=json (class_level·pref_name·parent_id 전체 트리)",
+    "pfam_interpro_fallback": "캐시된 /target/{tid} JSON의 target_component_xrefs (Pfam/InterPro; 네트워크 0)"
+  },
+  "granularity_rule": {
+    "primary_level": 2,
+    "fallback_level": 1,
+    "singleton_gate": 0.6,
+    "note": "라벨·성능 무참조. 오직 coverage·싱글톤%로 레벨 선택."
+  },
+  "gate_decision": "L2 싱글톤% 0.191 < 게이트 0.6 → L2 유지",
+  "chosen_level": 2,
+  "n_targets": 1191,
+  "n_with_chembl_class": 1191,
+  "granularity_primary_L2": {
+    "n_targets": 1191,
+    "n_families": 42,
+    "family_per_target": 0.0353,
+    "singleton_families": 8,
+    "singleton_family_frac": 0.1905,
+    "coverage_biological": 1.0,
+    "source_breakdown": {
+      "chembl_class": 1191
+    },
+    "top_family_sizes": [
+      376,
+      132,
+      71,
+      65,
+      56,
+      45,
+      39,
+      39,
+      34,
+      34,
+      30,
+      24
+    ]
+  },
+  "granularity_fallback_L1": {
+    "n_targets": 1191,
+    "n_families": 15,
+    "family_per_target": 0.0126,
+    "singleton_families": 2,
+    "singleton_family_frac": 0.1333,
+    "coverage_biological": 1.0,
+    "source_breakdown": {
+      "chembl_class": 1191
+    },
+    "top_family_sizes": [
+      740,
+      154,
+      58,
+      54,
+      53,
+      46,
+      45,
+      15,
+      14,
+      7,
+      3,
+      3
+    ]
+  },
+  "granularity_chosen": {
+    "n_targets": 1191,
+    "n_families": 42,
+    "family_per_target": 0.0353,
+    "singleton_families": 8,
+    "singleton_family_frac": 0.1905,
+    "coverage_biological": 1.0,
+    "source_breakdown": {
+      "chembl_class": 1191
+    },
+    "top_family_sizes": [
+      376,
+      132,
+      71,
+      65,
+      56,
+      45,
+      39,
+      39,
+      34,
+      34,
+      30,
+      24
+    ]
+  },
+  "selfcluster_baseline": {
+    "source": "_family_cluster_stats.json (mmseqs2 easy-cluster --min-seq-id 0.5)",
+    "n_families": 902,
+    "n_singletons": 715,
+    "singleton_family_frac": 0.7927,
+    "family_per_target": 0.7573
+  },
+  "coarser_than_selfcluster": {
+    "singleton_frac_drop": 0.6022,
+    "family_per_target_drop": 0.722,
+    "is_substantially_coarser": true
+  },
+  "integrity": {
+    "network_calls": "§3-A ChEMBL class only (deterministic cache)",
+    "pfam_interpro_network": 0,
+    "new_targets_or_molecules": 0,
+    "remapping": false,
+    "redownload": false,
+    "labels_molset_structure_split_accessed": false,
+    "selfcluster_09_overwritten": false,
+    "fabricated_families": 0,
+    "note": "결측=SINGLETON fallback + missing_flag=1(날조 0). 09(자체클러스터) 불변·보존."
+  }
+}

@@ -1,0 +1,12 @@
+2026-10-06 17:21:46.974 KST	gates_start	f2_access_lines=True f2_counts=True f2_fingerprints=True f2_sealed_bytes=True f4_freeze_manifest=True f4_frozen_7=True f4_other=True flags=True git_commits=True git_head=True git_modified=True no_compute_lock=True no_index_lock=True output_dirs=True pycache_dirs=True stale_lock_lines=True
+2026-10-06 17:21:46.976 KST	start
+2026-10-06 17:21:47.472 KST	live scan · dirs 39 · files 826 · glob_equal True
+2026-10-06 17:21:47.480 KST	projection · checkpoints 3
+2026-10-06 17:21:47.802 KST	hashed · 801
+2026-10-06 17:21:47.804 KST	compare · expected 801 · live 801
+2026-10-06 17:21:47.920 KST	access audit · files 25 · unattributed 0
+2026-10-06 17:21:49.934 KST	leak scan
+2026-10-06 17:21:49.936 KST	verdict PASS · blocking 0
+2026-10-06 17:21:50.727 KST	gates_end	f2_access_lines=True f2_counts=True f2_fingerprints=True f2_sealed_bytes=True f4_freeze_manifest=True f4_frozen_7=True f4_other=True flags=True git_commits=True git_head=True git_modified=True no_compute_lock=True no_index_lock=True output_dirs=True pycache_dirs=True stale_lock_lines=True
+2026-10-06 17:21:50.729 KST	rerun_vs_run1	audit_7keys True · details True
+2026-10-06 17:21:50.730 KST	written	audit 6638e0e448db049d621d02dcba9cd3dd37eb436b71bd2e2690cf614b732558fe · details

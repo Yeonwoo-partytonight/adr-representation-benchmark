@@ -1,0 +1,195 @@
+### 1|4|M0|3 | 2026-09-22 23:50:30 KST | retry=0 | ok
+<REPO_ROOT>/v3_Multimodal/src/train_ladder.py:234: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at <HOME>/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:839.)
+  tot += float(loss) * batch.num_graphs
+      ep   1 loss 0.2448 validMacro 0.0909 best 0.0909@1
+      ep  40 loss 0.0989 validMacro 0.1384 best 0.1594@37
+      early stop @ep76 (best 0.1758@46)
+### 1|4|M0|4 | 2026-09-22 23:52:24 KST | retry=0 | ok
+      ep   1 loss 0.2643 validMacro 0.0980 best 0.0980@1
+      ep  40 loss 0.0981 validMacro 0.1477 best 0.1598@37
+      early stop @ep67 (best 0.1598@37)
+### 1|4|M1|3 | 2026-09-22 23:54:42 KST | retry=0 | ok
+      ep   1 loss 0.2577 validMacro 0.0876 best 0.0876@1
+      ep  40 loss 0.1026 validMacro 0.1488 best 0.1532@37
+      ep  80 loss 0.0798 validMacro 0.1535 best 0.1710@64
+      early stop @ep94 (best 0.1710@64)
+### 1|4|M1|4 | 2026-09-22 23:57:41 KST | retry=0 | ok
+      ep   1 loss 0.2540 validMacro 0.0920 best 0.0920@1
+      ep  40 loss 0.0987 validMacro 0.1244 best 0.1342@36
+      ep  80 loss 0.0744 validMacro 0.1414 best 0.1609@69
+      early stop @ep99 (best 0.1609@69)
+### 1|4|M1b|3 | 2026-09-23 00:01:03 KST | retry=0 | ok
+      ep   1 loss 0.2397 validMacro 0.0951 best 0.0951@1
+      ep  40 loss 0.0962 validMacro 0.1559 best 0.1870@37
+      ep  80 loss 0.0777 validMacro 0.1601 best 0.1967@58
+      early stop @ep88 (best 0.1967@58)
+### 1|4|M1b|4 | 2026-09-23 00:04:11 KST | retry=0 | ok
+      ep   1 loss 0.2620 validMacro 0.1058 best 0.1058@1
+      ep  40 loss 0.0942 validMacro 0.1545 best 0.1770@34
+      early stop @ep64 (best 0.1770@34)
+### 1|4|M2b|3 | 2026-09-23 00:06:44 KST | retry=0 | ok
+      ep   1 loss 0.2234 validMacro 0.1088 best 0.1088@1
+      ep  40 loss 0.0637 validMacro 0.1752 best 0.1873@23
+      early stop @ep53 (best 0.1873@23)
+### 1|4|M2b|4 | 2026-09-23 00:10:56 KST | retry=0 | ok
+      ep   1 loss 0.2401 validMacro 0.0997 best 0.0997@1
+      ep  40 loss 0.0624 validMacro 0.1723 best 0.1857@38
+      ep  80 loss 0.0488 validMacro 0.1698 best 0.1996@55
+      early stop @ep85 (best 0.1996@55)
+### 1|4|P-ID|3 | 2026-09-23 00:12:01 KST | retry=0 | ok
+      ep   1 loss 0.2273 validMacro 0.1077 best 0.1077@1
+      ep  40 loss 0.0773 validMacro 0.1723 best 0.1850@38
+      early stop @ep71 (best 0.1934@41)
+### 1|4|P-ID|4 | 2026-09-23 00:12:15 KST | retry=0 | ok
+      ep   1 loss 0.2416 validMacro 0.1139 best 0.1139@1
+      ep  40 loss 0.0750 validMacro 0.1712 best 0.1959@22
+      early stop @ep52 (best 0.1959@22)
+### 1|4|P-FAM|3 | 2026-09-23 00:15:43 KST | retry=0 | ok
+      ep   1 loss 0.2223 validMacro 0.1003 best 0.1003@1
+      ep  40 loss 0.0967 validMacro 0.1593 best 0.1710@38
+      early stop @ep74 (best 0.1766@44)
+### 1|4|P-FAM|4 | 2026-09-23 00:18:54 KST | retry=0 | ok
+      ep   1 loss 0.2402 validMacro 0.0932 best 0.0932@1
+      ep  40 loss 0.0905 validMacro 0.1387 best 0.1770@39
+      early stop @ep69 (best 0.1770@39)
+### 1|4|C-CAP|3 | 2026-09-23 00:22:58 KST | retry=0 | ok
+      ep   1 loss 0.2220 validMacro 0.0985 best 0.0985@1
+      ep  40 loss 0.0572 validMacro 0.1255 best 0.1265@28
+      ep  80 loss 0.0423 validMacro 0.1374 best 0.1374@80
+      ep 120 loss 0.0432 validMacro 0.1299 best 0.1425@105
+      early stop @ep151 (best 0.1537@121)
+### 1|4|C-CAP|4 | 2026-09-23 00:23:23 KST | retry=0 | ok
+      ep   1 loss 0.2393 validMacro 0.0999 best 0.0999@1
+      ep  40 loss 0.0573 validMacro 0.1171 best 0.1360@33
+      ep  80 loss 0.0430 validMacro 0.1323 best 0.1428@56
+      early stop @ep86 (best 0.1428@56)
+### 2|1|M0|3 | 2026-09-23 00:25:54 KST | retry=0 | ok
+      ep   1 loss 0.2481 validMacro 0.1025 best 0.1025@1
+      ep  40 loss 0.0994 validMacro 0.1471 best 0.1881@25
+      early stop @ep55 (best 0.1881@25)
+### 2|1|M0|4 | 2026-09-23 00:28:06 KST | retry=0 | ok
+      ep   1 loss 0.2493 validMacro 0.0965 best 0.0965@1
+      ep  40 loss 0.1001 validMacro 0.1615 best 0.1899@18
+      early stop @ep48 (best 0.1899@18)
+### 2|1|M1|3 | 2026-09-23 00:33:17 KST | retry=0 | ok
+      ep   1 loss 0.2493 validMacro 0.0988 best 0.0988@1
+      ep  40 loss 0.1023 validMacro 0.1707 best 0.1812@18
+      ep  80 loss 0.0810 validMacro 0.1789 best 0.2155@59
+      ep 120 loss 0.0824 validMacro 0.2052 best 0.2308@98
+      early stop @ep128 (best 0.2308@98)
+### 2|1|M1|4 | 2026-09-23 00:36:13 KST | retry=0 | ok
+      ep   1 loss 0.2529 validMacro 0.0951 best 0.0951@1
+      ep  40 loss 0.0985 validMacro 0.1738 best 0.1937@39
+      early stop @ep71 (best 0.1988@41)
+### 2|1|M1b|3 | 2026-09-23 00:42:38 KST | retry=0 | ok
+      ep   1 loss 0.2440 validMacro 0.0939 best 0.0939@1
+      ep  40 loss 0.0947 validMacro 0.2048 best 0.2334@32
+      ep  80 loss 0.0752 validMacro 0.2369 best 0.2581@69
+      ep 120 loss 0.0652 validMacro 0.2412 best 0.2678@91
+      early stop @ep121 (best 0.2678@91)
+### 2|1|M1b|4 | 2026-09-23 00:45:46 KST | retry=0 | ok
+      ep   1 loss 0.2470 validMacro 0.0940 best 0.0940@1
+      ep  40 loss 0.0933 validMacro 0.1955 best 0.2262@36
+      early stop @ep66 (best 0.2262@36)
+### 2|1|M2b|3 | 2026-09-23 00:50:29 KST | retry=0 | ok
+      ep   1 loss 0.2256 validMacro 0.1043 best 0.1043@1
+      ep  40 loss 0.0656 validMacro 0.2156 best 0.2429@34
+      ep  80 loss 0.0496 validMacro 0.2341 best 0.2622@62
+      early stop @ep92 (best 0.2622@62)
+### 2|1|M2b|4 | 2026-09-23 00:55:03 KST | retry=0 | ok
+      ep   1 loss 0.2233 validMacro 0.1036 best 0.1036@1
+      ep  40 loss 0.0629 validMacro 0.2341 best 0.2341@40
+      ep  80 loss 0.0488 validMacro 0.2344 best 0.2569@69
+      early stop @ep99 (best 0.2569@69)
+### 2|1|P-ID|3 | 2026-09-23 00:55:26 KST | retry=0 | ok
+      ep   1 loss 0.2297 validMacro 0.1045 best 0.1045@1
+      ep  40 loss 0.0756 validMacro 0.2648 best 0.2648@40
+      ep  80 loss 0.0578 validMacro 0.2593 best 0.2740@51
+      early stop @ep81 (best 0.2740@51)
+### 2|1|P-ID|4 | 2026-09-23 00:56:36 KST | retry=0 | ok
+      ep   1 loss 0.2313 validMacro 0.1084 best 0.1084@1
+      ep  40 loss 0.0740 validMacro 0.2385 best 0.2575@35
+      ep  80 loss 0.0571 validMacro 0.2118 best 0.2587@62
+      early stop @ep113 (best 0.2635@83)
+### 2|1|P-FAM|3 | 2026-09-23 01:03:23 KST | retry=0 | ok
+      ep   1 loss 0.2223 validMacro 0.0924 best 0.0924@1
+      ep  40 loss 0.0890 validMacro 0.1815 best 0.1986@35
+      ep  80 loss 0.0718 validMacro 0.1809 best 0.2173@78
+      ep 120 loss 0.0619 validMacro 0.2165 best 0.2378@113
+      early stop @ep143 (best 0.2378@113)
+### 2|1|P-FAM|4 | 2026-09-23 01:07:21 KST | retry=0 | ok
+      ep   1 loss 0.2290 validMacro 0.0934 best 0.0934@1
+      ep  40 loss 0.0935 validMacro 0.2138 best 0.2316@21
+      ep  80 loss 0.0690 validMacro 0.2195 best 0.2350@54
+      early stop @ep84 (best 0.2350@54)
+### 2|1|C-CAP|3 | 2026-09-23 01:08:42 KST | retry=0 | ok
+      ep   1 loss 0.2268 validMacro 0.1013 best 0.1013@1
+      ep  40 loss 0.0570 validMacro 0.1334 best 0.1605@27
+      ep  80 loss 0.0418 validMacro 0.1639 best 0.1702@74
+      early stop @ep112 (best 0.1714@82)
+### 2|1|C-CAP|4 | 2026-09-23 01:08:56 KST | retry=0 | ok
+      ep   1 loss 0.2282 validMacro 0.1042 best 0.1042@1
+      ep  40 loss 0.0558 validMacro 0.1608 best 0.1753@19
+      early stop @ep49 (best 0.1753@19)
+### 3|0|M0|3 | 2026-09-23 01:12:56 KST | retry=0 | ok
+      ep   1 loss 0.2388 validMacro 0.0965 best 0.0965@1
+      ep  40 loss 0.0969 validMacro 0.1312 best 0.1403@38
+      early stop @ep78 (best 0.1750@48)
+### 3|0|M0|4 | 2026-09-23 01:18:55 KST | retry=0 | ok
+      ep   1 loss 0.2561 validMacro 0.1048 best 0.1048@1
+      ep  40 loss 0.0994 validMacro 0.1423 best 0.1497@21
+      ep  80 loss 0.0788 validMacro 0.1549 best 0.1679@64
+      early stop @ep116 (best 0.1721@86)
+### 3|0|M1|3 | 2026-09-23 01:20:53 KST | retry=0 | ok
+      ep   1 loss 0.2501 validMacro 0.1101 best 0.1101@1
+      ep  40 loss 0.0958 validMacro 0.1445 best 0.1725@21
+      early stop @ep71 (best 0.1731@41)
+### 3|0|M1|4 | 2026-09-23 01:21:12 KST | retry=0 | ok
+      ep   1 loss 0.2634 validMacro 0.1049 best 0.1049@1
+      ep  40 loss 0.0963 validMacro 0.1652 best 0.1803@38
+      early stop @ep68 (best 0.1803@38)
+### 3|0|M1b|3 | 2026-09-23 01:26:45 KST | retry=0 | ok
+      ep   1 loss 0.2368 validMacro 0.0990 best 0.0990@1
+      ep  40 loss 0.0920 validMacro 0.1586 best 0.1618@29
+      ep  80 loss 0.0763 validMacro 0.1538 best 0.1706@78
+      early stop @ep116 (best 0.1796@86)
+### 3|0|M1b|4 | 2026-09-23 01:29:56 KST | retry=0 | ok
+      ep   1 loss 0.2708 validMacro 0.1092 best 0.1092@1
+      ep  40 loss 0.0929 validMacro 0.1663 best 0.1824@39
+      early stop @ep69 (best 0.1824@39)
+### 3|0|M2b|3 | 2026-09-23 01:32:49 KST | retry=0 | ok
+      ep   1 loss 0.2278 validMacro 0.1019 best 0.1019@1
+      ep  40 loss 0.0617 validMacro 0.1722 best 0.1965@28
+      early stop @ep58 (best 0.1965@28)
+### 3|0|M2b|4 | 2026-09-23 01:35:58 KST | retry=0 | ok
+      ep   1 loss 0.2393 validMacro 0.1016 best 0.1016@1
+      ep  40 loss 0.0634 validMacro 0.1897 best 0.2021@36
+      early stop @ep66 (best 0.2021@36)
+### 3|0|P-ID|3 | 2026-09-23 01:36:24 KST | retry=0 | ok
+      ep   1 loss 0.2305 validMacro 0.1172 best 0.1172@1
+      ep  40 loss 0.0720 validMacro 0.1898 best 0.1981@32
+      early stop @ep62 (best 0.1981@32)
+### 3|0|P-ID|4 | 2026-09-23 01:37:59 KST | retry=0 | ok
+      ep   1 loss 0.2464 validMacro 0.1092 best 0.1092@1
+      ep  40 loss 0.0748 validMacro 0.2030 best 0.2124@33
+      ep  80 loss 0.0564 validMacro 0.1861 best 0.2198@65
+      early stop @ep95 (best 0.2198@65)
+### 3|0|P-FAM|3 | 2026-09-23 01:40:55 KST | retry=0 | ok
+      ep   1 loss 0.2230 validMacro 0.1015 best 0.1015@1
+      ep  40 loss 0.0914 validMacro 0.1608 best 0.1766@36
+      early stop @ep66 (best 0.1766@36)
+### 3|0|P-FAM|4 | 2026-09-23 01:44:41 KST | retry=0 | ok
+      ep   1 loss 0.2275 validMacro 0.1089 best 0.1089@1
+      ep  40 loss 0.0949 validMacro 0.1607 best 0.1720@38
+      ep  80 loss 0.0745 validMacro 0.1648 best 0.1903@55
+      early stop @ep85 (best 0.1903@55)
+### 3|0|C-CAP|3 | 2026-09-23 01:45:11 KST | retry=0 | ok
+      ep   1 loss 0.2275 validMacro 0.1079 best 0.1079@1
+      ep  40 loss 0.0544 validMacro 0.1300 best 0.1413@36
+      early stop @ep66 (best 0.1413@36)
+### 3|0|C-CAP|4 | 2026-09-23 01:45:35 KST | retry=0 | ok
+      ep   1 loss 0.2424 validMacro 0.1056 best 0.1056@1
+      ep  40 loss 0.0566 validMacro 0.1314 best 0.1322@39
+      ep  80 loss 0.0475 validMacro 0.1244 best 0.1397@50
+      early stop @ep80 (best 0.1397@50)

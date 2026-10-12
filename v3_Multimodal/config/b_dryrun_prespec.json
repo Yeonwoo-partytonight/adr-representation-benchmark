@@ -1,0 +1,149 @@
+{
+  "block": "AI (docs/97) — 실행순서 ⑥ 전규모 합성 드라이런 벽시계 계측",
+  "purpose": "R2 에 넘길 `B` 후보값과 그 근거를 계측으로 산출한다. 본 파일은 **측정 이전에** 동결되며 이후 수정하지 않는다.",
+  "frozen_at_kst": "2026-08-22T00:56:14+09:00",
+  "sap_registration": false,
+  "sap_registration_note": "SAP 등재 아님 — 계측 사전명시 파일이다. `manifest.json`·동결 11모듈 무수정, sap_version 1.1 유지.",
+  "two_interpretations": {
+    "note": "`sap/rqint.py` 의 `B_DEFINITION_STATUS` = still_unspecified. `pair_complement=True` 이므로 참조분포 크기 = 2 × n_coin_vectors → 두 해석의 계산비용은 정확히 2배 차이.",
+    "rows": [
+      {
+        "label": "(가) B = n_coin_vectors",
+        "n_coin_vectors": 100000,
+        "reference_distribution": 200000,
+        "expected_wall_formula": "100,000 · û"
+      },
+      {
+        "label": "(나) B = 참조분포 크기(n_permutation_values)",
+        "n_coin_vectors": 50000,
+        "reference_distribution": 100000,
+        "expected_wall_formula": "50,000 · û"
+      }
+    ]
+  },
+  "convergence_argument": "(가) 채택 시: 41.8 h > 24 h → F-D15 에 따라 50,000 으로 하향 → 동전 50,000개. (나) 채택 시: 하향 불필요 → 참조분포 100,000 = 동전 50,000개. 두 해석이 같은 계산 구성(동전 50,000)으로 수렴한다. 따라서 본 블록의 결정적 드라이런은 `n_coin_vectors` = 50,000 단일 구성이면 충분하고, 남는 질문은 '그 구성이 24h 이내인가' 하나다. ★ 이 논증은 어떤 측정도 보기 전에 위 문면으로 고정됐다. 측정 후 유리한 해석을 고르는 일이 없도록 한다.",
+  "convergence_argument_premise": "위 논증은 **(가)의 벽시계가 24h 를 초과한다**는 전건에 의존한다. 전건은 `docs/97` §2-1 의 참고 외삽(û ≈ 1.506 s/동전, 18워커 경합 하 상한)에서 왔고 **아직 실측되지 않았다**. AI-2 단독 실행 단가가 그보다 낮으면 전건이 무너질 수 있다 — 그 경우의 처리는 `contingency_if_premise_fails` 에 **측정 전에** 규정한다.",
+  "decisive_config": {
+    "n_coin_vectors": 50000,
+    "pair_complement": true,
+    "reference_distribution": 100000
+  },
+  "d15_rule": {
+    "verbatim": "B = 100,000. 전규모 합성 드라이런 벽시계 24h 초과 시에만 50,000 으로 하향하되 GIN 예측 생성 이전에 판단. 추정 p 와 함께 몬테카를로 SE 병기",
+    "source": "docs/84 §1 D15 행 (L57)",
+    "decision_rule": "wall_clock > 24h → 하향(100,000 → 50,000). 24h 이하 → 하향 없음."
+  },
+  "cost_model": {
+    "formula": "T̂(n) = t_synth + n · û + min(A, n) · û_audit,  A = complement_audit_draws = 1000",
+    "rationale": "`rqint_test` 의 주루프는 동전 1개당 `_apply_swap` + `observed_statistic`(macro-AP 8회) 1회를 돈다. 여집합 항등식 감사는 선택된 draw 에 대해 **같은 양의 계산을 1회 더** 수행하므로 감사 draw 수만큼 비용이 추가된다. n ≤ 1000 이면 감사가 전 draw 에 걸려(min(A,n)=n) 벽시계가 대략 2배가 되고, n = 50,000 이면 감사 비중은 2% 다 — 따라서 **계단 계측은 감사를 끄고**(complement_audit_draws=0) 순수 단가 û 를 재고, 감사 비용은 위 식으로 별도 가산한다. 이 결정은 측정 전에 고정한다.",
+    "u_hat_definition_primary": "û_wall,k = wall_k / n_k  (감사 0 · 단독 실행 · t_synth 포함 → 약간 보수적)",
+    "u_hat_definition_secondary": "û_loop,k = rqint_test 반환값 `per_permutation_seconds` (= loop_seconds / n_coin, F-C4UNIT 1.506339 와 동일 기준)",
+    "u_hat_point_estimate": "3점 중앙값 (primary 기준)",
+    "u_audit_assumption": "û_audit := û (감사 1회 = 주평가 1회와 동일 작업량)"
+  },
+  "extrapolation_policy": {
+    "band_hours": [
+      18.0,
+      30.0
+    ],
+    "band_definition": "24h 의 [0.75, 1.25] 구간",
+    "rule_outside_band": "추정 벽시계 T̂ 가 밴드 밖이면 외삽 판정 허용(마진 충분).",
+    "rule_inside_band": "밴드 안이면 외삽 금지 → 실주행 + 24h 하드 캡으로 판정한다.",
+    "prior_expectation": "docs/97 §2-1 참고 외삽 기준 (가) T̂ ≈ 41.8 h = 밴드 밖 → 외삽으로 '24h 초과' 판정 · 결정적 구성(동전 50,000) T̂ ≈ 20.9 h = 밴드 안 → 실주행 필수."
+  },
+  "contingency_if_premise_fails": {
+    "trigger": "AI-2 실측 û 로 계산한 T̂(100,000 동전) 이 밴드 [18h, 30h] 안에 들어오거나 24h 이하로 나오는 경우.",
+    "action": [
+      "① `convergence_argument` 의 전건이 외삽으로 성립하지 않음을 리포트에 **그대로 기록**한다(논증 문면은 무수정).",
+      "② 그래도 **결정적 드라이런(동전 50,000)은 예정대로 수행**한다 — 두 해석 모두의 하한 구성이고, 그 실측이 (가) 100,000 에 대해 계단 대비 훨씬 짧은 2배 외삽(T̂(100,000) ≈ 2·T_obs(50,000) − 1000·û)을 준다.",
+      "③ (가) 해석의 24h 판정은 **본 블록에서 확정하지 않고 상신 사항으로 보고**한다. 100,000 동전 실주행은 본 블록 예산(24h 캡) 밖이므로 **자체 판단으로 구성을 바꾸지 않는다**(§0 자체 구제 금지)."
+    ],
+    "forbidden": "설계 변경 0 · 폴백 0 · 재실행 0 · 사후 유리한 해석 선택 0"
+  },
+  "threads_policy": {
+    "threads_limit": 1,
+    "env_vars": [
+      "OMP_NUM_THREADS",
+      "OPENBLAS_NUM_THREADS",
+      "MKL_NUM_THREADS",
+      "VECLIB_MAXIMUM_THREADS",
+      "NUMEXPR_NUM_THREADS"
+    ],
+    "reason": "BLAS 스레드 수가 float 누산 순서를 바꿔 산출이 달라질 수 있고, R3 의 `numeric_core` 바이트 동일 비교와 정합을 깨뜨린다. 블록 AF C4 도 `threads_limit` 1 로 측정했으므로 단가 비교의 기준도 일치한다.",
+    "concurrency": "동시 워커 0 (단독 실행). 셀 병행 금지 — 경합이 단가를 오염시킨다."
+  },
+  "seed_rule": {
+    "base_rule_text": "rep_seed = 20260813 + 1_000_000·scenario_index + variant_offset + 100_000·grid_index + r  (scenario_index C0..C4 = 0..4; variant_offset prop=0 / ratio=500_000 / full=0; grid_index = τ 격자 위치). 동전 RNG 시드 = rep_seed + 900_000_000 (결정적 파생, 신규 추첨 0). probe/자가시험 시드 = 20260813 + 800/810/820 × 1_000_000 (결정적 파생).",
+    "derivation": "probe 파생 규약(`BASE_SEED + k·1_000_000`)을 그대로 이어받아 AI-2 계단 = BASE_SEED + 830_000_000 + i (i = 0,1,2 ↔ n_coin 200/500/1000), AI-3 결정적 드라이런 = BASE_SEED + 840_000_000. 동전 RNG 시드 = rep_seed + COIN_SEED_OFFSET(900,000,000). 신규 추첨 0.",
+    "base_seed": 20260813,
+    "coin_seed_offset": 900000000,
+    "stair_seeds": {
+      "200": 850260813,
+      "500": 850260814,
+      "1000": 850260815
+    },
+    "decisive_seed": 860260813,
+    "decisive_coin_seed": 1760260813,
+    "disjointness_asserted": {
+      "vs_confirmatory_seed_space": {
+        "n": 8,
+        "members": [
+          1,
+          2,
+          3,
+          4,
+          42,
+          201,
+          202,
+          203
+        ],
+        "intersection": 0
+      },
+      "vs_block_AF_rep_seeds": {
+        "n": 13200,
+        "min": 20260813,
+        "max": 24461212,
+        "intersection": 0
+      },
+      "vs_block_AF_coin_seeds": {
+        "intersection": 0
+      },
+      "vs_existing_probe_seeds": {
+        "members": [
+          820260813,
+          830260813,
+          840260813
+        ],
+        "intersection": 0
+      }
+    }
+  },
+  "fixture_and_prediction": {
+    "fixture": "build_fixtures(load_design_arrays())['full'] — N 1,092 · K 370 · G 732. 새 fixture 생성 0, 규칙 모듈 import 재사용.",
+    "data_paths": [
+      "data/processed/master_X.parquet",
+      "data/processed/master_Y.parquet"
+    ],
+    "predictions": "100% 합성 (`sap.synthetic._scores_from_labels` 경유 `synth_scores`). 확증 예측·OOF 로드 0.",
+    "effect_injection": "0 (귀무 구성 — C0 강도표: 전 arm BASE_STRENGTH). 타이밍은 효과 크기에 의존하지 않는다.",
+    "base_strength": 1.1
+  },
+  "monte_carlo_se": {
+    "formula_verbatim": "SE_MC = sqrt( p·(1−p) / n_permutation_values )",
+    "note": "이 p 는 **합성 예측 위의 값**이라 확증 결과가 아니다."
+  },
+  "stop_conditions": [
+    "ram_gate 브리치",
+    "AC 전원 이탈",
+    "여집합 항등식 감사 실패 1건 이상",
+    "24h 하드 캡 도달(= '24h 초과' 판정, 유효한 결과)",
+    "AI-2 선형성 3점 상대 산포 > 10% (외삽 근거 붕괴 → 중단·보고)"
+  ],
+  "not_done_by_this_block": [
+    "`B` 문면 동결 0 — `sap/rqint.py` 의 `B_DEFINITION_STATUS` 리터럴 무수정(동결 모듈). 확정은 R2 의 일.",
+    "SAP 1.2 재동결 0 · sap_version 1.1 유지 · manifest.json 0바이트",
+    "개봉 0 — `_sealed/` 는 stat-only 스냅샷만, open_sealed 0 · emit_sign 0 · decision.py 호출 0",
+    "GIN 학습·착수 0 (gin_start_still_blocked true)",
+    "data/raw/ 변경 0 · 네트워크 0 · git commit/push 0"
+  ]
+}

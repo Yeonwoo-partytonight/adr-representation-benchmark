@@ -1,0 +1,793 @@
+{
+  "NOT_AN_ANALYSIS_RESULT": true,
+  "timing_proxy": true,
+  "n_estimators_proxy": 60,
+  "frozen_n_estimators": 300,
+  "warning": "이 파일은 **타이밍 전용**이다. OOF 미저장 · 어떤 분석·판정·null 분포에도 투입되지 않는다. 예측 sha256 은 G1 동시성 불변성 검사용 지문일 뿐이며 동결 레시피(300 trees)의 예측이 아니다.",
+  "throughput_definition": "w / wall_max (마지막 워커 완료 기준) — 평균 기반 계산 금지",
+  "core_assignment_rule": {
+    "formula": "워커당 배정 코어 = logical // w  (logical=18, w=워커 수; 최소 1)",
+    "allocation_order": "RF 우선 배정(rf_n_jobs = min(요청, 배정코어); -1 이면 배정코어 전량) → 남은 슬롯을 MOC 에(moc_n_jobs = max(1, 배정코어 // rf_n_jobs); 원 구성이 MOC=None 이면 None 유지)",
+    "thread_env": "워커 프로세스의 BLAS 스레드 상한도 동일하게 배정코어 수로 설정 (OMP/OPENBLAS/MKL/VECLIB/NUMEXPR — 부모에서 설정 후 spawn 상속)",
+    "rationale": "축소 없이 w 워커 × 내부 18스레드를 띄우면 최대 324-way 오버서브스크립션이 되어 '처리량'이 아니라 '스래싱'을 측정하게 된다.",
+    "numerical_invariance": "병렬 인자는 통계적 비-파라미터 — D-2 비트동일 게이트·D-3 G1 로 0-diff 증명.",
+    "limitation_pe_asymmetry": "**한계** — Apple Silicon 은 P코어(6)·E코어(12)가 비대칭이고, 코어 배정은 macOS 스케줄러가 QoS 기준으로 수행한다. 본 규칙은 워커당 **스레드 수 상한**만 균등 분배할 뿐 물리 코어를 고정(affinity pinning)하지 못한다(macOS 는 사용자 수준 CPU affinity API 미제공). 따라서 워커별 실제 코어 배치가 P/E 혼합 비율 면에서 불균등할 수 있고, 이는 워커 간 wall 편차((max−min)/median)로 관측된다. 처리량을 wall_max(마지막 완료) 기준으로 정의한 것은 이 불균등을 낙관적으로 상쇄하지 않기 위함이다."
+  },
+  "ts_kst": "2026-07-28 17:42:50 KST",
+  "sweep": [
+    {
+      "workers": 1,
+      "cores_per_worker": 18,
+      "scaled_cfg": {
+        "rf_n_jobs": 1,
+        "moc_n_jobs": 18,
+        "cores_assigned": 18,
+        "intra_worker_threads_nominal": 18
+      },
+      "thread_env_value": 18,
+      "seeds": [
+        9000101
+      ],
+      "wall_total_s": 23.04180033301236,
+      "cpu_total_s": 23.045175999999856,
+      "per_worker_wall_s": [
+        21.985112667025533
+      ],
+      "per_worker_setup_s": [
+        0.18428966699866578
+      ],
+      "per_worker_recurring_s": [
+        21.7907265839749
+      ],
+      "worker_wall_min_s": 21.985112667025533,
+      "worker_wall_median_s": 21.985112667025533,
+      "worker_wall_max_s": 21.985112667025533,
+      "worker_wall_spread_s": 0.0,
+      "worker_wall_spread_over_median": 0.0,
+      "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+      "wall_max_s": 21.985112667025533,
+      "recurring_max_s": 21.7907265839749,
+      "throughput_perm_per_sec": 0.045485325235556075,
+      "throughput_perm_per_sec_amortized": 0.04589108105901384,
+      "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+      "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+      "max_fold_wall_s": 21.69727383396821,
+      "max_perm_build_s": 0.09345275000669062,
+      "per_worker_fold_wall_s": [
+        21.69727383396821
+      ],
+      "median_fold_wall_s": 21.69727383396821,
+      "median_perm_build_s": 0.09345275000669062,
+      "sum_peak_rss_bytes": 634716160,
+      "sum_peak_rss_gb": 0.63471616,
+      "sum_peak_rss_gib": 0.59112548828125,
+      "ram_budget_ok": true,
+      "pred_sha256": {
+        "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f"
+      },
+      "timing_proxy": true,
+      "n_estimators_proxy": 60
+    },
+    {
+      "workers": 3,
+      "cores_per_worker": 6,
+      "scaled_cfg": {
+        "rf_n_jobs": 1,
+        "moc_n_jobs": 6,
+        "cores_assigned": 6,
+        "intra_worker_threads_nominal": 6
+      },
+      "thread_env_value": 6,
+      "seeds": [
+        9000101,
+        9000102,
+        9000103
+      ],
+      "wall_total_s": 26.290838333021384,
+      "cpu_total_s": 78.58569499999976,
+      "per_worker_wall_s": [
+        25.060370083956514,
+        25.096604541002307,
+        25.132111167011317
+      ],
+      "per_worker_setup_s": [
+        0.19361550000030547,
+        0.19044125004438683,
+        0.1879427920212038
+      ],
+      "per_worker_recurring_s": [
+        24.857104041031562,
+        24.89488704194082,
+        24.934343457978684
+      ],
+      "worker_wall_min_s": 25.060370083956514,
+      "worker_wall_median_s": 25.096604541002307,
+      "worker_wall_max_s": 25.132111167011317,
+      "worker_wall_spread_s": 0.07174108305480331,
+      "worker_wall_spread_over_median": 0.0028585971834394664,
+      "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+      "wall_max_s": 25.132111167011317,
+      "recurring_max_s": 24.934343457978684,
+      "throughput_perm_per_sec": 0.11936919982821947,
+      "throughput_perm_per_sec_amortized": 0.12031598125115409,
+      "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+      "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+      "max_fold_wall_s": 24.831677292007953,
+      "max_perm_build_s": 0.10266616597073153,
+      "per_worker_fold_wall_s": [
+        24.75746583304135,
+        24.793804999964777,
+        24.831677292007953
+      ],
+      "median_fold_wall_s": 24.793804999964777,
+      "median_perm_build_s": 0.10108204197604209,
+      "sum_peak_rss_bytes": 1900773376,
+      "sum_peak_rss_gb": 1.900773376,
+      "sum_peak_rss_gib": 1.770233154296875,
+      "ram_budget_ok": true,
+      "pred_sha256": {
+        "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f",
+        "9000102": "cb8d489568faee7f0a1e5bc4104a13e80ae87f44cd1faad1b1b0b6bc79b5fa40",
+        "9000103": "bfc453fa1faf57f0dccfa5391e89b305b497a03f1ce26c584f6151141b6ff68b"
+      },
+      "timing_proxy": true,
+      "n_estimators_proxy": 60
+    },
+    {
+      "workers": 6,
+      "cores_per_worker": 3,
+      "scaled_cfg": {
+        "rf_n_jobs": 1,
+        "moc_n_jobs": 3,
+        "cores_assigned": 3,
+        "intra_worker_threads_nominal": 3
+      },
+      "thread_env_value": 3,
+      "seeds": [
+        9000101,
+        9000102,
+        9000103,
+        9000104,
+        9000105,
+        9000106
+      ],
+      "wall_total_s": 35.02091058297083,
+      "cpu_total_s": 204.17541699999992,
+      "per_worker_wall_s": [
+        33.648403458006214,
+        33.29438945901347,
+        33.41604695899878,
+        33.41579945804551,
+        33.22328237496549,
+        33.38047704100609
+      ],
+      "per_worker_setup_s": [
+        0.24236558296252042,
+        0.2400059589999728,
+        0.24054254195652902,
+        0.23428620799677446,
+        0.23851920798188075,
+        0.23647275002440438
+      ],
+      "per_worker_recurring_s": [
+        33.39525895798579,
+        33.04284766694764,
+        33.16364441701444,
+        33.170550793001894,
+        32.973213666991796,
+        33.13221833301941
+      ],
+      "worker_wall_min_s": 33.22328237496549,
+      "worker_wall_median_s": 33.3981382495258,
+      "worker_wall_max_s": 33.648403458006214,
+      "worker_wall_spread_s": 0.4251210830407217,
+      "worker_wall_spread_over_median": 0.01272888566016873,
+      "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+      "wall_max_s": 33.648403458006214,
+      "recurring_max_s": 33.39525895798579,
+      "throughput_perm_per_sec": 0.17831455235277666,
+      "throughput_perm_per_sec_amortized": 0.17966622170975033,
+      "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+      "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+      "max_fold_wall_s": 33.273469874984585,
+      "max_perm_build_s": 0.1242418329929933,
+      "per_worker_fold_wall_s": [
+        33.273469874984585,
+        32.928546499984805,
+        33.04083675000584,
+        33.05480795900803,
+        32.85188504203688,
+        33.007976500026416
+      ],
+      "median_fold_wall_s": 33.02440662501613,
+      "median_perm_build_s": 0.12155885397805832,
+      "sum_peak_rss_bytes": 3796058112,
+      "sum_peak_rss_gb": 3.796058112,
+      "sum_peak_rss_gib": 3.5353546142578125,
+      "ram_budget_ok": true,
+      "pred_sha256": {
+        "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f",
+        "9000102": "cb8d489568faee7f0a1e5bc4104a13e80ae87f44cd1faad1b1b0b6bc79b5fa40",
+        "9000103": "bfc453fa1faf57f0dccfa5391e89b305b497a03f1ce26c584f6151141b6ff68b",
+        "9000104": "45b1c25c04d535ef6dffd11d2caa78419537b8e6e5ced15e140c6b9422bdc716",
+        "9000105": "a47e247d4e5ed39259e49b416d222151d8af9208e68248972ead136969f9cd35",
+        "9000106": "857efbb0bb9667351d61b83e7864baab8812928a68ba10530660e3cf372f4063"
+      },
+      "timing_proxy": true,
+      "n_estimators_proxy": 60
+    },
+    {
+      "workers": 9,
+      "cores_per_worker": 2,
+      "scaled_cfg": {
+        "rf_n_jobs": 1,
+        "moc_n_jobs": 2,
+        "cores_assigned": 2,
+        "intra_worker_threads_nominal": 2
+      },
+      "thread_env_value": 2,
+      "seeds": [
+        9000101,
+        9000102,
+        9000103,
+        9000104,
+        9000105,
+        9000106,
+        9000107,
+        9000108,
+        9000109
+      ],
+      "wall_total_s": 38.54729825002141,
+      "cpu_total_s": 339.3565110000002,
+      "per_worker_wall_s": [
+        36.70982004201505,
+        37.074795334017836,
+        36.71741600002861,
+        36.829854500014335,
+        36.878290999971796,
+        36.86992866703076,
+        36.78080316702835,
+        36.58575712505262,
+        36.78924787498545
+      ],
+      "per_worker_setup_s": [
+        0.2596829999820329,
+        0.24806404201081023,
+        0.25724316702689976,
+        0.2567466250038706,
+        0.2568982089869678,
+        0.25377062504412606,
+        0.2574153750319965,
+        0.26007245801156387,
+        0.2545897079980932
+      ],
+      "per_worker_recurring_s": [
+        36.43671987502603,
+        36.814934540947434,
+        36.44625916698715,
+        36.55916091700783,
+        36.610000249987934,
+        36.60382233298151,
+        36.51244116696762,
+        36.31212645804044,
+        36.52377637504833
+      ],
+      "worker_wall_min_s": 36.58575712505262,
+      "worker_wall_median_s": 36.78924787498545,
+      "worker_wall_max_s": 37.074795334017836,
+      "worker_wall_spread_s": 0.4890382089652121,
+      "worker_wall_spread_over_median": 0.01329296566831228,
+      "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+      "wall_max_s": 37.074795334017836,
+      "recurring_max_s": 36.814934540947434,
+      "throughput_perm_per_sec": 0.24275252011282406,
+      "throughput_perm_per_sec_amortized": 0.24446600577246022,
+      "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+      "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+      "max_fold_wall_s": 36.693640290992334,
+      "max_perm_build_s": 0.13497420802013949,
+      "per_worker_fold_wall_s": [
+        36.31212358298944,
+        36.693640290992334,
+        36.325374124979135,
+        36.43491529201856,
+        36.48538937501144,
+        36.4707609579782,
+        36.385498916963115,
+        36.1771522500203,
+        36.38963795802556
+      ],
+      "median_fold_wall_s": 36.38963795802556,
+      "median_perm_build_s": 0.12461087497649714,
+      "sum_peak_rss_bytes": 5692424192,
+      "sum_peak_rss_gb": 5.692424192,
+      "sum_peak_rss_gib": 5.301483154296875,
+      "ram_budget_ok": true,
+      "pred_sha256": {
+        "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f",
+        "9000102": "cb8d489568faee7f0a1e5bc4104a13e80ae87f44cd1faad1b1b0b6bc79b5fa40",
+        "9000103": "bfc453fa1faf57f0dccfa5391e89b305b497a03f1ce26c584f6151141b6ff68b",
+        "9000104": "45b1c25c04d535ef6dffd11d2caa78419537b8e6e5ced15e140c6b9422bdc716",
+        "9000105": "a47e247d4e5ed39259e49b416d222151d8af9208e68248972ead136969f9cd35",
+        "9000106": "857efbb0bb9667351d61b83e7864baab8812928a68ba10530660e3cf372f4063",
+        "9000107": "d075319dd07be12138728fb9c979d7630f8eb41d50175ea65a0f9b16394e5b4f",
+        "9000108": "4ddcc3c463a89d8b980ded641b08e630a71fcf7d4cfd943bde92094ae12557fe",
+        "9000109": "de342557453d2f0c9bc07f96f143f92390414b7b24a1a4e8d3a7d129aa80c971"
+      },
+      "timing_proxy": true,
+      "n_estimators_proxy": 60
+    },
+    {
+      "workers": 12,
+      "cores_per_worker": 1,
+      "scaled_cfg": {
+        "rf_n_jobs": 1,
+        "moc_n_jobs": 1,
+        "cores_assigned": 1,
+        "intra_worker_threads_nominal": 1
+      },
+      "thread_env_value": 1,
+      "seeds": [
+        9000101,
+        9000102,
+        9000103,
+        9000104,
+        9000105,
+        9000106,
+        9000107,
+        9000108,
+        9000109,
+        9000110,
+        9000111,
+        9000112
+      ],
+      "wall_total_s": 44.44849283300573,
+      "cpu_total_s": 516.7868529999996,
+      "per_worker_wall_s": [
+        42.006603125017136,
+        41.96848337497795,
+        42.355956999992486,
+        42.133954208984505,
+        42.717420500004664,
+        42.24062029196648,
+        42.217457375023514,
+        42.23741533298744,
+        42.170936374983285,
+        42.14376404200448,
+        42.055259875021875,
+        42.31138641695725
+      ],
+      "per_worker_setup_s": [
+        0.2758812910178676,
+        0.2779828329803422,
+        0.272824416984804,
+        0.2749949999852106,
+        0.28574562503490597,
+        0.27642133401241153,
+        0.2799935830407776,
+        0.2785148749826476,
+        0.2851214589900337,
+        0.29515487496973947,
+        0.3031429999973625,
+        0.29900154197821394
+      ],
+      "per_worker_recurring_s": [
+        41.71544291701866,
+        41.676064750005025,
+        42.06693733303109,
+        41.84410012495937,
+        42.42107058299007,
+        41.95015945797786,
+        41.92403974896297,
+        41.94487420900259,
+        41.87094587495085,
+        41.83440387499286,
+        41.737804375065025,
+        42.00072666694177
+      ],
+      "worker_wall_min_s": 41.96848337497795,
+      "worker_wall_median_s": 42.1941968750034,
+      "worker_wall_max_s": 42.717420500004664,
+      "worker_wall_spread_s": 0.7489371250267141,
+      "worker_wall_spread_over_median": 0.017749766093317867,
+      "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+      "wall_max_s": 42.717420500004664,
+      "recurring_max_s": 42.42107058299007,
+      "throughput_perm_per_sec": 0.2809158385394242,
+      "throughput_perm_per_sec_amortized": 0.2828782922044344,
+      "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+      "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+      "max_fold_wall_s": 42.27755649999017,
+      "max_perm_build_s": 0.14590300002600998,
+      "per_worker_fold_wall_s": [
+        41.582293750019744,
+        41.54689400002826,
+        41.93212020798819,
+        41.706839541962836,
+        42.27755649999017,
+        41.815737375000026,
+        41.78782979096286,
+        41.79897120897658,
+        41.72608633397613,
+        41.701078000012785,
+        41.59750933304895,
+        41.85686491697561
+      ],
+      "median_fold_wall_s": 41.756958062469494,
+      "median_perm_build_s": 0.13673527049832046,
+      "sum_peak_rss_bytes": 7584104448,
+      "sum_peak_rss_gb": 7.584104448,
+      "sum_peak_rss_gib": 7.0632476806640625,
+      "ram_budget_ok": true,
+      "pred_sha256": {
+        "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f",
+        "9000102": "cb8d489568faee7f0a1e5bc4104a13e80ae87f44cd1faad1b1b0b6bc79b5fa40",
+        "9000103": "bfc453fa1faf57f0dccfa5391e89b305b497a03f1ce26c584f6151141b6ff68b",
+        "9000104": "45b1c25c04d535ef6dffd11d2caa78419537b8e6e5ced15e140c6b9422bdc716",
+        "9000105": "a47e247d4e5ed39259e49b416d222151d8af9208e68248972ead136969f9cd35",
+        "9000106": "857efbb0bb9667351d61b83e7864baab8812928a68ba10530660e3cf372f4063",
+        "9000107": "d075319dd07be12138728fb9c979d7630f8eb41d50175ea65a0f9b16394e5b4f",
+        "9000108": "4ddcc3c463a89d8b980ded641b08e630a71fcf7d4cfd943bde92094ae12557fe",
+        "9000109": "de342557453d2f0c9bc07f96f143f92390414b7b24a1a4e8d3a7d129aa80c971",
+        "9000110": "522c253979279c2b673c2d255fb248821f272eb569e97c6fdbd821216a3ffb60",
+        "9000111": "5c3cd1d478ba05c17bfdd87d7fcb773c1a5a44bb73d862b1d8475478f1bd3149",
+        "9000112": "be88fdfdbb3fd6f6d047212cba6d84221f25971f8ee7817838d0570a807d735e"
+      },
+      "timing_proxy": true,
+      "n_estimators_proxy": 60
+    },
+    {
+      "workers": 18,
+      "cores_per_worker": 1,
+      "scaled_cfg": {
+        "rf_n_jobs": 1,
+        "moc_n_jobs": 1,
+        "cores_assigned": 1,
+        "intra_worker_threads_nominal": 1
+      },
+      "thread_env_value": 1,
+      "seeds": [
+        9000101,
+        9000102,
+        9000103,
+        9000104,
+        9000105,
+        9000106,
+        9000107,
+        9000108,
+        9000109,
+        9000110,
+        9000111,
+        9000112,
+        9000113,
+        9000114,
+        9000115,
+        9000116,
+        9000117,
+        9000118
+      ],
+      "wall_total_s": 54.491802375006955,
+      "cpu_total_s": 897.7490990000001,
+      "per_worker_wall_s": [
+        51.6392351249815,
+        50.62949204200413,
+        50.98579004203202,
+        51.65673870802857,
+        51.879126041021664,
+        51.92102079099277,
+        52.26726187503664,
+        51.442864250042476,
+        52.330802291980945,
+        51.70011908299057,
+        51.2099181250087,
+        51.952234042051714,
+        50.7316717079957,
+        52.12591754103778,
+        51.705533500004094,
+        52.04840470798081,
+        51.79199216602137,
+        51.64447724999627
+      ],
+      "per_worker_setup_s": [
+        0.33352220797678456,
+        0.32492500002263114,
+        0.3119752500206232,
+        0.32501750002847984,
+        0.3177275829948485,
+        0.32059237494831905,
+        0.32906833302695304,
+        0.3346274170326069,
+        0.3340397499850951,
+        0.3313305419869721,
+        0.3437955410336144,
+        0.3383900829940103,
+        0.34872454102151096,
+        0.3436454579932615,
+        0.3490299170371145,
+        0.36043504101689905,
+        0.35351975000230595,
+        0.34470291703473777
+      ],
+      "per_worker_recurring_s": [
+        51.28814112499822,
+        50.285163249995094,
+        50.656487333006226,
+        51.31447520799702,
+        51.544249001017306,
+        51.58514479198493,
+        51.92477445799159,
+        51.09117899998091,
+        51.9844322919962,
+        51.35311712505063,
+        50.84904000000097,
+        51.59887737495592,
+        50.365128625999205,
+        51.77065008302452,
+        51.34159912500763,
+        51.67595683201216,
+        51.42531979101477,
+        51.28610737598501
+      ],
+      "worker_wall_min_s": 50.62949204200413,
+      "worker_wall_median_s": 51.70282629149733,
+      "worker_wall_max_s": 52.330802291980945,
+      "worker_wall_spread_s": 1.7013102499768138,
+      "worker_wall_spread_over_median": 0.032905556078983614,
+      "worker_wall_stat_note": "min/median 은 **기술통계**(워커 간 불균등 진단)일 뿐 처리량·투영에 투입하지 않는다.",
+      "wall_max_s": 52.330802291980945,
+      "recurring_max_s": 51.9844322919962,
+      "throughput_perm_per_sec": 0.34396568008968365,
+      "throughput_perm_per_sec_amortized": 0.3462575083804729,
+      "throughput_definition": "w / wall_max — wall_max = 워커 중 **마지막 완료** wall. 평균·중앙값 기반 처리량 계산 금지(D-3 보정).",
+      "amortized_definition": "w / max(per_worker_recurring_s) — recurring = 워커 자신의 wall − 자신의 setup(프로세스당 1회 데이터 로드, 본실행에서 permutation 수로 상각). 워커별 값에서 max 를 취하므로 평균 기반이 아니다.",
+      "max_fold_wall_s": 51.81759629200678,
+      "max_perm_build_s": 0.18038366601103917,
+      "per_worker_fold_wall_s": [
+        51.135249832994305,
+        50.141127457958646,
+        50.51216804201249,
+        51.13409154198598,
+        51.38826145901112,
+        51.438031334022526,
+        51.765465040982235,
+        50.92799900000682,
+        51.81759629200678,
+        51.18431608303217,
+        50.69001775002107,
+        51.43386212497717,
+        50.20661158399889,
+        51.61397062498145,
+        51.18318341602571,
+        51.51103429100476,
+        51.26957095798571,
+        51.11909941700287
+      ],
+      "median_fold_wall_s": 51.18374974952894,
+      "median_perm_build_s": 0.15876964599010535,
+      "sum_peak_rss_bytes": 11373871104,
+      "sum_peak_rss_gb": 11.373871104,
+      "sum_peak_rss_gib": 10.592742919921875,
+      "ram_budget_ok": true,
+      "pred_sha256": {
+        "9000101": "cb9f66db4fa3b5c7075d9ceb0a5f90fad01408374bbfb50ec4d4c867f22d150f",
+        "9000102": "cb8d489568faee7f0a1e5bc4104a13e80ae87f44cd1faad1b1b0b6bc79b5fa40",
+        "9000103": "bfc453fa1faf57f0dccfa5391e89b305b497a03f1ce26c584f6151141b6ff68b",
+        "9000104": "45b1c25c04d535ef6dffd11d2caa78419537b8e6e5ced15e140c6b9422bdc716",
+        "9000105": "a47e247d4e5ed39259e49b416d222151d8af9208e68248972ead136969f9cd35",
+        "9000106": "857efbb0bb9667351d61b83e7864baab8812928a68ba10530660e3cf372f4063",
+        "9000107": "d075319dd07be12138728fb9c979d7630f8eb41d50175ea65a0f9b16394e5b4f",
+        "9000108": "4ddcc3c463a89d8b980ded641b08e630a71fcf7d4cfd943bde92094ae12557fe",
+        "9000109": "de342557453d2f0c9bc07f96f143f92390414b7b24a1a4e8d3a7d129aa80c971",
+        "9000110": "522c253979279c2b673c2d255fb248821f272eb569e97c6fdbd821216a3ffb60",
+        "9000111": "5c3cd1d478ba05c17bfdd87d7fcb773c1a5a44bb73d862b1d8475478f1bd3149",
+        "9000112": "be88fdfdbb3fd6f6d047212cba6d84221f25971f8ee7817838d0570a807d735e",
+        "9000113": "8bb116567fd5166aa9abcc3edcf3ddc479ab20e23921255363ed216988a19bd1",
+        "9000114": "817170f4a65ec2ff3c7280074ac2949f919dd7d9bd3401b71615ebb78c524c1f",
+        "9000115": "253833ed040d7c94f838e4962dcd44aef67932379897e2623a34409ee1c6fecc",
+        "9000116": "e6518ef9d4f5e9b694ebb0eb2a05036ffb4c848cfb3129de985ffc061764e20f",
+        "9000117": "bb231f1df8f8a14b0ce13b56e90a19109390ad4ae1034487585acd4140ad2fe7",
+        "9000118": "7c0bc90cdca2e2a6b2dc03b60a9ffc00a2e038c7459c83d3c658c6a45f96b8d7"
+      },
+      "timing_proxy": true,
+      "n_estimators_proxy": 60
+    }
+  ],
+  "G1": {
+    "pass": true,
+    "detail": [
+      {
+        "seed": 9000101,
+        "n_observations": 6,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          1,
+          3,
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000102,
+        "n_observations": 5,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          3,
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000103,
+        "n_observations": 5,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          3,
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000104,
+        "n_observations": 4,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000105,
+        "n_observations": 4,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000106,
+        "n_observations": 4,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          6,
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000107,
+        "n_observations": 3,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000108,
+        "n_observations": 3,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000109,
+        "n_observations": 3,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          9,
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000110,
+        "n_observations": 2,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000111,
+        "n_observations": 2,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000112,
+        "n_observations": 2,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          12,
+          18
+        ]
+      },
+      {
+        "seed": 9000113,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      },
+      {
+        "seed": 9000114,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      },
+      {
+        "seed": 9000115,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      },
+      {
+        "seed": 9000116,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      },
+      {
+        "seed": 9000117,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      },
+      {
+        "seed": 9000118,
+        "n_observations": 1,
+        "n_distinct_sha": 1,
+        "invariant": true,
+        "workers_seen": [
+          18
+        ]
+      }
+    ]
+  }
+}

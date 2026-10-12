@@ -1,0 +1,27 @@
+{
+  "_doc": "블록 AU 분할 진단(공개 — 개수뿐).",
+  "folds": {
+    "rep1_fold4": {
+      "n_outer_train": 873,
+      "n_outer_test": 219,
+      "n_inner_train": 776,
+      "n_inner_valid": 97,
+      "n_inner_train_zero_positive_pt": 0
+    },
+    "rep2_fold1": {
+      "n_outer_train": 874,
+      "n_outer_test": 218,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_inner_train_zero_positive_pt": 0
+    },
+    "rep3_fold0": {
+      "n_outer_train": 874,
+      "n_outer_test": 218,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_inner_train_zero_positive_pt": 0
+    }
+  },
+  "updated_kst": "2026-09-23 01:08:56 KST"
+}

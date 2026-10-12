@@ -1,0 +1,424 @@
+{
+  "_doc": "RQ-int 외부 통계검토(<EXTERNAL-REVIEWER> Ph.D., 2026-08-10) 회신의 채택 결정·승인 조건을 기록한 파일. **동결이 아니다** — SAP 1.2 동결은 R1 통과 후 별도 블록에서 한다.",
+  "status": "decisions_recorded_not_frozen",
+  "is_sap_freeze": false,
+  "sap_version_at_record": "1.1",
+  "sap_manifest_sha256_at_record": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+  "block": "AB",
+  "recorded_at_kst": "2026-08-14 13:53:25 KST",
+  "instruction": "docs/86_rqint_reviewer_response_record_prompt_for_vscode.md (초판 + AB-5)",
+  "triage_doc": "docs/84_rqint_reviewer_response_triage.md",
+  "source_review": {
+    "file": "docs/RQint_Reviewer_Response_<EXTERNAL-REVIEWER>_20260810.docx",
+    "sha256": "0c29ddf201eb6751a47f420d0c405fdafd0a6baf0ae7705059b0a85fa296aa99",
+    "cover_table_verbatim": {
+      "reviewer": "<EXTERNAL-REVIEWER>, Ph.D.",
+      "degree_specialty": "Ph.D., Department of Information and Communications Engineering, KAIST — resampling-based inference, multiple testing, evaluation metrics for predictive models",
+      "affiliation": "Gyeongnam Intelligence Innovation Center (GIIC)",
+      "date_of_review": "2026-08-10",
+      "access_to_sealed": "None. §11.2의 results-blind 조건 하에 검토하였으며, 봉인된 효과크기 · p-값 · 신뢰구간 · 귀무분포 · 층별 결과를 요청하거나 열람한 사실이 없음",
+      "determination": "Approved with revisions (조건부 승인)"
+    },
+    "appendix_b_verbatim": {
+      "reviewer_name": "<EXTERNAL-REVIEWER>",
+      "affiliation": "",
+      "date_of_review": "2026-08-06",
+      "determination": "Approved with revisions — conditional on requirements R1 through R6 (§6.2)"
+    },
+    "n_approved_with_revisions_occurrences": 2,
+    "discriminator_present": "reverts to the paired scaffold-cluster BCa interval",
+    "extracted_by": "러너 독립 판독(zipfile → word/document.xml) — cowork 요약 미사용"
+  },
+  "date_discrepancy": {
+    "cover_table": "2026-08-10",
+    "appendix_b": "2026-08-06",
+    "adopted": "2026-08-10",
+    "basis": "우리 서명 요청본이 표지 기준 2026-08-10 으로 기입하고 '08-06 이 맞다면 아래 표를 수정해 주십시오' 라고 명시했다. 두 리터럴을 모두 보존하며 임의로 한쪽을 지우지 않는다.",
+    "resolution_status_at_this_block": "서명본 회수 이전 시점 기준 기록 — 확정 판단은 블록 AH(docs/95)"
+  },
+  "signature_status": "pending_as_of_2026-08-12",
+  "appendix_b_blank_fields": [
+    "Affiliation (공란)",
+    "서명 / Signature · 일자 / Date (미기입)"
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "decision": "확정검정 = 후보 B(공용 동전 팔-교환). 후보 A 기각, 독립 동전 기각",
+      "reviewer_section": "§1-1·§2-2·§2-3·§2-4",
+      "target": "sap_text",
+      "our_status": "new"
+    },
+    {
+      "id": "D2",
+      "decision": "후보 C(BCa) = 보고 전용, 판정 제외. '불일치 시 유리한 쪽 선택 금지' 문장 삽입",
+      "reviewer_section": "§2-5",
+      "target": "sap_text",
+      "our_status": "new"
+    },
+    {
+      "id": "D3",
+      "decision": "집계 = 형식 (i). repeat 축 = prediction-then-metric(양 family 공통), seed 축 = metric-then-average(GIN 전용)",
+      "reviewer_section": "§4-1",
+      "target": "sap_text",
+      "our_status": "partial"
+    },
+    {
+      "id": "D4",
+      "decision": "동일 동전 벡터 z^(b) 를 3 seed × 3 repeat 전체에 공동 적용",
+      "reviewer_section": "§4-2",
+      "target": "sap_text",
+      "our_status": "new"
+    },
+    {
+      "id": "D5",
+      "decision": "consensus 8행렬(RF 2 + GIN 3seed×2)을 순열 루프 밖 1회 산출, 순열당 macro-AP 8회. 교환 연산자와 repeat 평균의 가환성 명시 + 단위테스트",
+      "reviewer_section": "§4-2",
+      "target": "sap_text+code+test",
+      "our_status": "new"
+    },
+    {
+      "id": "D6",
+      "decision": "고정 시드집합 조건부 추론 명시 — (i) 본문·초록에 '이 사전지정 시드집합에 조건부' (ii) 시드별 대비 SD 서술통계 필수 보고",
+      "reviewer_section": "§4-2",
+      "target": "sap_text+manuscript",
+      "our_status": "new"
+    },
+    {
+      "id": "D7",
+      "decision": "판정 = Holm 조정 p 단독. CI·등가검정 게이트 신설 금지",
+      "reviewer_section": "§4-3",
+      "target": "sap_text",
+      "our_status": "new"
+    },
+    {
+      "id": "D8",
+      "decision": "'비유의 = inconclusive' 사전 문장 삽입(영문 축자)",
+      "reviewer_section": "§4-3",
+      "target": "sap_text+manuscript",
+      "our_status": "new"
+    },
+    {
+      "id": "D9",
+      "decision": "Δ_RF·Δ_GIN 및 각각의 BCa 를 유의성 무관 항상 병기",
+      "reviewer_section": "§4-3",
+      "target": "manuscript",
+      "our_status": "new"
+    },
+    {
+      "id": "D10",
+      "decision": "교환 단위 = scaffold group 732 유지. 폴드 상향·124셀 교차구성 모두 기각",
+      "reviewer_section": "§3",
+      "target": "sap_text",
+      "our_status": "already_satisfied",
+      "runner_measurement": {
+        "n_scaffold_groups": 732,
+        "measured_from": [
+          "experiments/runs/v3_confirm_rep1_seed201/split_manifest.json",
+          "experiments/runs/v3_confirm_rep2_seed202/split_manifest.json",
+          "experiments/runs/v3_confirm_rep3_seed203/split_manifest.json"
+        ],
+        "all_reps_agree": true,
+        "note": "확증 3반복 split_manifest 전건 732 — 동결값과 일치하므로 already_satisfied."
+      }
+    },
+    {
+      "id": "D11",
+      "decision": "레버리지 진단 λ_k (k=1,2,10)·ρ 사전규정. 게이트 아님, 보고·주석용",
+      "reviewer_section": "§3(a)",
+      "target": "sap_text+results",
+      "our_status": "new_blocked_on_gin"
+    },
+    {
+      "id": "D12",
+      "decision": "민감도 분석 2종 — (i) no-scaffold 버킷 싱글톤 분해 (ii) 벤젠군 사전규정 결정적 2분할(정규화 SMILES 사전순). 폴드 배정 불변",
+      "reviewer_section": "§3(b)",
+      "target": "sap_text+results",
+      "our_status": "new"
+    },
+    {
+      "id": "D13",
+      "decision": "이산성 보고 — Kish G_eff = 85.3, 상위 2군 14.2% 지배를 방법부에 명시, 참조분포 히스토그램으로 다봉성 보고",
+      "reviewer_section": "§3(c)",
+      "target": "manuscript",
+      "our_status": "new"
+    },
+    {
+      "id": "D14",
+      "decision": "Holm 이중보고 — (A) 구현 p / (B) p=1.0 폴백 두 판을 모두 보고. 6개 중 결론이 다른 항목이 있으면 본문 명시 (= R4)",
+      "reviewer_section": "§5-1",
+      "target": "sap_text+manuscript",
+      "our_status": "new_missed_by_us"
+    },
+    {
+      "id": "D15",
+      "decision": "B = 100,000. 전규모 합성 드라이런 벽시계 24h 초과 시에만 50,000 으로 하향하되 GIN 예측 생성 이전에 판단. 추정 p 와 함께 몬테카를로 SE 병기",
+      "reviewer_section": "§9-2",
+      "target": "sap_text",
+      "our_status": "new"
+    },
+    {
+      "id": "D16",
+      "decision": "표기 분리 — 동전 벡터 z ∈ {0,1}^G, 시드 인덱스 s ∈ {1,2,3}",
+      "reviewer_section": "§2-1",
+      "target": "sap_text",
+      "our_status": "new"
+    },
+    {
+      "id": "D17",
+      "decision": "GIN 학습실패 처리 — 셀당 3회 결정적 재시도(seed' = 10⁴s + 10²r + 10f + a) → 실패 시 해당 시드를 예비목록 다음 시드로 교체 → 2개 이상 교체 또는 예비 소진 시 not_estimable + Holm 슬롯 p=1.0. 지표 근거 시드 선택·배제 명시적 금지. 전 실패를 무결성 원장에 기록. 최소 1개 시드는 결정적 백엔드(CPU)로 재실행",
+      "reviewer_section": "§9-3",
+      "target": "sap_text+code",
+      "our_status": "new"
+    },
+    {
+      "id": "D18",
+      "decision": "대표폴드·학습시드 즉시 동결",
+      "reviewer_section": "§9-4",
+      "target": "config",
+      "our_status": "already_satisfied",
+      "runner_measurement": {
+        "frozen_at_kst": "2026-08-05 16:51 KST",
+        "representative_units": [
+          [
+            201,
+            4
+          ],
+          [
+            202,
+            1
+          ],
+          [
+            203,
+            0
+          ]
+        ],
+        "reproduce_cmd": "python3 -c \"import hashlib;print([int(hashlib.sha256(str(s).encode('ascii')).hexdigest(),16)%5 for s in (201,202,203)])\"",
+        "reproduce_stdout": "[4, 1, 0]",
+        "expected": "[4, 1, 0]",
+        "reproduced": true
+      }
+    },
+    {
+      "id": "D19",
+      "decision": "τ = 0.02 사전지정 + C4 결과로 자동 결정되는 3단 사다리(≥0.80 완전시행 / 0.50~0.80 검정력·유보문장 병기 / <0.50 슬롯 p=1.0 유지 + 탐색적 별도보고). τ 근거(SESOI 0.01 · 이중차분 SE √2배 · 실무적 의미 2배)도 명문화",
+      "reviewer_section": "§8",
+      "target": "sap_text",
+      "our_status": "new"
+    },
+    {
+      "id": "D20",
+      "decision": "manifest model_family 문자열 = 비실질 메타데이터 정정. 조용히 수정 금지 → erratum 기록(전후 문자열·전후 sha16·라인 diff) + 스키마를 primary_model_family / families_compared 로 분리 + 기존 11모듈 해시 불변 명시",
+      "reviewer_section": "§7",
+      "target": "manifest+docs/33+amendment",
+      "our_status": "new_deferred_to_sap_1_2",
+      "runner_measurement": {
+        "string": "RF primary confirmatory (RF-Morgan+seq)",
+        "occurrences_in_manifest": 14,
+        "manifest_sha256_at_entry": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+        "manifest_modified_bytes": 0,
+        "note": "출현 횟수만 기록했고 수정은 하지 않았다(SAP 1.2 동결 블록의 일)."
+      }
+    },
+    {
+      "id": "D21",
+      "decision": "§10.2 '3개 대표폴드 × 5시드' 정정은 편집사항으로 타당",
+      "reviewer_section": "§9-5",
+      "target": "—",
+      "our_status": "confirm_only"
+    },
+    {
+      "id": "D22",
+      "decision": "e_g 프로파일 기반 선형화 부호뒤집기 검정은 보조 진단으로만 허용(가법 대리통계량이므로 확정검정 사용 금지). 진단 목적임을 SAP 1.2 에 명시",
+      "reviewer_section": "§2-6",
+      "target": "sap_text",
+      "our_status": "new"
+    }
+  ],
+  "n_decisions": 22,
+  "conditions": {
+    "R1": {
+      "id": "R1",
+      "requirement": "아래 §6.3의 캘리브레이션 감사 C0–C4 완료 및 결과표 기록. C1–C3에서 경험적 1종오류가 [α + 2·SE] 를 초과하면 본 승인은 무효이며 후보 C로 회귀",
+      "status": "pending",
+      "blocking": "SAP 1.2 동결(R2) · GIN 착수 · 개봉",
+      "planned_block": "R1 캘리브레이션 감사 블록(장시간 계산) — docs/93·94",
+      "failure_action": "후보 C(paired scaffold-cluster BCa)로 회귀. 단 회귀 적용 전 검토자 재자문 의무(§6-2 R1 '본 승인은 무효')."
+    },
+    "R2": {
+      "id": "R2",
+      "requirement": "RQ-int 구현 코드 · 난수시드 · B · 시드집합 · 대표폴드 · 실패처리 규칙을 GIN 학습 착수 이전에 v1.2로 동결하고 해시 기록",
+      "status": "pending",
+      "blocking": "GIN 착수",
+      "must_precede": "gin_training_start",
+      "planned_block": "SAP 1.2 동결 블록(R1 통과 후)"
+    },
+    "R3": {
+      "id": "R3",
+      "requirement": "제2자에 의한 독립 재실행(합성 데이터 드라이런)으로 동결 해시로부터 동일 산출 확인",
+      "status": "pending",
+      "blocking": "개봉 이전 승인 조건 완결",
+      "planned_block": "R2 이후 별도 블록",
+      "second_party": "still_unspecified — §AB-2-4 미확정 #3 참조(상신 완료·승인 대기)"
+    },
+    "R4": {
+      "id": "R4",
+      "requirement": "§5.1의 Holm 이중 보고(A/B) 를 SAP v1.2 문언에 포함",
+      "status": "pending",
+      "blocking": "SAP 1.2 문면 확정",
+      "planned_block": "SAP 1.2 동결 블록"
+    },
+    "R5": {
+      "id": "R5",
+      "requirement": "기지 부호 4건, 공개일자(2026-07-27), 노출 인원을 개정문에 명시 (§8 초안은 이미 충족)",
+      "status": "partial",
+      "blocking": "SAP 1.2 문면 확정",
+      "planned_block": "SAP 1.2 동결 블록",
+      "runner_measurement": {
+        "docs55b_section8_range": "docs/55b_rqint_external_statreview_package_v2.md §8 (457~479행)",
+        "known_signs_four_present": true,
+        "known_signs_verbatim": "the only confirmatory information known to the investigators was the **sign** of Δ(M2b−M1b) for four artifacts",
+        "disclosure_date_2026_07_27_in_section8": false,
+        "disclosure_date_found_elsewhere": "docs/55b:137 (§2 무결성·공개 상태)",
+        "n_exposed_persons_in_section8": false,
+        "verdict": "cowork·회신서가 적은 '§8 초안 이미 충족'은 **부호 4건에 대해서만** 맞다. 공개일자 2026-07-27 은 §8 개정문 문면 안에 없고(§2 본문에만 있음), 노출 인원 수는 문서 어디에도 없다 → our_status = partial. SAP 1.2 개정문에 두 요소를 추가해야 R5 가 완결된다."
+      }
+    },
+    "R6": {
+      "id": "R6",
+      "requirement": "가환성 단위테스트(§4.2), 동일 입력 시 p = 1 재확인, 대칭 할당 하 균등성 재확인 — A6 감사 2종을 RQ-int 코드경로에 대해 재실행",
+      "status": "pending",
+      "blocking": "R2 동결 전 검증 완결",
+      "planned_block": "RQ-int 구현 블록(docs/89 = 블록 AC 에서 선행 수행)"
+    }
+  },
+  "n_conditions": 6,
+  "code_check_9_1": {
+    "requested_by": "회신 §9-1 (최우선) — 'A6 은 이미 동결되어 ②③⑤⑥⑦ 에 쓰이는 모듈이므로 코드 실물을 확인하라'",
+    "verified_independently_by_runner": true,
+    "file": "v3_Multimodal/src/sap/signflip.py",
+    "file_sha256": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+    "file_modified_bytes": 0,
+    "line": 76,
+    "source_verbatim": "count = int(np.sum(np.abs(perm) >= abs(delta_obs) - _EPS))",
+    "ast_calls": [
+      "int",
+      "sum",
+      "abs",
+      "abs"
+    ],
+    "np_abs_perm_present": true,
+    "abs_delta_obs_present": true,
+    "comparison_operator": "GtE",
+    "eps_measured": 1e-12,
+    "eps_direction": "카운트 임계에서 `- _EPS` 를 빼므로 `|Δ*| ≥ |Δ_obs| − ε` 가 되어 조건이 **더 쉽게** 참이 된다 → count 증가 → p = (1 + count)/(B + 1) **증가** → 보수적(anti-conservative 아님). 부등호(GtE)와 부호를 코드에서 직접 확인했다.",
+    "docs55b_line195_verbatim": "양측 p = `(1 + #{|Δ*| ≥ |Δ_obs|}) / (B + 1)`.",
+    "docs55b_abs_present": true,
+    "code_defect": false,
+    "document_only": true,
+    "scope": "english_recipient_copy_only",
+    "already_computed_pvalues_affected": "없음 — ②③⑤⑥⑦ 에 쓰인 p-값은 위 코드경로(절댓값 양측)로 산출됐으므로 영향 0.",
+    "note": "본 블록은 signflip.py 를 0바이트 수정했고 확인만 했다."
+  },
+  "confirmed": [
+    {
+      "id": "reserve_seeds",
+      "item": "예비 학습시드 목록(순서 포함)",
+      "value": [
+        3,
+        4
+      ],
+      "basis": "gin_seed_freeze.json training_seeds_ordered = [42,1,2,3,4] 의 미사용 접미부를 기계적으로 취함 → 신규 추첨·신규 선택 0. 이 리스트는 GIN 학습 0회 시점(2026-08-05 16:51 KST)에 이미 순서까지 동결됐다.",
+      "decided_by": "사용자 결정 2026-08-12"
+    }
+  ],
+  "reserve_seeds": [
+    3,
+    4
+  ],
+  "reserve_seeds_overlap_with_stability_seeds": {
+    "overlap": [
+      3,
+      4
+    ],
+    "accepted": true,
+    "reason": "데이터 재사용이나 검정 중복이 아니라 동일 난수 초기화값 사용일 뿐이다."
+  },
+  "stability_analysis_is_independent_replication": false,
+  "stability_analysis_note": "안정성 분석은 확증 실행을 포함한 시드 민감도 기술이지 독립 반복이 아니다. 실패한 시드를 성공한 것처럼 탈락시키지 않고 실패 상태 자체를 보고한다.",
+  "still_unspecified": [
+    {
+      "no": null,
+      "id": "y1_replacement_count_unit",
+      "item": "회신 §9-3 '2개 이상이 교체를 요하거나' 의 계수 단위",
+      "unspecified_in_reviewer_response": true,
+      "status": "resolved_by_our_pre_specified_reading_2026-08-12",
+      "resolution_mode": "pre_specified_reading_of_reviewer_condition",
+      "escalated_to_reviewer": false,
+      "resolution": "① 실패한 원 확증시드의 수. 원 시드 1개 실패 시 예비 3, 이어 4까지 순차 시도 가능. 원 시드 2개 실패 또는 예비 2개 모두 실패 시 not_estimable + Holm 슬롯 p=1.0",
+      "rationale": "해석 ②(교체 이벤트 수)를 취하면 예비목록의 두 번째 항목 `4` 가 구조적으로 도달 불가가 되어, 회신 §9-3 자신의 '예비 시드 목록은 순서까지 SAP 1.2 에 동결' 지시와 모순된다. 따라서 ①이 유일하게 정합적인 독법이다.",
+      "not_a_post_hoc_choice_because": "GIN 학습 0회 · 학습 실패 발생 0건 시점에 기록 — 관측에 조건부인 선택이 아니다.",
+      "blocking": null
+    },
+    {
+      "no": null,
+      "id": "y2_r1_failure_fallback_decision_rule",
+      "item": "R1 실패 시 폴백(후보 C 회귀)의 판정규칙",
+      "unspecified_in_reviewer_response": true,
+      "status": "resolved_by_our_pre_specified_reading_2026-08-12",
+      "resolution_mode": "pre_specified_reading_of_reviewer_condition",
+      "escalated_to_reviewer": false,
+      "resolution": "판정하지 않는다 — 후보 C(paired scaffold-cluster BCa)로 회귀하되 크기 추정치로만 탐색적 보고하고 Holm 슬롯은 p = 1.0 으로 둔다. 가족 크기 7 유지",
+      "rationale": "회귀 자체는 회신 §10 축자 지정(채택). 판정규칙은 §4-3 의 'BCa 구간은 보고하되 판정 조건에 넣지 마십시오 · RQ-int 에는 사전등록된 SESOI 가 없으므로 어떤 임계값도 자의적' 에서 연역된다 — 우리가 임계값을 새로 만들지 않는다. 결과적으로 §8 3단 사다리의 최하단(<0.50)과 동일한 처리다.",
+      "not_a_post_hoc_choice_because": "R1 감사 실행 0회 시점에 기록.",
+      "blocking": null
+    },
+    {
+      "no": 1,
+      "id": "b_monte_carlo_sample_size_and_definition",
+      "item": "B(몬테카를로 표본수)의 값과 정의",
+      "status": "still_unspecified",
+      "reviewer_recommendation": "100,000 (전규모 드라이런 벽시계 24h 초과 시 50,000)",
+      "why_unspecified": "전규모 합성 드라이런 이전이라 벽시계 판단 불가.",
+      "second_open_point": "B 가 동전벡터 수인지, 벡터+여집합을 합한 총 배치 수인지도 미확정.",
+      "blocking": "R1 캘리브레이션 감사 착수 · SAP 1.2 동결(R2)"
+    },
+    {
+      "no": 2,
+      "id": "c0_c3_replicates",
+      "item": "C0~C3 축소규모 복제 수",
+      "status": "still_unspecified",
+      "reviewer_recommendation": "1,000~2,000",
+      "why_unspecified": "계측 블록 산출(단가) 이후 확정한다. 결과를 보고 정하는 것은 금지.",
+      "blocking": "R1 캘리브레이션 감사 착수"
+    },
+    {
+      "no": 3,
+      "id": "r3_second_party",
+      "item": "R3 '제2자 독립 재실행' 의 수행 주체",
+      "status": "escalated_awaiting_advisor_reply",
+      "default_proposal": "<SECOND-PARTY> 학생(별도 환경 재실행)",
+      "escalated_at": "2026-08-12T14:48:48+09:00",
+      "message_id": "<GMAIL-MSGID>",
+      "confirmed_second_party": null,
+      "blocking": "R3 이행 계획 확정 및 SAP 1.2 동결 블록",
+      "note": "상신은 완료됐으나 수행 주체 확정은 미완이므로 still_unspecified 에서 빼지 않는다(escalated: true · resolved: false)."
+    }
+  ],
+  "still_unspecified_semantics": "회신서가 값을 지정하지 않은 채 남긴 항목 5건의 목록이다. 각 항목의 `status` 가 현재 상태를 말한다 — [0]·[1](Y1·Y2)은 재문의하지 않고 우리 사전 명시로 종결했고, [2]·[3]은 여전히 미확정이며 `blocking` 을 갖고, [4](R3 제2자)는 상신 완료·승인 대기다. 항목 수는 줄지 않는다.",
+  "n_still_unspecified": 5,
+  "on_r1_failure_reconsult_reviewer": true,
+  "on_r1_failure_note": "회신 §6-2 R1 은 실패 시 '본 승인은 무효' 라고 명시했으므로, R1 이 실제로 실패하면 Y2 폴백을 적용하기 전에 검토자께 재자문한다.",
+  "conflicts_with_llm_review_round5": {
+    "X1": "BCa 유효 replicate 임계 게이트 **신설 안 함** — A7 은 이미 동결·사용된 모듈이라 판정규칙 신설은 부호 인지 후 변경이 된다(실질 버킷 D). 진단값은 보고한다.",
+    "X2": "R1 실패 폴백 = <EXTERNAL-REVIEWER> §10 대로 후보 C 회귀(ChatGPT 대안 기각). 단 판정규칙은 Y2 의 사전 명시로 채운다."
+  },
+  "gin_start_still_blocked": true,
+  "unblinding_performed": false,
+  "this_file_is_not_an_authorization": "본 기록은 어떤 착수 허가도 아니다 — GIN 학습·RQ-int 구현 확정·SAP 1.2 재동결·개봉은 전부 차단 유지.",
+  "computation_performed": 0,
+  "models_trained": 0,
+  "network_calls": 0,
+  "sealed_read": 0,
+  "executed_by": "vscode-claude(runner), 블록 AB"
+}

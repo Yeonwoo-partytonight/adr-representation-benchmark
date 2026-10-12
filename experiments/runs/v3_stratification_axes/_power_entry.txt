@@ -1,0 +1,2 @@
+Now drawing from 'AC Power'
+ -InternalBattery-0 (id=22872163)	31%; charging; 1:29 remaining present: true

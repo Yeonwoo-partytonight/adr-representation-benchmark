@@ -1,0 +1,81 @@
+{
+  "_doc": "A5 축 층 라벨 개명 매핑 — 층 구성원·산출물은 한 바이트도 바뀌지 않는다. 순수 명명 정정이며, 이 파일이 앞으로의 보고·논문에서 쓸 이름의 정본이다.",
+  "block": "AA-B",
+  "decided_at_kst": "2026-08-09 15:47:29 KST",
+  "instruction": "docs/82_docs55b_m1b_fix_and_a5_relabel_prompt_for_vscode.md §AA-B",
+  "supersedes": {
+    "axis": "A5",
+    "old_label": "not_estimable",
+    "new_label": "mechanism_target_unresolved"
+  },
+  "reason": "이 프로젝트에서 `not_estimable` 은 이미 SAP A1 의 「BCa 실패 → ci_primary 추정 불가」를 뜻하는 예약어다(experiments/sap/manifest.json 의 A1 규칙 · sap/bootstrap.py:201-209). 그런데 A5 의 이 층은 실측상 `estimable: true` · `inference_mode: formal` 로 정상 추정됐고, 같은 공개 파일 안에 SAP 뜻의 `not_estimable_units: []` 가 공존한다 → 한 문서에서 같은 낱말이 두 가지를 가리키므로 심사자가 오독한다. 이 층의 실제 성격은 「추정 불가」가 아니라 「mechanism 표적을 UniProt 으로 해석하지 못함」(a5_boundary_amendment.json cases.C: target_chembl_id 는 있으나 UniProt 전부 미해석)이다.",
+  "distinct_from_no_mechanism": "`no_mechanism`(347명)은 mechanism **표적이 없는** 경우이고, `mechanism_target_unresolved`(24명)은 표적이 **있는데** UniProt accession 으로 해석되지 않아 unseen 대조(`{0}`/`{1}`)를 할 수 없는 경우다. 두 층은 서로 다른 집합이며 새 이름은 이 차이가 드러나도록 지었다.",
+  "membership_unchanged": true,
+  "n_drugs": 24,
+  "n_scaffold_clusters": 16,
+  "member_cids": [
+    2478,
+    2708,
+    3690,
+    3950,
+    4033,
+    4114,
+    4173,
+    5394,
+    5453,
+    5479,
+    5746,
+    5852,
+    7699,
+    14969,
+    15664,
+    20279,
+    71815,
+    214348,
+    457193,
+    460612,
+    2724354,
+    5280965,
+    6604200,
+    135398738
+  ],
+  "member_cids_sorted_sha256": "17148aa9166d415c4beba5ccdcc979aca89de25ef57b0d4d72fad585e9c5b696",
+  "member_cids_sha256_input": "정렬된 cid 를 쉼표로 이은 ASCII 문자열",
+  "membership_source": "experiments/runs/v3_stratification_axes/axes_assignment.csv 에서 stable_A5=True 이고 3반복 A5 배정이 모두 `not_estimable` 인 cid (공개 CSV 만 판독 · 봉인 미판독)",
+  "recomputed": false,
+  "models_trained": 0,
+  "network_calls": 0,
+  "artifacts_not_modified": {
+    "experiments/runs/v3_stratification_axes/_sealed/axes_result.json": {
+      "sha256_at_entry": "5c1aa8e24cd5ca9ca0c3a61049d22d01fb13a17fca7b3af3510f2bc01a3a009c",
+      "sha256_at_exit": "5c1aa8e24cd5ca9ca0c3a61049d22d01fb13a17fca7b3af3510f2bc01a3a009c",
+      "unchanged": true
+    },
+    "experiments/runs/v3_stratification_axes/axes_public.json": {
+      "sha256_at_entry": "a539c83d51a9bb920fefc22344e49cede6b9487de0b35ead490804cee0791031",
+      "sha256_at_exit": "a539c83d51a9bb920fefc22344e49cede6b9487de0b35ead490804cee0791031",
+      "unchanged": true
+    },
+    "experiments/runs/v3_stratification_axes/axes_assignment.csv": {
+      "sha256_at_entry": "2bae421f9e5fa863d5a8b6a0e66ddf0767a41bc277bbdb9632a14d3ee976f9a6",
+      "sha256_at_exit": "2bae421f9e5fa863d5a8b6a0e66ddf0767a41bc277bbdb9632a14d3ee976f9a6",
+      "unchanged": true
+    }
+  },
+  "artifacts_not_modified_note": "셋 다 착수=종료 동일. 다시 생성하면 ts_kst 때문에 해시만 흔들리고 내용은 같으므로 재생성하지 않았다(블록 Z 편차 2 교훈). `_sealed/axes_result.json` 은 해시 대조만 했고 판독하지 않았다(open_sealed 0건).",
+  "other_artifacts_retaining_old_label": [
+    "v3_Multimodal/config/a5_boundary_amendment.json (cases.C.assignment · 착수 전 동결 기록 — 무수정)",
+    "experiments/runs/v3_stratification_axes/axes_public.json (axes.A5 키 — 무수정)",
+    "experiments/runs/v3_stratification_axes/axes_assignment.csv (A5 열 값 — 무수정)",
+    "experiments/runs/v3_stratification_axes/_sealed/axes_result.json (봉인 — 무수정·미판독)",
+    "docs/33 항목39·40 · docs/81 리포트 (기록물 — append-only 원칙상 무수정)"
+  ],
+  "applies_to": "본 기입 시각 이후의 모든 리포트·논문·공개 요약·대외 설명. 기존 산출물과 기록물은 소급 재작성하지 않는다.",
+  "no_retroactive_rewrite": true,
+  "sap_not_estimable_definition_unchanged": true,
+  "sap_definition_pointer": "experiments/sap/manifest.json A1 = 'BCa 불능 → ci_primary=not_estimable(NaN); rq2/rq3/tost 성공 불가; percentile 대체 금지' — 이 뜻은 그대로다. 본 개명은 A5 **층 이름**에만 적용되며 SAP 의 CI status 토큰 `not_estimable` 은 한 글자도 바꾸지 않았다(sap/ 하위 파일 수정 0).",
+  "decided_by": "cowork (docs/82, 2026-08-08)",
+  "advisor_status": "내선 확정 · 명시적 승인 아님",
+  "defect_attribution": "잘못된 이름을 지은 주체는 cowork 다 — docs/81 지시서 Z-2 가 층 이름을 `not_estimable` 로 규정했고 블록 Z 러너는 지시서대로 정확히 수행했다. 러너 과실이 아니다.",
+  "executed_by": "vscode-claude(runner), 블록 AA"
+}

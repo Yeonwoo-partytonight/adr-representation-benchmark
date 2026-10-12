@@ -1,0 +1,96 @@
+{
+  "_doc": "R3 판정 결과 — r3_judge.py(트리거 이전 동결본) 산출.",
+  "run_at_kst": "2026-09-14 23:46:55 KST",
+  "judge_sha256": "df26e946d17cd0b5ea20c741008bbdfbe19ee8b2b7d92b0de7664943ea4bcd12",
+  "freeze": {
+    "freeze_sha256": "0624d3ddb852c4e9a2f7f070024814653264eb49c2652dd3e7a947ac38ff27d0",
+    "rel_tol": 1e-09,
+    "exclude_pointers": [
+      "/run_at_kst",
+      "/wall_clock_seconds",
+      "/timing/per_permutation_seconds",
+      "/timing/per_reference_value_seconds",
+      "/versions",
+      "/_doc",
+      "/block",
+      "/instruction"
+    ],
+    "g_env_fields": [
+      "python_version",
+      "numpy",
+      "sklearn",
+      "machine",
+      "numpy_build_config(BLAS/LAPACK 구현)"
+    ]
+  },
+  "inputs": {
+    "audit": {
+      "path": "experiments/rqint/r3_second_party_return/audit_r6_second_party.json",
+      "sha256": "e06464919c4e0358d48b42c6b7b85cd04c079c94bb9851f67ed72a87f5cd7413"
+    },
+    "env": {
+      "path": "experiments/rqint/r3_second_party_return/env_second_party_main_e2c3a7fa6723.json",
+      "sha256": "7a404edba225af64be7c4f3dbcf9014b2aaf39bd04c3fe8023e0df8a31065106"
+    },
+    "hashes": {
+      "path": "experiments/rqint/r3_second_party_return/package_hashes_second_party.json",
+      "sha256": "7560b6cdde1d10f8d91edf4dc84fe47ec093b9d5f2d21b9a9a4a1e91a176da86"
+    }
+  },
+  "stage1": {
+    "ours": "fd488eb429a71990d47ebf321efeb1f34083bbeb4813730a76777262b1ba878b",
+    "second_party": "fd488eb429a71990d47ebf321efeb1f34083bbeb4813730a76777262b1ba878b",
+    "second_party_canonical_bytes": 7493,
+    "byte_identical": true
+  },
+  "g_env": {
+    "fields": {
+      "python_version": {
+        "ours": "3.14.4",
+        "second_party": "3.12.9",
+        "differs": true
+      },
+      "numpy": {
+        "ours": "2.5.0",
+        "second_party": "2.5.0",
+        "differs": false
+      },
+      "sklearn": {
+        "ours": "1.9.0",
+        "second_party": "1.9.0",
+        "differs": false
+      },
+      "machine": {
+        "ours": "arm64",
+        "second_party": "AMD64",
+        "differs": true
+      },
+      "numpy_build_config(BLAS/LAPACK 구현)": {
+        "ours": [
+          "accelerate",
+          "accelerate"
+        ],
+        "second_party": [
+          "scipy-openblas",
+          "scipy-openblas"
+        ],
+        "differs": true
+      }
+    },
+    "n_differ": 3,
+    "pass": true,
+    "info_host_id": {
+      "ours": "89be108a4c00",
+      "second_party": "e2c3a7fa6723"
+    }
+  },
+  "package_hashes": {
+    "n_expected": 20,
+    "n_mismatch_or_missing": 0,
+    "mismatch_or_missing": [],
+    "unexpected": [],
+    "pass": true
+  },
+  "stage2": "not_run — 1차 통과(freeze stage_1_byte_identity.on_pass)",
+  "verdict": "R3_satisfied_stage1"
+}

@@ -1,0 +1,2234 @@
+{
+  "_doc": "docs/112 블록 AV / AV-2 — 검토자 회신 docx 축자·수식 추출. 숫자는 전부 검토자 문면에서 온 것이며, 확증 산출물에서 온 값은 하나도 없다.",
+  "provenance": "reviewer_docx_verbatim",
+  "block": "AV (docs/112)",
+  "source": {
+    "path": "RQint_Reviewer_Response_<EXTERNAL-REVIEWER>_20260810.docx",
+    "sha256": "0c29ddf201eb6751a47f420d0c405fdafd0a6baf0ae7705059b0a85fa296aa99",
+    "bytes": 63649,
+    "xml_part": "word/document.xml",
+    "n_oMath": 135,
+    "n_paragraphs": 346
+  },
+  "parser": {
+    "handled_omml_nodes": [
+      "m:f",
+      "m:sSub",
+      "m:sSup",
+      "m:sSubSup",
+      "m:nary",
+      "m:d",
+      "m:rad",
+      "m:func",
+      "m:acc",
+      "m:bar",
+      "m:limLow",
+      "m:limUpp",
+      "m:groupChr",
+      "m:r",
+      "m:t"
+    ],
+    "delimiter_rule": "m:d 의 m:begChr/m:endChr 를 그대로 보존한다(기본 '(' ')'). 이 규칙이 없으면 λ·ρ 의 절댓값이 유실된다.",
+    "empty_script_rule": "ZWSP 전용 m:sub/m:sup 슬롯은 «첨자 없음» 으로 다룬다.",
+    "accent_default_chr": "U+0302 (ECMA-376 m:acc 기본값)",
+    "tag_strip_forbidden": true
+  },
+  "canonical_crosscheck": "부록 A(«Word 삽입용 수식»)의 선형식·LaTeX 평문이 정본 대조본이다. OMML 복원결과는 반드시 그 문자열과 대조한다.",
+  "sections": [
+    {
+      "section": "2.3",
+      "heading": "2.3 후보 B(공용동전)가 정답인 이유 — 유도",
+      "paragraph_range": [
+        36,
+        46
+      ],
+      "n_paragraphs": 11,
+      "paragraphs": [
+        {
+          "paragraph_index": 36,
+          "xml_char_offset": [
+            85209,
+            86427
+          ],
+          "text_verbatim": "2.3 후보 B(공용동전)가 정답인 이유 — 유도",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 37,
+          "xml_char_offset": [
+            86427,
+            89570
+          ],
+          "text_verbatim": "정확한 반대칭성. 동전 벡터의 여집합 할당에서는 모든 군의 팔이 교환되므로 두 예측행렬의 역할이 전역적으로 뒤바뀝니다. 따라서 macro-AP의 비선형성과 무관하게",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 38,
+          "xml_char_offset": [
+            89570,
+            92730
+          ],
+          "text_verbatim": "【Δ_F(1-z)=- Δ_F(z),  T(1-z)=- T(z)】",
+          "math_restored": [
+            "Δ_F(1-z)=- Δ_F(z),  T(1-z)=- T(z)"
+          ]
+        },
+        {
+          "paragraph_index": 39,
+          "xml_char_offset": [
+            92730,
+            97132
+          ],
+          "text_verbatim": "가 정확히 성립하며, 【Z∼Unif{0,1}^G】 에 대해 참조분포는 0에 대하여 정확히 대칭입니다. 이는 양측 p-값을 절댓값 기준으로 정의할 근거가 됩니다.",
+          "math_restored": [
+            "Z∼Unif{0,1}^G"
+          ]
+        },
+        {
+          "paragraph_index": 40,
+          "xml_char_offset": [
+            97132,
+            99578
+          ],
+          "text_verbatim": "Hájek 사영에 의한 1차 분해. 단일군 뒤집기 【1_g】 를 이용하여",
+          "math_restored": [
+            "1_g"
+          ]
+        },
+        {
+          "paragraph_index": 41,
+          "xml_char_offset": [
+            99578,
+            104539
+          ],
+          "text_verbatim": "【d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}】",
+          "math_restored": [
+            "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}"
+          ]
+        },
+        {
+          "paragraph_index": 42,
+          "xml_char_offset": [
+            104539,
+            106264
+          ],
+          "text_verbatim": "로 정의하면(두 양 모두 정확히 계산 가능한 관측량입니다),",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 43,
+          "xml_char_offset": [
+            106264,
+            111783
+          ],
+          "text_verbatim": "【Δ_F(z)≈∑_{g=1}^G (1-2z_g) d_{F,g},  T(z)≈∑_{g=1}^G (1-2z_g) e_g】",
+          "math_restored": [
+            "Δ_F(z)≈∑_{g=1}^G (1-2z_g) d_{F,g},  T(z)≈∑_{g=1}^G (1-2z_g) e_g"
+          ]
+        },
+        {
+          "paragraph_index": 44,
+          "xml_char_offset": [
+            111783,
+            113921
+          ],
+          "text_verbatim": "【T_{obs}=T(0)≈∑_{g=1}^G e_g】",
+          "math_restored": [
+            "T_{obs}=T(0)≈∑_{g=1}^G e_g"
+          ]
+        },
+        {
+          "paragraph_index": 45,
+          "xml_char_offset": [
+            113921,
+            127889
+          ],
+          "text_verbatim": "결정적 지점 — 공유 동전이 공통효과를 소거합니다. 동일한 【z_g】 가 두 모델군에 동시에 적용되므로 각 군에서 공통 서열효과 성분이 군별로 상쇄되고, 남는 것은 이중차분 기여도 【e_g】 뿐입니다. 즉 공용동전 후보 B는 실질적으로 732개 스캐폴드군의 이중차분 기여도 벡터에 대한 일표본 부호뒤집기 검정이며, 그 정확타당성 조건은 【Δ_{RF}=Δ_{GIN}=0】 이 아니라 【e_g】 의 부호대칭성입니다. 이것이 곧 【H_0^{int}:Δ_{RF}=Δ_{GIN}】 의 자연스러운 군수준 정식화입니다.",
+          "math_restored": [
+            "z_g",
+            "e_g",
+            "Δ_{RF}=Δ_{GIN}=0",
+            "e_g",
+            "H_0^{int}:Δ_{RF}=Δ_{GIN}"
+          ]
+        },
+        {
+          "paragraph_index": 46,
+          "xml_char_offset": [
+            127889,
+            131818
+          ],
+          "text_verbatim": "따라서 요청 문서 §5 후보 B의 Concern 1은 1차 근사 수준에서 해소됩니다. 남는 것은 macro-AP 비선형성에 의한 2차 잔차뿐이며, 이는 §6의 캘리브레이션 감사로 정량화되어야 합니다.",
+          "math_restored": []
+        }
+      ]
+    },
+    {
+      "section": "2.4",
+      "heading": "2.4 Concern 2(공용동전 공분산)는 오진입니다",
+      "paragraph_range": [
+        47,
+        56
+      ],
+      "n_paragraphs": 10,
+      "paragraphs": [
+        {
+          "paragraph_index": 47,
+          "xml_char_offset": [
+            131818,
+            132695
+          ],
+          "text_verbatim": "2.4 Concern 2(공용동전 공분산)는 오진입니다",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 48,
+          "xml_char_offset": [
+            132695,
+            134066
+          ],
+          "text_verbatim": "분산 항등식 자체는 옳지만 해석이 뒤집혀 있습니다. 1차 근사에서",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 49,
+          "xml_char_offset": [
+            134066,
+            138168
+          ],
+          "text_verbatim": "【Cov_Z(Δ_{RF}(Z),Δ_{GIN}(Z))≈∑_{g=1}^G d_{RF,g} d_{GIN,g},】",
+          "math_restored": [
+            "Cov_Z(Δ_{RF}(Z),Δ_{GIN}(Z))≈∑_{g=1}^G d_{RF,g} d_{GIN,g},"
+          ]
+        },
+        {
+          "paragraph_index": 50,
+          "xml_char_offset": [
+            138168,
+            140692
+          ],
+          "text_verbatim": "【Var_Z[T_{shared}]≈∑_{g=1}^G e_g^2】",
+          "math_restored": [
+            "Var_Z[T_{shared}]≈∑_{g=1}^G e_g^2"
+          ]
+        },
+        {
+          "paragraph_index": 51,
+          "xml_char_offset": [
+            140692,
+            145115
+          ],
+          "text_verbatim": "【Var_Z[T_{ind}]≈∑_{g=1}^G e_g^2+2∑_{g=1}^G d_{RF,g} d_{GIN,g}】",
+          "math_restored": [
+            "Var_Z[T_{ind}]≈∑_{g=1}^G e_g^2+2∑_{g=1}^G d_{RF,g} d_{GIN,g}"
+          ]
+        },
+        {
+          "paragraph_index": 52,
+          "xml_char_offset": [
+            145115,
+            148804
+          ],
+          "text_verbatim": "두 모델군이 같은 군에서 함께 서열정보 이득을 본다면 우변의 교차항은 양수이고, 독립동전은 참조분포를 정확히 그 교란(공통효과) 성분만큼 과대팽창시킵니다. 정리하면:",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 53,
+          "xml_char_offset": [
+            148804,
+            151464
+          ],
+          "text_verbatim": "공용동전 → 참조분포 폭 【=∑_g e_g^2】 = 표적 대비의 올바른 분산",
+          "math_restored": [
+            "=∑_g e_g^2"
+          ]
+        },
+        {
+          "paragraph_index": 54,
+          "xml_char_offset": [
+            151464,
+            156079
+          ],
+          "text_verbatim": "독립동전 → 참조분포 폭 【=∑_g e_g^2+2∑_g d_{RF,g}d_{GIN,g}】 = 보수적 · 저검정력",
+          "math_restored": [
+            "=∑_g e_g^2+2∑_g d_{RF,g}d_{GIN,g}"
+          ]
+        },
+        {
+          "paragraph_index": 55,
+          "xml_char_offset": [
+            156079,
+            167503
+          ],
+          "text_verbatim": "“참조분포가 좁아지므로 반보수적일 수 있다”는 추론이 성립하지 않는 이유는, 관측통계량 【T_{obs}】 역시 동일한 약물 위에서 이중차분으로 구성되어 공통효과가 이미 제거된 양이기 때문입니다. 비교 대상은 공용동전 폭 대 독립동전 폭이 아니라, 공용동전 폭 대 【H_0^{int}】 하 【T_{obs}】 의 표집분포이며, 1차 근사에서 둘은 일치합니다. 대응표본 t-검정을 독립표본 t-검정과 비교하면서 “짝짓기가 분산을 줄이므로 반보수적”이라고 말하지 않는 것과 동일한 구조입니다.",
+          "math_restored": [
+            "T_{obs}",
+            "H_0^{int}",
+            "T_{obs}"
+          ]
+        },
+        {
+          "paragraph_index": 56,
+          "xml_char_offset": [
+            167503,
+            172953
+          ],
+          "text_verbatim": "결론: 공용동전을 채택하십시오. 독립동전은 채택하지 마십시오. 독립동전은 (i) 검정력을 구조적으로 상실하고, (ii) 두 모델군이 서로 다른 약물 블록에서 교환되어 짝짓기가 파괴되며, (iii) 【H_0^{int}】 가 아닌 다른 귀무를 검정하게 됩니다.",
+          "math_restored": [
+            "H_0^{int}"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "2.6",
+      "heading": "2.6 보조 진단으로만 허용되는 선형화 검정",
+      "paragraph_range": [
+        78,
+        80
+      ],
+      "n_paragraphs": 2,
+      "paragraphs": [
+        {
+          "paragraph_index": 78,
+          "xml_char_offset": [
+            199446,
+            200468
+          ],
+          "text_verbatim": "2.6 보조 진단으로만 허용되는 선형화 검정",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 79,
+          "xml_char_offset": [
+            200468,
+            207946
+          ],
+          "text_verbatim": "【e_g】 프로파일을 얻고 나면 732차원 벡터의 부호뒤집기만으로 【B=10^6】 수준의 참조분포를 즉시 생성할 수 있습니다. 이는 frozen 모듈이 금지한 가법 대리통계량이므로 확정검정으로 사용해서는 안 되지만, 실제 순열분포와의 일치도를 확인하는 저비용 교차검증 진단으로는 매우 유용합니다. 진단 목적임을 SAP v1.2에 명시한 뒤 사용하십시오.",
+          "math_restored": [
+            "e_g",
+            "B=10^6"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "3",
+      "heading": "3. Q2. 교환가능성 단위 (a)(b)(c) 포함",
+      "paragraph_range": [
+        81,
+        94
+      ],
+      "n_paragraphs": 13,
+      "paragraphs": [
+        {
+          "paragraph_index": 81,
+          "xml_char_offset": [
+            208126,
+            208678
+          ],
+          "text_verbatim": "3. Q2. 교환가능성 단위",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 82,
+          "xml_char_offset": [
+            208678,
+            209932
+          ],
+          "text_verbatim": "스캐폴드군(732개)을 유지하십시오. 상향은 반대합니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 83,
+          "xml_char_offset": [
+            209932,
+            222080
+          ],
+          "text_verbatim": "근거 1 — G2의 성격. 같은 폴드를 공유하는 군들의 잔여 종속성은 예측행렬 생성 과정의 종속성입니다. 그러나 본 절차는 §4가 명시하듯 고정된 OOF 예측에 대한 조건부 무작위화 추론이며 재학습을 포함하지 않습니다. 조건부로 보면 요구되는 것은 “예측오차의 군간 독립성”이 아니라 “주어진 예측행렬 하에서 【e_g】 의 부호대칭성”입니다. 나아가 이중차분 구조가 폴드 공유에서 오는 공통 성분을 상당 부분 상쇄합니다. 폴드 효과는 두 팔과 두 모델군에 대체로 공통이므로 【e_g】 에서 소거되는 방향으로 작용합니다.",
+          "math_restored": [
+            "e_g",
+            "e_g"
+          ]
+        },
+        {
+          "paragraph_index": 84,
+          "xml_char_offset": [
+            222080,
+            233699
+          ],
+          "text_verbatim": "근거 2 — 상향 비용이 치명적입니다. §7.2의 계산을 독립적으로 재검증하였고 정확합니다. 폴드 단위 단일 벡터에서 최소 달성가능 양측 p-값은 【2/2^5=0.0625>α】 이며, Holm 7가족 조정 후 범위는 【[0.0625, 7×0.0625=0.4375]】 입니다(재계산 결과 동일). 구조적으로 기각 불가능한 검정은 검정이 아닙니다. 불완전한 교환가능성 단위보다 나쁜 선택입니다. 독립동전 폴드 방식(【2^{10}】 할당)은 Q1에서 이미 기각한 이유로 대안이 되지 못합니다.",
+          "math_restored": [
+            "2/2^5=0.0625>α",
+            "[0.0625, 7×0.0625=0.4375]",
+            "2^{10}"
+          ]
+        },
+        {
+          "paragraph_index": 85,
+          "xml_char_offset": [
+            233699,
+            237365
+          ],
+          "text_verbatim": "근거 3 — 124셀 교차구성은 채택하지 마십시오. 요청 문서 스스로 지적했듯, 해당 셀은 공통 학습집합 단위와 대응하지 않으므로 G2를 흡수한다는 주장의 근거가 없습니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 86,
+          "xml_char_offset": [
+            237365,
+            238570
+          ],
+          "text_verbatim": "다만 다음 세 가지를 SAP v1.2에 추가로 규정하십시오.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 87,
+          "xml_char_offset": [
+            238570,
+            243388
+          ],
+          "text_verbatim": "(a) 레버리지 진단 (필수, 사전규정). 단일군 뒤집기로 【e_g】 전체 프로파일을 정확히 계산하십시오. 비용은 【732×8】 회의 macro-AP 호출, 약 13분으로 무시 가능합니다. 보고량은 다음 두 가지입니다.",
+          "math_restored": [
+            "e_g",
+            "732×8"
+          ]
+        },
+        {
+          "paragraph_index": 88,
+          "xml_char_offset": [
+            243388,
+            251207
+          ],
+          "text_verbatim": "【λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2) (k=1,2,10),  ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))】",
+          "math_restored": [
+            "λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2) (k=1,2,10),  ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))"
+          ]
+        },
+        {
+          "paragraph_index": 89,
+          "xml_char_offset": [
+            251207,
+            254041
+          ],
+          "text_verbatim": "여기서 【T_k】 는 【|e_g|】 가 큰 상위 【k】 개 군의 집합입니다.",
+          "math_restored": [
+            "T_k",
+            "|e_g|",
+            "k"
+          ]
+        },
+        {
+          "paragraph_index": 90,
+          "xml_char_offset": [
+            254041,
+            261535
+          ],
+          "text_verbatim": "【λ_1,λ_2】 는 벤젠군(78개, 7.1%)과 no-scaffold군(77개)이 참조분포 분산의 몇 퍼센트를 지배하는지를, 【ρ】 는 §2.3의 1차 근사 논증이 실제로 성립하는 정도를 직접 보여 줍니다. 【ρ】 는 게이트로 사용하지 말고 보고 및 주석용으로만 사용하십시오(결과 의존적 분기 회피).",
+          "math_restored": [
+            "λ_1,λ_2",
+            "ρ",
+            "ρ"
+          ]
+        },
+        {
+          "paragraph_index": 91,
+          "xml_char_offset": [
+            261535,
+            272201
+          ],
+          "text_verbatim": "(b) no-scaffold 군집에 대한 명시적 입장. 77개 약물의 no-scaffold 버킷은 화학적 스캐폴드가 아니라 잔여 버킷(비고리형 구조 + 파싱 실패)입니다. 이들을 하나의 교환가능 단위로 묶는 것은 화학적 근거가 없으며, 단일 동전이 전체 약물의 7.0%를 결정하게 만듭니다. 주 분석은 frozen 정의를 유지하되, 민감도 분석으로 (i) no-scaffold 버킷의 싱글톤 분해, (ii) 벤젠군의 사전규정된 결정적 2분할(예: 정규화 SMILES 사전순)을 병기하십시오. 폴드 배정은 변경하지 않으므로 누출 방지 성질은 그대로 유지됩니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 92,
+          "xml_char_offset": [
+            272201,
+            275237
+          ],
+          "text_verbatim": "(c) 이산성 보고. Kish 유효군집수 85.3과 최상위 2개 군의 14.2% 지배를 논문 방법부에 명시하고, 참조분포의 다봉성 여부를 히스토그램으로 보고하십시오.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 93,
+          "xml_char_offset": [
+            275237,
+            278770
+          ],
+          "text_verbatim": "【G_{eff}=((∑_{g=1}^G n_g)^2)/(∑_{g=1}^G n_g^2)=85.3】",
+          "math_restored": [
+            "G_{eff}=((∑_{g=1}^G n_g)^2)/(∑_{g=1}^G n_g^2)=85.3"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "4.1",
+      "heading": "4.1 순서: 형식 (i)를 채택하십시오",
+      "paragraph_range": [
+        96,
+        105
+      ],
+      "n_paragraphs": 10,
+      "paragraphs": [
+        {
+          "paragraph_index": 96,
+          "xml_char_offset": [
+            279867,
+            280939
+          ],
+          "text_verbatim": "4.1 순서: 형식 (i)를 채택하십시오",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 97,
+          "xml_char_offset": [
+            280939,
+            289847
+          ],
+          "text_verbatim": "원칙: 두 모델군이 공유하는 축에서는 반드시 동일 연산자를 사용해야 합니다. RF는 split-repeat 축에서 prediction-then-metric으로 이미 동결되어 있으므로(등록 §6(ii)), GIN도 repeat 축에서 예측평균 → 지표 순서를 따라야 합니다. 형식 (ii)를 GIN에만 적용하면, 요청 문서가 정확히 우려한 대로 【T=Δ_{RF}-Δ_{GIN}】 이 서로 다른 연산자로 구성된 두 양의 차이가 되고, macro-AP 비선형성 때문에",
+          "math_restored": [
+            "T=Δ_{RF}-Δ_{GIN}"
+          ]
+        },
+        {
+          "paragraph_index": 98,
+          "xml_char_offset": [
+            289847,
+            293883
+          ],
+          "text_verbatim": "【A​(Y,(1)/(R)∑_{r=1}^R P_r)≠(1)/(R)∑_{r=1}^R A​(Y,P_r)】",
+          "math_restored": [
+            "A​(Y,(1)/(R)∑_{r=1}^R P_r)≠(1)/(R)∑_{r=1}^R A​(Y,P_r)"
+          ]
+        },
+        {
+          "paragraph_index": 99,
+          "xml_char_offset": [
+            293883,
+            296894
+          ],
+          "text_verbatim": "의 차이가 서열증분과 혼입되어 식별 불가능해집니다. 이는 검정력 문제가 아니라 추정대상 정의의 문제이므로 타협할 수 없습니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 100,
+          "xml_char_offset": [
+            296894,
+            305801
+          ],
+          "text_verbatim": "학습시드 축은 다릅니다. 시드 축은 RF에 대응물이 없는 GIN 고유 축입니다. 여기서 metric-then-average를 사용하는 것은 정합적입니다. 추정대상이 시드에 대한 기댓값이고, RF는 결정적이므로 그 자체가 자신의 기댓값이기 때문입니다. 반대로 시드 축에서 예측을 평균하면 3-모델 앙상블이라는 다른(그리고 대개 더 우수한) 추정대상이 되어 단일 RF와 비대칭이 됩니다. 따라서 §6.1의 지도교수 지시(seed 축 metric-then-average)는 유지가 맞습니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 101,
+          "xml_char_offset": [
+            305801,
+            309569
+          ],
+          "text_verbatim": "【P_{GIN,s}^a=(1)/(R)∑_{r=1}^R P_{GIN,s,r}^a, a∈{M1b,M2b}, R=3】",
+          "math_restored": [
+            "P_{GIN,s}^a=(1)/(R)∑_{r=1}^R P_{GIN,s,r}^a, a∈{M1b,M2b}, R=3"
+          ]
+        },
+        {
+          "paragraph_index": 102,
+          "xml_char_offset": [
+            309569,
+            313239
+          ],
+          "text_verbatim": "【Δ_{GIN,s}=A​(Y,P_{GIN,s}^{M2b})-A​(Y,P_{GIN,s}^{M1b})】",
+          "math_restored": [
+            "Δ_{GIN,s}=A​(Y,P_{GIN,s}^{M2b})-A​(Y,P_{GIN,s}^{M1b})"
+          ]
+        },
+        {
+          "paragraph_index": 103,
+          "xml_char_offset": [
+            313239,
+            316001
+          ],
+          "text_verbatim": "【Δ_{GIN}=(1)/(S)∑_{s=1}^S Δ_{GIN,s}, S=3】",
+          "math_restored": [
+            "Δ_{GIN}=(1)/(S)∑_{s=1}^S Δ_{GIN,s}, S=3"
+          ]
+        },
+        {
+          "paragraph_index": 104,
+          "xml_char_offset": [
+            316001,
+            320782
+          ],
+          "text_verbatim": "정리: repeat 축 = prediction-then-metric (양 모델군 공통), seed 축 = metric-then-average (GIN 전용). 요청 문서 Table 2의 비대칭은 “해소해야 할 결함”이 아니라 두 축의 성격이 다르기 때문에 정당화되는 비대칭입니다. 이 논거를 SAP v1.2에 명시하십시오.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 105,
+          "xml_char_offset": [
+            320782,
+            323185
+          ],
+          "text_verbatim": "부수 이점으로, 형식 (i)는 순열당 8회 호출로 형식 (ii)의 20회 대비 2.5배 저렴합니다.",
+          "math_restored": []
+        }
+      ]
+    },
+    {
+      "section": "4.2",
+      "heading": "4.2 §6.3 — 순열과 두 축의 관계",
+      "paragraph_range": [
+        106,
+        109
+      ],
+      "n_paragraphs": 4,
+      "paragraphs": [
+        {
+          "paragraph_index": 106,
+          "xml_char_offset": [
+            323185,
+            323698
+          ],
+          "text_verbatim": "4.2 §6.3 — 순열과 두 축의 관계",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 107,
+          "xml_char_offset": [
+            323698,
+            329565
+          ],
+          "text_verbatim": "동일 동전 벡터 【z^{(b)}】 를 3개 시드 × 3개 repeat 전체에 공동 적용하십시오. 축별로 다른 동전을 사용하면 정확 반대칭성 【T(1-z)=-T(z)】 가 깨지고 관측통계량과의 대응이 무너집니다.",
+          "math_restored": [
+            "z^{(b)}",
+            "T(1-z)=-T(z)"
+          ]
+        },
+        {
+          "paragraph_index": 108,
+          "xml_char_offset": [
+            329565,
+            340224
+          ],
+          "text_verbatim": "집계는 순열 내부에서 재수행하되, 계산상으로는 교환 연산자와 repeat 평균이 가환(commute) 임을 이용하십시오. 팔 교환은 행 단위 치환이고 repeat 평균은 동일 팔에 대한 행 단위 선형연산이므로, consensus 행렬에 교환을 적용한 결과와 교환 후 평균한 결과가 동일합니다. 따라서 8개 consensus 행렬(RF 2개 + GIN 3시드 × 2개)을 순열 루프 밖에서 1회 산출하고, 순열당 8회의 macro-AP만 재계산하면 됩니다. Table 3의 “순열당 8회”는 이 사실과 정합합니다. 이 가환성을 SAP v1.2에 명시하고 단위테스트로 검증하십시오.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 109,
+          "xml_char_offset": [
+            340224,
+            349716
+          ],
+          "text_verbatim": "고정 시드집합에 대한 조건부 추론은 방어 가능합니다. 단 두 가지를 의무화하십시오. (i) 논문 본문과 초록에서 추론 범위를 “이 사전지정 시드집합에 조건부”임을 명시할 것. (ii) 시드별 대비의 표준편차를 서술통계로 반드시 보고하여 독자가 시드 민감도를 직접 평가할 수 있게 할 것. 시드 변동을 p-값에 통합하려면 시드 재표본추출이 필요한데, 【S=3】 으로는 신뢰할 만한 추정이 불가능하므로 시도하지 마십시오.",
+          "math_restored": [
+            "S=3"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "4.3",
+      "heading": "4.3 RQ-int 판정규칙",
+      "paragraph_range": [
+        110,
+        115
+      ],
+      "n_paragraphs": 5,
+      "paragraphs": [
+        {
+          "paragraph_index": 110,
+          "xml_char_offset": [
+            349716,
+            350092
+          ],
+          "text_verbatim": "4.3 RQ-int 판정규칙",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 111,
+          "xml_char_offset": [
+            350092,
+            351824
+          ],
+          "text_verbatim": "Holm 조정 p-값 단독으로 판정하십시오. 추가 권고는 다음과 같습니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 112,
+          "xml_char_offset": [
+            351824,
+            355999
+          ],
+          "text_verbatim": "BCa 구간은 보고하되 판정 조건에 넣지 마십시오. 게이트로 추가하면 보수적이기는 하나 frozen 결정규칙을 사후 신설하는 것이 되며, RQ-int에는 사전등록된 SESOI가 없으므로 어떤 임계값도 자의적입니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 113,
+          "xml_char_offset": [
+            355999,
+            358690
+          ],
+          "text_verbatim": "동등성 판정은 신설하지 마십시오. 대신 SAP v1.2에 다음 문장을 사전 삽입하십시오. “A non-significant RQ-int is reported as inconclusive and must not be interpreted as evidence of equal sequence effects across model families.” 이는 §7.2가 예고한 저검정력 상황에서 반드시 필요한 방어입니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 114,
+          "xml_char_offset": [
+            358690,
+            361448
+          ],
+          "text_verbatim": "등록문언 “if significant, report effects separately by model family”와 별개로, 【Δ_{RF}】 와 【Δ_{GIN}】 및 각각의 BCa 구간은 유의성과 무관하게 항상 병기하십시오. 판정규칙을 바꾸지 않으면서 정보량을 늘리는 무해한 개선입니다.",
+          "math_restored": [
+            "Δ_{RF}",
+            "Δ_{GIN}"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "5.1",
+      "heading": "5.1 요청 문서가 놓친 중요한 부작용",
+      "paragraph_range": [
+        118,
+        147
+      ],
+      "n_paragraphs": 29,
+      "paragraphs": [
+        {
+          "paragraph_index": 118,
+          "xml_char_offset": [
+            373944,
+            374910
+          ],
+          "text_verbatim": "5.1 요청 문서가 놓친 중요한 부작용",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 119,
+          "xml_char_offset": [
+            374910,
+            377221
+          ],
+          "text_verbatim": "RQ-int를 구현하면 나머지 6개 가설의 Holm 조정 p-값이 약하게 작아집니다. Holm 단계하강에서 조정값은",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 120,
+          "xml_char_offset": [
+            377221,
+            380746
+          ],
+          "text_verbatim": "【p̃_{(k)}=max_{j≤k}[(8-j) p_{(j)}],  k=1,…,7】",
+          "math_restored": [
+            "p̃_{(k)}=max_{j≤k}[(8-j) p_{(j)}],  k=1,…,7"
+          ]
+        },
+        {
+          "paragraph_index": 121,
+          "xml_char_offset": [
+            380746,
+            384521
+          ],
+          "text_verbatim": "이고, RQ-int가 1.0(순위 7, 승수 1)에서 작은 값(순위 1, 승수 7)으로 이동하면 나머지 6개의 순위가 한 칸씩 내려가 승수가 7, 6, 5, 4, 3, 2 에서 6, 5, 4, 3, 2, 1 로 감소합니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 122,
+          "xml_char_offset": [
+            384521,
+            385911
+          ],
+          "text_verbatim": "나머지 6개의 원 p-값이 0.001, 0.004, 0.01, 0.02, 0.03, 0.06 인 경우의 수치 예시입니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 123,
+          "xml_char_offset": [
+            386592,
+            386802
+          ],
+          "text_verbatim": "원 p-값",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 124,
+          "xml_char_offset": [
+            386862,
+            387583
+          ],
+          "text_verbatim": "RQ-int = 1.0 일 때 조정 p",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 125,
+          "xml_char_offset": [
+            387643,
+            388367
+          ],
+          "text_verbatim": "RQ-int = 0.0005 일 때 조정 p",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 126,
+          "xml_char_offset": [
+            388459,
+            388604
+          ],
+          "text_verbatim": "0.001",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 127,
+          "xml_char_offset": [
+            388664,
+            388809
+          ],
+          "text_verbatim": "0.007",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 128,
+          "xml_char_offset": [
+            388869,
+            389014
+          ],
+          "text_verbatim": "0.006",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 129,
+          "xml_char_offset": [
+            389106,
+            389251
+          ],
+          "text_verbatim": "0.004",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 130,
+          "xml_char_offset": [
+            389311,
+            389456
+          ],
+          "text_verbatim": "0.024",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 131,
+          "xml_char_offset": [
+            389516,
+            389661
+          ],
+          "text_verbatim": "0.020",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 132,
+          "xml_char_offset": [
+            389753,
+            389927
+          ],
+          "text_verbatim": "0.010",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 133,
+          "xml_char_offset": [
+            389987,
+            390394
+          ],
+          "text_verbatim": "0.050 (기각 실패)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 134,
+          "xml_char_offset": [
+            390454,
+            390735
+          ],
+          "text_verbatim": "0.040 (기각)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 135,
+          "xml_char_offset": [
+            390827,
+            390972
+          ],
+          "text_verbatim": "0.020",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 136,
+          "xml_char_offset": [
+            391032,
+            391177
+          ],
+          "text_verbatim": "0.080",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 137,
+          "xml_char_offset": [
+            391237,
+            391382
+          ],
+          "text_verbatim": "0.060",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 138,
+          "xml_char_offset": [
+            391474,
+            391619
+          ],
+          "text_verbatim": "0.030",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 139,
+          "xml_char_offset": [
+            391679,
+            391824
+          ],
+          "text_verbatim": "0.090",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 140,
+          "xml_char_offset": [
+            391884,
+            392029
+          ],
+          "text_verbatim": "0.060",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 141,
+          "xml_char_offset": [
+            392121,
+            392266
+          ],
+          "text_verbatim": "0.060",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 142,
+          "xml_char_offset": [
+            392326,
+            392471
+          ],
+          "text_verbatim": "0.120",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 143,
+          "xml_char_offset": [
+            392531,
+            392676
+          ],
+          "text_verbatim": "0.060",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 144,
+          "xml_char_offset": [
+            392698,
+            397610
+          ],
+          "text_verbatim": "기각 결론이 뒤집힐 수 있습니다. FWER는 두 경우 모두 통제되므로 절차적으로는 정당하지만, 이는 “가족 크기가 7로 고정되므로 구현은 중립적”이라는 서술이 사실과 다름을 뜻합니다. 따라서 다음을 필수 요구사항으로 제시합니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 145,
+          "xml_char_offset": [
+            397610,
+            403198
+          ],
+          "text_verbatim": "필수 요구. Holm 7가족 결과를 (A) 구현된 RQ-int p-값 적용 시와 (B) 【p=1.0】 폴백 적용 시 두 가지로 모두 보고하십시오. 6개 가설 중 어느 하나라도 결론이 A와 B 간에 상이하면 그 사실을 본문에 명시하십시오.",
+          "math_restored": [
+            "p=1.0"
+          ]
+        },
+        {
+          "paragraph_index": 146,
+          "xml_char_offset": [
+            403198,
+            407547
+          ],
+          "text_verbatim": "참고로 시험 ①(M2b − M1b 주 대비)은 Holm 가족 외부이므로, RQ2 성공기준(CI 하한 > 0, 예측교환 p < 0.05, 효과 【≥0.01】)은 전혀 영향받지 않습니다. 이 점은 명시적으로 진술할 가치가 있습니다.",
+          "math_restored": [
+            "≥0.01"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "9.1",
+      "heading": "9.1 §4의 양측 p-값 수식 — 절댓값 확인 요망",
+      "paragraph_range": [
+        216,
+        219
+      ],
+      "n_paragraphs": 4,
+      "paragraphs": [
+        {
+          "paragraph_index": 216,
+          "xml_char_offset": [
+            527518,
+            529003
+          ],
+          "text_verbatim": "9.1 §4의 양측 p-값 수식 — 절댓값 확인 요망 (최우선)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 217,
+          "xml_char_offset": [
+            529003,
+            532200
+          ],
+          "text_verbatim": "요청 문서에 인쇄된 형태는 【Δ_b≥Δ_{obs}】 로, 이는 단측 상단꼬리 p-값입니다. 양측이라면 다음이어야 합니다.",
+          "math_restored": [
+            "Δ_b≥Δ_{obs}"
+          ]
+        },
+        {
+          "paragraph_index": 218,
+          "xml_char_offset": [
+            532200,
+            535601
+          ],
+          "text_verbatim": "【p_{two-sided}=(1+∑_{b=1}^B I(|Δ_b|≥|Δ_{obs}|))/(B+1)】",
+          "math_restored": [
+            "p_{two-sided}=(1+∑_{b=1}^B I(|Δ_b|≥|Δ_{obs}|))/(B+1)"
+          ]
+        },
+        {
+          "paragraph_index": 219,
+          "xml_char_offset": [
+            535601,
+            543517
+          ],
+          "text_verbatim": "OMML 변환 과정에서 절댓값 기호가 유실되었을 가능성이 높으나, A6은 이미 동결되어 시험 ②③⑤⑥⑦에 사용되는 모듈이므로 코드 실물을 확인하시기 바랍니다. 코드가 부호 있는 형태라면 이는 동결 모듈의 실질적 결함이며 별도 개정 사안입니다. 참조분포가 0에 대해 정확 대칭이므로 두 정의는 근사적으로 일치하나, 유한 【B】 및 이산성 하에서 동일하지 않습니다.",
+          "math_restored": [
+            "B"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "APPENDIX_A",
+      "heading": "부록 A. Word 삽입용 수식 (선형식 / LaTeX)",
+      "paragraph_range": [
+        245,
+        324
+      ],
+      "n_paragraphs": 78,
+      "paragraphs": [
+        {
+          "paragraph_index": 245,
+          "xml_char_offset": [
+            618657,
+            619692
+          ],
+          "text_verbatim": "부록 A. Word 삽입용 수식 (선형식 / LaTeX)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 246,
+          "xml_char_offset": [
+            619692,
+            624111
+          ],
+          "text_verbatim": "본 문서의 모든 수식은 이미 네이티브 Word 수식(OMML) 으로 삽입되어 있어 클릭 후 바로 편집할 수 있습니다. 아래는 다른 문서(SAP v1.2, 논문 초고 등)에 재사용하기 위한 입력 문자열입니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 247,
+          "xml_char_offset": [
+            624111,
+            628749
+          ],
+          "text_verbatim": "입력 방법 ① (권장, UnicodeMath). Word에서 Alt + = 로 수식 입력 모드에 진입한 뒤 선형식을 붙여넣고, Enter 를 누르거나 커서를 수식 밖으로 이동하면 전문 조판으로 자동 변환됩니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 248,
+          "xml_char_offset": [
+            628749,
+            630876
+          ],
+          "text_verbatim": "입력 방법 ② (LaTeX). 수식 입력 모드에서 [수식] 탭 → [LaTeX] 선택 → LaTeX 문자열 붙여넣기 → [변환] → [전문].",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 249,
+          "xml_char_offset": [
+            630876,
+            635245
+          ],
+          "text_verbatim": "주의. 큰따옴표로 감싼 부분(예: \"obs\")은 정립체(roman)로 조판됩니다. p\\hat, p\\tilde 는 \\hat / \\tilde 뒤에 스페이스를 한 번 눌러야 악센트가 적용됩니다.",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 250,
+          "xml_char_offset": [
+            635245,
+            635536
+          ],
+          "text_verbatim": "A1. RQ-int 검정통계량",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 251,
+          "xml_char_offset": [
+            635536,
+            637136
+          ],
+          "text_verbatim": "【T_{obs}=Δ_{RF}-Δ_{GIN}】",
+          "math_restored": [
+            "T_{obs}=Δ_{RF}-Δ_{GIN}"
+          ]
+        },
+        {
+          "paragraph_index": 252,
+          "xml_char_offset": [
+            637136,
+            637456
+          ],
+          "text_verbatim": "선형식: T_\"obs\" =Δ_\"RF\" -Δ_\"GIN\"",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 253,
+          "xml_char_offset": [
+            637456,
+            637791
+          ],
+          "text_verbatim": "LaTeX: T_{\\mathrm{obs}}=\\Delta_{\\mathrm{RF}}-\\Delta_{\\mathrm{GIN}}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 254,
+          "xml_char_offset": [
+            637791,
+            638698
+          ],
+          "text_verbatim": "A2. 교환연산자 하의 모델군별 대비",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 255,
+          "xml_char_offset": [
+            638698,
+            642440
+          ],
+          "text_verbatim": "【Δ_F(z)=A(Y,S_zP_F^{M2b})-A(Y,S_zP_F^{M1b})】",
+          "math_restored": [
+            "Δ_F(z)=A(Y,S_zP_F^{M2b})-A(Y,S_zP_F^{M1b})"
+          ]
+        },
+        {
+          "paragraph_index": 256,
+          "xml_char_offset": [
+            642440,
+            642783
+          ],
+          "text_verbatim": "선형식: Δ_F (z)=A(Y,S_z P_F^\"M2b\" )-A(Y,S_z P_F^\"M1b\" )",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 257,
+          "xml_char_offset": [
+            642783,
+            643234
+          ],
+          "text_verbatim": "LaTeX: \\Delta_F(z)=A(Y,\\mathcal S_z P_F^{\\mathrm{M2b}})-A(Y,\\mathcal S_z P_F^{\\mathrm{M1b}})",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 258,
+          "xml_char_offset": [
+            643234,
+            643542
+          ],
+          "text_verbatim": "A3. 정확 반대칭성",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 259,
+          "xml_char_offset": [
+            643542,
+            646714
+          ],
+          "text_verbatim": "【Δ_F(1-z)=- Δ_F(z),  T(1-z)=- T(z)】",
+          "math_restored": [
+            "Δ_F(1-z)=- Δ_F(z),  T(1-z)=- T(z)"
+          ]
+        },
+        {
+          "paragraph_index": 260,
+          "xml_char_offset": [
+            646714,
+            647043
+          ],
+          "text_verbatim": "선형식: Δ_F (1-z)=-Δ_F (z),  T(1-z)=-T(z)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 261,
+          "xml_char_offset": [
+            647043,
+            647380
+          ],
+          "text_verbatim": "LaTeX: \\Delta_F(\\mathbf 1-z)=-\\Delta_F(z),\\quad T(\\mathbf 1-z)=-T(z)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 262,
+          "xml_char_offset": [
+            647380,
+            648670
+          ],
+          "text_verbatim": "A4. 군별 기여도와 이중차분 기여도 (정확 계산식)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 263,
+          "xml_char_offset": [
+            648670,
+            653643
+          ],
+          "text_verbatim": "【d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}】",
+          "math_restored": [
+            "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}"
+          ]
+        },
+        {
+          "paragraph_index": 264,
+          "xml_char_offset": [
+            653643,
+            654000
+          ],
+          "text_verbatim": "선형식: d_(F,g)=1/2 [Δ_F (0)-Δ_F (1_g )],  e_g=d_(\"RF\",g)-d_(\"GIN\",g)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 265,
+          "xml_char_offset": [
+            654000,
+            654381
+          ],
+          "text_verbatim": "LaTeX: d_{F,g}=\\frac12[\\Delta_F(\\mathbf 0)-\\Delta_F(\\mathbf 1_g)],\\quad e_g=d_{\\mathrm{RF},g}-d_{\\mathrm{GIN},g}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 266,
+          "xml_char_offset": [
+            654381,
+            654743
+          ],
+          "text_verbatim": "A5. 1차 사영 (Hájek projection)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 267,
+          "xml_char_offset": [
+            654743,
+            657261
+          ],
+          "text_verbatim": "【T(z)≈∑_{g=1}^G (1-2z_g) e_g】",
+          "math_restored": [
+            "T(z)≈∑_{g=1}^G (1-2z_g) e_g"
+          ]
+        },
+        {
+          "paragraph_index": 268,
+          "xml_char_offset": [
+            657261,
+            657611
+          ],
+          "text_verbatim": "선형식: T(z)≈∑_(g=1)^G (1-2z_g ) e_g",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 269,
+          "xml_char_offset": [
+            657611,
+            657923
+          ],
+          "text_verbatim": "LaTeX: T(z)\\approx\\sum_{g=1}^{G}(1-2z_g)e_g",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 270,
+          "xml_char_offset": [
+            657923,
+            659053
+          ],
+          "text_verbatim": "A6. 공용동전 대 독립동전의 참조분포 분산",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 271,
+          "xml_char_offset": [
+            659053,
+            661577
+          ],
+          "text_verbatim": "【Var_Z[T_{shared}]≈∑_{g=1}^G e_g^2】",
+          "math_restored": [
+            "Var_Z[T_{shared}]≈∑_{g=1}^G e_g^2"
+          ]
+        },
+        {
+          "paragraph_index": 272,
+          "xml_char_offset": [
+            661577,
+            666000
+          ],
+          "text_verbatim": "【Var_Z[T_{ind}]≈∑_{g=1}^G e_g^2+2∑_{g=1}^G d_{RF,g} d_{GIN,g}】",
+          "math_restored": [
+            "Var_Z[T_{ind}]≈∑_{g=1}^G e_g^2+2∑_{g=1}^G d_{RF,g} d_{GIN,g}"
+          ]
+        },
+        {
+          "paragraph_index": 273,
+          "xml_char_offset": [
+            666000,
+            666402
+          ],
+          "text_verbatim": "선형식: Var_Z [T_\"shared\" ]≈∑_(g=1)^G e_g^2 ,  Var_Z [T_\"ind\" ]≈∑_(g=1)^G e_g^2 +2∑_(g=1)^G d_(\"RF\",g) d_(\"GIN\",g)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 274,
+          "xml_char_offset": [
+            666402,
+            666928
+          ],
+          "text_verbatim": "LaTeX: \\mathrm{Var}_Z[T_{\\mathrm{shared}}]\\approx\\sum_{g=1}^{G}e_g^{2},\\quad \\mathrm{Var}_Z[T_{\\mathrm{ind}}]\\approx\\sum_{g=1}^{G}e_g^{2}+2\\sum_{g=1}^{G}d_{\\mathrm{RF},g}d_{\\mathrm{GIN},g}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 275,
+          "xml_char_offset": [
+            666928,
+            667902
+          ],
+          "text_verbatim": "A7. 양측 몬테카를로 p-값 (수정본)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 276,
+          "xml_char_offset": [
+            667902,
+            671104
+          ],
+          "text_verbatim": "【p=(1+∑_{b=1}^B I(|T_b|≥|T_{obs}|))/(B+1)】",
+          "math_restored": [
+            "p=(1+∑_{b=1}^B I(|T_b|≥|T_{obs}|))/(B+1)"
+          ]
+        },
+        {
+          "paragraph_index": 277,
+          "xml_char_offset": [
+            671104,
+            671442
+          ],
+          "text_verbatim": "선형식: p=(1+∑_(b=1)^B I(|T_b |≥|T_\"obs\" |))/(B+1)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 278,
+          "xml_char_offset": [
+            671442,
+            671785
+          ],
+          "text_verbatim": "LaTeX: p=\\frac{1+\\sum_{b=1}^{B}\\mathbb I(|T_b|\\ge|T_{\\mathrm{obs}}|)}{B+1}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 279,
+          "xml_char_offset": [
+            671785,
+            672099
+          ],
+          "text_verbatim": "A8. 몬테카를로 표준오차",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 280,
+          "xml_char_offset": [
+            672099,
+            674249
+          ],
+          "text_verbatim": "【SE(p̂)=√((p̂ (1-p̂))/(B))】",
+          "math_restored": [
+            "SE(p̂)=√((p̂ (1-p̂))/(B))"
+          ]
+        },
+        {
+          "paragraph_index": 281,
+          "xml_char_offset": [
+            674249,
+            674579
+          ],
+          "text_verbatim": "선형식: SE(p\\hat )=√((p\\hat (1-p\\hat ))/B)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 282,
+          "xml_char_offset": [
+            674579,
+            674900
+          ],
+          "text_verbatim": "LaTeX: \\mathrm{SE}(\\hat p)=\\sqrt{\\hat p(1-\\hat p)/B}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 283,
+          "xml_char_offset": [
+            674900,
+            675903
+          ],
+          "text_verbatim": "A9. Holm 단계하강 조정 (가족 크기 7)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 284,
+          "xml_char_offset": [
+            675903,
+            678673
+          ],
+          "text_verbatim": "【p̃_{(k)}=max_{j≤k}[(8-j) p_{(j)}]】",
+          "math_restored": [
+            "p̃_{(k)}=max_{j≤k}[(8-j) p_{(j)}]"
+          ]
+        },
+        {
+          "paragraph_index": 285,
+          "xml_char_offset": [
+            678673,
+            679010
+          ],
+          "text_verbatim": "선형식: p\\tilde _((k))=max_(j≤k) [(8-j) p_((j)) ]",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 286,
+          "xml_char_offset": [
+            679010,
+            679328
+          ],
+          "text_verbatim": "LaTeX: \\tilde p_{(k)}=\\max_{j\\le k}[(8-j)p_{(j)}]",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 287,
+          "xml_char_offset": [
+            679328,
+            679579
+          ],
+          "text_verbatim": "A10. Kish 유효군집수",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 288,
+          "xml_char_offset": [
+            679579,
+            682898
+          ],
+          "text_verbatim": "【G_{eff}=((∑_{g=1}^G n_g)^2)/(∑_{g=1}^G n_g^2)】",
+          "math_restored": [
+            "G_{eff}=((∑_{g=1}^G n_g)^2)/(∑_{g=1}^G n_g^2)"
+          ]
+        },
+        {
+          "paragraph_index": 289,
+          "xml_char_offset": [
+            682898,
+            683240
+          ],
+          "text_verbatim": "선형식: G_\"eff\" =(∑_(g=1)^G n_g )^2/(∑_(g=1)^G n_g^2 )",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 290,
+          "xml_char_offset": [
+            683240,
+            683584
+          ],
+          "text_verbatim": "LaTeX: G_{\\mathrm{eff}}=\\frac{(\\sum_{g=1}^{G}n_g)^2}{\\sum_{g=1}^{G}n_g^{2}}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 291,
+          "xml_char_offset": [
+            683584,
+            683920
+          ],
+          "text_verbatim": "A11. 레버리지 진단",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 292,
+          "xml_char_offset": [
+            683920,
+            687274
+          ],
+          "text_verbatim": "【λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2)】",
+          "math_restored": [
+            "λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2)"
+          ]
+        },
+        {
+          "paragraph_index": 293,
+          "xml_char_offset": [
+            687274,
+            687611
+          ],
+          "text_verbatim": "선형식: λ_k=(∑_(g∈T_k) e_g^2 )/(∑_(g=1)^G e_g^2 )",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 294,
+          "xml_char_offset": [
+            687611,
+            688026
+          ],
+          "text_verbatim": "LaTeX: \\lambda_k=\\frac{\\sum_{g\\in\\mathcal T_k}e_g^{2}}{\\sum_{g=1}^{G}e_g^{2}}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 295,
+          "xml_char_offset": [
+            688026,
+            688405
+          ],
+          "text_verbatim": "A12. 가법성 잔차 진단",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 296,
+          "xml_char_offset": [
+            688405,
+            691872
+          ],
+          "text_verbatim": "【ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))】",
+          "math_restored": [
+            "ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))"
+          ]
+        },
+        {
+          "paragraph_index": 297,
+          "xml_char_offset": [
+            691872,
+            692215
+          ],
+          "text_verbatim": "선형식: ρ=|T_\"obs\" -∑_(g=1)^G e_g |/√(∑_(g=1)^G e_g^2 )",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 298,
+          "xml_char_offset": [
+            692215,
+            692557
+          ],
+          "text_verbatim": "LaTeX: \\rho=\\frac{|T_{\\mathrm{obs}}-\\sum_{g}e_g|}{\\sqrt{\\sum_{g}e_g^{2}}}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 299,
+          "xml_char_offset": [
+            692557,
+            692962
+          ],
+          "text_verbatim": "A13. GIN 집계 형식 (i) — repeat 축",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 300,
+          "xml_char_offset": [
+            692962,
+            696742
+          ],
+          "text_verbatim": "【P_{GIN,s}^a=(1)/(R)∑_{r=1}^R P_{GIN,s,r}^a, a∈{M1b,M2b}, R=3】",
+          "math_restored": [
+            "P_{GIN,s}^a=(1)/(R)∑_{r=1}^R P_{GIN,s,r}^a, a∈{M1b,M2b}, R=3"
+          ]
+        },
+        {
+          "paragraph_index": 301,
+          "xml_char_offset": [
+            696742,
+            697107
+          ],
+          "text_verbatim": "선형식: P_(\"GIN\",s)^a=1/R ∑_(r=1)^R P_(\"GIN\",s,r)^a ,  a∈{\"M1b\",\"M2b\" },  R=3",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 302,
+          "xml_char_offset": [
+            697107,
+            697433
+          ],
+          "text_verbatim": "LaTeX: P^{a}_{GIN,s}=\\frac1R\\sum_{r=1}^{R}P^{a}_{GIN,s,r}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 303,
+          "xml_char_offset": [
+            697433,
+            697834
+          ],
+          "text_verbatim": "A14. GIN 집계 형식 (i) — seed 축",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 304,
+          "xml_char_offset": [
+            697834,
+            700690
+          ],
+          "text_verbatim": "【Δ_{GIN}=(1)/(S)∑_{s=1}^S Δ_{GIN,s}, S=3】",
+          "math_restored": [
+            "Δ_{GIN}=(1)/(S)∑_{s=1}^S Δ_{GIN,s}, S=3"
+          ]
+        },
+        {
+          "paragraph_index": 305,
+          "xml_char_offset": [
+            700690,
+            701027
+          ],
+          "text_verbatim": "선형식: Δ_\"GIN\" =1/S ∑_(s=1)^S Δ_(\"GIN\",s) ,  S=3",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 306,
+          "xml_char_offset": [
+            701027,
+            701369
+          ],
+          "text_verbatim": "LaTeX: \\Delta_{\\mathrm{GIN}}=\\frac1S\\sum_{s=1}^{S}\\Delta_{\\mathrm{GIN},s}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 307,
+          "xml_char_offset": [
+            701369,
+            702498
+          ],
+          "text_verbatim": "A15. 비가환성 (형식 혼용 금지의 근거)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 308,
+          "xml_char_offset": [
+            702498,
+            706356
+          ],
+          "text_verbatim": "【A(Y,(1)/(R)∑_{r=1}^R P_r)≠(1)/(R)∑_{r=1}^R A(Y,P_r)】",
+          "math_restored": [
+            "A(Y,(1)/(R)∑_{r=1}^R P_r)≠(1)/(R)∑_{r=1}^R A(Y,P_r)"
+          ]
+        },
+        {
+          "paragraph_index": 309,
+          "xml_char_offset": [
+            706356,
+            706768
+          ],
+          "text_verbatim": "선형식: A(Y,1/R ∑_(r=1)^R P_r )≠1/R ∑_(r=1)^R A(Y,P_r )",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 310,
+          "xml_char_offset": [
+            706768,
+            707106
+          ],
+          "text_verbatim": "LaTeX: A(Y,\\frac1R\\sum_{r=1}^{R}P_r)\\neq\\frac1R\\sum_{r=1}^{R}A(Y,P_r)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 311,
+          "xml_char_offset": [
+            707106,
+            707487
+          ],
+          "text_verbatim": "A16. 짝짓기 분산 항등식",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 312,
+          "xml_char_offset": [
+            707487,
+            710574
+          ],
+          "text_verbatim": "【Var(T)=Var(Δ_{RF})+Var(Δ_{GIN})-2 Cov(Δ_{RF},Δ_{GIN})】",
+          "math_restored": [
+            "Var(T)=Var(Δ_{RF})+Var(Δ_{GIN})-2 Cov(Δ_{RF},Δ_{GIN})"
+          ]
+        },
+        {
+          "paragraph_index": 313,
+          "xml_char_offset": [
+            710574,
+            710926
+          ],
+          "text_verbatim": "선형식: Var(T)=Var(Δ_\"RF\" )+Var(Δ_\"GIN\" )-2Cov(Δ_\"RF\" ,Δ_\"GIN\" )",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 314,
+          "xml_char_offset": [
+            710926,
+            711415
+          ],
+          "text_verbatim": "LaTeX: \\mathrm{Var}(T)=\\mathrm{Var}(\\Delta_{\\mathrm{RF}})+\\mathrm{Var}(\\Delta_{\\mathrm{GIN}})-2\\mathrm{Cov}(\\Delta_{\\mathrm{RF}},\\Delta_{\\mathrm{GIN}})",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 315,
+          "xml_char_offset": [
+            711415,
+            712755
+          ],
+          "text_verbatim": "A17. 배타적 열거 하의 최소 달성가능 양측 p-값",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 316,
+          "xml_char_offset": [
+            712755,
+            714859
+          ],
+          "text_verbatim": "【p_{min,exact}=(2)/(2^G)=2^{ 1-G}】",
+          "math_restored": [
+            "p_{min,exact}=(2)/(2^G)=2^{ 1-G}"
+          ]
+        },
+        {
+          "paragraph_index": 317,
+          "xml_char_offset": [
+            714859,
+            715184
+          ],
+          "text_verbatim": "선형식: p_\"min,exact\" =2/2^G =2^(1-G)",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 318,
+          "xml_char_offset": [
+            715184,
+            715499
+          ],
+          "text_verbatim": "LaTeX: p_{\\min,\\mathrm{exact}}=2/2^{G}=2^{1-G}",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 319,
+          "xml_char_offset": [
+            715499,
+            716314
+          ],
+          "text_verbatim": "A18. 감사 기각률의 표준오차",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 320,
+          "xml_char_offset": [
+            716314,
+            718751
+          ],
+          "text_verbatim": "【SE(r̂)=√((r̂ (1-r̂))/(R_{sim}))】",
+          "math_restored": [
+            "SE(r̂)=√((r̂ (1-r̂))/(R_{sim}))"
+          ]
+        },
+        {
+          "paragraph_index": 321,
+          "xml_char_offset": [
+            718751,
+            719088
+          ],
+          "text_verbatim": "선형식: SE(r\\hat )=√((r\\hat (1-r\\hat ))/R_\"sim\" )",
+          "math_restored": []
+        },
+        {
+          "paragraph_index": 322,
+          "xml_char_offset": [
+            719088,
+            719424
+          ],
+          "text_verbatim": "LaTeX: \\mathrm{SE}(\\hat r)=\\sqrt{\\hat r(1-\\hat r)/R_{\\mathrm{sim}}}",
+          "math_restored": []
+        }
+      ]
+    }
+  ],
+  "appendix_a": [
+    {
+      "item": "A1",
+      "title": "RQ-int 검정통계량",
+      "omml_restored": [
+        "T_{obs}=Δ_{RF}-Δ_{GIN}"
+      ],
+      "linear_input": "T_\"obs\" =Δ_\"RF\" -Δ_\"GIN\"",
+      "latex": "T_{\\mathrm{obs}}=\\Delta_{\\mathrm{RF}}-\\Delta_{\\mathrm{GIN}}",
+      "paragraph_index": 250
+    },
+    {
+      "item": "A2",
+      "title": "교환연산자 하의 모델군별 대비",
+      "omml_restored": [
+        "Δ_F(z)=A(Y,S_zP_F^{M2b})-A(Y,S_zP_F^{M1b})"
+      ],
+      "linear_input": "Δ_F (z)=A(Y,S_z P_F^\"M2b\" )-A(Y,S_z P_F^\"M1b\" )",
+      "latex": "\\Delta_F(z)=A(Y,\\mathcal S_z P_F^{\\mathrm{M2b}})-A(Y,\\mathcal S_z P_F^{\\mathrm{M1b}})",
+      "paragraph_index": 254
+    },
+    {
+      "item": "A3",
+      "title": "정확 반대칭성",
+      "omml_restored": [
+        "Δ_F(1-z)=- Δ_F(z),  T(1-z)=- T(z)"
+      ],
+      "linear_input": "Δ_F (1-z)=-Δ_F (z),  T(1-z)=-T(z)",
+      "latex": "\\Delta_F(\\mathbf 1-z)=-\\Delta_F(z),\\quad T(\\mathbf 1-z)=-T(z)",
+      "paragraph_index": 258
+    },
+    {
+      "item": "A4",
+      "title": "군별 기여도와 이중차분 기여도 (정확 계산식)",
+      "omml_restored": [
+        "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}"
+      ],
+      "linear_input": "d_(F,g)=1/2 [Δ_F (0)-Δ_F (1_g )],  e_g=d_(\"RF\",g)-d_(\"GIN\",g)",
+      "latex": "d_{F,g}=\\frac12[\\Delta_F(\\mathbf 0)-\\Delta_F(\\mathbf 1_g)],\\quad e_g=d_{\\mathrm{RF},g}-d_{\\mathrm{GIN},g}",
+      "paragraph_index": 262
+    },
+    {
+      "item": "A5",
+      "title": "1차 사영 (Hájek projection)",
+      "omml_restored": [
+        "T(z)≈∑_{g=1}^G (1-2z_g) e_g"
+      ],
+      "linear_input": "T(z)≈∑_(g=1)^G (1-2z_g ) e_g",
+      "latex": "T(z)\\approx\\sum_{g=1}^{G}(1-2z_g)e_g",
+      "paragraph_index": 266
+    },
+    {
+      "item": "A6",
+      "title": "공용동전 대 독립동전의 참조분포 분산",
+      "omml_restored": [
+        "Var_Z[T_{shared}]≈∑_{g=1}^G e_g^2",
+        "Var_Z[T_{ind}]≈∑_{g=1}^G e_g^2+2∑_{g=1}^G d_{RF,g} d_{GIN,g}"
+      ],
+      "linear_input": "Var_Z [T_\"shared\" ]≈∑_(g=1)^G e_g^2 ,  Var_Z [T_\"ind\" ]≈∑_(g=1)^G e_g^2 +2∑_(g=1)^G d_(\"RF\",g) d_(\"GIN\",g)",
+      "latex": "\\mathrm{Var}_Z[T_{\\mathrm{shared}}]\\approx\\sum_{g=1}^{G}e_g^{2},\\quad \\mathrm{Var}_Z[T_{\\mathrm{ind}}]\\approx\\sum_{g=1}^{G}e_g^{2}+2\\sum_{g=1}^{G}d_{\\mathrm{RF},g}d_{\\mathrm{GIN},g}",
+      "paragraph_index": 270
+    },
+    {
+      "item": "A7",
+      "title": "양측 몬테카를로 p-값 (수정본)",
+      "omml_restored": [
+        "p=(1+∑_{b=1}^B I(|T_b|≥|T_{obs}|))/(B+1)"
+      ],
+      "linear_input": "p=(1+∑_(b=1)^B I(|T_b |≥|T_\"obs\" |))/(B+1)",
+      "latex": "p=\\frac{1+\\sum_{b=1}^{B}\\mathbb I(|T_b|\\ge|T_{\\mathrm{obs}}|)}{B+1}",
+      "paragraph_index": 275
+    },
+    {
+      "item": "A8",
+      "title": "몬테카를로 표준오차",
+      "omml_restored": [
+        "SE(p̂)=√((p̂ (1-p̂))/(B))"
+      ],
+      "linear_input": "SE(p\\hat )=√((p\\hat (1-p\\hat ))/B)",
+      "latex": "\\mathrm{SE}(\\hat p)=\\sqrt{\\hat p(1-\\hat p)/B}",
+      "paragraph_index": 279
+    },
+    {
+      "item": "A9",
+      "title": "Holm 단계하강 조정 (가족 크기 7)",
+      "omml_restored": [
+        "p̃_{(k)}=max_{j≤k}[(8-j) p_{(j)}]"
+      ],
+      "linear_input": "p\\tilde _((k))=max_(j≤k) [(8-j) p_((j)) ]",
+      "latex": "\\tilde p_{(k)}=\\max_{j\\le k}[(8-j)p_{(j)}]",
+      "paragraph_index": 283
+    },
+    {
+      "item": "A10",
+      "title": "Kish 유효군집수",
+      "omml_restored": [
+        "G_{eff}=((∑_{g=1}^G n_g)^2)/(∑_{g=1}^G n_g^2)"
+      ],
+      "linear_input": "G_\"eff\" =(∑_(g=1)^G n_g )^2/(∑_(g=1)^G n_g^2 )",
+      "latex": "G_{\\mathrm{eff}}=\\frac{(\\sum_{g=1}^{G}n_g)^2}{\\sum_{g=1}^{G}n_g^{2}}",
+      "paragraph_index": 287
+    },
+    {
+      "item": "A11",
+      "title": "레버리지 진단",
+      "omml_restored": [
+        "λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2)"
+      ],
+      "linear_input": "λ_k=(∑_(g∈T_k) e_g^2 )/(∑_(g=1)^G e_g^2 )",
+      "latex": "\\lambda_k=\\frac{\\sum_{g\\in\\mathcal T_k}e_g^{2}}{\\sum_{g=1}^{G}e_g^{2}}",
+      "paragraph_index": 291
+    },
+    {
+      "item": "A12",
+      "title": "가법성 잔차 진단",
+      "omml_restored": [
+        "ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))"
+      ],
+      "linear_input": "ρ=|T_\"obs\" -∑_(g=1)^G e_g |/√(∑_(g=1)^G e_g^2 )",
+      "latex": "\\rho=\\frac{|T_{\\mathrm{obs}}-\\sum_{g}e_g|}{\\sqrt{\\sum_{g}e_g^{2}}}",
+      "paragraph_index": 295
+    },
+    {
+      "item": "A13",
+      "title": "GIN 집계 형식 (i) — repeat 축",
+      "omml_restored": [
+        "P_{GIN,s}^a=(1)/(R)∑_{r=1}^R P_{GIN,s,r}^a, a∈{M1b,M2b}, R=3"
+      ],
+      "linear_input": "P_(\"GIN\",s)^a=1/R ∑_(r=1)^R P_(\"GIN\",s,r)^a ,  a∈{\"M1b\",\"M2b\" },  R=3",
+      "latex": "P^{a}_{GIN,s}=\\frac1R\\sum_{r=1}^{R}P^{a}_{GIN,s,r}",
+      "paragraph_index": 299
+    },
+    {
+      "item": "A14",
+      "title": "GIN 집계 형식 (i) — seed 축",
+      "omml_restored": [
+        "Δ_{GIN}=(1)/(S)∑_{s=1}^S Δ_{GIN,s}, S=3"
+      ],
+      "linear_input": "Δ_\"GIN\" =1/S ∑_(s=1)^S Δ_(\"GIN\",s) ,  S=3",
+      "latex": "\\Delta_{\\mathrm{GIN}}=\\frac1S\\sum_{s=1}^{S}\\Delta_{\\mathrm{GIN},s}",
+      "paragraph_index": 303
+    },
+    {
+      "item": "A15",
+      "title": "비가환성 (형식 혼용 금지의 근거)",
+      "omml_restored": [
+        "A(Y,(1)/(R)∑_{r=1}^R P_r)≠(1)/(R)∑_{r=1}^R A(Y,P_r)"
+      ],
+      "linear_input": "A(Y,1/R ∑_(r=1)^R P_r )≠1/R ∑_(r=1)^R A(Y,P_r )",
+      "latex": "A(Y,\\frac1R\\sum_{r=1}^{R}P_r)\\neq\\frac1R\\sum_{r=1}^{R}A(Y,P_r)",
+      "paragraph_index": 307
+    },
+    {
+      "item": "A16",
+      "title": "짝짓기 분산 항등식",
+      "omml_restored": [
+        "Var(T)=Var(Δ_{RF})+Var(Δ_{GIN})-2 Cov(Δ_{RF},Δ_{GIN})"
+      ],
+      "linear_input": "Var(T)=Var(Δ_\"RF\" )+Var(Δ_\"GIN\" )-2Cov(Δ_\"RF\" ,Δ_\"GIN\" )",
+      "latex": "\\mathrm{Var}(T)=\\mathrm{Var}(\\Delta_{\\mathrm{RF}})+\\mathrm{Var}(\\Delta_{\\mathrm{GIN}})-2\\mathrm{Cov}(\\Delta_{\\mathrm{RF}},\\Delta_{\\mathrm{GIN}})",
+      "paragraph_index": 311
+    },
+    {
+      "item": "A17",
+      "title": "배타적 열거 하의 최소 달성가능 양측 p-값",
+      "omml_restored": [
+        "p_{min,exact}=(2)/(2^G)=2^{ 1-G}"
+      ],
+      "linear_input": "p_\"min,exact\" =2/2^G =2^(1-G)",
+      "latex": "p_{\\min,\\mathrm{exact}}=2/2^{G}=2^{1-G}",
+      "paragraph_index": 315
+    },
+    {
+      "item": "A18",
+      "title": "감사 기각률의 표준오차",
+      "omml_restored": [
+        "SE(r̂)=√((r̂ (1-r̂))/(R_{sim}))"
+      ],
+      "linear_input": "SE(r\\hat )=√((r\\hat (1-r\\hat ))/R_\"sim\" )",
+      "latex": "\\mathrm{SE}(\\hat r)=\\sqrt{\\hat r(1-\\hat r)/R_{\\mathrm{sim}}}",
+      "paragraph_index": 319
+    }
+  ],
+  "n_appendix_items": 18,
+  "required_formulas": [
+    {
+      "key": "d_F_g",
+      "reviewer_section": "2.3",
+      "paragraph_index": 41,
+      "xml_char_offset": [
+        99578,
+        104539
+      ],
+      "omml_restored": "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}",
+      "all_math_in_paragraph": [
+        "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}"
+      ],
+      "appendix_item": "A4",
+      "appendix_title": "군별 기여도와 이중차분 기여도 (정확 계산식)",
+      "appendix_omml_restored": [
+        "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}"
+      ],
+      "appendix_linear_input": "d_(F,g)=1/2 [Δ_F (0)-Δ_F (1_g )],  e_g=d_(\"RF\",g)-d_(\"GIN\",g)",
+      "appendix_latex": "d_{F,g}=\\frac12[\\Delta_F(\\mathbf 0)-\\Delta_F(\\mathbf 1_g)],\\quad e_g=d_{\\mathrm{RF},g}-d_{\\mathrm{GIN},g}",
+      "normalized": {
+        "body_omml": "d_F,g=1/2Δ_F0-Δ_F1_g,e_g=d_RF,g-d_GIN,g",
+        "appendix_omml": "d_F,g=1/2Δ_F0-Δ_F1_g,e_g=d_RF,g-d_GIN,g",
+        "appendix_linear": "d_F,g=1/2Δ_F0-Δ_F1_g,e_g=d_RF,g-d_GIN,g"
+      },
+      "notation_alias": null,
+      "match_body_vs_appendix_omml": true,
+      "match_appendix_omml_vs_linear": true,
+      "resolved": true
+    },
+    {
+      "key": "e_g",
+      "reviewer_section": "2.3",
+      "paragraph_index": 41,
+      "xml_char_offset": [
+        99578,
+        104539
+      ],
+      "omml_restored": "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}",
+      "all_math_in_paragraph": [
+        "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}"
+      ],
+      "appendix_item": "A4",
+      "appendix_title": "군별 기여도와 이중차분 기여도 (정확 계산식)",
+      "appendix_omml_restored": [
+        "d_{F,g}=(1)/(2)[Δ_F(0)-Δ_F(1_g)],  e_g=d_{RF,g}-d_{GIN,g}"
+      ],
+      "appendix_linear_input": "d_(F,g)=1/2 [Δ_F (0)-Δ_F (1_g )],  e_g=d_(\"RF\",g)-d_(\"GIN\",g)",
+      "appendix_latex": "d_{F,g}=\\frac12[\\Delta_F(\\mathbf 0)-\\Delta_F(\\mathbf 1_g)],\\quad e_g=d_{\\mathrm{RF},g}-d_{\\mathrm{GIN},g}",
+      "normalized": {
+        "body_omml": "d_F,g=1/2Δ_F0-Δ_F1_g,e_g=d_RF,g-d_GIN,g",
+        "appendix_omml": "d_F,g=1/2Δ_F0-Δ_F1_g,e_g=d_RF,g-d_GIN,g",
+        "appendix_linear": "d_F,g=1/2Δ_F0-Δ_F1_g,e_g=d_RF,g-d_GIN,g"
+      },
+      "notation_alias": null,
+      "match_body_vs_appendix_omml": true,
+      "match_appendix_omml_vs_linear": true,
+      "resolved": true
+    },
+    {
+      "key": "T_z_hajek",
+      "reviewer_section": "2.3",
+      "paragraph_index": 43,
+      "xml_char_offset": [
+        106264,
+        111783
+      ],
+      "omml_restored": "Δ_F(z)≈∑_{g=1}^G (1-2z_g) d_{F,g},  T(z)≈∑_{g=1}^G (1-2z_g) e_g",
+      "all_math_in_paragraph": [
+        "Δ_F(z)≈∑_{g=1}^G (1-2z_g) d_{F,g},  T(z)≈∑_{g=1}^G (1-2z_g) e_g"
+      ],
+      "appendix_item": "A5",
+      "appendix_title": "1차 사영 (Hájek projection)",
+      "appendix_omml_restored": [
+        "T(z)≈∑_{g=1}^G (1-2z_g) e_g"
+      ],
+      "appendix_linear_input": "T(z)≈∑_(g=1)^G (1-2z_g ) e_g",
+      "appendix_latex": "T(z)\\approx\\sum_{g=1}^{G}(1-2z_g)e_g",
+      "normalized": {
+        "body_omml": "Δ_Fz≈∑_g=1^G1-2z_gd_F,g,Tz≈∑_g=1^G1-2z_ge_g",
+        "appendix_omml": "Tz≈∑_g=1^G1-2z_ge_g",
+        "appendix_linear": "Tz≈∑_g=1^G1-2z_ge_g"
+      },
+      "notation_alias": null,
+      "match_body_vs_appendix_omml": true,
+      "match_appendix_omml_vs_linear": true,
+      "resolved": true
+    },
+    {
+      "key": "lambda_k",
+      "reviewer_section": "3(a)",
+      "paragraph_index": 88,
+      "xml_char_offset": [
+        243388,
+        251207
+      ],
+      "omml_restored": "λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2) (k=1,2,10),  ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))",
+      "all_math_in_paragraph": [
+        "λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2) (k=1,2,10),  ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))"
+      ],
+      "appendix_item": "A11",
+      "appendix_title": "레버리지 진단",
+      "appendix_omml_restored": [
+        "λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2)"
+      ],
+      "appendix_linear_input": "λ_k=(∑_(g∈T_k) e_g^2 )/(∑_(g=1)^G e_g^2 )",
+      "appendix_latex": "\\lambda_k=\\frac{\\sum_{g\\in\\mathcal T_k}e_g^{2}}{\\sum_{g=1}^{G}e_g^{2}}",
+      "normalized": {
+        "body_omml": "λ_k=∑_g∈T_ke_g^2/∑_g=1^Ge_g^2k=1,2,10,ρ=|T_obs-∑_g=1^Ge_g|/√∑_g=1^Ge_g^2",
+        "appendix_omml": "λ_k=∑_g∈T_ke_g^2/∑_g=1^Ge_g^2",
+        "appendix_linear": "λ_k=∑_g∈T_ke_g^2/∑_g=1^Ge_g^2"
+      },
+      "notation_alias": null,
+      "match_body_vs_appendix_omml": true,
+      "match_appendix_omml_vs_linear": true,
+      "resolved": true
+    },
+    {
+      "key": "rho",
+      "reviewer_section": "3(a)",
+      "paragraph_index": 88,
+      "xml_char_offset": [
+        243388,
+        251207
+      ],
+      "omml_restored": "λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2) (k=1,2,10),  ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))",
+      "all_math_in_paragraph": [
+        "λ_k=(∑_{g∈T_k} e_g^2)/(∑_{g=1}^G e_g^2) (k=1,2,10),  ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))"
+      ],
+      "appendix_item": "A12",
+      "appendix_title": "가법성 잔차 진단",
+      "appendix_omml_restored": [
+        "ρ=(|T_{obs}-∑_{g=1}^G e_g|)/(√(∑_{g=1}^G e_g^2))"
+      ],
+      "appendix_linear_input": "ρ=|T_\"obs\" -∑_(g=1)^G e_g |/√(∑_(g=1)^G e_g^2 )",
+      "appendix_latex": "\\rho=\\frac{|T_{\\mathrm{obs}}-\\sum_{g}e_g|}{\\sqrt{\\sum_{g}e_g^{2}}}",
+      "normalized": {
+        "body_omml": "λ_k=∑_g∈T_ke_g^2/∑_g=1^Ge_g^2k=1,2,10,ρ=|T_obs-∑_g=1^Ge_g|/√∑_g=1^Ge_g^2",
+        "appendix_omml": "ρ=|T_obs-∑_g=1^Ge_g|/√∑_g=1^Ge_g^2",
+        "appendix_linear": "ρ=|T_obs-∑_g=1^Ge_g|/√∑_g=1^Ge_g^2"
+      },
+      "notation_alias": null,
+      "match_body_vs_appendix_omml": true,
+      "match_appendix_omml_vs_linear": true,
+      "resolved": true
+    },
+    {
+      "key": "G_eff",
+      "reviewer_section": "3(c)",
+      "paragraph_index": 93,
+      "xml_char_offset": [
+        275237,
+        278770
+      ],
+      "omml_restored": "G_{eff}=((∑_{g=1}^G n_g)^2)/(∑_{g=1}^G n_g^2)=85.3",
+      "all_math_in_paragraph": [
+        "G_{eff}=((∑_{g=1}^G n_g)^2)/(∑_{g=1}^G n_g^2)=85.3"
+      ],
+      "appendix_item": "A10",
+      "appendix_title": "Kish 유효군집수",
+      "appendix_omml_restored": [
+        "G_{eff}=((∑_{g=1}^G n_g)^2)/(∑_{g=1}^G n_g^2)"
+      ],
+      "appendix_linear_input": "G_\"eff\" =(∑_(g=1)^G n_g )^2/(∑_(g=1)^G n_g^2 )",
+      "appendix_latex": "G_{\\mathrm{eff}}=\\frac{(\\sum_{g=1}^{G}n_g)^2}{\\sum_{g=1}^{G}n_g^{2}}",
+      "normalized": {
+        "body_omml": "G_eff=∑_g=1^Gn_g^2/∑_g=1^Gn_g^2=85.3",
+        "appendix_omml": "G_eff=∑_g=1^Gn_g^2/∑_g=1^Gn_g^2",
+        "appendix_linear": "G_eff=∑_g=1^Gn_g^2/∑_g=1^Gn_g^2"
+      },
+      "notation_alias": null,
+      "match_body_vs_appendix_omml": true,
+      "match_appendix_omml_vs_linear": true,
+      "resolved": true
+    },
+    {
+      "key": "p_two_sided",
+      "reviewer_section": "9.1",
+      "paragraph_index": 218,
+      "xml_char_offset": [
+        532200,
+        535601
+      ],
+      "omml_restored": "p_{two-sided}=(1+∑_{b=1}^B I(|Δ_b|≥|Δ_{obs}|))/(B+1)",
+      "all_math_in_paragraph": [
+        "p_{two-sided}=(1+∑_{b=1}^B I(|Δ_b|≥|Δ_{obs}|))/(B+1)"
+      ],
+      "appendix_item": "A7",
+      "appendix_title": "양측 몬테카를로 p-값 (수정본)",
+      "appendix_omml_restored": [
+        "p=(1+∑_{b=1}^B I(|T_b|≥|T_{obs}|))/(B+1)"
+      ],
+      "appendix_linear_input": "p=(1+∑_(b=1)^B I(|T_b |≥|T_\"obs\" |))/(B+1)",
+      "appendix_latex": "p=\\frac{1+\\sum_{b=1}^{B}\\mathbb I(|T_b|\\ge|T_{\\mathrm{obs}}|)}{B+1}",
+      "normalized": {
+        "body_omml": "p=1+∑_b=1^BI|T_b|≥|T_obs|/B+1",
+        "appendix_omml": "p=1+∑_b=1^BI|T_b|≥|T_obs|/B+1",
+        "appendix_linear": "p=1+∑_b=1^BI|T_b|≥|T_obs|/B+1",
+        "body_omml_aliased": "p=1+∑_b=1^BI|T_b|≥|T_obs|/B+1"
+      },
+      "notation_alias": {
+        "map": {
+          "Δ_b": "T_b",
+          "Δ_obs": "T_obs",
+          "p_two-sided": "p"
+        },
+        "reason": "§9.1 본문은 «요청 문서에 인쇄된 형태» 를 그 문서의 표기(Δ_b·Δ_obs)로 인용하며 절댓값 누락을 지적한다. 부록 A7 은 같은 식을 검토자 정본 표기(T_b·T_obs)로 적는다. 식의 구조·피연산자는 동일하고 기호명만 다르다.",
+        "is_interpretation_not_verbatim": true
+      },
+      "match_body_vs_appendix_omml": true,
+      "match_appendix_omml_vs_linear": true,
+      "resolved": true
+    },
+    {
+      "key": "se_p_hat",
+      "reviewer_section": "9.2",
+      "paragraph_index": 222,
+      "xml_char_offset": [
+        548656,
+        551023
+      ],
+      "omml_restored": "SE(p̂)=√((p̂ (1-p̂))/(B))≈0.00084",
+      "all_math_in_paragraph": [
+        "SE(p̂)=√((p̂ (1-p̂))/(B))≈0.00084"
+      ],
+      "appendix_item": "A8",
+      "appendix_title": "몬테카를로 표준오차",
+      "appendix_omml_restored": [
+        "SE(p̂)=√((p̂ (1-p̂))/(B))"
+      ],
+      "appendix_linear_input": "SE(p\\hat )=√((p\\hat (1-p\\hat ))/B)",
+      "appendix_latex": "\\mathrm{SE}(\\hat p)=\\sqrt{\\hat p(1-\\hat p)/B}",
+      "normalized": {
+        "body_omml": "SEp=√p1-p/B≈0.00084",
+        "appendix_omml": "SEp=√p1-p/B",
+        "appendix_linear": "SEp=√p1-p/B"
+      },
+      "notation_alias": null,
+      "match_body_vs_appendix_omml": true,
+      "match_appendix_omml_vs_linear": true,
+      "resolved": true
+    },
+    {
+      "key": "holm_adjusted",
+      "reviewer_section": "5.1",
+      "paragraph_index": 120,
+      "xml_char_offset": [
+        377221,
+        380746
+      ],
+      "omml_restored": "p̃_{(k)}=max_{j≤k}[(8-j) p_{(j)}],  k=1,…,7",
+      "all_math_in_paragraph": [
+        "p̃_{(k)}=max_{j≤k}[(8-j) p_{(j)}],  k=1,…,7"
+      ],
+      "appendix_item": "A9",
+      "appendix_title": "Holm 단계하강 조정 (가족 크기 7)",
+      "appendix_omml_restored": [
+        "p̃_{(k)}=max_{j≤k}[(8-j) p_{(j)}]"
+      ],
+      "appendix_linear_input": "p\\tilde _((k))=max_(j≤k) [(8-j) p_((j)) ]",
+      "appendix_latex": "\\tilde p_{(k)}=\\max_{j\\le k}[(8-j)p_{(j)}]",
+      "normalized": {
+        "body_omml": "p_k=max_j≤k8-jp_j,k=1,…,7",
+        "appendix_omml": "p_k=max_j≤k8-jp_j",
+        "appendix_linear": "p_k=max_j≤k8-jp_j"
+      },
+      "notation_alias": null,
+      "match_body_vs_appendix_omml": true,
+      "match_appendix_omml_vs_linear": true,
+      "resolved": true
+    }
+  ],
+  "n_required": 9,
+  "absolute_value_preservation_checks": {
+    "rho_numerator_has_abs": true,
+    "p_two_sided_has_abs": true,
+    "T_k_defined_by_abs_e_g": true
+  },
+  "unresolved": [],
+  "n_unresolved": 0
+}

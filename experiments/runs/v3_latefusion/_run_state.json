@@ -1,0 +1,38 @@
+{
+  "total": 15,
+  "session_seq": 1,
+  "n_done_this_session": 15,
+  "session_wall_s": 8486.744996666966,
+  "sealed_sha256": {
+    "rep1/oof_seq.npz": "cf88a0b14f1b957e5bdb79d92eeeb4534cef9c33fc249fd80fe76ceb61c61413",
+    "rep1/oof_ens.npz": "fc39f1cebea7b7309a061e65a8197903ed521ee1e16d4c9fddcdee0a3a9dcd07",
+    "rep1/oof_ens_half.npz": "9ad1a13275905241c674c039fa057811c9121c09f03b9e2a39d4fff177ab4bf1",
+    "rep1/oof_seq_sens.npz": "f9b34600df0c60ca5414b4d25884848edbbf9e0bd7d39256f451a87782e26e6d",
+    "rep1/oof_ens_sens.npz": "e5ac87e3c14443b164eab3a2337df67765d1f3dcdb5d0f44b11378f86f347360",
+    "rep1/lambda_selected.json": "55ae57ffda38c272c8f01245ea229ce040f3beb6e2c8b4dcd82c610ed654aa63",
+    "rep1/metrics_full.json": "f8158add8ddaefcf52adae9f89ff9f0a042cd572b6c71f0aaf23bf00c0911803",
+    "rep2/oof_seq.npz": "16dcd534752e710bca8c316ccb9b7ab41971591cabeff08f3f8a51102592ad4b",
+    "rep2/oof_ens.npz": "c3e1709fa36c17649766625c99a6722acb3e681fc10eccb7c932d44ddd1007e1",
+    "rep2/oof_ens_half.npz": "21f306001ed4d185dd549f810a9b25946f8e9ca8f181499bb9d9b96b804e7dc5",
+    "rep2/oof_seq_sens.npz": "6802771cc6276a8bb132dd21a8bdf3f3cf82d34e14895cb01943e8101b78f214",
+    "rep2/oof_ens_sens.npz": "3fc2587cc93b50dfc693d1a596b85c88b339f57c8c7554fa4c79405d4a820ae8",
+    "rep2/lambda_selected.json": "4e61e2ae64d5cecf5df85321808ff1b20d564126765bcc783373941326564c34",
+    "rep2/metrics_full.json": "b71258cff3f34a1eb4f4aaaf0ee12509c2bee68f18d36bda332fdad7dc67b9f2",
+    "rep3/oof_seq.npz": "d7d49962cb7c4ae959d7b7de4fd46684732b729af9734f2c076ff5109e73d8e2",
+    "rep3/oof_ens.npz": "3829ba88e851547de8c2ad5184bba71f02e3338377b0e833dae3cd066467b49c",
+    "rep3/oof_ens_half.npz": "f7aecd7b93f0b0015b5b6d084aebe929517ec5d01b34d4f6e59355900fcccbeb",
+    "rep3/oof_seq_sens.npz": "4c493fd969f88d7d2e9443ae7b254d5876de3fff1d7ddb16c9423f350f640eb3",
+    "rep3/oof_ens_sens.npz": "58ae036f20a785c2b12b6b8f95411ea089a48fcf7d5221437dc6abe7b3442042",
+    "rep3/lambda_selected.json": "0388ded8a82798e113e59cb0ecec8b63cd7fb49c6a5d5843af255bad54c3ae7f",
+    "rep3/metrics_full.json": "abf2e0cfa8263b37824970f25be75d4e9042906f1ce3ed7863e427c49660d4c4"
+  },
+  "env_fingerprint_match": true,
+  "sealed_guard_check": {
+    "n_preexisting": 185,
+    "n_added_own": 82,
+    "n_foreign": 0,
+    "preexisting_unchanged": true
+  },
+  "sealed_guard_n_files": 185,
+  "sealed_guard_unchanged": true
+}

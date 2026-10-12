@@ -1,0 +1,1512 @@
+{
+  "access_audit": {
+    "baseline_source": "experiments/provenance/sealing_completeness_audit_v2.json:opened_check.entries_per_file",
+    "blocks": [
+      {
+        "docs": "docs/110",
+        "id": "AT",
+        "trees": [
+          "experiments/runs/v3_gin_confirm_rep1_seed201",
+          "experiments/runs/v3_gin_confirm_rep2_seed202",
+          "experiments/runs/v3_gin_confirm_rep3_seed203"
+        ],
+        "window": [
+          "2026-09-21 16:31:08",
+          "2026-09-22 11:05:59"
+        ],
+        "window_source": "착수 = docs/33 항목 62 ① (sessions.jsonl 세션 1) · 완료 = docs/110 report2 수행 11:05",
+        "writers": [
+          "v3_Multimodal/src/confirmatory_gin_train.py"
+        ]
+      },
+      {
+        "docs": "docs/111",
+        "id": "AU",
+        "trees": [
+          "experiments/runs/v3_gin_stability"
+        ],
+        "window": [
+          "2026-09-22 23:48:56",
+          "2026-09-23 11:34:59"
+        ],
+        "window_source": "착수 = docs/33 항목 64 ① · 완료 = docs/111 report2 수행 11:34",
+        "writers": [
+          "v3_Multimodal/src/confirmatory_gin_stability.py",
+          "v3_Multimodal/src/confirmatory_gin_train.py"
+        ]
+      },
+      {
+        "docs": "docs/113",
+        "id": "AW",
+        "trees": [
+          "experiments/runs/v3_gin_confirm_rep1_seed201",
+          "experiments/runs/v3_gin_confirm_rep2_seed202",
+          "experiments/runs/v3_gin_confirm_rep3_seed203",
+          "experiments/runs/v3_gin_confirm_consensus_rep123"
+        ],
+        "window": [
+          "2026-09-27 23:27:19",
+          "2026-09-27 23:30:39"
+        ],
+        "window_source": "하네스 동결 ~ 완료 = docs/33 항목 66 ③",
+        "writers": [
+          "v3_Multimodal/src/confirmatory_gin_consensus.py"
+        ]
+      },
+      {
+        "docs": "docs/114",
+        "id": "AX",
+        "trees": [
+          "experiments/runs/v3_consensus_rep123",
+          "experiments/runs/v3_gin_confirm_consensus_rep123",
+          "experiments/runs/v3_rqint_leverage_d11"
+        ],
+        "window": [
+          "2026-09-28 09:22:13",
+          "2026-09-28 09:56:23"
+        ],
+        "window_source": "하네스 동결 ~ 본 항목 기록 = docs/33 항목 68 ③",
+        "writers": [
+          "v3_Multimodal/src/rqint_leverage_d11.py"
+        ]
+      },
+      {
+        "docs": "docs/115",
+        "id": "AY",
+        "trees": [
+          "experiments/runs/v3_consensus_rep123",
+          "experiments/runs/v3_gin_confirm_consensus_rep123",
+          "experiments/runs/v3_rqint_leverage_d11",
+          "experiments/runs/v3_rqint_holm8"
+        ],
+        "window": [
+          "2026-09-28 12:02:00",
+          "2026-10-01 22:12:18"
+        ],
+        "window_source": "하네스 동결 12:02 ~ 본 항목 기록 = docs/33 항목 70 ③",
+        "writers": [
+          "v3_Multimodal/src/rqint_holm8_run.py"
+        ]
+      },
+      {
+        "docs": "docs/115b",
+        "id": "AZ",
+        "trees": [
+          "experiments/runs/v3_consensus_rep123",
+          "experiments/runs/v3_gin_confirm_consensus_rep123",
+          "experiments/runs/v3_rqint_leverage_d11",
+          "experiments/runs/v3_rqint_d12"
+        ],
+        "window": [
+          "2026-10-02 01:21:00",
+          "2026-10-04 10:24:38"
+        ],
+        "window_source": "하네스 동결 01:21 ~ 본 항목 기록 = docs/33 항목 73 ③",
+        "writers": [
+          "v3_Multimodal/src/rqint_d12_run.py"
+        ]
+      },
+      {
+        "docs": "docs/116",
+        "id": "BA",
+        "trees": [
+          "experiments/runs/v3_gin_confirm_rep1_seed201",
+          "experiments/runs/v3_gin_confirm_rep2_seed202",
+          "experiments/runs/v3_gin_confirm_rep3_seed203",
+          "experiments/runs/v3_gin_stability",
+          "experiments/runs/v3_stability_ss15"
+        ],
+        "window": [
+          "2026-10-04 11:15:53",
+          "2026-10-04 11:35:44"
+        ],
+        "window_source": "하네스 동결 = docs/33 항목 74 ③ ~ 항목 75 기록 ③",
+        "writers": [
+          "v3_Multimodal/src/stability_ss15_run.py"
+        ]
+      },
+      {
+        "docs": "docs/117",
+        "id": "BB",
+        "trees": [
+          "experiments/runs/v3_confirm_rep1_seed201"
+        ],
+        "window": [
+          "2026-10-04 13:26:48",
+          "2026-10-04 14:44:11"
+        ],
+        "window_source": "항목 76 기록 ~ 항목 77 기록 = docs/33 항목 76·77 ③",
+        "writers": [
+          "v3_Multimodal/src/confirmatory_oof_sens.py"
+        ]
+      }
+    ],
+    "line_rule": "기준선(AO) 줄 = JSON 객체 · type machine_read · human_exposure is True 금지(AO 규칙 — 옛 줄은 ts·actor·path 키가 없을 수 있다) · 기준선 이후 줄 = 필수 키 전부 + human_exposure 불리언",
+    "n_files": 25,
+    "n_format_error": 0,
+    "n_human_exposure_true": 0,
+    "n_lines": 223,
+    "n_open_sealed_substring": 0,
+    "n_unattributed": 1,
+    "per_file": {
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed/access.log": {
+        "after_baseline": 1,
+        "ao_baseline": 17,
+        "by_block": {
+          "AO_baseline": 17,
+          "BB": 1
+        },
+        "expected_lines": 18,
+        "first_ts": "2026-07-27 13:05:28",
+        "last_ts": "2026-10-04 13:31:32",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 18,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 9,
+        "by_block": {
+          "AO_baseline": 9
+        },
+        "expected_lines": 9,
+        "first_ts": "2026-08-04 23:14:39",
+        "last_ts": "2026-08-08 16:22:52",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 9,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 9,
+        "by_block": {
+          "AO_baseline": 9
+        },
+        "expected_lines": 9,
+        "first_ts": "2026-08-04 01:01:17",
+        "last_ts": "2026-08-06 21:03:19",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 9,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 7,
+        "by_block": {
+          "AO_baseline": 7
+        },
+        "expected_lines": 7,
+        "first_ts": "2026-08-04 01:01:17",
+        "last_ts": "2026-08-06 21:49:48",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 7,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 7,
+        "by_block": {
+          "AO_baseline": 7
+        },
+        "expected_lines": 7,
+        "first_ts": "2026-08-04 01:01:17",
+        "last_ts": "2026-08-06 22:37:57",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 7,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 1,
+        "by_block": {
+          "AO_baseline": 1
+        },
+        "expected_lines": 1,
+        "first_ts": "2026-08-06 17:54:38",
+        "last_ts": "2026-08-06 17:54:38",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 1,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 1,
+        "by_block": {
+          "AO_baseline": 1
+        },
+        "expected_lines": 1,
+        "first_ts": "2026-08-06 17:54:38",
+        "last_ts": "2026-08-06 17:54:38",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 1,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 1,
+        "by_block": {
+          "AO_baseline": 1
+        },
+        "expected_lines": 1,
+        "first_ts": "2026-08-06 17:54:38",
+        "last_ts": "2026-08-06 17:54:38",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 1,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_consensus_rep123/_sealed/access.log": {
+        "after_baseline": 4,
+        "ao_baseline": 19,
+        "by_block": {
+          "AO_baseline": 19,
+          "AX": 1,
+          "AY": 2,
+          "AZ": 1
+        },
+        "expected_lines": 23,
+        "first_ts": "2026-08-01 16:57:20",
+        "last_ts": "2026-10-02 12:26:38",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 23,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/access.log": {
+        "after_baseline": 5,
+        "ao_baseline": 0,
+        "by_block": {
+          "AW": 1,
+          "AX": 1,
+          "AY": 2,
+          "AZ": 1
+        },
+        "expected_lines": 5,
+        "first_ts": "2026-09-27 23:30:36",
+        "last_ts": "2026-10-02 12:26:38",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 5,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/access.log": {
+        "after_baseline": 26,
+        "ao_baseline": 0,
+        "by_block": {
+          "AT": 24,
+          "AW": 1,
+          "BA": 1
+        },
+        "expected_lines": 26,
+        "first_ts": "2026-09-21 16:31:08",
+        "last_ts": "2026-10-04 11:16:58",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 26,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/access.log": {
+        "after_baseline": 26,
+        "ao_baseline": 0,
+        "by_block": {
+          "AT": 24,
+          "AW": 1,
+          "BA": 1
+        },
+        "expected_lines": 26,
+        "first_ts": "2026-09-21 21:02:22",
+        "last_ts": "2026-10-04 11:16:58",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 26,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/access.log": {
+        "after_baseline": 25,
+        "ao_baseline": 0,
+        "by_block": {
+          "AT": 23,
+          "AW": 1,
+          "BA": 1
+        },
+        "expected_lines": 25,
+        "first_ts": "2026-09-22 02:37:37",
+        "last_ts": "2026-10-04 11:16:58",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 25,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_gin_stability/_sealed/access.log": {
+        "after_baseline": 5,
+        "ao_baseline": 0,
+        "by_block": {
+          "AU": 3,
+          "BA": 1
+        },
+        "expected_lines": 5,
+        "first_ts": "2026-09-22 23:48:56",
+        "last_ts": "2026-10-04 11:16:58",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 5,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 1
+      },
+      "experiments/runs/v3_latefusion_rep1_seed201/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 5,
+        "by_block": {
+          "AO_baseline": 5
+        },
+        "expected_lines": 5,
+        "first_ts": "2026-08-06 23:24:46",
+        "last_ts": "2026-08-06 23:24:48",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 5,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_latefusion_rep2_seed202/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 5,
+        "by_block": {
+          "AO_baseline": 5
+        },
+        "expected_lines": 5,
+        "first_ts": "2026-08-06 23:24:46",
+        "last_ts": "2026-08-06 23:24:48",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 5,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_latefusion_rep3_seed203/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 5,
+        "by_block": {
+          "AO_baseline": 5
+        },
+        "expected_lines": 5,
+        "first_ts": "2026-08-06 23:24:46",
+        "last_ts": "2026-08-06 23:24:48",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 5,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_null_MAIN/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 8,
+        "by_block": {
+          "AO_baseline": 8
+        },
+        "expected_lines": 8,
+        "first_ts": "2026-07-28 23:38:10",
+        "last_ts": "2026-08-01 01:17:32",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 8,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_rqint_d12/_sealed/access.log": {
+        "after_baseline": 3,
+        "ao_baseline": 0,
+        "by_block": {
+          "AZ": 3
+        },
+        "expected_lines": 3,
+        "first_ts": "2026-10-02 12:26:38",
+        "last_ts": "2026-10-04 04:52:29",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 3,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_rqint_holm8/_sealed/access.log": {
+        "after_baseline": 2,
+        "ao_baseline": 0,
+        "by_block": {
+          "AY": 2
+        },
+        "expected_lines": 2,
+        "first_ts": "2026-09-28 20:30:53",
+        "last_ts": "2026-09-30 22:40:14",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 2,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_rqint_leverage_d11/_sealed/access.log": {
+        "after_baseline": 4,
+        "ao_baseline": 0,
+        "by_block": {
+          "AX": 1,
+          "AY": 2,
+          "AZ": 1
+        },
+        "expected_lines": 4,
+        "first_ts": "2026-09-28 09:55:57",
+        "last_ts": "2026-10-02 12:26:38",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 4,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_stability_ss15/_sealed/access.log": {
+        "after_baseline": 1,
+        "ao_baseline": 0,
+        "by_block": {
+          "BA": 1
+        },
+        "expected_lines": 1,
+        "first_ts": "2026-10-04 11:17:00",
+        "last_ts": "2026-10-04 11:17:00",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 1,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_stratification/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 6,
+        "by_block": {
+          "AO_baseline": 6
+        },
+        "expected_lines": 6,
+        "first_ts": "2026-08-01 16:57:20",
+        "last_ts": "2026-08-01 17:08:24",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 6,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_stratification_axes/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 15,
+        "by_block": {
+          "AO_baseline": 15
+        },
+        "expected_lines": 15,
+        "first_ts": "2026-08-07 12:29:55",
+        "last_ts": "2026-08-08 16:22:52",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 15,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      },
+      "experiments/runs/v3_stratification_pid/_sealed/access.log": {
+        "after_baseline": 0,
+        "ao_baseline": 6,
+        "by_block": {
+          "AO_baseline": 6
+        },
+        "expected_lines": 6,
+        "first_ts": "2026-08-04 23:14:39",
+        "last_ts": "2026-08-04 23:16:53",
+        "n_format_error": 0,
+        "n_human_exposure_true": 0,
+        "n_lines": 6,
+        "n_type_not_machine_read": 0,
+        "n_unattributed": 0
+      }
+    }
+  },
+  "audit_json_sha256": "65c5bfb2ca141a515d91e3ec51ecfe090bdd349941409515ff4c688810a0e1b8",
+  "binding_check_fails": [],
+  "block": "BD — 개봉 전 전수 감사 v3",
+  "blocking": [
+    {
+      "code": "access_unattributed",
+      "line": 4,
+      "tree": "experiments/runs/v3_gin_stability"
+    }
+  ],
+  "comparison": {
+    "by_egroup": {
+      "E-A": {
+        "expected": 275,
+        "live": 275,
+        "matched": 275,
+        "missing": 0,
+        "no_creation_hash": 0,
+        "sha_mismatch": 0,
+        "size_mismatch": 0,
+        "source_conflict": 0,
+        "unexpected": 0
+      },
+      "E-B": {
+        "expected": 387,
+        "live": 387,
+        "matched": 387,
+        "missing": 0,
+        "no_creation_hash": 6,
+        "sha_mismatch": 0,
+        "size_mismatch": 0,
+        "source_conflict": 0,
+        "unexpected": 0
+      },
+      "E-C": {
+        "expected": 45,
+        "live": 45,
+        "matched": 45,
+        "missing": 0,
+        "no_creation_hash": 2,
+        "sha_mismatch": 0,
+        "size_mismatch": 0,
+        "source_conflict": 0,
+        "unexpected": 0
+      },
+      "E-D": {
+        "expected": 22,
+        "live": 22,
+        "matched": 22,
+        "missing": 0,
+        "no_creation_hash": 0,
+        "sha_mismatch": 0,
+        "size_mismatch": 0,
+        "source_conflict": 0,
+        "unexpected": 0
+      },
+      "E-E": {
+        "expected": 11,
+        "live": 11,
+        "matched": 11,
+        "missing": 0,
+        "no_creation_hash": 0,
+        "sha_mismatch": 0,
+        "size_mismatch": 0,
+        "source_conflict": 0,
+        "unexpected": 0
+      },
+      "E-F": {
+        "expected": 61,
+        "live": 61,
+        "matched": 61,
+        "missing": 0,
+        "no_creation_hash": 0,
+        "sha_mismatch": 0,
+        "size_mismatch": 0,
+        "source_conflict": 0,
+        "unexpected": 0
+      }
+    },
+    "n_expected": 801,
+    "n_live": 801
+  },
+  "doc_corrections": {
+    "correction_text": "stat 지문은 경로·크기 불변만 증명한다. 내용 불변은 본 감사(항목 80)의 sha 대조로 사후 확인했다",
+    "n_targets": 6,
+    "supported_by_sha_audit": true,
+    "targets": [
+      {
+        "basis": [
+          "지문"
+        ],
+        "item": 23,
+        "line": 404,
+        "phrases": [
+          "바이트 불변"
+        ]
+      },
+      {
+        "basis": [
+          "stat 지문",
+          "지문"
+        ],
+        "item": 66,
+        "line": 2265,
+        "phrases": [
+          "바이트 불변"
+        ]
+      },
+      {
+        "basis": [
+          "지문"
+        ],
+        "item": 68,
+        "line": 2301,
+        "phrases": [
+          "바이트 불변"
+        ]
+      },
+      {
+        "basis": [
+          "stat 지문",
+          "지문"
+        ],
+        "item": 70,
+        "line": 2337,
+        "phrases": [
+          "바이트 불변"
+        ]
+      },
+      {
+        "basis": [
+          "stat 지문",
+          "지문"
+        ],
+        "item": 73,
+        "line": 2435,
+        "phrases": [
+          "바이트 불변"
+        ]
+      },
+      {
+        "basis": [
+          "stat 지문",
+          "지문",
+          "access 제외"
+        ],
+        "item": 75,
+        "line": 2480,
+        "phrases": [
+          "바이트 불변"
+        ]
+      }
+    ]
+  },
+  "expected_manifest_sha256": "cf513074e756572fc3f7283f291c5e3a6644701ba94caf02c7f58d817480e43c",
+  "frozen_118_sha256": {
+    "docs/118_unblinding_reporting_plan.md": "e3b342e75cfee99a062d67b6cdfe16d3c614dad9b5b4c7333ab89ccee8203abb",
+    "experiments/runs/v3_unblind_freeze/selftest_independent_check.json": "17da44e69df3c053a1139b2d676303816e2876b17af80d3acbf050d722efa58f",
+    "experiments/runs/v3_unblind_freeze/selftest_unblinding_run.json": "7a477fd1cfdd13740e1987a3450464861a8a2ba50d25b862dd6c59262eb0842a",
+    "v3_Multimodal/config/unblinding_plan_v1.json": "d5aa594b630992fd10739573409a2008227db72a843f310b001b9ca24ce59764",
+    "v3_Multimodal/src/unblinding_independent_check.py": "10075502901efbcc370edad527169dd8da5928a2abfd6bb799fc4d4a5700939e",
+    "v3_Multimodal/src/unblinding_run.py": "84f773596a01cf3fdc93334ca2f01af977d24e939a911be42f464b3f95cc3737",
+    "v3_Multimodal/src/unblinding_watchdog.py": "334eced17a6db4925c8f9011acc5e28cb326f7081aedb0e0102b8414cdd6fd3e"
+  },
+  "gates_end": {
+    "access_eq_start": true,
+    "counts_eq_start": true,
+    "fingerprints_eq_start": true
+  },
+  "gates_start": {
+    "access_lines_eq": true,
+    "counts_eq": true,
+    "fingerprints_eq": true,
+    "sealed_dirs_glob_equal": true
+  },
+  "instruction": "docs/119_pre_unblinding_audit_v3_prompt_for_vscode.md",
+  "leak_hits": [],
+  "ledgers": {
+    "doc45_rows": 16,
+    "fll_rows": 19,
+    "fll_without_doc45_row": [],
+    "ledger_flr_keys": 6,
+    "ledger_flr_rows": 4,
+    "note": "원기록 보존 + 출처 표시 대조표 — 새 행 추가 0. 부호 열은 전재하지 않는다(시각·블록·반복 키만).",
+    "rows_added": 0,
+    "table": [
+      {
+        "block": null,
+        "doc45_line": 227,
+        "fll_index": [
+          0,
+          1
+        ],
+        "ledger_flr_index": [
+          0
+        ],
+        "no_match_reason": null,
+        "repeat": "1",
+        "ts": [
+          "2026-07-27 10:55",
+          "2026-07-27 11:17"
+        ]
+      },
+      {
+        "block": null,
+        "doc45_line": 228,
+        "fll_index": [
+          2,
+          3
+        ],
+        "ledger_flr_index": [
+          1
+        ],
+        "no_match_reason": null,
+        "repeat": "2",
+        "ts": [
+          "2026-07-27 22:14"
+        ]
+      },
+      {
+        "block": null,
+        "doc45_line": 229,
+        "fll_index": [
+          4,
+          5
+        ],
+        "ledger_flr_index": [
+          2
+        ],
+        "no_match_reason": null,
+        "repeat": "3",
+        "ts": [
+          "2026-07-27 22:14"
+        ]
+      },
+      {
+        "block": null,
+        "doc45_line": 230,
+        "fll_index": [
+          6
+        ],
+        "ledger_flr_index": [
+          3
+        ],
+        "no_match_reason": null,
+        "repeat": "consensus",
+        "ts": [
+          "2026-07-27 22:14"
+        ]
+      },
+      {
+        "block": "H",
+        "doc45_line": 231,
+        "fll_index": [
+          7
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-08-02 20:43"
+        ]
+      },
+      {
+        "block": "I",
+        "doc45_line": 232,
+        "fll_index": [
+          8
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-08-04 01:20"
+        ]
+      },
+      {
+        "block": "L",
+        "doc45_line": 233,
+        "fll_index": [
+          9
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-08-05 08:36"
+        ]
+      },
+      {
+        "block": "O",
+        "doc45_line": 234,
+        "fll_index": [
+          10
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-08-06 18:43"
+        ]
+      },
+      {
+        "block": "P",
+        "doc45_line": 235,
+        "fll_index": [
+          11
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-08-06 23:34"
+        ]
+      },
+      {
+        "block": "Z",
+        "doc45_line": 236,
+        "fll_index": [
+          12
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-08-08 16:45"
+        ]
+      },
+      {
+        "block": "AW",
+        "doc45_line": 237,
+        "fll_index": [
+          13
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-09-27 23:30"
+        ]
+      },
+      {
+        "block": "AX",
+        "doc45_line": 238,
+        "fll_index": [
+          14
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-09-28 09:55"
+        ]
+      },
+      {
+        "block": "AY",
+        "doc45_line": 239,
+        "fll_index": [
+          15
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-10-01 02:50"
+        ]
+      },
+      {
+        "block": "AZ",
+        "doc45_line": 240,
+        "fll_index": [
+          16
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-10-04 04:52"
+        ]
+      },
+      {
+        "block": "BA",
+        "doc45_line": 241,
+        "fll_index": [
+          17
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-10-04 11:17"
+        ]
+      },
+      {
+        "block": "BB",
+        "doc45_line": 242,
+        "fll_index": [
+          18
+        ],
+        "ledger_flr_index": [],
+        "no_match_reason": null,
+        "repeat": null,
+        "ts": [
+          "2026-10-04 14:43"
+        ]
+      }
+    ]
+  },
+  "live_scan": {
+    "n_artifacts": 801,
+    "n_files": 826,
+    "n_sealed_dirs": 39,
+    "sealed_dirs_glob_equal": true
+  },
+  "n_blocking": 1,
+  "nonblocking": [
+    {
+      "code": "no_creation_hash",
+      "first_baseline_sha16": "a756ca42371bdb8f",
+      "path": "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/env_fingerprint.json"
+    },
+    {
+      "code": "no_creation_hash",
+      "first_baseline_sha16": "ca588703c42d5ceb",
+      "path": "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/train_stdout.log"
+    },
+    {
+      "code": "no_creation_hash",
+      "first_baseline_sha16": "ce8096df00c05794",
+      "path": "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/env_fingerprint.json"
+    },
+    {
+      "code": "no_creation_hash",
+      "first_baseline_sha16": "de09926449cf0635",
+      "path": "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/train_stdout.log"
+    },
+    {
+      "code": "no_creation_hash",
+      "first_baseline_sha16": "b202a3ba126a15c2",
+      "path": "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/env_fingerprint.json"
+    },
+    {
+      "code": "no_creation_hash",
+      "first_baseline_sha16": "e050d55884c11f36",
+      "path": "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/train_stdout.log"
+    },
+    {
+      "code": "no_creation_hash",
+      "first_baseline_sha16": "d0e83a3172c01306",
+      "path": "experiments/runs/v3_gin_stability/_sealed/env_fingerprint.json"
+    },
+    {
+      "code": "no_creation_hash",
+      "first_baseline_sha16": "7c78ec05cefb82b4",
+      "path": "experiments/runs/v3_gin_stability/_sealed/train_stdout.log"
+    },
+    {
+      "code": "rd_verbatim_absent",
+      "plan": false,
+      "reporting_plan": false
+    }
+  ],
+  "obs_expected_post_counts": {
+    "at_118_stat": {
+      "n_access_log": 30,
+      "n_sealed_artifacts": 801,
+      "n_sealed_dirs": 39,
+      "n_sealed_files_total": 831
+    },
+    "note": "이름과 달리 「118 시점 값으로 계산한 개봉 후 예상치」(118 시점 실측 n_access_log 25 · n_sealed_files_total 826 · 그 뒤 트리 5개에 access.log 신규 생성분 반영). 동결물이라 수정 0 · 해석 주석만."
+  },
+  "oog": {
+    "access_logs": {
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/access.log": {
+        "n_human_exposure_true": 0,
+        "n_type_not_machine_read": 0
+      }
+    },
+    "conditions": {
+      "a_all_expected_copies_byte_identical": true,
+      "b_access_log_machine_only": true,
+      "c_no_other_files": true,
+      "d_copies_covered_by_ao": true
+    },
+    "copies": [
+      {
+        "copy_path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M2b.npz",
+        "original_path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz",
+        "sha16": "350fa12fac84ef4c"
+      },
+      {
+        "copy_path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M2b.npz",
+        "original_path": "experiments/runs/v3_null_probe/_sealed/oof_M2b_identity.npz",
+        "sha16": "350fa12fac84ef4c"
+      },
+      {
+        "copy_path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/metrics_full.json",
+        "original_path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json",
+        "sha16": "8722a4e1c52d2eae"
+      },
+      {
+        "copy_path": "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M1b.npz",
+        "original_path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz",
+        "sha16": "b2a61ba846eead5f"
+      }
+    ],
+    "copy_files": [
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/metrics_full.json",
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M1b.npz",
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M2b.npz"
+    ],
+    "files_in_sealed_named_dirs": [
+      "backup/v3_sealed_backup_20260727/SHA256SUMS.txt",
+      "backup/v3_sealed_backup_20260727/provenance/first_look_log.json",
+      "backup/v3_sealed_backup_20260727/provenance/ledger.json",
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/access.log",
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/metrics_full.json",
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M1b.npz",
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed/oof_M2b.npz"
+    ],
+    "n_files_hashed": 374,
+    "n_files_scanned": 131770,
+    "rule": "ⓐ 모든 사본이 live 봉인 원본과 바이트 동일 ⓑ 사본 디렉터리 access.log 에 human_exposure true 0 · type 이 machine_read 만 ⓒ sealed 이름 디렉터리 안에 기대 7파일 말고 다른 파일 0 ⓓ 사본 파일 3개가 전부 AO-5 에서 이미 대조된 원본에 대응 — 모두 만족하면 non_blocking_recorded, 하나라도 어기면 blocking.",
+    "sealed_named_dirs": [
+      "backup/v3_sealed_backup_20260727",
+      "backup/v3_sealed_backup_20260727/rep1_seed201_sealed"
+    ],
+    "verdict": "non_blocking_recorded"
+  },
+  "ops": {
+    "a_holm8_resume": {
+      "last_heartbeat_ckpt_eq_sealed_current": true,
+      "last_heartbeat_ckpt_sha16": "b298c01bc18c0473",
+      "launches_match_manifest": true,
+      "manifest_n_launches": 2,
+      "manifest_n_resumes": 1,
+      "n_checkpoint_events": 100,
+      "n_ckpt_sha_consecutive_repeat": 0,
+      "n_ckpt_sha_distinct": 100,
+      "n_counter_duplicates": 0,
+      "n_counter_gaps": 0,
+      "n_heartbeat_events": 125,
+      "n_resume_events": 1,
+      "resume_step_at": "v3_Multimodal/src/rqint_holm8_run.py:832",
+      "resumes_match_manifest": true,
+      "rng_replay_check_at": "v3_Multimodal/src/rqint_holm8_run.py:819",
+      "rng_replay_note": "재개 줄(R4b resume)은 하네스가 난수 state 재생 대조(InvalidRun 분기)를 통과한 뒤에만 기록한다 — 대조 값 자체는 기록되지 않으며 본 감사는 문자열 존재와 소스 순서만 본다.",
+      "rng_replay_record_present": true,
+      "runlog_launches": [
+        1,
+        2
+      ],
+      "runlog_resume_lines": [
+        102
+      ],
+      "sealed_checkpoint_current_sha16": "b298c01bc18c0473"
+    },
+    "b_holm8_watchdog": {
+      "child_launch_index_unique": true,
+      "child_pid_unique": true,
+      "events_sha256": "2b7a47948372776ebe0f42ae14ea3b889551d0b6abeda988f43c500c933d7238",
+      "events_sha_matches_expected": true,
+      "heartbeat_run_ids": [
+        "AY-2026-09-28T20:30:53+09:00"
+      ],
+      "launch_index_unique": true,
+      "manifest_run_id": "AY-2026-09-28T20:30:53+09:00",
+      "n_child_started": 2,
+      "n_events": 21,
+      "n_launch_events": 2,
+      "n_watchdog_start": 6,
+      "single_writer": true,
+      "watchdog_start_launch_index": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    "c_ay_phaseA_deviations": {
+      "entries": [
+        {
+          "is_deviation": true,
+          "line": 197,
+          "no": 1
+        },
+        {
+          "is_deviation": true,
+          "line": 201,
+          "no": 2
+        },
+        {
+          "is_deviation": true,
+          "line": 202,
+          "no": 3
+        },
+        {
+          "is_deviation": true,
+          "line": 205,
+          "no": 4
+        },
+        {
+          "is_deviation": true,
+          "line": 208,
+          "no": 5
+        },
+        {
+          "is_deviation": true,
+          "line": 211,
+          "no": 6
+        },
+        {
+          "is_deviation": true,
+          "line": 212,
+          "no": 7
+        },
+        {
+          "is_deviation": true,
+          "line": 215,
+          "no": 8
+        },
+        {
+          "is_deviation": true,
+          "line": 216,
+          "no": 9
+        },
+        {
+          "is_deviation": true,
+          "line": 219,
+          "no": 10
+        },
+        {
+          "is_deviation": true,
+          "line": 220,
+          "no": 11
+        },
+        {
+          "is_deviation": true,
+          "line": 221,
+          "no": 12
+        },
+        {
+          "is_deviation": false,
+          "line": 222,
+          "no": 13
+        },
+        {
+          "is_deviation": false,
+          "line": 226,
+          "no": 14
+        }
+      ],
+      "n_deviation": 12,
+      "occurred_report_line": "Claude Code (VS Code) · Phase A 2026-09-28 11:19 ~ 12:05 KST",
+      "recorded_item": 71,
+      "recorded_item_header_line": 2347,
+      "recorded_ts_kst": "2026-10-02 00:38:56",
+      "report": "docs/115_rqint_holm8_mainrun_report.md",
+      "spec_item": 73,
+      "spec_item_matches_found": false
+    },
+    "d_d12_watchdog_semantics": {
+      "events_sha256": "de704ae86742d23eaf5a976936b01ac24de44ac733bb2e1d34d494b786b07164",
+      "events_sha_matches_expected": true,
+      "records": [
+        {
+          "event": "completed",
+          "heartbeat_checkpoint_event_index": [
+            206
+          ],
+          "heartbeat_checkpoint_phase": [
+            "coins"
+          ],
+          "later_variant_done_index": [
+            207
+          ],
+          "matches_current_sealed": [],
+          "sha16": "1e55328b77b8dc9e",
+          "source": "watchdog",
+          "superseded_by_later_write": true,
+          "variant": "ii",
+          "watchdog_source_rule_at": "v3_Multimodal/src/rqint_d12_watchdog.py:159"
+        },
+        {
+          "event": "variant_done",
+          "matches_current_sealed": [
+            "checkpoint_i.npz"
+          ],
+          "sha16": "135e6960bf9f4dca",
+          "source": "heartbeat",
+          "variant": "i"
+        },
+        {
+          "event": "variant_done",
+          "matches_current_sealed": [
+            "checkpoint_ii.npz"
+          ],
+          "sha16": "38c5665b7bf0b544",
+          "source": "heartbeat",
+          "variant": "ii"
+        }
+      ]
+    },
+    "e_ba_wc_l": {
+      "correction_text": "봉인 파일 판독 발생 · 구조 정보(줄 수) 사람 노출",
+      "doc33_item": 74,
+      "doc33_lines": [
+        2460
+      ],
+      "targets": [
+        "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/checkpoint.jsonl",
+        "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/checkpoint.jsonl",
+        "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/checkpoint.jsonl",
+        "experiments/runs/v3_gin_stability/_sealed/checkpoint.jsonl"
+      ],
+      "targets_status": {
+        "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/checkpoint.jsonl": "ok",
+        "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/checkpoint.jsonl": "ok",
+        "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/checkpoint.jsonl": "ok",
+        "experiments/runs/v3_gin_stability/_sealed/checkpoint.jsonl": "ok"
+      },
+      "targets_unchanged": true
+    },
+    "f_ba_impl_decisions": {
+      "I1": {
+        "doc33_lines": [
+          2445,
+          2449,
+          2453,
+          2470
+        ],
+        "report_lines": []
+      },
+      "I2": {
+        "doc33_lines": [
+          2454
+        ],
+        "report_lines": []
+      },
+      "I3": {
+        "doc33_lines": [
+          2455
+        ],
+        "report_lines": []
+      },
+      "I4": {
+        "doc33_lines": [
+          2456,
+          2470
+        ],
+        "report_lines": []
+      },
+      "I5": {
+        "doc33_lines": [
+          2457
+        ],
+        "report_lines": [
+          78
+        ]
+      },
+      "I6": {
+        "doc33_lines": [
+          2445,
+          2449,
+          2458,
+          2470
+        ],
+        "report_lines": []
+      },
+      "_note": "판단은 cowork 검토 대상 — 러너는 근거 줄 위치만 인용(문면 미전재)."
+    }
+  },
+  "projection": {
+    "_secondary_deferred": {
+      "n": 18,
+      "n_consistent": 18
+    },
+    "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/checkpoint.jsonl": {
+      "checkpoint_sha_matches_recorder": true,
+      "format_ok": true,
+      "n_conflicting_duplicates": 0,
+      "n_distinct_units": 105,
+      "n_duplicate_rows": 0,
+      "n_expected_partials": 105,
+      "n_rep_field_mismatch": 0,
+      "n_rows": 105,
+      "names_eq_grid": true
+    },
+    "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/checkpoint.jsonl": {
+      "checkpoint_sha_matches_recorder": true,
+      "format_ok": true,
+      "n_conflicting_duplicates": 0,
+      "n_distinct_units": 105,
+      "n_duplicate_rows": 0,
+      "n_expected_partials": 105,
+      "n_rep_field_mismatch": 0,
+      "n_rows": 105,
+      "names_eq_grid": true
+    },
+    "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/checkpoint.jsonl": {
+      "checkpoint_sha_matches_recorder": true,
+      "format_ok": true,
+      "n_conflicting_duplicates": 0,
+      "n_distinct_units": 105,
+      "n_duplicate_rows": 0,
+      "n_expected_partials": 105,
+      "n_rep_field_mismatch": 0,
+      "n_rows": 105,
+      "names_eq_grid": true
+    }
+  },
+  "rd": {
+    "checklist_item": [
+      "개봉·판정 블록 문면이 보정 전 경계 일치를 보정 후 판정으로 확대 서술하지 않는지 점검 (검토자 R-d · 2026-09-29)"
+    ],
+    "n_not_applicable_b_only": 14,
+    "n_target_sentences": 0,
+    "n_violation": 0,
+    "not_applicable_a_only": [
+      {
+        "excerpt": "강한 null(각 family 내부 arm 라벨이 군 단위 교환 가능)을 부과하는 공유 동전 군 단위 교환 검정 · 검정 대상은 약한 null(Δ_RF = Δ_GIN) · 약한 null 하 1종오류는 R1 사전지정 ",
+        "loc": "v3_Multimodal/config/unblinding_plan_v1.json:reporting_text/null_hypothesis_rqint_verbatim"
+      },
+      {
+        "excerpt": "> 강한 null(각 family 내부 arm 라벨이 군 단위 교환 가능)을 부과하는 공유 동전 군 단위 교환 검정 · 검정 대상은 약한 null(Δ_RF = Δ_GIN) · 약한 null 하 1종오류는 R1 사전지",
+        "loc": "docs/118_unblinding_reporting_plan.md:132"
+      },
+      {
+        "excerpt": "| §8 Power simulation | item | T-REPORT — 개봉 전 완료(docs/94 R1) · D19 축자 문장으로 보고 |",
+        "loc": "docs/118_unblinding_reporting_plan.md:253"
+      }
+    ],
+    "rule": "대상 = (R1|캘리브레이션|구현식|1종오류) ∧ (경계|일치|승계) 동시 등장 문장 · 적합 = 「보정 전」 한정어 있고 Holm 보정 후 판정과 동일/승계라고(부정어 없이) 서술하지 않음 · 한쪽 키워드만 = 비해당(판정 cowork)",
+    "targets": [],
+    "verbatim_r_d_in_plan_reporting_text": false,
+    "verbatim_r_d_in_reporting_plan": false
+  },
+  "real_gates_end": {
+    "f2_access_lines": true,
+    "f2_counts": true,
+    "f2_fingerprints": true,
+    "f2_sealed_bytes": true,
+    "f4_freeze_manifest": true,
+    "f4_frozen_7": true,
+    "f4_other": true,
+    "flags": true,
+    "git_commits": true,
+    "git_head": true,
+    "git_modified": true,
+    "no_compute_lock": true,
+    "no_index_lock": true,
+    "output_dirs": true,
+    "pycache_dirs": true,
+    "stale_lock_lines": true
+  },
+  "real_gates_start": {
+    "f2_access_lines": true,
+    "f2_counts": true,
+    "f2_fingerprints": true,
+    "f2_sealed_bytes": true,
+    "f4_freeze_manifest": true,
+    "f4_frozen_7": true,
+    "f4_other": true,
+    "flags": true,
+    "git_commits": true,
+    "git_head": true,
+    "git_modified": true,
+    "no_compute_lock": true,
+    "no_index_lock": true,
+    "output_dirs": true,
+    "pycache_dirs": true,
+    "stale_lock_lines": true
+  },
+  "schema_fails": [],
+  "script_sha256": "f750f457e254fce0f285339b5f0f8dc16a65140b668c18572e8ed7f74fad121e",
+  "selftest_sha256": "0206118188c544258d8513a29752da8d3cd65fb2a7ecaf29f33c5317a54052b8",
+  "sign": {
+    "n_fll_entries": 19,
+    "n_fll_sign_known": 4,
+    "n_new_sign_known_since_ao": 0,
+    "rule": "AO sign_disclosure_consistency 와 같은 규칙 — 부호 값 출력 0 · 개수·시각만",
+    "sdm_len_rows": 4,
+    "sdm_n_rows_field": 4,
+    "sdm_row_sources_eq_fll_sign_known": true,
+    "sdm_sha256": "147d5d5f62edf84a10f31f7395237f2790e350711fd9f76dada24f067a11ff51",
+    "sdm_sha_matches_expected": true,
+    "sign_known_ts_kst": [
+      "2026-07-27 10:55:31 KST",
+      "2026-07-27 21:29:01 KST",
+      "2026-07-27 21:51:47 KST",
+      "2026-07-27 22:14:40 KST"
+    ],
+    "three_values_agree": true
+  },
+  "status_counts": {
+    "no_creation_hash": 8,
+    "ok": 793
+  },
+  "verdict": "FAIL",
+  "y4": [
+    {
+      "bytes": 1549,
+      "existence_evidence_at": "v3_Multimodal/src/confirmatory_gin_train.py:378",
+      "mtime_kst": "2026-09-21 16:31:08.613 KST",
+      "mtime_ns": 1789975868613406158,
+      "path": "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/env_fingerprint.json",
+      "sha16": "a756ca42371bdb8f"
+    },
+    {
+      "bytes": 26342,
+      "existence_evidence_at": "v3_Multimodal/src/confirmatory_gin_train.py:378",
+      "mtime_kst": "2026-09-21 21:02:22.379 KST",
+      "mtime_ns": 1789992142379873686,
+      "path": "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/train_stdout.log",
+      "sha16": "ca588703c42d5ceb"
+    },
+    {
+      "bytes": 1549,
+      "existence_evidence_at": "v3_Multimodal/src/confirmatory_gin_train.py:378",
+      "mtime_kst": "2026-09-21 21:02:22.522 KST",
+      "mtime_ns": 1789992142522687162,
+      "path": "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/env_fingerprint.json",
+      "sha16": "ce8096df00c05794"
+    },
+    {
+      "bytes": 27063,
+      "existence_evidence_at": "v3_Multimodal/src/confirmatory_gin_train.py:378",
+      "mtime_kst": "2026-09-22 02:37:37.471 KST",
+      "mtime_ns": 1790012257471312786,
+      "path": "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/train_stdout.log",
+      "sha16": "de09926449cf0635"
+    },
+    {
+      "bytes": 1549,
+      "existence_evidence_at": "v3_Multimodal/src/confirmatory_gin_train.py:378",
+      "mtime_kst": "2026-09-22 02:37:37.567 KST",
+      "mtime_ns": 1790012257567938215,
+      "path": "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/env_fingerprint.json",
+      "sha16": "b202a3ba126a15c2"
+    },
+    {
+      "bytes": 26002,
+      "existence_evidence_at": "v3_Multimodal/src/confirmatory_gin_train.py:378",
+      "mtime_kst": "2026-09-22 07:14:11.726 KST",
+      "mtime_ns": 1790028851726470974,
+      "path": "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/train_stdout.log",
+      "sha16": "e050d55884c11f36"
+    },
+    {
+      "bytes": 1958,
+      "existence_evidence_at": "v3_Multimodal/src/confirmatory_gin_stability.py:467",
+      "mtime_kst": "2026-09-22 23:48:56.888 KST",
+      "mtime_ns": 1790088536888902400,
+      "path": "experiments/runs/v3_gin_stability/_sealed/env_fingerprint.json",
+      "sha16": "d0e83a3172c01306"
+    },
+    {
+      "bytes": 10634,
+      "existence_evidence_at": "v3_Multimodal/src/confirmatory_gin_stability.py:467",
+      "mtime_kst": "2026-09-23 01:45:35.703 KST",
+      "mtime_ns": 1790095535703567147,
+      "path": "experiments/runs/v3_gin_stability/_sealed/train_stdout.log",
+      "sha16": "7c78ec05cefb82b4"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+2026-10-04 13:26:55.086 KST	verify	start	gate S0 passed · lock acquired
+2026-10-04 13:26:55.282 KST	verify	I-3	consistency PASS · drugs 1092 · scaffold groups 732 · cross 0 · rare-PT 0 · fold sizes {"rep1": [218, 218, 219, 218, 219], "rep2": [218, 218, 219, 218, 219], "rep3": [218, 218, 219, 218, 219]}
+2026-10-04 13:26:55.411 KST	verify	J6a	dev split train 873 · dims {"B_m1b_pchembl": 13, "B_fam_selfclust": 835, "M1b_pchembl": 2063, "M2b_pchembl": 2127, "P-FAM_selfclust": 2895} · match True
+2026-10-04 13:30:00.875 KST	verify	J6b	P-FAM rep1 fold0 harness vs block-I bytes identical True · dim 2102
+2026-10-04 13:31:32.732 KST	verify	F6	access.log +1 line (machine_read) · ts 2026-10-04 13:31:32.732 KST
+2026-10-04 13:31:32.737 KST	verify	F6	M2b rep1 fold0 (218 rows · dim 2124) byte_identical True
+2026-10-04 13:31:32.738 KST	verify	done	_equivalence 2 files written · wall 278s
+2026-10-04 13:33:40.308 KST	start	session 1 · done 0/45 · models 3 · repeats 3 · folds 5
+2026-10-04 13:35:13.761 KST	fit	M1b_pchembl rep1 fold0 · train 874 test 218 · dim 2063 · leak 0 · wall 93s · 1/45
+2026-10-04 13:36:46.056 KST	fit	M1b_pchembl rep1 fold1 · train 874 test 218 · dim 2063 · leak 0 · wall 92s · 2/45
+2026-10-04 13:38:18.070 KST	fit	M1b_pchembl rep1 fold2 · train 873 test 219 · dim 2063 · leak 0 · wall 92s · 3/45
+2026-10-04 13:39:50.168 KST	fit	M1b_pchembl rep1 fold3 · train 874 test 218 · dim 2063 · leak 0 · wall 92s · 4/45
+2026-10-04 13:41:22.322 KST	fit	M1b_pchembl rep1 fold4 · train 873 test 219 · dim 2063 · leak 0 · wall 92s · 5/45
+2026-10-04 13:42:54.312 KST	fit	M1b_pchembl rep2 fold0 · train 874 test 218 · dim 2063 · leak 0 · wall 92s · 6/45
+2026-10-04 13:44:26.357 KST	fit	M1b_pchembl rep2 fold1 · train 874 test 218 · dim 2063 · leak 0 · wall 92s · 7/45
+2026-10-04 13:45:58.930 KST	fit	M1b_pchembl rep2 fold2 · train 873 test 219 · dim 2063 · leak 0 · wall 93s · 8/45
+2026-10-04 13:47:31.411 KST	fit	M1b_pchembl rep2 fold3 · train 874 test 218 · dim 2063 · leak 0 · wall 92s · 9/45
+2026-10-04 13:49:03.504 KST	fit	M1b_pchembl rep2 fold4 · train 873 test 219 · dim 2063 · leak 0 · wall 92s · 10/45
+2026-10-04 13:50:35.743 KST	fit	M1b_pchembl rep3 fold0 · train 874 test 218 · dim 2063 · leak 0 · wall 92s · 11/45
+2026-10-04 13:52:07.871 KST	fit	M1b_pchembl rep3 fold1 · train 874 test 218 · dim 2063 · leak 0 · wall 92s · 12/45
+2026-10-04 13:53:39.929 KST	fit	M1b_pchembl rep3 fold2 · train 873 test 219 · dim 2063 · leak 0 · wall 92s · 13/45
+2026-10-04 13:55:11.996 KST	fit	M1b_pchembl rep3 fold3 · train 874 test 218 · dim 2063 · leak 0 · wall 92s · 14/45
+2026-10-04 13:56:44.005 KST	fit	M1b_pchembl rep3 fold4 · train 873 test 219 · dim 2063 · leak 0 · wall 92s · 15/45
+2026-10-04 13:58:16.131 KST	fit	M2b_pchembl rep1 fold0 · train 874 test 218 · dim 2127 · leak 0 · wall 92s · 16/45
+2026-10-04 13:59:48.070 KST	fit	M2b_pchembl rep1 fold1 · train 874 test 218 · dim 2127 · leak 0 · wall 92s · 17/45
+2026-10-04 14:01:23.559 KST	fit	M2b_pchembl rep1 fold2 · train 873 test 219 · dim 2127 · leak 0 · wall 95s · 18/45
+2026-10-04 14:02:59.079 KST	fit	M2b_pchembl rep1 fold3 · train 874 test 218 · dim 2127 · leak 0 · wall 96s · 19/45
+2026-10-04 14:04:34.855 KST	fit	M2b_pchembl rep1 fold4 · train 873 test 219 · dim 2127 · leak 0 · wall 96s · 20/45
+2026-10-04 14:06:08.701 KST	fit	M2b_pchembl rep2 fold0 · train 874 test 218 · dim 2127 · leak 0 · wall 94s · 21/45
+2026-10-04 14:07:41.674 KST	fit	M2b_pchembl rep2 fold1 · train 874 test 218 · dim 2127 · leak 0 · wall 93s · 22/45
+2026-10-04 14:09:14.784 KST	fit	M2b_pchembl rep2 fold2 · train 873 test 219 · dim 2127 · leak 0 · wall 93s · 23/45
+2026-10-04 14:10:47.305 KST	fit	M2b_pchembl rep2 fold3 · train 874 test 218 · dim 2127 · leak 0 · wall 93s · 24/45
+2026-10-04 14:12:19.898 KST	fit	M2b_pchembl rep2 fold4 · train 873 test 219 · dim 2127 · leak 0 · wall 93s · 25/45
+2026-10-04 14:13:55.096 KST	fit	M2b_pchembl rep3 fold0 · train 874 test 218 · dim 2127 · leak 0 · wall 95s · 26/45
+2026-10-04 14:15:29.161 KST	fit	M2b_pchembl rep3 fold1 · train 874 test 218 · dim 2127 · leak 0 · wall 94s · 27/45
+2026-10-04 14:17:03.987 KST	fit	M2b_pchembl rep3 fold2 · train 873 test 219 · dim 2127 · leak 0 · wall 95s · 28/45
+2026-10-04 14:18:36.393 KST	fit	M2b_pchembl rep3 fold3 · train 874 test 218 · dim 2127 · leak 0 · wall 92s · 29/45
+2026-10-04 14:20:08.324 KST	fit	M2b_pchembl rep3 fold4 · train 873 test 219 · dim 2127 · leak 0 · wall 92s · 30/45
+2026-10-04 14:21:41.102 KST	fit	P-FAM_selfclust rep1 fold0 · train 874 test 218 · dim 2900 · leak 0 · wall 93s · 31/45
+2026-10-04 14:23:13.754 KST	fit	P-FAM_selfclust rep1 fold1 · train 874 test 218 · dim 2887 · leak 0 · wall 93s · 32/45
+2026-10-04 14:24:46.245 KST	fit	P-FAM_selfclust rep1 fold2 · train 873 test 219 · dim 2900 · leak 0 · wall 92s · 33/45
+2026-10-04 14:26:19.229 KST	fit	P-FAM_selfclust rep1 fold3 · train 874 test 218 · dim 2894 · leak 0 · wall 93s · 34/45
+2026-10-04 14:27:51.910 KST	fit	P-FAM_selfclust rep1 fold4 · train 873 test 219 · dim 2908 · leak 0 · wall 93s · 35/45
+2026-10-04 14:29:24.569 KST	fit	P-FAM_selfclust rep2 fold0 · train 874 test 218 · dim 2918 · leak 0 · wall 93s · 36/45
+2026-10-04 14:30:57.215 KST	fit	P-FAM_selfclust rep2 fold1 · train 874 test 218 · dim 2882 · leak 0 · wall 93s · 37/45
+2026-10-04 14:32:29.738 KST	fit	P-FAM_selfclust rep2 fold2 · train 873 test 219 · dim 2893 · leak 0 · wall 93s · 38/45
+2026-10-04 14:34:02.501 KST	fit	P-FAM_selfclust rep2 fold3 · train 874 test 218 · dim 2894 · leak 0 · wall 93s · 39/45
+2026-10-04 14:35:35.205 KST	fit	P-FAM_selfclust rep2 fold4 · train 873 test 219 · dim 2903 · leak 0 · wall 93s · 40/45
+2026-10-04 14:37:07.899 KST	fit	P-FAM_selfclust rep3 fold0 · train 874 test 218 · dim 2881 · leak 0 · wall 93s · 41/45
+2026-10-04 14:38:40.854 KST	fit	P-FAM_selfclust rep3 fold1 · train 874 test 218 · dim 2898 · leak 0 · wall 93s · 42/45
+2026-10-04 14:40:13.545 KST	fit	P-FAM_selfclust rep3 fold2 · train 873 test 219 · dim 2913 · leak 0 · wall 93s · 43/45
+2026-10-04 14:41:46.350 KST	fit	P-FAM_selfclust rep3 fold3 · train 874 test 218 · dim 2882 · leak 0 · wall 93s · 44/45
+2026-10-04 14:43:19.217 KST	fit	P-FAM_selfclust rep3 fold4 · train 873 test 219 · dim 2908 · leak 0 · wall 93s · 45/45
+2026-10-04 14:43:19.217 KST	fits	all 45 fits complete · new this session 45
+2026-10-04 14:43:19.859 KST	seal	repeat OOF files 9
+2026-10-04 14:43:20.162 KST	seal	consensus files 3 · newly written 12
+2026-10-04 14:43:20.684 KST	public	manifest_public · sealed files 61 · sessions 1

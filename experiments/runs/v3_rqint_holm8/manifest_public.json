@@ -1,0 +1,79 @@
+{
+  "_doc": "블록 AY (docs/115) 공개 manifest — 개수·환경·검증 불리언·봉인 파일 이름/바이트/sha256·시간뿐. 값은 기록하지 않는다.",
+  "block": "AY (docs/115)",
+  "provenance": "confirmatory_sealed",
+  "run_id": "AY-2026-09-28T20:30:53+09:00",
+  "n_coin_vectors": 100000,
+  "n_reference": 200000,
+  "n_audit": 1000,
+  "n_launches": 2,
+  "n_resumes": 1,
+  "n_checkpoints": 100,
+  "n_sealed_files": 4,
+  "n_groups": 732,
+  "n_input_matrices": 8,
+  "completed": true,
+  "sealed_files": [
+    {
+      "name": "_sealed/checkpoint.npz",
+      "bytes": 808056,
+      "sha256": "b298c01bc18c0473f7b4010989ecc0190659668444fc7a44bb926a1d86f7fc6d"
+    },
+    {
+      "name": "_sealed/t_star.npy",
+      "bytes": 800128,
+      "sha256": "7882a95c6648686a97a18df0283fb861fe733cca2cf77fedcd5b49b85ed3f0d4"
+    },
+    {
+      "name": "_sealed/holm8_result.json",
+      "bytes": 3337,
+      "sha256": "4cf3b79b66e5a76dd3b5baae2495678e7ad00a40611f003a2579d78e3e807913"
+    },
+    {
+      "name": "_sealed/d9_bca_result.json",
+      "bytes": 4283,
+      "sha256": "5eeacc66945eb8e344f8ef2fdb2fd95869d13e359161e197a246482354170abd"
+    }
+  ],
+  "input_checks": {
+    "input_sha_all_match": true,
+    "cid_order_match": true,
+    "finite_inputs": true,
+    "observed_hex_match_block_ax": true,
+    "checkpoint_integrity_ok": true,
+    "sealed_end_counts_expected": true,
+    "conf_stab_fingerprints_unchanged": true
+  },
+  "power_history": {
+    "n_checkpoints_on_ac": 100,
+    "n_power_lost": 0
+  },
+  "wall_seconds_last_launch": 15021.7,
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "sklearn": "1.9.0",
+  "pandas": "3.0.3",
+  "threadpool_info": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "version": null
+    }
+  ],
+  "harness_sha256": "e1c4cf956c0ddb606ddf0d4440b3b85eecab4d2cc98d66468e07d0fa2b597288",
+  "watchdog_sha256": "fc84f5bd12e7448e5fa0285d99d7478b79934a3c882516c6518ffe0a70e848e2",
+  "selftest_sha256": "b0e019c73639c90910d74ef5d1527505744199974a8ebc0ef915d86c4aeb787a",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "amendment1_sha256": "63c29d6b6a9e22951f2e2891b54f4251d5e4f679fc1d3b3f110cfdf510aab05c",
+  "amendment2_sha256": "c8e1e2569e7f62fe14a49bdd5581baf3d2d9da9fb411e15099cd85a01bf1a3d8",
+  "values_disclosed": false,
+  "unblinding_performed": false,
+  "sealed_counts_end": {
+    "n_sealed_dirs": 32,
+    "n_sealed_files_total": 757,
+    "n_sealed_artifacts": 734,
+    "n_access_log": 23
+  },
+  "ts_completed_kst": "2026-10-01 02:50:35 KST"
+}

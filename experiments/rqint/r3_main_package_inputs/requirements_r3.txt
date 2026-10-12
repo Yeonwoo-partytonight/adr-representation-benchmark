@@ -1,0 +1,8 @@
+# R3 본 실행 환경 (블록 AP · docs/104)
+#
+# 지난번 점검(r3_package) 때 만든 가상환경(r3env)을 그대로 쓰시면 새로 설치할 것이 없습니다.
+# 가상환경을 새로 만드실 때만 아래 명령으로 설치해 주세요.
+#   python -m pip install -r requirements_r3.txt
+
+numpy==2.5.0
+scikit-learn==1.9.0

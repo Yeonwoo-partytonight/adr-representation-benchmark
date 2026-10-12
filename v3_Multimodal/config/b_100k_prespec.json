@@ -1,0 +1,117 @@
+{
+  "block": "AJ (docs/98) — (가) 해석 실주행: 동전 100,000 · 24h 하드 캡",
+  "purpose": "블록 AI 의 측정 전 동결본 `b_dryrun_prespec.json` 이 규정한 `extrapolation_policy.rule_inside_band`(밴드 안이면 외삽 금지 → 실주행 + 24h 하드 캡) 를 그대로 이행해 (가) 해석의 24h 판정을 실측으로 완결한다. 계측·판정까지만이며 `B` 정의 채택은 R2 소관.",
+  "frozen_at_kst": "2026-08-22T22:12:40+09:00",
+  "sap_registration": false,
+  "sap_registration_note": "SAP 등재 아님 — 본 파일은 SAP 1.1 manifest 를 건드리지 않는다. `sap_version` 1.1 유지 · manifest 0바이트.",
+  "supersedes_nothing": true,
+  "supersedes_nothing_note": "본 파일은 블록 AI 의 `b_dryrun_prespec.json`(sha256 9a2545eb0d897f30…) 을 **대체하지 않는다**. AI prespec 은 0바이트 무수정이며, 본 파일은 그 `contingency_if_premise_fails.action③` 이 상신으로 넘긴 **단 하나의 항목**(= 동전 100,000 실주행) 만을 규정하는 **델타 사전명시**다.",
+  "authorization": {
+    "chain": [
+      "① 정책 문면(측정 전 동결) — `b_dryrun_prespec.json` `extrapolation_policy.rule_inside_band` 축자 = \"밴드 안이면 외삽 금지 → 실주행 + 24h 하드 캡으로 판정한다.\"",
+      "② 밴드 안 판정(실측) — 동전 100,000 의 추정 벽시계 T̂ = 19.49 h(계단 외삽) · 19.58 h(50,000 실측의 2배 외삽) → 둘 다 사전명시 밴드 [18.0, 30.0] h 안.",
+      "③ 상신 — `contingency_if_premise_fails.action③`(측정 전 동결) 이 \"100,000 동전 실주행은 본 블록 예산 밖이므로 자체 판단으로 구성을 바꾸지 않는다 → 상신 사항으로 보고\" 라 규정했고 블록 AI 는 그대로 이행(docs/97 report §4-5·§6-1).",
+      "④ 승인 — 사용자가 2026-08-22 그 상신을 승인."
+    ],
+    "conclusion": "따라서 본 블록은 **동결된 정책이 지정한 이행**이지 결과를 보고 구성을 키운 사후 설계 변경이 아니다.",
+    "approved_on_kst": "2026-08-22",
+    "approved_by": "연구자(배연우)",
+    "instruction_doc": "docs/98_b_definition_100k_run_prompt_for_vscode.md"
+  },
+  "run_config": {
+    "n_coin_vectors": 100000,
+    "pair_complement": true,
+    "reference_distribution": 200000,
+    "complement_audit_draws": 1000,
+    "threads_limit": 1,
+    "cap_seconds": 86400
+  },
+  "seed_policy": {
+    "rep_seed": 860260813,
+    "coin_seed": 1760260813,
+    "rule": "블록 AI 결정적 드라이런의 `rep_seed` 를 **그대로 재사용**한다. 신규 추첨 0 · 파생 0.",
+    "why": [
+      "같은 `rep_seed` 면 합성점수 `synth_scores(y, rep_seed, C0강도)` 가 동일하므로 관측통계량 `T_obs`·`delta_rf`·`delta_gin` 이 동전 수와 **무관하게 바이트 동일**해야 한다.",
+      "동전 생성기가 `np.random.default_rng(coin_seed)` 단일 스트림이고 루프가 `for b in range(n_coin_vectors)` 직렬이므로, 100,000 동전 run 의 처음 50,000 동전은 50,000 동전 run 의 **연장(prefix 관계)** 이다.",
+      "따라서 b=50,000 시점의 러닝 카운트가 블록 AI 실측 **67,262** 와 정확히 일치해야 한다 — 추가 비용 0 으로 얻는 **강한 결정성 검증**이다."
+    ],
+    "no_new_draw": true
+  },
+  "determinism_checkpoint": {
+    "id": "AJ-2-b",
+    "definition": "동전 루프가 b = 50,000 에 도달한 시점까지의 참조분포(= 앞 50,000 동전 + 그 여집합, 크기 100,000) 기준 `count_abs_ge_obs`.",
+    "computation": "`rqint_test(..., return_perm=True)` 이 돌려주는 `perm` 의 앞 절반이 `t_star`(동전순 그대로)이므로 `t_star_50 = perm[:50000]`, `perm_50 = concat([t_star_50, -t_star_50])`, `count_50 = sum(|perm_50| >= |T_obs| - _EPS)` 로 **사후 정확 계산**한다. ★ `sap/rqint.py` 계측 삽입 0(동결 모듈 0바이트) — `return_perm` 은 기존 인자이고 계산값에 영향이 없다(`out['perm'] = perm` 만 추가).",
+    "expected_count_50k": 67262,
+    "expected_p_50k": 0.6726232737672623,
+    "on_mismatch": "즉시 중단·보고(결정성 위반). 자체 구제·재실행 0.",
+    "elapsed_at_b50000": "직접 계측하지 않는다 — 루프 내부 타임스탬프는 동결 모듈 계측 삽입을 요구하므로 금지. 대신 `t_synth + 50000·per_permutation_seconds + (b<50000 인 감사 draw 수)·û_audit` 로 **파생값**임을 명시해 보고한다(판정에 쓰지 않음)."
+  },
+  "observed_statistic_check": {
+    "id": "AJ-2-c",
+    "expect_byte_identical_to_block_AI": {
+      "T_obs": 0.0031802114140302242,
+      "delta_rf": 0.00038510137913283504,
+      "delta_gin": -0.002795110034897389
+    },
+    "on_mismatch": "즉시 중단(같은 rep_seed 인데 관측량이 다르면 fixture 재현성이 깨진 것)."
+  },
+  "d15_decision_rule": {
+    "fixed_before_measurement": true,
+    "branches": [
+      {
+        "branch": "완주 & 벽시계 ≤ 24h",
+        "verdict": "(가) 는 **하향 조건 미충족** → `B` = 동전 100,000(참조분포 200,000) 후보 성립."
+      },
+      {
+        "branch": "캡 도달(미완주)",
+        "verdict": "(가) 는 **24h 초과 확정** → D15 에 따라 **50,000 하향** → 블록 AI 실측(9.8848 h) 구성이 곧 답."
+      }
+    ],
+    "no_third_branch": true,
+    "forbidden": "3분기 신설 0 · 캡 연장 0 · 재실행 0 · 사후 유리한 해석 선택 0",
+    "d15_verbatim": "B = 100,000. 전규모 합성 드라이런 벽시계 24h 초과 시에만 50,000 으로 하향하되 GIN 예측 생성 이전에 판단. 추정 p 와 함께 몬테카를로 SE 병기"
+  },
+  "monte_carlo_se": {
+    "formula_verbatim": "SE_MC = sqrt( p·(1−p) / n_permutation_values )",
+    "report_side_by_side": true,
+    "note": "(가)/(나) 양 해석의 SE_MC 를 나란히 보고한다. 참조분포가 2배면 SE 는 1/√2 배가 된다 — 이 정량 대비가 R2 의 정의 선택 근거가 된다. ★ 이 p 는 **100% 합성 예측 위의 값**이라 확증 결과가 아니다."
+  },
+  "fixture_and_prediction": {
+    "fixture": "전규모(N 1,092 · K 370 · G 732) — 실제 라벨행렬·실제 scaffold 군집구조. 새 fixture 생성 0.",
+    "predictions": "100% 합성(`rqint_calibration.synth_scores`) · 확증 예측·OOF 로드 0 · `_sealed/` 접근 0.",
+    "effect_injection": "0 — C0 귀무 강도표(전 arm BASE_STRENGTH).",
+    "data_paths": [
+      "data/processed/master_X.parquet",
+      "data/processed/master_Y.parquet"
+    ]
+  },
+  "threads_policy": {
+    "threads_limit": 1,
+    "env_vars": [
+      "OMP_NUM_THREADS",
+      "OPENBLAS_NUM_THREADS",
+      "MKL_NUM_THREADS",
+      "VECLIB_MAXIMUM_THREADS",
+      "NUMEXPR_NUM_THREADS"
+    ],
+    "solo_run": "동시 워커 0(자기 자신 외)"
+  },
+  "stop_conditions": [
+    "캡 도달(→ 판정으로 처리, 오류 아님)",
+    "AC 전원 이탈",
+    "ram_gate 브리치(30.72 GiB)",
+    "여집합 항등식 감사 실패 ≥ 1",
+    "AJ-2-b 결정성 체크포인트 불일치",
+    "AJ-2-c 관측통계량 불일치"
+  ],
+  "no_checkpoint_resume": "체크포인트 재개 없음 — 중단 시 처음부터.",
+  "not_done_by_this_block": [
+    "`B` 문면 동결 0 — `sap/rqint.py` `B_DEFINITION_STATUS` 0바이트 수정.",
+    "`B` 정의 채택 선언 0 — (가)/(나) 중 무엇을 `B` 로 삼을지는 **R2 의 일**이며 본 블록은 양쪽 실측을 갖춰 주는 데까지다.",
+    "SAP 1.2 재동결 0 · `sap_version` 1.1 유지 · manifest 0바이트.",
+    "개봉 0 · `_sealed/` 읽기·쓰기 0(stat-only) · `open_sealed` 0 · `emit_sign` 0 · `decision.py` 호출 0.",
+    "확증 예측·OOF 로드 0 · 효과 주입 0.",
+    "GIN 착수 0 · `data/raw/` 변경 0 · 네트워크 0 · git commit·push 0.",
+    "블록 AI 산출물 4종 수정 0(`b_dryrun_prespec.json`·`stair.json`·`decisive.json`·`b_dryrun.py`)."
+  ]
+}

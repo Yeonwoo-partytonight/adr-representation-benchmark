@@ -1,0 +1,501 @@
+{
+  "_doc": "블록 AE / AE-0·AE-1·AE-2 — R1 캘리브레이션 감사 **착수 전 동결본**. 기입 이후 변경 0. 예측 100% 합성 · 확증/봉인 미접근.",
+  "block": "AE",
+  "instruction": "docs/93_r1_calibration_audit_prompt_for_vscode.md",
+  "frozen_at_kst": "2026-08-12T22:25:21+09:00",
+  "stage_started_kst": "2026-08-12T22:22:52+09:00",
+  "predictions_are_synthetic": true,
+  "confirmatory_predictions_loaded": false,
+  "confirmatory_data_accessed": false,
+  "sealed_accessed": false,
+  "unblinding_performed": false,
+  "gin_start_still_blocked": true,
+  "sap_version_unchanged": "1.1",
+  "manifest_sha16": "756d485feb4715e9",
+  "B_definition_status": "still_unspecified — 본 블록에서 확정하지 않는다(SAP 1.2 의 일).",
+  "facts_snapshot_sha256": "6f4267decdec36693f84545cae7f83c2beb95c754dc8b9339958fdec9a3b7dc9",
+  "geff_unreachability": {
+    "fact": "docs/84 §2 R1 의 '축소규모에서 G_eff/G ≈ 0.117 재현 필수'는 N=400 에서 **수학적으로 도달 불가**하다(블록 AD 전수 탐색). cowork 도 더 넓은 족에서 독립 전수 탐색해 동일 최적을 확인했다.",
+    "target_full_scale": 0.11659384342455403,
+    "min_attainable_at_N400": 0.13255128077675052,
+    "gap": 0.015957437352196485,
+    "bound_source": "experiments/rqint/profile_match.json AD_4_attainability (블록 AD 산출 인용 — 재탐색 불필요)",
+    "handling": [
+      "1. primary = 비례축소 변형(F-PROF-P). 근거 = AD-4 프로파일 대조 6지표 중 5개(상위2군 점유율·max n²/Σn²·크기 왜도·PT별 양성 군 수·레버리지 상위5 점유)가 전규모에 더 가깝다.",
+      "2. sensitivity = 비율최적 변형(F-PROF-R) — G_eff/G 하나만 목표에 더 가까운 변형. C0~C3 를 **두 변형 모두** 실행한다(검토자 조건에 최대한 가깝게 가려는 보수적 선택).",
+      "3. 합격 판정은 **두 변형 모두**에 적용한다(완화 아님·강화). 한쪽이라도 미달이면 합격 처리 금지, 중단·보고 → 검토자 재자문 대상.",
+      "4. 검토자 통지(도달불가 사실 + 상한 계산 + 채택 변형 + 감도분석 설계)는 **서명본 회수 편에 동봉**하는 별도 사안이며 본 블록의 범위 밖이다. 본 블록은 통지 문안을 쓰지 않는다."
+    ],
+    "substitution_by_runner": "금지 — 검토자 조건이므로 임의 대체하지 않는다."
+  },
+  "scenarios": {
+    "C0": {
+      "desc": "양 family 서열효과 0, 상호작용 0",
+      "scale": "reduced N400·K60"
+    },
+    "C1": {
+      "desc": "서열효과 0.01 공통, 상호작용 0",
+      "scale": "reduced N400·K60"
+    },
+    "C2": {
+      "desc": "서열효과 0.03 공통, 상호작용 0",
+      "scale": "reduced N400·K60"
+    },
+    "C3": {
+      "desc": "GIN 전반 성능 −0.03(주효과 존재), 상호작용 0",
+      "scale": "reduced N400·K60"
+    },
+    "C4": {
+      "desc": "상호작용 τ ∈ {0.01,0.02,0.03} 이식",
+      "scale": "full N1092·K370·G732 (예측만 합성)"
+    }
+  },
+  "replication_plan": {
+    "primary_variant": "reduced_proportional (prop)",
+    "primary_R": 2000,
+    "sensitivity_variant": "reduced_ratio_optimal (ratio)",
+    "sensitivity_R": 1000,
+    "n_coin_vectors_small": 2000,
+    "n_permutation_values_small": 4000,
+    "C4_R": 400,
+    "n_coin_vectors_full": 1000,
+    "n_permutation_values_full": 2000,
+    "tau_grid": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "tau_prespecified": 0.02,
+    "basis": "primary 2,000 = F-C03 범위 상한 · sensitivity 1,000 = 범위 하한. 하한 선택 근거는 **단가뿐**(AE-6 예산). 기각률·검정력을 보고 복제 수를 정하는 행위 금지.",
+    "cells": [
+      {
+        "cell": "C0:prop",
+        "scenario": "C0",
+        "variant": "prop",
+        "scale": "small",
+        "R": 2000,
+        "n_coin": 2000,
+        "role": "primary",
+        "grid_index": 0,
+        "tau": null
+      },
+      {
+        "cell": "C0:ratio",
+        "scenario": "C0",
+        "variant": "ratio",
+        "scale": "small",
+        "R": 1000,
+        "n_coin": 2000,
+        "role": "sensitivity",
+        "grid_index": 0,
+        "tau": null
+      },
+      {
+        "cell": "C1:prop",
+        "scenario": "C1",
+        "variant": "prop",
+        "scale": "small",
+        "R": 2000,
+        "n_coin": 2000,
+        "role": "primary",
+        "grid_index": 0,
+        "tau": null
+      },
+      {
+        "cell": "C1:ratio",
+        "scenario": "C1",
+        "variant": "ratio",
+        "scale": "small",
+        "R": 1000,
+        "n_coin": 2000,
+        "role": "sensitivity",
+        "grid_index": 0,
+        "tau": null
+      },
+      {
+        "cell": "C2:prop",
+        "scenario": "C2",
+        "variant": "prop",
+        "scale": "small",
+        "R": 2000,
+        "n_coin": 2000,
+        "role": "primary",
+        "grid_index": 0,
+        "tau": null
+      },
+      {
+        "cell": "C2:ratio",
+        "scenario": "C2",
+        "variant": "ratio",
+        "scale": "small",
+        "R": 1000,
+        "n_coin": 2000,
+        "role": "sensitivity",
+        "grid_index": 0,
+        "tau": null
+      },
+      {
+        "cell": "C3:prop",
+        "scenario": "C3",
+        "variant": "prop",
+        "scale": "small",
+        "R": 2000,
+        "n_coin": 2000,
+        "role": "primary",
+        "grid_index": 0,
+        "tau": null
+      },
+      {
+        "cell": "C3:ratio",
+        "scenario": "C3",
+        "variant": "ratio",
+        "scale": "small",
+        "R": 1000,
+        "n_coin": 2000,
+        "role": "sensitivity",
+        "grid_index": 0,
+        "tau": null
+      },
+      {
+        "cell": "C4:tau0.01",
+        "scenario": "C4",
+        "variant": "full",
+        "scale": "full",
+        "R": 400,
+        "n_coin": 1000,
+        "role": "power",
+        "grid_index": 0,
+        "tau": 0.01
+      },
+      {
+        "cell": "C4:tau0.02",
+        "scenario": "C4",
+        "variant": "full",
+        "scale": "full",
+        "R": 400,
+        "n_coin": 1000,
+        "role": "power",
+        "grid_index": 1,
+        "tau": 0.02
+      },
+      {
+        "cell": "C4:tau0.03",
+        "scenario": "C4",
+        "variant": "full",
+        "scale": "full",
+        "R": 400,
+        "n_coin": 1000,
+        "role": "power",
+        "grid_index": 2,
+        "tau": 0.03
+      }
+    ]
+  },
+  "injection_freeze_A11": {
+    "1_shift_mechanism": "합성 점수행렬의 **logit 척도 상수 가산**. 블록 AD `synth_common_effect` 기전을 **그대로 계승** — `_scores_from_labels(rng, y, strength)` 가 `logit = strength·(y − colmean(y)) + N(0,1)` 을 만들고 점수는 `sigmoid(logit)`. 강도를 `base → base + d` 로 올리면 PT j 의 **양성 라벨 원소** logit 에 상수 `+d·(1 − prev_j)` 가, **음성 원소** logit 에 상수 `−d·prev_j` 가 가산된다(행 내 상수, 열별 고정). 결측 없음(라벨행렬은 0/1 조밀행렬, NaN 0건). 클리핑 없음(sigmoid 치역이 (0,1) 로 자연 유계, 점수 절단·재정규화 0). ★ 사후 변경 0.",
+    "2_attribution": "C1·C2 = **양 family 의 M2b arm 에 동일한 δ**(RF·GIN 공통) → E[Δ_RF] = E[Δ_GIN] = δ, E[T] = 0. C3 = **GIN family 의 두 arm(M1b·M2b)을 동일 크기로 하향** → 수준만 낮아지고 Δ_GIN 불변, E[T] = 0 (arm 간 차등 이동 금지 — 코드 assert). C4 = **RF family 의 M2b arm 에만 τ** 가산, 공통 성분 0 → E[T] = +τ. 부호 **양(+) 사전 고정**.",
+    "3_heterogeneity": "**동질(homogeneous) 주입**을 primary 로 동결 — 모든 PT·모든 scaffold 군에 동일 강도 상수를 준다. 군별·PT별 이질 주입은 본 블록 범위 밖이며 사후 도입 0.",
+    "4_ties": "합성 점수는 연속(sigmoid of 연속 logit) — 블록 AD 실측 tie 율 0.0. **jitter·난수 tie-break 추가 0.** AP 는 `sap.metrics.macro_ap` 를 import 재사용(재구현 0, tie 처리 = sklearn `average_precision_score` 표준). tie 가 1건이라도 관측되면 값을 그대로 두고 보고.",
+    "5_slot_mapping": "arm 슬롯은 `sap/rqint.py` 인터페이스 그대로 — P_RF={'M1b':[rep×3],'M2b':[rep×3]}, P_GIN={'M1b':{s:[rep×3]},'M2b':{s:[rep×3]}}, s ∈ (1,2,3). **합성 자가시험 1건**(큰 τ 를 RF M2b 에만 주입 → Δ_RF − Δ_GIN 의 부호·크기가 기대와 일치)으로 매핑을 확인한 뒤 본런에 들어간다."
+  },
+  "effect_calibration": {
+    "scale_separation": "규모별 계수를 섞지 않는다 — 축소 slope 와 전규모 slope 는 다르다.",
+    "reduced": {
+      "probe_curve": [
+        {
+          "effect": 0.01,
+          "mean_delta_rf": -2.3604830311593774e-06,
+          "sd": 0.029913634854927384
+        },
+        {
+          "effect": 0.02,
+          "mean_delta_rf": 0.00578953931711554,
+          "sd": 0.030588261595511264
+        },
+        {
+          "effect": 0.05,
+          "mean_delta_rf": 0.02337024380674797,
+          "sd": 0.03061967359534156
+        },
+        {
+          "effect": 0.1,
+          "mean_delta_rf": 0.05255958606066454,
+          "sd": 0.031310426259392524
+        }
+      ],
+      "slope_delta_per_effect": 0.5030952290704501,
+      "fit": "origin-through linear least squares (Δ(0)=0 by construction)",
+      "n_probe_replicates": 40,
+      "seed0": 820260813,
+      "probe_effects": [
+        0.01,
+        0.02,
+        0.05,
+        0.1
+      ],
+      "reference_AD5_slope": 0.5002369486829041,
+      "ratio_vs_reference": 1.005713852995209
+    },
+    "full": {
+      "probe_curve": [
+        {
+          "effect": 0.01,
+          "mean_delta_rf": 0.004070302982430625,
+          "sd": 0.007021954474210301
+        },
+        {
+          "effect": 0.02,
+          "mean_delta_rf": 0.010084173898380696,
+          "sd": 0.007070048077387833
+        },
+        {
+          "effect": 0.05,
+          "mean_delta_rf": 0.027953338318474956,
+          "sd": 0.007068671949848544
+        },
+        {
+          "effect": 0.1,
+          "mean_delta_rf": 0.05831345626695076,
+          "sd": 0.00712747484514527
+        }
+      ],
+      "slope_delta_per_effect": 0.5747230038777494,
+      "fit": "origin-through linear least squares (Δ(0)=0 by construction)",
+      "n_probe_replicates": 40,
+      "seed0": 830260813,
+      "probe_effects": [
+        0.01,
+        0.02,
+        0.05,
+        0.1
+      ],
+      "reference_AD44_slope": 0.591610555379263,
+      "reference_resolution_note": "AD-4-4 는 R=10 해상도 → 본 probe 는 R=40 으로 재산출",
+      "ratio_vs_reference": 0.9714549523365291
+    },
+    "chosen_effect_strengths": {
+      "C0": {
+        "effect_logit": 0.0,
+        "target_macro_ap_shift": 0.0,
+        "slope_scale": "small"
+      },
+      "C1": {
+        "effect_logit": 0.019876952557225835,
+        "target_macro_ap_shift": 0.01,
+        "slope_scale": "small"
+      },
+      "C2": {
+        "effect_logit": 0.0596308576716775,
+        "target_macro_ap_shift": 0.03,
+        "slope_scale": "small"
+      },
+      "C3": {
+        "effect_logit": 0.0596308576716775,
+        "target_macro_ap_shift": -0.03,
+        "slope_scale": "small"
+      },
+      "C4": {
+        "tau_logit": {
+          "0.01": 0.017399686340251522,
+          "0.02": 0.034799372680503045,
+          "0.03": 0.052199059020754564
+        },
+        "target_macro_ap_shift": {
+          "0.01": 0.01,
+          "0.02": 0.02,
+          "0.03": 0.03
+        },
+        "slope_scale": "full"
+      }
+    },
+    "probe_is_measurement_not_decision": true,
+    "recalibration_during_main_run": "금지"
+  },
+  "slot_mapping_self_test": {
+    "design": "RF M2b 에만 큰 τ(logit 0.198770 ≈ macro-AP 0.10) 주입 → T = Δ_RF − Δ_GIN 이 명확히 양(+)이고 크기가 기대와 일치해야 한다.",
+    "R": 12,
+    "mean_T": 0.10180233832706548,
+    "mean_delta_rf": 0.10834785801611475,
+    "mean_delta_gin": 0.006545519689049249,
+    "expected_T_approx": 0.1,
+    "sign_ok": true,
+    "magnitude_ratio_vs_expected": 1.0180233832706547,
+    "pass": true
+  },
+  "c3_level_shift_check": {
+    "mean_level_C0": 0.44052870269547956,
+    "mean_level_C3": 0.40726322979741,
+    "realized_drop": 0.03326547289806959,
+    "target_drop": 0.03,
+    "delta_gin_invariant_assert": "strengths['GIN']['M2b'] == strengths['GIN']['M1b']"
+  },
+  "tie_rates_measured": {
+    "reduced_M1b_rep0": 0.0,
+    "full_M1b_rep0": 0.0
+  },
+  "tie_policy": "jitter 0 · 난수 tie-break 0. tie 1건이라도 관측되면 값 그대로 두고 보고.",
+  "decision_points_A10": {
+    "points": {
+      "alpha": {
+        "threshold": 0.05,
+        "status": "R1 공식 합격 판정 지점"
+      },
+      "alpha_over_7": {
+        "threshold": 0.0071428571428571435,
+        "status": "보고·상신용 보조 근거(임계 신설 금지)"
+      },
+      "alpha_over_4": {
+        "threshold": 0.0125,
+        "status": "보고·상신용 보조 근거(임계 신설 금지)"
+      }
+    },
+    "official_point": "alpha",
+    "rule": "α/7·α/4 지점에 새 합격기준을 만들지 않는다. 초과 시 상신 사항으로 기록만 한다.",
+    "holm_family_size": 7
+  },
+  "acceptance_criterion_F_ACC": {
+    "rule": "기각률 ≤ α + 2·SE, SE = √(r̂(1−r̂)/R_sim) — **관측 r̂ 로 매번 계산**",
+    "C0_extra": "p 균등성 KS p > 0.05",
+    "applies_to": "C0~C3 의 primary·sensitivity 두 변형 모두",
+    "C4_note": "C4 는 1종오류 시나리오가 아니므로 합격기준 미적용 — 산출은 검정력 곡선.",
+    "reference_only_thresholds_at_rhat_0.05": {
+      "primary_R2000": 0.059746794344808965,
+      "sensitivity_R1000": 0.06378404875209022,
+      "warning": "상수로 박지 말 것 — 관측 r̂ 로 매번 계산한다."
+    }
+  },
+  "A12_adaptive_stopping": {
+    "applies_to": "C4",
+    "interim_at": 200,
+    "max_R": 400,
+    "interval": "Wilson score 95% CI (이항 비율)",
+    "rule": "200 복제 시점 CI 가 0.50·0.80 경계를 가로지르지 않으면 해당 τ 중단, 가로지르면 400 까지 진행. 400 에서도 가로지르면 D19 사다리의 낮은 지위 채택.",
+    "tau_002_low_power_prefrozen_handling": "τ=0.02 검정력 <0.50 이면 **사전등록 D19 사다리 최하단 지위를 그대로 채택하고 정직 보고**. τ 격자 확대·복제 증가·SESOI 조정·판정규칙 변경 전부 금지."
+  },
+  "complement_audit_policy": {
+    "draws": 1000,
+    "frequency": "시나리오·변형당 **정확히 1회**(복제 반복 0)",
+    "which_replicate": "각 셀의 r=0 복제(결정적 선택)",
+    "basis": "블록 AC 가 1,000 draw 전건 편차 0.0 으로 항등식을 이미 실증"
+  },
+  "seed_regime": {
+    "rule": "rep_seed = 20260813 + 1_000_000·scenario_index + variant_offset + 100_000·grid_index + r  (scenario_index C0..C4 = 0..4; variant_offset prop=0 / ratio=500_000 / full=0; grid_index = τ 격자 위치). 동전 RNG 시드 = rep_seed + 900_000_000 (결정적 파생, 신규 추첨 0). probe/자가시험 시드 = 20260813 + 800/810/820 × 1_000_000 (결정적 파생).",
+    "base": 20260813,
+    "scenario_index": {
+      "C0": 0,
+      "C1": 1,
+      "C2": 2,
+      "C3": 3,
+      "C4": 4
+    },
+    "variant_offset": {
+      "prop": 0,
+      "ratio": 500000
+    },
+    "coin_seed_offset": 900000000,
+    "probe_seed_small": 820260813,
+    "probe_seed_full": 830260813,
+    "selftest_seed": 840260813,
+    "n_rep_seeds_total": 13200,
+    "rep_seed_min": 20260813,
+    "rep_seed_max": 24461212,
+    "confirmatory_seed_space": [
+      1,
+      2,
+      3,
+      4,
+      42,
+      201,
+      202,
+      203
+    ],
+    "intersection_with_confirmatory": [],
+    "intersection_is_empty": true,
+    "new_draws": 0,
+    "redraws": 0
+  },
+  "determinism_policy": {
+    "requirement": "워커 수와 무관하게 결과가 같아야 한다. 다르면 중단.",
+    "evidence": "시나리오·변형마다 첫 3복제의 T* 수열 sha256 기록 + 세션 재개 시 동일 시드 바이트 동일 재현 1회 확인."
+  },
+  "budget_recomputation": {
+    "inputs": {
+      "F_UNIT_small": 0.09966293053515983,
+      "F_UNIT_full": 0.7166503799495937,
+      "F_THRU_small": 89.25498762598825,
+      "F_THRU_full": 8.932070676515567,
+      "F_DECAY": 0.24885474349420722,
+      "W_BEST": 18
+    },
+    "formula": "wall = evals / throughput(W_BEST) × (1 + F_DECAY);  throughput 정의 = w / wall_max (평균 기반 금지)",
+    "rows": [
+      {
+        "block": "C0~C3 primary (4 × 2,000복제 × 2,000순열)",
+        "evals": 16000000,
+        "throughput_evals_per_s": 89.25498762598825,
+        "wall_seconds_before_decay": 179261.6908653439,
+        "wall_hours": 62.186614712215814
+      },
+      {
+        "block": "C0~C3 sensitivity (4 × 1,000복제 × 2,000순열)",
+        "evals": 8000000,
+        "throughput_evals_per_s": 89.25498762598825,
+        "wall_seconds_before_decay": 89630.84543267195,
+        "wall_hours": 31.093307356107907
+      },
+      {
+        "block": "C4 (3τ × 400복제 × 1,000순열)",
+        "evals": 1200000,
+        "throughput_evals_per_s": 8.932070676515567,
+        "wall_seconds_before_decay": 134347.34715602634,
+        "wall_hours": 46.60564493657402
+      },
+      {
+        "block": "여집합 감사 (11셀 × 1,000 draw)",
+        "evals": 11000,
+        "throughput_evals_per_s": null,
+        "wall_seconds_before_decay": null,
+        "wall_hours": 0.14760741969754299
+      }
+    ],
+    "total_evals": 25211000,
+    "total_wall_hours": 140.03317442459527,
+    "total_wall_days": 5.834715601024803,
+    "exceeds_7d": false,
+    "cowork_reference_hours": {
+      "c03_primary": 62.19,
+      "c03_sensitivity": 31.09,
+      "c4": 46.61,
+      "total": 139.93
+    },
+    "deviation_frac_vs_cowork": {
+      "c03_primary": -5.443460016374413e-05,
+      "c03_sensitivity": 0.00010638006136720612,
+      "c4": -9.343624599822409e-05,
+      "total": 0.0007373288401004707
+    },
+    "max_abs_deviation_frac": 0.0007373288401004707,
+    "within_5pct": true,
+    "note": "A12 발동 시 C4 는 이보다 줄어든다(상한 기준)."
+  },
+  "ops": {
+    "W_BEST": 18,
+    "threads_per_worker": 1,
+    "ram_budget_gib": 38.4,
+    "ram_gate_gib": 30.72,
+    "ram_sampler_period_s": 10.0,
+    "power": "AC 연결 · 저전력 해제 · caffeinate -dimsu. 배터리·저전력 구간 측정치는 예산·처리량 표에 투입 금지.",
+    "throughput_definition": "w / wall_max (평균 기반 금지)"
+  },
+  "out_of_scope": [
+    "SAP 1.2 재동결",
+    "B 확정",
+    "MODULE_FILES·sap/__init__.py 갱신",
+    "manifest model_family erratum",
+    "축소 fixture 규칙 동결",
+    "검토자 통지 문안",
+    "R1 실패 폴백(후보 C 회귀)",
+    "GIN 학습",
+    "개봉"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "measured_model": "P-ID",
+  "measured_dim": 3173,
+  "measured_wall_s": 94.37060125000426,
+  "model_dims": {
+    "M0": 2048,
+    "M1": 2050,
+    "M2": 2114,
+    "P-ID": 3173,
+    "P-FAM": 2102,
+    "C-CAP": 2124
+  },
+  "estimated_per_model_fold_s": {
+    "M0": 60.911122395212324,
+    "M1": 60.970605913176406,
+    "M2": 62.87407848802679,
+    "P-ID": 94.37060125000426,
+    "P-FAM": 62.51717738024234,
+    "C-CAP": 63.171496077847166
+  },
+  "n_model_fold_total": 90,
+  "estimated_total_wall_s": 6072.226222567639,
+  "estimated_total_wall_hours": 1.6867295062687886,
+  "estimated_total_wall_days": 0.07028039609453285,
+  "abort_threshold_days": 7.0,
+  "exceeds_threshold": false,
+  "peak_rss_gib": 2.1325836181640625,
+  "scaling_note": "RF 비용은 피처 차원에 대략 선형(후보 분할 탐색). 계측 모델 대비 차원비로 스케일하되 하한 0.5× 를 둬 과소추정을 막았다. 계측·추정 시간은 결과-독립 계측치이며 통계량과 무관하다."
+}

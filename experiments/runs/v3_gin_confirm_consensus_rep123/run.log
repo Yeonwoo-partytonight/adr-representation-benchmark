@@ -1,0 +1,8 @@
+2026-09-27 23:30:29 KST	R0	core start · sealed dirs/files/artifacts/access = 29/727/707/20
+2026-09-27 23:30:29 KST	R1	labels loaded · rows 1092 · PT 370
+2026-09-27 23:30:29 KST	R2	access.log +1 line per repeat · 3 repeats
+2026-09-27 23:30:29 KST	R3	inputs verified · checkpoint 3 · partial 315 · oof 63
+2026-09-27 23:30:36 KST	R4	cells computed · c1 21 · c2 3 · c3 1 · c4 63 · consensus 21
+2026-09-27 23:30:36 KST	R5	invalidation rules: none triggered
+2026-09-27 23:30:39 KST	R6	sealed written · 22 files + access.log
+2026-09-27 23:30:39 KST	R7	public manifest + run.log · wall_seconds 10.720

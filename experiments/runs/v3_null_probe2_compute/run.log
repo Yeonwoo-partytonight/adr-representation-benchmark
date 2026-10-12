@@ -1,0 +1,91 @@
+2026-07-27 22:16:56 KST | ==============================================================================
+2026-07-27 22:16:56 KST | [블록 D 개정] Mac wall-clock 최적화 **측정 전용** — enters_null_distribution=false · empirical_p 미호출 · p 미계산 · T_obs 비교 없음 · ladder_freeze.json 파일 수정 금지
+2026-07-27 22:16:56 KST | [D-0 게이트0] PASS — ladder_freeze=b885585aefbabb32 sap_manifest=756d485feb4715e9
+2026-07-27 22:16:56 KST | [D-0 sealed 보호] 블록 C 산출물 12개 파일 sha256 스냅샷 (값 미열람)
+2026-07-27 22:16:56 KST |         experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json = 8722a4e1c52d2eae
+2026-07-27 22:16:56 KST |         experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz = b2a61ba846eead5f
+2026-07-27 22:16:56 KST |         experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz = 350fa12fac84ef4c
+2026-07-27 22:16:56 KST |         experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json = 66be535755ca9f4a
+2026-07-27 22:16:56 KST |         experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M1b.npz = 9155569ac2581613
+2026-07-27 22:16:56 KST |         experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M2b.npz = 05a51b16002b8c0f
+2026-07-27 22:16:56 KST |         experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json = b4d80cb9acceb8de
+2026-07-27 22:16:56 KST |         experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M1b.npz = 0bb7a951246f85ab
+2026-07-27 22:16:56 KST |         experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M2b.npz = c850e55c64309c5c
+2026-07-27 22:16:56 KST |         experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz = f77a69528ebdb88c
+2026-07-27 22:16:56 KST |         experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz = 8594592e2afae583
+2026-07-27 22:16:56 KST |         experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json = 6a861640a0594053
+2026-07-27 22:16:56 KST | [D-0 전원] AC 연결=False · powermode(live)=1 (0=저전력 해제) · caffeinate 감지=False
+2026-07-27 22:16:56 KST | [D-0 전원 raw] Now drawing from 'Battery Power'
+2026-07-28 17:34:30 KST | ==============================================================================
+2026-07-28 17:34:30 KST | [블록 D 개정] Mac wall-clock 최적화 **측정 전용** — enters_null_distribution=false · empirical_p 미호출 · p 미계산 · T_obs 비교 없음 · ladder_freeze.json 파일 수정 금지
+2026-07-28 17:34:30 KST | [D-0 게이트0] PASS — ladder_freeze=b885585aefbabb32 sap_manifest=756d485feb4715e9
+2026-07-28 17:34:30 KST | [D-0 sealed 보호] 블록 C 산출물 12개 파일 sha256 스냅샷 (값 미열람)
+2026-07-28 17:34:30 KST |         experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json = 8722a4e1c52d2eae
+2026-07-28 17:34:30 KST |         experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz = b2a61ba846eead5f
+2026-07-28 17:34:30 KST |         experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz = 350fa12fac84ef4c
+2026-07-28 17:34:30 KST |         experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json = 66be535755ca9f4a
+2026-07-28 17:34:30 KST |         experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M1b.npz = 9155569ac2581613
+2026-07-28 17:34:30 KST |         experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M2b.npz = 05a51b16002b8c0f
+2026-07-28 17:34:30 KST |         experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json = b4d80cb9acceb8de
+2026-07-28 17:34:30 KST |         experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M1b.npz = 0bb7a951246f85ab
+2026-07-28 17:34:30 KST |         experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M2b.npz = c850e55c64309c5c
+2026-07-28 17:34:30 KST |         experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz = f77a69528ebdb88c
+2026-07-28 17:34:30 KST |         experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz = 8594592e2afae583
+2026-07-28 17:34:30 KST |         experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json = 6a861640a0594053
+2026-07-28 17:34:30 KST | [D-0 전원] AC 연결=True · powermode(live)=0 (0=저전력 해제) · caffeinate 감지=True
+2026-07-28 17:34:30 KST | [D-0 전원 raw] Now drawing from 'AC Power'
+2026-07-28 17:34:30 KST | [전제] identity mean-pool == 동결 drug_target_emb_meanpool.npy 바이트 동일
+2026-07-28 17:34:30 KST | [벤치 대상] fold 0: train=874 test=218 dim=2124 · identity permutation · 300 trees · 구성 간 동일 입력
+2026-07-28 17:36:07 KST | [D-2 구성 A] MOC=None / RF=-1(18)  : wall     96.9s · CPU     198.6s · 실효병렬도  2.05 · 자식 최대 RSS 0.00GB · pred sha=b36a00b22b3abcd0 · A와 비트동일=True
+2026-07-28 17:37:45 KST | [D-2 구성 B] MOC=None / RF=6       : wall     97.7s · CPU     194.2s · 실효병렬도  1.99 · 자식 최대 RSS 0.00GB · pred sha=b36a00b22b3abcd0 · A와 비트동일=True
+2026-07-28 17:38:15 KST | [D-2 구성 C] MOC=6 / RF=1          : wall     29.5s · CPU     161.1s · 실효병렬도  5.46 · 자식 최대 RSS 0.30GB · pred sha=b36a00b22b3abcd0 · A와 비트동일=True
+2026-07-28 17:38:31 KST | [D-2 구성 D] MOC=18 / RF=1         : wall     16.1s · CPU     210.5s · 실효병렬도 13.07 · 자식 최대 RSS 0.30GB · pred sha=b36a00b22b3abcd0 · A와 비트동일=True
+2026-07-28 17:39:08 KST | [D-2 구성 E] MOC=6 / RF=3          : wall     36.8s · CPU     268.1s · 실효병렬도  7.28 · 자식 최대 RSS 0.30GB · pred sha=b36a00b22b3abcd0 · A와 비트동일=True
+2026-07-28 17:39:08 KST | [D-1] 현행 구성 A 진짜 CPU-시간 = 198.6s / wall 96.9s → **실효 병렬도 2.05** (logical 18 기준 11% · P코어 6 기준 34%)
+2026-07-28 17:39:08 KST | [D-2 비트동일 게이트] 통과 5/5 · 제외=없음 (기준=구성 A, §13-3 sealed 와 이미 0-diff)
+2026-07-28 17:39:08 KST | [D-2] ladder_freeze.json sha16 재확인 = b885585aefbabb32 (파일 무수정)
+2026-07-28 17:39:08 KST | [D-2] **CFG_BEST = 구성 D** (MOC=18 / RF=1) wall 16.1s — 구성 A 대비 6.01× 가속
+2026-07-28 17:39:08 KST | ==============================================================================
+2026-07-28 17:39:08 KST | [D-3] 워커 수 스윕 [1, 3, 6, 9, 12, 18] — ⚠️ **타이밍 프록시** n_estimators=60(동결값 300 아님). OOF 미저장 · 어떤 분석·판정·null 분포에도 미투입 · D-4에서 전량 재확인.
+2026-07-28 17:39:08 KST | [seed 격리] PROBE2 9000101~9000118 — 본실행 namespace(≤1000000)·프로브1[9000001, 9000002]·예약 seed 교집합 0 (assert PASS)
+2026-07-28 17:39:31 KST | [D-3 워커  1] 코어/워커 18 (env=18) · RF n_jobs=1 MOC n_jobs=18 · 풀 wall    23.0s · **처리량 = w/wall_max = 163.75 perm/h** (상각 165.21) · 워커 wall min/med/max 22/22/22s · (max−min)/median = 0.0% · 합계 peak RSS 0.59GiB (예산 38.4GiB 내=True)
+2026-07-28 17:39:58 KST | [D-3 워커  3] 코어/워커 6 (env=6) · RF n_jobs=1 MOC n_jobs=6 · 풀 wall    26.3s · **처리량 = w/wall_max = 429.73 perm/h** (상각 433.14) · 워커 wall min/med/max 25/25/25s · (max−min)/median = 0.3% · 합계 peak RSS 1.77GiB (예산 38.4GiB 내=True)
+2026-07-28 17:40:33 KST | [D-3 워커  6] 코어/워커 3 (env=3) · RF n_jobs=1 MOC n_jobs=3 · 풀 wall    35.0s · **처리량 = w/wall_max = 641.93 perm/h** (상각 646.80) · 워커 wall min/med/max 33/33/34s · (max−min)/median = 1.3% · 합계 peak RSS 3.54GiB (예산 38.4GiB 내=True)
+2026-07-28 17:41:11 KST | [D-3 워커  9] 코어/워커 2 (env=2) · RF n_jobs=1 MOC n_jobs=2 · 풀 wall    38.5s · **처리량 = w/wall_max = 873.91 perm/h** (상각 880.08) · 워커 wall min/med/max 37/37/37s · (max−min)/median = 1.3% · 합계 peak RSS 5.30GiB (예산 38.4GiB 내=True)
+2026-07-28 17:41:56 KST | [D-3 워커 12] 코어/워커 1 (env=1) · RF n_jobs=1 MOC n_jobs=1 · 풀 wall    44.4s · **처리량 = w/wall_max = 1011.30 perm/h** (상각 1018.36) · 워커 wall min/med/max 42/42/43s · (max−min)/median = 1.8% · 합계 peak RSS 7.06GiB (예산 38.4GiB 내=True)
+2026-07-28 17:42:50 KST | [D-3 워커 18] 코어/워커 1 (env=1) · RF n_jobs=1 MOC n_jobs=1 · 풀 wall    54.5s · **처리량 = w/wall_max = 1238.28 perm/h** (상각 1246.53) · 워커 wall min/med/max 51/52/52s · (max−min)/median = 3.3% · 합계 peak RSS 10.59GiB (예산 38.4GiB 내=True)
+2026-07-28 17:42:50 KST | [D-3 G1 동시성 불변성] 복수 워커수에서 관측된 seed 12개 · 전부 sha 동일=True
+2026-07-28 17:42:50 KST | [D-3] **W_BEST = 18** (RAM 게이트 통과 중 상각 처리량 최대 — w/max(recurring) 기준)
+2026-07-28 17:42:50 KST | ==============================================================================
+2026-07-28 17:42:50 KST | [D-4] 전량 재확인 — 구성 D × n_estimators=300(동결값). **D-4a 단독(w=1) baseline** → **D-4b 병렬(w=18) 처리량** 2단 측정.
+2026-07-28 17:42:50 KST | [D-4a 단독] w=1 · 코어 18 · identity permutation 1건 완주(5 fold) — 열감쇠·지속부하 baseline 전용 + 0-diff 증명
+2026-07-28 17:42:50 KST | [D-4 전원 D-4a 단독 baseline 시작] 2026-07-28 17:42:50 KST · AC=True · powermode=0
+2026-07-28 17:51:52 KST | [D-4 전원 D-4a 단독 baseline 종료] 2026-07-28 17:51:52 KST · AC=True · powermode=0 · 샘플 11건
+2026-07-28 17:51:52 KST | [D-4a 0-diff] 단독 identity fold 0 sha=b36a00b22b3abcd0 vs D-2 구성 A 기준 b36a00b22b3abcd0 → 비트동일=True
+2026-07-28 17:51:52 KST | [D-4a 열감쇠 baseline] fold별 wall ['110s', '108s', '107s', '108s', '108s'] → 첫→마지막 **-1.8%** · 지속부하 540s (하한 600s 충족=False) · peak RSS 1.79GiB
+2026-07-28 17:51:52 KST | [D-4a] ⚠️ 단독 지속부하 540s < 하한 600s — 열감쇠 추정 신뢰구간 넓음(한계로 기록).
+2026-07-28 17:51:52 KST | [D-4b 병렬] 워커 18 × 코어/워커 1 · 워커0=identity(**0-diff 검증 전용**, 열감쇠·지속부하 baseline 미투입) · 워커1~17=global permutation
+2026-07-28 17:51:53 KST | [D-4 전원 D-4b 병렬 w=18 시작] 2026-07-28 17:51:53 KST · AC=True · powermode=0
+2026-07-28 18:15:05 KST | [D-4 전원 D-4b 병렬 w=18 종료] 2026-07-28 18:15:05 KST · AC=True · powermode=0 · 샘플 25건
+2026-07-28 18:15:05 KST | [D-4b 0-diff] 병렬 워커0(identity) fold 0 sha=b36a00b22b3abcd0 → 비트동일=True (이 워커의 wall 은 오버서브 상태 측정치 — baseline 미사용)
+2026-07-28 18:15:05 KST | [D-4b 실측] permutation당 wall(**max**, setup 제외) 1389.9s · min/med 1365.5/1385.1s · 풀 wall 1392.4s · 총 CPU 23208.8s · 처리량 = 18/1389.9s = 46.62 perm/h · 합계 peak RSS 30.99GiB (예산내=True)
+2026-07-28 18:15:05 KST | [D-4 프록시 검증] 프록시 예측 fold 단가 259.1s (= 60-tree fold max 51.8s × 5) vs 전량 실측 fold max 288.6s → **오차 -10.2%** (허용 ±30% · 통과=True)
+2026-07-28 18:15:05 KST | [D-4 전원 구간] 단독: AC유지=True powermode=['0'] 샘플11건 · 병렬: AC유지=True powermode=['0'] 샘플25건 → 측정 유효=True
+2026-07-28 18:15:05 KST | ==============================================================================
+2026-07-28 18:15:05 KST | [D-5] 재산정 — NULL_B=1000 × 2모드 = 2000 permutation × 5 fold. 열 감쇠 계수 1.000 적용(감쇠율 -1.8% · 출처=D-4a 단독(w=1) 1 permutation 완주 — baseline 규칙 준수)
+2026-07-28 18:15:05 KST | [D-5] 처리량 정의 = w / wall_max(마지막 워커 완료) — 평균 기반 계산 미사용. 블록 C wall-clock(배터리·저전력 구간) 미투입.
+2026-07-28 18:15:05 KST | [D-5] 프록시→전량 앵커 보정계수 = 1.114 (W_BEST=18 지점 전량 실측 fold max 288.6s / 프록시 예측 259.1s)
+2026-07-28 18:15:05 KST | [D-5] 구성 A × 워커  1: perm당    484.5s · 처리량   7.43 perm/h · 총 wall ** 11.21일**(열감쇠 반영, raw 11.21일) · 합계 RSS 1.73GiB · RAM게이트=True · 비트동일=True · 워커wall 산포=n/a · [D-2 실측(fold 단가 × 5)]
+2026-07-28 18:15:05 KST | [D-5] 구성 D × 워커  1: perm당    604.2s · 처리량   5.96 perm/h · 총 wall ** 13.99일**(열감쇠 반영, raw 13.99일) · 합계 RSS 0.59GiB · RAM게이트=True · 비트동일=True · 워커wall 산포=0.0% · [D-3 프록시(wall_max) × 앵커 보정]
+2026-07-28 18:15:05 KST | [D-5] 구성 D × 워커  3: perm당    691.5s · 처리량  15.62 perm/h · 총 wall **  5.34일**(열감쇠 반영, raw 5.34일) · 합계 RSS 1.77GiB · RAM게이트=True · 비트동일=True · 워커wall 산포=0.3% · [D-3 프록시(wall_max) × 앵커 보정]
+2026-07-28 18:15:05 KST | [D-5] 구성 D × 워커  6: perm당    926.6s · 처리량  23.31 perm/h · 총 wall **  3.57일**(열감쇠 반영, raw 3.57일) · 합계 RSS 3.54GiB · RAM게이트=True · 비트동일=True · 워커wall 산포=1.3% · [D-3 프록시(wall_max) × 앵커 보정]
+2026-07-28 18:15:05 KST | [D-5] 구성 D × 워커  9: perm당   1021.8s · 처리량  31.71 perm/h · 총 wall **  2.63일**(열감쇠 반영, raw 2.63일) · 합계 RSS 5.30GiB · RAM게이트=True · 비트동일=True · 워커wall 산포=1.3% · [D-3 프록시(wall_max) × 앵커 보정]
+2026-07-28 18:15:05 KST | [D-5] 구성 D × 워커 12: perm당   1177.3s · 처리량  36.69 perm/h · 총 wall **  2.27일**(열감쇠 반영, raw 2.27일) · 합계 RSS 7.06GiB · RAM게이트=True · 비트동일=True · 워커wall 산포=1.8% · [D-3 프록시(wall_max) × 앵커 보정]
+2026-07-28 18:15:05 KST | [D-5] 구성 D × 워커 18: perm당   1389.9s · 처리량  46.62 perm/h · 총 wall **  1.79일**(열감쇠 반영, raw 1.79일) · 합계 RSS 10.59GiB · RAM게이트=True · 비트동일=True · 워커wall 산포=3.3% · [D-4 전량 실측(wall_max)]
+2026-07-28 18:15:05 KST | [D-1 정정] 프로브1 기록 '374시간'은 `n_jobs=-1` 18스레드 **wall-clock**이며 CPU-시간이 아님. 실측 재산정: 구성 A fold당 CPU 198.6s → 2,000 permutation 총 **CPU-시간 552h**; fold당 wall 96.9s → 총 **wall 269h (11.2일)**
+2026-07-28 18:15:05 KST | [D-5 권장] 구성 **D** × 워커 **18** → 예상 총 wall **1.79일** · 7일 초과=False
+2026-07-28 18:15:05 KST | [D-6 sealed 불변] 블록 C 산출물 12개 sha256 불변=True 
+2026-07-28 18:15:05 KST | [D-6] ladder_freeze.json sha16 = b885585aefbabb32 (불변)
+2026-07-28 18:15:05 KST | [D-6] run_manifest_draft.json parallel_policy 확정 갱신 + 라운드트립 assert PASS
+
+2026-07-28 18:15:05 KST | [블록 D] 총 경과 2435s

@@ -1,0 +1,34 @@
+{
+  "mmseqs_version": "18-8cc5c",
+  "params": {
+    "min_seq_id": "0.5",
+    "cov": "0.8",
+    "cov_mode": "0",
+    "threads": "1",
+    "cmd": "easy-cluster"
+  },
+  "n_target_uniprot": 1191,
+  "n_seq_available": 1191,
+  "n_seq_missing": 0,
+  "n_clusters": 902,
+  "n_singletons": 715,
+  "cluster_size_top10": [
+    10,
+    9,
+    7,
+    6,
+    6,
+    6,
+    6,
+    4,
+    4,
+    4
+  ],
+  "cluster_size_median": 1,
+  "caveat": "본 표적셋 자체 50% 클러스터(UniProt/UniRef50 전체 대비 아님) — canonical UniRef50과 다름(사전등록 §9 sensitivity 계열). family 라벨은 label-free·split-free 외부 주석 성격; B_fam vocab만 fold-train fit(OOV 드롭).",
+  "integrity": {
+    "network_calls": 0,
+    "fasta_source": "_cache/ (재사용)",
+    "labels_molset_structure_split_accessed": false
+  }
+}

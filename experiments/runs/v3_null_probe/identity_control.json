@@ -1,0 +1,13 @@
+{
+  "control": "identity permutation (모든 표적 원위치) → M2b 5-fold OOF 재계산",
+  "sealed_file_sha256_expected": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+  "probe_file_sha256": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+  "file_sha256_match": true,
+  "array_sha256_sealed": "798f420e4e29e16229c65947b7a1c7a839693cbd5e71560a3c303d1a45b4cb35",
+  "array_sha256_probe": "798f420e4e29e16229c65947b7a1c7a839693cbd5e71560a3c303d1a45b4cb35",
+  "array_bitwise_match": true,
+  "n_elements_differing": 0,
+  "verdict": "PASS",
+  "sec_wall_clock": 666.0673251670087,
+  "note": "null 하네스가 §13-3 동결 파이프라인과 동일함을 증명하는 유일한 검증. 값 노출 0(sha256 비교만)."
+}

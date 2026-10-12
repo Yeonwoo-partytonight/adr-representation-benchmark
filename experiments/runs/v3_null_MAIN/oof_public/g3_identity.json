@@ -1,0 +1,41 @@
+{
+  "_warning": "SEALED — identity control 상세",
+  "n_elements_differing": 0,
+  "n_elements_total": 404040,
+  "array_bitwise_match": true,
+  "sealed_file_sha256_expected": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+  "sealed_file_sha256_live": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+  "wall_s": 499.8263503750204,
+  "ts_kst": "2026-07-28 23:46:31 KST",
+  "verdict": "PASS",
+  "gate_b": {
+    "gate": "B",
+    "label": "G3 identity 직전",
+    "competitors": 0,
+    "pass": true
+  },
+  "identity_record": {
+    "mode": "identity",
+    "seed": 0,
+    "oof_sha256": "798f420e4e29e16229c65947b7a1c7a839693cbd5e71560a3c303d1a45b4cb35",
+    "macro_AP": 0.12442103231007945,
+    "delta": -0.008694900377332199,
+    "wall_s": 499.8263503750204,
+    "cpu_s": 499.334872,
+    "peak_rss": 1923547136,
+    "ts_kst": "2026-07-28 23:46:31 KST",
+    "enters_p_emp": false,
+    "worker_pid": 94770,
+    "fold_wall_s": [
+      99.14380679099122,
+      99.7394452499575,
+      99.86776000005193,
+      100.69497783301631,
+      100.1254837079905
+    ],
+    "permutation_report": {
+      "mode": "identity"
+    },
+    "n_shared_target_checks": 11422
+  }
+}

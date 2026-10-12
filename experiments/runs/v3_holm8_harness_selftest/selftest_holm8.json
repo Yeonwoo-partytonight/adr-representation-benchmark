@@ -1,0 +1,298 @@
+{
+  "_doc": "docs/115 블록 AY / AY-6 — 합성 자체검사 Q1~Q14. 확증 입력 판독 0. 모든 수치는 합성 fixture 산출물.",
+  "provenance": "synthetic_fixture",
+  "block": "AY (docs/115)",
+  "harness_path": "v3_Multimodal/src/rqint_holm8_run.py",
+  "harness_sha256": "e1c4cf956c0ddb606ddf0d4440b3b85eecab4d2cc98d66468e07d0fa2b597288",
+  "watchdog_path": "v3_Multimodal/src/rqint_holm8_watchdog.py",
+  "watchdog_sha256": "fc84f5bd12e7448e5fa0285d99d7478b79934a3c882516c6518ffe0a70e848e2",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "amendment1_sha256": "63c29d6b6a9e22951f2e2891b54f4251d5e4f679fc1d3b3f110cfdf510aab05c",
+  "amendment2_sha256": "c8e1e2569e7f62fe14a49bdd5581baf3d2d9da9fb411e15099cd85a01bf1a3d8",
+  "fixture": {
+    "n_rows": 60,
+    "n_pt": 12,
+    "B": 300,
+    "n_audit": 50,
+    "ckpt_every": 50,
+    "bca_B": 200
+  },
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "ts_kst": "2026-09-28 12:02:07 KST",
+  "n_tests": 14,
+  "n_pass": 14,
+  "n_skip": 0,
+  "all_pass": true,
+  "tests": [
+    {
+      "name": "Q1 상수·해시",
+      "checks": {
+        "spec": true,
+        "amendment1": true,
+        "amendment2": true,
+        "decisions_v1": true,
+        "b100k_prespec": true,
+        "pre_import:sap/__init__.py": true,
+        "pre_import:sap/consensus.py": true,
+        "pre_import:sap/metrics.py": true,
+        "pre_import:sap/rqint.py": true,
+        "pre_import:sap/bootstrap.py": true,
+        "pre_import:sap/decision.py": true,
+        "pre_import:sap/redaction.py": true,
+        "pre_import:confirmatory_oof_rep1.py": true,
+        "pre_import:ladder_confirmatory.py": true,
+        "pre_import:compute_lock.py": true,
+        "registered_sap:__init__.py": true,
+        "registered_sap:consensus.py": true,
+        "registered_sap:metrics.py": true,
+        "registered_sap:bootstrap.py": true,
+        "registered_sap:decision.py": true,
+        "registered_sap:redaction.py": true,
+        "registered_f5:ladder_confirmatory.py": true,
+        "registered_f5:confirmatory_oof_rep1.py": true,
+        "registered_f5:compute_lock.py": true,
+        "coin_seed_recomputed": true,
+        "coin_label_57_ascii": true,
+        "audit_seed_rule": true,
+        "audit_offset_matches_rqint_source": true,
+        "run_consts_equal_repo_snapshot": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "Q2 명세·사이드카 결속",
+      "checks": {
+        "B_spec_eq_amend1_eq_closure": true,
+        "reference_eq_2B": true,
+        "pair_complement_true": true,
+        "n_audit_rqint_default_eq_b100k": true,
+        "s5_call_convention_keys": true,
+        "primary_p_rule_from_amend1": true,
+        "executed_in_block_115": true,
+        "no_literal_restatement_B_ref_bcaB_seed": true,
+        "check_terms_pass": true
+      },
+      "pass": true,
+      "fails": [],
+      "literal_lines": [],
+      "note": "감사 수 리터럴은 CKPT_EVERY(지시서 지정 상수)와 같은 값이라 AST 대상에서 제외 — 값은 rqint_test 기본값에서 판독하고 b_100k_prespec 과 교차 확인. 주 p 식 문자열은 계산에 쓰지 않고 P7 결속 assert(check_terms)에만 1회 등장한다."
+    },
+    {
+      "name": "Q3 rqint_test 동치",
+      "checks": {
+        "t_star_bit_equal_perm_first_B": true,
+        "t_obs_equal": true,
+        "count_equal": true,
+        "audit_draws_equal": true,
+        "audit_failures_equal": true,
+        "audit_max_abs_equal": true,
+        "identity_flag_equal": true,
+        "p_secondary_equals_rqint_p": true,
+        "n_perm_equal": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "Q4 재개 동치",
+      "checks": {
+        "crash137_fault_raised": true,
+        "crash137_resume_completed": true,
+        "crash137_t_star_bit_equal_uninterrupted": true,
+        "crash137_t_star_bit_equal_rqint_test": true,
+        "crash137_resumed_from_100": true,
+        "crash137_new_tree_access_1_plus_resume": true,
+        "ck137_resume_exact_137_bit_equal": true,
+        "a_sigkill_reentry_gate_passes_with_stale_lock": true,
+        "a_sigkill_resume_bit_equal": true,
+        "a_first_mode_live_lock_is_busy": true,
+        "a_first_mode_dead_lock_deferred_to_computelock": true,
+        "b_crash_before_first_ckpt_restart_b0": true,
+        "c_replace_before_heartbeat_resume": true,
+        "d_tmp_cleaned_and_no_tmp_in_sealed": true,
+        "power_loss_exit15_then_resume_bit_equal": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "Q5 체크포인트 변조",
+      "checks": {
+        "length_tamper_exit_hard": true,
+        "length_checkpoint_not_deleted": true,
+        "length_no_result_written": true,
+        "rng_state_tamper_exit_hard": true,
+        "rng_state_checkpoint_not_deleted": true,
+        "rng_state_no_result_written": true,
+        "sha_tamper_exit_hard": true,
+        "sha_checkpoint_not_deleted": true,
+        "sha_no_result_written": true,
+        "messages_value_free": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "Q6 consensus 1원소 vs 3반복 가환성",
+      "checks": {
+        "observed_statistic_equal": true,
+        "swap_then_average_eq_average_then_swap": true,
+        "t_star_bit_equal": true,
+        "count_equal": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "Q7 T_obs 1ulp 변조",
+      "checks": {
+        "invalid_tobs": true,
+        "exit_hard": true,
+        "no_checkpoint": true,
+        "message_value_free": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "Q8 p 식·폴백",
+      "checks": {
+        "c_definition_first_B": true,
+        "identity_count_eq_2c": true,
+        "p_primary_formula": true,
+        "p_secondary_formula": true,
+        "se_formula": true,
+        "d14_panels": true,
+        "fallback_identity_false": true,
+        "fallback_t_star_unchanged": true,
+        "fallback_c_first_B": true,
+        "fallback_count_explicit": true,
+        "fallback_p_primary": true,
+        "fallback_p_secondary": true,
+        "fallback_run_completed": true,
+        "fallback_resume_same_result": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "Q9 V2 복합 BCa",
+      "checks": {
+        "S1_boot_bit_equal": true,
+        "S1_delta_obs_equal": true,
+        "S1_ci_bca_equal": true,
+        "S1_acceleration_z0_equal": true,
+        "S1_percentile_equal": true,
+        "S1_ci_primary_status_equal": true,
+        "S3_delta_obs_equals_observed_d_gin": true,
+        "S3_differs_from_matrix_premean": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "Q10 무효 규칙",
+      "checks": {
+        "a_sha_tamper": true,
+        "b_cid_shuffle": true,
+        "c_nan": true,
+        "d_G_mismatch": true,
+        "e_matrix_missing": true
+      },
+      "pass": true,
+      "fails": [],
+      "note": "「출력 미생성」= 결과 봉인 파일·체크포인트 미생성 (first 모드는 R0′ 에서 트리·access.log 를 R2 이전에 만든다)"
+    },
+    {
+      "name": "Q11 누설 가드",
+      "checks": {
+        "value_strings_absent": true,
+        "public_keys_clean": true,
+        "sealed_keys_no_sign_tokens": true,
+        "texts_scanned_include_watchdog": true
+      },
+      "pass": true,
+      "fails": [],
+      "n_patterns": 852,
+      "hits": {
+        "run.log": 0,
+        "heartbeat": 0,
+        "manifest_public": 0,
+        "exceptions": 0,
+        "stdout": 0,
+        "watchdog_events": 0
+      },
+      "public_bad_keys": []
+    },
+    {
+      "name": "Q12 감시 래퍼",
+      "checks": {
+        "code0_completes": true,
+        "code13_stops_no_relaunch": true,
+        "manual_restart_after_hard_stop_refused": true,
+        "codes_15_10_wait_uncounted": true,
+        "power_wait_logged_uncounted": true,
+        "code9_30_consecutive_stops": true,
+        "abnormal_11_stops": true,
+        "backoff_ge_60s_mock_clock": true,
+        "counter_restored_from_log": true,
+        "load_wait_long_logged_and_continues": true,
+        "event_keys_whitelisted": true,
+        "non_whitelisted_key_rejected": true,
+        "watchdog_paths_not_run_prefix": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "Q13 AST",
+      "checks": {
+        "forbidden_calls_zero": true,
+        "np_sign_zero": true,
+        "rqint_test_only_in_selftest": true,
+        "network_imports_zero": true,
+        "environ_set_only_module_level_no_read": true,
+        "cli_options_exact": true,
+        "cl_calls_only_in_stage_run": true,
+        "subprocess_only_in_power_status": true,
+        "watchdog_no_compute_or_network_imports": true,
+        "watchdog_no_sealed_path_literal": true
+      },
+      "pass": true,
+      "fails": [],
+      "forbidden_hits": [],
+      "env_lines": [],
+      "rq_fns": [
+        "selftest_Q3_equivalence",
+        "selftest_Q6_commutativity"
+      ]
+    },
+    {
+      "name": "Q14 위생",
+      "checks": {
+        "runtime_write_guard_violations_zero": true,
+        "cl_calls_during_selftest_zero": true,
+        "pmset_calls_during_selftest_zero": true,
+        "real_sealed_counts_unchanged": true,
+        "fingerprints_5_unchanged": true,
+        "run_dir_not_created": true,
+        "pycache_unchanged": true
+      },
+      "pass": true,
+      "fails": [],
+      "guard_violations": []
+    }
+  ],
+  "confirmatory_values_read": 0,
+  "sealed_human_read": 0,
+  "network_calls": 0
+}

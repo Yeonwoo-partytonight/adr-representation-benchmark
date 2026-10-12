@@ -1,0 +1,223 @@
+{
+  "_doc": "docs/117 블록 BB / BB-3 — 합성 자체검사 S1~S11. 확증 입력 판독 0. 모든 수치는 합성 fixture 산출물.",
+  "provenance": "synthetic_fixture",
+  "block": "BB (docs/117)",
+  "harness_path": "v3_Multimodal/src/confirmatory_oof_sens.py",
+  "harness_sha256": "967f3749cb0796e7202de6723e1694d96c4605dc2e5374972f739c6f812e76d9",
+  "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "ts_kst": "2026-10-04 13:25:54.003 KST",
+  "wall_seconds": 72.319,
+  "n_tests": 11,
+  "n_pass": 11,
+  "n_skip": 0,
+  "all_pass": true,
+  "tests": [
+    {
+      "name": "S1 상수·해시",
+      "checks": {
+        "ladder_freeze": true,
+        "frozen:ladder_confirmatory.py": true,
+        "frozen:confirmatory_oof_rest.py": true,
+        "frozen:confirmatory_oof_rep1.py": true,
+        "frozen:compute_lock.py": true,
+        "frozen:consensus.py": true,
+        "frozen:__init__.py": true,
+        "frozen:ladder_freeze.json": true,
+        "frozen:_ladder_smoke_stats.json": true,
+        "frozen:manifest.json": true,
+        "frozen:08_m1b_covariates.csv": true,
+        "frozen:09_target_family_clusters.csv": true,
+        "import:ladder_confirmatory.py": true,
+        "import:confirmatory_oof_rest.py": true,
+        "import:confirmatory_oof_rep1.py": true,
+        "import:compute_lock.py": true,
+        "import:consensus.py": true,
+        "import:__init__.py": true,
+        "rest_public": true,
+        "audit_sha16": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "S2 모델 결속",
+      "checks": {
+        "harness_models_eq_json": true,
+        "three_models": true,
+        "model_blocks_match_for_m1b_m2b": true,
+        "all_blocks_in_fit_order": true,
+        "fixture_public_models_eq_json_order": true,
+        "core_reads_expected_models": true,
+        "no_model_block_list_literals_in_core_scope": true,
+        "no_model_name_literals_in_core_scope": true
+      },
+      "pass": true,
+      "fails": [],
+      "list_literal_lines": [],
+      "name_literal_lines": []
+    },
+    {
+      "name": "S3 fit 순서·누수",
+      "checks": {
+        "fit_only_required_in_fit_order": true,
+        "leak_injection_aborts": true,
+        "bseq_population_injection_aborts": true,
+        "core_uses_fit_blocks_h_predict_h": true,
+        "rf_fit_predict_only_in_predict_h": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "S4 블록 차원",
+      "checks": {
+        "m1b_10_pchembl_13": true,
+        "assert_B_m1b": true,
+        "assert_B_m1b_pchembl": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "S5 OOF 조립",
+      "checks": {
+        "keys": true,
+        "dtype": true,
+        "shape": true,
+        "nan0": true,
+        "fold_assign": true,
+        "cid": true,
+        "fold_arr": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "S6 consensus",
+      "checks": {
+        "equals_build_consensus_exact": true,
+        "equals_np_mean_stack_exact": true,
+        "keys_consensus_cid": true,
+        "core_calls_build_consensus": true,
+        "no_own_mean_in_core_scope": true
+      },
+      "pass": true,
+      "fails": [],
+      "own_mean_lines": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "S7 체크포인트 재개",
+      "checks": {
+        "stop_raises_faultstop": true,
+        "resume_completes": true,
+        "resume_skips_done": true,
+        "resume_bytes_equal_uninterrupted": true,
+        "n_sessions_2": true,
+        "env_mismatch_aborts": true,
+        "partial_tamper_aborts": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "S8 원자성·덮어쓰기 금지",
+      "checks": {
+        "preexisting_diff_aborts": true,
+        "preexisting_not_overwritten": true,
+        "no_manifest_after_abort": true,
+        "preexisting_same_skips_and_completes": true,
+        "rerun_after_complete_aborts": true,
+        "no_tmp_left": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "S9 누설 가드",
+      "checks": {
+        "nondegenerate_fixture": true,
+        "value_strings_absent": true,
+        "public_keys_whitelist_exact": true,
+        "no_4plus_decimal_strings": true,
+        "values_disclosed_false": true
+      },
+      "pass": true,
+      "fails": [],
+      "n_patterns": 6593,
+      "hits": {
+        "run.log": 0,
+        "manifest_public": 0,
+        "stdout_and_exceptions": 0
+      },
+      "four_decimal": {
+        "run.log": 0,
+        "manifest_public": 0,
+        "stdout_and_exceptions": 0
+      }
+    },
+    {
+      "name": "S10 AST·위생",
+      "checks": {
+        "forbidden_calls_zero": true,
+        "forbidden_imports_zero": true,
+        "network_imports_zero": true,
+        "os_environ_zero": true,
+        "cli_options_exact": true,
+        "cl_calls_only_in_stage_verify_run": true,
+        "runtime_write_guard_violations_zero": true,
+        "cl_calls_during_selftest_zero": true,
+        "real_sealed_counts_unchanged": true,
+        "real_fp_unchanged": true,
+        "sens_dir_not_created": true,
+        "pycache_unchanged": true
+      },
+      "pass": true,
+      "fails": [],
+      "guard_violations": [],
+      "forbidden_hits": [],
+      "bad_imports": [],
+      "net": []
+    },
+    {
+      "name": "S11 gate 상태 판별",
+      "checks": {
+        "a_S0_pass": true,
+        "b_S1_pass": true,
+        "c_S1_state_as_S0_fail": true,
+        "d_S2_pass": true,
+        "e_S2_state_as_S1_fail": true,
+        "f_equivalence_one_file_fail": true,
+        "g_rep1_access_plus2_fail": true,
+        "h_two_selftest_dirs_fail": true,
+        "i_orphan_partial_fail": true,
+        "j_ckpt_sha_mismatch_fail": true,
+        "k_docs33_last_77_fail": true,
+        "l_manifest_preexist_fail": true,
+        "messages_no_decimal": true
+      },
+      "pass": true,
+      "fails": []
+    }
+  ],
+  "s11_messages": [
+    "",
+    "",
+    "[gate S0] 봉인 계수 불일치",
+    "",
+    "[gate S1] 봉인 계수 불일치",
+    "[gate S1] 봉인 계수 불일치",
+    "[gate S1] access.log 개행 수 불일치: v3_confirm_rep1_seed201",
+    "[gate S0] selftest 디렉터리 집합 불일치",
+    "[gate S2] 체크포인트 무결 실패 — partial 디렉터리 ↔ checkpoint 집합 불일치(orphan·tmp)",
+    "[gate S2] 체크포인트 무결 실패 — checkpoint sha 와 partial 실파일 불일치: rep1_M1b_pchembl_fold0.npy",
+    "[gate S0] docs/33 마지막 항목 번호 불일치",
+    "[gate S1] sens 최상위 항목 불일치(완료 manifest 선존재 포함)"
+  ],
+  "confirmatory_values_read": 0,
+  "sealed_human_read": 0,
+  "network_calls": 0
+}

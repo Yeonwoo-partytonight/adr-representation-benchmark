@@ -1,0 +1,334 @@
+{
+  "_doc": "블록 R §2 재현 검증 — inner-validation 분할 규칙(1/9)의 15 outer unit 전수. 입력 = fold_membership.csv + master_Y.parquet 뿐. **성능 수치 없음**(표본 수·그룹 수·PT 수만).",
+  "generated_kst": "2026-08-05 19:04 KST",
+  "inputs": [
+    "data/processed/splits/confirmatory/rep{1,2,3}_seed{201,202,203}/fold_membership.csv",
+    "data/processed/master_Y.parquet"
+  ],
+  "inputs_not_used": [
+    "any model",
+    "any prediction",
+    "any sealed artifact",
+    "any performance metric"
+  ],
+  "algorithm": "docs/66 §3 (confirmatory_oof_rep1.assign_folds generalized to 2 buckets)",
+  "outer_split_reproduction_calibration": {
+    "rep1_seed201": {
+      "mismatched_rows": 0,
+      "fold_sizes": [
+        218,
+        218,
+        219,
+        218,
+        219
+      ],
+      "n_scaffold_groups": 732
+    },
+    "rep2_seed202": {
+      "mismatched_rows": 0,
+      "fold_sizes": [
+        218,
+        218,
+        219,
+        218,
+        219
+      ],
+      "n_scaffold_groups": 732
+    },
+    "rep3_seed203": {
+      "mismatched_rows": 0,
+      "fold_sizes": [
+        218,
+        218,
+        219,
+        218,
+        219
+      ],
+      "n_scaffold_groups": 732
+    }
+  },
+  "candidate_ratio_check_docs66_4_1": {
+    "10%": {
+      "inner_valid_sizes": [
+        87
+      ],
+      "zero_positive_pt": 0,
+      "valid_defined_pt_range": [
+        283,
+        309
+      ],
+      "rare_pt_constraint": "PASS",
+      "matches_docs66_table": true
+    },
+    "15%": {
+      "inner_valid_sizes": [
+        130,
+        131
+      ],
+      "zero_positive_pt": 0,
+      "valid_defined_pt_range": [
+        314,
+        347
+      ],
+      "rare_pt_constraint": "PASS",
+      "matches_docs66_table": true
+    },
+    "20%": {
+      "inner_valid_sizes": [
+        174
+      ],
+      "zero_positive_pt": 0,
+      "valid_defined_pt_range": [
+        333,
+        358
+      ],
+      "rare_pt_constraint": "PASS",
+      "matches_docs66_table": true
+    }
+  },
+  "units": [
+    {
+      "split_seed": 201,
+      "fold": 0,
+      "inner_seed": 201000,
+      "n_outer_train": 874,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 79,
+      "n_valid_defined_pt": 318,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 4,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 558,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 201,
+      "fold": 1,
+      "inner_seed": 201001,
+      "n_outer_train": 874,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 82,
+      "n_valid_defined_pt": 308,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 4,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 550,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 201,
+      "fold": 2,
+      "inner_seed": 201002,
+      "n_outer_train": 873,
+      "n_inner_train": 776,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 78,
+      "n_valid_defined_pt": 296,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 4,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 623,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 201,
+      "fold": 3,
+      "inner_seed": 201003,
+      "n_outer_train": 874,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 82,
+      "n_valid_defined_pt": 293,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 10,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 610,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 201,
+      "fold": 4,
+      "inner_seed": 201004,
+      "n_outer_train": 873,
+      "n_inner_train": 776,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 77,
+      "n_valid_defined_pt": 297,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 5,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 587,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 202,
+      "fold": 0,
+      "inner_seed": 202000,
+      "n_outer_train": 874,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 66,
+      "n_valid_defined_pt": 320,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 17,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 678,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 202,
+      "fold": 1,
+      "inner_seed": 202001,
+      "n_outer_train": 874,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 81,
+      "n_valid_defined_pt": 303,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 10,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 560,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 202,
+      "fold": 2,
+      "inner_seed": 202002,
+      "n_outer_train": 873,
+      "n_inner_train": 776,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 15,
+      "n_valid_defined_pt": 323,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 77,
+      "largest_valid_group_is_empty_scaffold": true,
+      "n_outer_train_scaffold_groups": 571,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 202,
+      "fold": 3,
+      "inner_seed": 202003,
+      "n_outer_train": 874,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 79,
+      "n_valid_defined_pt": 303,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 5,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 564,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 202,
+      "fold": 4,
+      "inner_seed": 202004,
+      "n_outer_train": 873,
+      "n_inner_train": 776,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 84,
+      "n_valid_defined_pt": 316,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 4,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 555,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 203,
+      "fold": 0,
+      "inner_seed": 203000,
+      "n_outer_train": 874,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 79,
+      "n_valid_defined_pt": 300,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 5,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 558,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 203,
+      "fold": 1,
+      "inner_seed": 203001,
+      "n_outer_train": 874,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 73,
+      "n_valid_defined_pt": 304,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 17,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 604,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 203,
+      "fold": 2,
+      "inner_seed": 203002,
+      "n_outer_train": 873,
+      "n_inner_train": 776,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 78,
+      "n_valid_defined_pt": 306,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 4,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 572,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 203,
+      "fold": 3,
+      "inner_seed": 203003,
+      "n_outer_train": 874,
+      "n_inner_train": 777,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 68,
+      "n_valid_defined_pt": 294,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 7,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 568,
+      "matches_docs66_table": true
+    },
+    {
+      "split_seed": 203,
+      "fold": 4,
+      "inner_seed": 203004,
+      "n_outer_train": 873,
+      "n_inner_train": 776,
+      "n_inner_valid": 97,
+      "n_valid_scaffold_groups": 88,
+      "n_valid_defined_pt": 307,
+      "n_inner_train_zero_positive_pt": 0,
+      "largest_valid_group_size": 2,
+      "largest_valid_group_is_empty_scaffold": false,
+      "n_outer_train_scaffold_groups": 626,
+      "matches_docs66_table": true
+    }
+  ],
+  "all_units_match_docs66_table_4_2": true,
+  "n_units": 15,
+  "corrections_vs_prompt_json": [
+    {
+      "field": "inner_split.algorithm",
+      "was": "pre-sort groups by (-group_size, str(first cid))",
+      "now": "pre-sort groups by (-group_size, str(first row index)), where the row index is the position in the frozen master_X/master_Y ascending-cid order and the outer-train subset is NOT re-indexed",
+      "why": "assign_folds 의 groups 는 scaffold → **행 인덱스** 리스트이므로 groups[g][0] 은 cid 가 아니라 행 인덱스다. 'first cid' 로 구현하면 셔플 초기순서가 달라져 **다른 inner split** 이 나오고 docs/66 §4 표를 재현하지 못한다(15 unit 중 1 unit 만 우연 일치). 'first row index' 해석은 동결 outer split 을 3반복 전건 0행 불일치로 재현해 검증했다. 설계값 변경이 아니라 재현 불가 문구의 교정이다.",
+      "verified_by": "verify_outer_split_reproduction() + reproduce_and_check()"
+    },
+    {
+      "field": "already_frozen_not_newly_chosen.source",
+      "was": "v3_Multimodal/src/train_ladder.py:61-63,236-248",
+      "now": "v3_Multimodal/src/train_ladder.py:61-67,236-248",
+      "why": "A_wd 레시피 상수 줄은 실측 61(SEEDS)~67(EPOCHS…)이다. 61-63 은 EPOCHS/PATIENCE 줄(67)을 포함하지 않는다. 236-248(monitor·갱신조건·best state 복원)은 실측 일치.",
+      "verified_by": "verify_recipe_constants()"
+    }
+  ]
+}

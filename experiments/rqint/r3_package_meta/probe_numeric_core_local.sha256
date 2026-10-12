@@ -1,0 +1,16 @@
+{
+  "numeric_core_sha256": "3745438643aa1c53a3356813a2c85dcad52b0f23b8e8025202ed252ec06919f4",
+  "canonical_bytes": 12774,
+  "excluded_pointers_applied": [
+    "/run_at_kst",
+    "/wall_clock_seconds",
+    "/timing/per_permutation_seconds",
+    "/timing/per_reference_value_seconds",
+    "/versions",
+    "/_doc",
+    "/block",
+    "/instruction"
+  ],
+  "source_file": "probe_result.json",
+  "note": "★ R3 판정에 쓰지 않는다 — 플랫폼 적합성 확인 전용."
+}

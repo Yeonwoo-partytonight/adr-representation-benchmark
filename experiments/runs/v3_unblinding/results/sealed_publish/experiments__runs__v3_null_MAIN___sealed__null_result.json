@@ -1,0 +1,117 @@
+{
+  "_warning": "SEALED — §13-4 null 결과. 개봉은 성공판정 단계에서 Holm/BH 와 일괄.",
+  "ts_kst": "2026-08-01 01:17:33 KST",
+  "T_definition": "observed M2b macro AP (rep1 seed201 절차와 동일: eligible=370 PT 전체)",
+  "sidedness": "one-sided-upper",
+  "p_emp_formula": "(1 + #{T_b >= T_obs}) / (B + 1)",
+  "T_obs": 0.12442103231007945,
+  "T_obs_basis": "rep1_seed201 sealed OOF (machine_read)",
+  "primary": {
+    "global": {
+      "p_emp": 0.21478521478521478,
+      "B": 1000,
+      "n_ge_obs": 214,
+      "mc_se": 0.012986628750175465,
+      "expected_B": 1000,
+      "b_equals_null_b": true,
+      "note": "결과 조회 후 B 상향·조기중단·재시도 금지(selective precision). B는 NULL_B로 고정.",
+      "n_permutations": 1000,
+      "enters_p_emp": true
+    },
+    "family": {
+      "p_emp": 0.965034965034965,
+      "B": 1000,
+      "n_ge_obs": 965,
+      "mc_se": 0.005808827876166489,
+      "expected_B": 1000,
+      "b_equals_null_b": true,
+      "note": "결과 조회 후 B 상향·조기중단·재시도 금지(selective precision). B는 NULL_B로 고정.",
+      "n_permutations": 1000,
+      "enters_p_emp": true
+    }
+  },
+  "ALT": {
+    "family_ALT": {
+      "p_emp": 0.9504950495049505,
+      "B": 100,
+      "n_ge_obs": 95,
+      "mc_se": 0.02169198247545213,
+      "expected_B": 1000,
+      "b_equals_null_b": false,
+      "note": "사전지정 민감도 — primary null 분포 편입 금지",
+      "n_permutations": 100,
+      "enters_p_emp": false
+    },
+    "global_ALT": {
+      "p_emp": 0.18181818181818182,
+      "B": 10,
+      "n_ge_obs": 1,
+      "mc_se": 0.12196734422726126,
+      "expected_B": 1000,
+      "b_equals_null_b": false,
+      "note": "사전지정 민감도 — primary null 분포 편입 금지",
+      "n_permutations": 10,
+      "enters_p_emp": false
+    },
+    "global_ALT_negative_control": {
+      "n_compared": 10,
+      "all_identical": true
+    },
+    "paired_seeds_note": "family_ALT 는 primary family 와 동일 seed 재사용(몬테카를로 잡음 상쇄)"
+  },
+  "aggregation_asserts": {
+    "global": {
+      "n_records": 1000,
+      "n_unique": 1000,
+      "expected": 1000,
+      "n_duplicates": 0,
+      "n_missing": 0,
+      "n_unexpected": 0,
+      "pass": true
+    },
+    "family": {
+      "n_records": 1000,
+      "n_unique": 1000,
+      "expected": 1000,
+      "n_duplicates": 0,
+      "n_missing": 0,
+      "n_unexpected": 0,
+      "pass": true
+    },
+    "family_ALT": {
+      "n_records": 100,
+      "n_unique": 100,
+      "expected": 100,
+      "n_duplicates": 0,
+      "n_missing": 0,
+      "n_unexpected": 0,
+      "pass": true
+    },
+    "global_ALT": {
+      "n_records": 10,
+      "n_unique": 10,
+      "expected": 10,
+      "n_duplicates": 0,
+      "n_missing": 0,
+      "n_unexpected": 0,
+      "pass": true
+    },
+    "B_equals_NULL_B": {
+      "NULL_B": 1000,
+      "pass": true
+    }
+  },
+  "G0": {
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_n_modules_verified": 11,
+    "sap_modules_all_match": true,
+    "null_generator_sha16": "90886abce256a130",
+    "partition_primary_sha256": "a95e26f9a527e9451ee12f9bccf851e0c8912f57ea7b36920d91d6c7281b0a51",
+    "partition_alt_sha256": "aee6c742c52ce77c0ef50b1c629b3501fa4441fb5a3c0b38cf194b107ca0e1a7",
+    "NULL_B": 1000,
+    "NULL_RF_COMMON_SEED": 42,
+    "primary_B_m1b_dim": 10,
+    "pass": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_doc": "블록 BA (docs/116) 공개 manifest — 개수·환경·검증 불리언·봉인 파일 이름/바이트/sha256·시간뿐. Δ·SS·비율·평균·SD·범위·n_eval 등 값은 기록하지 않는다.",
+  "block": "BA (docs/116)",
+  "provenance": "confirmatory_sealed",
+  "run_id": "BA-2026-10-04T11:17:00+09:00",
+  "completed": true,
+  "ts_completed_kst": "2026-10-04 11:17:00.650 KST",
+  "n_cells": 15,
+  "n_units": 3,
+  "n_seeds": 5,
+  "n_partials_read": 30,
+  "n_checkpoints_read": 4,
+  "sealed_files": [
+    {
+      "name": "_sealed/ss15_result.json",
+      "bytes": 11634,
+      "sha256": "105af61769107e694b1fb7eb96584771c6c14b160f8baddf0268edd042358fdd"
+    }
+  ],
+  "input_checks": {
+    "input_sha_all_match": true,
+    "cid_order_match": true,
+    "fold_rows_match": true,
+    "finite_inputs": true,
+    "cells_complete": true,
+    "structural_checks_ok": true
+  },
+  "sealed_counts_start": {
+    "n_sealed_dirs": 33,
+    "n_sealed_files_total": 763,
+    "n_sealed_artifacts": 739,
+    "n_access_log": 24
+  },
+  "sealed_counts_end": {
+    "n_sealed_dirs": 34,
+    "n_sealed_files_total": 765,
+    "n_sealed_artifacts": 740,
+    "n_access_log": 25
+  },
+  "wall_seconds": 2.998,
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "sklearn": "1.9.0",
+  "pandas": "3.0.3",
+  "harness_sha256": "1e39d07117327b1cf026be31c002f01dfc7c236ccfdb6c20be3b4880388e51d1",
+  "selftest_sha256": "17aabe39cae04268a0a93cf0b929dcc3b5f95252a6113bc1c68a2f19e6bffec2",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "implementation_module_sha256": "3e92a4ded1ea60b777c460b1b120232ae3051fe3a80e2e7c4f12d943c92ea680",
+  "values_disclosed": false,
+  "unblinding_performed": false
+}

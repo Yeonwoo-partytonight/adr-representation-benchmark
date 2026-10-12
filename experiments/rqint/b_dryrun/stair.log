@@ -1,0 +1,41 @@
+[stair] n_coin=200 rep_seed=850260813 …
+[stair] n_coin=200 wall=135.79s u_wall=0.678943 u_loop=0.674928
+[stair] n_coin=500 rep_seed=850260814 …
+[stair] n_coin=500 wall=347.29s u_wall=0.694588 u_loop=0.693028
+[stair] n_coin=1000 rep_seed=850260815 …
+[stair] n_coin=1000 wall=700.91s u_wall=0.700911 u_loop=0.700104
+{
+  "linearity_pass": true,
+  "u_hat_primary": 0.6945878314971924,
+  "u_wall_stats": {
+    "median": 0.6945878314971924,
+    "min": 0.6789427304267883,
+    "max": 0.7009108781814575,
+    "relative_spread": 0.031627602383008276
+  },
+  "u_loop_stats": {
+    "median": 0.6930280206869356,
+    "min": 0.6749277797847754,
+    "max": 0.7001036908176029,
+    "relative_spread": 0.03632740709080274
+  },
+  "ratio_u_hat_over_C4": 0.4611098838475317,
+  "projection": {
+    "interp_a_100000": {
+      "n_coin_vectors": 100000,
+      "T_hat_seconds": 70153.46474123001,
+      "T_hat_hours": 19.487073539230558,
+      "inside_band": true,
+      "extrapolation_allowed": false,
+      "vs_24h": "within"
+    },
+    "interp_b_50000": {
+      "n_coin_vectors": 50000,
+      "T_hat_seconds": 35424.07316637039,
+      "T_hat_hours": 9.840020323991775,
+      "inside_band": false,
+      "extrapolation_allowed": true,
+      "vs_24h": "within"
+    }
+  }
+}

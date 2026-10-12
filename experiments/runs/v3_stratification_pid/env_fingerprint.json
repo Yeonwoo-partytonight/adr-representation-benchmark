@@ -1,0 +1,21 @@
+{
+  "ts_kst": "2026-08-04 23:14:40 KST",
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "scipy": "1.18.0",
+  "sklearn": "1.9.0",
+  "pandas": "3.0.3",
+  "machine": "arm64",
+  "os": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "ladder_freeze_sha16": "b885585aefbabb32",
+  "sap_manifest_sha16": "756d485feb4715e9",
+  "inputs_sha256": {
+    "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+    "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-ID.npz": "9598da3498b1d3cecb1119950e58e43a5f9a7be9981740f0f315de85f56b1f0c",
+    "experiments/runs/v3_stratification/strata_assignment.csv": "8247f4318150414bbdbcd05d577287e771a539447cf57e78e1b1df5dd319250c",
+    "experiments/runs/v3_stratification/struct_bounds.json": "5f408669585f46574cfacac15718627aa8a5400a2a907e55745dde43e07aaf3a",
+    "data/processed/master_Y.parquet": "bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018",
+    "data/processed/master_X.parquet": "788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6",
+    "experiments/runs/v3_stratification/strata_summary.json": "d9333f5e8d5e280caf7f875b6e7a7c1b50b4360b66b597c6db89f54411afbfd7"
+  }
+}

@@ -1,0 +1,5 @@
+--- freeze.py (1.1)
++++ freeze.py (1.2)
+@@ -581 +581 @@
+-        "sap_version": "1.1",  # 1.0(docs/41) → 1.1(docs/43 amendment A1~A6)
++        "sap_version": "1.2",  # 1.0(docs/41) → 1.1(docs/43 amendment A1~A6)

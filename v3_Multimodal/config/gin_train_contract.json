@@ -1,0 +1,405 @@
+{
+  "_doc": "확증 GIN 학습 315회의 «운영 보충» 실행계약. 권한은 만들지 않는다 — 권한은 gin_start_supersede.json 이 만들고, 과학 명세는 gin_confirm_harness_freeze_v2.json 이 정한다. 본 파일은 그 아래에서 세션·재개·쓰기·실패·side 입력 도출만 고정한다. 1회 기록 후 0바이트 불변.",
+  "block": "AT",
+  "frozen_at_kst": "2026-09-21 16:17:42 KST",
+  "instruction": "docs/110 §3 AT-2",
+  "is_authorization": false,
+  "authorization_is_made_by": "v3_Multimodal/config/gin_start_supersede.json",
+  "supplements": "gin_confirm_harness_freeze_v2.json",
+  "science_spec_changed": false,
+  "user_decisions": {
+    "decided_at_kst": "2026-09-21",
+    "D1": "재개 게이트 = v2 무수정 + 재개검사 추가. 첫 착수는 v2 require_supersession() 을 그대로 통과. 재개 때도 v2 게이트를 그대로 호출하되, 실패가 「조건 5 단 하나」일 때만 대체검사 5′(docs/110 §3 AT-3)를 적용. v2 파일 0바이트. 규칙은 학습 전 동결 파일에 고정",
+    "D2": "범위 = 확증 315회만. 안정성 42 · consensus · 지표 · RQ-int = 다음 블록",
+    "D3": "GIN side 입력 = 도출대로 확정. 각 모델의 RF 블록 목록에서 B0(Morgan)만 뺀 것, concat 융합. M0 = side 없음(그래프만). 블록 스케일링은 RF 와 같은 fit 결과 그대로(추가 스케일링 0) — 단 D4 의 P-ID 예외",
+    "D4": "등록 §4 L78 「통제군 side 차원 64 통일」 이행 = P-ID 만 φ(PCA-64), P-FAM 원차원. P-ID 의 B_pid multi-hot(fold 별 1,090~1,139차원)에 등록된 φ(= train-fit z-score → PCA-64, B_seq 와 같은 방식)를 적용. P-FAM B_fam 은 fold 별 40~42차원 < 64 라 PCA 로 64 를 만들 수 없으므로 원차원 유지 + 「물리적으로 통일 불가」를 한계로 기록. C-CAP 은 이미 64",
+    "D5": "L78 의 적용 범위 = neural family 전용으로 해석·기록. 「side」는 GIN(LadderNet) 입력을 가리키는 neural 전용 용어이고 같은 문단에서 RF 집계는 따로 규정돼 있으므로 RF family 에는 해당하지 않는다고 docs/33 에 해석을 명시. RF 확증 산출물은 건드리지 않는다"
+  },
+  "scope": {
+    "confirmatory_units": 315,
+    "stability_units_executed": 0,
+    "consensus_built": false,
+    "metrics_computed": false,
+    "note": "안정성 42회 · consensus · macro AP/Δ/부호 산출 · RQ-int 는 전부 다음 블록이다."
+  },
+  "side_input_derivation": {
+    "rule": "GIN side = MODEL_BLOCKS[model] − {\"B0\"} · fusion = concat · M0 은 side 없음(side_dim 0)",
+    "table": {
+      "M0": {
+        "rf_blocks": [
+          "B0"
+        ],
+        "gin_side": [],
+        "fusion": null,
+        "side_dim_expected": 0
+      },
+      "M1": {
+        "rf_blocks": [
+          "B0",
+          "B1"
+        ],
+        "gin_side": [
+          "B1"
+        ],
+        "fusion": "concat",
+        "side_dim_expected": 2
+      },
+      "M1b": {
+        "rf_blocks": [
+          "B0",
+          "B1",
+          "B_m1b"
+        ],
+        "gin_side": [
+          "B1",
+          "B_m1b"
+        ],
+        "fusion": "concat",
+        "side_dim_expected": 12
+      },
+      "M2b": {
+        "rf_blocks": [
+          "B0",
+          "B1",
+          "B_m1b",
+          "B_seq"
+        ],
+        "gin_side": [
+          "B1",
+          "B_m1b",
+          "B_seq"
+        ],
+        "fusion": "concat",
+        "side_dim_expected": 76
+      },
+      "P-ID": {
+        "rf_blocks": [
+          "B0",
+          "B1",
+          "B_m1b",
+          "B_pid"
+        ],
+        "gin_side": [
+          "B1",
+          "B_m1b",
+          "phi(B_pid)"
+        ],
+        "fusion": "concat",
+        "side_dim_expected": 76
+      },
+      "P-FAM": {
+        "rf_blocks": [
+          "B0",
+          "B1",
+          "B_m1b",
+          "B_fam"
+        ],
+        "gin_side": [
+          "B1",
+          "B_m1b",
+          "B_fam"
+        ],
+        "fusion": "concat",
+        "side_dim_expected": "52~54 (fold 별 B_fam 40~42 + 12)"
+      },
+      "C-CAP": {
+        "rf_blocks": [
+          "B0",
+          "B1",
+          "B_m1b",
+          "C_ccap"
+        ],
+        "gin_side": [
+          "B1",
+          "B_m1b",
+          "C_ccap"
+        ],
+        "fusion": "concat",
+        "side_dim_expected": 76
+      }
+    },
+    "grounding_verbatim": [
+      "docs/30_preregistration_OSF_clean.md L71 — 「| M0 | 구조만 (RF=Morgan r=2 2048bit / GIN=graph embedding) | — |」 → GIN 에서 구조 블록은 그래프 임베딩이 대체한다.",
+      "gin_inner_valid_freeze.json feature_block_fit_population.rationale — 「Using the same population keeps the input representation identical across families for the same rung.」",
+      "train_ladder.py LADDER(L288~) 의 확증 관련 사다리 fusion = \"concat\" (\"gated\" 는 범위 밖 M4 뿐)"
+    ],
+    "no_extra_scaling": "블록 내부 스케일링은 이미 있다(B1 = log1p StandardScaler · B_seq = z-score+PCA-64 · B_m1b 연속형 StandardScaler · B_pid/B_fam multi-hot · C_ccap 가우시안) → 추가 스케일링 0. 예외는 D4 의 φ(B_pid) 뿐이다.",
+    "fit_fold_note": "fit_fold 는 B0 도 fit 한다(무해 — RF 와 같은 leak 검증 경로 유지). side 조립에서만 B0 를 뺀다.",
+    "halt_condition": "docs/30 · docs/50 · docs/64~67 · gin_*freeze*.json 어디에서든 이 표와 모순되는 문면(GIN side 에 Morgan 포함, docs/30 L78 외의 별도 표준화·차원 규정, 다른 fusion)을 발견하면 즉시 보류·상신. docs/30 L78 과 그 선행 초안 4곳(docs/24 L92 · docs/27 L146 · docs/28 L122 · docs/29 L122)은 이미 D4·D5 로 처리된 기지 문면이므로 중단 사유가 아니다. 임의 판단 금지."
+  },
+  "side_input_d4": {
+    "phi_definition": "B_pid.fit(otr) 후 M = B_pid.transform(arange(N)) → fit 행 = otr 중 M 행합 > 0 인 행(= outer-train ∩ 매핑) → StandardScaler().fit(M[fit]) → PCA(n_components=64, svd_solver=\"full\", random_state=42).fit(Xs[fit]) → 전 행 변환 → 행합 0 인 행은 정확히 0 으로 재설정(assert). SeqBlock.fit / train_ladder.build_side 의 (1) 절차와 같은 순서다.",
+    "asserts": [
+      "fit 행 ⊆ otr (leak 0)",
+      "fit 행 수 ≥ 64",
+      "출력 64차원",
+      "B_pid 행합 0 인 행의 φ 출력은 정확히 0"
+    ],
+    "implemented_as": "새 하네스 confirmatory_gin_train.py 안의 얇은 래퍼. ladder_confirmatory 수정 0바이트.",
+    "p_fam_reason": "B_fam 은 fold 별 40~42차원 < 64 라 PCA 로 64 를 만들 수 없다 → 원차원 유지. 「통제군 side 차원 64 통일」은 P-FAM 에 대해 물리적으로 통일 불가이며 이를 한계로 기록한다.",
+    "c_cap_note": "C_ccap 은 이미 64차원이다."
+  },
+  "l78_scope_d5": {
+    "verbatim": "docs/30_preregistration_OSF_clean.md L78 — 「- **표현·집계**: `z_t = MeanPool_residue(ProtBERT(s_t))`, 앞 510잔기(절단율 49% 한계 §15). **RF family(primary) 집계 = 표적 mean-pool → z-score → PCA-64 고정 피처.** neural family는 mean + DeepSets 병행(보조). 통제군 side 차원 64 통일. split별 scaler·PCA·집계통계·모델선택은 해당 fold의 train/valid에서만 적합(누수 assert).」",
+    "interpretation": "「side」는 GIN(LadderNet) 입력을 가리키는 neural 전용 용어이고, 같은 문단에서 RF family 집계는 따로 규정돼 있다. 따라서 「통제군 side 차원 64 통일」은 neural family 전용으로 읽는다.",
+    "consequence": "RF 확증 산출물(P-ID 원차원 B_pid)은 이 문장의 적용 대상이 아니며, 따라서 RF 편차가 아니다. RF 확증 산출물은 본 블록에서 건드리지 않는다.",
+    "deepsets_out_of_scope": "DeepSets 는 등록 §4 「보조자료(본문 아님)」라 본 블록 범위 밖이다."
+  },
+  "resume_gate": {
+    "basis": "D1",
+    "order": "v2 게이트(서브프로세스 · 봉인 쓰기 전) → 고아 처리 → 조건 5′. 고아 이동은 봉인 파일 계수를 바꾸지 않으므로 이 순서가 가능하다.",
+    "v2_gate_invocation": "[sys.executable, \"-B\", \"-X\", \"utf8\", \"-c\", \"...import confirmatory_gin_rep_v2 as m; m.require_supersession(); print('GATE_PASS')\"] — 인자 0개. v2 파일 0바이트 수정.",
+    "stderr_parse": "실패 목록은 「supersession 미충족 — 실행 거부(exit 12): 」 로 시작하는 줄 하나만 파싱한다(0개·2개 이상이면 exit 14). 경고 등 다른 줄은 무시한다.",
+    "first_launch": "GIN 봉인 디렉터리 0개 → rc 0 + GATE_PASS 여야 한다 → manifest_t3_launch.json 이 없으면 기록 → 그 뒤에만 반복 디렉터리 생성.",
+    "first_launch_retry": "manifest_t3 는 있는데 GIN 봉인이 0개이고 rc 0 인 경우(= manifest 기록 직후·첫 mkdir 전 크래시)는 첫 착수 재시도로 통과시키고 manifest_t3 는 다시 쓰지 않으며 sessions.jsonl 에 event: \"launch_retry\" 를 남긴다(교착 방지).",
+    "resume": "manifest_t3_launch.json 존재 그리고 GIN 봉인 디렉터리 ≥1 → rc 12 이고 stderr 에서 파싱한 실패 목록이 정확히 [\"5:not_unblinded_and_sealed_counts\"] 이어야 한다. 그 위에 조건 5′ 전건.",
+    "why_condition5_only_means_sealed_counts": "조건 3 이 승인 이벤트 sha256 을 PINNED_SHA256 으로 고정하므로 이벤트 안의 unblinding_performed(false)는 바뀔 수 없다. 따라서 조건 0~4 가 통과하고 조건 5 만 실패하면, 실패 원인은 봉인 계수뿐이다.",
+    "condition_5_prime": {
+      "a": "GIN 소유 3개 반복 디렉터리를 제외한 stat-only 계수 == 25 / 291 / 275 / 16",
+      "b": "전체 _sealed 디렉터리 = 25 + (생성된 GIN 반복 디렉터리 수, ≤3) · 그 밖의 새 _sealed 0",
+      "c": "반복별 _partial/*.npz 이름 집합 == 그 반복 checkpoint.jsonl 키 집합(키 중복 0 · 8필드 · JSON 파싱 전 줄 OK · 개행 종료). 마지막 줄이 잘렸으면(개행 없음·파싱 실패) 자동 복구하지 않고 exit 14 · 상신",
+      "d": "oof_*.npz 이름 집합 ⊆ 5 fold 가 모두 체크포인트된 (model, seed) 그룹",
+      "e": "그 밖의 봉인 파일 ⊆ {checkpoint.jsonl, env_fingerprint.json, access.log, train_stdout.log} ∪ _orphans/*(전부 failures.jsonl 에 등재) · .tmp 0(고아 처리 후)",
+      "f": "manifest_t3_launch.json 의 harness_sha256 · contract_sha256 == 현재 파일 sha",
+      "g": "v3_gin_stability* · v3_gin_confirm_consensus* 디렉터리 0 · gin_start_supersede.json unblinding_performed false"
+    },
+    "otherwise": "그 밖의 rc·실패 목록(조건 0~4 중 하나라도 포함, rc 0 인데 GIN 봉인 존재 등) → exit 14, 학습 0.",
+    "verdict_is_pure_function": "게이트 판정 로직은 (rc, stderr, root, gin_dirs) 를 받는 순수 함수로 짜서 자체검사가 진리표를 돌릴 수 있게 한다. 판정 결과(불리언·실패 이름·계수)는 sessions.jsonl 에 기록."
+  },
+  "session_policy": {
+    "session_cap_hours": 8,
+    "per_session": "세션 시작마다 = 게이트(v2 서브프로세스 + 조건 5′) → AC(pmset -g ps 에 AC Power 그리고 pmset -g adapter Wattage ≥ 90, 아니면 stopped_reason \"power\" · exit 15) → 부하(os.getloadavg()[0] ≤ LOAD_HARD_MAX 직접 판정, 초과 시 SETTLE_INTERVAL_S 간격 최대 SETTLE_MAX_S 재측정, 그래도 초과면 stopped_reason \"load\" · exit 10)",
+    "gate_a_load_usage": "gate_a_load 는 프로세스 시작 시 락 획득 전 1회만 호출(실패 = exit 10). gate_a_load·gate_c_settle 은 실패 시 스스로 sys.exit 하므로 세션 경계에서는 호출하지 않는다.",
+    "session_boundary": "세션 경과 ≥ SESSION_CAP_HOURS → 현재 단위를 끝낸 뒤 세션 종료 → gate_c_settle → 다음 세션(게이트부터 다시). 미완 단위가 없을 때까지 반복.",
+    "signal": "SIGTERM·SIGINT → 플래그만 세우고 현재 단위를 끝낸 뒤 stopped_reason \"signal\" 로 깨끗이 종료(체크포인트 보존). ComputeLock.acquire() 가 설치한 즉시-SystemExit 핸들러는 락 획득 직후 재설치한다(락 해제는 with 의 __exit__ 에 맡긴다).",
+    "power_required": "배터리 전원 착수·재개 금지. --allow-battery 류 우회 옵션 신설 금지."
+  },
+  "failure_policy_verbatim": "Only pre-defined hard technical failures (crash, OOM, NaN loss) may be retried, exactly once, with the SAME seed and SAME configuration. Seed substitution and outcome-driven retraining are forbidden. All failures and retries are logged.",
+  "failure_mapping": {
+    "hard_technical_failure": [
+      "예외(RuntimeError MPS OOM 포함)",
+      "P_test 비유한(np.isfinite 거짓)",
+      "세션 도중 강제종료(= 프로세스 crash)"
+    ],
+    "crash_interpretation_note": "「세션 도중 강제종료」를 동결 문면의 「crash」 범주로 해석한 것임을 명기한다. 새 범주를 만들지 않았다.",
+    "retry": "같은 seed·같은 설정으로 정확히 1회 재시도",
+    "second_failure": "동일 단위 2번째 실패(고아 포함) = 전체 정지 · stopped_reason \"hard_failure_twice\" · exit 13",
+    "forbidden": "seed 대체 · 설정 변경 · 건너뛰기 · 동결 failure_policy 밖 재시도",
+    "logging": "failures.jsonl 에 {키, kind, exception_type, ts_kst}. 예외 메시지 본문에 수치가 섞일 수 있으므로 예외 타입명만 공개 쪽에 적는다."
+  },
+  "write_protocol": {
+    "atomic_unit": "_sealed/_partial/{model}_fold{k}_seed{t}.npz — 단위 산출 1파일 = 원자적 커밋 단위",
+    "steps": [
+      "1. _partial/{model}_fold{k}_seed{t}.npz.tmp 에 P_test(float32)·best_ep·best_v 저장",
+      "2. fsync",
+      "3. os.replace 로 .npz",
+      "4. sha256",
+      "5. checkpoint.jsonl 에 8필드 1줄 append + fsync (= 커밋 지점)",
+      "6. 공개 run.log 에 `rep fold model seed wall_seconds side_dim device retry` 1줄 (소수는 wall_seconds 하나뿐 · n_epochs 공개 금지)"
+    ],
+    "assemble": "(rep, model, seed) 의 5 fold 가 모두 커밋되면 5개 partial sha 를 체크포인트와 대조 → fold_of_row 로 행 배치 → 모든 행이 정확히 1번 채워졌는지 assert → oof_{model}_seed{t}.npz(P·y(master_Y int8)·pt_index=arange(370)·cid_order)를 .tmp→os.replace. 조립 읽기는 access.log 에 type: machine_read · human_exposure: false · actor: vscode-claude · step: \"블록 AT assemble\" 로 기록.",
+    "orphans": ".tmp 파일, 또는 .npz 는 있는데 체크포인트 키가 없는 partial = 세션 도중 강제종료의 흔적 → 열지 않고 _sealed/_orphans/<원이름>.<ts> 로 이동(삭제 0) → failures.jsonl 에 {rep,fold,model,train_seed,kind:\"interrupted\",ts_kst,orphan_path} 기록 → 그 단위의 실패 1회로 센다(재시도 1회 남음).",
+    "prediction_access_limit": "예측값 접근은 ① np.isfinite(P_test).all() 기술 검사 ② 조립의 행 배치·sha 대조 두 가지뿐. 요약통계·분포·히스토그램 0."
+  },
+  "sealed_layout_additions": {
+    "_sealed/_partial/{model}_fold{k}_seed{t}.npz": "P_test float32 · best_ep · best_v. 근거 = 단위 산출 1파일 = 원자적 커밋 단위 · RF 선례 experiments/runs/v3_confirm_rest/_sealed/_partial/",
+    "_sealed/train_stdout.log": "가로챈 train_variant stdout(+stderr · valid monitor 포함). 근거 = train_ladder.log() 는 print 이고 valid monitor·best_v 는 v2 규격 b_public_sealed_boundary.sealed_required 이므로 stdout 을 반드시 가로채 봉인 로그로 보낸다.",
+    "_sealed/_orphans/": "크래시로 커밋되지 못한 단위 산출(열지 않음 · 삭제 않음). 근거 = write_protocol.orphans",
+    "direction": "추가는 전부 봉인 쪽 = 공개 축소 방향. 완화 0."
+  },
+  "public_files": {
+    "per_repeat_root": [
+      "run.log",
+      "failures.jsonl",
+      "split_diagnostics_public.json",
+      "env_public.json"
+    ],
+    "authorization_dir": [
+      "manifest_t3_launch.json",
+      "sessions.jsonl",
+      "plan_confirmatory_315.json",
+      "selftest_train.json",
+      "nohup_run.out",
+      "manifest_t4_post_confirmatory.json"
+    ],
+    "boundary_verbatim_source": "gin_confirm_harness_freeze_v2.json b_public_sealed_boundary",
+    "public_allowed": "개수 · 분할 진단 · 환경 명세 · 타이밍(wall seconds) · 게이트 불리언 · n_eval · n_excluded_undefined · 재시도 로그",
+    "sealed_required": "모든 예측 확률 · 모든 macro AP · 모든 Δ · Δ 부호 · valid monitor 값 · best_v · (본 블록 추가) n_epochs"
+  },
+  "stdout_capture": {
+    "why": "train_ladder.log() 는 print 다(train_ladder.py:81) — train_variant 가 `validMacro … best …` 를 stdout 으로 출력한다. valid monitor · best_v 는 봉인 대상이다.",
+    "how": "contextlib.redirect_stdout(buf) 와 redirect_stderr(buf) 안에서 train_variant 를 호출하고, 끝나면(예외여도) buf 내용을 _sealed/train_stdout.log 에만 append(머리행 = 단위 키·ts). 경고·traceback 도 여기로 간다.",
+    "public_side": "공개 쪽(nohup_run.out · failures.jsonl)에는 예외 타입명만. 하네스 자체 assert 메시지에 수치를 넣지 않는다.",
+    "streams": [
+      "stdout",
+      "stderr"
+    ]
+  },
+  "n_epochs_derivation": "min(best_ep + PATIENCE, EPOCHS) — train_ladder.py L226~250 의 루프가 wait >= PATIENCE(30) 에서 끊기거나 EPOCHS(200) 에서 끝나므로 결정적으로 도출된다. train_variant 반환값에 n_epochs 는 없다.",
+  "n_epochs_public": false,
+  "n_epochs_public_reason": "F10 보수 선택(공개 축소 방향). n_epochs 를 공개하면 n_epochs < 200 일 때 best_ep = n_epochs − 30 이 그대로 역산되고, best_ep 는 v2 규격이 봉인 파일 내용으로 둔 값이다. n_epochs 는 봉인 checkpoint.jsonl 에만 둔다. 공개 타이밍 = wall_seconds 뿐.",
+  "sealed_read_scope": "v1·v2 규격의 『_sealed/ 경로 읽기 호출 0』 가드는 v1·v2 하네스에 적용된다. 새 하네스는 자기 소유 GIN 반복 디렉터리의 봉인만 machine_read 로 읽는다 — 체크포인트(세션마다 반복별 1회) · 조립 · finalize. 모든 읽기는 해당 반복 access.log 에 기록. 기존 25개 봉인 트리는 stat 만.",
+  "mps_fallback_env": "1",
+  "device": "mps",
+  "nondeterminism_note": "MPS 연산은 비트 재현이 보장되지 않는다 — seed 고정은 초기화·dropout·미니배치 순서를 고정할 뿐이다. 재시도 산출이 원 시도와 비트 동일할 필요는 없다.",
+  "interpreter": ".venv/bin/python (python 3.14.4 · torch 2.12.1 · torch_geometric 2.8.0 · rdkit 2026.03.3). 모든 호출 = PYTHONDONTWRITEBYTECODE=1 PYTORCH_ENABLE_MPS_FALLBACK=1 .venv/bin/python -B -X utf8. .venv-1(3.11) 사용 금지. 디바이스 = train.get_device({\"device\": \"mps\"}) + assert str(device) == \"mps\"(auto 의 조용한 CPU 폴백 금지). 새 하네스는 train_ladder 를 graph_features 보다 먼저 import 하되, PYTORCH_ENABLE_MPS_FALLBACK 은 import 순서에 기대지 않고 명령줄 환경변수로 고정한다.",
+  "execution_order": {
+    "plan_source": "confirmatory_gin_rep.build_plan(frozen_design(load_frozen()))[\"confirmatory_units\"] = 315 4-튜플, 순서 = rep → fold → model(M0,M1,M1b,M2b,P-ID,P-FAM,C-CAP) → train_seed(42,1,2). 이 순서 그대로 실행한다.",
+    "rep_seed_map": {
+      "1": 201,
+      "2": 202,
+      "3": 203
+    },
+    "stability_units_not_executed": "stability_units(42)는 실행하지 않는다.",
+    "graphs": "v2_GNN/src/data.build_graphs 는 개발 split 에 하드와이어 → 쓰지 않는다. 그래프는 graph_features.smiles_to_data(master_X.smiles_canonical[i], y=Ym[i]) 로 1,092개를 프로세스 시작 시 1회 만들고 d.cid 를 붙인다.",
+    "splits": "data/processed/splits/confirmatory/rep{r}_seed{s}/fold_membership.csv (scaffold NaN → \"\" 복원) + 교차확인 confirmatory_oof_rest.fold_of_row_for(rep, cid_order)(folds.json).",
+    "inner_split": "confirmatory_gin_rep.inner_split(scaf, otr, 1000*split_seed + fold, 9) → 15 unit 전부 inner-valid 97 · experiments/runs/v3_gin_inner_valid_freeze/inner_split_check.json 과 전 필드 일치 · inner-train 양성 0 PT 0.",
+    "name_collision_note": "confirmatory_gin_rep.load_frozen(동결 config 반환)과 ladder_confirmatory.load_frozen(데이터 반환)은 다른 함수다. 새 하네스는 모듈명을 붙여서만 부른다(v1.load_frozen, lc.load_frozen). 실행 계획은 반드시 v1.load_frozen."
+  },
+  "sealed_layout": {
+    "repeat_dir": "experiments/runs/v3_gin_confirm_rep{r}_seed{s}/  (r→s = 1→201 · 2→202 · 3→203)",
+    "sealed": {
+      "oof_{model}_seed{t}.npz": "×21 — P (1092,370) float32 · y int8 · pt_index (370,) int32 · cid_order (1092,) int64",
+      "checkpoint.jsonl": "8필드 고정: rep · fold · model · train_seed · completed_at_kst · artifact_sha256 · n_epochs · wall_seconds",
+      "env_fingerprint.json": "v2 규격 c",
+      "access.log": "v2 규격 c"
+    },
+    "metrics_full_json": "이번 블록에서 만들지 않는다(지표 산출 = 다음 블록)."
+  },
+  "predicted_counts": {
+    "per_repeat_sealed_files": 130,
+    "per_repeat_breakdown": "_partial 105 + oof 21 + checkpoint.jsonl + env_fingerprint.json + access.log + train_stdout.log",
+    "three_repeats": 390,
+    "after_completion": {
+      "n_sealed_dirs": 28,
+      "n_sealed_files_total": 681,
+      "n_access_log": 19,
+      "n_sealed_artifacts": 662
+    },
+    "orphan_adjustment": "고아 n 개면 n_sealed_files_total·n_sealed_artifacts 에 +n",
+    "legacy_25_trees_unchanged": {
+      "n_sealed_files_total": 291,
+      "n_sealed_artifacts": 275,
+      "n_access_log": 16
+    }
+  },
+  "budget": {
+    "planning_range_mean_1_3_hours": [
+      15.62,
+      38.05
+    ],
+    "resource_reservation_hours": 38,
+    "ac_power_required": true,
+    "adapter_wattage_min": 90,
+    "source": "experiments/runs/v3_gin_budget/gin_budget_estimate_v2.json"
+  },
+  "preconditions": {
+    "f4_authority_chain": {
+      "v3_Multimodal/config/rqint_procedure_decisions_v1.json": {
+        "sha256": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+        "bytes": 22062
+      },
+      "v3_Multimodal/config/gin_seed_freeze.json": {
+        "sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+        "bytes": 4637
+      },
+      "v3_Multimodal/config/gin_inner_valid_freeze.json": {
+        "sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+        "bytes": 6913
+      },
+      "v3_Multimodal/config/gin_start_supersede.json": {
+        "sha256": "c061d033ae35bea3df269d37c1a45174fc48f70bfe37ace4f159a8cb36d4a32c",
+        "bytes": 6359
+      },
+      "v3_Multimodal/config/gin_confirm_harness_freeze_v2.json": {
+        "sha256": "ec43025a61378e18b77d6f1ae11a7c5c6085f46b0b7bdcc975bf136d6af3c612",
+        "bytes": 26558
+      },
+      "v3_Multimodal/config/gin_confirm_harness_freeze_v2.status.json": {
+        "sha256": "73c0a69c571fb075fc6c744b2b396268f45c967a869c13ed24a1f3451f4532fd",
+        "bytes": 2056
+      },
+      "v3_Multimodal/src/confirmatory_gin_rep_v2.py": {
+        "sha256": "644abf4f272c51e673dfb3be2915792502552ba4baad610aaa62fee58101860a",
+        "bytes": 28331
+      },
+      "v3_Multimodal/src/confirmatory_gin_rep.py": {
+        "sha256": "1e6642bf9ecac5a272fdb49c441668d2f6f3ec97e87528831aad75a9c40d995a",
+        "bytes": 42450
+      },
+      "v3_Multimodal/config/gin_confirm_harness_freeze.json": {
+        "sha256": "1af993fde7330e1d48e6d10fee157c1310f42dacc5c1d65a4834b9020e5b7072",
+        "bytes": 21968
+      },
+      "experiments/runs/v3_gin_budget/gin_budget_estimate_v2.json": {
+        "sha256": "8325c6d00bfb6f100ab70ba83073cbfe539e62aab8def2cddf4f3d5fdd5d5948",
+        "bytes": 13865
+      },
+      "experiments/runs/v3_gin_start_authorization/manifest_t1_pre_v2.json": {
+        "sha256": "d471756459d6eb370f7f270b9837ec70e258e62b282af78f5e402e60afa2fe92",
+        "bytes": 8843
+      },
+      "experiments/runs/v3_gin_start_authorization/manifest_t2_pre_exec.json": {
+        "sha256": "e5230d159515b726f498975ddd90804349ce5dd43af6703d77a277b5af3880c4",
+        "bytes": 15191
+      },
+      "experiments/runs/v3_gin_start_authorization/selftest_v2.json": {
+        "sha256": "adcc143c29ac44d7cfcdef984bee0f8d38b1c217f472638e2fc08166d535a4ac",
+        "bytes": 12476
+      }
+    },
+    "f5_reused_modules": {
+      "v3_Multimodal/src/train_ladder.py": {
+        "sha256": "1d0a5357aafe57bd36f03bf67f1ba63e9e8b36d32a9bb49b1aafc4907a204fd9",
+        "bytes": 35386
+      },
+      "v3_Multimodal/src/ladder_confirmatory.py": {
+        "sha256": "13a17129db6a6679bd6dbdc28a12c0f31e2e8d6b0811130450add602daf5137c",
+        "bytes": 65515
+      },
+      "v3_Multimodal/src/confirmatory_oof_rest.py": {
+        "sha256": "78de238ff2fac8e22ab09618bb67388ec86e4872acd44ee9456150d4c9ecbdfa",
+        "bytes": 47649
+      },
+      "v3_Multimodal/src/confirmatory_oof_rep1.py": {
+        "sha256": "afb894c09fdaad6f1c75df789c5e2ede1dbbc2151a8c30b8eda6044cd6f336b6",
+        "bytes": 34897
+      },
+      "v3_Multimodal/src/compute_lock.py": {
+        "sha256": "b03a0b0012948b340f410670d6b045f279e1b21b4faa293bb45bbc2e99a6d738",
+        "bytes": 16356
+      },
+      "v3_Multimodal/src/drug_branch.py": {
+        "sha256": "cad5c3acb53538f67f947d3cfc2f3fb341d7471e3d030ac11cd66975882b8252",
+        "bytes": 6045
+      },
+      "v2_GNN/src/train.py": {
+        "sha256": "c3d52ea3062a7c85e4605df238aa0b949f75d60f2100a6e486d236e1e504f17a",
+        "bytes": 8234
+      },
+      "v2_GNN/src/graph_features.py": {
+        "sha256": "dc317adfe6e60c880f767c2c00cfc3a15c25adfcc8e852749b04139375797f58",
+        "bytes": 3590
+      },
+      "v3_Multimodal/src/sap/metrics.py": {
+        "sha256": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+        "bytes": 4256
+      },
+      "experiments/sap/manifest.json": {
+        "sha256": "d08dcedf2a22e1c8493c842507422de1f6c705ce54ce995e038e09f604706e10",
+        "bytes": 55303
+      },
+      "data/processed/master_X.parquet": {
+        "sha256": "788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6",
+        "bytes": 41733
+      },
+      "data/processed/master_Y.parquet": {
+        "sha256": "bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018",
+        "bytes": 239497
+      }
+    }
+  },
+  "unblinding_performed": false,
+  "gin_start_still_blocked_required": "①②③ 3/3 true — 처음부터 끝까지 true 다. v2 계약은 그것을 요구 조건으로 읽는다. 플래그를 만지면 즉시 중단.",
+  "harness_sha256_deliberately_absent": "하네스가 이 파일의 sha 를 상수로 갖는다 — 순환 방지(블록 AS 선례). 따라서 본 계약은 하네스 sha 를 넣지 않는다."
+}

@@ -1,0 +1,281 @@
+{
+  "_doc": "블록 AC — RQ-int 검정 구현 R6 검증. **합성 데이터 전용**: 본 파일의 모든 수치는 sap.rqint_synthetic 합성 fixture 산출물이며 확증 데이터·봉인 수치와 무관하다. G 는 감사용 임의값(확증 scaffold group 수 아님).",
+  "block": "AC",
+  "instruction": "docs/89_rqint_implementation_r6_prompt_for_vscode.md",
+  "run_at_kst": "2026-09-14T00:45:40+09:00",
+  "synthetic_only": true,
+  "confirmatory_data_accessed": false,
+  "unblinding_performed": false,
+  "gin_start_still_blocked": true,
+  "sap_version_unchanged": "1.1",
+  "design_basis": {
+    "sharp_null": "docs/55b §5 후보 B (F-CANDB)",
+    "statistic": "T = Δ_RF − Δ_GIN, Δ_F = macroAP(y, P_F^{M2b}) − macroAP(y, P_F^{M1b}); 양측. additive surrogate 대체 금지(A6 계승).",
+    "H0_imposed": "H0^B(강한 null): 각 family 내부에서 arm 라벨(M1b/M2b)이 scaffold group 단위로 교환 가능 = Δ_RF = 0 이고 Δ_GIN = 0. 모델 재학습 미포함.",
+    "H0_target": "H0^int(약한 null): Δ_RF = Δ_GIN (공통값 ≠ 0 허용). H0^B ⊊ H0^int.",
+    "name_caveat": "shared-coin scaffold-blocked arm-swap interaction test. 부과 귀무=강한 null(H0^B) ≠ 검정 대상 가설=약한 null(H0^int). '약한 null 에 대한 정확검정' 표기 금지 — 1종오류 통제는 R1 캘리브레이션 감사로 실증. 모델 재학습 미포함(고정 OOF 의 conditional randomization).",
+    "aggregation": "D3: repeat 축 = prediction-then-metric(consensus 평균 후 지표, 양 family 공통); seed 축 = metric-then-average(시드별 Δ 산출 후 평균, GIN 전용).",
+    "p_formula": "p = (1.0 + count) / (n_permutation_values + 1.0), count = sum(abs(perm) >= abs(T_obs) - _EPS)   # F-PFORM 축자 계승",
+    "eps": 1e-12
+  },
+  "B_definition_status": "still_unspecified — `B` 가 n_coin_vectors 인지 n_permutation_values 인지 본 모듈에서 정하지 않는다. SAP 1.2 에서 확정 필요.",
+  "complement_pairing_cost_note": "여집합 항등식 T*(z̄) = −T*(z) 를 쓰면 참조분포 크기의 **절반만 평가**하면 된다 → 계측 블록의 단가 추정이 그만큼 달라진다. ★ 단 양측 p 는 |T*| 를 쓰므로 |T*(z̄)| = |T*(z)| 이며, 여집합 값은 양측 p 에 추가 정보를 주지 않는다(몬테카를로 오차는 독립 동전 draw 수가 지배). 여집합 쌍의 효용은 참조분포의 **정확한 대칭성** 확보이지 p 의 정밀도 향상이 아니다.",
+  "code_scan": {
+    "method": "AST walk (freeze.py code_scan 동일 규칙)",
+    "per_file": {
+      "sap/rqint.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "consensus",
+          "metrics",
+          "numpy",
+          "time"
+        ],
+        "ok": true
+      },
+      "sap/rqint_synthetic.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "numpy",
+          "synthetic"
+        ],
+        "ok": true
+      },
+      "sap/rqint_audit.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "metrics",
+          "numpy",
+          "signflip"
+        ],
+        "ok": true
+      },
+      "run_rqint_audit.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "ast",
+          "datetime",
+          "json",
+          "numpy",
+          "os",
+          "platform",
+          "sap",
+          "sklearn",
+          "sys",
+          "time"
+        ],
+        "ok": true
+      }
+    },
+    "no_confirmatory_data_access": true
+  },
+  "import_topology": {
+    "rqint_imports": [
+      "__future__",
+      "__future__.annotations",
+      "consensus",
+      "consensus.build_consensus",
+      "metrics",
+      "metrics.macro_ap",
+      "numpy",
+      "time"
+    ],
+    "rqint_audit_imports": [
+      "__future__",
+      "__future__.annotations",
+      "metrics",
+      "metrics.macro_ap",
+      "numpy",
+      "signflip",
+      "signflip._ks_uniform"
+    ],
+    "rqint_imports_signflip": false,
+    "rqint_imports_metrics": true,
+    "rqint_imports_consensus": true,
+    "rqint_audit_imports_rqint": false,
+    "pass": true
+  },
+  "text_checks": {
+    "assert_eight_matrices": true,
+    "eps_literal_matches_signflip": true,
+    "count_formula_rqint": true,
+    "count_formula_signflip": true,
+    "p_formula_rqint": true,
+    "p_formula_signflip": true,
+    "pass": true
+  },
+  "r6": {
+    "R6-1": {
+      "id": "R6-1",
+      "name": "가환성(교환 연산자 ∘ repeat 평균)",
+      "n_z": 100,
+      "n_matrix_pairs": 800,
+      "all_array_equal": true,
+      "max_abs_diff": 0.0,
+      "criterion": "np.array_equal 또는 max abs diff < 1e-15",
+      "pass": true
+    },
+    "R6-2": {
+      "id": "R6-2",
+      "name": "zero-effect → p = 1.0",
+      "T_obs": 0.0,
+      "p": 1.0,
+      "max_abs_t_star": 0.0,
+      "criterion": "|p−1| < 1e-9 AND T=0 AND 모든 T*=0",
+      "pass": true
+    },
+    "R6-3": {
+      "id": "R6-3",
+      "name": "대칭 할당 균등성",
+      "R": 200,
+      "n_coin_vectors": 150,
+      "mean_p": 0.49504983388704316,
+      "ks_vs_uniform": 0.051428571428571435,
+      "frac_le": {
+        "le_0.05": 0.045,
+        "le_0.1": 0.06,
+        "le_0.25": 0.24,
+        "le_0.5": 0.52
+      },
+      "criterion": "mean(p) ∈ [0.40, 0.60] AND KS < 0.16",
+      "pass": true
+    },
+    "R6-4": {
+      "id": "R6-4",
+      "name": "여집합 반대칭(complement_audit)",
+      "draws_checked": 1000,
+      "failures": 0,
+      "max_abs_dev": 0.0,
+      "tol": 1e-12,
+      "fallback_to_explicit": false,
+      "identity_path_used": true,
+      "criterion": "≥1,000 draw 명시적 재계산 · 전건 |T*(z̄)+T*(z)| < 1e-12",
+      "pass": true
+    },
+    "R6-5": {
+      "id": "R6-5",
+      "name": "전체 교환 보존(z ≡ 1 → T* = −T)",
+      "T_obs": 0.044898977787383984,
+      "T_full_swap": -0.044898977787383984,
+      "abs_dev": 0.0,
+      "n_rows_swapped": 100,
+      "criterion": "|T*(1) + T| == 0 (정확)",
+      "pass": true
+    },
+    "R6-6": {
+      "id": "R6-6",
+      "name": "군 순서 불변(순서보존 재라벨 + 행 치환)",
+      "p_base": 0.5440931780366056,
+      "p_relabeled": 0.5440931780366056,
+      "abs_dT": 0.0,
+      "informational_nonmonotone_relabel_p": 0.5906821963394343,
+      "informational_note": "비단조 재라벨은 동전↔군 짝짓기(MC 실현)를 바꾼다 — 합격기준 아님",
+      "criterion": "p 정확 동일 AND |ΔT| < 1e-12",
+      "pass": true
+    },
+    "R6-7": {
+      "id": "R6-7",
+      "name": "재실행 결정성",
+      "perm_bytes_identical": true,
+      "T_identical": true,
+      "p_identical": true,
+      "criterion": "T·p·참조분포 바이트 동일",
+      "pass": true
+    },
+    "R6-8": {
+      "id": "R6-8",
+      "name": "완전열거 정답표",
+      "T_obs": 0.20807182855776848,
+      "n_enumerated": 256,
+      "count_abs_ge_obs": 12,
+      "p_exact": 0.046875,
+      "p_monte_carlo": 0.047619047619047616,
+      "n_coin_vectors": 4000,
+      "n_permutation_values": 8000,
+      "mc_se": 0.0033420702556574123,
+      "abs_diff": 0.0007440476190476164,
+      "three_se": 0.010026210766972236,
+      "T_obs_impl": 0.20807182855776848,
+      "abs_dT_vs_naive": 0.0,
+      "criterion": "|p_MC − p_exact| ≤ 3 × MC SE (SE 분모 = 독립 동전 draw 수)",
+      "pass": true
+    },
+    "R6-9": {
+      "id": "R6-9",
+      "name": "독립 구현 대조",
+      "n_coin_vectors": 200,
+      "max_abs_diff_t_star_sequence": 0.0,
+      "abs_diff_T_obs": 0.0,
+      "T_obs_impl": 0.20807182855776848,
+      "T_obs_naive": 0.20807182855776848,
+      "delta_rf_naive": 0.23926651464464355,
+      "delta_gin_naive": 0.031194686086875072,
+      "criterion": "max abs diff < 1e-12 (구현·참조 모두)",
+      "pass": true
+    }
+  },
+  "r6_all_pass": true,
+  "r6_3_remeasure": null,
+  "timing": {
+    "fixture": "make_rqint_exchangeable(seed=99) — 합성 전용",
+    "N": 100,
+    "K": 10,
+    "G": 20,
+    "n_coin_vectors": 200,
+    "n_permutation_values": 400,
+    "per_permutation_seconds": 0.015126062910712789,
+    "per_reference_value_seconds": 0.0075630314553563945,
+    "measured_not_extrapolated": true,
+    "scope_note": "합성 fixture 규모(N·K·G)의 실측이다. 확증 규모로의 외삽은 하지 않는다 — 계측 블록의 일."
+  },
+  "weak_null_diagnostic": {
+    "status": "예비 진단 · 판정 아님 (정식 판정 = R1 의 C1~C3)",
+    "R": 200,
+    "n_coin_vectors": 150,
+    "mean_p": 0.45853820598006645,
+    "frac_p_le_0.05": 0.095,
+    "frac_p_le_0.05_over_7": 0.015,
+    "frac_p_le_0.05_over_4": 0.035,
+    "mean_delta_rf": 0.32508010715010166,
+    "mean_delta_gin": 0.3312550140521667,
+    "mean_abs_delta_gap": 0.0534871829212466,
+    "note": "합성 fixture 는 두 family 의 base·effect 를 같게 두어 Δ_RF ≈ Δ_GIN ≠ 0 을 만든 것이다. 이 수치는 R1 설계에 넣을 예상 규모를 잡기 위한 것이며 게이트가 아니다."
+  },
+  "d6_conditionality_keys": {
+    "inference_conditional_on": "pre-specified GIN training seed set",
+    "delta_gin_per_seed": [
+      0.0592292393156435,
+      -0.10692623329491313,
+      -0.02265227523049107
+    ],
+    "delta_gin_seed_mean": -0.023449756403253568,
+    "delta_gin_seed_sd": 0.08308060695357877,
+    "n_coin_vectors": 100,
+    "n_permutation_values": 200,
+    "B_definition": "still_unspecified — `B` 가 n_coin_vectors 인지 n_permutation_values 인지 본 모듈에서 정하지 않는다. SAP 1.2 에서 확정 필요.",
+    "present": true
+  },
+  "out_of_scope": [
+    "R1 캘리브레이션 감사 C0~C4",
+    "B 확정",
+    "C0~C3 복제 수 확정",
+    "SAP 1.2 재동결·MODULE_FILES·__init__ 갱신",
+    "GIN 학습",
+    "개봉"
+  ],
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "sklearn": "1.9.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "wall_clock_seconds": 1030.18
+}

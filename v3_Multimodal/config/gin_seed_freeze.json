@@ -1,0 +1,117 @@
+{
+  "_doc": "GIN training seed·대표 outer unit 사전 확정. docs/64 §5 확정값. ladder_freeze.json 무수정(별도 동결).",
+  "frozen_at_kst": "2026-08-05 16:51 KST",
+  "preconditions": {
+    "gin_training_runs_before_freeze": 0,
+    "sealed_confirmatory_results_viewed": false,
+    "basis": "docs/64_gin_seed_fold_triage.md"
+  },
+  "unit_notation": "(split_seed, zero_based_fold_index)",
+  "representative_units": [
+    [
+      201,
+      4
+    ],
+    [
+      202,
+      1
+    ],
+    [
+      203,
+      0
+    ]
+  ],
+  "representative_unit_rule": {
+    "text": "For each split seed s in {201,202,203}, take the SHA-256 digest of the newline-free ASCII decimal string of s, interpret the full digest as an unsigned 256-bit integer, and use that integer modulo 5 as the zero-based fold index.",
+    "reproduce": "python3 -c \"import hashlib;print([int(hashlib.sha256(str(s).encode('ascii')).hexdigest(),16)%5 for s in (201,202,203)])\"",
+    "expected": [
+      4,
+      1,
+      0
+    ],
+    "inputs_not_used": [
+      "fold drug counts",
+      "scaffold group counts",
+      "any model output",
+      "any performance metric"
+    ],
+    "researcher_dof_disclosure": "Rule adopted 2026-08-05 after inspecting fold composition tables but before any GIN training, prediction, or performance result. Only this one hash rule was computed; no alternative hash/encoding/modulus variants were evaluated."
+  },
+  "training_seeds_ordered": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "confirmatory_seed_prefix": [
+    42,
+    1,
+    2
+  ],
+  "stability_seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "seed_namespace_note": "train_seed=42 is the GIN training RNG id. It is a different parameter from split_seed=42 (development split, excluded from confirmatory analysis) and from RandomForest random_state=42.",
+  "model_scope_stability": [
+    "M0",
+    "M1",
+    "M1b",
+    "M2b",
+    "P-ID",
+    "P-FAM",
+    "C-CAP"
+  ],
+  "model_scope_rationale": "docs/30 §13 budget clause scopes the GIN allocation with '동일 세트'; running all seven avoids a narrowing amendment. Primary reported decomposition = Δ(M2b − M1b); remaining models reported as supplementary.",
+  "delta_definition": "Delta_ij = macroAP_ij(M2b) - macroAP_ij(M1b), computed on the held-out fold of outer unit i under training seed j.",
+  "delta_unit_caveat": "This fold-level evaluation unit differs from the confirmatory estimand, which is the complete-OOF metric over all 1,092 drugs.",
+  "macro_ap_rule": "Frozen preregistration §7 rule, unchanged: eligible PT set = 370 (global positives >= 10); within a cell, PTs with zero in-sample positives are EXCLUDED from the macro mean (variable denominator, undefined-AP rule). AP=0 substitution is NOT used. Report n_eval and n_excluded_undefined per cell.",
+  "decomposition": {
+    "method": "descriptive two-way sum-of-squares over the 15 Delta_ij",
+    "report": [
+      "SS_unit/SST",
+      "SS_seed/SST",
+      "SS_res/SST",
+      "per-unit seed mean/SD/range",
+      "all 15 cell values",
+      "per-cell n_eval and n_excluded_undefined"
+    ],
+    "prohibited": [
+      "REML",
+      "ICC",
+      "population variance components",
+      "significance tests",
+      "confirmatory confidence intervals"
+    ]
+  },
+  "execution_order": "Complete and seal the confirmatory GIN run (15 units x 3 seeds) FIRST; only afterwards add seeds 3 and 4 (the 4th and 5th entries of the ordered list) on the three representative units.",
+  "rng_scope": {
+    "reseed_point": "immediately before each model run",
+    "targets": [
+      "python random",
+      "numpy",
+      "torch CPU",
+      "torch MPS",
+      "DataLoader generator and workers",
+      "model parameter initialization"
+    ],
+    "controls": [
+      "weight initialization",
+      "dropout",
+      "minibatch order",
+      "all stochastic samplers"
+    ]
+  },
+  "failure_policy": "Only pre-defined hard technical failures (crash, OOM, NaN loss) may be retried, exactly once, with the SAME seed and SAME configuration. Seed substitution and outcome-driven retraining are forbidden. All failures and retries are logged.",
+  "firewall": "Stability results must not change the primary results, hypothesis adjudication, model/hyperparameter/seed selection, or the aggregation method. Stability outputs are written to a directory separate from the confirmatory run outputs.",
+  "still_unspecified": [
+    "inner-validation design within outer-train (split unit/ratio, monitor, patience, min/max epoch, best-checkpoint tie-break)",
+    "U1-U7 (RQ-int) pending external statistical review",
+    "SAP 1.2 re-freeze"
+  ],
+  "gin_start_still_blocked": true
+}

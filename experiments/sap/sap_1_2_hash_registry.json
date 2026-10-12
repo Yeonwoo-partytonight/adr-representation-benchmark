@@ -1,0 +1,444 @@
+{
+  "_schema": "sap_1_2_hash_registry/v1",
+  "_doc": "SAP 1.2 해시 원장. 범주 ①~⑤ = docs/99_r2_hash_registry_spec.md §1 · 미등재 11건 중 실질 신규 등재 6건 = 동 §2. 전부 본 블록(AN) 실측이다.",
+  "sap_version": "1.2",
+  "frozen_at_kst": "2026-08-25T15:29:19+09:00",
+  "block": "AN — R2 SAP 1.2 재동결 완주",
+  "instruction": [
+    "docs/100_r2_sap12_freeze_prompt_for_vscode.md",
+    "docs/101_r2_sap12_freeze_resume_prompt_for_vscode.md",
+    "docs/102_r2_al5_verification_delta_prompt_for_vscode.md"
+  ],
+  "spec_source": "docs/99_r2_hash_registry_spec.md §1 ①~⑤ · §2 미등재 11건",
+  "measured_by": "Claude Code (VS Code) — 블록 AN · 파일 직접 sha256",
+  "category_1_sap_modules": {
+    "n": 11,
+    "registered_in": [
+      "experiments/sap/manifest.json:modules",
+      "experiments/provenance/ledger.json:frozen_artifacts",
+      "docs/45 §3"
+    ],
+    "items": [
+      {
+        "path": "v3_Multimodal/src/sap/__init__.py",
+        "sha256": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+        "sha16": "8dc63e28ffcf93dc",
+        "bytes": 1635,
+        "note": "SAP 1.1 대비 0바이트"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/bootstrap.py",
+        "sha256": "05437c516e606a053e02acefb23c2597365472201b6c70ff2814278d6597a31e",
+        "sha16": "05437c516e606a05",
+        "bytes": 14214,
+        "note": "SAP 1.1 대비 0바이트"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/consensus.py",
+        "sha256": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+        "sha16": "9bddb53da5752c46",
+        "bytes": 3124,
+        "note": "SAP 1.1 대비 0바이트"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/decision.py",
+        "sha256": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+        "sha16": "f688b20d816acabe",
+        "bytes": 16353,
+        "note": "SAP 1.1 대비 0바이트"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/freeze.py",
+        "sha256": "8bef5f70d168c50d7860d5e1d70f78b771d76405fafe2c4d256ac04d08078bc9",
+        "sha16": "8bef5f70d168c50d",
+        "bytes": 42927,
+        "note": "★ SAP 1.2 에서 변경된 유일한 모듈 — L581 sap_version 리터럴 1행",
+        "sha16_before_R2": "94e6369fa952be7f"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/metrics.py",
+        "sha256": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+        "sha16": "a7d3fe4fe9e87983",
+        "bytes": 4256,
+        "note": "SAP 1.1 대비 0바이트"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/null_generator.py",
+        "sha256": "90886abce256a130531a0ab0cd8edd17abc27ff1b62ee56f24248aa76fa204c7",
+        "sha16": "90886abce256a130",
+        "bytes": 11119,
+        "note": "SAP 1.1 대비 0바이트"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/redaction.py",
+        "sha256": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+        "sha16": "4d4bf221141fbc79",
+        "bytes": 3647,
+        "note": "SAP 1.1 대비 0바이트"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/signflip.py",
+        "sha256": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+        "sha16": "3de1223585ae0f97",
+        "bytes": 6772,
+        "note": "SAP 1.1 대비 0바이트"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/synthetic.py",
+        "sha256": "ddf715e6fba7503e817c6435c9220f7a83a5e5e31375603fddd522570f2a27d7",
+        "sha16": "ddf715e6fba7503e",
+        "bytes": 8444,
+        "note": "SAP 1.1 대비 0바이트"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/unseen_target.py",
+        "sha256": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+        "sha16": "96c0c87911e8c93d",
+        "bytes": 5610,
+        "note": "SAP 1.1 대비 0바이트"
+      }
+    ],
+    "changed_in_R2": [
+      "freeze.py"
+    ],
+    "unchanged_in_R2": 10
+  },
+  "category_2_rqint_modules": {
+    "n": 3,
+    "items": [
+      {
+        "path": "v3_Multimodal/src/sap/rqint.py",
+        "sha256": "eb842bc98140e9c55b67bc1563cd5573c3b294885778f23744468b712c498b26",
+        "sha16": "eb842bc98140e9c5",
+        "bytes": 12970,
+        "note": "블록 AC 산출 · SAP manifest 미등재(11모듈 밖)"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/rqint_audit.py",
+        "sha256": "ddffe6d128de4d180aeab9be18d6b1a9b5281523bc24cd8a3b4f48f20a2aa4a3",
+        "sha16": "ddffe6d128de4d18",
+        "bytes": 19573,
+        "note": "블록 AC 산출 · SAP manifest 미등재(11모듈 밖)"
+      },
+      {
+        "path": "v3_Multimodal/src/sap/rqint_synthetic.py",
+        "sha256": "27ef0011ee041920a6e7b63eb4dcfef13c7fd2a70ac017f2324e671df8b0f985",
+        "sha16": "27ef0011ee041920",
+        "bytes": 5572,
+        "note": "블록 AC 산출 · SAP manifest 미등재(11모듈 밖)"
+      }
+    ],
+    "note": "SAP 11모듈에 포함되지 않는다. docs/45 §3 등재."
+  },
+  "category_3_config_freezes": {
+    "n": 17,
+    "items": [
+      {
+        "path": "v3_Multimodal/config/a5_boundary_amendment.json",
+        "sha256": "860f5a4529dfb57b64c796dc0463cbab70551de875a9a79a255f0bdf9cf5f3cf",
+        "sha16": "860f5a4529dfb57b",
+        "bytes": 5667,
+        "note": "★ R2 신규 등재(docs/99 §2)"
+      },
+      {
+        "path": "v3_Multimodal/config/a5_mechanism_freeze.json",
+        "sha256": "3419b2f793d74051df29ce3285a3c50d4d7a07f2fd15ec0b6d6fb645c4118dbd",
+        "sha16": "3419b2f793d74051",
+        "bytes": 5340,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/a5_stratum_label_supersede.json",
+        "sha256": "ac187375d2a7c16e38d55f78eb3bd5511f668946a88a6e3e59eb1bc6d49219e4",
+        "sha16": "ac187375d2a7c16e",
+        "bytes": 5176,
+        "note": "★ R2 신규 등재(docs/99 §2)"
+      },
+      {
+        "path": "v3_Multimodal/config/b_100k_prespec.json",
+        "sha256": "e7406c23b8d61b0c4d04638395f4c7803e1e0dc32501baa8dae5047c4d169625",
+        "sha16": "e7406c23b8d61b0c",
+        "bytes": 7916,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/b_dryrun_prespec.json",
+        "sha256": "9a2545eb0d897f304f23350e1363415bc9642a7895fca87b8306f1eadcfa7939",
+        "sha16": "9a2545eb0d897f30",
+        "bytes": 9191,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/gin_inner_valid_freeze.json",
+        "sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+        "sha16": "038599c3e1576022",
+        "bytes": 6913,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/gin_inner_valid_freeze.status.json",
+        "sha256": "bd329fefe613971f59bde8b13ea3f1c4929be04541655ad8e27e9922aa6cb0d0",
+        "sha16": "bd329fefe613971f",
+        "bytes": 677,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/gin_seed_freeze.json",
+        "sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+        "sha16": "10828447c6d33118",
+        "bytes": 4637,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/holm7_latefusion_freeze.json",
+        "sha256": "d89f8c52412b656e467accbda4e1e9a36aaba14830be5b3d81ca756e54b357c1",
+        "sha16": "d89f8c52412b656e",
+        "bytes": 7424,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/ladder_freeze.json",
+        "sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+        "sha16": "b885585aefbabb32",
+        "bytes": 16896,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/post_interim_freeze_v1_0.json",
+        "sha256": "502db732bd5e45cbe0d1da78106f639c0f65261e1215af9912250e1ffa284258",
+        "sha16": "502db732bd5e45cb",
+        "bytes": 10844,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/post_interim_freeze_v1_0.status.json",
+        "sha256": "dbb00d540d7436e5cc8c4bad7e9c388ecd0334b1d34c5dda15d1cacd104a49e1",
+        "sha16": "dbb00d540d7436e5",
+        "bytes": 4628,
+        "note": "★ R2 신규 등재(docs/99 §2)"
+      },
+      {
+        "path": "v3_Multimodal/config/r3_second_party_freeze.json",
+        "sha256": "0624d3ddb852c4e9a2f7f070024814653264eb49c2652dd3e7a947ac38ff27d0",
+        "sha16": "0624d3ddb852c4e9",
+        "bytes": 12192,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/reviewer_identity_resolved.json",
+        "sha256": "981abdfa296805f4960fcb8c49681182c22449729cf7bc8f6f89233cdaa628d0",
+        "sha16": "981abdfa296805f4",
+        "bytes": 7224,
+        "note": "★ R2 신규 등재(docs/99 §2)"
+      },
+      {
+        "path": "v3_Multimodal/config/rf_tuned_freeze.json",
+        "sha256": "c1ef6406fbb48b7fade599390d75a945360a2f3ce1ee644a8c4e605e6a3703b3",
+        "sha16": "c1ef6406fbb48b7f",
+        "bytes": 3970,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+        "sha256": "951b302a2d474361feb51ef785fd7c0fb016027cd8d8e319f6c4018d36ef3626",
+        "sha16": "951b302a2d474361",
+        "bytes": 21502,
+        "note": "docs/45 §3 등재"
+      },
+      {
+        "path": "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+        "sha256": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+        "sha16": "16776f21df6ae29b",
+        "bytes": 22062,
+        "note": "★ 본 블록 신규 동결 — v0 를 supersede"
+      }
+    ]
+  },
+  "category_4_b_seeds_folds_failure": {
+    "n": 7,
+    "items": [
+      {
+        "path": "v3_Multimodal/src/sap/rqint.py",
+        "sha256": "eb842bc98140e9c55b67bc1563cd5573c3b294885778f23744468b712c498b26",
+        "sha16": "eb842bc98140e9c5",
+        "bytes": 12970,
+        "note": "B 의 유일한 소재 — B_DEFINITION_STATUS L63-64"
+      },
+      {
+        "path": "v3_Multimodal/config/gin_seed_freeze.json",
+        "sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+        "sha16": "10828447c6d33118",
+        "bytes": 4637,
+        "note": "대표 unit 3 = (201,4)·(202,1)·(203,0) · training_seeds_ordered 5 · confirmatory_seed_prefix 3"
+      },
+      {
+        "path": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+        "sha256": "951b302a2d474361feb51ef785fd7c0fb016027cd8d8e319f6c4018d36ef3626",
+        "sha16": "951b302a2d474361",
+        "bytes": 21502,
+        "note": "D17 실패처리 규칙 축자 L169"
+      },
+      {
+        "path": "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+        "sha256": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+        "sha16": "16776f21df6ae29b",
+        "bytes": 22062,
+        "note": "★ B·복제수·R3 제2자 3건 종결 동결본"
+      },
+      {
+        "path": "v3_Multimodal/config/b_100k_prespec.json",
+        "sha256": "e7406c23b8d61b0c4d04638395f4c7803e1e0dc32501baa8dae5047c4d169625",
+        "sha16": "e7406c23b8d61b0c",
+        "bytes": 7916,
+        "note": "(가) 해석 실주행 사전명시 — B 판정식 2분기"
+      },
+      {
+        "path": "v3_Multimodal/config/b_dryrun_prespec.json",
+        "sha256": "9a2545eb0d897f304f23350e1363415bc9642a7895fca87b8306f1eadcfa7939",
+        "sha16": "9a2545eb0d897f30",
+        "bytes": 9191,
+        "note": "(나) 해석 드라이런 사전명시"
+      },
+      {
+        "path": "experiments/rqint/calibration_design.json",
+        "sha256": "42e2f8f9f3f24ec1dfc5fe9ba9b1afe66d30a13c00ef9fce361a3dcaef650b99",
+        "sha16": "42e2f8f9f3f24ec1",
+        "bytes": 18693,
+        "note": "C0~C3 복제수 primary 2,000 / sensitivity 1,000 · A12 · F_ACC"
+      }
+    ],
+    "B_frozen": {
+      "definition": "B = 동전 벡터 수 (n_coin_vectors)",
+      "value": 100000,
+      "implied_reference_distribution": 200000,
+      "source": "v3_Multimodal/config/rqint_procedure_decisions_v1.json:closures[0]"
+    }
+  },
+  "category_5_prereg_amendment_ledger": {
+    "n": 9,
+    "items": [
+      {
+        "path": "docs/30_preregistration_OSF_clean.md",
+        "sha256": "cdbaa7e69e654a36e753f09b05a5e390a7a049c2075e19633fab496d74159413",
+        "sha16": "cdbaa7e69e654a36",
+        "bytes": 18434,
+        "note": "OSF 사전등록 정본 (immutable) — ledger.frozen_artifacts.docs30_osf 에 등재됨(docs/99 §2 #5 표기 정정)"
+      },
+      {
+        "path": "docs/84_rqint_reviewer_response_triage.md",
+        "sha256": "2ff314e0bcac009b5f13f49f31a80c93c634f0839df34280a641ba1007ea16db",
+        "sha16": "2ff314e0bcac009b",
+        "bytes": 14588,
+        "note": "★ R2 신규 등재 — D1~D22 · R1~R6 정본"
+      },
+      {
+        "path": "docs/100_sap_1_2_amendment.md",
+        "sha256": "5f773f98e93ae0679631682f5fd8721ed63da7b9700079b41d5b379ae2a8fe7e",
+        "sha16": "5f773f98e93ae067",
+        "bytes": 16637,
+        "note": "★ 본 블록 신규 — §8 개정문 확정본"
+      },
+      {
+        "path": "experiments/sap/manifest.json",
+        "sha256": "d08dcedf2a22e1c8493c842507422de1f6c705ce54ce995e038e09f604706e10",
+        "sha16": "d08dcedf2a22e1c8",
+        "bytes": 55303,
+        "note": "★ SAP 1.2 정본 매니페스트 (erratum 적용 후)"
+      },
+      {
+        "path": "experiments/sap/sap_manifest_erratum_d20.json",
+        "sha256": "91e764404feaa8fa9b4f8583e1a74d3b8762bbabc0b3520f632d02a1e5c29711",
+        "sha16": "91e764404feaa8fa",
+        "bytes": 664,
+        "note": "erratum 사이드카 (패치 후 sha 자기참조 회피)"
+      },
+      {
+        "path": "v3_Multimodal/src/sap_manifest_erratum.py",
+        "sha256": "9cd4bb6f2b8f253d9422e9e4816337a27b77f1cbc7a700528320c3b247b48204",
+        "sha16": "9cd4bb6f2b8f253d",
+        "bytes": 18984,
+        "note": "erratum 패치 스크립트 — SAP 모듈 아님(sap/ 밖) · 멱등"
+      },
+      {
+        "path": "experiments/provenance/sign_disclosure_matrix.json",
+        "sha256": "147d5d5f62edf84a10f31f7395237f2790e350711fd9f76dada24f067a11ff51",
+        "sha16": "147d5d5f62edf84a",
+        "bytes": 230332,
+        "note": "★ R2 신규 등재 — R5 노출 인원 문안의 유일한 실측 근거"
+      },
+      {
+        "path": "experiments/rqint/r3_package.zip",
+        "sha256": "a94b04f53ba5e392fad4e51c82fb6be1ca2ae0aace0e69554625eca60645c4ca",
+        "sha16": "a94b04f53ba5e392",
+        "bytes": 72280,
+        "note": "R3 제2자 패키지 (SAP 1.2 로 재생성) — 구 fcbcaeea6c6158de supersede"
+      },
+      {
+        "path": "docs/55b_rqint_external_statreview_package_v2.md",
+        "sha256": "21f71e0fbfa3c4d1c73adab53657a32be03a755a768666f0e7290b7afb9911a2",
+        "sha16": "21f71e0fbfa3c4d1",
+        "bytes": 45610,
+        "note": "★ R2 신규 등재 — §8 개정문 원본. 본 블록에서 말미 supersede 포인터 1문단 append(본문 §1~§11 0바이트)",
+        "sha16_before_R2": "21f71e0fbfa3c4d1"
+      }
+    ]
+  },
+  "append_only_snapshots": {
+    "n": 4,
+    "status": "★ 고정 해시 동결 대상이 아니다 — append-only 문서이므로 본 값은 「R2 동결 시점 스냅샷」 지위일 뿐이다.",
+    "measured_at_kst": "2026-08-25T15:29:19+09:00",
+    "caveat": "이후 append 로 값이 바뀌는 것이 정상이며, 불일치를 무결성 위반으로 판정하지 않는다.",
+    "items": [
+      {
+        "path": "docs/33_prereg_deviation_log.md",
+        "sha256": "7938083128312e7167242d4b65bd0b2e1607593b95ffe2daedb753bdaebcd1c5",
+        "sha16": "7938083128312e71",
+        "bytes": 323592
+      },
+      {
+        "path": "docs/45_research_integrity_ledger.md",
+        "sha256": "d0371d38b6cfd042740928d71a866cbf5daba7fb7401e860fd564ac2a52047d0",
+        "sha16": "d0371d38b6cfd042",
+        "bytes": 132549
+      },
+      {
+        "path": "docs/55b_rqint_external_statreview_package_v2.md",
+        "sha256": "21f71e0fbfa3c4d1c73adab53657a32be03a755a768666f0e7290b7afb9911a2",
+        "sha16": "21f71e0fbfa3c4d1",
+        "bytes": 45610
+      },
+      {
+        "path": "experiments/provenance/ledger.json",
+        "sha256": "f8c351eaf0d5a99648139796ef19033c65b2e327ec7c034a94ea98c6e4ecc3cc",
+        "sha16": "f8c351eaf0d5a996",
+        "bytes": 304702
+      }
+    ]
+  },
+  "newly_registered_in_R2": {
+    "n": 6,
+    "paths": [
+      "v3_Multimodal/config/a5_boundary_amendment.json",
+      "v3_Multimodal/config/a5_stratum_label_supersede.json",
+      "v3_Multimodal/config/post_interim_freeze_v1_0.status.json",
+      "v3_Multimodal/config/reviewer_identity_resolved.json",
+      "docs/55b_rqint_external_statreview_package_v2.md",
+      "docs/84_rqint_reviewer_response_triage.md"
+    ],
+    "plus_R5_basis": "experiments/provenance/sign_disclosure_matrix.json (docs/99 §2 #11 — R2 필수 등재)",
+    "notation_correction_only": [
+      "docs/30_preregistration_OSF_clean.md (docs/99 §2 #5)"
+    ]
+  },
+  "required_inclusions_check": {
+    "reviewer_identity_resolved_json": true,
+    "sign_disclosure_matrix_json": true
+  },
+  "not_frozen_by_this_registry": [
+    "봉인 산출물(_sealed/) — 판독 0 · stat-only",
+    "확증 산출물 · 개봉 대상 수치",
+    "이미 완주한 블록의 러너 스크립트 (docs/99 §3 분류 2·3·4 — 재실행하지 않으므로 갱신 대상 아님)"
+  ],
+  "gin_start_still_blocked": true,
+  "unblinding_performed": false
+}

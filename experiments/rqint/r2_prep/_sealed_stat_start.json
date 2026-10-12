@@ -1,0 +1,1461 @@
+{
+ "n_all": 291,
+ "n_excl_accesslog": 275,
+ "rows": [
+  {
+   "path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/access.log",
+   "size": 6453,
+   "mtime_ns": 1785764342873797578
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/metrics_full.json",
+   "size": 37843,
+   "mtime_ns": 1785118677634728945
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M1b.npz",
+   "size": 547482,
+   "mtime_ns": 1785118677526857303
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz",
+   "size": 552904,
+   "mtime_ns": 1785118677633568530
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rep2_seed202/_sealed/metrics_full.json",
+   "size": 37722,
+   "mtime_ns": 1785156707240998033
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M1b.npz",
+   "size": 546917,
+   "mtime_ns": 1785156707133436085
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rep2_seed202/_sealed/oof_M2b.npz",
+   "size": 553486,
+   "mtime_ns": 1785156707240004393
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rep3_seed203/_sealed/metrics_full.json",
+   "size": 37701,
+   "mtime_ns": 1785158079222973062
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M1b.npz",
+   "size": 548523,
+   "mtime_ns": 1785158079114673884
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rep3_seed203/_sealed/oof_M2b.npz",
+   "size": 553831,
+   "mtime_ns": 1785158079221984797
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_equivalence/repro_M2b_rep1_fold0.npy",
+   "size": 645408,
+   "mtime_ns": 1785764342876497216
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785766883523323130
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785766976767556067
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785767069604195918
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785767163032979698
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_CCAP_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785767256133713752
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785764531453728910
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785764625554685540
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785764719545694642
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785764813622160865
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M0_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785764910600609915
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785765006963170828
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785765103194783151
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785765196701950837
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785765289857348743
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M1_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785765382939025919
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785765476105125294
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785765569343352391
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785765662172277265
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785765755528417973
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_M2_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785765848631958379
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785766413434324030
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785766506250332156
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785766599044392536
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785766692286325994
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PFAM_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785766787711951235
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785765943155278920
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785766037358773234
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785766131583268335
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785766225905834852
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep1_PID_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785766320213329032
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785769690141525872
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785769783219205487
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785769876252842886
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785769969462614682
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_CCAP_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785770062404869070
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785767350231728714
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785767444413155734
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785767538651319676
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785767632736508436
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M0_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785767726927004565
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785767820206566764
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785767913534551100
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785768006750236809
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785768100094692477
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M1_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785768193242915725
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785768286618699335
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785768380014882222
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785768473052360436
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785768566688135776
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_M2_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785768660193033806
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785769225080094779
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785769317999895075
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785769410882638387
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785769504013124377
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PFAM_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785769597003292273
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785768754843434749
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785768849055331631
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785768943775103840
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785769038080496502
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep2_PID_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785769132061325496
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785772494625878072
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785772587774368328
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785772681024741809
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785772774580601469
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_CCAP_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785772867826547491
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785770156863153242
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785770250486067629
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785770344493070547
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785770438900937874
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M0_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785770533232272382
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785770626912234242
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785770719986300608
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785770813162971849
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785770906435383632
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M1_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785770999660392451
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785771092859725374
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785771186162835908
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785771279150241496
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785771372300209813
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_M2_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785771465064602534
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785772029490219260
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785772122158825640
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785772215277107959
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785772308480018408
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PFAM_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785772401550875196
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785771559638601566
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785771653745010862
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785771747511258706
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1785771841891436923
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/_partial/rep3_PID_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1785771936203297577
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/checkpoint.jsonl",
+   "size": 26163,
+   "mtime_ns": 1785772867829249232
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest/_sealed/env_fingerprint.json",
+   "size": 1279,
+   "mtime_ns": 1785764437356318797
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log",
+   "size": 4212,
+   "mtime_ns": 1786173772179574322
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_C-CAP.npz",
+   "size": 902012,
+   "mtime_ns": 1785772879733995738
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz",
+   "size": 1074819,
+   "mtime_ns": 1785772877416410413
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M1.npz",
+   "size": 889476,
+   "mtime_ns": 1785772877878600920
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M2.npz",
+   "size": 906013,
+   "mtime_ns": 1785772878343754246
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-FAM.npz",
+   "size": 894089,
+   "mtime_ns": 1785772879268382254
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-ID.npz",
+   "size": 884310,
+   "mtime_ns": 1785772878806143831
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/metrics_full.json",
+   "size": 40704,
+   "mtime_ns": 1785772880094579430
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/access.log",
+   "size": 3487,
+   "mtime_ns": 1786017799459704570
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/metrics_full.json",
+   "size": 223518,
+   "mtime_ns": 1785772871042011905
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_C-CAP.npz",
+   "size": 555268,
+   "mtime_ns": 1785772870590736154
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M0.npz",
+   "size": 671669,
+   "mtime_ns": 1785772867966419550
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M1.npz",
+   "size": 543707,
+   "mtime_ns": 1785772868497427939
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_M2.npz",
+   "size": 554687,
+   "mtime_ns": 1785772869028762614
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_P-FAM.npz",
+   "size": 549259,
+   "mtime_ns": 1785772870068344437
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep1_seed201/_sealed/oof_P-ID.npz",
+   "size": 543152,
+   "mtime_ns": 1785772869550439970
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/access.log",
+   "size": 2658,
+   "mtime_ns": 1786020588393990437
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/metrics_full.json",
+   "size": 223521,
+   "mtime_ns": 1785772874146293768
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_C-CAP.npz",
+   "size": 555526,
+   "mtime_ns": 1785772873697459554
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M0.npz",
+   "size": 669080,
+   "mtime_ns": 1785772871116694679
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M1.npz",
+   "size": 543117,
+   "mtime_ns": 1785772871635160803
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_M2.npz",
+   "size": 554036,
+   "mtime_ns": 1785772872151864168
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_P-FAM.npz",
+   "size": 548856,
+   "mtime_ns": 1785772873182049666
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep2_seed202/_sealed/oof_P-ID.npz",
+   "size": 542182,
+   "mtime_ns": 1785772872667173850
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/access.log",
+   "size": 2658,
+   "mtime_ns": 1786023477628213370
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/metrics_full.json",
+   "size": 223467,
+   "mtime_ns": 1785772877297967622
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_C-CAP.npz",
+   "size": 555814,
+   "mtime_ns": 1785772876841733963
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M0.npz",
+   "size": 668685,
+   "mtime_ns": 1785772874221472533
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M1.npz",
+   "size": 544412,
+   "mtime_ns": 1785772874751106781
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_M2.npz",
+   "size": 554451,
+   "mtime_ns": 1785772875274945055
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_P-FAM.npz",
+   "size": 549144,
+   "mtime_ns": 1785772876316828126
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rest_rep3_seed203/_sealed/oof_P-ID.npz",
+   "size": 543481,
+   "mtime_ns": 1785772875796760283
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1785998074770865081
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1785998288267342855
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1785998530956500043
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1786004170631143790
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep1_RF_tuned_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1786004386921230673
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1786004586794755019
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1786004786304793359
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1786004994142237452
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1786005212416259525
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep2_RF_tuned_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1786005424079835789
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold0.npy",
+   "size": 322768,
+   "mtime_ns": 1786005637195259259
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold1.npy",
+   "size": 322768,
+   "mtime_ns": 1786005852205213861
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold2.npy",
+   "size": 324248,
+   "mtime_ns": 1786006062214179405
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold3.npy",
+   "size": 322768,
+   "mtime_ns": 1786006267968881750
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/_partial/rep3_RF_tuned_fold4.npy",
+   "size": 324248,
+   "mtime_ns": 1786006476104165183
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/checkpoint.jsonl",
+   "size": 4439,
+   "mtime_ns": 1786006476104718278
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned/_sealed/env_fingerprint.json",
+   "size": 1399,
+   "mtime_ns": 1785997805079099569
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/consensus_RF_tuned.npz",
+   "size": 1850756,
+   "mtime_ns": 1786006478507136926
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_consensus_rep123/_sealed/metrics_full.json",
+   "size": 12141,
+   "mtime_ns": 1786006478904359510
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/access.log",
+   "size": 389,
+   "mtime_ns": 1786006478360152498
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/metrics_full.json",
+   "size": 42637,
+   "mtime_ns": 1786006476996549093
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed/oof_RF_tuned.npz",
+   "size": 1688332,
+   "mtime_ns": 1786006476502745962
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/access.log",
+   "size": 389,
+   "mtime_ns": 1786006478364536548
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/metrics_full.json",
+   "size": 42640,
+   "mtime_ns": 1786006477649614449
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed/oof_RF_tuned.npz",
+   "size": 1688599,
+   "mtime_ns": 1786006477161681981
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/access.log",
+   "size": 389,
+   "mtime_ns": 1786006478369071183
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/metrics_full.json",
+   "size": 42631,
+   "mtime_ns": 1786006478297901455
+  },
+  {
+   "path": "experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed/oof_RF_tuned.npz",
+   "size": 1688715,
+   "mtime_ns": 1786006477816048447
+  },
+  {
+   "path": "experiments/runs/v3_consensus_rep123/_sealed/access.log",
+   "size": 8594,
+   "mtime_ns": 1786173772179445693
+  },
+  {
+   "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz",
+   "size": 893375,
+   "mtime_ns": 1785158080757006347
+  },
+  {
+   "path": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz",
+   "size": 903794,
+   "mtime_ns": 1785158080906501520
+  },
+  {
+   "path": "experiments/runs/v3_consensus_rep123/_sealed/metrics_full.json",
+   "size": 37876,
+   "mtime_ns": 1785158080907592533
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_meta.json",
+   "size": 409,
+   "mtime_ns": 1786018356176401542
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_prf.npy",
+   "size": 322768,
+   "mtime_ns": 1786018356175821127
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_pseq.npy",
+   "size": 322768,
+   "mtime_ns": 1786018356176134543
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f0_pseqsens.npy",
+   "size": 322768,
+   "mtime_ns": 1786018356176278875
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_meta.json",
+   "size": 409,
+   "mtime_ns": 1786018917719460501
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_prf.npy",
+   "size": 322768,
+   "mtime_ns": 1786018917719020458
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_pseq.npy",
+   "size": 322768,
+   "mtime_ns": 1786018917719243000
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f1_pseqsens.npy",
+   "size": 322768,
+   "mtime_ns": 1786018917719351626
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_meta.json",
+   "size": 409,
+   "mtime_ns": 1786019481363884813
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_prf.npy",
+   "size": 324248,
+   "mtime_ns": 1786019481361815888
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_pseq.npy",
+   "size": 324248,
+   "mtime_ns": 1786019481363518770
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f2_pseqsens.npy",
+   "size": 324248,
+   "mtime_ns": 1786019481363663229
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_meta.json",
+   "size": 409,
+   "mtime_ns": 1786020033905871192
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_prf.npy",
+   "size": 322768,
+   "mtime_ns": 1786020033905462941
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_pseq.npy",
+   "size": 322768,
+   "mtime_ns": 1786020033905645233
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f3_pseqsens.npy",
+   "size": 322768,
+   "mtime_ns": 1786020033905767733
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_meta.json",
+   "size": 409,
+   "mtime_ns": 1786020588311683608
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_prf.npy",
+   "size": 324248,
+   "mtime_ns": 1786020588311240148
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_pseq.npy",
+   "size": 324248,
+   "mtime_ns": 1786020588311445941
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep1_f4_pseqsens.npy",
+   "size": 324248,
+   "mtime_ns": 1786020588311568441
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_meta.json",
+   "size": 409,
+   "mtime_ns": 1786021144939072556
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_prf.npy",
+   "size": 322768,
+   "mtime_ns": 1786021144936771880
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_pseq.npy",
+   "size": 322768,
+   "mtime_ns": 1786021144936983047
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f0_pseqsens.npy",
+   "size": 322768,
+   "mtime_ns": 1786021144937102714
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_meta.json",
+   "size": 407,
+   "mtime_ns": 1786021713445918484
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_prf.npy",
+   "size": 322768,
+   "mtime_ns": 1786021713445448961
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_pseq.npy",
+   "size": 322768,
+   "mtime_ns": 1786021713445651643
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f1_pseqsens.npy",
+   "size": 322768,
+   "mtime_ns": 1786021713445791375
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_meta.json",
+   "size": 407,
+   "mtime_ns": 1786022280813989262
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_prf.npy",
+   "size": 324248,
+   "mtime_ns": 1786022280813546261
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_pseq.npy",
+   "size": 324248,
+   "mtime_ns": 1786022280813734761
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f2_pseqsens.npy",
+   "size": 324248,
+   "mtime_ns": 1786022280813866553
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_meta.json",
+   "size": 409,
+   "mtime_ns": 1786022858301005410
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_prf.npy",
+   "size": 322768,
+   "mtime_ns": 1786022858300525075
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_pseq.npy",
+   "size": 322768,
+   "mtime_ns": 1786022858300735700
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f3_pseqsens.npy",
+   "size": 322768,
+   "mtime_ns": 1786022858300880492
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_meta.json",
+   "size": 409,
+   "mtime_ns": 1786023477536940903
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_prf.npy",
+   "size": 324248,
+   "mtime_ns": 1786023477536016993
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_pseq.npy",
+   "size": 324248,
+   "mtime_ns": 1786023477536182242
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep2_f4_pseqsens.npy",
+   "size": 324248,
+   "mtime_ns": 1786023477536625905
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_meta.json",
+   "size": 407,
+   "mtime_ns": 1786024041094386568
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_prf.npy",
+   "size": 322768,
+   "mtime_ns": 1786024041093932988
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_pseq.npy",
+   "size": 322768,
+   "mtime_ns": 1786024041094139237
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f0_pseqsens.npy",
+   "size": 322768,
+   "mtime_ns": 1786024041094263736
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_meta.json",
+   "size": 409,
+   "mtime_ns": 1786024599235216459
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_prf.npy",
+   "size": 322768,
+   "mtime_ns": 1786024599234820004
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_pseq.npy",
+   "size": 322768,
+   "mtime_ns": 1786024599234996086
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f1_pseqsens.npy",
+   "size": 322768,
+   "mtime_ns": 1786024599235107002
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_meta.json",
+   "size": 409,
+   "mtime_ns": 1786025150314488682
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_prf.npy",
+   "size": 324248,
+   "mtime_ns": 1786025150314031729
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_pseq.npy",
+   "size": 324248,
+   "mtime_ns": 1786025150314233143
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f2_pseqsens.npy",
+   "size": 324248,
+   "mtime_ns": 1786025150314371600
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_meta.json",
+   "size": 407,
+   "mtime_ns": 1786025715913136598
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_prf.npy",
+   "size": 322768,
+   "mtime_ns": 1786025715912624853
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_pseq.npy",
+   "size": 322768,
+   "mtime_ns": 1786025715912789602
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f3_pseqsens.npy",
+   "size": 322768,
+   "mtime_ns": 1786025715913021183
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_meta.json",
+   "size": 409,
+   "mtime_ns": 1786026273677988514
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_prf.npy",
+   "size": 324248,
+   "mtime_ns": 1786026273676918608
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_pseq.npy",
+   "size": 324248,
+   "mtime_ns": 1786026273677470019
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/_partial/rep3_f4_pseqsens.npy",
+   "size": 324248,
+   "mtime_ns": 1786026273677730266
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/checkpoint.jsonl",
+   "size": 8697,
+   "mtime_ns": 1786026273678935670
+  },
+  {
+   "path": "experiments/runs/v3_latefusion/_sealed/env_fingerprint.json",
+   "size": 1504,
+   "mtime_ns": 1786017799430856634
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens.npz",
+   "size": 2225773,
+   "mtime_ns": 1786026286795710620
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_half.npz",
+   "size": 1975460,
+   "mtime_ns": 1786026287312513433
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_ens_sens.npz",
+   "size": 2203812,
+   "mtime_ns": 1786026288319957667
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq.npz",
+   "size": 1781223,
+   "mtime_ns": 1786026286294687308
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/consensus_seq_sens.npz",
+   "size": 1739928,
+   "mtime_ns": 1786026287822181529
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_consensus_rep123/_sealed/metrics_full.json",
+   "size": 35105,
+   "mtime_ns": 1786026288697190520
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/access.log",
+   "size": 1920,
+   "mtime_ns": 1786026288193835524
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/lambda_selected.json",
+   "size": 2864,
+   "mtime_ns": 1786026274348776512
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/metrics_full.json",
+   "size": 224457,
+   "mtime_ns": 1786026277865827880
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens.npz",
+   "size": 1902689,
+   "mtime_ns": 1786026273998938788
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens_half.npz",
+   "size": 1627193,
+   "mtime_ns": 1786026274132529643
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_ens_sens.npz",
+   "size": 1791359,
+   "mtime_ns": 1786026274347291236
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_seq.npz",
+   "size": 1276309,
+   "mtime_ns": 1786026273886506462
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep1_seed201/_sealed/oof_seq_sens.npz",
+   "size": 1174406,
+   "mtime_ns": 1786026274238585829
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/access.log",
+   "size": 1920,
+   "mtime_ns": 1786026288198087730
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/lambda_selected.json",
+   "size": 2860,
+   "mtime_ns": 1786026278463814221
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/metrics_full.json",
+   "size": 224464,
+   "mtime_ns": 1786026281991513187
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens.npz",
+   "size": 1894640,
+   "mtime_ns": 1786026278109915915
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens_half.npz",
+   "size": 1627001,
+   "mtime_ns": 1786026278244722634
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_ens_sens.npz",
+   "size": 1802545,
+   "mtime_ns": 1786026278462613901
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_seq.npz",
+   "size": 1280600,
+   "mtime_ns": 1786026277993856960
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep2_seed202/_sealed/oof_seq_sens.npz",
+   "size": 1176229,
+   "mtime_ns": 1786026278351931598
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/access.log",
+   "size": 1920,
+   "mtime_ns": 1786026288202350685
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/lambda_selected.json",
+   "size": 2860,
+   "mtime_ns": 1786026282561742235
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/metrics_full.json",
+   "size": 224415,
+   "mtime_ns": 1786026286093863321
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens.npz",
+   "size": 1698867,
+   "mtime_ns": 1786026282218465859
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens_half.npz",
+   "size": 1629243,
+   "mtime_ns": 1786026282351458388
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_ens_sens.npz",
+   "size": 1628419,
+   "mtime_ns": 1786026282560589080
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_seq.npz",
+   "size": 1280318,
+   "mtime_ns": 1786026282113378081
+  },
+  {
+   "path": "experiments/runs/v3_latefusion_rep3_seed203/_sealed/oof_seq_sens.npz",
+   "size": 1178933,
+   "mtime_ns": 1786026282457449574
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/access.log",
+   "size": 3111,
+   "mtime_ns": 1785514652960028974
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl",
+   "size": 747129,
+   "mtime_ns": 1785500296829321251
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/env_fingerprint.json",
+   "size": 866,
+   "mtime_ns": 1785499543820131863
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/g3_identity.json",
+   "size": 1196,
+   "mtime_ns": 1785249991780956923
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/gates_first_session.json",
+   "size": 2013,
+   "mtime_ns": 1785251806528229310
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/null_result.json",
+   "size": 3433,
+   "mtime_ns": 1785514653261177853
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11000.npz",
+   "size": 552289,
+   "mtime_ns": 1785491850292218857
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11001.npz",
+   "size": 552667,
+   "mtime_ns": 1785491864130124037
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_ALT_seed11002.npz",
+   "size": 552743,
+   "mtime_ns": 1785491866278007185
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11000.npz",
+   "size": 552741,
+   "mtime_ns": 1785361666737973377
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11001.npz",
+   "size": 553401,
+   "mtime_ns": 1785361681622658266
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_family_seed11002.npz",
+   "size": 552838,
+   "mtime_ns": 1785361688381465132
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1000.npz",
+   "size": 553778,
+   "mtime_ns": 1785497929640892215
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1001.npz",
+   "size": 553924,
+   "mtime_ns": 1785497936801996127
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_ALT_seed1002.npz",
+   "size": 554271,
+   "mtime_ns": 1785500294277547185
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1000.npz",
+   "size": 553778,
+   "mtime_ns": 1785251806525613362
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1001.npz",
+   "size": 553924,
+   "mtime_ns": 1785251806654946980
+  },
+  {
+   "path": "experiments/runs/v3_null_MAIN/_sealed/oof_M2b_global_seed1002.npz",
+   "size": 554271,
+   "mtime_ns": 1785251808305575260
+  },
+  {
+   "path": "experiments/runs/v3_null_probe/_sealed/oof_M2b_identity.npz",
+   "size": 552904,
+   "mtime_ns": 1785127338923033968
+  },
+  {
+   "path": "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_family_seed9000001.npz",
+   "size": 553796,
+   "mtime_ns": 1785129365163868199
+  },
+  {
+   "path": "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_global_seed9000001.npz",
+   "size": 554534,
+   "mtime_ns": 1785128008319786334
+  },
+  {
+   "path": "experiments/runs/v3_null_probe/_sealed/oof_M2b_perm_global_seed9000002.npz",
+   "size": 554559,
+   "mtime_ns": 1785128692123318627
+  },
+  {
+   "path": "experiments/runs/v3_null_probe/_sealed/probe_stats.json",
+   "size": 973,
+   "mtime_ns": 1785130039894196618
+  },
+  {
+   "path": "experiments/runs/v3_null_probe2_compute/_sealed/fold_pred_reference.npy",
+   "size": 322768,
+   "mtime_ns": 1785227767906836026
+  },
+  {
+   "path": "experiments/runs/v3_stratification/_sealed/access.log",
+   "size": 2574,
+   "mtime_ns": 1785571704501615884
+  },
+  {
+   "path": "experiments/runs/v3_stratification/_sealed/stratification_result.json",
+   "size": 249725,
+   "mtime_ns": 1785605448070911825
+  },
+  {
+   "path": "experiments/runs/v3_stratification_axes/_sealed/access.log",
+   "size": 7035,
+   "mtime_ns": 1786173772179623698
+  },
+  {
+   "path": "experiments/runs/v3_stratification_axes/_sealed/axes_result.json",
+   "size": 757810,
+   "mtime_ns": 1786171749248299399
+  },
+  {
+   "path": "experiments/runs/v3_stratification_axes/_sealed/checkpoint.jsonl",
+   "size": 384031,
+   "mtime_ns": 1786171749208830757
+  },
+  {
+   "path": "experiments/runs/v3_stratification_pid/_sealed/access.log",
+   "size": 2805,
+   "mtime_ns": 1785853013765343227
+  },
+  {
+   "path": "experiments/runs/v3_stratification_pid/_sealed/checkpoint.jsonl",
+   "size": 126070,
+   "mtime_ns": 1785879459241492529
+  },
+  {
+   "path": "experiments/runs/v3_stratification_pid/_sealed/stratification_pid_result.json",
+   "size": 250888,
+   "mtime_ns": 1785879459280670288
+  }
+ ]
+}

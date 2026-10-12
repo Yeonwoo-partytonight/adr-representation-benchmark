@@ -1,0 +1,118 @@
+{
+  "_doc": "개봉 후 현재 상태의 정본. 아래 6파일의 플래그 필드는 0바이트 보존되며 «개봉 시점까지의 동결 값»으로 읽는다. 현재 사실은 이 파일이 정한다. 본 파일은 BG-1 에서 한 번 쓰고 이후 0바이트 불변이다(자기 sha 는 내부에 적지 않는다 — gin_start_supersede.json 과 같은 이유).",
+  "block": "BG",
+  "instruction": "docs/121_post_unblinding_status_prompt_for_vscode.md §BG-1",
+  "decided_at_kst": "2026-10-08 (사용자 결정 Y1~Y4)",
+  "written_at_kst": "2026-10-08 11:36:39 KST",
+  "is_authorization": false,
+  "unblinding_performed": true,
+  "unblinding_evidence": {
+    "event_path": "experiments/provenance/unblinding_event.json",
+    "event_sha256": "10287d9dc4750f8567fe80d89cb0d13daf866e742f5320b916fceaceebd31344",
+    "event_ts_kst": "2026-10-08 07:05:50.351 KST",
+    "results_manifest_path": "experiments/runs/v3_unblinding/results/manifest_public.json",
+    "results_manifest_sha256": "2205e5b570d204606f659c22c93ae0ad749b77bc5222a82de803b53b424caa6d",
+    "approval_record_path": "experiments/provenance/unblinding_approval.json",
+    "approval_record_sha256": "5ff4c45a84285000dfadec308446e679a0ea725347b3065866094ea8dbd6292b",
+    "report": "docs/120_unblinding_run_report.md"
+  },
+  "gin_status": {
+    "gin_start_still_blocked_flags_kept_true": true,
+    "meaning": "구(v1) 실행계약 경로의 착수 차단 플래그. GIN 은 `gin_start_supersede.json`(교수님 승인 2026-09-15 12:42 KST · 메시지 `<GMAIL-MSGID>`)에 따른 v2 계약으로 실행·완료됐다. v2 계약은 이 값이 true 인 것을 요구 조건으로 읽는다",
+    "authority": {
+      "path": "v3_Multimodal/config/gin_start_supersede.json",
+      "sha256": "c061d033ae35bea3df269d37c1a45174fc48f70bfe37ace4f159a8cb36d4a32c",
+      "advisor_message_id": "<GMAIL-MSGID>"
+    },
+    "gin_execution_completed": true,
+    "gin_completion_refs": [
+      "docs/110 (블록 AT 확증 GIN 315)",
+      "docs/111 (블록 AU 안정성 42)",
+      "docs/113 (블록 AW consensus)"
+    ]
+  },
+  "superseded_flag_fields": [
+    {
+      "path": "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+      "bytes": 22062,
+      "sha256": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+      "field": "gin_start_still_blocked",
+      "frozen_value": true,
+      "current_value": true,
+      "interpretation": "구(v1) 실행계약 경로의 착수 차단 플래그. GIN 은 `gin_start_supersede.json`(교수님 승인 2026-09-15 12:42 KST · 메시지 `<GMAIL-MSGID>`)에 따른 v2 계약으로 실행·완료됐다. v2 계약은 이 값이 true 인 것을 요구 조건으로 읽는다"
+    },
+    {
+      "path": "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+      "bytes": 22062,
+      "sha256": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+      "field": "unblinding_performed",
+      "frozen_value": false,
+      "current_value": true,
+      "interpretation": "개봉 전 동결 값 — 현재 사실은 unblinding_performed"
+    },
+    {
+      "path": "v3_Multimodal/config/gin_seed_freeze.json",
+      "bytes": 4637,
+      "sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+      "field": "gin_start_still_blocked",
+      "frozen_value": true,
+      "current_value": true,
+      "interpretation": "구(v1) 실행계약 경로의 착수 차단 플래그. GIN 은 `gin_start_supersede.json`(교수님 승인 2026-09-15 12:42 KST · 메시지 `<GMAIL-MSGID>`)에 따른 v2 계약으로 실행·완료됐다. v2 계약은 이 값이 true 인 것을 요구 조건으로 읽는다"
+    },
+    {
+      "path": "v3_Multimodal/config/gin_inner_valid_freeze.json",
+      "bytes": 6913,
+      "sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+      "field": "gin_start_still_blocked",
+      "frozen_value": true,
+      "current_value": true,
+      "interpretation": "구(v1) 실행계약 경로의 착수 차단 플래그. GIN 은 `gin_start_supersede.json`(교수님 승인 2026-09-15 12:42 KST · 메시지 `<GMAIL-MSGID>`)에 따른 v2 계약으로 실행·완료됐다. v2 계약은 이 값이 true 인 것을 요구 조건으로 읽는다"
+    },
+    {
+      "path": "v3_Multimodal/config/post_interim_freeze_v1_0.status.json",
+      "bytes": 4628,
+      "sha256": "dbb00d540d7436e5cc8c4bad7e9c388ecd0334b1d34c5dda15d1cacd104a49e1",
+      "field": "unblinding_performed",
+      "frozen_value": false,
+      "current_value": true,
+      "interpretation": "개봉 전 동결 값 — 현재 사실은 unblinding_performed"
+    },
+    {
+      "path": "v3_Multimodal/config/post_interim_freeze_v1_0.status.json",
+      "bytes": 4628,
+      "sha256": "dbb00d540d7436e5cc8c4bad7e9c388ecd0334b1d34c5dda15d1cacd104a49e1",
+      "field": "gin_start_still_blocked",
+      "frozen_value": true,
+      "current_value": true,
+      "interpretation": "구(v1) 실행계약 경로의 착수 차단 플래그. GIN 은 `gin_start_supersede.json`(교수님 승인 2026-09-15 12:42 KST · 메시지 `<GMAIL-MSGID>`)에 따른 v2 계약으로 실행·완료됐다. v2 계약은 이 값이 true 인 것을 요구 조건으로 읽는다"
+    },
+    {
+      "path": "v3_Multimodal/config/gin_train_contract.json",
+      "bytes": 26915,
+      "sha256": "e50f972674e782f50a2a74890f8b37b3208da77a8cf6c4ac9f8dc6deb4cbce7f",
+      "field": "unblinding_performed",
+      "frozen_value": false,
+      "current_value": true,
+      "interpretation": "개봉 전 동결 값 — 현재 사실은 unblinding_performed"
+    },
+    {
+      "path": "experiments/runs/v3_gin_start_authorization/manifest_t4_post_confirmatory.json",
+      "bytes": 8660,
+      "sha256": "a59ab54afd51508543a3ca952a5147ffc0c8687f997aacf42362ab699683ea59",
+      "field": "unblinding_performed",
+      "frozen_value": false,
+      "current_value": true,
+      "interpretation": "개봉 전 동결 값 — 현재 사실은 unblinding_performed"
+    }
+  ],
+  "artifacts_not_modified": true,
+  "artifacts_not_modified_note": "6파일은 60여 곳(GIN 계약 체인·SAP 해시 레지스트리·하네스 상수·개봉 계획 G-gate·공개된 봉인 결과)에 해시로 결속돼 있어 수정하지 않는다",
+  "no_retroactive_rewrite": true,
+  "fll_decision": {
+    "decision": "(나) 미기입",
+    "decided_at": "2026-10-08",
+    "reason": "사람 노출 기록은 `unblinding_event.json` · 판독 26트리 access.log 공개 줄 · `docs/33` 항목 84 · `docs/45` §2 로 충분하다.",
+    "source": "docs/120_unblinding_run_report.md §5 편차 1"
+  },
+  "readers_note": "이후 블록·원고·감사는 개봉 여부·GIN 착수 여부를 이 파일에서 읽는다. 기존 코드(하네스·G-gate)는 수정하지 않는다 — 이미 완료된 실행 경로다."
+}

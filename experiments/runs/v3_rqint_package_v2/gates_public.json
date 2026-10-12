@@ -1,0 +1,140 @@
+{
+  "_doc": "블록 M-5 게이트 (docs/58). 개봉 0 · 새 추정 0 · 문서 산출물 검증 전용.",
+  "checked_kst": "2026-08-04 15:01:14 KST",
+  "gates": {
+    "G1_frozen_assets": {
+      "ladder_freeze_sha16": "b885585aefbabb32",
+      "ladder_ok": true,
+      "sap_manifest_sha16": "756d485feb4715e9",
+      "sap_manifest_ok": true,
+      "sap_version": "1.1",
+      "n_sap_modules_live": 11,
+      "modules_differing_from_v1_0_baseline": [
+        "bootstrap.py",
+        "decision.py",
+        "freeze.py",
+        "metrics.py",
+        "null_generator.py",
+        "signflip.py",
+        "synthetic.py"
+      ],
+      "modules_note": "manifest 의 module_sha_before 는 v1.0 기준값이므로 A1~A6 로 재-hash 된 7모듈이 다른 것이 정상이다. 본 블록은 이 목록이 docs/45 §3 기록과 같은지만 확인한다.",
+      "pass": true
+    },
+    "G2_v1_immutable": {
+      "md_sha16": "1f6081d824bb2c95",
+      "md_bytes": 16746,
+      "docx_sha16": "222eb130cdddfc64",
+      "docx_bytes": 20135,
+      "pass": true
+    },
+    "G3_sealed_guard": {
+      "n_start": 157,
+      "n_end": 157,
+      "added": [],
+      "removed": [],
+      "changed": [],
+      "pass": true
+    },
+    "G4_redaction_scan": {
+      "md": {
+        "key_with_value_hits": [],
+        "decimals_found": [
+          "0.0004",
+          "0.002",
+          "0.01",
+          "0.013",
+          "0.025",
+          "0.0489",
+          "0.05",
+          "0.0625",
+          "0.0909",
+          "0.1342",
+          "0.1346",
+          "0.1347",
+          "0.140",
+          "0.166",
+          "0.191",
+          "0.4375",
+          "2.05",
+          "2.99",
+          "7.48"
+        ],
+        "decimals_not_whitelisted": [],
+        "sign_disclosure_hits": [],
+        "pass": true
+      },
+      "docx": {
+        "key_with_value_hits": [],
+        "decimals_found": [
+          "0.0004",
+          "0.002",
+          "0.01",
+          "0.013",
+          "0.025",
+          "0.0489",
+          "0.05",
+          "0.0625",
+          "0.0909",
+          "0.1342",
+          "0.1346",
+          "0.1347",
+          "0.140",
+          "0.166",
+          "0.191",
+          "0.4375",
+          "2.05",
+          "2.99",
+          "7.48"
+        ],
+        "decimals_not_whitelisted": [],
+        "sign_disclosure_hits": [],
+        "pass": true
+      },
+      "note": "블록 I·K 의 키 목록을 그대로 쓰되, 본 문서는 동결 함수의 시그니처·반환필드를 의도적으로 인용하므로(지시서 M-1-8) '키 이름 등장'이 아니라 '키에 값이 붙은 형태'를 위반으로 정의했다. 값 스캔·부호 스캔이 실질 방어선이다.",
+      "pass": true
+    },
+    "G5_number_crosscheck": {
+      "checks": {
+        "n_drug_1092": true,
+        "n_pt_370": true,
+        "positives_19748": true,
+        "groups_732": true,
+        "singleton_627": true,
+        "max_group_78": true,
+        "kish_85_3": true,
+        "top2_155_14_2pct": true,
+        "elig_370_both": true,
+        "elig_cluster_excludes_0": true,
+        "min_pos_clusters_6": true,
+        "fold_min_p_0625": true,
+        "intersect_cells_124": true,
+        "timing_median": true,
+        "cost_i": true,
+        "cost_ii": true
+      },
+      "pass": true
+    },
+    "G6_md_docx_equivalence": {
+      "md_chars": 19249,
+      "docx_chars": 19249,
+      "n_tables_docx": 12,
+      "n_tables_md": 12,
+      "missing_lines": [],
+      "n_missing": 0,
+      "pass": true
+    }
+  },
+  "integrity": {
+    "open_sealed_calls": 0,
+    "decision_functions_called": [],
+    "multiplicity_applied": false,
+    "emit_sign_called": false,
+    "models_trained": 0,
+    "new_oof": 0,
+    "sealed_writes": 0,
+    "network_calls": 0,
+    "git_commit": false
+  },
+  "all_pass": true
+}

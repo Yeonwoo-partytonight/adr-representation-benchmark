@@ -1,0 +1,16 @@
+{
+  "cells": [
+    {
+      "rep": 1,
+      "fold": 0,
+      "model": "M1b",
+      "train_seed": 42,
+      "macro_ap": null,
+      "delta": null,
+      "n_eval": null,
+      "n_excluded_undefined": null,
+      "best_ep": null,
+      "best_v": null
+    }
+  ]
+}

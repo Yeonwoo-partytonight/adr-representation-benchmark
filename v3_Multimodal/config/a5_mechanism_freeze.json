@@ -1,0 +1,72 @@
+{
+  "_doc": "A5(mechanism-target indicator) 축의 **정의 동결**. `docs/80` [블록 Y] Y-2. ChEMBL /mechanism 1회 재조회를 **시작하기 전에** 기입한다 — 커버리지를 보고 구간을 바꾸는 것을 구조적으로 막기 위함이다. 본 파일은 정의만 동결하며 A5 층화 계산·Δ·CI·p·라벨 결합은 **여기서 하지 않는다**(후속 블록).",
+  "block": "Y (docs/80_a5_mechanism_requery_prompt_for_vscode.md)",
+  "frozen_at_kst": "2026-08-07 10:36:00 KST",
+  "frozen_before_any_fetch": true,
+  "frozen_before_any_fetch_evidence": "본 파일은 재조회 러너(a5_mechanism_requery.py)보다 먼저 실행되며, 러너는 기동 시 본 파일의 frozen_at_kst 가 자신의 최초 네트워크 호출 시각보다 이르다는 것을 assert 한다(종료검증 #1).",
+  "definition": "약물의 mechanism 표적 중 unseen 이 하나라도 있으면 1, 전부 seen 이면 0, mechanism 표적이 없으면 no_mechanism",
+  "bins": [
+    "{0}",
+    "{1}",
+    "no_mechanism"
+  ],
+  "mechanism_source": "ChEMBL /mechanism (EMBL-EBI)",
+  "definition_verbatim_source": {
+    "path": "docs/63_unseen_proportion_axes_proposal.md",
+    "section": "§2 제안 정의 (각 축 = 연속량 → 사전 고정 구간) — 표 A5 행",
+    "lineno": 41,
+    "sha256": "2c009368f28482201ccf0e652517ef443c27d5ed37ccb64bd316591d199a796b",
+    "row_verbatim": "| **A5 mechanism-target indicator** | 약물의 **mechanism 표적**(ChEMBL `/mechanism`) 중 unseen 이 하나라도 있으면 1, 전부 seen 이면 0, mechanism 표적이 없으면 `no_mechanism` | `{0}` · `{1}` · `no_mechanism` | ⚠️ **재수집 필요**(§3) |"
+  },
+  "predecessor": {
+    "path": "v3_Multimodal/config/post_interim_freeze_v1_0.json",
+    "sha256": "502db732bd5e45cbe0d1da78106f639c0f65261e1215af9912250e1ffa284258",
+    "axes_a3_a4_a6.A5_status": "NOT frozen here - requires a one-off re-query and therefore advisor approval (docs/70 section 2-1). If not approved, A5 is reported as not estimable; no proxy substitution."
+  },
+  "advisor_status": {
+    "explicitly_approved": "1회 재조회만. `docs/77_advisor_approval_20260806.md` §3 주석 1 — 우리 질문 「▶ 위 조건으로 1회 재조회를 승인해 주시겠습니까? (승인 / 불승인·A5 미수행)」 에 대한 교수님 답 축자 = 「승인」.",
+    "explicitly_approved_scope": "재조회(조회 행위)에 한정된다.",
+    "definition_status": "내선 확정 — A3·A4·A6 과 동일 경로(`no_objection_raised`), 명시적 승인 아님",
+    "why_separated": "승인 문면은 조회 행위에 대한 것이고 A5 의 정의·구간에 대한 명시적 승인 문구는 없다. 승인 범위를 부풀려 적지 않기 위해 두 항목을 분리 기재한다 — `docs/77` §4 표 「내선 확정 9건 = no_objection_raised(≠ explicitly_approved)」 와 동일한 구분이다.",
+    "approval_record_sha256": "c7d8389c0517afceaf951dcb033c09253315f83f944ebde00103155a8887cdab",
+    "approval_conditions_verbatim": [
+      "기존 943개 ID 한정 · 1회만 (라벨·성능과 무관한 메타데이터)",
+      "조회일·출처·원응답·해시·ID 매핑 실패율 5항목 기록",
+      "라벨과 결합하기 전에 캐시 봉인",
+      "A5 는 '현재 snapshot 기반 post-interim 보조분석' 으로 표기"
+    ]
+  },
+  "analysis_label": "현재 snapshot 기반 post-interim 보조분석",
+  "analysis_label_source": "승인 조건 ④ 축자 (post_interim_freeze_v1_0.status.json a5_requery_conditions[3])",
+  "shared_with_a3_a4_a6": {
+    "_source": "v3_Multimodal/config/post_interim_freeze_v1_0.json axes_a3_a4_a6 (인용 — 본 파일이 새로 정하지 않는다)",
+    "no_target_handling_verbatim": "drugs with zero mapped targets (n = 245) form a pre-defined EXCLUDED set named no_target; they are never merged into the {0} bin and their count is reported",
+    "no_target_excluded_n": 245,
+    "reporting_form_verbatim": "pre-fixed bins, identical in form to the two similarity axes already completed and sealed",
+    "resampling_verbatim": "reuse the seeds, B, unit and CI method already fixed by the earlier stratification blocks; no new seed is drawn",
+    "contrasts_verbatim": "both Delta(M2b - M1b) and Delta(M2b - P-ID) on each axis, as registered",
+    "stable_unstable_convention": "3반복에서 층이 일치하는 약물만 primary 층화 대상이고, 불일치 약물은 제외가 아니라 `unstable_stratum` 으로 분리 집계·별도 보고한다(H-0-1). 구현 근거 = `v3_Multimodal/src/stratification_run.py:772-785` `estimation_units()` (kind=\"stable\" / \"unstable_stratum\").",
+    "resampling_constants_reused_from_blocks_H_L": {
+      "_source": "v3_Multimodal/src/stratification_run.py:65-69 (동결 상수)",
+      "SEED_BOOTSTRAP": 6001,
+      "SEED_SIGNFLIP": 6002,
+      "B_MAIN": 10000,
+      "BOOT_UNIT": "scaffold_cluster",
+      "PRIMARY_CI_METHOD": "BCa (v3_Multimodal/src/sap/bootstrap.py:37 PRIMARY_CI_METHOD; percentile 은 sensitivity)"
+    },
+    "new_seed_drawn": 0
+  },
+  "not_frozen_here": [
+    "A5 층화 계산",
+    "Δ·CI·p",
+    "라벨 결합"
+  ],
+  "not_performed_in_this_block": {
+    "label_join": false,
+    "stratification": false,
+    "delta_ci_p": false,
+    "emit_sign": false,
+    "decision_py": false,
+    "unblinding": false
+  }
+}

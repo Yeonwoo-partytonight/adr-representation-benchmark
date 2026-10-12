@@ -1,0 +1,81 @@
+{
+  "_doc": "rqint_downstream_spec_v1.json 의 S4 p 조항만 대체하는 amendment 사이드카(1호). 명세 JSON·sap/rqint.py 는 0바이트 불변. 115 하네스는 이 파일을 명세와 함께 읽는다. 1회 기록 후 0바이트 불변.",
+  "amendment_id": "rqint_downstream_spec_v1_amendment1",
+  "block": "AX (docs/114) AX-2",
+  "amends": {
+    "spec_path": "v3_Multimodal/config/rqint_downstream_spec_v1.json",
+    "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+    "section": "S4_holm8_main_run",
+    "fields": [
+      "p_formula_implementation_verbatim",
+      "p_formula_reviewer_verbatim",
+      "adjudication.D14_dual_reporting.판1"
+    ]
+  },
+  "conflict_verbatim": {
+    "p_formula_implementation_verbatim": "p = (1.0 + count) / (n_permutation_values + 1.0), count = sum(abs(perm) >= abs(T_obs) - _EPS)",
+    "p_formula_reviewer_verbatim": "p=(1+∑_(b=1)^B I(|T_b |≥|T_\"obs\" |))/(B+1)",
+    "B": 100000,
+    "B_definition": "B = 동전 벡터 수 (n_coin_vectors)",
+    "reference_distribution": 200000,
+    "adjudication.D14_dual_reporting.판1": "구현 p",
+    "adjudication.D14_dual_reporting.판2": "해당 슬롯 p=1.0 폴백판"
+  },
+  "b_definition_source": {
+    "file": "v3_Multimodal/config/rqint_procedure_decisions_v1.json",
+    "file_sha256": "16776f21df6ae29b8805272ba39b59b522693217ee113e307a3b3cd3819a96ca",
+    "closure_id": "b_monte_carlo_sample_size_and_definition",
+    "proposed_resolution_verbatim": {
+      "B_definition": "B = 동전 벡터 수 (n_coin_vectors)",
+      "B_value": 100000,
+      "implied_reference_distribution": 200000,
+      "note": "pair_complement = true 이므로 참조분포 = 2 × 동전 수."
+    },
+    "decided_by_verbatim": "사용자 확정 2026-08-24"
+  },
+  "decision": {
+    "primary_p": "(1 + c) / (B + 1)",
+    "c_definition": "#{b in [0, B): |perm[b]| >= |T_obs| - eps}, perm = sap.rqint.rqint_test(..., return_perm=True)['perm'] 의 앞쪽 B 개(동전 벡터 값 · 여집합 제외) — 정본. identity_used==true 이면 count == 2c 를 assert(항등식 경로). 폴백 경로(identity_used==false)에서도 정본 정의를 따르며 count/2 를 쓰지 않는다",
+    "identity_used_key_note": "identity_used = rqint_test 반환 dict 의 키 'complement_identity_used'",
+    "eps_note": "− eps 는 구현 규약(동률 경계 포함 → 보수 방향)이며 검토자 축자 식에는 eps 가 없다 — 차이를 명기",
+    "eps_source": "sap.rqint._EPS",
+    "B": 100000,
+    "secondary_sealed": "(1 + count) / (n_permutation_values + 1) — 구현식 · 봉인 병기",
+    "holm_input": "primary_p",
+    "d14_panel1_refers_to": "primary_p (U2-a — D14 의 「구현 p」는 「실제 계산된 p vs 폴백 1.0」 대비였다는 해석 · 판2 불변)",
+    "mc_se": "sqrt(p(1-p)/B), B=100000 — 불변"
+  },
+  "rationale": {
+    "pair_identity": "여집합 항등식 T*(z̄) = −T*(z) 로 쌍의 |T| 가 같다 → 항등식 경로에서 count = 2c. 구현식 = (1+2c)/(2B+1), 검토자식 = (1+c)/(B+1).",
+    "difference": "검토자식 − 구현식 = (B−c)/((2B+1)(B+1)) ≥ 0, c=B 일 때만 같음, 상한 약 5.0×10⁻⁶ (구현식은 항상 작거나 같다 · 반보수).",
+    "valid_randomization_p": "유효 무작위화 p 는 관측과 그 여집합을 함께 세는 (2+2c)/(2B+2) = (1+c)/(B+1) — 검토자 축자와 일치.",
+    "boundary_inheritance": "두 식의 기각 경계는 c 기준 (1−α)/2 만큼만 어긋나 보정 전 α=0.05 에서는 B=2,000(R1 캘리브레이션)·B=100,000 모두 같은 경계 → R1 PASS·D19 검정력 0.735(구현 p 로 산출)는 그대로 승계, 차이는 Holm 배율이 걸린 경계에서만 생김."
+  },
+  "superseded_reading": {
+    "location": "v3_Multimodal/config/rqint_procedure_decisions_v1.json closures[id='b_monte_carlo_sample_size_and_definition'].evidence[fact='SE 대비'].reading",
+    "verbatim": "참조분포 2배 → SE 는 1/√2 배. (가)는 정밀도 √2 배 · 비용 2배.",
+    "status": "여집합이 양측 p 에 정보를 더하지 않는다는 사실(docs/89 §4-2)과 맞지 않으며 본 amendment 로 대체된 해석이다(B 값·정의 결정 자체는 불변)."
+  },
+  "decided_by": "사용자 결정 U2 · U2-a 2026-09-28 (docs/113c §6 · docs/114 §0)",
+  "hash_rule": "before = 명세 sha(F4) · after = {명세 sha(0바이트 불변) + 본 사이드카 sha} — 사이드카는 자기 sha 를 담지 않으며 after 는 docs/33 항목 67 ⑥ 에 기록",
+  "evidence_of_blindness": {
+    "sealed_counts_dirs_files_artifacts_access": [
+      30,
+      750,
+      729,
+      21
+    ],
+    "stat_fingerprints_at_start": {
+      "confirmatory_gin_3trees": "6ed86c86830b664916c80c13fc2b0f355528c963df5b66e9053184316e51a8b9",
+      "stability_1tree": "b4b493d265824709a242a12d37334659bf78a75bd51a46f8b0174f058d6e6cec",
+      "existing_25trees": "8cf3d207a42ed7c247e9de62931f003a075cdc6ac440794c7153cea49c54d1c9",
+      "gin_consensus_1tree": "66cf4290bf33c9880dfe0e91f440923081cd2a2a6fd3af76346b69e3905f56bf"
+    },
+    "holm8_p_computed": false,
+    "confirmatory_inputs_read_in_block_AX_before_this_file": 0,
+    "unblinding_performed": false
+  },
+  "code_modified": false,
+  "spec_json_modified": false,
+  "frozen_at_kst": "2026-09-28T09:12:46+09:00"
+}

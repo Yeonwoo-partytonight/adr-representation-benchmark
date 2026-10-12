@@ -1,0 +1,32 @@
+{
+  "_scope": "공개 — 조회 건수·실패율·해석 결과·해시만. 지표·Δ·CI·p·부호·친화도 수치 없다.",
+  "block": "Y (docs/80)",
+  "ts_kst": "2026-08-07 11:08:43 KST",
+  "analysis_label": "현재 snapshot 기반 post-interim 보조분석",
+  "n_requested": 943,
+  "n_success": 943,
+  "n_failed": 0,
+  "failure_rate": 0.0,
+  "n_network_calls": 1087,
+  "n_targets_total": 333,
+  "n_targets_resolved_local": 189,
+  "n_targets_resolved_endpoint": 124,
+  "n_targets_unresolved": 20,
+  "unresolved_rate": 0.06006,
+  "n_multi_uniprot_targets": 86,
+  "coverage_crosscheck_n_agree": 943,
+  "coverage_crosscheck_n_disagree": 0,
+  "no_mechanism_drug_count": 393,
+  "gates": {
+    "G0": "PASS",
+    "sealed_guard_273_288": "PASS",
+    "whitelist_hosts_only": true,
+    "label_join_performed": false
+  },
+  "hashes": {
+    "a5_mechanism_freeze.json": "3419b2f793d74051df29ce3285a3c50d4d7a07f2fd15ec0b6d6fb645c4118dbd",
+    "a5_mechanism_targets.csv": "62fb85d013a15d15b079463906a6e3d3b86c88ae701306369039c4d211cee1a2",
+    "a5_requery_manifest.json": "66023c1d4403bbb28421fe077b5d1277bdbdfaf907273f03fd2cf74db884c1f0",
+    "cache_tree_sha256": "349e42d5f11771e788d017d1bcc8206a7d2b5ebc6a88dd99c4ebca80917aa684"
+  }
+}

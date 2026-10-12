@@ -1,0 +1,125 @@
+{
+  "ts_kst": "2026-07-31 21:05:43 KST",
+  "session_seq": 6,
+  "resume": true,
+  "G_IDLE_A": {
+    "gate": "A",
+    "label": "null-main-run entry",
+    "load1": 1.62158203125,
+    "pass": true
+  },
+  "G_IDLE_B_start": {
+    "gate": "B",
+    "label": "null-main-run start",
+    "competitors": 0,
+    "pass": true
+  },
+  "G0": {
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_n_modules_verified": 11,
+    "sap_modules_all_match": true,
+    "null_generator_sha16": "90886abce256a130",
+    "partition_primary_sha256": "a95e26f9a527e9451ee12f9bccf851e0c8912f57ea7b36920d91d6c7281b0a51",
+    "partition_alt_sha256": "aee6c742c52ce77c0ef50b1c629b3501fa4441fb5a3c0b38cf194b107ca0e1a7",
+    "NULL_B": 1000,
+    "NULL_RF_COMMON_SEED": 42,
+    "primary_B_m1b_dim": 10,
+    "pass": true
+  },
+  "sealed_guard_n_files_start": 12,
+  "env_fingerprint_match": true,
+  "env_fingerprint_diff_keys": [],
+  "seed_isolation": {
+    "n_tasks": 2110,
+    "n_unique_seeds": 2000,
+    "intersection_with_reserved_and_probe": 0,
+    "forbidden_checked": [
+      42,
+      201,
+      202,
+      203,
+      204,
+      205,
+      9000001,
+      9000002,
+      9000101,
+      9000102,
+      9000103,
+      9000104,
+      9000105,
+      9000106,
+      9000107,
+      9000108,
+      9000109,
+      9000110,
+      9000111,
+      9000112,
+      9000113,
+      9000114,
+      9000115,
+      9000116,
+      9000117,
+      9000118
+    ],
+    "asserted": true
+  },
+  "G3_identity": {
+    "skipped": true,
+    "reason": "재개 + 환경 지문 완전 일치",
+    "cited_from_first_session": {
+      "n_elements_differing": 0,
+      "n_elements_total": 404040,
+      "array_bitwise_match": true,
+      "sealed_file_sha256_expected": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+      "sealed_file_sha256_live": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+      "wall_s": 499.8263503750204,
+      "ts_kst": "2026-07-28 23:46:31 KST",
+      "verdict": "PASS",
+      "gate_b": {
+        "gate": "B",
+        "label": "G3 identity 직전",
+        "competitors": 0,
+        "pass": true
+      }
+    }
+  },
+  "G1_G2_concurrency": {
+    "skipped": true,
+    "reason": "재개 + 환경 지문 완전 일치",
+    "cited_from_first_session": {
+      "solo_workers": 1,
+      "solo_oof_sha256": "fd26da933c177ae0b70c47686c5ce76c87f06cd7e4d6dc9a2078ff62b03229ef",
+      "solo_wall_s": 524.5806728749885,
+      "pool_oof_sha256": "fd26da933c177ae0b70c47686c5ce76c87f06cd7e4d6dc9a2078ff62b03229ef",
+      "match": true,
+      "note": "풀 첫 task 수신 시 비교·확정. 중복 checkpoint 금지.",
+      "pool_workers": 18,
+      "verdict": "PASS"
+    }
+  },
+  "sealed_guard_n_files_end": 12,
+  "sealed_guard_unchanged": true,
+  "G_IDLE_B_end": {
+    "gate": "B",
+    "label": "null-main-run end",
+    "competitors": 0,
+    "pass": true
+  },
+  "session_end_ts_kst": "2026-07-31 21:18:17 KST",
+  "session_wall_s": 753.7046970000083,
+  "session_completed": 8,
+  "session_stop_reason": "done",
+  "session_graceful_stop": true,
+  "worker_changes": [],
+  "session_decay_F3b": {
+    "session_seq": 6,
+    "n": 8,
+    "insufficient": true,
+    "note": "세션 내 permutation < 40 — 감쇠율 미산출"
+  },
+  "observed_sum_peak_rss_gib": 17.523178100585938,
+  "power_excursion": 0,
+  "ladder_freeze_sha16_end": "b885585aefbabb32",
+  "sap_manifest_sha16_end": "756d485feb4715e9"
+}

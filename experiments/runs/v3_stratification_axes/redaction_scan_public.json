@@ -1,0 +1,95 @@
+{
+  "_scope": "공개 — 교차검사 PASS/FAIL·해시·개수 뿐.",
+  "ts_kst": "2026-08-08 16:39:51 KST",
+  "block": "Z (docs/81) — recheck",
+  "files_scanned": {
+    "gates_public.json": {
+      "sha256": "40fe93b3d43bf6d0bdca02ec5e758dabbc4cb0c5be8e1be335bbab97e0c020fa",
+      "hits": 0
+    },
+    "axes_summary.json": {
+      "sha256": "3208792f6a06e84c9d47fc964e8ee342eff96f6ff5bf533b8d30f8c733136fdc",
+      "hits": 0
+    },
+    "pilot_timing.json": {
+      "sha256": "e9bcdee0625b10e4f55cf3158f1c5ad9ccef6c460aba47a378de2a7e1a42f878",
+      "hits": 0
+    },
+    "axes_public.json": {
+      "sha256": "a539c83d51a9bb920fefc22344e49cede6b9487de0b35ead490804cee0791031",
+      "hits": 0
+    }
+  },
+  "forbidden_exact_keys": [
+    "boot",
+    "delta",
+    "delta_obs",
+    "delta_sign",
+    "macro_ap",
+    "macro_ap_baseline",
+    "macro_ap_comparison",
+    "null_summary",
+    "p_two_sided",
+    "per_pt_ap",
+    "sign"
+  ],
+  "forbidden_key_prefixes": [
+    "ci_",
+    "p_",
+    "null_",
+    "delta_",
+    "macro_ap",
+    "sign_",
+    "per_pt_ap",
+    "boot_"
+  ],
+  "forbidden_values": [
+    "negative",
+    "positive",
+    "zero",
+    "양수",
+    "양의",
+    "양의 방향",
+    "음수",
+    "음의",
+    "음의 방향"
+  ],
+  "allowed_float_keys": [
+    "abort_threshold_days",
+    "bin_mid_boundary",
+    "bootstrap_pilot_s",
+    "c_bootstrap",
+    "c_permutation",
+    "elapsed_s",
+    "est_wall_s",
+    "estimated_total_wall_days",
+    "estimated_total_wall_hours",
+    "estimated_total_wall_s",
+    "load1",
+    "load1_entry",
+    "measured_total_wall_hours",
+    "peak_rss_mb",
+    "permutation_pilot_s",
+    "rss_mb",
+    "session_wall_s",
+    "t_delta_once_s",
+    "total_wall_hours",
+    "total_wall_s",
+    "wall_s"
+  ],
+  "allowed_float_values": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "allowed_float_rule": "허용 실수 = 층 경계 정의값(0.5)·계측 시간·계측 보정상수·load1·RSS 뿐. 그 밖의 float 는 **값 기준**으로 차단.",
+  "total_hits": 0,
+  "sealed_result_sha256_matches_public_record": true,
+  "sealed_guard_n_files": 273,
+  "sealed_guard_unchanged": true,
+  "open_sealed_calls": 0,
+  "checkpoint_rows": 40,
+  "recomputed_statistics": 0,
+  "sealed_artifacts_modified": 0,
+  "all_pass": true
+}

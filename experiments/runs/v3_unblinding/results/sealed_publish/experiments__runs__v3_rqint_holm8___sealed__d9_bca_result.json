@@ -1,0 +1,132 @@
+{
+  "_doc": "블록 AY (docs/115) — D9 Δ_RF·Δ_GIN BCa 봉인 산출(S5 + 사이드카 2호 V2). 판정 미사용 · 유의성과 무관하게 항상 병기.",
+  "amendment2_sha256": "c8e1e2569e7f62fe14a49bdd5581baf3d2d9da9fb411e15099cd85a01bf1a3d8",
+  "block": "AY (docs/115)",
+  "call_convention": {
+    "B": 10000,
+    "alpha": 0.05,
+    "seed": 6001,
+    "unit": "scaffold_cluster"
+  },
+  "cluster_sample_stream_shared_rf_gin": true,
+  "eligible_pt": "np.arange(370)",
+  "gin_composite": {
+    "B": 10000,
+    "alpha": 0.05,
+    "bca_diagnostics": {
+      "acceleration": -0.039544364339853484,
+      "acceleration_finite": true,
+      "adj_quantile_high": 0.9172117135067468,
+      "adj_quantile_low": 0.004260619137136579,
+      "adj_quantile_saturated_01": false,
+      "z0": -0.2314052331772677
+    },
+    "boot_summary": {
+      "mean": 0.009093294410378983,
+      "sd": 0.00396661496281126
+    },
+    "ci_bca": {
+      "high": 0.01465988785595277,
+      "jackknife_unit": "scaffold delete-one",
+      "low": -0.000977065989797003,
+      "status": "bca"
+    },
+    "ci_percentile": {
+      "high": 0.016990122983663022,
+      "low": 0.0014973568244033405,
+      "note": "sensitivity 보고용 — primary 대체 금지(사이드카 2호)"
+    },
+    "ci_primary": {
+      "bca_status": "bca",
+      "high": 0.01465988785595277,
+      "low": -0.000977065989797003,
+      "status": "estimable"
+    },
+    "delta_obs": 0.008158961824125935,
+    "delta_obs_per_seed": [
+      0.008390862450457517,
+      0.005448788286621972,
+      0.010637234735298318
+    ],
+    "n_clusters": 732,
+    "n_seeds": 3,
+    "primary_ci_method": "BCa",
+    "seed": 6001,
+    "unit": "scaffold_cluster"
+  },
+  "gin_delta_matches_observed_statistic": true,
+  "operator_rf": "sap.bootstrap.paired_scaffold_bootstrap",
+  "provenance": "confirmatory_sealed",
+  "rf": {
+    "B": 10000,
+    "alpha": 0.05,
+    "bca_diagnostics": {
+      "acceleration": -0.03238395699329168,
+      "acceleration_finite": true,
+      "adj_quantile_high": 0.9336515638589681,
+      "adj_quantile_low": 0.0065944368883726736,
+      "adj_quantile_saturated_01": false,
+      "z0": -0.17968483446777403
+    },
+    "boot_summary": {
+      "mean": -0.00561540841245852,
+      "sd": 0.004158098205633198
+    },
+    "ci_bca": {
+      "high": 0.0005022188133184531,
+      "jackknife_unit": "scaffold delete-one",
+      "low": -0.01631979733530217,
+      "status": "bca"
+    },
+    "ci_percentile": {
+      "high": 0.002425356321094594,
+      "low": -0.013897921438544198,
+      "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+    },
+    "ci_primary": {
+      "bca_status": "bca",
+      "high": 0.0005022188133184531,
+      "low": -0.01631979733530217,
+      "status": "estimable"
+    },
+    "cluster_size": {
+      "max": 78,
+      "median": 1.0,
+      "min": 1
+    },
+    "delta_obs": -0.006324167855457974,
+    "estimand": "conditional OOF evaluation — 고정된 consensus OOF 예측 위에서의 macro AP Δ. 모델 재학습 미포함(예측을 고정한 조건부 평가). A6: cluster 복원추출→멤버 약물행 복제→pooled AP = drug-weighted macro AP.",
+    "fixed_intersection_sensitivity": {
+      "macro_delta_fixed_intersection": -0.0048108659097735595,
+      "n_pt_always_defined": 335,
+      "note": "모든 replicate에서 정의된 PT로만 계산한 Δ — variable-domain 안정성 점검용. primary는 고정 370 eligible PT 불변."
+    },
+    "n_clusters": 732,
+    "n_eff_clusters": 85.34669338677355,
+    "primary_ci_method": "BCa",
+    "pt_diagnostics": {
+      "frac_replicates_excluding_ge1_pt": 0.0084,
+      "included_pt_per_replicate": {
+        "max": 370,
+        "median": 370.0,
+        "min": 367
+      },
+      "n_eligible_pt": 370,
+      "n_pt_ever_undefined": 35,
+      "pt_undefined_replicate_frac": {
+        "max": 0.0017,
+        "median": 0.0,
+        "min": 0.0
+      }
+    },
+    "seed": 6001,
+    "undefined_ap_exclusion": {
+      "max_frac": 0.008108108108108109,
+      "mean_frac": 2.567567567567568e-05,
+      "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+    },
+    "unit": "scaffold_cluster"
+  },
+  "rf_delta_matches_observed_statistic": true,
+  "run_id": "AY-2026-09-28T20:30:53+09:00"
+}

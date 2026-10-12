@@ -1,0 +1,74 @@
+{
+  "v3_Multimodal/src/pre_unblinding_audit.py": {
+    "before_sha256": "eb76712aab2c7339269ea3a1289b974aa2e4e77eb04e588e2448e6b441fc9e93",
+    "after_sha256": "fb8abc6062966d5f4f26109cc1b4a1f9b36cbba870542543d2a4e45928b5821c",
+    "bytes_before": 63529,
+    "bytes_after": 63529,
+    "changed_lines": [
+      64,
+      121,
+      959
+    ],
+    "diff": [
+      "--- v3_Multimodal/src/pre_unblinding_audit.py (before)",
+      "+++ v3_Multimodal/src/pre_unblinding_audit.py (after)",
+      "@@ -64 +64 @@",
+      "-    \"experiments/sap/manifest.json\": \"756d485feb4715e9\",",
+      "+    \"experiments/sap/manifest.json\": \"06fe76407a29cebc\",",
+      "@@ -121 +121 @@",
+      "-    ok = not bad and not mbad and man.get(\"sap_version\") == \"1.1\" and len(mods) == 11",
+      "+    ok = not bad and not mbad and man.get(\"sap_version\") == \"1.2\" and len(mods) == 11",
+      "@@ -959 +959 @@",
+      "-        logln(f\"[G0] PASS 9/9 · SAP 1.1 11모듈 일치 | [G-HOLM] {holm['n_labels']} 라벨 \"",
+      "+        logln(f\"[G0] PASS 9/9 · SAP 1.2 11모듈 일치 | [G-HOLM] {holm['n_labels']} 라벨 \""
+    ]
+  },
+  "v3_Multimodal/src/rqint_package_gates.py": {
+    "before_sha256": "f6b6adef63ab55cd89f36febc7796f76b6edb17b807e8c4dc258754ccaea6f3b",
+    "after_sha256": "787996889017c76693fd81f367fde37ff2dc7a68e7c56f220695698bf07851f4",
+    "bytes_before": 12719,
+    "bytes_after": 12719,
+    "changed_lines": [
+      5,
+      35
+    ],
+    "diff": [
+      "--- v3_Multimodal/src/rqint_package_gates.py (before)",
+      "+++ v3_Multimodal/src/rqint_package_gates.py (after)",
+      "@@ -5 +5 @@",
+      "-  1. 동결 자산 불변: `ladder_freeze.json` b885585aefbabb32 · SAP manifest 756d485feb4715e9 + 11모듈 sha",
+      "+  1. 동결 자산 불변: `ladder_freeze.json` b885585aefbabb32 · SAP manifest 06fe76407a29cebc + 11모듈 sha",
+      "@@ -35 +35 @@",
+      "-    \"sap_manifest_sha16\": \"756d485feb4715e9\",",
+      "+    \"sap_manifest_sha16\": \"06fe76407a29cebc\","
+    ]
+  },
+  "v3_Multimodal/src/rqint_calibration.py": {
+    "before_sha256": "0e9b98c41432621b44c7fd9ff027645add7ccc78346353050960c6b2e31d28e4",
+    "after_sha256": "09521f690c729716927a1e68f0b077ce0492ca02bfe95324029c0a76159e906f",
+    "bytes_before": 76223,
+    "bytes_after": 76223,
+    "changed_lines": [
+      138,
+      717,
+      892,
+      1328
+    ],
+    "diff": [
+      "--- v3_Multimodal/src/rqint_calibration.py (before)",
+      "+++ v3_Multimodal/src/rqint_calibration.py (after)",
+      "@@ -138 +138 @@",
+      "-    \"F-MANI16\": {\"sha16\": \"756d485feb4715e9\", \"sap_version\": \"1.1\"},",
+      "+    \"F-MANI16\": {\"sha16\": \"06fe76407a29cebc\", \"sap_version\": \"1.2\"},",
+      "@@ -717 +717 @@",
+      "-            mani_sha[:16] == ex[\"F-MANI16\"][\"sha16\"] and mani.get(\"sap_version\") == \"1.1\"),",
+      "+            mani_sha[:16] == ex[\"F-MANI16\"][\"sha16\"] and mani.get(\"sap_version\") == \"1.2\"),",
+      "@@ -892 +892 @@",
+      "-        \"sap_version_unchanged\": \"1.1\", \"manifest_sha16\": \"756d485feb4715e9\",",
+      "+        \"sap_version_unchanged\": \"1.2\", \"manifest_sha16\": \"06fe76407a29cebc\",",
+      "@@ -1328 +1328 @@",
+      "-        \"sap_version_unchanged\": \"1.1\", \"manifest_sha16\": \"756d485feb4715e9\",",
+      "+        \"sap_version_unchanged\": \"1.2\", \"manifest_sha16\": \"06fe76407a29cebc\","
+    ]
+  }
+}

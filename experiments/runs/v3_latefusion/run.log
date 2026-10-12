@@ -1,0 +1,11 @@
+2026-08-06 23:33:56 KST | ==============================================================================
+2026-08-06 23:33:56 KST | [블록 P] stage=public — Holm ⑦ RFseq−RF late-fusion arm 산출 (15 outer unit). Δ·AP·CI·p·부호·λ 전량 봉인.
+2026-08-06 23:33:56 KST | [P-0-1] docs/33 보충 기록 기입 확인 — 착수 허용
+2026-08-06 23:33:56 KST | [G-BLOCK] PASS — holm67_start_still_blocked_until_reply=False · post_interim sha16=502db732bd5e45cb
+2026-08-06 23:33:56 KST | [G-HOLM] PASS — decision.py:44 · 7 라벨 · RFseq-RF 포함
+2026-08-06 23:33:56 KST | [G0+] PASS — 동결 5종 sha16 일치(rf_tuned_freeze 포함 · 무수정 대조만)
+2026-08-06 23:33:56 KST | [동결] holm7_latefusion_freeze.json sha16 d89f8c52412b656e 판독 — arm 3종·격자·하이퍼 assert PASS
+2026-08-06 23:33:56 KST | [P-2-8] 격자 정합 PASS — 21점 · 중복·결손 0 · 정수 인덱스 k/20 생성
+2026-08-06 23:33:56 KST | [data] N=1092 PT=370 (동결 master_X/Y 읽기 전용)
+2026-08-06 23:33:56 KST | [public] 봉인 무결성 재확인 PASS — 선재 184종 불변 · 본 블록 89종 sha 전건 일치
+2026-08-06 23:33:56 KST | [공개] latefusion_public.json 기록 — 봉인 대상 키 검출 0 (키 233개·리프 461개 스캔, 실수 허용목록 16종)

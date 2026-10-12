@@ -1,0 +1,261 @@
+{
+  "_doc": "docs/112 블록 AV / AV-5 — 합성 자체검사 T1~T12. 확증·안정성 봉인 산출물의 «값» 을 읽지 않았고, 여기 실린 모든 수치는 합성 fixture 산출물이다.",
+  "provenance": "synthetic_fixture",
+  "block": "AV (docs/112)",
+  "spec_path": "v3_Multimodal/config/rqint_downstream_spec_v1.json",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "module_sha256_note": "모듈 자신의 sha256 은 리포트에 기재한다(자기참조 회피).",
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "n_tests": 12,
+  "n_pass": 12,
+  "n_skip": 0,
+  "all_pass": true,
+  "tests": [
+    {
+      "name": "T1 상수·해시",
+      "checks": {
+        "spec_sha256_matches_file": true,
+        "F4_F5_25_of_25": true,
+        "F6_7_of_7": true,
+        "F7_nonsealed_6_of_6": true,
+        "F7_sealed_checkpoint_bytes_stat_only": true,
+        "sap_manifest": true,
+        "sap_version_1_2": true,
+        "sap_registered_modules_11": true,
+        "sap_11_modules_match": true,
+        "sap_unregistered_3_match": true,
+        "sap_3_really_unregistered": true,
+        "reviewer_docx": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "T2 축자 재현",
+      "checks": {
+        "reextract_identical": true,
+        "n_unresolved_zero": true,
+        "n_required_9": true,
+        "n_oMath_135": true,
+        "delimiter_abs_preserved": true,
+        "rho_numerator_abs": true,
+        "T_k_abs_rule": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "T3 e_g 정의",
+      "checks": {
+        "derived_vs_verbatim_all_groups": true,
+        "identity_T_zg_all_groups": true,
+        "n_groups_checked": true,
+        "macro_ap_calls_G_times_8": true
+      },
+      "pass": true,
+      "fails": [],
+      "max_abs_dev_derived_vs_verbatim": 1.734723475976807e-18,
+      "max_abs_dev_identity": 1.734723475976807e-18,
+      "tolerance": 1e-12,
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "T4 λ_k",
+      "checks": {
+        "monotone_lambda_1_2_10": true,
+        "abs_and_signed_top1_differ": true,
+        "adopted_rule_is_abs": true,
+        "abs_result_differs_from_signed": true,
+        "lambda_1_le_lambda_2": true,
+        "lambda_10_le_1": true,
+        "T_k_rule_string": true
+      },
+      "pass": true,
+      "fails": [],
+      "lambda_abs_top1": 0.6572008113590264,
+      "lambda_signed_top1_counterfactual": 0.2028397565922921,
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "T5 ρ",
+      "checks": {
+        "linear_fixture_rho_zero": true,
+        "offset_matches_closed_form": true,
+        "numerator_is_absolute": true,
+        "rho_is_not_a_gate": true
+      },
+      "pass": true,
+      "fails": [],
+      "expected": 0.1272727272727273,
+      "observed": 0.12727272727272718,
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "T6 D12 분해",
+      "checks": {
+        "i_G_identity": true,
+        "i_rows_unchanged": true,
+        "i_folds_unchanged": true,
+        "ii_deterministic": true,
+        "ii_target_is_max_group": true,
+        "ii_G_plus_one": true,
+        "ii_first_ge_second": true,
+        "ii_split_by_smiles_lex": true,
+        "ii_rows_unchanged": true,
+        "ii_odd_first_has_one_more": true,
+        "fold_assignment_invariant": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "T7 SS 항등식",
+      "checks": {
+        "ss_identity": true,
+        "cells_15": true,
+        "fracs_sum_to_one": true,
+        "sst_zero_flagged": true,
+        "sst_zero_fracs_none": true,
+        "descriptive_only": true
+      },
+      "pass": true,
+      "fails": [],
+      "identity_residual": 0.0,
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "T8 p 식",
+      "checks": {
+        "reference_is_2B": true,
+        "min_attainable_p": true,
+        "p_at_extreme_is_min": true,
+        "boundary_counted": true,
+        "eps_from_sap_rqint": true,
+        "eps_value": true,
+        "formula_matches_sap_text": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "T9 Holm",
+      "checks": {
+        "family_size_7": true,
+        "family_size_fixed_7": true,
+        "appendix_multiplier_matches_impl": true,
+        "m_minus_rank_equals_8_minus_j": true,
+        "dual_reporting_both_computed": true,
+        "labels_are_slots_2_to_8": true
+      },
+      "pass": true,
+      "fails": [],
+      "max_abs_dev_vs_appendix": 0.0,
+      "D14_dual_report": {
+        "implemented_p_adjusted": {
+          "M2b-P-ID": 0.006,
+          "M2b-P-FAM": 0.02,
+          "M2b-realloc_null": 0.04,
+          "M2b-M0": 0.06,
+          "M2b-RF_tuned": 0.06,
+          "RFseq-RF": 0.06,
+          "RQ-int": 0.0035
+        },
+        "fallback_p1_adjusted": {
+          "M2b-P-ID": 0.007,
+          "M2b-P-FAM": 0.024,
+          "M2b-realloc_null": 0.05,
+          "M2b-M0": 0.08,
+          "M2b-RF_tuned": 0.09,
+          "RFseq-RF": 0.12,
+          "RQ-int": 1.0
+        },
+        "labels_with_different_conclusion": [
+          "M2b-realloc_null",
+          "RQ-int"
+        ]
+      },
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "T10 macro AP undefined",
+      "checks": {
+        "n_excluded_is_2": true,
+        "n_eval_is_K_minus_2": true,
+        "n_eligible_is_K": true,
+        "no_zero_fill": true,
+        "macro_ap_finite": true,
+        "eligible_pt_explicit_differs_from_none": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "T11 AST 가드",
+      "checks": {
+        "forbidden_calls_zero": true,
+        "holm_only_inside_selftest": true,
+        "network_imports_zero": true,
+        "no_confirmatory_path_write": true,
+        "write_opens_are_cli_out_only": true,
+        "cli_options_exact": true,
+        "os_environ_reads_zero": true,
+        "confirmatory_tokens_are_constants_only": true
+      },
+      "pass": true,
+      "fails": [],
+      "forbidden_hits": [],
+      "holm_calls_outside": [],
+      "network_imports": [],
+      "write_open_targets": [
+        {
+          "mode": "w",
+          "source": "Attribute(value=Name(id='a', ctx=Load()), attr='out', ctx=Load())",
+          "touches_confirmatory_constant": false,
+          "literal_has_confirmatory_token": false
+        }
+      ],
+      "cli_options": [
+        "--out",
+        "--stage"
+      ]
+    },
+    {
+      "name": "T12 위생",
+      "checks": {
+        "sealed_counts_unchanged": true,
+        "sealed_counts_expected": true,
+        "confirmatory_fingerprint_unchanged": true,
+        "confirmatory_fingerprint_expected": true,
+        "stability_fingerprint_unchanged": true,
+        "consensus_dirs_zero": true,
+        "pycache_unchanged": true
+      },
+      "pass": true,
+      "fails": [],
+      "sealed_counts_before": {
+        "n_sealed_dirs": 29,
+        "n_sealed_files_total": 727,
+        "n_sealed_artifacts": 707,
+        "n_access_log": 20
+      },
+      "sealed_counts_after": {
+        "n_sealed_dirs": 29,
+        "n_sealed_files_total": 727,
+        "n_sealed_artifacts": 707,
+        "n_access_log": 20
+      },
+      "confirmatory_fingerprint": "5440aefcded112bcd425f61968f9974898f26efe2beab69155f7a5a47cf3333b",
+      "n_confirmatory_lines": 390,
+      "stability_fingerprint": "b4b493d265824709a242a12d37334659bf78a75bd51a46f8b0174f058d6e6cec",
+      "n_stability_lines": 46,
+      "pycache_dirs": 4541
+    }
+  ],
+  "confirmatory_values_read": 0,
+  "sealed_human_read": 0,
+  "network_calls": 0
+}

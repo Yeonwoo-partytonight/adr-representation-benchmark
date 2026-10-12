@@ -1,0 +1,803 @@
+{
+  "_doc": "블록 AG — R3 제2자 **플랫폼 적합성 프로브**. ★ R3 판정이 아니다. 본 파일의 모든 수치는 sap.rqint_synthetic 합성 fixture 산출물이며 확증 데이터·봉인 수치와 무관하다. G 는 프로브용 임의값이다.",
+  "block": "AG-probe",
+  "instruction": "docs/91_r3_second_party_prep_prompt_for_vscode.md",
+  "run_at_kst": "2026-08-14T15:11:03+09:00",
+  "is_r3_verdict": false,
+  "r3_verdict_note": "프로브 산출물은 R3 합격·불합격 판정에 사용하지 않는다. R3 판정 대상은 R2(SAP 1.2 재동결) 이후의 본 드라이런 산출물뿐이다.",
+  "synthetic_only": true,
+  "confirmatory_data_accessed": false,
+  "unblinding_performed": false,
+  "gin_start_still_blocked": true,
+  "sap_version_unchanged": "1.1",
+  "probe_scale": {
+    "N": 60,
+    "K": 8,
+    "G": 12,
+    "n_coin_vectors": 64
+  },
+  "seed_acquisition_rule": "run_rqint_audit.py 시드 리터럴 계승 — fixture zero=11 · exchangeable=12 · timing=99, 검사 시드 R6-n → n. 새 추첨 0.",
+  "seeds_used": {
+    "fixture_zero": 11,
+    "fixture_exchangeable": 12,
+    "fixture_timing": 99,
+    "d6_keys": 61,
+    "R6-1": 1,
+    "R6-2": 2,
+    "R6-6": 6,
+    "R6-7": 7,
+    "R6-9": 9
+  },
+  "design_basis": {
+    "statistic": "T = Δ_RF − Δ_GIN, Δ_F = macroAP(y, P_F^{M2b}) − macroAP(y, P_F^{M1b}); 양측. additive surrogate 대체 금지(A6 계승).",
+    "H0_imposed": "H0^B(강한 null): 각 family 내부에서 arm 라벨(M1b/M2b)이 scaffold group 단위로 교환 가능 = Δ_RF = 0 이고 Δ_GIN = 0. 모델 재학습 미포함.",
+    "H0_target": "H0^int(약한 null): Δ_RF = Δ_GIN (공통값 ≠ 0 허용). H0^B ⊊ H0^int.",
+    "name_caveat": "shared-coin scaffold-blocked arm-swap interaction test. 부과 귀무=강한 null(H0^B) ≠ 검정 대상 가설=약한 null(H0^int). '약한 null 에 대한 정확검정' 표기 금지 — 1종오류 통제는 R1 캘리브레이션 감사로 실증. 모델 재학습 미포함(고정 OOF 의 conditional randomization).",
+    "aggregation": "D3: repeat 축 = prediction-then-metric(consensus 평균 후 지표, 양 family 공통); seed 축 = metric-then-average(시드별 Δ 산출 후 평균, GIN 전용).",
+    "p_formula": "p = (1.0 + count) / (n_permutation_values + 1.0), count = sum(abs(perm) >= abs(T_obs) - _EPS)   # F-PFORM 축자 계승",
+    "eps": 1e-12
+  },
+  "B_definition_status": "still_unspecified — `B` 가 n_coin_vectors 인지 n_permutation_values 인지 본 모듈에서 정하지 않는다. SAP 1.2 에서 확정 필요.",
+  "code_scan": {
+    "method": "AST walk (freeze.py code_scan 동일 규칙 = S1) + 비-docstring 문자열 어휘(S2)",
+    "n_files_scanned": 17,
+    "per_file": {
+      "sap/__init__.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [],
+        "ok": true
+      },
+      "sap/bootstrap.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "metrics",
+          "numpy",
+          "scipy"
+        ],
+        "ok": true
+      },
+      "sap/consensus.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "numpy"
+        ],
+        "ok": true
+      },
+      "sap/decision.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "numpy"
+        ],
+        "ok": true
+      },
+      "sap/freeze.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "ast",
+          "datetime",
+          "hashlib",
+          "json",
+          "numpy",
+          "os",
+          "sap",
+          "scipy",
+          "sklearn",
+          "sys"
+        ],
+        "ok": true
+      },
+      "sap/metrics.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "numpy",
+          "sklearn"
+        ],
+        "ok": true
+      },
+      "sap/null_generator.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "numpy"
+        ],
+        "ok": true
+      },
+      "sap/redaction.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "datetime",
+          "json",
+          "os"
+        ],
+        "ok": true
+      },
+      "sap/rqint.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "consensus",
+          "metrics",
+          "numpy",
+          "time"
+        ],
+        "ok": true
+      },
+      "sap/rqint_audit.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "metrics",
+          "numpy",
+          "signflip"
+        ],
+        "ok": true
+      },
+      "sap/rqint_synthetic.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "numpy",
+          "synthetic"
+        ],
+        "ok": true
+      },
+      "sap/signflip.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "metrics",
+          "numpy"
+        ],
+        "ok": true
+      },
+      "sap/synthetic.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "numpy"
+        ],
+        "ok": true
+      },
+      "sap/unseen_target.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [],
+        "ok": true
+      },
+      "canonical.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "hashlib",
+          "json",
+          "sys"
+        ],
+        "ok": true
+      },
+      "collect_env.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "hashlib",
+          "json",
+          "numpy",
+          "os",
+          "platform",
+          "socket",
+          "sys"
+        ],
+        "ok": true
+      },
+      "run_rqint_probe.py": {
+        "forbidden_imports": [],
+        "data_load_calls": [],
+        "open_with_data_literal": [],
+        "imports": [
+          "ast",
+          "canonical",
+          "datetime",
+          "json",
+          "numpy",
+          "os",
+          "platform",
+          "sap",
+          "sklearn",
+          "sys",
+          "time"
+        ],
+        "ok": true
+      }
+    },
+    "no_confirmatory_data_access": true,
+    "s2_string_literal_hits": [
+      {
+        "file": "sap/consensus.py",
+        "hits": [
+          {
+            "line": 38,
+            "terms": [
+              "oof_"
+            ],
+            "value": "oof_by_repeat는 비어있지 않은 배열 리스트여야 함"
+          }
+        ]
+      },
+      {
+        "file": "sap/decision.py",
+        "hits": [
+          {
+            "line": 61,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "RF primary confirmatory (RF-Morgan+seq)"
+          },
+          {
+            "line": 65,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "RF primary confirmatory (RF-Morgan+seq)"
+          },
+          {
+            "line": 69,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "RF primary confirmatory (RF-Morgan+seq)"
+          },
+          {
+            "line": 73,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "RF primary confirmatory (RF-Morgan+seq)"
+          },
+          {
+            "line": 77,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "RF primary confirmatory (RF-Morgan+seq)"
+          },
+          {
+            "line": 81,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "RF primary confirmatory (RF-Morgan+seq)"
+          },
+          {
+            "line": 85,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "RF primary confirmatory (RF-Morgan+seq)"
+          }
+        ]
+      },
+      {
+        "file": "sap/freeze.py",
+        "hits": [
+          {
+            "line": 436,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "ladder_confirmatory"
+          },
+          {
+            "line": 441,
+            "terms": [
+              "data/",
+              "data/processed"
+            ],
+            "value": "data/processed"
+          },
+          {
+            "line": 441,
+            "terms": [
+              "data/",
+              "data/raw"
+            ],
+            "value": "data/raw"
+          },
+          {
+            "line": 441,
+            "terms": [
+              "master_",
+              "master_X"
+            ],
+            "value": "master_X"
+          },
+          {
+            "line": 441,
+            "terms": [
+              "master_",
+              "master_Y"
+            ],
+            "value": "master_Y"
+          },
+          {
+            "line": 442,
+            "terms": [
+              "scaffold_split.json"
+            ],
+            "value": "scaffold_split.json"
+          },
+          {
+            "line": 442,
+            "terms": [
+              "_meanpool.npy"
+            ],
+            "value": "_meanpool.npy"
+          },
+          {
+            "line": 442,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "confirmatory"
+          },
+          {
+            "line": 443,
+            "terms": [
+              "oof_",
+              "oof_M1b"
+            ],
+            "value": "oof_M1b"
+          },
+          {
+            "line": 443,
+            "terms": [
+              "oof_",
+              "oof_M2b"
+            ],
+            "value": "oof_M2b"
+          },
+          {
+            "line": 443,
+            "terms": [
+              "target_mapping"
+            ],
+            "value": "target_mapping"
+          },
+          {
+            "line": 166,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "frozen_B_confirmatory"
+          },
+          {
+            "line": 191,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "frozen_B_confirmatory"
+          },
+          {
+            "line": 520,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "no_confirmatory_data_access"
+          },
+          {
+            "line": 521,
+            "terms": [
+              "master_",
+              "master_X"
+            ],
+            "value": "확증 split(seed 201~205)·OOF·master_X/Y·scaffold_split·meanpool npy 를 import/load/open 하는 코드"
+          },
+          {
+            "line": 587,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "confirmatory_accessed_at_amendment"
+          },
+          {
+            "line": 680,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "confirmatory_split_accessed"
+          },
+          {
+            "line": 681,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "confirmatory_split_generated"
+          },
+          {
+            "line": 682,
+            "terms": [
+              "confirmatory",
+              "oof_"
+            ],
+            "value": "confirmatory_oof_accessed"
+          },
+          {
+            "line": 683,
+            "terms": [
+              "master_",
+              "master_X"
+            ],
+            "value": "master_XY_accessed"
+          },
+          {
+            "line": 687,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "no_confirmatory_data_access_ast_proven"
+          },
+          {
+            "line": 687,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "no_confirmatory_data_access"
+          }
+        ]
+      },
+      {
+        "file": "sap/metrics.py",
+        "hits": [
+          {
+            "line": 24,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "macro AP = average_precision_score over eligible PTs with in-sample positive>0, arithmetic"
+          }
+        ]
+      },
+      {
+        "file": "sap/redaction.py",
+        "hits": [
+          {
+            "line": 51,
+            "terms": [
+              "_sealed"
+            ],
+            "value": "_sealed"
+          }
+        ]
+      },
+      {
+        "file": "sap/unseen_target.py",
+        "hits": [
+          {
+            "line": 38,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "정확 도구/버전은 confirmatory 산출과 manifest에 동일 기록. 경계는 결과 무참조 사전 고정."
+          }
+        ]
+      },
+      {
+        "file": "run_rqint_probe.py",
+        "hits": [
+          {
+            "line": 90,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "ladder_confirmatory"
+          },
+          {
+            "line": 94,
+            "terms": [
+              "data/",
+              "data/processed"
+            ],
+            "value": "data/processed"
+          },
+          {
+            "line": 94,
+            "terms": [
+              "data/",
+              "data/raw"
+            ],
+            "value": "data/raw"
+          },
+          {
+            "line": 94,
+            "terms": [
+              "master_",
+              "master_X"
+            ],
+            "value": "master_X"
+          },
+          {
+            "line": 94,
+            "terms": [
+              "master_",
+              "master_Y"
+            ],
+            "value": "master_Y"
+          },
+          {
+            "line": 95,
+            "terms": [
+              "scaffold_split.json"
+            ],
+            "value": "scaffold_split.json"
+          },
+          {
+            "line": 95,
+            "terms": [
+              "_meanpool.npy"
+            ],
+            "value": "_meanpool.npy"
+          },
+          {
+            "line": 95,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "confirmatory"
+          },
+          {
+            "line": 96,
+            "terms": [
+              "oof_",
+              "oof_M1b"
+            ],
+            "value": "oof_M1b"
+          },
+          {
+            "line": 96,
+            "terms": [
+              "oof_",
+              "oof_M2b"
+            ],
+            "value": "oof_M2b"
+          },
+          {
+            "line": 96,
+            "terms": [
+              "target_mapping"
+            ],
+            "value": "target_mapping"
+          },
+          {
+            "line": 97,
+            "terms": [
+              "data/"
+            ],
+            "value": "data/"
+          },
+          {
+            "line": 97,
+            "terms": [
+              "_sealed"
+            ],
+            "value": "_sealed"
+          },
+          {
+            "line": 97,
+            "terms": [
+              "master_"
+            ],
+            "value": "master_"
+          },
+          {
+            "line": 97,
+            "terms": [
+              "oof_"
+            ],
+            "value": "oof_"
+          },
+          {
+            "line": 188,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "no_confirmatory_data_access"
+          },
+          {
+            "line": 343,
+            "terms": [
+              "confirmatory"
+            ],
+            "value": "confirmatory_data_accessed"
+          }
+        ]
+      }
+    ],
+    "s2_note": "S2 는 참고용이다. hit 는 전부 ① 동결 스캐너 자신의 금지어 목록(freeze.py FORBIDDEN_PATH_LITERALS) ② 라벨 문자열 ③ sealed **쓰기** API 의 경로 조립(redaction.py — 호출자가 run_dir 을 넘겨야 하며 프로브는 import 하지 않는다) 이다. 실제 경로 열람은 S1 이 0 으로 증명한다."
+  },
+  "import_topology": {
+    "rqint_imports": [
+      "__future__",
+      "__future__.annotations",
+      "consensus",
+      "consensus.build_consensus",
+      "metrics",
+      "metrics.macro_ap",
+      "numpy",
+      "time"
+    ],
+    "rqint_audit_imports": [
+      "__future__",
+      "__future__.annotations",
+      "metrics",
+      "metrics.macro_ap",
+      "numpy",
+      "signflip",
+      "signflip._ks_uniform"
+    ],
+    "rqint_imports_signflip": false,
+    "rqint_imports_metrics": true,
+    "rqint_imports_consensus": true,
+    "rqint_audit_imports_rqint": false,
+    "pass": true
+  },
+  "text_checks": {
+    "assert_eight_matrices": true,
+    "eps_literal_matches_signflip": true,
+    "count_formula_rqint": true,
+    "count_formula_signflip": true,
+    "p_formula_rqint": true,
+    "p_formula_signflip": true,
+    "pass": true
+  },
+  "sap_modules_imported_at_runtime": [
+    "sap",
+    "sap.consensus",
+    "sap.metrics",
+    "sap.rqint",
+    "sap.rqint_audit",
+    "sap.rqint_synthetic",
+    "sap.signflip",
+    "sap.synthetic"
+  ],
+  "r6_subset_executed": [
+    "R6-1",
+    "R6-2",
+    "R6-5",
+    "R6-6",
+    "R6-7",
+    "R6-9"
+  ],
+  "r6_excluded_with_reason": {
+    "R6-3": "균등성 R=200 realization — 60초 예산 초과. R3 본 드라이런에서 실행.",
+    "R6-4": "여집합 감사 합격기준이 draws_checked >= 1000 으로 규모 의존 — 축소 규모에서 성립 불가. 기준 완화는 금지이므로 실행하지 않는다. R3 본 드라이런에서 실행.",
+    "R6-8": "2^G 전수열거(G=12 → 4,096 회 소박 평가) — 예산 초과. R3 본 드라이런에서 실행."
+  },
+  "r6": {
+    "R6-1": {
+      "id": "R6-1",
+      "name": "가환성(교환 연산자 ∘ repeat 평균)",
+      "n_z": 100,
+      "n_matrix_pairs": 800,
+      "all_array_equal": true,
+      "max_abs_diff": 0.0,
+      "criterion": "np.array_equal 또는 max abs diff < 1e-15",
+      "pass": true
+    },
+    "R6-2": {
+      "id": "R6-2",
+      "name": "zero-effect → p = 1.0",
+      "T_obs": 0.0,
+      "p": 1.0,
+      "max_abs_t_star": 0.0,
+      "criterion": "|p−1| < 1e-9 AND T=0 AND 모든 T*=0",
+      "pass": true
+    },
+    "R6-5": {
+      "id": "R6-5",
+      "name": "전체 교환 보존(z ≡ 1 → T* = −T)",
+      "T_obs": -0.11649058917781938,
+      "T_full_swap": 0.11649058917781938,
+      "abs_dev": 0.0,
+      "n_rows_swapped": 60,
+      "criterion": "|T*(1) + T| == 0 (정확)",
+      "pass": true
+    },
+    "R6-6": {
+      "id": "R6-6",
+      "name": "군 순서 불변(순서보존 재라벨 + 행 치환)",
+      "p_base": 0.3953488372093023,
+      "p_relabeled": 0.3953488372093023,
+      "abs_dT": 0.0,
+      "informational_nonmonotone_relabel_p": 0.5348837209302325,
+      "informational_note": "비단조 재라벨은 동전↔군 짝짓기(MC 실현)를 바꾼다 — 합격기준 아님",
+      "criterion": "p 정확 동일 AND |ΔT| < 1e-12",
+      "pass": true
+    },
+    "R6-7": {
+      "id": "R6-7",
+      "name": "재실행 결정성",
+      "perm_bytes_identical": true,
+      "T_identical": true,
+      "p_identical": true,
+      "criterion": "T·p·참조분포 바이트 동일",
+      "pass": true
+    },
+    "R6-9": {
+      "id": "R6-9",
+      "name": "독립 구현 대조",
+      "n_coin_vectors": 64,
+      "max_abs_diff_t_star_sequence": 0.0,
+      "abs_diff_T_obs": 0.0,
+      "T_obs_impl": -0.11649058917781938,
+      "T_obs_naive": -0.11649058917781938,
+      "delta_rf_naive": -0.15384168613937765,
+      "delta_gin_naive": -0.037351096961558285,
+      "criterion": "max abs diff < 1e-12 (구현·참조 모두)",
+      "pass": true
+    }
+  },
+  "r6_all_pass": true,
+  "d6_conditionality_keys": {
+    "inference_conditional_on": "pre-specified GIN training seed set",
+    "delta_gin_per_seed": [
+      -0.11648907578612355,
+      -0.029033316793551256,
+      0.03346910169499995
+    ],
+    "delta_gin_seed_mean": -0.037351096961558285,
+    "delta_gin_seed_sd": 0.07532431777691387,
+    "n_coin_vectors": 64,
+    "n_permutation_values": 128,
+    "B_definition": "still_unspecified — `B` 가 n_coin_vectors 인지 n_permutation_values 인지 본 모듈에서 정하지 않는다. SAP 1.2 에서 확정 필요.",
+    "present": true
+  },
+  "timing": {
+    "fixture": "make_rqint_exchangeable(seed=99) — 합성 전용",
+    "N": 60,
+    "K": 8,
+    "G": 12,
+    "n_coin_vectors": 64,
+    "n_permutation_values": 128,
+    "per_permutation_seconds": 0.011545480499535188,
+    "per_reference_value_seconds": 0.005772740249767594,
+    "measured_not_extrapolated": true,
+    "scope_note": "축소 프로브 규모의 실측이다. 확증 규모·본 드라이런 규모로 외삽하지 않는다. 이 2필드는 numeric_core 에서 제외된다(docs/91 AG-3 규칙 3)."
+  },
+  "out_of_scope": [
+    "R3 판정",
+    "R1 캘리브레이션 감사 C0~C4",
+    "B 확정",
+    "SAP 1.2 재동결",
+    "GIN 학습",
+    "개봉"
+  ],
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.5.0",
+    "sklearn": "1.9.0",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O"
+  },
+  "wall_clock_seconds": 7.62
+}

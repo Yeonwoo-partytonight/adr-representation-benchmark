@@ -1,0 +1,296 @@
+{
+ "_doc": "블록 AK(docs/99) §2 FACTS registry 실측 대조 — 읽기 전용 · 계산 0 · 동결 0",
+ "when_kst": "2026-08-24 11:42:19 KST",
+ "n_facts": 18,
+ "all_match": true,
+ "mismatches": [],
+ "facts": [
+  {
+   "fact_id": "F-VERLIT",
+   "expected": "sap_version 리터럴 \"1.1\" 이 L581 단 1곳 · CLI/env 경로 0",
+   "source": "v3_Multimodal/src/sap/freeze.py",
+   "observed": {
+    "literal_lines": [
+     581
+    ],
+    "cli_env_lines": []
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-MODFILES",
+   "expected": "MODULE_FILES 11개이고 freeze.py 포함",
+   "source": "v3_Multimodal/src/sap/freeze.py L47-49",
+   "observed": {
+    "n": 11,
+    "starts_at_line": 47,
+    "modules": [
+     "__init__.py",
+     "metrics.py",
+     "redaction.py",
+     "consensus.py",
+     "bootstrap.py",
+     "signflip.py",
+     "decision.py",
+     "null_generator.py",
+     "unseen_target.py",
+     "synthetic.py",
+     "freeze.py"
+    ],
+    "freeze_py_included": true
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-MFSRC",
+   "expected": "\"RF primary confirmatory (RF-Morgan+seq)\" = decision.py 7행 (L61·65·69·73·77·81·85)",
+   "source": "v3_Multimodal/src/sap/decision.py",
+   "observed": {
+    "lines": [
+     61,
+     65,
+     69,
+     73,
+     77,
+     81,
+     85
+    ],
+    "n": 7
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-MFMANI",
+   "expected": "manifest.json 14곳 (frozen_parameters/validation × multiplicity_manifest[0..6])",
+   "source": "experiments/sap/manifest.json",
+   "observed": {
+    "n": 14,
+    "paths": [
+     "/frozen_parameters/decision_A11/multiplicity_manifest[0]/model_family",
+     "/frozen_parameters/decision_A11/multiplicity_manifest[1]/model_family",
+     "/frozen_parameters/decision_A11/multiplicity_manifest[2]/model_family",
+     "/frozen_parameters/decision_A11/multiplicity_manifest[3]/model_family",
+     "/frozen_parameters/decision_A11/multiplicity_manifest[4]/model_family",
+     "/frozen_parameters/decision_A11/multiplicity_manifest[5]/model_family",
+     "/frozen_parameters/decision_A11/multiplicity_manifest[6]/model_family",
+     "/validation/decision_A11/multiplicity_manifest[0]/model_family",
+     "/validation/decision_A11/multiplicity_manifest[1]/model_family",
+     "/validation/decision_A11/multiplicity_manifest[2]/model_family",
+     "/validation/decision_A11/multiplicity_manifest[3]/model_family",
+     "/validation/decision_A11/multiplicity_manifest[4]/model_family",
+     "/validation/decision_A11/multiplicity_manifest[5]/model_family",
+     "/validation/decision_A11/multiplicity_manifest[6]/model_family"
+    ]
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-REPRO",
+   "expected": ".venv/bin/python3 v3_Multimodal/src/sap/freeze.py",
+   "source": "experiments/sap/manifest.json",
+   "observed": ".venv/bin/python3 v3_Multimodal/src/sap/freeze.py",
+   "match": true
+  },
+  {
+   "fact_id": "F-AMEND8",
+   "expected": "§8 빈칸 4개 + 축자 'all pre-existing module hashes remain unchanged' 존재",
+   "source": "docs/55b_rqint_external_statreview_package_v2.md",
+   "observed": {
+    "blanks": {
+     "[DATE]": [
+      477
+     ],
+     "[NAME]": [
+      478
+     ],
+     "[DEGREE]": [
+      478
+     ],
+     "[AFFILIATION]": [
+      478
+     ]
+    },
+    "verbatim_lines": [
+     470
+    ]
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-R5GAP",
+   "expected": "§8 개정문에 공개일자 2026-07-27 없음 · 노출 인원 없음 · 문서 전체 07-27 은 §2 본문 1곳",
+   "source": "docs/55b_rqint_external_statreview_package_v2.md",
+   "observed": {
+    "lines_with_2026_07_27": [
+     137
+    ],
+    "in_section8": false,
+    "persons_count_in_section8": false
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-FLR",
+   "expected": "first_look_register.rows 4행 · 전건 2026-07-27 · delta_sign negative · viewer vscode-claude(runner)",
+   "source": "experiments/provenance/ledger.json",
+   "observed": {
+    "type": "dict",
+    "keys": [
+     "status",
+     "sealed_opened",
+     "sealed_access_log",
+     "rows",
+     "status_corrected_20260807",
+     "sealed_access_log_corrected_20260807"
+    ],
+    "n_rows": 4,
+    "all_20260727": true,
+    "all_negative": true,
+    "all_viewer": true
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-SU",
+   "expected": "still_unspecified 5건 (y1·y2 resolved / b·c0c3 still_unspecified / r3 escalated + confirmed_second_party null)",
+   "source": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+   "observed": {
+    "n": 5,
+    "statuses": {
+     "y1_replacement_count_unit": "resolved_by_our_pre_specified_reading_2026-08-12",
+     "y2_r1_failure_fallback_decision_rule": "resolved_by_our_pre_specified_reading_2026-08-12",
+     "b_monte_carlo_sample_size_and_definition": "still_unspecified",
+     "c0_c3_replicates": "still_unspecified",
+     "r3_second_party": "escalated_awaiting_advisor_reply"
+    },
+    "confirmed_second_party": null
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-V0STATUS",
+   "expected": "status=decisions_recorded_not_frozen · is_sap_freeze false",
+   "source": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+   "observed": {
+    "status": "decisions_recorded_not_frozen",
+    "is_sap_freeze": false
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-BMEAS",
+   "expected": "(가) 동전 100,000 → 참조 200,000 · 19.4887 h / (나) 50,000 → 100,000 · 9.8848 h · 둘 다 ≤24 h",
+   "source": "experiments/rqint/b_100k/run.json · experiments/rqint/b_dryrun/decisive.json",
+   "observed": {
+    "ga": {
+     "n_coin": 100000,
+     "ref": 200000,
+     "wall_hours": 19.488727281689645
+    },
+    "na": {
+     "n_coin": 50000,
+     "ref": 100000,
+     "wall_hours": 9.884754196736548
+    }
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-C0C3",
+   "expected": "primary 2,000 / sensitivity 1,000 이 calibration_design.json(42e2f8f9f3f24ec1…)에 2026-08-12 22:25:21 KST 동결 = 첫 시뮬(22:46:44)보다 앞섬",
+   "source": "experiments/rqint/calibration_design.json · experiments/rqint/calibration_sessions.jsonl",
+   "observed": {
+    "primary_R": 2000,
+    "sensitivity_R": 1000,
+    "design_sha256": "42e2f8f9f3f24ec1dfc5fe9ba9b1afe66d30a13c00ef9fce361a3dcaef650b99",
+    "frozen_at_kst": "2026-08-12T22:25:21+09:00",
+    "first_session_start_kst": "2026-08-12T22:46:44+09:00",
+    "design_precedes_first_sim": true
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-R3",
+   "expected": "교수님 승인 <GMAIL-MSGID> (2026-08-12 18:34:47 KST) · r3_second_party_freeze.json 존재",
+   "source": "experiments/provenance/ledger.json correspondence[19] · v3_Multimodal/config/r3_second_party_freeze.json",
+   "observed": {
+    "message_id": "<GMAIL-MSGID>",
+    "ts_kst": "2026-08-12 18:34:47 KST",
+    "approval_scope": "수행 주체(<SECOND-PARTY>)만. 합격기준·일정·패키지 구성은 내선 결정.",
+    "freeze_exists": true,
+    "freeze_sha16": "0624d3ddb852c4e9"
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-KS",
+   "expected": "C0:prop KS p = 0.052447 (기준 0.05 바로 위)",
+   "source": "experiments/rqint/calibration_summary.json",
+   "observed": {
+    "ks_p": 0.052446940943157605,
+    "above_0_05": true,
+    "margin": 0.0024469409431576022
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-MANI16",
+   "expected": "manifest sha16 756d485feb4715e9 · sap_version 1.1",
+   "source": "experiments/sap/manifest.json",
+   "observed": {
+    "sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "sha16": "756d485feb4715e9",
+    "sap_version": "1.1"
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-SEAL",
+   "expected": "291 전체 / 275 (access.log 제외)",
+   "source": "find experiments/runs -path '*_sealed*' -type f",
+   "observed": {
+    "n_all": 291,
+    "n_excl_accesslog": 275,
+    "n_accesslog": 16
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-GIT",
+   "expected": "HEAD 566f487 · 커밋 21",
+   "source": "git rev-parse HEAD · git rev-list --count HEAD",
+   "observed": {
+    "head": "566f487f2157e6d22b9727dc961478835af7a1d1",
+    "head_short": "566f487",
+    "n_commits": 21
+   },
+   "match": true
+  },
+  {
+   "fact_id": "F-LEDGER",
+   "expected": "키 11 · timeline 49 · correspondence 22 · external_reviews 6 · authoritative_sources 26",
+   "source": "experiments/provenance/ledger.json",
+   "observed": {
+    "n_top_keys": 11,
+    "top_keys": [
+     "_schema",
+     "title",
+     "generated",
+     "authoritative_sources",
+     "integrity_invariants",
+     "timeline",
+     "frozen_artifacts",
+     "external_reviews",
+     "first_look_register",
+     "correspondence",
+     "correspondence_subject_authority"
+    ],
+    "timeline": 49,
+    "correspondence": 22,
+    "external_reviews": 6,
+    "authoritative_sources": 26
+   },
+   "match": true
+  }
+ ]
+}

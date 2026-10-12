@@ -1,0 +1,551 @@
+{
+ "_doc": "R2P-6 해시 원장 스펙 실측 — 측정 전용 · 동결 0",
+ "when_kst": "2026-08-24 11:47:17 KST",
+ "n_rows": 45,
+ "n_not_in_registry": 11,
+ "rows": [
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/__init__.py",
+   "sha256": "8dc63e28ffcf93dcdfde7facd0cf1d51b6e6c15ac4de2304de61c12ccb7a5306",
+   "sha16": "8dc63e28ffcf93dc",
+   "bytes": 1635,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/metrics.py",
+   "sha256": "a7d3fe4fe9e87983b35b086b0c464bde1e710e013f98813a2f28a2b48c8b2004",
+   "sha16": "a7d3fe4fe9e87983",
+   "bytes": 4256,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/redaction.py",
+   "sha256": "4d4bf221141fbc793a2bc9c9989906a5c072d7f3e0e49be495cf79d67a5b580c",
+   "sha16": "4d4bf221141fbc79",
+   "bytes": 3647,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/consensus.py",
+   "sha256": "9bddb53da5752c460ad2ac8f594a6ed09dd2e08c332a28fcd8bed0812ab58c91",
+   "sha16": "9bddb53da5752c46",
+   "bytes": 3124,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/bootstrap.py",
+   "sha256": "05437c516e606a053e02acefb23c2597365472201b6c70ff2814278d6597a31e",
+   "sha16": "05437c516e606a05",
+   "bytes": 14214,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/signflip.py",
+   "sha256": "3de1223585ae0f978438bacfdd8e439c7f0ce95b776d615d098a5881e6ce06d2",
+   "sha16": "3de1223585ae0f97",
+   "bytes": 6772,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/decision.py",
+   "sha256": "f688b20d816acabe17c2906cfa846c1f794ba45a416248c08aa7e41676e82a92",
+   "sha16": "f688b20d816acabe",
+   "bytes": 16353,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/null_generator.py",
+   "sha256": "90886abce256a130531a0ab0cd8edd17abc27ff1b62ee56f24248aa76fa204c7",
+   "sha16": "90886abce256a130",
+   "bytes": 11119,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/unseen_target.py",
+   "sha256": "96c0c87911e8c93d6032f3f5be09b46f0cc61ab9a36c39fe7bef1b731df76c89",
+   "sha16": "96c0c87911e8c93d",
+   "bytes": 5610,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/synthetic.py",
+   "sha256": "ddf715e6fba7503e817c6435c9220f7a83a5e5e31375603fddd522570f2a27d7",
+   "sha16": "ddf715e6fba7503e",
+   "bytes": 8444,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "① SAP 11모듈",
+   "path": "v3_Multimodal/src/sap/freeze.py",
+   "sha256": "94e6369fa952be7f4ac41f79da6d3b63f80a1a7c2192873a499e3ccd4a2f1cc9",
+   "sha16": "94e6369fa952be7f",
+   "bytes": 42927,
+   "registered_in": [
+    "manifest.modules",
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 등재"
+  },
+  {
+   "category": "② RQ-int 3모듈",
+   "path": "v3_Multimodal/src/sap/rqint.py",
+   "sha256": "eb842bc98140e9c55b67bc1563cd5573c3b294885778f23744468b712c498b26",
+   "sha16": "eb842bc98140e9c5",
+   "bytes": 12970,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "블록 AC 산출 · SAP 미등재"
+  },
+  {
+   "category": "② RQ-int 3모듈",
+   "path": "v3_Multimodal/src/sap/rqint_audit.py",
+   "sha256": "ddffe6d128de4d180aeab9be18d6b1a9b5281523bc24cd8a3b4f48f20a2aa4a3",
+   "sha16": "ddffe6d128de4d18",
+   "bytes": 19573,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "블록 AC 산출 · SAP 미등재"
+  },
+  {
+   "category": "② RQ-int 3모듈",
+   "path": "v3_Multimodal/src/sap/rqint_synthetic.py",
+   "sha256": "27ef0011ee041920a6e7b63eb4dcfef13c7fd2a70ac017f2324e671df8b0f985",
+   "sha16": "27ef0011ee041920",
+   "bytes": 5572,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "블록 AC 산출 · SAP 미등재"
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/a5_boundary_amendment.json",
+   "sha256": "860f5a4529dfb57b64c796dc0463cbab70551de875a9a79a255f0bdf9cf5f3cf",
+   "sha16": "860f5a4529dfb57b",
+   "bytes": 5667,
+   "registered_in": [],
+   "in_registry": false,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/a5_mechanism_freeze.json",
+   "sha256": "3419b2f793d74051df29ce3285a3c50d4d7a07f2fd15ec0b6d6fb645c4118dbd",
+   "sha16": "3419b2f793d74051",
+   "bytes": 5340,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/a5_stratum_label_supersede.json",
+   "sha256": "ac187375d2a7c16e38d55f78eb3bd5511f668946a88a6e3e59eb1bc6d49219e4",
+   "sha16": "ac187375d2a7c16e",
+   "bytes": 5176,
+   "registered_in": [],
+   "in_registry": false,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/b_100k_prespec.json",
+   "sha256": "e7406c23b8d61b0c4d04638395f4c7803e1e0dc32501baa8dae5047c4d169625",
+   "sha16": "e7406c23b8d61b0c",
+   "bytes": 7916,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/b_dryrun_prespec.json",
+   "sha256": "9a2545eb0d897f304f23350e1363415bc9642a7895fca87b8306f1eadcfa7939",
+   "sha16": "9a2545eb0d897f30",
+   "bytes": 9191,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/gin_inner_valid_freeze.json",
+   "sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+   "sha16": "038599c3e1576022",
+   "bytes": 6913,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/gin_inner_valid_freeze.status.json",
+   "sha256": "bd329fefe613971f59bde8b13ea3f1c4929be04541655ad8e27e9922aa6cb0d0",
+   "sha16": "bd329fefe613971f",
+   "bytes": 677,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/gin_seed_freeze.json",
+   "sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+   "sha16": "10828447c6d33118",
+   "bytes": 4637,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/holm7_latefusion_freeze.json",
+   "sha256": "d89f8c52412b656e467accbda4e1e9a36aaba14830be5b3d81ca756e54b357c1",
+   "sha16": "d89f8c52412b656e",
+   "bytes": 7424,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/ladder_freeze.json",
+   "sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+   "sha16": "b885585aefbabb32",
+   "bytes": 16896,
+   "registered_in": [
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/post_interim_freeze_v1_0.json",
+   "sha256": "502db732bd5e45cbe0d1da78106f639c0f65261e1215af9912250e1ffa284258",
+   "sha16": "502db732bd5e45cb",
+   "bytes": 10844,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/post_interim_freeze_v1_0.status.json",
+   "sha256": "dbb00d540d7436e5cc8c4bad7e9c388ecd0334b1d34c5dda15d1cacd104a49e1",
+   "sha16": "dbb00d540d7436e5",
+   "bytes": 4628,
+   "registered_in": [],
+   "in_registry": false,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/r3_second_party_freeze.json",
+   "sha256": "0624d3ddb852c4e9a2f7f070024814653264eb49c2652dd3e7a947ac38ff27d0",
+   "sha16": "0624d3ddb852c4e9",
+   "bytes": 12192,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/reviewer_identity_resolved.json",
+   "sha256": "981abdfa296805f4960fcb8c49681182c22449729cf7bc8f6f89233cdaa628d0",
+   "sha16": "981abdfa296805f4",
+   "bytes": 7224,
+   "registered_in": [],
+   "in_registry": false,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/rf_tuned_freeze.json",
+   "sha256": "c1ef6406fbb48b7fade599390d75a945360a2f3ce1ee644a8c4e605e6a3703b3",
+   "sha16": "c1ef6406fbb48b7f",
+   "bytes": 3970,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "③ config 동결파일",
+   "path": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+   "sha256": "951b302a2d474361feb51ef785fd7c0fb016027cd8d8e319f6c4018d36ef3626",
+   "sha16": "951b302a2d474361",
+   "bytes": 21502,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": ""
+  },
+  {
+   "category": "④ B·시드집합·대표폴드·실패처리 소재",
+   "path": "v3_Multimodal/src/sap/rqint.py",
+   "sha256": "eb842bc98140e9c55b67bc1563cd5573c3b294885778f23744468b712c498b26",
+   "sha16": "eb842bc98140e9c5",
+   "bytes": 12970,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "`B_DEFINITION_STATUS` L63-64 = `still_unspecified` (B 의 유일한 소재)"
+  },
+  {
+   "category": "④ B·시드집합·대표폴드·실패처리 소재",
+   "path": "v3_Multimodal/config/gin_seed_freeze.json",
+   "sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7",
+   "sha16": "10828447c6d33118",
+   "bytes": 4637,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "대표 outer unit 3 · training_seeds_ordered 5 · confirmatory_seed_prefix 3 · 예비/안정성 시드"
+  },
+  {
+   "category": "④ B·시드집합·대표폴드·실패처리 소재",
+   "path": "v3_Multimodal/config/rqint_procedure_decisions_v0.json",
+   "sha256": "951b302a2d474361feb51ef785fd7c0fb016027cd8d8e319f6c4018d36ef3626",
+   "sha16": "951b302a2d474361",
+   "bytes": 21502,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "D17 실패처리 규칙 축자(L169) · `status` = decisions_recorded_not_frozen"
+  },
+  {
+   "category": "④ B·시드집합·대표폴드·실패처리 소재",
+   "path": "v3_Multimodal/config/b_100k_prespec.json",
+   "sha256": "e7406c23b8d61b0c4d04638395f4c7803e1e0dc32501baa8dae5047c4d169625",
+   "sha16": "e7406c23b8d61b0c",
+   "bytes": 7916,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "(가) 해석 실주행 사전명시 — B 판정식 2분기"
+  },
+  {
+   "category": "④ B·시드집합·대표폴드·실패처리 소재",
+   "path": "v3_Multimodal/config/b_dryrun_prespec.json",
+   "sha256": "9a2545eb0d897f304f23350e1363415bc9642a7895fca87b8306f1eadcfa7939",
+   "sha16": "9a2545eb0d897f30",
+   "bytes": 9191,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "(나) 해석 드라이런 사전명시 · 외삽 정책"
+  },
+  {
+   "category": "④ B·시드집합·대표폴드·실패처리 소재",
+   "path": "experiments/rqint/calibration_design.json",
+   "sha256": "42e2f8f9f3f24ec1dfc5fe9ba9b1afe66d30a13c00ef9fce361a3dcaef650b99",
+   "sha16": "42e2f8f9f3f24ec1",
+   "bytes": 18693,
+   "registered_in": [
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "C0~C3 복제수 primary 2,000 / sensitivity 1,000 · A12 · F_ACC"
+  },
+  {
+   "category": "⑤ 사전등록·개정문·원장 문서",
+   "path": "docs/30_preregistration_OSF_clean.md",
+   "sha256": "cdbaa7e69e654a36e753f09b05a5e390a7a049c2075e19633fab496d74159413",
+   "sha16": "cdbaa7e69e654a36",
+   "bytes": 18434,
+   "registered_in": [
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "OSF 사전등록 정본 (immutable)"
+  },
+  {
+   "category": "⑤ 사전등록·개정문·원장 문서",
+   "path": "docs/55b_rqint_external_statreview_package_v2.md",
+   "sha256": "21f71e0fbfa3c4d1c73adab53657a32be03a755a768666f0e7290b7afb9911a2",
+   "sha16": "21f71e0fbfa3c4d1",
+   "bytes": 45610,
+   "registered_in": [],
+   "in_registry": false,
+   "note": "외부검토 패키지 v2 — §8 개정문 원본"
+  },
+  {
+   "category": "⑤ 사전등록·개정문·원장 문서",
+   "path": "docs/84_rqint_reviewer_response_triage.md",
+   "sha256": "2ff314e0bcac009b5f13f49f31a80c93c634f0839df34280a641ba1007ea16db",
+   "sha16": "2ff314e0bcac009b",
+   "bytes": 14588,
+   "registered_in": [],
+   "in_registry": false,
+   "note": "D1~D22 · R1~R6 정본"
+  },
+  {
+   "category": "⑤ 사전등록·개정문·원장 문서",
+   "path": "docs/33_prereg_deviation_log.md",
+   "sha256": "99017397ba2b365d500c58806ec900de7bcd348da857b55a00b7b99832579e78",
+   "sha16": "99017397ba2b365d",
+   "bytes": 308047,
+   "registered_in": [],
+   "in_registry": false,
+   "note": "이탈기록 (append-only — 원장 등재값 `9399034b66e45aec` 은 동결시점 스냅샷이라 live 와 다른 것이 정상)"
+  },
+  {
+   "category": "⑤ 사전등록·개정문·원장 문서",
+   "path": "docs/45_research_integrity_ledger.md",
+   "sha256": "871a290b35b698b89e991ff55e4ab8d2a55f562ec6dae5c3ce35ef91f2d28b8d",
+   "sha16": "871a290b35b698b8",
+   "bytes": 126782,
+   "registered_in": [],
+   "in_registry": false,
+   "note": "무결성 원장 (append-only — 고정 해시 동결 대상 아님)"
+  },
+  {
+   "category": "⑤ 사전등록·개정문·원장 문서",
+   "path": "experiments/sap/manifest.json",
+   "sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+   "sha16": "756d485feb4715e9",
+   "bytes": 40130,
+   "registered_in": [
+    "ledger.frozen_artifacts",
+    "docs/45 §3"
+   ],
+   "in_registry": true,
+   "note": "SAP 1.1 매니페스트"
+  },
+  {
+   "category": "⑤ 사전등록·개정문·원장 문서",
+   "path": "experiments/provenance/ledger.json",
+   "sha256": "720c5c02cf52fe7632dfdefb1ed706603a294ab2a4664aeec826358af1b5bc0b",
+   "sha16": "720c5c02cf52fe76",
+   "bytes": 292870,
+   "registered_in": [],
+   "in_registry": false,
+   "note": "기계검증 원장 (append-only)"
+  },
+  {
+   "category": "⑤ 사전등록·개정문·원장 문서",
+   "path": "experiments/provenance/sign_disclosure_matrix.json",
+   "sha256": "147d5d5f62edf84a10f31f7395237f2790e350711fd9f76dada24f067a11ff51",
+   "sha16": "147d5d5f62edf84a",
+   "bytes": 230332,
+   "registered_in": [],
+   "in_registry": false,
+   "note": "부호 인지 기록표(R5 근거)"
+  },
+  {
+   "category": "⑤ 사전등록·개정문·원장 문서",
+   "path": "v3_Multimodal/config/reviewer_identity_resolved.json",
+   "sha256": "981abdfa296805f4960fcb8c49681182c22449729cf7bc8f6f89233cdaa628d0",
+   "sha16": "981abdfa296805f4",
+   "bytes": 7224,
+   "registered_in": [],
+   "in_registry": false,
+   "note": "amendment 빈칸 4개 값"
+  }
+ ]
+}

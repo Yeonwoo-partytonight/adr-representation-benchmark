@@ -1,0 +1,159 @@
+{
+  "_doc": "블록 AW (docs/113) 공개 manifest — 개수·환경·게이트 불리언·봉인 파일 이름/바이트/sha256 뿐. 지표 값·학습 메타 값은 기록하지 않는다.",
+  "block": "AW (docs/113)",
+  "provenance": "confirmatory_sealed",
+  "n_cells_c1": 21,
+  "n_cells_c2": 3,
+  "n_cells_c3": 1,
+  "n_cells_c4": 63,
+  "n_training_meta": 315,
+  "n_consensus_files": 21,
+  "sealed_files": [
+    {
+      "name": "_sealed/consensus_C-CAP_seed42.npz",
+      "bytes": 1833212,
+      "sha256": "b6e931b142e3704ae4474ab1aec802485b3cc4ea198fbdddd867a7ab124825bd"
+    },
+    {
+      "name": "_sealed/consensus_C-CAP_seed1.npz",
+      "bytes": 1846137,
+      "sha256": "73100d2080ccc1fa217eeb226c668a1584d9c33c169cf749e1e379dfd9ffbfa8"
+    },
+    {
+      "name": "_sealed/consensus_C-CAP_seed2.npz",
+      "bytes": 1818781,
+      "sha256": "63bc25437e236e9cb7e2df6888ccaebfaf600a7be42ae32d7822782537983253"
+    },
+    {
+      "name": "_sealed/consensus_M0_seed42.npz",
+      "bytes": 1822930,
+      "sha256": "3662479007463e3ec20c3533f76d486f843e2300952b67809d58a6929c70d1dc"
+    },
+    {
+      "name": "_sealed/consensus_M0_seed1.npz",
+      "bytes": 1826625,
+      "sha256": "3c1c49375d8f68365eac4c165e4af438555728eb779c155fedec589a4d21636a"
+    },
+    {
+      "name": "_sealed/consensus_M0_seed2.npz",
+      "bytes": 1817842,
+      "sha256": "313b25538a90475d7adf8cab865bb8784192df747a99560c3512c9a9476bb1f8"
+    },
+    {
+      "name": "_sealed/consensus_M1_seed42.npz",
+      "bytes": 1810707,
+      "sha256": "9b8d68db0b4c990ab1793558d9480e6216d6a48dd163573c32d2b769df8cfb0c"
+    },
+    {
+      "name": "_sealed/consensus_M1_seed1.npz",
+      "bytes": 1818651,
+      "sha256": "889989d30520be63763fad7fc662fba3ab64e85f9c124f4192e5b534852d0375"
+    },
+    {
+      "name": "_sealed/consensus_M1_seed2.npz",
+      "bytes": 1842038,
+      "sha256": "12152f778b86729e0e9c7da99809deec652f3b8dd354423cdbf2d536fe3759f4"
+    },
+    {
+      "name": "_sealed/consensus_M1b_seed42.npz",
+      "bytes": 1838539,
+      "sha256": "9b5f16ac16c1d857f89291ebec21e2ea15e287d07edd784089db39521973a025"
+    },
+    {
+      "name": "_sealed/consensus_M1b_seed1.npz",
+      "bytes": 1834501,
+      "sha256": "1bdf93519825873936762d4fe9c4b8e16ab67a543a2921b807ae686a4ae9cf29"
+    },
+    {
+      "name": "_sealed/consensus_M1b_seed2.npz",
+      "bytes": 1830867,
+      "sha256": "32a5f1bc701e2f102d0726dfaefa86e9ca862ec316ba6964a25bf0494b642425"
+    },
+    {
+      "name": "_sealed/consensus_M2b_seed42.npz",
+      "bytes": 1882705,
+      "sha256": "b36ff282b410295bb7170ee2f87c3574d0046765c15ee1c76ba62b4a26c1df5b"
+    },
+    {
+      "name": "_sealed/consensus_M2b_seed1.npz",
+      "bytes": 1859245,
+      "sha256": "9ae11e2d072da87b18b7c5458f9f0b4414600d22179ce674898303b1bc4ebd28"
+    },
+    {
+      "name": "_sealed/consensus_M2b_seed2.npz",
+      "bytes": 1889322,
+      "sha256": "03a0db458b4d4f4808041f1610e0870b57acaaf5996a5a20b584b82043674265"
+    },
+    {
+      "name": "_sealed/consensus_P-FAM_seed42.npz",
+      "bytes": 1820776,
+      "sha256": "d2a1a11fce7dcaed5879fbceae21bb01814a19fd9eee1f29ff97108b9e910c5b"
+    },
+    {
+      "name": "_sealed/consensus_P-FAM_seed1.npz",
+      "bytes": 1829571,
+      "sha256": "2c560e89f818e93db1093711e29ff52880f98584d089a8bd92ea124d9baaf31e"
+    },
+    {
+      "name": "_sealed/consensus_P-FAM_seed2.npz",
+      "bytes": 1824487,
+      "sha256": "c879426226ecc5679e83ae58d2055fe43887d443b1ca6c0f4af191586b723415"
+    },
+    {
+      "name": "_sealed/consensus_P-ID_seed42.npz",
+      "bytes": 1843926,
+      "sha256": "08b8d61a11dbd16cf6aaa0a837713ffbcb541c1750df6cc3febc6ad564fcecb3"
+    },
+    {
+      "name": "_sealed/consensus_P-ID_seed1.npz",
+      "bytes": 1838475,
+      "sha256": "fcb0e291648a134dd1adcbb1e98b1ed2f06ec5d8d8bf00d036a96401f1d9487a"
+    },
+    {
+      "name": "_sealed/consensus_P-ID_seed2.npz",
+      "bytes": 1843841,
+      "sha256": "702979be5068ba3b64a314d0120b39a30d374a183d48d22fdd0184572b20dd13"
+    },
+    {
+      "name": "_sealed/metrics_full.json",
+      "bytes": 52073,
+      "sha256": "f08ba2307146160f1548684cb56a47dc49ae84ba653950931fc9c144746f2091"
+    }
+  ],
+  "input_checks": {
+    "oof_sha_match": 63,
+    "checkpoint_sha_match": 3,
+    "partial_sha_equals_checkpoint_artifact": 315,
+    "oof_sha_all_match": true,
+    "checkpoint_sha_all_match": true,
+    "partial_sha_all_match": true,
+    "cid_order_match": true,
+    "label_identity": true,
+    "finite_inputs": true,
+    "finite_outputs": true
+  },
+  "wall_seconds": 10.72,
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "sklearn": "1.9.0",
+  "pandas": "3.0.3",
+  "harness_sha256": "32c3444452fd3a2548e308e2d04cc808075192ccef6d4519bf73bb144bf86b01",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "selftest_sha256": "ff20824ba31f61ed10066b9a3e8f26c82d3815f08f14b52968d28a82f567c544",
+  "manifest_t4_sha256": "a59ab54afd51508543a3ca952a5147ffc0c8687f997aacf42362ab699683ea59",
+  "values_disclosed": false,
+  "unblinding_performed": false,
+  "sealed_counts_start": {
+    "n_sealed_dirs": 29,
+    "n_sealed_files_total": 727,
+    "n_sealed_artifacts": 707,
+    "n_access_log": 20
+  },
+  "sealed_counts_end": {
+    "n_sealed_dirs": 30,
+    "n_sealed_files_total": 750,
+    "n_sealed_artifacts": 729,
+    "n_access_log": 21
+  },
+  "ts_completed_kst": "2026-09-27 23:30:39 KST"
+}

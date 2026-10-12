@@ -1,0 +1,577 @@
+{
+  "_doc": "블록 AT 학습 하네스 자체검사 (docs/110 §3 AT-4). 확증 라벨로 학습 0회.",
+  "generated_kst": "2026-09-21 16:27:10 KST",
+  "harness_sha256": "714f98983cceff85409af1597c0d82f8ca2b2027f5f7e94b8a0928351b01107e",
+  "contract_sha256": "e50f972674e782f50a2a74890f8b37b3208da77a8cf6c4ac9f8dc6deb4cbce7f",
+  "n_cases": 14,
+  "n_pass": 14,
+  "n_skip": 0,
+  "all_pass": true,
+  "confirmatory_training_runs": 0,
+  "synthetic_smoke_runs": 1,
+  "cases": [
+    {
+      "case": "U1",
+      "desc": "상수 해시 — 계약·v2 하네스·F4 13종·F5 12종",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "contract": true,
+        "v2_harness": true,
+        "preconditions_mismatch": []
+      }
+    },
+    {
+      "case": "U2",
+      "desc": "실행 목록 == v1 build_plan confirmatory_units(315·순서 동일) · 안정성 0",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "n": 315,
+        "order_ok": true,
+        "n_stability_scheduled": 0,
+        "first": {
+          "rep": 1,
+          "fold": 0,
+          "model": "M0",
+          "train_seed": 42
+        },
+        "last": {
+          "rep": 3,
+          "fold": 4,
+          "model": "C-CAP",
+          "train_seed": 2
+        }
+      }
+    },
+    {
+      "case": "U3",
+      "desc": "7모델 side = MODEL_BLOCKS−{B0}(P-ID 는 φ) · M0 side 없음 · concat · side_dim 기대값",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "models": {
+          "M0": {
+            "derived": [],
+            "normalized": [],
+            "contract": [],
+            "match": true
+          },
+          "M1": {
+            "derived": [
+              "B1"
+            ],
+            "normalized": [
+              "B1"
+            ],
+            "contract": [
+              "B1"
+            ],
+            "match": true
+          },
+          "M1b": {
+            "derived": [
+              "B1",
+              "B_m1b"
+            ],
+            "normalized": [
+              "B1",
+              "B_m1b"
+            ],
+            "contract": [
+              "B1",
+              "B_m1b"
+            ],
+            "match": true
+          },
+          "M2b": {
+            "derived": [
+              "B1",
+              "B_m1b",
+              "B_seq"
+            ],
+            "normalized": [
+              "B1",
+              "B_m1b",
+              "B_seq"
+            ],
+            "contract": [
+              "B1",
+              "B_m1b",
+              "B_seq"
+            ],
+            "match": true
+          },
+          "P-ID": {
+            "derived": [
+              "B1",
+              "B_m1b",
+              "B_pid"
+            ],
+            "normalized": [
+              "B1",
+              "B_m1b",
+              "phi(B_pid)"
+            ],
+            "contract": [
+              "B1",
+              "B_m1b",
+              "phi(B_pid)"
+            ],
+            "match": true
+          },
+          "P-FAM": {
+            "derived": [
+              "B1",
+              "B_m1b",
+              "B_fam"
+            ],
+            "normalized": [
+              "B1",
+              "B_m1b",
+              "B_fam"
+            ],
+            "contract": [
+              "B1",
+              "B_m1b",
+              "B_fam"
+            ],
+            "match": true
+          },
+          "C-CAP": {
+            "derived": [
+              "B1",
+              "B_m1b",
+              "C_ccap"
+            ],
+            "normalized": [
+              "B1",
+              "B_m1b",
+              "C_ccap"
+            ],
+            "contract": [
+              "B1",
+              "B_m1b",
+              "C_ccap"
+            ],
+            "match": true
+          }
+        },
+        "fusion_all_concat": true,
+        "side_dim_rep1_fold0": {
+          "M0": 0,
+          "M1": 2,
+          "M1b": 12,
+          "M2b": 76,
+          "P-ID": 76,
+          "P-FAM": 54,
+          "C-CAP": 76
+        }
+      }
+    },
+    {
+      "case": "U3b",
+      "desc": "φ(B_pid) — fit⊆otr · fit≥64 · 64차원 · 행합0 행 정확히 0 · transform 동등성",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "n_fit_rows": 689,
+        "dim": 64,
+        "n_zero_rows": 249,
+        "b_pid_dim": 1113,
+        "fit_rows_subset_of_otr": true,
+        "zero_rows_exactly_zero": true,
+        "transform_equivalence_max_abs": 0.0
+      }
+    },
+    {
+      "case": "U4",
+      "desc": "블록 동등성 transform(arange)[rows] vs transform(rows) · max|차| ≤ 1e-6 · leak 0",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "blocks": {
+          "B1": {
+            "test": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_valid": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_train": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            }
+          },
+          "B_m1b": {
+            "test": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_valid": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_train": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            }
+          },
+          "B_seq": {
+            "test": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_valid": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_train": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            }
+          },
+          "C_ccap": {
+            "test": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_valid": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_train": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            }
+          },
+          "B_pid": {
+            "test": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_valid": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_train": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            }
+          },
+          "B_fam": {
+            "test": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_valid": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            },
+            "inner_train": {
+              "max_abs_diff": 0.0,
+              "bitwise_identical": true
+            }
+          }
+        },
+        "leak_rows": {
+          "B0": 0,
+          "B1": 0,
+          "B_seq": 0,
+          "C_ccap": 0,
+          "B_m1b": 0
+        },
+        "c_ccap_row_deterministic": true,
+        "max_abs_diff_overall": 0.0,
+        "side_dim_by_model": {
+          "M0": 0,
+          "M1": 2,
+          "M1b": 12,
+          "M2b": 76,
+          "P-ID": 76,
+          "P-FAM": 54,
+          "C-CAP": 76
+        }
+      }
+    },
+    {
+      "case": "U5",
+      "desc": "inner split 15 unit — inner_split_check.json 전 필드 일치 · valid 97 · 양성0PT 0",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "n_units": 15,
+        "mismatch": []
+      }
+    },
+    {
+      "case": "U6",
+      "desc": "그래프 1,092 · 파싱 실패 0 · cid 순서 == master · y == master_Y(float32)",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "n_graphs": 1092,
+        "n_parse_fail": 0,
+        "cid_order_match": true,
+        "y_match": true,
+        "y_dtype": "torch.float32"
+      }
+    },
+    {
+      "case": "U7",
+      "desc": "합성 스모크 — 실제 stdout 출력 0 · 가로챈 텍스트에 validMacro · n_epochs 등식 · 수치 폐기",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "real_stdout_len": 0,
+        "captured_has_validMacro": true,
+        "captured_len": 547,
+        "n_epochs_equation_holds": true,
+        "device": "mps",
+        "n_epochs_equation_note": "min(best_ep+PATIENCE, EPOCHS) vs early-stop 로그 epoch"
+      }
+    },
+    {
+      "case": "U8",
+      "desc": "재개 게이트 진리표 ①~⑫",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "1_first_launch": {
+          "ok": true,
+          "mode": "first_launch",
+          "expect_ok": true,
+          "expect_mode": "first_launch",
+          "pass": true,
+          "failures": [],
+          "runs": "runs"
+        },
+        "2_resume": {
+          "ok": true,
+          "mode": "resume",
+          "expect_ok": true,
+          "expect_mode": "resume",
+          "pass": true,
+          "failures": [],
+          "runs": "runs"
+        },
+        "3_legacy_extra_file": {
+          "ok": false,
+          "mode": null,
+          "expect_ok": false,
+          "expect_mode": null,
+          "pass": true,
+          "failures": [
+            "5'a 기존 봉인 계수 {'n_sealed_dirs': 25, 'n_sealed_files_total': 292, 'n_sealed_artifacts': 276, 'n_access_log': 16} != {'n_sealed_dirs': 25, 'n_sealed_files_total': 291, 'n_sealed_artifacts': 275, 'n_access_log': 16}"
+          ],
+          "runs": "runs"
+        },
+        "4a_orphan_before_sweep": {
+          "ok": false,
+          "mode": null,
+          "expect_ok": false,
+          "expect_mode": null,
+          "pass": true,
+          "failures": [
+            "5'c v3_gin_confirm_rep1_seed201 partial 집합 != 체크포인트 키 집합 (partial-only 1 · ckpt-only 0)"
+          ],
+          "runs": "runs"
+        },
+        "4b_orphan_after_sweep": {
+          "ok": true,
+          "mode": "resume",
+          "expect_ok": true,
+          "expect_mode": "resume",
+          "pass": true,
+          "failures": [],
+          "runs": "runs"
+        },
+        "5_ckpt_without_partial": {
+          "ok": false,
+          "mode": null,
+          "expect_ok": false,
+          "expect_mode": null,
+          "pass": true,
+          "failures": [
+            "5'c v3_gin_confirm_rep1_seed201 partial 집합 != 체크포인트 키 집합 (partial-only 0 · ckpt-only 1)"
+          ],
+          "runs": "runs"
+        },
+        "6_fail_5_and_3": {
+          "ok": false,
+          "mode": null,
+          "expect_ok": false,
+          "expect_mode": null,
+          "pass": true,
+          "failures": [
+            "실패 목록 ['5:not_unblinded_and_sealed_counts', '3:supersede_event'] != ['5:not_unblinded_and_sealed_counts']"
+          ],
+          "runs": "runs"
+        },
+        "7_fail_2_only": {
+          "ok": false,
+          "mode": null,
+          "expect_ok": false,
+          "expect_mode": null,
+          "pass": true,
+          "failures": [
+            "실패 목록 ['2:blocking_flags_still_all_true'] != ['5:not_unblinded_and_sealed_counts']"
+          ],
+          "runs": "runs"
+        },
+        "8_rc0_with_gin_sealed": {
+          "ok": false,
+          "mode": null,
+          "expect_ok": false,
+          "expect_mode": null,
+          "pass": true,
+          "failures": [
+            "rc 0 인데 GIN 봉인 존재 — 봉인 계수 불변 = 설명 불가"
+          ],
+          "runs": "runs"
+        },
+        "9_contract_sha_mismatch": {
+          "ok": false,
+          "pass": true,
+          "failures": [
+            "5'f manifest_t3 contract_sha256 불일치"
+          ]
+        },
+        "10_launch_retry": {
+          "ok": true,
+          "mode": "launch_retry",
+          "expect_ok": true,
+          "expect_mode": "launch_retry",
+          "pass": true,
+          "failures": [],
+          "runs": "runs"
+        },
+        "11_truncated_ckpt": {
+          "ok": false,
+          "mode": null,
+          "expect_ok": false,
+          "expect_mode": null,
+          "pass": true,
+          "failures": [
+            "5'c v3_gin_confirm_rep1_seed201 checkpoint.jsonl 마지막 줄 개행 없음(잘림 의심) — 자동 복구 금지"
+          ],
+          "runs": "runs"
+        },
+        "12_noisy_stderr": {
+          "ok": true,
+          "mode": "resume",
+          "expect_ok": true,
+          "expect_mode": "resume",
+          "pass": true,
+          "failures": [],
+          "runs": "runs"
+        },
+        "all_pass": true
+      }
+    },
+    {
+      "case": "U9",
+      "desc": "쓰기 규약 — .tmp→replace→체크포인트 순서 · 키 중복 감지 · 고아 판정",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "tmp_removed": true,
+        "npz_exists": true,
+        "sha_matches": true,
+        "append_then_read": true,
+        "duplicate_detected": true,
+        "orphan_detected": true,
+        "all_pass": true
+      }
+    },
+    {
+      "case": "U10",
+      "desc": "실패 정책 — 1회 재시도(같은 seed) · 2회 → exit 13 · seed 불변",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "one_failure_then_retry_same_seed": true,
+        "two_failures_exit13": true,
+        "seed_unchanged": true,
+        "detail": {
+          "a": {
+            "exit": 0,
+            "seeds_used": [
+              42,
+              42
+            ],
+            "n_fail": 1
+          },
+          "b": {
+            "exit": 13,
+            "seeds_used": [
+              42,
+              42
+            ],
+            "n_fail": 2
+          }
+        },
+        "all_pass": true
+      }
+    },
+    {
+      "case": "U10b",
+      "desc": "SIGTERM — 진행 중 단위를 끝낸 뒤 stopped_reason signal · 고아 0 · 락 해제",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "child_ready": true,
+        "lock_held_during": true,
+        "stopped_reason": "signal",
+        "finished_current_unit": true,
+        "orphans": 0,
+        "lock_released": true,
+        "returncode": 0,
+        "all_pass": true
+      }
+    },
+    {
+      "case": "U11",
+      "desc": "AST 가드 — 금지 import/호출 0 · argparse 옵션 2 · os.environ 0 · 공개 인자에 봉인값 0",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "forbidden_imports": [],
+        "forbidden_calls": [],
+        "argparse_options": [
+          "--out",
+          "--stage"
+        ],
+        "os_environ_reads": 0,
+        "public_arg_violations": [],
+        "bare_load_frozen": 0,
+        "all_pass": true
+      }
+    },
+    {
+      "case": "U12",
+      "desc": "위생 — 봉인 25/291/275/16 불변 · v3_gin_confirm* 생성 0 · __pycache__ 불변",
+      "pass": true,
+      "skip_reason": null,
+      "detail": {
+        "sealed_before": {
+          "n_sealed_dirs": 25,
+          "n_sealed_files_total": 291,
+          "n_sealed_artifacts": 275,
+          "n_access_log": 16
+        },
+        "sealed_after": {
+          "n_sealed_dirs": 25,
+          "n_sealed_files_total": 291,
+          "n_sealed_artifacts": 275,
+          "n_access_log": 16
+        },
+        "pycache_before": 4541,
+        "pycache_after": 4541,
+        "gin_dirs_created": 0
+      }
+    }
+  ]
+}

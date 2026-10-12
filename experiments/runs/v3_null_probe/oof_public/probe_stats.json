@@ -1,0 +1,40 @@
+{
+  "_warning": "SEALED · PROBE ONLY — 본 §13-4 null 분포에 편입 금지(폐기 예정).",
+  "probe_only": true,
+  "enters_null_distribution": false,
+  "probe_seeds": [
+    9000001,
+    9000002
+  ],
+  "T_b": [
+    {
+      "mode": "global",
+      "seed": 9000001,
+      "T_b": -0.009420821911661062,
+      "probe_only": true,
+      "enters_null_distribution": false
+    },
+    {
+      "mode": "global",
+      "seed": 9000002,
+      "T_b": -0.008757887057292024,
+      "probe_only": true,
+      "enters_null_distribution": false
+    },
+    {
+      "mode": "family",
+      "seed": 9000001,
+      "T_b": -0.007713590657351971,
+      "probe_only": true,
+      "enters_null_distribution": false
+    },
+    {
+      "mode": "family",
+      "seed": 9000002,
+      "T_b": -0.0058801889469823065,
+      "probe_only": true,
+      "enters_null_distribution": false
+    }
+  ],
+  "note": "T_obs와 비교하지 않았고 p_emp를 계산하지 않았음(empirical_p 미호출)."
+}

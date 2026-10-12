@@ -1,0 +1,152 @@
+{
+ "_doc": "블록 AK(docs/99) §5 종료검증 14항 — 독립 재판정",
+ "when_kst": "2026-08-24 12:05:02 KST",
+ "n": 14,
+ "n_pass": 14,
+ "all_pass": true,
+ "rows": [
+  {
+   "no": 1,
+   "item": "FACTS 전건 일치",
+   "expect": "18/18 (지시서 표기 17행이나 실제 18행)",
+   "got": "18/18",
+   "pass": true
+  },
+  {
+   "no": 2,
+   "item": "manifest.json sha256 착수=종료 · sap_version 1.1",
+   "expect": "756d485feb4715e9 · 1.1",
+   "got": "756d485feb4715e9 · 1.1",
+   "pass": true
+  },
+  {
+   "no": 3,
+   "item": "동결 11모듈 + AC4 + AD2 + AI4 + AJ 산출물 0바이트",
+   "expect": "29/29 동일",
+   "got": "29/29 · 변경 []",
+   "pass": true
+  },
+  {
+   "no": 4,
+   "item": "config 동결파일 전체 0바이트",
+   "expect": "16/16 동일 · 목록=['a5_boundary_amendment.json', 'a5_mechanism_freeze.json', 'a5_stratum_label_supersede.json', 'b_100k_prespec.json', 'b_dryrun_prespec.json', 'gin_inner_valid_freeze.json', 'gin_inner_valid_freeze.status.json', 'gin_seed_freeze.json', 'holm7_latefusion_freeze.json', 'ladder_freeze.json', 'post_interim_freeze_v1_0.json', 'post_interim_freeze_v1_0.status.json', 'r3_second_party_freeze.json', 'reviewer_identity_resolved.json', 'rf_tuned_freeze.json', 'rqint_procedure_decisions_v0.json']",
+   "got": "16/16 · 변경 []",
+   "pass": true
+  },
+  {
+   "no": 5,
+   "item": "docs/55b 0바이트",
+   "expect": "21f71e0fbfa3c4d1",
+   "got": "21f71e0fbfa3c4d1",
+   "pass": true
+  },
+  {
+   "no": 6,
+   "item": "freeze.py 미실행 (sha256·mtime·manifest mtime 불변)",
+   "expect": "freeze.mtime=1784970895691659436 · manifest.mtime=1784971226640178530",
+   "got": "freeze.mtime=1784970895691659436 · manifest.mtime=1784971226640178530 · sap 로그=['freeze.log']",
+   "pass": true
+  },
+  {
+   "no": 7,
+   "item": "_sealed/ stat-only 착수=종료 · guard 275/291",
+   "expect": "291/275 · 스냅샷 동일",
+   "got": "291/275 · 스냅샷 동일=True",
+   "pass": true
+  },
+  {
+   "no": 8,
+   "item": "신규 파일 외 변경 파일 0 (전수 스윕)",
+   "expect": "변경=기입 3곳 + docs/_next.md(큐, /실행 STEP5) · 삭제 0 · 신규=본 블록 산출뿐",
+   "got": {
+    "changed": [
+     "experiments/provenance/ledger.json",
+     "docs/33_prereg_deviation_log.md",
+     "docs/_next.md",
+     "docs/45_research_integrity_ledger.md"
+    ],
+    "unexpected_changed": [],
+    "n_added": 16,
+    "unexpected_added": [],
+    "deleted": []
+   },
+   "pass": true
+  },
+  {
+   "no": 9,
+   "item": "동결·채택 선언 0건 (문자열 스캔 · .DRAFT 포함)",
+   "expect": "0건",
+   "got": {
+    "n_hits": 0,
+    "hits": []
+   },
+   "pass": true
+  },
+  {
+   "no": 10,
+   "item": "계산 0 (모델 학습·추론·순열 0) · 확증 데이터 로드 0",
+   "expect": "computation_performed false · models_trained 0 · confirmatory load 0",
+   "got": {
+    "draft_flags": {
+     "computation_performed": false,
+     "models_trained": 0,
+     "sealed_read": 0,
+     "network_calls": 0,
+     "open_sealed_calls": 0,
+     "emit_sign_calls": 0,
+     "decision_py_calls": 0
+    },
+    "confirmatory_paths_touched": 0
+   },
+   "pass": true
+  },
+  {
+   "no": 11,
+   "item": "docs/33 접두사 바이트 동일 · 삭제 0 · 번호 실측",
+   "expect": "접두사 308047B 복원 · 항목 52 추가 · next=53",
+   "got": {
+    "prefix_restored": true,
+    "max_item": 52,
+    "n_items": 53,
+    "next": 53
+   },
+   "pass": true
+  },
+  {
+   "no": 12,
+   "item": "docs/45 삽입행 제거 시 착수 sha256 복원",
+   "expect": "871a290b35b698b8",
+   "got": "871a290b35b698b8",
+   "pass": true
+  },
+  {
+   "no": 13,
+   "item": "ledger timeline 50 · auth 27 · 기존 entry 불변 · 최상위 11키 · FLR dict 6키/rows 4",
+   "expect": "timeline 50 · auth 27 · corr 22 · keys 11 · flr.rows 4",
+   "got": {
+    "timeline": 50,
+    "auth": 27,
+    "corr": 22,
+    "keys": 11,
+    "flr_keys": 6,
+    "flr_rows": 4,
+    "prior_bytes_restored_on_append_removal": true,
+    "restored_sha16": "720c5c02cf52fe76",
+    "baseline_sha16": "720c5c02cf52fe76"
+   },
+   "pass": true
+  },
+  {
+   "no": 14,
+   "item": "unblinding false · gin_start_still_blocked true · emit_sign 0 · open_sealed 0 · 네트워크 0 · HEAD 566f487 · 커밋 21 · commit/push 0",
+   "expect": "566f487 · 21",
+   "got": {
+    "head": "566f487",
+    "n_commits": 21,
+    "unblinding_performed": false,
+    "gin_start_still_blocked": true
+   },
+   "pass": true
+  }
+ ]
+}

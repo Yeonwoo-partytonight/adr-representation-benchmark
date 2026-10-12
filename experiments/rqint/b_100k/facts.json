@@ -1,0 +1,106 @@
+{
+  "block": "AJ (docs/98)",
+  "n_rows": 14,
+  "n_pass": 14,
+  "all_facts_pass": true,
+  "rows": [
+    {
+      "fact_id": "F-PRESPEC",
+      "expect": "sha256 9a2545eb0d897f304f23350e1363415bc9642a7895fca87b8306f1eadcfa7939 · frozen_at_kst 2026-08-22T00:56:14+09:00",
+      "source": "v3_Multimodal/config/b_dryrun_prespec.json",
+      "actual": "sha256 9a2545eb0d897f304f23350e1363415bc9642a7895fca87b8306f1eadcfa7939 · frozen_at_kst 2026-08-22T00:56:14+09:00",
+      "pass": true
+    },
+    {
+      "fact_id": "F-POLICY",
+      "expect": "band_hours [18.0, 30.0] · rule_inside_band 축자 = \"밴드 안이면 외삽 금지 → 실주행 + 24h 하드 캡으로 판정한다.\"",
+      "source": "동 파일 extrapolation_policy",
+      "actual": "band_hours [18.0, 30.0] · rule_inside_band = \"밴드 안이면 외삽 금지 → 실주행 + 24h 하드 캡으로 판정한다.\"",
+      "pass": true
+    },
+    {
+      "fact_id": "F-CONTIN",
+      "expect": "action③ 축자(상신 사항 · 자체 구성 변경 금지)",
+      "source": "동 파일 contingency_if_premise_fails",
+      "actual": "③ (가) 해석의 24h 판정은 **본 블록에서 확정하지 않고 상신 사항으로 보고**한다. 100,000 동전 실주행은 본 블록 예산(24h 캡) 밖이므로 **자체 판단으로 구성을 바꾸지 않는다**(§0 자체 구제 금지).",
+      "pass": true
+    },
+    {
+      "fact_id": "F-AI50K",
+      "expect": "동전 50,000 · 참조분포 100,000 · wall_seconds 35585.03730940819 · u_loop_per_coin 0.6976782551174681 · complement_audit_seconds 697.7373139844276",
+      "source": "experiments/rqint/b_dryrun/decisive.json result",
+      "actual": "{\"n_coin_vectors\": 50000, \"n_permutation_values\": 100000, \"wall_seconds\": 35585.03730940819, \"per_permutation_seconds\": 0.6976782551174681, \"complement_audit_seconds\": 697.7373139844276}",
+      "pass": true
+    },
+    {
+      "fact_id": "F-AIOBS",
+      "expect": "T_obs 0.0031802114140302242 · delta_rf 0.00038510137913283504 · delta_gin -0.002795110034897389 · count_abs_ge_obs 67262 · rep_seed 860260813 · coin_seed 1760260813",
+      "source": "동 파일 result",
+      "actual": "{\"T_obs\": 0.0031802114140302242, \"delta_rf\": 0.00038510137913283504, \"delta_gin\": -0.002795110034897389, \"count_abs_ge_obs\": 67262, \"rep_seed\": 860260813, \"coin_seed\": 1760260813}",
+      "pass": true
+    },
+    {
+      "fact_id": "F-AIUNIT",
+      "expect": "계단 û 중앙값 0.694588 · 선형성 상대 산포 0.031628",
+      "source": "experiments/rqint/b_dryrun/stair.json",
+      "actual": "median 0.6945878314971924 · relative_spread 0.031627602383008276",
+      "pass": true
+    },
+    {
+      "fact_id": "F-D15",
+      "expect": "축자 4요소(B=100,000 · 24h 초과 시에만 50,000 하향 · GIN 예측 생성 이전 판단 · MC SE 병기)",
+      "source": "docs/84 §1 D15 행",
+      "actual": "| D15 | **B = 100,000**. 전규모 합성 드라이런 벽시계 24h 초과 시에만 50,000 으로 하향하되 **GIN 예측 생성 이전에** 판단. 추정 p 와 함께 몬테카를로 SE 병기 | §9-2 | SAP 1.2 | 신규(B 는 RQ-int 에 대해 미동결 파라미터라 지금 지정 정당) |",
+      "pass": true
+    },
+    {
+      "fact_id": "F-BDEF",
+      "expect": "B_DEFINITION_STATUS = still_unspecified …",
+      "source": "v3_Multimodal/src/sap/rqint.py L63–",
+      "actual": "B_DEFINITION_STATUS = (\"still_unspecified — `B` 가 n_coin_vectors 인지 n_permutation_values 인지 \"                        \"본 모듈에서 정하지 않는다. SAP 1.2 에서 확정 필요.\")",
+      "pass": true
+    },
+    {
+      "fact_id": "F-SERIAL",
+      "expect": "rqint_test 직렬 루프 · 병렬 파라미터 없음",
+      "source": "동 파일 def rqint_test",
+      "actual": "sig=def rqint_test(P_RF, P_GIN, y, scaffold_group, eligible_pt=None,                n_coin_vectors=1000, seed=0, pair_comple · serial_loop=True · parallel_tokens=[]",
+      "pass": true
+    },
+    {
+      "fact_id": "F-RQINT16",
+      "expect": "sha16 eb842bc98140e9c5",
+      "source": "동 파일",
+      "actual": "eb842bc98140e9c5",
+      "pass": true
+    },
+    {
+      "fact_id": "F-MANI16",
+      "expect": "manifest sha16 756d485feb4715e9 · sap_version 1.1",
+      "source": "experiments/sap/manifest.json",
+      "actual": "756d485feb4715e9 · 1.1",
+      "pass": true
+    },
+    {
+      "fact_id": "F-SEAL",
+      "expect": "291 / 275(access.log 제외)",
+      "source": "find experiments/runs -path '*_sealed*' -type f",
+      "actual": "291 / 275",
+      "pass": true
+    },
+    {
+      "fact_id": "F-GIT",
+      "expect": "HEAD 566f487 · 커밋 21",
+      "source": "git rev-parse HEAD · git rev-list --count HEAD",
+      "actual": "566f487 · 21",
+      "pass": true
+    },
+    {
+      "fact_id": "F-LEDGER",
+      "expect": "{\"keys\": 11, \"timeline\": 48, \"correspondence\": 22, \"external_reviews\": 6, \"first_look_register\": 6, \"authoritative_sources\": 25}",
+      "source": "experiments/provenance/ledger.json",
+      "actual": "{\"keys\": 11, \"timeline\": 48, \"correspondence\": 22, \"external_reviews\": 6, \"first_look_register\": 6, \"authoritative_sources\": 25}",
+      "pass": true
+    }
+  ]
+}

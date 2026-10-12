@@ -1,0 +1,34 @@
+2026-08-06 15:22:50 KST | ==============================================================================
+2026-08-06 15:22:50 KST | [블록 O] stage=all — Holm ⑥ tuned-RF baseline 확증 OOF (arm 1개 · 15 model-fold). Δ·AP·CI·p·부호 전량 봉인.
+2026-08-06 15:22:50 KST | [O-0] docs/33 판독확정(pre-look) 기입 확인 — 착수 허용
+2026-08-06 15:22:50 KST | [G-BLOCK] PASS — holm67_start_still_blocked_until_reply=False · post_interim sha16=502db732bd5e45cb
+2026-08-06 15:22:50 KST | [G-HOLM] PASS — decision.py:44 · 7 라벨 · M2b-RF_tuned 포함
+2026-08-06 15:22:50 KST | [동결] rf_tuned_freeze.json sha256 c1ef6406fbb48b7f 판독 — estimator 6필드·block radius/bits assert PASS
+2026-08-06 15:22:50 KST | [data] N=1092 PT=370 (동결 master_X/Y 읽기 전용)
+2026-08-06 15:22:50 KST | [O-1-3] sealed guard 스냅샷 159종 기록(착수) — 선재 봉인 159종
+2026-08-06 15:22:50 KST | [O-3-3] fold 정합 PASS — 약물 1092 · scaffold group 732 · fold 교차 0 · rare-PT 위반 0 (3반복)
+2026-08-06 15:25:08 KST | [O-3-1] 코드경로 동일성 — M0 rep1 fold0 (218행 × 370PT, dim=2048) 바이트 동일 = True | wall 137.5s (수치 미기록 — redaction)
+2026-08-06 15:25:08 KST | [O-3-2] B0_r3 정합 PASS — shape (1092, 2048) dtype uint8 · mol 실패 0(=r2) · r2 와 동일행렬 아님(차이 행 1058/1092) · 비트밀도 r2 0.0230 → r3 0.0313
+2026-08-06 15:25:08 KST | [O-3-4] 누수 assert PASS — B0_r3 는 fit 없음(_fit_rows_mask 공집합)
+2026-08-06 15:30:05 KST | [O-4] 계측 — RF_tuned 1 model-fold(dim=2048) wall 296.7s → 15 model-fold 총 추정 1.24h (0.0515일) · 임계 7.0일 · 초과 = False | peak RSS 4.69 GiB
+2026-08-06 15:34:34 KST | [본계산] rep1 RF_tuned fold0 — train=874 test=218 dim=2048 leak_rows=0 | wall 269.5s | 누계 1/15 (수치 미기록 — redaction)
+2026-08-06 15:38:08 KST | [본계산] rep1 RF_tuned fold1 — train=874 test=218 dim=2048 leak_rows=0 | wall 213.5s | 누계 2/15 (수치 미기록 — redaction)
+2026-08-06 15:42:10 KST | [본계산] rep1 RF_tuned fold2 — train=873 test=219 dim=2048 leak_rows=0 | wall 242.7s | 누계 3/15 (수치 미기록 — redaction)
+2026-08-06 17:16:10 KST | [본계산] rep1 RF_tuned fold3 — train=874 test=218 dim=2048 leak_rows=0 | wall 287.9s | 누계 4/15 (수치 미기록 — redaction)
+2026-08-06 17:19:46 KST | [본계산] rep1 RF_tuned fold4 — train=873 test=219 dim=2048 leak_rows=0 | wall 216.3s | 누계 5/15 (수치 미기록 — redaction)
+2026-08-06 17:23:06 KST | [본계산] rep2 RF_tuned fold0 — train=874 test=218 dim=2048 leak_rows=0 | wall 199.7s | 누계 6/15 (수치 미기록 — redaction)
+2026-08-06 17:26:26 KST | [본계산] rep2 RF_tuned fold1 — train=874 test=218 dim=2048 leak_rows=0 | wall 199.5s | 누계 7/15 (수치 미기록 — redaction)
+2026-08-06 17:29:54 KST | [본계산] rep2 RF_tuned fold2 — train=873 test=219 dim=2048 leak_rows=0 | wall 207.8s | 누계 8/15 (수치 미기록 — redaction)
+2026-08-06 17:33:32 KST | [본계산] rep2 RF_tuned fold3 — train=874 test=218 dim=2048 leak_rows=0 | wall 218.3s | 누계 9/15 (수치 미기록 — redaction)
+2026-08-06 17:37:04 KST | [본계산] rep2 RF_tuned fold4 — train=873 test=219 dim=2048 leak_rows=0 | wall 211.7s | 누계 10/15 (수치 미기록 — redaction)
+2026-08-06 17:40:37 KST | [본계산] rep3 RF_tuned fold0 — train=874 test=218 dim=2048 leak_rows=0 | wall 212.6s | 누계 11/15 (수치 미기록 — redaction)
+2026-08-06 17:44:12 KST | [본계산] rep3 RF_tuned fold1 — train=874 test=218 dim=2048 leak_rows=0 | wall 215.0s | 누계 12/15 (수치 미기록 — redaction)
+2026-08-06 17:47:42 KST | [본계산] rep3 RF_tuned fold2 — train=873 test=219 dim=2048 leak_rows=0 | wall 209.9s | 누계 13/15 (수치 미기록 — redaction)
+2026-08-06 17:51:07 KST | [본계산] rep3 RF_tuned fold3 — train=874 test=218 dim=2048 leak_rows=0 | wall 205.7s | 누계 14/15 (수치 미기록 — redaction)
+2026-08-06 17:54:36 KST | [본계산] rep3 RF_tuned fold4 — train=873 test=219 dim=2048 leak_rows=0 | wall 208.1s | 누계 15/15 (수치 미기록 — redaction)
+2026-08-06 17:54:36 KST | [본계산] 전 15 (rep,fold) 완주 — 세션 #1 신규 15건
+2026-08-06 17:54:36 KST | [봉인] rep1 — oof_RF_tuned.npz + metrics_full.json 저장 (experiments/runs/v3_confirm_rftuned_rep1_seed201/_sealed)
+2026-08-06 17:54:37 KST | [봉인] rep2 — oof_RF_tuned.npz + metrics_full.json 저장 (experiments/runs/v3_confirm_rftuned_rep2_seed202/_sealed)
+2026-08-06 17:54:38 KST | [봉인] rep3 — oof_RF_tuned.npz + metrics_full.json 저장 (experiments/runs/v3_confirm_rftuned_rep3_seed203/_sealed)
+2026-08-06 17:54:38 KST | [consensus] RF_tuned — 반복 3개 산술평균(방법A) 봉인 저장 (experiments/runs/v3_confirm_rftuned_consensus_rep123) | wall 0.5s (수치 미기록)
+2026-08-06 17:54:39 KST | [공개] rftuned_public.json 기록 — 봉인 대상 키 검출 0 (키 156개·리프 217개 스캔, 실수 허용목록 11종)

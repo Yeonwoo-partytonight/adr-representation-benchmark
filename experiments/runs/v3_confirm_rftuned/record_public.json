@@ -1,0 +1,30 @@
+{
+  "ts_kst": "2026-08-06 18:43:59 KST",
+  "item_no_prelook": 32,
+  "item_no_run": 33,
+  "ledger_timeline": "36 -> 37",
+  "supersedes_backfill_preexisting": false,
+  "n_sealed_total": 184,
+  "n_sealed_new": 25,
+  "n_first_look_entries": 11,
+  "immutable_sha16": {
+    "v3_Multimodal/config/ladder_freeze.json": "b885585aefbabb32",
+    "v3_Multimodal/config/gin_seed_freeze.json": "10828447c6d33118",
+    "v3_Multimodal/config/gin_inner_valid_freeze.json": "038599c3e1576022",
+    "v3_Multimodal/config/gin_inner_valid_freeze.status.json": "bd329fefe613971f",
+    "v3_Multimodal/config/post_interim_freeze_v1_0.json": "502db732bd5e45cb",
+    "experiments/sap/manifest.json": "756d485feb4715e9",
+    "v3_Multimodal/src/ladder_confirmatory.py": "13a17129db6a6679",
+    "v3_Multimodal/src/confirmatory_oof_rep1.py": "afb894c09fdaad6f",
+    "v3_Multimodal/src/confirmatory_oof_rep23.py": "0c02f4e7d7fb333b",
+    "v3_Multimodal/src/confirmatory_oof_rest.py": "78de238ff2fac8e2",
+    "v3_Multimodal/src/stratification_run.py": "146b2ee2e5f7fdb8",
+    "v3_Multimodal/src/pid_stratification_run.py": "654cd87bf593f689",
+    "docs/29_v3.3_preregistration_advisor_approved.md": "f3b2a8bf6dfe09d0",
+    "docs/30_preregistration_OSF_clean.md": "cdbaa7e69e654a36"
+  },
+  "rf_tuned_freeze_sha256": "c1ef6406fbb48b7fade599390d75a945360a2f3ce1ee644a8c4e605e6a3703b3",
+  "docs33_sha256": "84518d231299dac2dc2f667d90a05ad7850c4cf6ed28392f555a95bef3388ff9",
+  "docs45_sha256": "1a4259605f19754e3d9b58818cbca2e26c639ebfd9a484267fd15f67019bbb1b",
+  "ledger_sha256": "dec0631372a88d4e0f91b6dfa9ed35ac5509849ddb4c28a3a5975d530bb10b42"
+}

@@ -1,0 +1,194 @@
+{
+  "_doc": "docs/113 블록 AW / AW-3 — 합성 자체검사 K1~K12. 확증 입력 판독 0. 모든 수치는 합성 fixture 산출물.",
+  "provenance": "synthetic_fixture",
+  "block": "AW (docs/113)",
+  "harness_path": "v3_Multimodal/src/confirmatory_gin_consensus.py",
+  "harness_sha256": "32c3444452fd3a2548e308e2d04cc808075192ccef6d4519bf73bb144bf86b01",
+  "spec_path": "v3_Multimodal/config/rqint_downstream_spec_v1.json",
+  "spec_sha256": "fb1de5da61b30165af2b8f9debb6112611f0af48b6849ed4e1ad5dd52e84b3bf",
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "ts_kst": "2026-09-27 23:27:19 KST",
+  "n_tests": 12,
+  "n_pass": 12,
+  "n_skip": 0,
+  "all_pass": true,
+  "tests": [
+    {
+      "name": "K1 상수·해시",
+      "checks": {
+        "spec": true,
+        "manifest_t4": true,
+        "compute_lock": true,
+        "sap:consensus.py": true,
+        "sap:metrics.py": true,
+        "sap:rqint.py": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "K2 S1 결속",
+      "checks": {
+        "models_from_spec": true,
+        "t_values_from_spec": true,
+        "rep_pairs_from_spec": true,
+        "outputs_from_spec": true,
+        "cell_counts_from_spec": true,
+        "contrast_from_spec": true,
+        "no_model_name_literals_in_source": true
+      },
+      "pass": true,
+      "fails": [],
+      "model_name_literals": []
+    },
+    {
+      "name": "K3 consensus",
+      "checks": {
+        "equals_build_consensus_exact": true,
+        "equals_arith_mean_exact": true,
+        "cid_saved": true,
+        "build_consensus_imported": true,
+        "build_consensus_called_in_core": true,
+        "no_self_mean_outside_selftest": true
+      },
+      "pass": true,
+      "fails": [],
+      "max_abs_diff_vs_build_consensus": 0.0,
+      "max_abs_diff_vs_mean": 0.0,
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "K4 repeat 축 prediction-then-metric",
+      "checks": {
+        "cell_1_equals_ap_of_consensus": true,
+        "distinct_from_mean_of_repeat_aps": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "K5 seed 축 metric-then-average",
+      "checks": {
+        "seed_keys_are_s_index": true,
+        "cell_2_matches_observed_statistic": true,
+        "cell_3_matches_observed_statistic": true,
+        "distinct_from_matrix_preaverage": true
+      },
+      "pass": true,
+      "fails": [],
+      "max_diff_cell2": 0.0,
+      "max_diff_cell3": 0.0,
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "K6 eligible_pt 명시",
+      "checks": {
+        "all_macro_ap_calls_have_eligible": true,
+        "runtime_shape_assert_fires": true
+      },
+      "pass": true,
+      "fails": [],
+      "n_macro_ap_calls": 4
+    },
+    {
+      "name": "K7 undefined",
+      "checks": {
+        "run_ok": true,
+        "n_eval_368_all": true,
+        "n_excluded_2_all": true,
+        "variable_denominator": true,
+        "no_zero_substitution": true
+      },
+      "pass": true,
+      "fails": [],
+      "provenance": "synthetic_fixture"
+    },
+    {
+      "name": "K8 무효 5종",
+      "checks": {
+        "a_sha_tamper": true,
+        "b_cid_shuffle": true,
+        "c_nan": true,
+        "d_missing": true,
+        "e_drop_cell": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "K9 partial 대조",
+      "checks": {
+        "sha_mismatch_aborts": true,
+        "key_mismatch_aborts": true,
+        "messages_value_free": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "K10 덮어쓰기 금지·원자성",
+      "checks": {
+        "preexisting_output_aborts": true,
+        "preexisting_abort_before_r2": true,
+        "no_tmp_left": true,
+        "rep_access_log_plus_one": true,
+        "new_access_log_one_line": true,
+        "sealed_file_count_23": true
+      },
+      "pass": true,
+      "fails": []
+    },
+    {
+      "name": "K11 누설 가드",
+      "checks": {
+        "value_strings_absent": true,
+        "public_json_keys_clean": true,
+        "new_file_keys_no_sign_words": true
+      },
+      "pass": true,
+      "fails": [],
+      "n_patterns": 1183,
+      "hits": {
+        "stdout": 0,
+        "run.log": 0,
+        "manifest_public": 0,
+        "exceptions": 0
+      },
+      "public_bad_keys": [],
+      "sealed_bad_keys": []
+    },
+    {
+      "name": "K12 AST·위생",
+      "checks": {
+        "forbidden_calls_zero": true,
+        "rqint_calls_only_in_selftest": true,
+        "network_imports_zero": true,
+        "os_environ_zero": true,
+        "cli_options_exact": true,
+        "write_primitives_in_allowed_functions": true,
+        "stage_run_no_direct_write": true,
+        "stage_run_out_dir_from_spec": true,
+        "stage_run_rep_dirs_confirmatory": true,
+        "cl_calls_only_in_stage_run": true,
+        "runtime_write_guard_violations_zero": true,
+        "cl_calls_during_selftest_zero": true,
+        "real_sealed_counts_unchanged": true,
+        "fp_confirmatory_unchanged": true,
+        "fp_stability_unchanged": true,
+        "fp_existing25_unchanged": true,
+        "consensus_dir_not_created": true,
+        "pycache_unchanged": true
+      },
+      "pass": true,
+      "fails": [],
+      "forbidden_hits": [],
+      "bad_write_functions": [],
+      "guard_violations": []
+    }
+  ],
+  "confirmatory_values_read": 0,
+  "sealed_human_read": 0,
+  "network_calls": 0
+}

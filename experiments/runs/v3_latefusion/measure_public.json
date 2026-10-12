@@ -1,0 +1,27 @@
+{
+  "measured_model_folds": [
+    "p_seq(inner)",
+    "p_RF(inner)",
+    "p_RF(refit, P-2-1)"
+  ],
+  "measured_wall_s_p_seq_inner": 90.1636010830407,
+  "measured_wall_s_p_rf_inner": 92.2227450410137,
+  "measured_wall_s_p_rf_refit": 93.98925504198996,
+  "measured_wall_s_lambda_grid_21": 1.3055847079958767,
+  "dims": {
+    "p_rf": 2048,
+    "p_seq_primary": 64,
+    "p_seq_sensitivity": 66
+  },
+  "n_units": 15,
+  "n_rf_fits_per_unit": 6,
+  "n_rf_fits_total": 90,
+  "estimated_per_unit_wall_s": 549.4775738311582,
+  "estimated_total_wall_s": 8242.163607467373,
+  "estimated_total_wall_hours": 2.2894898909631594,
+  "estimated_total_wall_days": 0.09539541212346497,
+  "abort_threshold_days": 7.0,
+  "exceeds_threshold": false,
+  "peak_rss_gib": 2.3324127197265625,
+  "scaling_note": "비용 지배변수 = RF 적합 횟수(지시서 §P-3). 확정본이 재적합을 요구하므로 unit 당 6 fit(내부 rf·seq·seq_sens + 재적합 rf·seq·seq_sens)로 세고, sensitivity 를 별도로 더하지 않고 이미 포함해 셌다. v1 의 '45' 추정은 재적합 미반영이라 쓰지 않았다. λ 격자 탐색은 행렬 가중합이라 무시 가능 수준임을 실측으로 확인했다."
+}

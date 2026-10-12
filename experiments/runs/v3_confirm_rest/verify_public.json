@@ -1,0 +1,186 @@
+{
+  "ts_kst": "2026-08-03 22:39:02 KST",
+  "gate0": {
+    "ladder_freeze_sha256": "b885585aefbabb32f432b2e60141f6b12ac8bdf971066a9434021762e6ef0868",
+    "ladder_freeze_sha16": "b885585aefbabb32",
+    "ladder_freeze_match": true,
+    "sap_manifest_sha256": "756d485feb4715e90fdaaaab143bf4f9e40f1755cd8a3cc2f0f80f8be89aace2",
+    "sap_manifest_sha16": "756d485feb4715e9",
+    "sap_manifest_match": true,
+    "sap_version": "1.1",
+    "sap_all_validation_pass": true,
+    "sap_modules_match": {
+      "__init__.py": true,
+      "metrics.py": true,
+      "redaction.py": true,
+      "consensus.py": true,
+      "bootstrap.py": true,
+      "signflip.py": true,
+      "decision.py": true,
+      "null_generator.py": true,
+      "unseen_target.py": true,
+      "synthetic.py": true,
+      "freeze.py": true
+    },
+    "sap_n_modules_verified": 11,
+    "sap_integrity_confirmatory_untouched": true,
+    "primary_B_m1b_dim": 10,
+    "A0_primary_dim": 10,
+    "A1_all_blocks_train_only_fit": true,
+    "A1_bseq_pca_fit_rows": 671,
+    "A5_target_count_mismatch": 0,
+    "gate0_pass": true
+  },
+  "inputs": {
+    "splits": {
+      "rep1_seed201": {
+        "folds_json_sha256": "3c1a5d68bfcc6ddfa1de17990194c5beb3c4fe365ee0a123d04c4a34bed871b2",
+        "fold_membership_sha256": "7047606f76562ba54b1dadef0518cb8e18ed22dad5b588d22b298bcb892284ad",
+        "n_rows": 1092,
+        "n_scaffold_groups": 732,
+        "n_scaffold_groups_split_manifest": 732,
+        "n_rows_empty_scaffold": 77,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep2_seed202": {
+        "folds_json_sha256": "786feeca045f603685e190a252636f3815695d2c9e61812c8db1daf063abccfa",
+        "fold_membership_sha256": "27f2e01dcb392be4873dc2820fdbb9bb8d0f5c8c85139878f523de6a74056b33",
+        "n_rows": 1092,
+        "n_scaffold_groups": 732,
+        "n_scaffold_groups_split_manifest": 732,
+        "n_rows_empty_scaffold": 77,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep3_seed203": {
+        "folds_json_sha256": "9db08cf96298b47e182e286fa4ef4b94f74605c6f31f0f9f841bc723c638b4e4",
+        "fold_membership_sha256": "45762346d825a9f3a630ea34a423c10b49039275f5d4ef28a264e6ae2aa0ad23",
+        "n_rows": 1092,
+        "n_scaffold_groups": 732,
+        "n_scaffold_groups_split_manifest": 732,
+        "n_rows_empty_scaffold": 77,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      }
+    },
+    "sources": {
+      "master_X.parquet": {
+        "path": "data/processed/master_X.parquet",
+        "sha256": "788c8a64d19e8c3cc030476e7b2eb7f207246e3af6e73304d97f2fc9aa2ae6e6"
+      },
+      "master_Y.parquet": {
+        "path": "data/processed/master_Y.parquet",
+        "sha256": "bd23584342de6482e50f218bd409740acc2a00eeac86ee95bd89952bc3d18018"
+      },
+      "B_seq_emb": {
+        "path": "data/processed/drug_target_emb_meanpool.npy",
+        "sha256": "052a901f7c2bb91f09b2c4cff4f812a5b3ce65f249f0aaacce759a3d926ea50f"
+      },
+      "B_seq_mask": {
+        "path": "data/processed/drug_target_mask_meanpool.npy",
+        "sha256": "577acfffa7d8df1e16b7e38e9af7a2951cc3e258f355042ede5a353e95b18366"
+      },
+      "B1_ntargets": {
+        "path": "data/processed/drug_n_targets_meanpool.npy",
+        "sha256": "52f8fc8065d43406f9423224a0abe71dedcf928b294c5c3c97a1ff04e1b8b58a"
+      },
+      "B_pid_src": {
+        "path": "data/processed/target_mapping/06_targets_human.csv",
+        "sha256": "2784c1bd0fb8df3b079d5eda460d280d921bb48260e6d11d48f4f8009988bdd4"
+      },
+      "B_m1b_src": {
+        "path": "data/processed/target_mapping/08_m1b_covariates.csv",
+        "sha256": "c302399f32c71083a8947971fdb0826f91234be93dd6ee7483b82fd633597256"
+      },
+      "B_fam_src": {
+        "path": "data/processed/target_mapping/10_target_family_biological.csv",
+        "sha256": "6c8da361a1f689b2f2af9e01fdbfcc78d5f1301220355571cfc0491fe152ea88"
+      }
+    }
+  },
+  "consistency_checks": {
+    "n_drugs": 1092,
+    "n_pt": 370,
+    "reps": {
+      "rep1": {
+        "n_scaffold_groups": 732,
+        "scaffold_fold_cross": 0,
+        "n_pt_train_positive_lt1": 0,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep2": {
+        "n_scaffold_groups": 732,
+        "scaffold_fold_cross": 0,
+        "n_pt_train_positive_lt1": 0,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      },
+      "rep3": {
+        "n_scaffold_groups": 732,
+        "scaffold_fold_cross": 0,
+        "n_pt_train_positive_lt1": 0,
+        "fold_sizes": [
+          218,
+          218,
+          219,
+          218,
+          219
+        ]
+      }
+    }
+  },
+  "sealed_guard_n_files": 30,
+  "sealed_guard_unchanged": true,
+  "equivalence": {
+    "model": "M2b",
+    "repeat": 1,
+    "fold": 0,
+    "n_test_rows": 218,
+    "n_pt": 370,
+    "dim": 2124,
+    "dtype": "float64",
+    "blocks_fit": [
+      "B0",
+      "B1",
+      "B_seq",
+      "B_m1b"
+    ],
+    "leak_rows": {
+      "B0": 0,
+      "B1": 0,
+      "B_seq": 0,
+      "B_m1b": 0
+    },
+    "byte_identical": true,
+    "ref_npz_sha256": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260",
+    "wall_s": 95.26814179102075,
+    "note": "기존 sealed npz 는 5 fold 전체 OOF 를 담으므로 파일 단위 비교가 불가능하다. 따라서 fold 0 의 test 행 슬라이스를 **원시 바이트**로 비교했다 (dtype·shape·tobytes 3중 일치). 재현본은 임시 경로에만 기록하고 기존 sealed 는 읽기만 했다(machine_read)."
+  }
+}

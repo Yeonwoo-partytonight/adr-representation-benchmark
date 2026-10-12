@@ -1,0 +1,105 @@
+{
+  "_doc": "GIN inner-validation 설계 사전 확정. docs/66 §2·§3. gin_seed_freeze.json·ladder_freeze.json 무수정(별도 동결).",
+  "frozen_at_kst": "2026-08-05 19:04 KST",
+  "supersedes_nothing": true,
+  "resolves": "gin_seed_freeze.json still_unspecified[0] (inner-validation design)",
+  "preconditions": {
+    "gin_training_runs_before_freeze": 0,
+    "sealed_confirmatory_results_viewed": false,
+    "basis": "docs/66_gin_inner_validation_design.md",
+    "gin_seed_freeze_sha256": "10828447c6d33118328ee97dc03279ab06e69d7ed8f9338662bfa740e42542f7"
+  },
+  "already_frozen_not_newly_chosen": {
+    "max_epoch": 200,
+    "patience": 30,
+    "min_epoch": null,
+    "checkpoint_update_rule": "strict greater-than on validation macro AP (train_ladder.py:237)",
+    "tie_break": "earliest epoch wins, as an automatic consequence of the strict inequality; no new rule introduced",
+    "best_state_restore": "load best_state before predicting the outer test fold",
+    "monitor": "validation macro AP over PTs with at least one in-sample positive; identical in definition to sap.metrics.macro_ap(eligible_pt=None), since the eligible set (global positives >= 10) is all 370 columns",
+    "source": "v3_Multimodal/src/train_ladder.py:61-67,236-248 and v2_GNN/src/train.py:89-93"
+  },
+  "inner_split": {
+    "unit_of_split": "Bemis-Murcko scaffold group; the empty-string scaffold (ring-free or unparseable) counts as one legitimate group, identically to the registered outer split",
+    "valid_fraction": "1/9 of the outer-train rows",
+    "fraction_rationale": "Inherited from the development split 873/109/110, whose valid share of the non-test pool is 109/982 = 0.11100, matching 1/9 = 0.11111 to three decimals. Not a newly invented quantity.",
+    "inner_seed_formula": "inner_seed = 1000 * split_seed + zero_based_fold_index",
+    "inner_seed_values": {
+      "201": [
+        201000,
+        201001,
+        201002,
+        201003,
+        201004
+      ],
+      "202": [
+        202000,
+        202001,
+        202002,
+        202003,
+        202004
+      ],
+      "203": [
+        203000,
+        203001,
+        203002,
+        203003,
+        203004
+      ]
+    },
+    "algorithm": "Reuse of the registered outer-split algorithm (confirmatory_oof_rep1.assign_folds) generalized to two unequal buckets: (1) pre-sort groups by (-group_size, str(first row index)), where the row index is the position in the frozen master_X/master_Y ascending-cid order and the outer-train subset is NOT re-indexed; (2) random.Random(inner_seed).shuffle; (3) cuts = [n_outer_train/9, n_outer_train], assign each group to the first bucket whose running total still fits, else to the last bucket; bucket 0 = inner-valid, bucket 1 = inner-train.",
+    "no_new_algorithm": true,
+    "shared_across": "one inner split per (split_seed, fold_index); shared by all seven GIN ladder models and all five training seeds",
+    "independent_of_training_seed": true,
+    "expected_sizes": {
+      "inner_valid": 97,
+      "inner_train": [
+        776,
+        777
+      ],
+      "all_15_units_identical_valid_size": true
+    },
+    "asserts": [
+      "scaffold groups disjoint between buckets",
+      "inner_train + inner_valid == outer_train",
+      "zero eligible PTs with no positives in inner-train (registration section 6 rare-PT constraint)"
+    ]
+  },
+  "feature_block_fit_population": {
+    "population": "the FULL outer-train fold, inner-valid rows included — identical to the RF confirmatory harness",
+    "rationale": "Registration section 5 permits fitting scalers, PCA and aggregation statistics on the fold's train/valid; confirmatory_oof_rep1.py:499-509 fits RF blocks on the entire outer-train. Using the same population keeps the input representation identical across families for the same rung.",
+    "outer_test_leakage": "none"
+  },
+  "rf_asymmetry": {
+    "fact": "RF trains on the full outer-train (873-874 drugs); GIN trains on inner-train only (776-777 drugs), i.e. 11.1% fewer rows, because the frozen A_wd recipe requires early stopping on a held-out validation set while RF is deterministic.",
+    "decision": "accept and disclose; no refit-on-full-outer-train equalization",
+    "rejected_alternative": "select the epoch on inner-valid then refit on the full outer-train — rejected because it roughly doubles GIN training (357 to 714 runs), adds the untested assumption that an epoch chosen at one training-set size transfers to another, and removes the early-stopping safeguard during the refit",
+    "limitation_to_report": "RQ-int compares Delta_RF with Delta_GIN while the two families train on sample sizes differing by 11.1%. If the smaller training set suppresses the GIN model's ability to exploit sequence features, Delta_GIN may shrink and be misread as a family difference. The asymmetry is structural, and was fixed and disclosed before any GIN result was seen."
+  },
+  "known_quirk": {
+    "unit": "(202, f2)",
+    "observation": "its inner-valid holds 97 drugs in only 15 scaffold groups, 77 of which come from the empty-string pseudo-group, so its early-stopping monitor rests on 15 clusters dominated by one",
+    "handling": "rule left unchanged; disclosed as a limitation. Excluding large groups from the validation bucket would be a post-hoc adjustment and would contradict the registered treatment of that pseudo-group."
+  },
+  "corrections_vs_prompt_json": [
+    {
+      "field": "inner_split.algorithm",
+      "was": "pre-sort groups by (-group_size, str(first cid))",
+      "now": "pre-sort groups by (-group_size, str(first row index)), where the row index is the position in the frozen master_X/master_Y ascending-cid order and the outer-train subset is NOT re-indexed",
+      "why": "assign_folds 의 groups 는 scaffold → **행 인덱스** 리스트이므로 groups[g][0] 은 cid 가 아니라 행 인덱스다. 'first cid' 로 구현하면 셔플 초기순서가 달라져 **다른 inner split** 이 나오고 docs/66 §4 표를 재현하지 못한다(15 unit 중 1 unit 만 우연 일치). 'first row index' 해석은 동결 outer split 을 3반복 전건 0행 불일치로 재현해 검증했다. 설계값 변경이 아니라 재현 불가 문구의 교정이다.",
+      "verified_by": "verify_outer_split_reproduction() + reproduce_and_check()"
+    },
+    {
+      "field": "already_frozen_not_newly_chosen.source",
+      "was": "v3_Multimodal/src/train_ladder.py:61-63,236-248",
+      "now": "v3_Multimodal/src/train_ladder.py:61-67,236-248",
+      "why": "A_wd 레시피 상수 줄은 실측 61(SEEDS)~67(EPOCHS…)이다. 61-63 은 EPOCHS/PATIENCE 줄(67)을 포함하지 않는다. 236-248(monitor·갱신조건·best state 복원)은 실측 일치.",
+      "verified_by": "verify_recipe_constants()"
+    }
+  ],
+  "still_unspecified": [
+    "U1-U7 (RQ-int) pending external statistical review",
+    "SAP 1.2 re-freeze"
+  ],
+  "gin_start_still_blocked": true
+}

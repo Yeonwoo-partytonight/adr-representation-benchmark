@@ -1,0 +1,145 @@
+{
+  "seed": 42,
+  "n_total": 1092,
+  "A1": {
+    "by_type_rows": {
+      "SINGLE PROTEIN": 15584,
+      "PROTEIN COMPLEX": 915,
+      "PROTEIN FAMILY": 2174,
+      "PROTEIN COMPLEX GROUP": 1271,
+      "(빈값)": 63,
+      "PROTEIN-PROTEIN INTERACTION": 250,
+      "PROTEIN NUCLEIC-ACID COMPLEX": 663,
+      "NUCLEIC-ACID": 30,
+      "SELECTIVITY GROUP": 32,
+      "CHIMERIC PROTEIN": 86
+    },
+    "primary_uni": 1191,
+    "all_uni": 1948,
+    "primary_drugs": 847,
+    "all_drugs": 868,
+    "primary_rows": 12613,
+    "all_rows": 15584
+  },
+  "A2": {
+    "binding_pairs": 12514,
+    "binding_drugs": 831,
+    "affmiss_pairs": 99,
+    "affmiss_drugs": 73,
+    "imputed_pairs": 54,
+    "imputed_drugs": 37,
+    "sources_in_03": [
+      "chembl"
+    ]
+  },
+  "A3": {
+    "value_type_counts": {
+      "AC50": 4700,
+      "Ki": 3724,
+      "Kd": 3056,
+      "IC50": 5227,
+      "EC50": 696,
+      "Potency": 2609,
+      "ED50": 15
+    },
+    "gap": "target confidence·action_type(agonist/antagonist/inhibitor)는 mechanism/action endpoint 미수집으로 현재 캐시에 없음 → 재다운로드 없이 도출 불가."
+  },
+  "A4": {
+    "human": {
+      "n_mapped": 847,
+      "median": 7,
+      "q1": 3,
+      "q3": 16,
+      "min": 1,
+      "max": 331,
+      "bin_0": 245,
+      "bin_1": 92,
+      "bin_2_5": 249,
+      "bin_6plus": 506
+    },
+    "all": {
+      "n_mapped": 868,
+      "median": 10,
+      "q1": 4,
+      "q3": 21,
+      "min": 1,
+      "max": 340,
+      "bin_0": 224,
+      "bin_1": 68,
+      "bin_2_5": 218,
+      "bin_6plus": 582
+    }
+  },
+  "A5": {
+    "unmatched": 149,
+    "no_sp_all": 75,
+    "no_sp_hum": 96,
+    "no_seq_hum": 0,
+    "no_emb_hum": 0,
+    "no_aff_hum": 16,
+    "matched": 943
+  },
+  "A6": {
+    "jaccard_human": 0.4473684210526316,
+    "jaccard_all": 0.33986928104575165,
+    "n_train_targets_human": 1099,
+    "n_test_targets_human": 551,
+    "n_test_in_train_human": 510,
+    "n_test_only_human": 41,
+    "n_train_targets_all": 1773,
+    "n_test_targets_all": 687,
+    "n_test_in_train_all": 624,
+    "n_test_only_all": 63,
+    "test_only_maxid_median": 0.3622641509433962,
+    "test_only_maxid_max": 0.9287749287749287,
+    "test_only_ge90": 2,
+    "test_only_lt40": 22,
+    "n_alignments": 45018
+  },
+  "A7": {
+    "n_sample": 88,
+    "seed": 42
+  },
+  "B_human": {
+    "mask_sum": 847,
+    "n_zero_no_emb": 0,
+    "cov_mean_mapped": 1.0,
+    "n_targets_used_median": 7,
+    "n_targets_used_max": 331,
+    "shape": [
+      1092,
+      1024
+    ],
+    "dtype": "float32"
+  },
+  "B_all": {
+    "mask_sum": 866,
+    "n_zero_no_emb": 2,
+    "cov_mean_mapped": 0.9931526184082031,
+    "n_targets_used_median": 9,
+    "n_targets_used_max": 340,
+    "shape": [
+      1092,
+      1024
+    ],
+    "dtype": "float32"
+  },
+  "diff": {
+    "vs_topk_weighted": {
+      "n_compared_rows": 847,
+      "cos_mean": 0.9897235776908001,
+      "cos_median": 0.9947510361671448,
+      "cos_min": 0.8573008179664612,
+      "frac_cos_ge_0999": 0.31759149940968123,
+      "max_abs_elem_diff": 1.7610247135162354
+    },
+    "vs_existing_mean": {
+      "n_compared_rows": 847,
+      "cos_mean": 1.0000000105557223,
+      "cos_median": 1.0,
+      "cos_min": 0.9999998211860657,
+      "frac_cos_ge_0999": 1.0,
+      "max_abs_elem_diff": 1.430511474609375e-06
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "target": "v3_Multimodal/config/gin_inner_valid_freeze.json",
+  "target_sha256": "038599c3e157602242ee94e60998f7d8a56c0a322ef5a8b0bc6359b3399921ea",
+  "status": "frozen",
+  "delegated_by_advisor": false,
+  "basis": "advisor instruction of 2026-08-03 listing inner-validation among the items to be fixed and recorded BEFORE starting GIN",
+  "reversibility": "GIN cannot start until the SAP 1.2 re-freeze approval, so this decision remains reversible until then",
+  "advisor_notified_in": "docs/70 section 1-1",
+  "item_requiring_advisor_confirmation": "the narrowed RQ-int interpretation, to be confirmed with the SAP 1.2 re-freeze",
+  "as_of_kst": "2026-08-06 09:33 KST"
+}

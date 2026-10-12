@@ -1,0 +1,21 @@
+{
+  "ts_kst": "2026-08-07 16:56:39 KST",
+  "python": "3.14.4",
+  "numpy": "2.5.0",
+  "scipy": "1.18.0",
+  "sklearn": "1.9.0",
+  "pandas": "3.0.3",
+  "machine": "arm64",
+  "os": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "ladder_freeze_sha16": "b885585aefbabb32",
+  "sap_manifest_sha16": "756d485feb4715e9",
+  "inputs_sha256": {
+    "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+    "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+    "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-ID.npz": "9598da3498b1d3cecb1119950e58e43a5f9a7be9981740f0f315de85f56b1f0c",
+    "experiments/runs/v3_stratification/strata_assignment.csv": "8247f4318150414bbdbcd05d577287e771a539447cf57e78e1b1df5dd319250c",
+    "v3_Multimodal/config/a5_mechanism_freeze.json": "3419b2f793d74051df29ce3285a3c50d4d7a07f2fd15ec0b6d6fb645c4118dbd",
+    "experiments/provenance/a5_requery_manifest.json": "66023c1d4403bbb28421fe077b5d1277bdbdfaf907273f03fd2cf74db884c1f0",
+    "data/processed/target_mapping/a5_mechanism_targets.csv": "62fb85d013a15d15b079463906a6e3d3b86c88ae701306369039c4d211cee1a2"
+  }
+}

@@ -1,0 +1,1093 @@
+[
+  {
+    "ts_kst": "2026-07-27 10:55:31 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "§13-3",
+    "repeat": 1,
+    "seed": 201,
+    "status": "first_look_opened",
+    "delta_sign": null,
+    "confirmatory": "Y",
+    "note": "게이트B — OOF 예측을 읽기 직전 기록(docs/36 §6). 부호는 완료 후 별도 append."
+  },
+  {
+    "ts_kst": "2026-07-27 10:55:31 KST",
+    "ts_completed_kst": "2026-07-27 11:17:57 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "§13-3",
+    "repeat": 1,
+    "seed": 201,
+    "status": "completed",
+    "delta_sign": "negative",
+    "sealed_path": "experiments/runs/v3_confirm_rep1_seed201/_sealed",
+    "sealed_sha256": {
+      "metrics_full.json": "8722a4e1c52d2eae5cbbebf6b5a5ff5cb145dd591ea5648731d7c481ed15c1b8",
+      "oof_M1b.npz": "b2a61ba846eead5f66bc89bc22275ea3fe35fee950930fbdc38f07ad7e4a3f1d",
+      "oof_M2b.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260"
+    },
+    "runner_asserts_passed": {
+      "rf_seed42": true,
+      "pca_foldtrain": true,
+      "redaction_signonly": true,
+      "leak_rows_zero": true
+    },
+    "confirmatory": "Y",
+    "note": "원시 macro AP·Δ크기·PT별·fold별은 sealed. 공개=부호 1개(metrics_public.json)."
+  },
+  {
+    "ts_kst": "2026-07-27 21:29:01 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "§13-5",
+    "repeat": 2,
+    "seed": 202,
+    "status": "first_look_opened",
+    "delta_sign": null,
+    "confirmatory": "Y",
+    "note": "게이트B — OOF 예측을 읽기 직전 기록. 부호는 완료 후 별도 append."
+  },
+  {
+    "ts_kst": "2026-07-27 21:29:01 KST",
+    "ts_completed_kst": "2026-07-27 21:51:47 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "§13-5",
+    "repeat": 2,
+    "seed": 202,
+    "status": "completed",
+    "delta_sign": "negative",
+    "sealed_path": "experiments/runs/v3_confirm_rep2_seed202/_sealed",
+    "sealed_sha256": {
+      "metrics_full.json": "66be535755ca9f4a174a15b45fd2af34fb5f2283d0dab71acc579c6fc66a9621",
+      "oof_M1b.npz": "9155569ac2581613312c7608a4d9cfcfc7bfe25798b24003a0f6a9116a4fcb33",
+      "oof_M2b.npz": "05a51b16002b8c0fbfd68a9b5f1fa1d578b9b0b491e6944f098588d70fad0298"
+    },
+    "runner_asserts_passed": {
+      "rf_seed42": true,
+      "pca_foldtrain": true,
+      "redaction_signonly": true,
+      "leak_rows_zero": true
+    },
+    "confirmatory": "Y",
+    "note": "원시 macro AP·Δ크기·PT별·fold별은 sealed. 공개=부호 1개(metrics_public.json)."
+  },
+  {
+    "ts_kst": "2026-07-27 21:51:47 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "§13-5",
+    "repeat": 3,
+    "seed": 203,
+    "status": "first_look_opened",
+    "delta_sign": null,
+    "confirmatory": "Y",
+    "note": "게이트B — OOF 예측을 읽기 직전 기록. 부호는 완료 후 별도 append."
+  },
+  {
+    "ts_kst": "2026-07-27 21:51:47 KST",
+    "ts_completed_kst": "2026-07-27 22:14:39 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "§13-5",
+    "repeat": 3,
+    "seed": 203,
+    "status": "completed",
+    "delta_sign": "negative",
+    "sealed_path": "experiments/runs/v3_confirm_rep3_seed203/_sealed",
+    "sealed_sha256": {
+      "metrics_full.json": "b4d80cb9acceb8de6b05da1b0a247d0de94197ffebf24c9309d004d9b722c1cd",
+      "oof_M1b.npz": "0bb7a951246f85ab37b5d1536073a491c9857cd255593fdef0206c3f8b8b22c4",
+      "oof_M2b.npz": "c850e55c64309c5cae763f6388459206270a106efc70d7a11322b14c0c3091c8"
+    },
+    "runner_asserts_passed": {
+      "rf_seed42": true,
+      "pca_foldtrain": true,
+      "redaction_signonly": true,
+      "leak_rows_zero": true
+    },
+    "confirmatory": "Y",
+    "note": "원시 macro AP·Δ크기·PT별·fold별은 sealed. 공개=부호 1개(metrics_public.json)."
+  },
+  {
+    "ts_kst": "2026-07-27 22:14:40 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "§13-5 consensus",
+    "repeat": "1+2+3",
+    "seed": [
+      201,
+      202,
+      203
+    ],
+    "status": "completed",
+    "delta_sign": "negative",
+    "sealed_path": "experiments/runs/v3_consensus_rep123/_sealed",
+    "sealed_sha256": {
+      "consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+      "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+      "metrics_full.json": "6a861640a05940533ad75b97626929c321689929c9609ec3c08972ac87b8dc8d"
+    },
+    "confirmatory": "Y",
+    "note": "방법A 산술평균. 원시 AP·Δ크기·반복별 AP는 sealed. 공개=부호 1개."
+  },
+  {
+    "ts_kst": "2026-08-02 20:43 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "§13-6",
+    "block": "H — 연속 유사도 층화",
+    "status": "completed",
+    "delta_sign": null,
+    "delta_sign_note": "층별 Δ 부호도 공개하지 않는다 — 층별 산출은 전량 sealed 이며 개봉은 성공판정 단계에서 Holm/BH 와 일괄.",
+    "sealed_path": "experiments/runs/v3_stratification/_sealed/stratification_result.json",
+    "sealed_sha256": {
+      "stratification_result.json": "cd2969c73ed6bae720df5ffacae8dbba7d6ce8c6e7e6f10b95fa0f91937196ef"
+    },
+    "inputs_machine_read": {
+      "consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+      "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf"
+    },
+    "runner_asserts_passed": {
+      "g0_freeze": true,
+      "sealed_guard_unchanged": true,
+      "h4_all_pass": true,
+      "seed_isolation_zero": true,
+      "no_target_excluded": true,
+      "no_decision_functions_called": true,
+      "multiplicity_not_applied": true,
+      "open_sealed_zero": true,
+      "public_files_free_of_sealed_values": true
+    },
+    "design_facts_public": {
+      "n_units": 13,
+      "n_formal": 9,
+      "n_descriptive": 4,
+      "n_ci_not_estimable": 1,
+      "B": 10000,
+      "seed_bootstrap": 6001,
+      "seed_signflip": 6002,
+      "total_wall_hours": 8.025957767407503,
+      "unstable_stratum_counts": {
+        "drug_class": 71,
+        "seq_stratum": 10,
+        "struct_bin": 204
+      },
+      "excluded_no_target_drugs": 245,
+      "identity_aligned_pairs": 201289,
+      "identity_total_pairs": 708645
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — consensus OOF 를 기계 판독해 층별 추정을 생성했다. open_sealed(사람 열람) 0건 · 층별 macro AP·Δ·CI·sign-flip p 의 공개 노출 0 · 성공판정·다중성 보정 미수행."
+  },
+  {
+    "ts_kst": "2026-08-04 01:01:20 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "블록 I (§13-3/13-5 확장)",
+    "block": "I — 확증 RF 사다리 잔여 6모델 OOF",
+    "status": "completed",
+    "models": [
+      "M0",
+      "M1",
+      "M2",
+      "P-ID",
+      "P-FAM",
+      "C-CAP"
+    ],
+    "repeats": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      201,
+      202,
+      203
+    ],
+    "delta_sign": null,
+    "delta_sign_note": "Δ·부호를 산출하지도 공개하지도 않았다(docs/48 I-0-3). ②③⑤⑥ 부호는 등록에 없는 추가 노출이므로 전량 봉인.",
+    "sealed_sha256": {
+      "rep1/oof_M0.npz": "9d6cdaac86c7f9fc68509c00e43a51648c739b4c4bd8a11e45711aeeccc8052d",
+      "rep1/oof_M1.npz": "27a273ca581ddd20a2ecd0583c71efc107e77b1d31145ee17eeb6a5c5c249c5c",
+      "rep1/oof_M2.npz": "5298187b4fa3765ce3fbd090d7117c6b4bcfdf155c2e2b8183a5e53b8984110d",
+      "rep1/oof_P-ID.npz": "24fc4de5bde8130eead1bd1021cf3363f34d82fa14a43f4915cb6707a9e091d5",
+      "rep1/oof_P-FAM.npz": "97c80beda28c71666ff6b24e680787f4b1c8fe1bd725398090d44d6a45ce590c",
+      "rep1/oof_C-CAP.npz": "e89941191c24cfb388759b8ccbde54f550ed332beaf9e7e0e599c7df05503ab9",
+      "rep1/metrics_full.json": "b85b0d35fdc186979184f33ff966669b52a51bf7f8d8dd1d7c5195a124b28534",
+      "rep2/oof_M0.npz": "640ac1a52e5d8d805cdada74171bdef85aacdf23f1bac3b795dca9d7071a20c2",
+      "rep2/oof_M1.npz": "9c19b40928cb82c4b1c29a883f631b0700e5b846d232afecc15d34c81fce55ac",
+      "rep2/oof_M2.npz": "f11b8c24bbc156454622633592e92b66f631041b50737f0a3a569a5621969256",
+      "rep2/oof_P-ID.npz": "2da2adad9b9c4e2badfc8e16e2b5c9114180bbdca13f528e134d969fa0d90839",
+      "rep2/oof_P-FAM.npz": "18528b38ba2f733ab2e3857e5537dbf1403e626a09e56cd2c13f87b844d9ff5a",
+      "rep2/oof_C-CAP.npz": "2585f17dfb7fcafa72060a09897c350d0326a0fdb182dd33a35793547fc2777e",
+      "rep2/metrics_full.json": "7f9f6572a5f86d3794c9ce46d2a79be2c697a007f33b27116b884ccaa155e89e",
+      "rep3/oof_M0.npz": "10e5b68f4fe1c04998a79ab0056ffb83dd9932641ac150636b6445963d92f08d",
+      "rep3/oof_M1.npz": "22618a1580f27ea8a8eb28fd3f6bbac9338e45a3f954fbdcb447f76d91259aa2",
+      "rep3/oof_M2.npz": "01fce973cd1d9b33b123cc960c8031209b79cc62d2d44d0c6bcb650408a9258e",
+      "rep3/oof_P-ID.npz": "af053bb4392723ee73b7e3901083bd8408b26b6df980ced9abcd19e4426a2766",
+      "rep3/oof_P-FAM.npz": "e6188e149a1960abd132328fa645505d7fa773ff3a1ea3e58f8e6f7a72fabc7e",
+      "rep3/oof_C-CAP.npz": "9d6670e0bd2a010ec73d902ded5da6d8caa352953a8424f55a1affe68ee97d2e",
+      "rep3/metrics_full.json": "7851ddd847fd3d580fc98df2d829dffb4ae87af6ed411563b7bf15ccc7b3d31c",
+      "consensus_M0.npz": "257de8d10e3a22d35e2de7a6245870fc4ca3e5309c92a8a74502aa8228d0bf1e",
+      "consensus_M1.npz": "6ebd5dd9a8023a8e165abc2d1c0ddd1337ce9ac147dcd96b547ec5b2f4cc69b4",
+      "consensus_M2.npz": "286ae904dbba9fc578bc0faa51af9b1e2e30a98e7f5667e8472e548614618c56",
+      "consensus_P-ID.npz": "9598da3498b1d3cecb1119950e58e43a5f9a7be9981740f0f315de85f56b1f0c",
+      "consensus_P-FAM.npz": "904bbeb3a8a7acca8f38ed24833515c8d92921afa88576a73038d33f335d8127",
+      "consensus_C-CAP.npz": "33e4d34c7e483e24673d01d7e6bebe992d366f1f6b4d2234dd3aacba9f2b6eb0",
+      "metrics_full.json": "48b39fa5524f372ff91518148f7bc5120f99b362caf7508528520ba3b87063dc"
+    },
+    "runner_asserts_passed": {
+      "g0_freeze": true,
+      "byte_identity_M2b_fold0": true,
+      "leak_rows_zero_all_models": true,
+      "oof_shape_1092x370_no_nan": true,
+      "rf_seed42_all_folds": true,
+      "sealed_guard_unchanged": true,
+      "open_sealed_zero": true,
+      "emit_sign_not_called": true,
+      "decision_functions_not_called": true
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — 잔여 6모델 OOF 를 생성하고 기존 M1b/M2b sealed 를 machine_read 로 대조했다. open_sealed 0건 · Δ·AP·CI·p·부호 공개 0."
+  },
+  {
+    "ts_kst": "2026-08-05 08:36 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "§13-6 커버리지 C2",
+    "block": "L — Δ(M2b−P-ID) 층화",
+    "status": "completed",
+    "delta_sign": null,
+    "delta_sign_note": "Δ 의 부호도 공개하지 않는다 — `M2b−P-ID` 는 Holm family ② 이므로 부호 노출도 조각 개봉이다. 산출은 전량 sealed 이며 개봉은 성공판정 단계에서 Holm/BH 와 일괄.",
+    "sealed_path": "experiments/runs/v3_stratification_pid/_sealed/stratification_pid_result.json",
+    "sealed_sha256": {
+      "stratification_pid_result.json": "d38151f60b141ea291d0f78ff8171675534fe80e8761c7c02e75f4f069da6706"
+    },
+    "inputs_machine_read": {
+      "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+      "consensus_P-ID.npz": "9598da3498b1d3cecb1119950e58e43a5f9a7be9981740f0f315de85f56b1f0c"
+    },
+    "runner_asserts_passed": {
+      "g0_freeze": true,
+      "sealed_guard_unchanged": true,
+      "row_order_identical_across_runs": true,
+      "shared_frozen_loader_identity": true,
+      "same_repeats_and_folds": true,
+      "consensus_no_nan_in_range": true,
+      "strata_accounting_847_1092": true,
+      "n_units_13_matches_block_H": true,
+      "sample_counts_match_block_K": true,
+      "sign_direction_verified_on_synthetic_only": true,
+      "identical_slot_mapping_to_block_H": true,
+      "seed_isolation_zero": true,
+      "no_decision_functions_called": true,
+      "multiplicity_not_applied": true,
+      "emit_sign_not_called": true,
+      "open_sealed_zero": true,
+      "public_files_free_of_sealed_values": true
+    },
+    "design_facts_public": {
+      "contrast_label": "M2b vs P-ID (HOLM_FAMILY ② `M2b-P-ID`)",
+      "n_units": 13,
+      "n_formal": 9,
+      "n_descriptive": 4,
+      "n_ci_not_estimable": 1,
+      "B": 10000,
+      "seed_bootstrap": 6001,
+      "seed_signflip": 6002,
+      "seed_reused_from_block_H": true,
+      "total_wall_hours": 7.345604331770535,
+      "estimated_wall_hours": 7.636919264735105,
+      "unstable_stratum_counts": {
+        "drug_class": 71,
+        "seq_stratum": 10,
+        "struct_bin": 204
+      },
+      "excluded_no_target_drugs": 245,
+      "denominator_estimated": 847,
+      "models_trained": 0,
+      "new_oof_generated": 0
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — 기존 consensus OOF 를 기계 판독해 층별 추정을 생성했다. 새 OOF·모델학습 0. open_sealed(사람 열람) 0건 · 층별 macro AP·Δ·CI·sign-flip p 및 Δ 부호의 공개 노출 0 · 성공판정·다중성 보정 미수행."
+  },
+  {
+    "ts_kst": "2026-08-06 17:54:39 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "블록 O (Holm ⑥ arm 산출)",
+    "block": "O — tuned-RF baseline 확증 OOF",
+    "status": "completed",
+    "models": [
+      "RF_tuned"
+    ],
+    "repeats": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      201,
+      202,
+      203
+    ],
+    "delta_sign": null,
+    "delta_sign_note": "Δ·부호를 산출하지도 공개하지도 않았다(docs/60 §0). ⑥ 은 Holm family 이므로 부호 노출도 조각 개봉이다.",
+    "sealed_sha256": {
+      "rep1/oof_RF_tuned.npz": "f2b8c41f65af8b04d6d04bfb09c406c2a8855bdfd7a1622fa84ff8e5ebd7dc1d",
+      "rep1/metrics_full.json": "b8957352de9ad07be1cbcac271596ce6b28c7f5ffaa4b4d9d86aca25403b09c7",
+      "rep2/oof_RF_tuned.npz": "c584196347e77019e71acf5da57a5fc6d22b5df8a8b4935602cf22c79b2b1b92",
+      "rep2/metrics_full.json": "3a60c5ed9cebc4b5a573ca4769ea635f7a29af8675cd8535fdb574cc308bdbab",
+      "rep3/oof_RF_tuned.npz": "394ddf94a2ce44cccd8fdff72bd96f9d9a2755dac7cb2c3eca8aa35a3a5a3148",
+      "rep3/metrics_full.json": "45698102b0803c5dd4e737bbb85fc9886d6f393e15e06742a3d549d5a2ea3ec0",
+      "consensus_RF_tuned.npz": "41080e1be7072b08c46027dd4590cb1d9112b904a4a3645b1812a5f26ad5d081",
+      "metrics_full.json": "771c25d2850efa90fccc1f922945c9f5878310b94fe6e2c6210da5deedab0551"
+    },
+    "runner_asserts_passed": {
+      "g0_freeze": true,
+      "byte_identity_M0_rep1_fold0": true,
+      "b0_r3_not_identical_to_b0_r2": true,
+      "b0_r3_fit_rows_empty": true,
+      "leak_rows_zero": true,
+      "oof_shape_1092x370_no_nan": true,
+      "rf_seed42_all_folds": true,
+      "sealed_guard_unchanged": true,
+      "open_sealed_zero": true,
+      "emit_sign_not_called": true,
+      "decision_functions_not_called": true
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — RF_tuned OOF 를 생성하고 기존 M0 sealed 를 machine_read 로 대조했다. open_sealed 0건 · Δ·AP·CI·p·부호 공개 0."
+  },
+  {
+    "ts_kst": "2026-08-06 23:33:56 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "블록 P (Holm ⑦ late-fusion arm 산출)",
+    "block": "P — RF late-fusion 상보성(RQ7) arm 확증 OOF",
+    "status": "completed",
+    "arms": [
+      "oof_seq",
+      "oof_ens",
+      "oof_ens_half",
+      "oof_seq_sens",
+      "oof_ens_sens"
+    ],
+    "repeats": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      201,
+      202,
+      203
+    ],
+    "delta_sign": null,
+    "delta_sign_note": "Δ·부호를 산출하지도 공개하지도 않았다(docs/61 §1). ⑦ 은 Holm family 이므로 부호 노출도 조각 개봉이다. λ 값도 결과-의존 선택량이라 전량 봉인했다.",
+    "sealed_sha256": {
+      "rep1/oof_seq.npz": "cf88a0b14f1b957e5bdb79d92eeeb4534cef9c33fc249fd80fe76ceb61c61413",
+      "rep1/oof_ens.npz": "fc39f1cebea7b7309a061e65a8197903ed521ee1e16d4c9fddcdee0a3a9dcd07",
+      "rep1/oof_ens_half.npz": "9ad1a13275905241c674c039fa057811c9121c09f03b9e2a39d4fff177ab4bf1",
+      "rep1/oof_seq_sens.npz": "f9b34600df0c60ca5414b4d25884848edbbf9e0bd7d39256f451a87782e26e6d",
+      "rep1/oof_ens_sens.npz": "e5ac87e3c14443b164eab3a2337df67765d1f3dcdb5d0f44b11378f86f347360",
+      "rep1/lambda_selected.json": "55ae57ffda38c272c8f01245ea229ce040f3beb6e2c8b4dcd82c610ed654aa63",
+      "rep1/metrics_full.json": "f8158add8ddaefcf52adae9f89ff9f0a042cd572b6c71f0aaf23bf00c0911803",
+      "rep2/oof_seq.npz": "16dcd534752e710bca8c316ccb9b7ab41971591cabeff08f3f8a51102592ad4b",
+      "rep2/oof_ens.npz": "c3e1709fa36c17649766625c99a6722acb3e681fc10eccb7c932d44ddd1007e1",
+      "rep2/oof_ens_half.npz": "21f306001ed4d185dd549f810a9b25946f8e9ca8f181499bb9d9b96b804e7dc5",
+      "rep2/oof_seq_sens.npz": "6802771cc6276a8bb132dd21a8bdf3f3cf82d34e14895cb01943e8101b78f214",
+      "rep2/oof_ens_sens.npz": "3fc2587cc93b50dfc693d1a596b85c88b339f57c8c7554fa4c79405d4a820ae8",
+      "rep2/lambda_selected.json": "4e61e2ae64d5cecf5df85321808ff1b20d564126765bcc783373941326564c34",
+      "rep2/metrics_full.json": "b71258cff3f34a1eb4f4aaaf0ee12509c2bee68f18d36bda332fdad7dc67b9f2",
+      "rep3/oof_seq.npz": "d7d49962cb7c4ae959d7b7de4fd46684732b729af9734f2c076ff5109e73d8e2",
+      "rep3/oof_ens.npz": "3829ba88e851547de8c2ad5184bba71f02e3338377b0e833dae3cd066467b49c",
+      "rep3/oof_ens_half.npz": "f7aecd7b93f0b0015b5b6d084aebe929517ec5d01b34d4f6e59355900fcccbeb",
+      "rep3/oof_seq_sens.npz": "4c493fd969f88d7d2e9443ae7b254d5876de3fff1d7ddb16c9423f350f640eb3",
+      "rep3/oof_ens_sens.npz": "58ae036f20a785c2b12b6b8f95411ea089a48fcf7d5221437dc6abe7b3442042",
+      "rep3/lambda_selected.json": "0388ded8a82798e113e59cb0ecec8b63cd7fb49c6a5d5843af255bad54c3ae7f",
+      "rep3/metrics_full.json": "abf2e0cfa8263b37824970f25be75d4e9042906f1ce3ed7863e427c49660d4c4",
+      "consensus_seq.npz": "f5dcd1a5e458b5100e98e6ceae88d5841baab37406296f3f7b92757456f63818",
+      "consensus_ens.npz": "fa51440c9014b0fc945dba8c2fc144c8d070f0c83a47fd6e495194c3add0488c",
+      "consensus_ens_half.npz": "24ad49cfa92252b2dff134511b2b6af65f9964cdc38e514aeca25f95f8123c4a",
+      "consensus_seq_sens.npz": "6a6ad46f55582a84c48d31a8772a4535d5c642bbfb9f44a8cfc496c7f91e7e09",
+      "consensus_ens_sens.npz": "5ea65c20b8a7c74a2b79c2bb88e7dc4795245f7822ec2b8a792784da315b7adf",
+      "metrics_full.json": "03d744f82f14f5af49c52a5e645cc1493e1f000ef8a1937824c43cff7eb0969a"
+    },
+    "runner_asserts_passed": {
+      "g0_freeze": true,
+      "refit_byte_identity_every_unit": true,
+      "inner_split_reproduction_matches_frozen_check": true,
+      "inner_valid_97_all_units": true,
+      "scaffold_group_cross_zero": true,
+      "lambda_no_leak": true,
+      "lambda_grid_21_points": true,
+      "unmapped_245_bseq_exactly_zero": true,
+      "leak_rows_zero_all_arms": true,
+      "oof_shape_1092x370_no_nan": true,
+      "rf_seed42_all_fits": true,
+      "sealed_guard_unchanged": true,
+      "open_sealed_zero": true,
+      "emit_sign_not_called": true,
+      "decision_functions_not_called": true
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — late-fusion arm OOF 를 생성하고 기존 M0 sealed 를 machine_read 로 대조했다. open_sealed 0건 · Δ·AP·CI·p·부호·λ 공개 0."
+  },
+  {
+    "ts_kst": "2026-08-08 16:45 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "등록 §11 세 번째 축 (A3·A4·A5·A6)",
+    "block": "Z — unseen-target proportion 4변형 층화",
+    "status": "completed",
+    "delta_sign": null,
+    "delta_sign_note": "부호를 산출하지도 공개하지도 않는다 — 두 대비는 Holm family ①·② 이므로 부호 노출도 조각 개봉이다. 산출은 전량 sealed 이며 개봉은 성공판정 단계에서 Holm/BH 와 일괄.",
+    "sealed_path": "experiments/runs/v3_stratification_axes/_sealed/axes_result.json",
+    "sealed_sha256": {
+      "axes_result.json": "5c1aa8e24cd5ca9ca0c3a61049d22d01fb13a17fca7b3af3510f2bc01a3a009c"
+    },
+    "inputs_machine_read": {
+      "consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+      "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+      "consensus_P-ID.npz": "9598da3498b1d3cecb1119950e58e43a5f9a7be9981740f0f315de85f56b1f0c"
+    },
+    "runner_asserts_passed": {
+      "g0_freeze": true,
+      "sealed_guard_unchanged": true,
+      "freeze_before_first_delta": true,
+      "axes_accounting_847_1092": true,
+      "axes_estimation_sets_identical": true,
+      "a5_decomposition_sums_to_847": true,
+      "a5_case_C_isolated_as_not_estimable": true,
+      "pchembl_canonical_reproduces_frozen_coverage": true,
+      "a5_targets_canonicalized_like_block_H": true,
+      "constants_imported_not_redefined": true,
+      "no_new_seed_drawn": true,
+      "timing_measured_per_stratum": true,
+      "no_percentile_auto_substitution": true,
+      "no_decision_functions_called": true,
+      "multiplicity_not_applied": true,
+      "emit_sign_not_called": true,
+      "open_sealed_zero": true,
+      "public_files_free_of_sealed_values": true
+    },
+    "design_facts_public": {
+      "axes": [
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "contrast_labels": {
+        "C1": {
+          "arms": "M2b vs M1b",
+          "holm_family_id": "① M2b-M1b"
+        },
+        "C2": {
+          "arms": "M2b vs P-ID",
+          "holm_family_id": "② M2b-P-ID"
+        }
+      },
+      "n_units": 20,
+      "n_unit_runs": 40,
+      "n_formal": 28,
+      "n_descriptive": 12,
+      "n_ci_not_estimable": 0,
+      "stratum_sample_sizes": {
+        "A3": {
+          "{0}": 552,
+          "(0,0.5)": 184,
+          "[0.5,1)": 14,
+          "{1}": 18,
+          "unstable_stratum": 79
+        },
+        "A4": {
+          "{0}": 557,
+          "(0,0.5)": 172,
+          "[0.5,1)": 12,
+          "{1}": 12,
+          "no_evidence": 16,
+          "unstable_stratum": 78
+        },
+        "A5": {
+          "{0}": 264,
+          "{1}": 181,
+          "no_mechanism": 347,
+          "not_estimable": 24,
+          "unstable_stratum": 31
+        },
+        "A6": {
+          "{0}": 741,
+          "{1}": 48,
+          "no_evidence": 16,
+          "unstable_stratum": 42
+        }
+      },
+      "a5_decomposition_847": {
+        "A": 326,
+        "B": 21,
+        "C": 24,
+        "D": 476
+      },
+      "a5_not_estimable_drugs": 24,
+      "B": 10000,
+      "seed_bootstrap": 6001,
+      "seed_signflip": 6002,
+      "seed_reused_from_block_H": true,
+      "estimated_wall_hours": 22.291486513878507,
+      "total_wall_hours": 21.487197357095273,
+      "excluded_no_target_drugs": 245,
+      "denominator_estimated": 847,
+      "models_trained": 0,
+      "new_oof_generated": 0,
+      "checkpoint_rows": 40
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — 기존 consensus OOF 를 기계 판독해 4축 층별 추정을 생성했다. 새 OOF·모델학습 0 · 네트워크 0. open_sealed(사람 열람) 0건 · 층별 macro AP·Δ·CI·sign-flip p 및 Δ 부호의 공개 노출 0 · 성공판정·다중성 보정 미수행. A5 는 승인 조건 ④에 따라 '현재 snapshot 기반 post-interim 보조분석' 표기를 유지하며 이 표기는 A5 에만 적용된다."
+  },
+  {
+    "ts_kst": "2026-09-27 23:30:28 KST",
+    "ts_completed_kst": "2026-09-27 23:30:39 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "블록 AW (docs/113) — S1",
+    "block": "AW — GIN consensus + 셀별 macro AP·Δ 봉인 산출",
+    "status": "completed",
+    "models": [
+      "C-CAP",
+      "M0",
+      "M1",
+      "M1b",
+      "M2b",
+      "P-FAM",
+      "P-ID"
+    ],
+    "repeats": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      201,
+      202,
+      203
+    ],
+    "train_seeds": [
+      42,
+      1,
+      2
+    ],
+    "delta_sign": null,
+    "delta_sign_note": "Δ 값은 봉인 산출(metrics_full.json)·부호는 산출하지 않았다(emit_sign 0 · H2). 사람 열람 0.",
+    "sealed_path": "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/",
+    "sealed_sha256": {
+      "consensus_C-CAP_seed42.npz": "b6e931b142e3704ae4474ab1aec802485b3cc4ea198fbdddd867a7ab124825bd",
+      "consensus_C-CAP_seed1.npz": "73100d2080ccc1fa217eeb226c668a1584d9c33c169cf749e1e379dfd9ffbfa8",
+      "consensus_C-CAP_seed2.npz": "63bc25437e236e9cb7e2df6888ccaebfaf600a7be42ae32d7822782537983253",
+      "consensus_M0_seed42.npz": "3662479007463e3ec20c3533f76d486f843e2300952b67809d58a6929c70d1dc",
+      "consensus_M0_seed1.npz": "3c1c49375d8f68365eac4c165e4af438555728eb779c155fedec589a4d21636a",
+      "consensus_M0_seed2.npz": "313b25538a90475d7adf8cab865bb8784192df747a99560c3512c9a9476bb1f8",
+      "consensus_M1_seed42.npz": "9b8d68db0b4c990ab1793558d9480e6216d6a48dd163573c32d2b769df8cfb0c",
+      "consensus_M1_seed1.npz": "889989d30520be63763fad7fc662fba3ab64e85f9c124f4192e5b534852d0375",
+      "consensus_M1_seed2.npz": "12152f778b86729e0e9c7da99809deec652f3b8dd354423cdbf2d536fe3759f4",
+      "consensus_M1b_seed42.npz": "9b5f16ac16c1d857f89291ebec21e2ea15e287d07edd784089db39521973a025",
+      "consensus_M1b_seed1.npz": "1bdf93519825873936762d4fe9c4b8e16ab67a543a2921b807ae686a4ae9cf29",
+      "consensus_M1b_seed2.npz": "32a5f1bc701e2f102d0726dfaefa86e9ca862ec316ba6964a25bf0494b642425",
+      "consensus_M2b_seed42.npz": "b36ff282b410295bb7170ee2f87c3574d0046765c15ee1c76ba62b4a26c1df5b",
+      "consensus_M2b_seed1.npz": "9ae11e2d072da87b18b7c5458f9f0b4414600d22179ce674898303b1bc4ebd28",
+      "consensus_M2b_seed2.npz": "03a0db458b4d4f4808041f1610e0870b57acaaf5996a5a20b584b82043674265",
+      "consensus_P-FAM_seed42.npz": "d2a1a11fce7dcaed5879fbceae21bb01814a19fd9eee1f29ff97108b9e910c5b",
+      "consensus_P-FAM_seed1.npz": "2c560e89f818e93db1093711e29ff52880f98584d089a8bd92ea124d9baaf31e",
+      "consensus_P-FAM_seed2.npz": "c879426226ecc5679e83ae58d2055fe43887d443b1ca6c0f4af191586b723415",
+      "consensus_P-ID_seed42.npz": "08b8d61a11dbd16cf6aaa0a837713ffbcb541c1750df6cc3febc6ad564fcecb3",
+      "consensus_P-ID_seed1.npz": "fcb0e291648a134dd1adcbb1e98b1ed2f06ec5d8d8bf00d036a96401f1d9487a",
+      "consensus_P-ID_seed2.npz": "702979be5068ba3b64a314d0120b39a30d374a183d48d22fdd0184572b20dd13",
+      "metrics_full.json": "f08ba2307146160f1548684cb56a47dc49ae84ba653950931fc9c144746f2091"
+    },
+    "inputs_machine_read": {
+      "oof": {
+        "rep1_seed201/oof_C-CAP_seed1.npz": "1aef372591a8db41628f2217a766acb7585906e17ce1a3c08059d3a0c56777e8",
+        "rep1_seed201/oof_C-CAP_seed2.npz": "8041f0914551df7d0038e6528f69102e9ef00f5f7597b4e1760afe6e5fae29cf",
+        "rep1_seed201/oof_C-CAP_seed42.npz": "5333bf97cb8486265f66de30454ce8a357f547671cac435838737b7b9512a644",
+        "rep1_seed201/oof_M0_seed1.npz": "86b78b5f08a098a0a21e1f04bad588536d161f9b2ac13fe8453fd94109e78e03",
+        "rep1_seed201/oof_M0_seed2.npz": "99bf532ed5e0c2066fcdbbd7028c32fe1d4bcc8ff94c7004e53d6714ba22e820",
+        "rep1_seed201/oof_M0_seed42.npz": "22b47cf17f3bc3f4c8c66e7a1b51fe7a913f3c5f1e16e65bb9c0645f2548fe63",
+        "rep1_seed201/oof_M1_seed1.npz": "11349fd7938658bc902eddf8a90f4e9847ad4be62ebe3fd9fd2bd5c98d561c17",
+        "rep1_seed201/oof_M1_seed2.npz": "e3c27ed5e666e6e0ecee7a5b5e000a48186196380e7b95b0ab36176674fb46b3",
+        "rep1_seed201/oof_M1_seed42.npz": "9876f0a709cf7c2c03391be63475e7ab804bf038b6a5ce30801885091a480065",
+        "rep1_seed201/oof_M1b_seed1.npz": "a300988fa3865abc280de6113f4b429459d1a5246164e7105a6afb18977c347e",
+        "rep1_seed201/oof_M1b_seed2.npz": "10a1eb1e1f24287626879c5341b71dc74161f5b82666513bd343ab2e86100b1c",
+        "rep1_seed201/oof_M1b_seed42.npz": "85607201cb7458ed430f68f1329fc4b2fb91cbb064cb415ef4b99b0ee4323cf4",
+        "rep1_seed201/oof_M2b_seed1.npz": "6c71b04d5f63253fd63991d10a7d69e1cb4427da3a6ccc132155ae1d71a2a9fc",
+        "rep1_seed201/oof_M2b_seed2.npz": "b8f0c4afbdbca6a02ed3cbbbbc0879fdde29f4b890f6d39da37e5a49d2f00e0d",
+        "rep1_seed201/oof_M2b_seed42.npz": "644fc1bb3927420e09642cc2a39d006b5a34373122b06fcd8f06ebfdf526a698",
+        "rep1_seed201/oof_P-FAM_seed1.npz": "769bd78f953403a5186313a94dcc325d9c9e22595d52b0924acb16b312f03577",
+        "rep1_seed201/oof_P-FAM_seed2.npz": "762cbfb29fd4c1030177ebdcaf8214319d13f1fefdbef61236576ae6b96a75ee",
+        "rep1_seed201/oof_P-FAM_seed42.npz": "bf07e105d8030f6643e117f7f09f1b11a9dc8434a3ee1ff61ae26bbf90181995",
+        "rep1_seed201/oof_P-ID_seed1.npz": "8d90a463804d3cce6da2b152e65ff92a262b843c6b11eda9c2277da0ee324f2f",
+        "rep1_seed201/oof_P-ID_seed2.npz": "f504274a89e1b2f4e76b0aff2c1b4f6e606145b02df15e4a11e24a9a0795e41b",
+        "rep1_seed201/oof_P-ID_seed42.npz": "f01ef038d91d8321c7b8225ee8da5af918236619129aba18eb10477ab40f16cc",
+        "rep2_seed202/oof_C-CAP_seed1.npz": "1914520a9274b733685717f31d3776155df5b7106d733e0ebef9db07e2eeaeee",
+        "rep2_seed202/oof_C-CAP_seed2.npz": "b42cb2852b583df5ba1394abdb2bb5e95c4fe43ee8f4aef361d74e7d5828cb19",
+        "rep2_seed202/oof_C-CAP_seed42.npz": "aa4478396c75bbe3f5276eeff93544aa49f7efea299e96a568df6e4b1cc9e262",
+        "rep2_seed202/oof_M0_seed1.npz": "2d8519c69d7c2f595f76de6078b79e426e5c9a137e4fb9d8f4bf4d67279c7578",
+        "rep2_seed202/oof_M0_seed2.npz": "6c49670516b13716b1fa5ca1c0701b135550609e1aef58d7b91239197c8087ea",
+        "rep2_seed202/oof_M0_seed42.npz": "e2bbcd2a644a06f12d76292f393e03ac2e56eab106476f49ded3262bf35c8079",
+        "rep2_seed202/oof_M1_seed1.npz": "03e26d62fc688186525f8ec21e72f0ea9c50bc91de5bcf93aacdbad04d5538b1",
+        "rep2_seed202/oof_M1_seed2.npz": "a7d68b6167d7264e9ec50d4627f7f57a077b3c0975646debda28392cdfc32012",
+        "rep2_seed202/oof_M1_seed42.npz": "b3b6f8dc1542902cd1a11c24103c9e971782d0dfac9dae74a23c23dc96a3998c",
+        "rep2_seed202/oof_M1b_seed1.npz": "f943cb50310abb58f577f67cb5d14b47a73a37ae95ce16b5eb730c11e6a74cab",
+        "rep2_seed202/oof_M1b_seed2.npz": "365a66bfb933d72c8bf82f633809d4076de7669f4d042ace9e1b8656eff71040",
+        "rep2_seed202/oof_M1b_seed42.npz": "9dc4de0491d96599808344fea77c1512f329f18e53a861c636b431aad87e3e71",
+        "rep2_seed202/oof_M2b_seed1.npz": "5a2a7d8f350a34cc0e210063948ab3cbc8ec458720b109bc862f277a7567e8a7",
+        "rep2_seed202/oof_M2b_seed2.npz": "70556c23bdaf98d96fb89a5ec54ca69feccf92e122ac561ec96ceb14a7cd733d",
+        "rep2_seed202/oof_M2b_seed42.npz": "7ff96862f6679405d5e5f86a5f9555891fbbcbf2261afdf2640610e4eb84c454",
+        "rep2_seed202/oof_P-FAM_seed1.npz": "b0164ec32e369c67fa417b9d66e7be5467402c109fc1edf815a1e1bb00264739",
+        "rep2_seed202/oof_P-FAM_seed2.npz": "d60756a3f4140553920490a76ce4d793f22ade94538e0b70e0dfd35f8a72122f",
+        "rep2_seed202/oof_P-FAM_seed42.npz": "ddba582cc17fcad4bc4080ad868c2b9924022c8d8a97d6fa2e22906fa69810c7",
+        "rep2_seed202/oof_P-ID_seed1.npz": "cb02d8f28d77d6c2cea63d9eba4ee66d1f0afbc67ed10927f7cec466270ed09f",
+        "rep2_seed202/oof_P-ID_seed2.npz": "6200c6a843ab83719fe9a78dec403fdbbee13e9f3bccefd20b977519ea73aab3",
+        "rep2_seed202/oof_P-ID_seed42.npz": "6613ea01ce11c58472719ebd7b1efe62bdc9521a4c8a6a5f2eff2c22fa95ab8e",
+        "rep3_seed203/oof_C-CAP_seed1.npz": "22119710d973e891b97e4c9f1f1553cd2d8e1272cd1a4c0d02cd102f175f84ce",
+        "rep3_seed203/oof_C-CAP_seed2.npz": "af7310077ca2f0913c971e5a1d7ddfce32039a8d928110d8840c9cfc352bb81e",
+        "rep3_seed203/oof_C-CAP_seed42.npz": "ad16203e7f36c029c22a9998f007aa4de3a1d02fcadfcf51d06eab675828ec8c",
+        "rep3_seed203/oof_M0_seed1.npz": "9300c52749861911273cff49d613072f3587d973e42891d8213ffc3969e50e58",
+        "rep3_seed203/oof_M0_seed2.npz": "cd41a5f8d861733ca5e4359e6d4c6d8b6dc12fabb01fc46583aa8ad094af4e69",
+        "rep3_seed203/oof_M0_seed42.npz": "3d3e5e5e5f1909c247e27d2e715c2b47a105abc6bcede939acfcb9a7c8fa30ab",
+        "rep3_seed203/oof_M1_seed1.npz": "c10410a69da1e47700772bf3ee42fb509301352909dbcf8681f48e972acb7459",
+        "rep3_seed203/oof_M1_seed2.npz": "11d8523d680636460d1b938cf1d727b5ab7898a57b69b0db687e134a4ae278ac",
+        "rep3_seed203/oof_M1_seed42.npz": "2353c39b8840fa5bba7efc131314f0da6ff49f60162bf188b53c41ef3ec08931",
+        "rep3_seed203/oof_M1b_seed1.npz": "3f676454acd1c67c22028346f5eb45519181fc740efc3e7215233f3f3cb97126",
+        "rep3_seed203/oof_M1b_seed2.npz": "1f419538e13e5831369abe6a491546d796804ab232211e7ca43cfd5032152127",
+        "rep3_seed203/oof_M1b_seed42.npz": "11e3cba2d4eb807e1a1a2c7e98fd65e8f24a4cd0a4403f5d17fbb45d710873a3",
+        "rep3_seed203/oof_M2b_seed1.npz": "5241e6d502c5ff78cb7195e85142832a3c8e2c902091c2653685857b6a97c88a",
+        "rep3_seed203/oof_M2b_seed2.npz": "564535f2bb3d7a4bdf65471ec207242f93e01e2260ca65d8e1c7c4d0c8fe00e7",
+        "rep3_seed203/oof_M2b_seed42.npz": "412697a4ee29a14ccadcd4ed413961b2366c453b61139a096d973e7a187506d8",
+        "rep3_seed203/oof_P-FAM_seed1.npz": "eabe9c6bef9bef491e6ea5505b8589ef0a07b75632d5ef9bbe82de1db2bf8d6d",
+        "rep3_seed203/oof_P-FAM_seed2.npz": "c9e5e4a898b231874bb6ed4456747272e26a59e056c0ad16a1198ae93ee2a190",
+        "rep3_seed203/oof_P-FAM_seed42.npz": "025008f4e13abf04a90efae6d01bae03c2774e3e9011041d7d4bd5abf035be32",
+        "rep3_seed203/oof_P-ID_seed1.npz": "28bc42eed0f0bcb921b5836d4b4a210fdb268c3c15f533bbf90776de9dcf2d34",
+        "rep3_seed203/oof_P-ID_seed2.npz": "e6225d51259c3aa50c16e0f4fc044785879609a53c5b12313a7eaa855a671fa7",
+        "rep3_seed203/oof_P-ID_seed42.npz": "af3a90fb554b3f22859cc8226884862337f21f22f5ef4e69a41a07e150ee2e61"
+      },
+      "checkpoint": {
+        "rep1_seed201": "f078df96e4957de35d50ebc33062f333ba490ae3a3b0d485cad5a54370b3529d",
+        "rep2_seed202": "1b50c30573db67d76adffc919b8ef09507a5507149752ab15d74b1dab0287e45",
+        "rep3_seed203": "049ba9dff26de76125bafa59e10aae19a29ee74df0320fb540c588906ecacd76"
+      },
+      "partial_315_checkpoint_artifact_sha256_all_match": true
+    },
+    "runner_asserts_passed": {
+      "selftest_k1_k12_all_pass": true,
+      "input_sha_381_match": true,
+      "cid_order_match": true,
+      "label_identity": true,
+      "finite": true,
+      "invalidation_rules_triggered_zero": true,
+      "sealed_counts_30_750_729_21": true,
+      "stability_and_existing25_fp_unchanged": true,
+      "rf_consensus_untouched": true,
+      "emit_sign_not_called": true,
+      "open_sealed_zero": true,
+      "no_decision_functions_called": true,
+      "public_files_free_of_sealed_values": true
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — 확증 GIN OOF 를 하네스 run 내부에서만 기계 판독해 consensus 21 과 S1 셀(21/3/1/63)·학습 메타 315 를 봉인 산출했다. open_sealed 0 · 공개 노출 0 · 점추정만(p·CI·λ·ρ·SS 0) · 성공판정·다중성 보정 미수행."
+  },
+  {
+    "ts_kst": "2026-09-28 09:27:53 KST",
+    "ts_completed_kst": "2026-09-28 09:55:57 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "블록 AX (docs/114) — S2 D11",
+    "block": "AX — D11 레버리지 진단 λ·ρ 봉인 산출",
+    "status": "completed",
+    "models": [
+      "M1b",
+      "M2b"
+    ],
+    "repeats": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      201,
+      202,
+      203
+    ],
+    "train_seeds": [
+      42,
+      1,
+      2
+    ],
+    "delta_sign": null,
+    "delta_sign_note": "λ·ρ·e_g·T_obs 봉인 산출 · p 미계산 · 부호 미산출 · 사람 열람 0",
+    "sealed_path": "experiments/runs/v3_rqint_leverage_d11/_sealed/",
+    "sealed_sha256": {
+      "leverage_diagnostics.json": "0832ef65aa59c16973f5776c9dbcd917cb9e0b4b76202a64e271f357fb5206ac"
+    },
+    "inputs_machine_read": {
+      "rf_consensus": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed",
+        "consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+        "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf"
+      },
+      "gin_consensus": {
+        "path": "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed",
+        "consensus_M1b_seed42.npz": "9b5f16ac16c1d857f89291ebec21e2ea15e287d07edd784089db39521973a025",
+        "consensus_M1b_seed1.npz": "1bdf93519825873936762d4fe9c4b8e16ab67a543a2921b807ae686a4ae9cf29",
+        "consensus_M1b_seed2.npz": "32a5f1bc701e2f102d0726dfaefa86e9ca862ec316ba6964a25bf0494b642425",
+        "consensus_M2b_seed42.npz": "b36ff282b410295bb7170ee2f87c3574d0046765c15ee1c76ba62b4a26c1df5b",
+        "consensus_M2b_seed1.npz": "9ae11e2d072da87b18b7c5458f9f0b4414600d22179ce674898303b1bc4ebd28",
+        "consensus_M2b_seed2.npz": "03a0db458b4d4f4808041f1610e0870b57acaaf5996a5a20b584b82043674265",
+        "metrics_full.json": "f08ba2307146160f1548684cb56a47dc49ae84ba653950931fc9c144746f2091"
+      }
+    },
+    "runner_asserts_passed": {
+      "selftest_l1_l12_all_pass": true,
+      "input_sha_all_match": true,
+      "cid_order_match": true,
+      "scaffold_groups_732": true,
+      "finite": true,
+      "derived_equals_verbatim_le_1e-12": true,
+      "cross_block113_bit_equal": true,
+      "invalidation_rules_triggered_zero": true,
+      "sealed_counts_31_752_730_22": true,
+      "confirmatory_and_stability_fp_unchanged": true,
+      "p_not_computed": true,
+      "emit_sign_not_called": true,
+      "open_sealed_zero": true,
+      "public_files_free_of_sealed_values": true
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — RF consensus 2 + GIN consensus 6 + metrics_full 을 하네스 run 내부에서만 기계 판독해 D11 레버리지 진단(e_g·λ·ρ·T_obs)을 봉인 산출했다. 게이트 아님 · open_sealed 0 · 공개 노출 0 · p·CI·Holm 미수행."
+  },
+  {
+    "ts_kst": "2026-09-28 20:30:54 KST",
+    "ts_completed_kst": "2026-10-01 02:50:35 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "블록 AY (docs/115) — S4 Holm ⑧ 본런 + S5 D9 BCa",
+    "block": "AY — Holm ⑧ RQ-int 본런(B = 100,000) + D9 BCa 봉인 산출",
+    "status": "completed",
+    "models": [
+      "M1b",
+      "M2b"
+    ],
+    "repeats": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      201,
+      202,
+      203
+    ],
+    "train_seeds": [
+      42,
+      1,
+      2
+    ],
+    "delta_sign": null,
+    "delta_sign_note": "⑧ p·T*·BCa 봉인 산출 · Holm 조정·판정 미수행 · 부호 미산출 · 사람 열람 0",
+    "sealed_path": "experiments/runs/v3_rqint_holm8/_sealed/",
+    "sealed_sha256": {
+      "checkpoint.npz": "b298c01bc18c0473f7b4010989ecc0190659668444fc7a44bb926a1d86f7fc6d",
+      "t_star.npy": "7882a95c6648686a97a18df0283fb861fe733cca2cf77fedcd5b49b85ed3f0d4",
+      "holm8_result.json": "4cf3b79b66e5a76dd3b5baae2495678e7ad00a40611f003a2579d78e3e807913",
+      "d9_bca_result.json": "5eeacc66945eb8e344f8ef2fdb2fd95869d13e359161e197a246482354170abd"
+    },
+    "inputs_machine_read": {
+      "rf_consensus": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed",
+        "consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+        "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf"
+      },
+      "gin_consensus": {
+        "path": "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed",
+        "consensus_M1b_seed42.npz": "9b5f16ac16c1d857f89291ebec21e2ea15e287d07edd784089db39521973a025",
+        "consensus_M1b_seed1.npz": "1bdf93519825873936762d4fe9c4b8e16ab67a543a2921b807ae686a4ae9cf29",
+        "consensus_M1b_seed2.npz": "32a5f1bc701e2f102d0726dfaefa86e9ca862ec316ba6964a25bf0494b642425",
+        "consensus_M2b_seed42.npz": "b36ff282b410295bb7170ee2f87c3574d0046765c15ee1c76ba62b4a26c1df5b",
+        "consensus_M2b_seed1.npz": "9ae11e2d072da87b18b7c5458f9f0b4414600d22179ce674898303b1bc4ebd28",
+        "consensus_M2b_seed2.npz": "03a0db458b4d4f4808041f1610e0870b57acaaf5996a5a20b584b82043674265"
+      },
+      "leverage": {
+        "path": "experiments/runs/v3_rqint_leverage_d11/_sealed",
+        "leverage_diagnostics.json": "0832ef65aa59c16973f5776c9dbcd917cb9e0b4b76202a64e271f357fb5206ac",
+        "keys_used": [
+          "T_obs_hex"
+        ]
+      }
+    },
+    "launches": 2,
+    "resumes": 1,
+    "run_id": "AY-2026-09-28T20:30:53+09:00",
+    "runner_asserts_passed": {
+      "selftest_q1_q14_all_pass": true,
+      "input_sha_all_match": true,
+      "cid_order_match": true,
+      "finite_inputs": true,
+      "t_obs_bit_equal_block_ax": true,
+      "checkpoint_integrity_ok": true,
+      "fallback_not_triggered": true,
+      "sealed_counts_32_757_734_23": true,
+      "confirmatory_and_stability_fp_unchanged": true,
+      "holm_adjustment_not_performed": true,
+      "emit_sign_not_called": true,
+      "open_sealed_zero": true,
+      "public_files_free_of_sealed_values": true,
+      "independent_verification_56_56": true
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — RF consensus 2 + GIN consensus 6 + leverage T_obs_hex 를 하네스 run 내부에서만 기계 판독해 Holm ⑧ RQ-int 본런과 D9 BCa 를 봉인 산출했다. open_sealed 0 · 공개 노출 0 · Holm 조정·판정 미수행 · 부호 미산출."
+  },
+  {
+    "ts_kst": "2026-10-02 12:26:38 KST",
+    "ts_completed_kst": "2026-10-04 04:52:31 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "블록 AZ (docs/115b) — S3 D12 민감도 2종 RQ-int 본런",
+    "block": "AZ — D12 민감도 2종((i) G′ 808 · (ii) G″ 733 · 변형당 B = 100,000) 봉인 산출",
+    "status": "completed",
+    "models": [
+      "M1b",
+      "M2b"
+    ],
+    "repeats": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      201,
+      202,
+      203
+    ],
+    "train_seeds": [
+      42,
+      1,
+      2
+    ],
+    "delta_sign": null,
+    "delta_sign_note": "D12 (i)(ii) p·T* 봉인 산출 · 판정 미사용 · Holm 조정 미수행 · 부호 미산출 · 사람 열람 0",
+    "sealed_path": "experiments/runs/v3_rqint_d12/_sealed/",
+    "sealed_sha256": {
+      "checkpoint_i.npz": "135e6960bf9f4dcaffaa4564f4b8108bbdf451847e02b7a0e0fc8579e4a069c1",
+      "checkpoint_ii.npz": "38c5665b7bf0b5442a13f9aff0422d75f388746e6ae424b3e86ff56db4e302e4",
+      "t_star_i.npy": "e2257561f635a754cb650fd0c30a703d4b2080593226f1189487f4a720156ffe",
+      "t_star_ii.npy": "77970055f5f7d3faa1d1e28ab9dc9e21b95184e6b3d5aa46ca9b51aacd651212",
+      "d12_result.json": "9c8754aac63207954cf4a2122aeb3d22f0d7f8b546487744fe600fd55316f22f"
+    },
+    "inputs_machine_read": {
+      "rf_consensus": {
+        "path": "experiments/runs/v3_consensus_rep123/_sealed",
+        "consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+        "consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf"
+      },
+      "gin_consensus": {
+        "path": "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed",
+        "consensus_M1b_seed42.npz": "9b5f16ac16c1d857f89291ebec21e2ea15e287d07edd784089db39521973a025",
+        "consensus_M1b_seed1.npz": "1bdf93519825873936762d4fe9c4b8e16ab67a543a2921b807ae686a4ae9cf29",
+        "consensus_M1b_seed2.npz": "32a5f1bc701e2f102d0726dfaefa86e9ca862ec316ba6964a25bf0494b642425",
+        "consensus_M2b_seed42.npz": "b36ff282b410295bb7170ee2f87c3574d0046765c15ee1c76ba62b4a26c1df5b",
+        "consensus_M2b_seed1.npz": "9ae11e2d072da87b18b7c5458f9f0b4414600d22179ce674898303b1bc4ebd28",
+        "consensus_M2b_seed2.npz": "03a0db458b4d4f4808041f1610e0870b57acaaf5996a5a20b584b82043674265"
+      },
+      "leverage": {
+        "path": "experiments/runs/v3_rqint_leverage_d11/_sealed",
+        "leverage_diagnostics.json": "0832ef65aa59c16973f5776c9dbcd917cb9e0b4b76202a64e271f357fb5206ac",
+        "keys_used": [
+          "T_obs_hex"
+        ]
+      }
+    },
+    "launches": 1,
+    "resumes": 0,
+    "run_id": "AZ-2026-10-02T12:26:38+09:00",
+    "runner_asserts_passed": {
+      "selftest_q1_q14_all_pass": true,
+      "input_sha_all_match": true,
+      "cid_order_match": true,
+      "finite_inputs": true,
+      "t_obs_bit_equal_block_ax": true,
+      "d12_groups_match_spec": true,
+      "rows_cids_labels_unchanged": true,
+      "checkpoint_integrity_ok": true,
+      "fallback_not_triggered": true,
+      "sealed_counts_33_763_739_24": true,
+      "confirmatory_stability_holm8_fp_unchanged": true,
+      "holm_adjustment_not_performed": true,
+      "emit_sign_not_called": true,
+      "open_sealed_zero": true,
+      "public_files_free_of_sealed_values": true,
+      "independent_verification_61_61": true
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — RF consensus 2 + GIN consensus 6 + leverage T_obs_hex 를 하네스 run 내부에서만 기계 판독해 D12 민감도 2종 RQ-int 본런을 봉인 산출했다. 민감도(주 분석 대체 0) · open_sealed 0 · 공개 노출 0 · Holm 조정·판정 미수행 · 부호 미산출."
+  },
+  {
+    "ts_kst": "2026-10-04 11:16:58.161 KST",
+    "ts_completed_kst": "2026-10-04 11:17:00.650 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "블록 BA (docs/116) — S6 안정성 15셀 SS",
+    "block": "BA — 안정성 15셀 fold 수준 Δ + 서술적 two-way SS 분해 봉인 산출",
+    "status": "completed",
+    "models": [
+      "M1b",
+      "M2b"
+    ],
+    "repeats": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      201,
+      202,
+      203
+    ],
+    "train_seeds": [
+      42,
+      1,
+      2,
+      3,
+      4
+    ],
+    "delta_sign": null,
+    "delta_sign_note": "15셀 fold 수준 Δ·SS 봉인 산출 · 서술 전용 · 부호 미산출 · 사람 열람 0",
+    "sealed_path": "experiments/runs/v3_stability_ss15/_sealed/",
+    "sealed_sha256": {
+      "ss15_result.json": "105af61769107e694b1fb7eb96584771c6c14b160f8baddf0268edd042358fdd"
+    },
+    "inputs_machine_read": {
+      "partials": {
+        "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M1b_fold4_seed1.npz": "73c9b95b34b8a633094c52db56a11996333c051466bf0fd8da1dba6b7ebb8969",
+        "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M1b_fold4_seed2.npz": "f52e7ffcd10f817ae34deb328a97f74185080627fedae4a164a03e525bd1ee2f",
+        "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M1b_fold4_seed42.npz": "b32c92a2d796cca965e425a92907a07af0909250cd0961eba17f7f23d70a26c4",
+        "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M2b_fold4_seed1.npz": "073f6df8ea0beba7f014073598c2a4f918218d433aed4f1be8cecd8bb64296cd",
+        "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M2b_fold4_seed2.npz": "d3a2fb11d4154fa2be9948745e2a49dff4b6f28d86cde8400c7ebcbbc8d0707a",
+        "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/_partial/M2b_fold4_seed42.npz": "d4e2cf44ca7f974e58413c5b58e51182bf63d358f34ad9edafddf2dc6064a0d4",
+        "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M1b_fold1_seed1.npz": "d8b5b63ec660c0f4a3adbebcb90ae6aedbd0eb7022324125fd692a5baea7d157",
+        "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M1b_fold1_seed2.npz": "82492ab6f9aa7b1c175f962c7dd7e30c9b1c614c530966a81492680f914c4766",
+        "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M1b_fold1_seed42.npz": "e3b1bcd36794c2f0510f34feaed2dd4b9abe2a52d2ce5295b174b1f07010a8cb",
+        "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M2b_fold1_seed1.npz": "998a73944fde2eda64e7ff26c74753353ff56853d8691651c1dd2a8f99774a0d",
+        "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M2b_fold1_seed2.npz": "d8d6d4cd410733ed42c41797a1e24205842fb7b507c195bd854aa7859b753529",
+        "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/_partial/M2b_fold1_seed42.npz": "c97ca176cfa6ff4158a165743bf485f4b69a432a8b430b7e2ba257b45dc2c3b6",
+        "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M1b_fold0_seed1.npz": "14a11961507ae63b60934f11247beab589363005436081f6a9e8eee6784ed3af",
+        "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M1b_fold0_seed2.npz": "64abefdd81147e19a578c43717abdb259255fda1fa864a6743f91e0a20210696",
+        "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M1b_fold0_seed42.npz": "9e6b9353fe88152b4d3448c41772b47decc1c314084132a01ced866f27123ed4",
+        "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M2b_fold0_seed1.npz": "1a3faf6cb26a45718c643741d8644c1c342bb9edd4c8c02b47d3a4c14ced3deb",
+        "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M2b_fold0_seed2.npz": "97c53cbe531096161583ac4c10ecaa017d9f51c781f85981421fb36a38e748ef",
+        "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/_partial/M2b_fold0_seed42.npz": "bc5c1993f5c7d19d468350daf86838a47686472321750703fc0f0ad1a28216d5",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep1_fold4_seed3.npz": "6bc7086b3d3198e93c058f250c05627a085ed6ee633fd7ba08b49271d80c6f25",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep1_fold4_seed4.npz": "b757c8a6d85b1bb441bd3d1e21e8dfb84fd8c1cdadb73a21e3ce33c1a1dffe0f",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep2_fold1_seed3.npz": "77499c6a53eef5832c8028047172797c86fc434f730c8f3d27ea6cb961376ba2",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep2_fold1_seed4.npz": "6e60e894478e25f98f6aa067b76c225c7b4900c29769b90bc95a66aa35395542",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep3_fold0_seed3.npz": "49115d03e50aca77b84ce9ffca57c21246d9fde1e2c6c8c7a3dadc267b51e39d",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M1b_rep3_fold0_seed4.npz": "8d406cf30241acd47557539cedda90f5f86ade53838f6ca432c1418be5e82286",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep1_fold4_seed3.npz": "5151fe00a34904cc123de75ddb336cc252fcd802c7e4f6c2abca637a149c3877",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep1_fold4_seed4.npz": "c9aceef246ed3bf2dfd1eaf8251327b98a2380b16f8e233d1972601bc42fee57",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep2_fold1_seed3.npz": "f7084a05e77886225dcbd117d4dd4ddfe9aa056f77cfa25016320d21c2b3111b",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep2_fold1_seed4.npz": "40ac91e281caad5bec9180854020741e9c5859c17fbc039962da78ab5ea9d176",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep3_fold0_seed3.npz": "1e2f70421d1b6d7139be5609c8243a9710a95d7a3339e823409dea1e9c8d6932",
+        "experiments/runs/v3_gin_stability/_sealed/_partial/M2b_rep3_fold0_seed4.npz": "424ca9aaf8da0abe40ddf2dc2841f87c4cbb4c7952996ae1a92a35497f3aa9ac"
+      },
+      "checkpoints": {
+        "experiments/runs/v3_gin_confirm_rep1_seed201/_sealed/checkpoint.jsonl": "f078df96e4957de35d50ebc33062f333ba490ae3a3b0d485cad5a54370b3529d",
+        "experiments/runs/v3_gin_confirm_rep2_seed202/_sealed/checkpoint.jsonl": "1b50c30573db67d76adffc919b8ef09507a5507149752ab15d74b1dab0287e45",
+        "experiments/runs/v3_gin_confirm_rep3_seed203/_sealed/checkpoint.jsonl": "049ba9dff26de76125bafa59e10aae19a29ee74df0320fb540c588906ecacd76",
+        "experiments/runs/v3_gin_stability/_sealed/checkpoint.jsonl": "1c1618e790ce33ef3e93879b271e5395ca74453a4920715e534e510c09229666"
+      }
+    },
+    "runner_asserts_passed": {
+      "selftest_k1_k13_all_pass": true,
+      "input_sha_all_match": true,
+      "cid_order_match": true,
+      "fold_rows_match": true,
+      "finite_inputs": true,
+      "structural_checks_ok": true,
+      "invalidation_not_triggered": true,
+      "sealed_counts_34_765_740_25": true,
+      "other_five_groups_fp_unchanged": true,
+      "emit_sign_not_called": true,
+      "open_sealed_zero": true,
+      "public_files_free_of_sealed_values": true,
+      "independent_verification_59_59": true
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — 확증 partial 18 + 안정성 partial 12 + checkpoint 4 를 하네스 run 내부에서만 기계 판독해 S6 15셀 Δ·two-way SS 를 봉인 산출했다. 서술 전용 · open_sealed 0 · 공개 노출 0 · Holm 조정·판정 미수행 · 부호 미산출."
+  },
+  {
+    "ts_kst": "2026-10-04 13:31:32.732 KST",
+    "ts_completed_kst": "2026-10-04 14:43:20.684 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "블록 BB (docs/117) — 사전지정 민감도 RF OOF 3종 학습·봉인",
+    "block": "BB — 사전지정 민감도 3종 RF OOF 학습·봉인(지표 0 · 개봉 0)",
+    "status": "completed",
+    "models": [
+      "M1b_pchembl",
+      "M2b_pchembl",
+      "P-FAM_selfclust"
+    ],
+    "repeats": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      201,
+      202,
+      203
+    ],
+    "delta_sign": null,
+    "delta_sign_note": "지표·Δ 미계산(민감도 OOF 생성) · equivalence 판독은 M2b rep1 fold0 슬라이스 바이트 비교뿐 · 사람 열람 0",
+    "sealed_path": "experiments/runs/v3_confirm_sens*/_sealed/",
+    "sealed_sha256": {
+      "experiments/runs/v3_confirm_sens_consensus_rep123/_sealed/consensus_M1b_pchembl.npz": "9fac269762ddc18b8af3c3ddd12f967749f4e586bcb8ed5b2c3af04e8589ac60",
+      "experiments/runs/v3_confirm_sens_consensus_rep123/_sealed/consensus_M2b_pchembl.npz": "9d1ca00536c99bde81e2535bcfce26b294084f9cb0878deb83fb34d7c886f34b",
+      "experiments/runs/v3_confirm_sens_consensus_rep123/_sealed/consensus_P-FAM_selfclust.npz": "fe5e14afef88fd924522ae9f1294f88fb85ee471e01649ce8417232b1def40a1",
+      "experiments/runs/v3_confirm_sens_rep1_seed201/_sealed/oof_M1b_pchembl.npz": "941878604f43a19b82e89a21200ff0afc2f357b5b2dedae340cd427264ef0faf",
+      "experiments/runs/v3_confirm_sens_rep1_seed201/_sealed/oof_M2b_pchembl.npz": "6d58233fc85314fc89858fe00b6080f92d8e4e8aff086f5acd65972202d39db3",
+      "experiments/runs/v3_confirm_sens_rep1_seed201/_sealed/oof_P-FAM_selfclust.npz": "dad7b8e0f0ef601902993fcc474b88c7cd2400b5f569113ce76bae0f49a72dd3",
+      "experiments/runs/v3_confirm_sens_rep2_seed202/_sealed/oof_M1b_pchembl.npz": "19bbf766df913ddbcd8ec89a6e9c69a283766011648b26865d5191362fae1bdd",
+      "experiments/runs/v3_confirm_sens_rep2_seed202/_sealed/oof_M2b_pchembl.npz": "8a4e3b7daadd4a1796dd6b82d372d6fd300f6b4bf4fbdf6a379d856c2f427c43",
+      "experiments/runs/v3_confirm_sens_rep2_seed202/_sealed/oof_P-FAM_selfclust.npz": "e35acc3649b44d599495fb4a30cc374c86205ff3232d50cad0aea09cb3d63cc0",
+      "experiments/runs/v3_confirm_sens_rep3_seed203/_sealed/oof_M1b_pchembl.npz": "805d93db5ca0899406c6e206b4d5501057c8e582588b61639f5a445df98e01ff",
+      "experiments/runs/v3_confirm_sens_rep3_seed203/_sealed/oof_M2b_pchembl.npz": "deb7f4529171327aa992c45b262ad1cc76605e3f6ddb0ea43badad4a83b71759",
+      "experiments/runs/v3_confirm_sens_rep3_seed203/_sealed/oof_P-FAM_selfclust.npz": "aa54baaca81ac3cb2c2b3b05e41ff40a442d77bc3ce32d5d3661201941a32728"
+    },
+    "inputs_machine_read": {
+      "experiments/runs/v3_confirm_rep1_seed201/_sealed/oof_M2b.npz": "350fa12fac84ef4ca1355d256665c333d9cd8ca34de257e7321aefa36d8a3260"
+    },
+    "runner_asserts_passed": {
+      "selftest_s1_s11_all_pass": true,
+      "i3_consistency": true,
+      "j6a_dims_exact": true,
+      "j6b_pfam_crosscheck_bytes_identical": true,
+      "f6_byte_identical": true,
+      "leak_rows_zero_all_fits": true,
+      "oof_nan_zero": true,
+      "no_overwrite": true,
+      "sealed_counts_39_826_801_25": true,
+      "other_seven_groups_fp_unchanged": true,
+      "metrics_not_computed": true,
+      "emit_sign_not_called": true,
+      "open_sealed_zero": true
+    },
+    "confirmatory": "Y",
+    "note": "확증 조회 = Y(값 미열람) — 확증 봉인 oof_M2b.npz 1파일을 하네스 verify 내부에서만 기계 판독해 fold 0 슬라이스 바이트 동일성을 확인했고, 민감도 3종 OOF·consensus 를 생성·봉인했다. AP·Δ·부호·p·CI 미계산 · open_sealed 0 · 공개 노출 0."
+  },
+  {
+    "ts_kst": "2026-10-08 16:07:56.183 KST",
+    "ts_completed_kst": "2026-10-08 16:53:29 KST",
+    "viewer": "vscode-claude(runner)",
+    "step": "블록 BI (docs/123) E2 — RQ8 외부(라벨 출처 이식성) 검증 채점",
+    "block": "BI — RQ8 tier-3 외부 검증(EU∪UK 라벨 · 내부 consensus 예측 고정)",
+    "status": "completed",
+    "delta_sign": "negative",
+    "delta_sign_note": "R8-main Δ_ext(M2b − M1b) 부호 · 판정 방향 재현(118b §4)",
+    "sealed_path": "experiments/runs/v3_consensus_rep123/_sealed/ · experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/",
+    "inputs_machine_read": {
+      "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz": "f77a69528ebdb88cd0d03c0c87489d6381740e3b9f9746378cc0396618ebfa96",
+      "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz": "8594592e2afae5835f43be63d6bdc815a6933d25388b9c3c4091637117c435bf",
+      "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M1b_seed42.npz": "9b5f16ac16c1d857f89291ebec21e2ea15e287d07edd784089db39521973a025",
+      "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M1b_seed1.npz": "1bdf93519825873936762d4fe9c4b8e16ab67a543a2921b807ae686a4ae9cf29",
+      "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M1b_seed2.npz": "32a5f1bc701e2f102d0726dfaefa86e9ca862ec316ba6964a25bf0494b642425",
+      "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M2b_seed42.npz": "b36ff282b410295bb7170ee2f87c3574d0046765c15ee1c76ba62b4a26c1df5b",
+      "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M2b_seed1.npz": "9ae11e2d072da87b18b7c5458f9f0b4414600d22179ce674898303b1bc4ebd28",
+      "experiments/runs/v3_gin_confirm_consensus_rep123/_sealed/consensus_M2b_seed2.npz": "03a0db458b4d4f4808041f1610e0870b57acaaf5996a5a20b584b82043674265"
+    },
+    "confirmatory": "N",
+    "note": "tier-3 · 비판정(최소 성립 조건 밖) · 개봉(120) 이후 판독 · 예측 무수정 · p 미계산 · 다중성 보정 없음."
+  }
+]

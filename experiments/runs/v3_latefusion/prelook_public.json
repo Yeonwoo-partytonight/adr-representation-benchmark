@@ -1,0 +1,77 @@
+{
+  "ts_kst": "2026-08-06 20:28:05 KST",
+  "block": "P-0",
+  "item_no_p0_1": 34,
+  "prompt_sha256": "149252088bc12b71b33d0f894723420222b5c39395f7f9874259015c4d9e5e92",
+  "latefusion_freeze_sha256": "d89f8c52412b656e467accbda4e1e9a36aaba14830be5b3d81ca756e54b357c1",
+  "g0": {
+    "v3_Multimodal/config/ladder_freeze.json": "b885585aefbabb32",
+    "v3_Multimodal/config/gin_seed_freeze.json": "10828447c6d33118",
+    "v3_Multimodal/config/gin_inner_valid_freeze.json": "038599c3e1576022",
+    "v3_Multimodal/config/gin_inner_valid_freeze.status.json": "bd329fefe613971f",
+    "v3_Multimodal/config/post_interim_freeze_v1_0.json": "502db732bd5e45cb",
+    "v3_Multimodal/config/rf_tuned_freeze.json": "c1ef6406fbb48b7f",
+    "experiments/sap/manifest.json": "756d485feb4715e9",
+    "sap_version": "1.1",
+    "sap_n_modules": 11
+  },
+  "g_holm": {
+    "line": 44,
+    "n_labels": 7,
+    "labels": [
+      "M2b-P-ID",
+      "M2b-P-FAM",
+      "M2b-realloc_null",
+      "M2b-M0",
+      "M2b-RF_tuned",
+      "RFseq-RF",
+      "RQ-int"
+    ]
+  },
+  "g_block": {
+    "holm67_start_still_blocked_until_reply": false,
+    "holm67_start_requires": [
+      "docs/60 개정 (docs/70 §1-2 확정본)",
+      "docs/61 개정 (docs/70 §1-4·§1-5 + 단일 홀드아웃 20% 폐기 + ⑦ 기준 RF 의 [기각] M1b 기준안 필드 보충)"
+    ],
+    "nine_internal_decisions_advisor_response": "no_objection_raised"
+  },
+  "authority": {
+    "post_interim_holm7_keys": [
+      "formula",
+      "lambda",
+      "p_rf",
+      "p_rf_rule",
+      "p_seq_features_primary",
+      "p_seq_features_sensitivity",
+      "p_seq_learner",
+      "p_seq_learner_rule",
+      "p_seq_rejected",
+      "sensitivity_firewall",
+      "zero_vector_caveat"
+    ],
+    "docs33_item31_par3": true,
+    "docs70_sections": [
+      "1-3",
+      "1-4",
+      "1-5"
+    ],
+    "three_sources_agree": true
+  },
+  "sealed_guard": {
+    "n_excl_access_log": 184,
+    "n_all": 196,
+    "reference_docs61_P_1_5": {
+      "excl_access_log": 184,
+      "all": 196
+    },
+    "matches_reference": true
+  },
+  "docs33_sha256": "5f328286c8a9eba5d882317fc0766bce6e9ac3b1c845e7da483441398c8ae2d9",
+  "models_trained": 0,
+  "lambda_selected": 0,
+  "sealed_writes": 0,
+  "open_sealed": 0,
+  "emit_sign": 0,
+  "git_commits": 0
+}

@@ -1,0 +1,212 @@
+2026-07-28 23:27:21 KST | [G0] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치=True(11) · null_generator 90886abce256a130 · 파티션 CSV 2종 일치 · NULL_B=1000
+2026-07-28 23:40:00 KST | [주석] 위 2줄은 **본런이 아니라 사전점검(preflight)** 이 gate0 을 1회 호출하며 남긴 로그다. permutation 0 · 모델학습 0 · checkpoint 미생성 (_sealed/ 부재로 확인). append-only 원칙상 원문은 지우지 않고 본 주석으로 구분한다.
+2026-07-28 23:41:00 KST | [주석 정정] 직전 주석의 "위 2줄"은 "위 1줄"의 오기다(preflight G0 로그는 1줄). append-only 원칙상 원문 무수정, 본 줄로 정정한다.
+2026-07-28 23:38:10 KST | ==============================================================================
+2026-07-28 23:38:10 KST | [블록 F] §13-4 재배치 null **본런** 시작 — 공개는 개수·해시·시간·메모리·PASS/FAIL 뿐
+2026-07-28 23:38:10 KST | [redaction] p_emp·MC SE·유의 여부·null 분포·T_obs·T_b·AP·Δ 는 전부 _sealed/ (개봉 = 성공판정 단계 일괄 · docs/33 항목18)
+2026-07-28 23:38:10 KST | [caffeinate] -dimsu -w 94764 기동(pid=94766)
+2026-07-28 23:38:10 KST | [G0] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치=True(11) · null_generator 90886abce256a130 · 파티션 CSV 2종 일치 · NULL_B=1000
+2026-07-28 23:38:10 KST | [sealed guard] 시작 스냅샷 12종 기록
+2026-07-28 23:38:10 KST | [seed 격리] PASS — 총 2110 task · 예약/프로브 seed 와 교집합 0
+2026-07-28 23:38:10 KST | [M1b] §13-3 sealed oof_M1b.npz 1회 기계 판독 — 전 permutation 재사용(값 미출력)
+2026-07-28 23:38:10 KST | [G3] identity permutation 단독 실행 시작 — §13-3 sealed oof_M2b.npz 와 바이트 동일해야 함
+2026-07-28 23:46:31 KST | [G3] identity control = **PASS** (불일치 원소 0/404040 · 배열 sha 일치=True) | 499.8s
+2026-07-28 23:46:31 KST | [G1] global seed 1000 단독(w=1) 실행 — 풀(w=18) 첫 task 와 oof_sha256 비교 예정
+2026-07-28 23:55:17 KST | [G1] 단독 결과 확보 (oof_sha256 fd26da933c177ae0…) | 524.6s — checkpoint 미기록(풀 결과 1건만 기록)
+2026-07-28 23:55:17 KST | [본런] 총 2110 · 완주 0 · 남은 2110 · 세션 #1 시작
+2026-07-28 23:55:17 KST | [G4] 라이브 RAM 게이트 가동 — 예산 38.4 GiB · 10초 주기 샘플
+2026-07-28 23:55:17 KST | [전원] 감시 가동 — 60초 주기 pmset 샘플 (배터리 5분 연속 시 정상 정지)
+2026-07-28 23:55:17 KST | [풀] 워커 18 × (RF n_jobs=1, MOC n_jobs=1) · spawn · 스레드 환경변수 5종=1 · 남은 2110 task
+2026-07-29 00:16:37 KST | [진행] 세션 완주 1 · 롤링 처리량 0.0 perm/h · 워커 합계 peak RSS 30.52/38.4 GiB · power_excursion 0
+2026-07-29 00:16:46 KST | [G1+G2] 단독(w=1) vs 풀(w=18) oof_sha256 동일 = **True** — 중복 방지를 위해 풀 결과 1건만 checkpoint 기록
+2026-07-29 00:38:22 KST | [진행] 세션 완주 25 · 롤링 처리량 66.2 perm/h · 워커 합계 peak RSS 30.86/38.4 GiB · power_excursion 0
+2026-07-29 01:00:18 KST | [진행] 세션 완주 50 · 롤링 처리량 67.3 perm/h · 워커 합계 peak RSS 30.87/38.4 GiB · power_excursion 0
+2026-07-29 01:42:59 KST | [진행] 세션 완주 75 · 롤링 처리량 45.5 perm/h · 워커 합계 peak RSS 30.89/38.4 GiB · power_excursion 0
+2026-07-29 02:05:07 KST | [진행] 세션 완주 100 · 롤링 처리량 45.4 perm/h · 워커 합계 peak RSS 30.90/38.4 GiB · power_excursion 0
+2026-07-29 02:27:19 KST | [진행] 세션 완주 125 · 롤링 처리량 66.4 perm/h · 워커 합계 peak RSS 30.90/38.4 GiB · power_excursion 0
+2026-07-29 03:09:38 KST | [진행] 세션 완주 150 · 롤링 처리량 45.6 perm/h · 워커 합계 peak RSS 30.92/38.4 GiB · power_excursion 0
+2026-07-29 03:32:22 KST | [진행] 세션 완주 175 · 롤링 처리량 45.3 perm/h · 워커 합계 peak RSS 30.92/38.4 GiB · power_excursion 0
+2026-07-29 04:13:26 KST | [진행] 세션 완주 200 · 롤링 처리량 46.1 perm/h · 워커 합계 peak RSS 30.94/38.4 GiB · power_excursion 0
+2026-07-29 04:36:26 KST | [진행] 세션 완주 225 · 롤링 처리량 45.9 perm/h · 워커 합계 peak RSS 30.94/38.4 GiB · power_excursion 0
+2026-07-29 04:59:32 KST | [진행] 세션 완주 250 · 롤링 처리량 64.6 perm/h · 워커 합계 peak RSS 30.94/38.4 GiB · power_excursion 0
+2026-07-29 05:40:36 KST | [진행] 세션 완주 275 · 롤링 처리량 46.1 perm/h · 워커 합계 peak RSS 30.94/38.4 GiB · power_excursion 0
+2026-07-29 06:04:00 KST | [진행] 세션 완주 300 · 롤링 처리량 45.6 perm/h · 워커 합계 peak RSS 30.94/38.4 GiB · power_excursion 0
+2026-07-29 06:43:15 KST | [진행] 세션 완주 325 · 롤링 처리량 47.3 perm/h · 워커 합계 peak RSS 30.94/38.4 GiB · power_excursion 0
+2026-07-29 07:07:26 KST | [진행] 세션 완주 350 · 롤링 처리량 46.8 perm/h · 워커 합계 peak RSS 30.94/38.4 GiB · power_excursion 0
+2026-07-29 07:31:30 KST | [진행] 세션 완주 375 · 롤링 처리량 62.1 perm/h · 워커 합계 peak RSS 30.94/38.4 GiB · power_excursion 0
+2026-07-29 08:10:26 KST | [정지] 사유=stop_file — 신규 디스패치 중단, 진행 중 17개 완주 대기(최대 ≈23분)
+2026-07-29 08:11:45 KST | [진행] 세션 완주 400 · 롤링 처리량 46.1 perm/h · 워커 합계 peak RSS 30.94/38.4 GiB · power_excursion 0
+2026-07-29 08:19:59 KST | [세션 #1] 종료 — 사유=stop_file · 세션 완주 415 · 누계 415/2110 · wall 8.70h · 워커 18 · sealed 불변=True · power_excursion=0
+2026-07-29 08:19:59 KST | [세션 #1] graceful_stop=True
+2026-07-29 17:38:05 KST | ==============================================================================
+2026-07-29 17:38:05 KST | [블록 F] §13-4 재배치 null **본런** 시작 — 공개는 개수·해시·시간·메모리·PASS/FAIL 뿐
+2026-07-29 17:38:05 KST | [redaction] p_emp·MC SE·유의 여부·null 분포·T_obs·T_b·AP·Δ 는 전부 _sealed/ (개봉 = 성공판정 단계 일괄 · docs/33 항목18)
+2026-07-29 17:38:05 KST | [caffeinate] -dimsu -w 25269 기동(pid=25277)
+2026-07-29 17:38:05 KST | [STOP] 이전 세션의 STOP 파일 삭제(재개) — 정지하려면 다시 touch 하십시오.
+2026-07-29 17:38:05 KST | [G0] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치=True(11) · null_generator 90886abce256a130 · 파티션 CSV 2종 일치 · NULL_B=1000
+2026-07-29 17:38:05 KST | [sealed guard] 시작 스냅샷 12종 기록
+2026-07-29 17:38:05 KST | [seed 격리] PASS — 총 2110 task · 예약/프로브 seed 와 교집합 0
+2026-07-29 17:38:05 KST | [M1b] §13-3 sealed oof_M1b.npz 1회 기계 판독 — 전 permutation 재사용(값 미출력)
+2026-07-29 17:38:05 KST | [게이트 축약] 재개 + 환경 지문 완전 일치 → G3 identity · G1/G2 재실행 생략 (첫 실행 인용: 불일치 원소 0/404040 · 2026-07-28 23:46:31 KST)
+2026-07-29 17:38:05 KST | [본런] 총 2110 · 완주 415 · 남은 1695 · 세션 #2 시작
+2026-07-29 17:38:05 KST | [G4] 라이브 RAM 게이트 가동 — 예산 38.4 GiB · 10초 주기 샘플
+2026-07-29 17:38:05 KST | [전원] 감시 가동 — 60초 주기 pmset 샘플 (배터리 5분 연속 시 정상 정지)
+2026-07-29 17:38:05 KST | [풀] 워커 18 × (RF n_jobs=1, MOC n_jobs=1) · spawn · 스레드 환경변수 5종=1 · 남은 1695 task
+2026-07-29 17:58:58 KST | [진행] 세션 완주 1 · 롤링 처리량 0.0 perm/h · 워커 합계 peak RSS 30.20/38.4 GiB · power_excursion 0
+2026-07-29 18:20:51 KST | [진행] 세션 완주 25 · 롤링 처리량 65.8 perm/h · 워커 합계 peak RSS 30.20/38.4 GiB · power_excursion 0
+2026-07-29 18:42:37 KST | [진행] 세션 완주 50 · 롤링 처리량 67.4 perm/h · 워커 합계 peak RSS 30.28/38.4 GiB · power_excursion 0
+2026-07-29 19:23:07 KST | [진행] 세션 완주 75 · 롤링 처리량 47.3 perm/h · 워커 합계 peak RSS 30.28/38.4 GiB · power_excursion 0
+2026-07-29 19:23:43 KST | [정지] 사유=stop_file — 신규 디스패치 중단, 진행 중 17개 완주 대기(최대 ≈23분)
+2026-07-29 19:33:39 KST | [세션 #2] 종료 — 사유=stop_file · 세션 완주 94 · 누계 509/2110 · wall 1.93h · 워커 18 · sealed 불변=True · power_excursion=0
+2026-07-29 19:33:39 KST | [세션 #2] graceful_stop=True
+2026-07-29 20:32:19 KST | ==============================================================================
+2026-07-29 20:32:19 KST | [블록 F] §13-4 재배치 null **본런** 시작 — 공개는 개수·해시·시간·메모리·PASS/FAIL 뿐
+2026-07-29 20:32:19 KST | [redaction] p_emp·MC SE·유의 여부·null 분포·T_obs·T_b·AP·Δ 는 전부 _sealed/ (개봉 = 성공판정 단계 일괄 · docs/33 항목18)
+2026-07-29 20:32:19 KST | [caffeinate] -dimsu -w 29539 기동(pid=29541)
+2026-07-29 20:32:19 KST | [STOP] 이전 세션의 STOP 파일 삭제(재개) — 정지하려면 다시 touch 하십시오.
+2026-07-29 20:32:19 KST | [G0] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치=True(11) · null_generator 90886abce256a130 · 파티션 CSV 2종 일치 · NULL_B=1000
+2026-07-29 20:32:19 KST | [sealed guard] 시작 스냅샷 12종 기록
+2026-07-29 20:32:19 KST | [seed 격리] PASS — 총 2110 task · 예약/프로브 seed 와 교집합 0
+2026-07-29 20:32:20 KST | [M1b] §13-3 sealed oof_M1b.npz 1회 기계 판독 — 전 permutation 재사용(값 미출력)
+2026-07-29 20:32:20 KST | [게이트 축약] 재개 + 환경 지문 완전 일치 → G3 identity · G1/G2 재실행 생략 (첫 실행 인용: 불일치 원소 0/404040 · 2026-07-28 23:46:31 KST)
+2026-07-29 20:32:20 KST | [본런] 총 2110 · 완주 509 · 남은 1601 · 세션 #3 시작
+2026-07-29 20:32:20 KST | [G4] 라이브 RAM 게이트 가동 — 예산 38.4 GiB · 10초 주기 샘플
+2026-07-29 20:32:20 KST | [전원] 감시 가동 — 60초 주기 pmset 샘플 (배터리 5분 연속 시 정상 정지)
+2026-07-29 20:32:20 KST | [풀] 워커 18 × (RF n_jobs=1, MOC n_jobs=1) · spawn · 스레드 환경변수 5종=1 · 남은 1601 task
+2026-07-29 20:57:25 KST | [진행] 세션 완주 1 · 롤링 처리량 0.0 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-29 21:23:38 KST | [진행] 세션 완주 25 · 롤링 처리량 54.9 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-29 21:45:18 KST | [진행] 세션 완주 50 · 롤링 처리량 61.4 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-29 22:27:39 KST | [진행] 세션 완주 75 · 롤링 처리량 45.9 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-29 22:49:53 KST | [진행] 세션 완주 100 · 롤링 처리량 45.7 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-29 23:12:54 KST | [진행] 세션 완주 125 · 롤링 처리량 65.5 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-29 23:55:20 KST | [진행] 세션 완주 150 · 롤링 처리량 45.0 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 00:17:45 KST | [진행] 세션 완주 175 · 롤링 처리량 45.6 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 00:59:23 KST | [진행] 세션 완주 200 · 롤링 처리량 45.9 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 01:22:36 KST | [진행] 세션 완주 225 · 롤링 처리량 45.5 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 01:46:11 KST | [진행] 세션 완주 250 · 롤링 처리량 63.0 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 02:27:36 KST | [진행] 세션 완주 275 · 롤링 처리량 45.3 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 02:50:19 KST | [진행] 세션 완주 300 · 롤링 처리량 46.5 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 03:30:04 KST | [진행] 세션 완주 325 · 롤링 처리량 47.1 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 03:54:46 KST | [진행] 세션 완주 350 · 롤링 처리량 45.7 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 04:19:18 KST | [진행] 세션 완주 375 · 롤링 처리량 60.6 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 04:58:43 KST | [진행] 세션 완주 400 · 롤링 처리량 46.0 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 05:22:22 KST | [진행] 세션 완주 425 · 롤링 처리량 46.7 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 05:49:16 KST | [진행] 세션 완주 450 · 롤링 처리량 58.9 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 06:26:19 KST | [진행] 세션 완주 475 · 롤링 처리량 46.1 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 06:50:07 KST | [진행] 세션 완주 500 · 롤링 처리량 59.7 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 07:28:30 KST | [진행] 세션 완주 525 · 롤링 처리량 47.4 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 07:54:12 KST | [진행] 세션 완주 550 · 롤링 처리량 47.2 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 08:09:33 KST | [정지] 사유=stop_file — 신규 디스패치 중단, 진행 중 17개 완주 대기(최대 ≈23분)
+2026-07-30 08:16:40 KST | [진행] 세션 완주 575 · 롤링 처리량 63.6 perm/h · 워커 합계 peak RSS 29.85/38.4 GiB · power_excursion 0
+2026-07-30 08:17:07 KST | [세션 #3] 종료 — 사유=stop_file · 세션 완주 576 · 누계 1085/2110 · wall 11.75h · 워커 18 · sealed 불변=True · power_excursion=0
+2026-07-30 08:17:07 KST | [세션 #3] graceful_stop=True
+2026-07-30 17:22:45 KST | ==============================================================================
+2026-07-30 17:22:45 KST | [블록 F] §13-4 재배치 null **본런** 시작 — 공개는 개수·해시·시간·메모리·PASS/FAIL 뿐
+2026-07-30 17:22:45 KST | [redaction] p_emp·MC SE·유의 여부·null 분포·T_obs·T_b·AP·Δ 는 전부 _sealed/ (개봉 = 성공판정 단계 일괄 · docs/33 항목18)
+2026-07-30 17:22:45 KST | [caffeinate] -dimsu -w 11477 기동(pid=11485)
+2026-07-30 17:22:45 KST | [STOP] 이전 세션의 STOP 파일 삭제(재개) — 정지하려면 다시 touch 하십시오.
+2026-07-30 17:22:45 KST | [G0] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치=True(11) · null_generator 90886abce256a130 · 파티션 CSV 2종 일치 · NULL_B=1000
+2026-07-30 17:22:45 KST | [sealed guard] 시작 스냅샷 12종 기록
+2026-07-30 17:22:45 KST | [seed 격리] PASS — 총 2110 task · 예약/프로브 seed 와 교집합 0
+2026-07-30 17:22:45 KST | [M1b] §13-3 sealed oof_M1b.npz 1회 기계 판독 — 전 permutation 재사용(값 미출력)
+2026-07-30 17:22:45 KST | [게이트 축약] 재개 + 환경 지문 완전 일치 → G3 identity · G1/G2 재실행 생략 (첫 실행 인용: 불일치 원소 0/404040 · 2026-07-28 23:46:31 KST)
+2026-07-30 17:22:45 KST | [본런] 총 2110 · 완주 1085 · 남은 1025 · 세션 #4 시작
+2026-07-30 17:22:45 KST | [G4] 라이브 RAM 게이트 가동 — 예산 38.4 GiB · 10초 주기 샘플
+2026-07-30 17:22:45 KST | [전원] 감시 가동 — 60초 주기 pmset 샘플 (배터리 5분 연속 시 정상 정지)
+2026-07-30 17:22:45 KST | [풀] 워커 18 × (RF n_jobs=1, MOC n_jobs=1) · spawn · 스레드 환경변수 5종=1 · 남은 1025 task
+2026-07-30 17:42:18 KST | [진행] 세션 완주 1 · 처리량 55.3 perm/h · 워커 합계 peak RSS 32.22/38.4 GiB · power_excursion 0
+2026-07-30 18:02:51 KST | [진행] 세션 완주 25 · 처리량 52.9 perm/h · 워커 합계 peak RSS 32.41/38.4 GiB · power_excursion 0
+2026-07-30 18:23:07 KST | [진행] 세션 완주 50 · 처리량 52.4 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 19:02:19 KST | [진행] 세션 완주 75 · 처리량 52.4 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 19:22:28 KST | [진행] 세션 완주 100 · 처리량 53.5 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 19:43:00 KST | [진행] 세션 완주 125 · 처리량 53.6 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 20:22:36 KST | [진행] 세션 완주 150 · 처리량 53.1 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 20:43:29 KST | [진행] 세션 완주 175 · 처리량 52.9 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 21:22:29 KST | [진행] 세션 완주 200 · 처리량 52.6 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 21:44:21 KST | [진행] 세션 완주 225 · 처리량 52.5 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 22:05:45 KST | [진행] 세션 완주 250 · 처리량 52.5 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 22:45:13 KST | [진행] 세션 완주 275 · 처리량 52.4 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 23:06:40 KST | [진행] 세션 완주 300 · 처리량 52.3 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-30 23:45:07 KST | [진행] 세션 완주 325 · 처리량 52.0 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 00:06:58 KST | [진행] 세션 완주 350 · 처리량 52.0 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 00:28:26 KST | [진행] 세션 완주 375 · 처리량 52.4 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 01:05:51 KST | [진행] 세션 완주 400 · 처리량 53.3 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 01:27:09 KST | [진행] 세션 완주 425 · 처리량 53.3 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 01:50:34 KST | [진행] 세션 완주 450 · 처리량 53.8 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 02:25:54 KST | [진행] 세션 완주 475 · 처리량 53.8 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 02:47:15 KST | [진행] 세션 완주 500 · 처리량 54.1 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 03:23:23 KST | [진행] 세션 완주 525 · 처리량 54.0 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 03:45:49 KST | [진행] 세션 완주 550 · 처리량 54.0 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 04:07:38 KST | [진행] 세션 완주 575 · 처리량 54.2 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 04:43:37 KST | [진행] 세션 완주 600 · 처리량 54.2 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 05:05:41 KST | [진행] 세션 완주 625 · 처리량 54.1 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 05:40:16 KST | [진행] 세션 완주 650 · 처리량 54.1 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 06:03:24 KST | [진행] 세션 완주 675 · 처리량 54.2 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 06:25:55 KST | [진행] 세션 완주 700 · 처리량 54.2 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 07:01:01 KST | [진행] 세션 완주 725 · 처리량 54.3 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 07:22:57 KST | [진행] 세션 완주 750 · 처리량 54.3 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 07:56:55 KST | [진행] 세션 완주 775 · 처리량 54.3 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 08:02:18 KST | [정지] 사유=stop_file — 신규 디스패치 중단, 진행 중 17개 완주 대기(최대 ≈23분)
+2026-07-31 08:15:18 KST | [진행] 세션 완주 800 · 처리량 54.3 perm/h · 워커 합계 peak RSS 32.51/38.4 GiB · power_excursion 0
+2026-07-31 08:15:25 KST | [세션 #4] 종료 — 사유=stop_file · 세션 완주 801 · 누계 1886/2110 · wall 14.88h · 워커 18 · sealed 불변=True · power_excursion=0
+2026-07-31 08:15:25 KST | [세션 #4] graceful_stop=True
+2026-07-31 16:32:10 KST | ==============================================================================
+2026-07-31 16:32:10 KST | [블록 F] §13-4 재배치 null **본런** 시작 — 공개는 개수·해시·시간·메모리·PASS/FAIL 뿐
+2026-07-31 16:32:10 KST | [redaction] p_emp·MC SE·유의 여부·null 분포·T_obs·T_b·AP·Δ 는 전부 _sealed/ (개봉 = 성공판정 단계 일괄 · docs/33 항목18)
+2026-07-31 16:32:10 KST | [caffeinate] -dimsu -w 31047 기동(pid=31054)
+2026-07-31 16:32:10 KST | [STOP] 이전 세션의 STOP 파일 삭제(재개) — 정지하려면 다시 touch 하십시오.
+2026-07-31 16:32:10 KST | [G0] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치=True(11) · null_generator 90886abce256a130 · 파티션 CSV 2종 일치 · NULL_B=1000
+2026-07-31 16:32:10 KST | [sealed guard] 시작 스냅샷 12종 기록
+2026-07-31 16:32:10 KST | [seed 격리] PASS — 총 2110 task · 예약/프로브 seed 와 교집합 0
+2026-07-31 16:32:11 KST | [M1b] §13-3 sealed oof_M1b.npz 1회 기계 판독 — 전 permutation 재사용(값 미출력)
+2026-07-31 16:32:11 KST | [게이트 축약] 재개 + 환경 지문 완전 일치 → G3 identity · G1/G2 재실행 생략 (첫 실행 인용: 불일치 원소 0/404040 · 2026-07-28 23:46:31 KST)
+2026-07-31 16:32:11 KST | [본런] 총 2110 · 완주 1886 · 남은 224 · 세션 #5 시작
+2026-07-31 16:32:11 KST | [G4] 라이브 RAM 게이트 가동 — 예산 38.4 GiB · 10초 주기 샘플
+2026-07-31 16:32:11 KST | [전원] 감시 가동 — 60초 주기 pmset 샘플 (배터리 5분 연속 시 정상 정지)
+2026-07-31 16:32:11 KST | [풀] 워커 18 × (RF n_jobs=1, MOC n_jobs=1) · spawn · 스레드 환경변수 5종=1 · 남은 224 task
+2026-07-31 16:53:10 KST | [진행] 세션 완주 1 · 처리량 51.5 perm/h · 워커 합계 peak RSS 31.34/38.4 GiB · power_excursion 0
+2026-07-31 17:14:43 KST | [진행] 세션 완주 25 · 처리량 50.4 perm/h · 워커 합계 peak RSS 31.34/38.4 GiB · power_excursion 0
+2026-07-31 17:36:06 KST | [진행] 세션 완주 50 · 처리량 50.1 perm/h · 워커 합계 peak RSS 31.34/38.4 GiB · power_excursion 0
+2026-07-31 18:16:38 KST | [진행] 세션 완주 75 · 처리량 50.1 perm/h · 워커 합계 peak RSS 31.34/38.4 GiB · power_excursion 0
+2026-07-31 18:37:31 KST | [진행] 세션 완주 100 · 처리량 50.7 perm/h · 워커 합계 peak RSS 31.36/38.4 GiB · power_excursion 0
+2026-07-31 18:58:11 KST | [진행] 세션 완주 125 · 처리량 52.0 perm/h · 워커 합계 peak RSS 31.36/38.4 GiB · power_excursion 0
+2026-07-31 19:37:43 KST | [진행] 세션 완주 150 · 처리량 52.7 perm/h · 워커 합계 peak RSS 31.36/38.4 GiB · power_excursion 0
+2026-07-31 19:58:19 KST | [진행] 세션 완주 175 · 처리량 53.1 perm/h · 워커 합계 peak RSS 31.36/38.4 GiB · power_excursion 0
+2026-07-31 20:37:29 KST | [정지] 사유=stop_file — 신규 디스패치 중단, 진행 중 17개 완주 대기(최대 ≈23분)
+2026-07-31 20:37:38 KST | [진행] 세션 완주 200 · 처리량 53.0 perm/h · 워커 합계 peak RSS 31.36/38.4 GiB · power_excursion 0
+2026-07-31 20:38:57 KST | [세션 #5] 종료 — 사유=stop_file · 세션 완주 216 · 누계 2102/2110 · wall 4.11h · 워커 18 · sealed 불변=True · power_excursion=0
+2026-07-31 20:38:57 KST | [세션 #5] graceful_stop=True
+2026-07-31 21:05:43 KST | ==============================================================================
+2026-07-31 21:05:43 KST | [블록 F] §13-4 재배치 null **본런** 시작 — 공개는 개수·해시·시간·메모리·PASS/FAIL 뿐
+2026-07-31 21:05:43 KST | [redaction] p_emp·MC SE·유의 여부·null 분포·T_obs·T_b·AP·Δ 는 전부 _sealed/ (개봉 = 성공판정 단계 일괄 · docs/33 항목18)
+2026-07-31 21:05:43 KST | [caffeinate] -dimsu -w 36346 기동(pid=36352)
+2026-07-31 21:05:43 KST | [STOP] 이전 세션의 STOP 파일 삭제(재개) — 정지하려면 다시 touch 하십시오.
+2026-07-31 21:05:43 KST | [G0] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치=True(11) · null_generator 90886abce256a130 · 파티션 CSV 2종 일치 · NULL_B=1000
+2026-07-31 21:05:43 KST | [sealed guard] 시작 스냅샷 12종 기록
+2026-07-31 21:05:43 KST | [seed 격리] PASS — 총 2110 task · 예약/프로브 seed 와 교집합 0
+2026-07-31 21:05:43 KST | [M1b] §13-3 sealed oof_M1b.npz 1회 기계 판독 — 전 permutation 재사용(값 미출력)
+2026-07-31 21:05:43 KST | [게이트 축약] 재개 + 환경 지문 완전 일치 → G3 identity · G1/G2 재실행 생략 (첫 실행 인용: 불일치 원소 0/404040 · 2026-07-28 23:46:31 KST)
+2026-07-31 21:05:43 KST | [본런] 총 2110 · 완주 2102 · 남은 8 · 세션 #6 시작
+2026-07-31 21:05:43 KST | [G4] 라이브 RAM 게이트 가동 — 예산 38.4 GiB · 10초 주기 샘플
+2026-07-31 21:05:43 KST | [전원] 감시 가동 — 60초 주기 pmset 샘플 (배터리 5분 연속 시 정상 정지)
+2026-07-31 21:05:43 KST | [풀] 워커 18 × (RF n_jobs=1, MOC n_jobs=1) · spawn · 스레드 환경변수 5종=1 · 남은 8 task
+2026-07-31 21:18:13 KST | [진행] 세션 완주 1 · 처리량 86.7 perm/h · 워커 합계 peak RSS 17.52/38.4 GiB · power_excursion 0
+2026-07-31 21:18:17 KST | [세션 #6] 종료 — 사유=done · 세션 완주 8 · 누계 2110/2110 · wall 0.21h · 워커 18 · sealed 불변=True · power_excursion=0
+2026-07-31 21:18:17 KST | [세션 #6] graceful_stop=True
+2026-08-01 01:08:11 KST | ==============================================================================
+2026-08-01 01:08:11 KST | [집계] §13-4 — 하드 assert 전항 통과 시에만 empirical_p 호출(부분집계 금지)
+2026-08-01 01:08:11 KST | [집계] ❌ 이미 집계된 산출물이 존재한다 — ../../../../../private/tmp/claude-501/-Users-<USER>-Desktop-Papers-DTI-ADR-Prediction/dbc731e1-cc03-4766-9989-35684e7a686f/scratchpad/dummy_null_result.json (sha256 3c2f85ce76ce38bbe210971ae5ca4e42e627e021f25aa118158c41b92db05c45). **덮어쓰지 않고 중단**한다. 재집계는 사유를 docs/33 에 기록한 뒤 별도 지시로만 수행한다(결과 조회 후 재집계 = selective 분석 위험).
+2026-08-01 01:17:32 KST | ==============================================================================
+2026-08-01 01:17:32 KST | [집계] §13-4 — 하드 assert 전항 통과 시에만 empirical_p 호출(부분집계 금지)
+2026-08-01 01:17:32 KST | [G0] PASS — ladder_freeze b885585aefbabb32 · SAP manifest 756d485feb4715e9 · 11모듈 일치=True(11) · null_generator 90886abce256a130 · 파티션 CSV 2종 일치 · NULL_B=1000
+2026-08-01 01:17:32 KST | [집계 assert] global      unique 1000/1000 · 중복 0 · 누락 0 · 범위밖 0 → PASS
+2026-08-01 01:17:32 KST | [집계 assert] family      unique 1000/1000 · 중복 0 · 누락 0 · 범위밖 0 → PASS
+2026-08-01 01:17:32 KST | [집계 assert] family_ALT  unique 100/100 · 중복 0 · 누락 0 · 범위밖 0 → PASS
+2026-08-01 01:17:32 KST | [집계 assert] global_ALT  unique 10/10 · 중복 0 · 누락 0 · 범위밖 0 → PASS
+2026-08-01 01:17:32 KST | [집계 assert] B == NULL_B == 1000 → PASS
+2026-08-01 01:17:32 KST | [집계 assert] 전항 PASS — empirical_p 호출 진입
+2026-08-01 01:17:33 KST | [T_obs] 반복1(seed 201) sealed OOF 기준 M2b macro AP 산출 — 값 미출력(sealed)
+2026-08-01 01:17:33 KST | [p_emp] global — empirical_p 호출 1회 완료 (B=1000) · 값은 sealed
+2026-08-01 01:17:33 KST | [p_emp] family — empirical_p 호출 1회 완료 (B=1000) · 값은 sealed
+2026-08-01 01:17:33 KST | [음성대조] global_ALT vs primary global oof_sha256 동일 = **True** (10개 비교) — 불일치는 하네스 버그 신호
+2026-08-01 01:17:33 KST | [집계] 완료 — _sealed/null_result.json sha256 9b7b47e6a495585da5a7a679d3933d5c41807f727af699d0f50751edf359df4d (값은 비공개)
