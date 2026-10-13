@@ -17,5 +17,8 @@ authors:
     affiliation: Department of Medical IT, Inje University
     orcid: https://orcid.org/0000-0002-7756-0263
 version: v3-plosone-v1.0
-license: MIT
+doi: 10.5281/zenodo.23345216
+license:
+  - MIT
+  - CC-BY-SA-4.0
 repository-code: https://github.com/Yeonwoo-partytonight/adr-representation-benchmark

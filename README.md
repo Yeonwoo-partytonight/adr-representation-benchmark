@@ -72,7 +72,8 @@ registered before any confirmatory result was read.
   identity in drug-label adverse drug reaction annotation: a preregistered controlled
   representation study.*
 - Preregistration (OSF): <https://osf.io/5w2uv>
-- Archived release DOI (Zenodo): `[to be added after release]`
+- Archived release (Zenodo): version DOI <https://doi.org/10.5281/zenodo.23345217>
+  (tag `v3-plosone-v1.0`); concept DOI for all versions <https://doi.org/10.5281/zenodo.23345216>
 
 Numeric results are **not** reproduced in this README. The manuscript is the authoritative
 record of every reported value.
@@ -222,7 +223,8 @@ is marked `"ledger_origin": "public_only_no_sealed_ledger"`.
 ### Citation
 
 See `CITATION.cff`. Cite the manuscript and, where the archived snapshot matters, the Zenodo
-DOI for tag `v3-plosone-v1.0` (`[to be added after release]`).
+DOI for tag `v3-plosone-v1.0` (<https://doi.org/10.5281/zenodo.23345217>). The concept DOI
+<https://doi.org/10.5281/zenodo.23345216> resolves to the latest archived version.
 
 ### Licensing (v3)
 
