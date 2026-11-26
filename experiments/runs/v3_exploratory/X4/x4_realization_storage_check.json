@@ -1,0 +1,18 @@
+{
+  "_doc": "X4 선택항목 — realization 별 target 재배정 정보 저장 여부. 코드 근거.",
+  "ckpt_fields_declaration": {
+    "file": "v3_Multimodal/src/null_main_run.py",
+    "line": 545,
+    "text": "CKPT_FIELDS = [\"mode\", \"seed\", \"oof_sha256\", \"macro_AP\", \"delta\", \"wall_s\", \"cpu_s\",\n               \"peak_rss\", \"ts_kst\", \"enters_p_emp\", \"session_seq\", \"workers\"]"
+  },
+  "permutation_report_mentions": [
+    {
+      "file": "v3_Multimodal/src/null_main_run.py",
+      "line": 535,
+      "text": "\"permutation_report\": rep,"
+    }
+  ],
+  "verdict": "미저장 — ckpt_append() 는 CKPT_FIELDS 로 사영(project)하며 permutation_report 는 그 목록에 없다. 따라서 realization 별 재배정(어느 target 이 어디로 갔는지) 은 어느 산출물에도 남지 않았다.",
+  "consequence": "대형 family 별 재배정 비율과의 관계 표는 생략(지시서 조건부 항목).",
+  "remark": "재배정은 seed 로 결정적이라 원리상 재생성 가능하나, 재생성은 '기존 산출물 읽기·재집계' 범위를 넘으므로 수행하지 않는다."
+}

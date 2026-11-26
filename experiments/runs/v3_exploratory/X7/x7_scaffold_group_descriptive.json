@@ -1,0 +1,66 @@
+{
+  "_doc": "블록 CN X7(기술통계) — 732 scaffold group 크기 분포 + Kish 유효 수. master_X 만 사용 · 봉인 접근 0 · p-value 0.",
+  "source": "data/processed/master_X.parquet · confirmatory_oof_rep1.scaffold_of (재구현 0)",
+  "n_rows": 1092,
+  "n_groups": 732,
+  "size_max": 78,
+  "size_min": 1,
+  "size_median": 1.0,
+  "size_mean": 1.4918032786885247,
+  "n_singleton_groups": 627,
+  "kish_n_eff_clusters": 85.34669338677355,
+  "kish_expected_instruction": 85.3,
+  "kish_matches_expected": true,
+  "kish_formula": "(Σs)²/Σs² — sap/bootstrap.py:51-54 n_eff_clusters",
+  "top5_groups": [
+    {
+      "rank": 1,
+      "size": 78,
+      "scaffold_smiles": "c1ccccc1",
+      "is_acyclic_empty_scaffold": false
+    },
+    {
+      "rank": 2,
+      "size": 77,
+      "scaffold_smiles": "",
+      "is_acyclic_empty_scaffold": true
+    },
+    {
+      "rank": 3,
+      "size": 17,
+      "scaffold_smiles": "O=C1C=CC2C(=C1)CCC1C3CCCC3CCC21",
+      "is_acyclic_empty_scaffold": false
+    },
+    {
+      "rank": 4,
+      "size": 10,
+      "scaffold_smiles": "O=C1C=C2CCC3C4CCCC4CCC3C2CC1",
+      "is_acyclic_empty_scaffold": false
+    },
+    {
+      "rank": 5,
+      "size": 7,
+      "scaffold_smiles": "O=C1C=CC2C(=O)C3=Cc4ccccc4CC3CC2C1",
+      "is_acyclic_empty_scaffold": false
+    }
+  ],
+  "acyclic_group": {
+    "definition": "scaffold_of() 가 빈 문자열을 돌려주는 group (= Murcko scaffold 가 비어 있는 비고리 분자)",
+    "n_groups": 1,
+    "n_drugs": 77,
+    "frac_of_rows": 0.07051282051282051
+  },
+  "size_histogram": {
+    "1": 627,
+    "2": 60,
+    "3": 19,
+    "4": 11,
+    "5": 6,
+    "6": 3,
+    "7": 2,
+    "10": 1,
+    "17": 1,
+    "77": 1,
+    "78": 1
+  }
+}

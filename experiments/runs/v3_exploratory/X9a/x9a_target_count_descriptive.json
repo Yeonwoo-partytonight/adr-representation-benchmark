@@ -1,0 +1,45 @@
+{
+  "_doc": "블록 CN X9a(기술통계) — 동결 drug-target mapping 의 mapped 847 약물 target 수 분포와 3분위 경계. 봉인 접근 0 · p-value 0.",
+  "source": [
+    "data/processed/drug_n_targets_meanpool.npy",
+    "data/processed/drug_target_mask_meanpool.npy"
+  ],
+  "definition": "A5 감사 정의 — 약물별 unique human single-protein UniProt accession(임베딩 보유) 수 (experiments/audits/A5_target_count_check.json)",
+  "n_rows_total": 1092,
+  "n_mapped": 847,
+  "n_unmapped": 245,
+  "median": 7.0,
+  "iqr": [
+    3.0,
+    16.5
+  ],
+  "iqr_width": 13.5,
+  "max": 331.0,
+  "min": 1.0,
+  "mean": 14.891381345926801,
+  "tertile_boundaries": {
+    "t33.3": 4.0,
+    "t66.7": 12.0
+  },
+  "tertile_rule": "np.percentile(v,[100/3,200/3]) 경계 · np.digitize(right=False)",
+  "tertiles": {
+    "T1": {
+      "n_drugs": 247,
+      "n_targets_min": 1.0,
+      "n_targets_max": 3.0,
+      "n_targets_median": 2.0
+    },
+    "T2": {
+      "n_drugs": 302,
+      "n_targets_min": 4.0,
+      "n_targets_max": 11.0,
+      "n_targets_median": 7.0
+    },
+    "T3": {
+      "n_drugs": 298,
+      "n_targets_min": 12.0,
+      "n_targets_max": 331.0,
+      "n_targets_median": 24.0
+    }
+  }
+}

@@ -1,0 +1,3 @@
+embedding,file,n_vectors,cosine_mean,cosine_median,pc1_evr,pca64_cum_evr,n_dims_90pct,per_dim_std_mean
+confirmatory_input_meanpool,data/processed/drug_target_emb_meanpool.npy,847,0.934474,0.952811,0.472823,0.970461,18,0.018181
+pilot_era_topk_weighted,data/processed/drug_target_emb.npy,847,0.912518,0.930082,0.485997,0.968002,18,0.020969

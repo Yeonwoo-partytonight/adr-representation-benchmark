@@ -1,0 +1,36 @@
+[전원] Now drawing from 'AC Power' | Wattage = 94W Current = 4690mA Voltage = 20000mV AdapterID = 28674 Manufacturer = Apple Inc. Family Code = 0xe000400a Serial String = <DEVICE-SERIAL> Adapter Name = 96W USB-C Power Adapter Hardware Version = 1.0 Firmware Version = 01090058
+[적재] 봉인 consensus 7종 + master_X/Y
+  [access.log +1] experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log
+  [access.log +1] experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log
+  [access.log +1] experiments/runs/v3_consensus_rep123/_sealed/access.log
+  [access.log +1] experiments/runs/v3_consensus_rep123/_sealed/access.log
+  [access.log +1] experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log
+  [access.log +1] experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log
+  [access.log +1] experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log
+  y (1092, 370) · groups 732 · eligible 370
+  비고리 제외 행 77 · mapped 847
+[X5-②] 가중 Δ = +0.0078066 (확장 13972 행)
+[X4] checkpoint.jsonl sha256 대조 OK (c196ab5a5555dbac…)
+  [access.log +1] experiments/runs/v3_null_MAIN/_sealed/access.log
+[X4] 실현값 집계 완료 (4 mode)
+[계약] 전체 19 · 완료 0 · 남은 19 · workers 12
+  [ 1/19] X9a_T1_M2b_minus_M1b                 Δ=-0.0069889  CI[-0.0263752,+0.0086871] 2187s
+  [ 2/19] X7_excl_acyclic_M2b_minus_M1b        Δ=-0.0074565  CI[-0.0175211,-0.0001444] 2989s
+  [ 3/19] X7_excl_acyclic_M2b_minus_P-ID       Δ=-0.0201002  CI[-0.0281131,-0.0133185] 2997s
+  [ 4/19] X1_P-ID_minus_M1b                    Δ=+0.0122737  CI[+0.0077550,+0.0158510] 3056s
+  [ 5/19] X1_M1b_minus_M1                      Δ=+0.0088132  CI[+0.0060687,+0.0115050] 3059s
+  [ 6/19] X1_C-CAP_minus_M1b                   Δ=-0.0300912  CI[-0.0378247,-0.0218029] 3059s
+  [ 7/19] X1_P-FAM_minus_M1b                   Δ=+0.0020484  CI[-0.0000315,+0.0039628] 3061s
+  [ 8/19] S0-2_C1                              Δ=-0.0063242  CI[-0.0163198,+0.0005022] 3061s
+  [ 9/19] X1_M1b_minus_M0                      Δ=+0.0118074  CI[+0.0082897,+0.0155299] 3066s
+  [10/19] S0-2_C2                              Δ=-0.0185979  CI[-0.0265898,-0.0120838] 3067s
+  [11/19] X1_M1_minus_M0                       Δ=+0.0029942  CI[+0.0010590,+0.0050296] 3071s
+  [12/19] X9a_T1_M2b_minus_P-ID                Δ=-0.0085184  CI[-0.0222848,+0.0064071] 4189s
+  [13/19] X9a_T2_M2b_minus_M1b                 Δ=+0.0069216  CI[-0.0066017,+0.0200157] 4918s
+  [14/19] X9a_T2_M2b_minus_P-ID                Δ=-0.0124208  CI[-0.0242706,+0.0003958] 4932s
+  [15/19] X9a_T3_M2b_minus_P-ID                Δ=-0.0226132  CI[-0.0335945,-0.0148183] 5000s
+  [16/19] X9a_T3_M2b_minus_M1b                 Δ=-0.0019205  CI[-0.0111131,+0.0079418] 5002s
+  [17/19] X12_mapped847_M2b_minus_M1b          Δ=-0.0039432  CI[-0.0139330,+0.0032448] 5348s
+  [18/19] X12_mapped847_M2b_minus_P-ID         Δ=-0.0181814  CI[-0.0264007,-0.0115407] 5354s
+  [19/19] X5_sizeweighted                      Δ=-0.0063242  CI[nan,nan] 6502s
+[가드] mtime drift 0 · access.log append 8

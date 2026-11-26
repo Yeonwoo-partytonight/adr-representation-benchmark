@@ -1,0 +1,176 @@
+{
+  "_doc": "블록 CN X3 — GIN arm 별 절대 macro AP(공개 metrics) + RF consensus 절대 AP. 비등록·탐색적 기술통계. p-value 0.",
+  "gin_source": "experiments/runs/v3_unblinding/results/sealed_publish/experiments__runs__v3_gin_confirm_consensus_rep123___sealed__metrics_full.json",
+  "gin_aggregation_verbatim": {
+    "repeat_axis": "prediction-then-metric (양 family 공통)",
+    "seed_axis": "metric-then-average (GIN 전용)",
+    "consensus_operator": "sap.consensus.build_consensus 를 그대로 호출(재구현 0)",
+    "reviewer_verbatim_4_1": "정리: repeat 축 = prediction-then-metric (양 모델군 공통), seed 축 = metric-then-average (GIN 전용).",
+    "noncommutativity_verbatim_appendix": "T(z)\\approx\\sum_{g=1}^{G}(1-2z_g)e_g"
+  },
+  "gin_consensus_definition": "cell_1 = repeat 축 consensus(prediction-then-metric) 후 seed 별 macro AP · seed 축은 metric-then-average(=seed_mean)",
+  "gin_arms_present": [
+    "C-CAP",
+    "M0",
+    "M1",
+    "M1b",
+    "M2b",
+    "P-FAM",
+    "P-ID"
+  ],
+  "gin_arms_absent": [
+    "M2"
+  ],
+  "gin": {
+    "M0": {
+      "per_seed_repeat_consensus": {
+        "seed42": 0.08822146130505813,
+        "seed1": 0.09095889049322463,
+        "seed2": 0.08935264281880567
+      },
+      "seed_mean": 0.08951099820569615,
+      "n_seeds": 3
+    },
+    "M1": {
+      "per_seed_repeat_consensus": {
+        "seed42": 0.10016044599919198,
+        "seed1": 0.09576515789325972,
+        "seed2": 0.09885473563949586
+      },
+      "seed_mean": 0.09826011317731585,
+      "n_seeds": 3
+    },
+    "M1b": {
+      "per_seed_repeat_consensus": {
+        "seed42": 0.1031926395591708,
+        "seed1": 0.10577311143460076,
+        "seed2": 0.10404063369817287
+      },
+      "seed_mean": 0.10433546156398148,
+      "n_seeds": 3
+    },
+    "M2": {
+      "per_seed_repeat_consensus": {
+        "seed42": null,
+        "seed1": null,
+        "seed2": null
+      },
+      "seed_mean": null,
+      "n_seeds": 0
+    },
+    "M2b": {
+      "per_seed_repeat_consensus": {
+        "seed42": 0.11158350200962831,
+        "seed1": 0.11122189972122273,
+        "seed2": 0.11467786843347119
+      },
+      "seed_mean": 0.1124944233881074,
+      "n_seeds": 3
+    },
+    "P-ID": {
+      "per_seed_repeat_consensus": {
+        "seed42": 0.12397164489111977,
+        "seed1": 0.1212140077897446,
+        "seed2": 0.12526821362135768
+      },
+      "seed_mean": 0.12348462210074068,
+      "n_seeds": 3
+    },
+    "P-FAM": {
+      "per_seed_repeat_consensus": {
+        "seed42": 0.10465923661076099,
+        "seed1": 0.10307172399833066,
+        "seed2": 0.10226888886661196
+      },
+      "seed_mean": 0.10333328315856787,
+      "n_seeds": 3
+    },
+    "C-CAP": {
+      "per_seed_repeat_consensus": {
+        "seed42": 0.06885095305766321,
+        "seed1": 0.06875593637466722,
+        "seed2": 0.07095680362387859
+      },
+      "seed_mean": 0.06952123101873635,
+      "n_seeds": 3
+    }
+  },
+  "gin_per_repeat_per_seed": {
+    "rep1|C-CAP|seed42": 0.062252147016392645,
+    "rep1|C-CAP|seed1": 0.06334307259684228,
+    "rep1|C-CAP|seed2": 0.06570491629581773,
+    "rep1|M0|seed42": 0.076978100587904,
+    "rep1|M0|seed1": 0.08167444197168691,
+    "rep1|M0|seed2": 0.07729382234588071,
+    "rep1|M1|seed42": 0.08162635123716028,
+    "rep1|M1|seed1": 0.07845893683073257,
+    "rep1|M1|seed2": 0.0864592323547025,
+    "rep1|M1b|seed42": 0.08964756014465362,
+    "rep1|M1b|seed1": 0.0865442512019249,
+    "rep1|M1b|seed2": 0.07593933854561787,
+    "rep1|M2b|seed42": 0.10085979827660055,
+    "rep1|M2b|seed1": 0.10221055402318788,
+    "rep1|M2b|seed2": 0.10054913644829597,
+    "rep1|P-FAM|seed42": 0.08675932833629733,
+    "rep1|P-FAM|seed1": 0.08119190113824935,
+    "rep1|P-FAM|seed2": 0.08297803782949635,
+    "rep1|P-ID|seed42": 0.11158477587575709,
+    "rep1|P-ID|seed1": 0.10464879008706927,
+    "rep1|P-ID|seed2": 0.11112769980976743,
+    "rep2|C-CAP|seed42": 0.06765345364428889,
+    "rep2|C-CAP|seed1": 0.06533558670226311,
+    "rep2|C-CAP|seed2": 0.0683492313245189,
+    "rep2|M0|seed42": 0.08270239359531051,
+    "rep2|M0|seed1": 0.08011480180217169,
+    "rep2|M0|seed2": 0.07919939999443545,
+    "rep2|M1|seed42": 0.09015014266588915,
+    "rep2|M1|seed1": 0.09391858770599985,
+    "rep2|M1|seed2": 0.08492346821403278,
+    "rep2|M1b|seed42": 0.09278148661674418,
+    "rep2|M1b|seed1": 0.09126703301661622,
+    "rep2|M1b|seed2": 0.09075914256968233,
+    "rep2|M2b|seed42": 0.0995190528371008,
+    "rep2|M2b|seed1": 0.0995047568661023,
+    "rep2|M2b|seed2": 0.10316884556793786,
+    "rep2|P-FAM|seed42": 0.09104796197432294,
+    "rep2|P-FAM|seed1": 0.0881432736609794,
+    "rep2|P-FAM|seed2": 0.08905926456440061,
+    "rep2|P-ID|seed42": 0.10710095260111904,
+    "rep2|P-ID|seed1": 0.10391154768180971,
+    "rep2|P-ID|seed2": 0.10692754017169945,
+    "rep3|C-CAP|seed42": 0.06272264790220608,
+    "rep3|C-CAP|seed1": 0.06821823549097136,
+    "rep3|C-CAP|seed2": 0.06748854107979803,
+    "rep3|M0|seed42": 0.07504221347409601,
+    "rep3|M0|seed1": 0.08144503762527236,
+    "rep3|M0|seed2": 0.08196997604481587,
+    "rep3|M1|seed42": 0.0859598052631182,
+    "rep3|M1|seed1": 0.07738566733909279,
+    "rep3|M1|seed2": 0.0876408343219835,
+    "rep3|M1b|seed42": 0.08824967000981059,
+    "rep3|M1b|seed1": 0.09301702730113698,
+    "rep3|M1b|seed2": 0.09765088592388114,
+    "rep3|M2b|seed42": 0.10495488611566949,
+    "rep3|M2b|seed1": 0.10180960637713114,
+    "rep3|M2b|seed2": 0.10449469070459654,
+    "rep3|P-FAM|seed42": 0.09240186708299501,
+    "rep3|P-FAM|seed1": 0.09538032112119554,
+    "rep3|P-FAM|seed2": 0.09605720841532923,
+    "rep3|P-ID|seed42": 0.10546063489890331,
+    "rep3|P-ID|seed1": 0.1111973941599905,
+    "rep3|P-ID|seed2": 0.1067727510050432
+  },
+  "rf_consensus_absolute_macro_ap": {
+    "M1b": 0.13903309407053444,
+    "M2b": 0.13270892621507646,
+    "M0": 0.12722572104619892,
+    "M1": 0.1302199061574569,
+    "M2": 0.12808960582340306,
+    "P-ID": 0.15130678153408225,
+    "P-FAM": 0.1410814559555412,
+    "C-CAP": 0.10894192039586054
+  },
+  "rf_source": "공개 consensus metrics_full.json 2종(위 X1 source 와 동일)",
+  "label_prevalence_baseline_macro_ap": 0.048876348876348875,
+  "label_prevalence_baseline_source": "experiments/runs/v3_unblinding/results/results_full.json items.S-base.label_prevalence_baseline.macro_ap"
+}

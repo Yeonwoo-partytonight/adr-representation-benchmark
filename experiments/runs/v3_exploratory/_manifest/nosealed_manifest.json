@@ -1,0 +1,101 @@
+{
+  "_doc": "블록 CN — 봉인 미접근 단계 산출물 sha256",
+  "n_files": 19,
+  "files": [
+    {
+      "path": "experiments/runs/v3_exploratory/A5/a5_chembl_release_probe.json",
+      "bytes": 987,
+      "sha256": "9920352fc6f3c1144a8317c150631a697e264e6fb9bec461f6d98a3623ad9e3e"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/A6/a6_mapping_table_in_release.json",
+      "bytes": 6418,
+      "sha256": "4fe3b15503e04cc1e3870a1ad53f37c6f8a90fa74b21486472228af4184de568"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X1/x1_ccap_noise_unmapped_code_check.json",
+      "bytes": 1988,
+      "sha256": "9df02501a90c1388885cc82a0a06e33b0166a12dfe38cd750650d739812e2c66"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X1/x1_point_estimates.csv",
+      "bytes": 624,
+      "sha256": "197759a3199d2142704450f8ff9985ce89c06c3167d496dbc2b726d4e7119000"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X1/x1_point_estimates.json",
+      "bytes": 2833,
+      "sha256": "f81cf4a4520be35f198fa1c3e6303ba99ae18e3e6c5d65d05927f911a0c69229"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X10a/x10a_ion_channel_targets.csv",
+      "bytes": 295,
+      "sha256": "53b2620ec255a9d53a7f3aee85398fc6a4134e69a8c98d08d47aa59bc651e89a"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X10a/x10a_truncation.json",
+      "bytes": 2017,
+      "sha256": "39019fba7bc681a63ce72fb16e8e3967aafe5125d4d1a03459dee83337eb031f"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X10b/x10b_anisotropy.csv",
+      "bytes": 341,
+      "sha256": "23454203af58fd1631e1762d6bd51177bd1a695b76b820970a84b2e37796b06a"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X10b/x10b_anisotropy.json",
+      "bytes": 2463,
+      "sha256": "3f049e13737be633a37d23911dc151290ee0ba1c257f20c97726836ddabbf3de"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X3/x3_absolute_macro_ap.json",
+      "bytes": 6315,
+      "sha256": "e43d683a397ae0bcc765a383cebcafbe6599e1ccafe00682b9f125080c9bcec4"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X3/x3_absolute_macro_ap_gin_vs_rf.csv",
+      "bytes": 600,
+      "sha256": "e780a7a763809cbfcd6db153236835bdbbe046996d5a2d73a63a9e9870e4c950"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X4/x4_public_tail_counts.json",
+      "bytes": 1425,
+      "sha256": "6f05e92666cb538f404f0717115e1ea027c22c4352000cc2e68394f3f491b4ed"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X4/x4_realization_storage_check.json",
+      "bytes": 1126,
+      "sha256": "2f1a5630604c3623b1a6b0faf12da06a2f34263f130686df914ef91956c0ce38"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X5/x5_code_reading.json",
+      "bytes": 3558,
+      "sha256": "771244be96f08bdfb9d92ed5d8d377fe219be5ec84ced6b4cd0208b11bb1096f"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X7/x7_group_sizes.csv",
+      "bytes": 34236,
+      "sha256": "f8e5c16a4460fe2ee7cc6efc6d78cbf7a846cb1ae4b8ecac6b96bb401c39693a"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X7/x7_scaffold_group_descriptive.json",
+      "bytes": 1712,
+      "sha256": "903ce9db8fd483b939fb8b05939f25288c02e2c2f966fcceb8b49c1797b374a8"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X9a/_mapped_index.npy",
+      "bytes": 6904,
+      "sha256": "2e325d75dd384e0f05b417292f8bbbe186f9017d53d02e9ea977671f09657ecd"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X9a/_tertile_index.npy",
+      "bytes": 6904,
+      "sha256": "0c4a95c949721d8da2a743b68aeeadb8456d0aa5977d718d6216ca328d4caf39"
+    },
+    {
+      "path": "experiments/runs/v3_exploratory/X9a/x9a_target_count_descriptive.json",
+      "bytes": 1206,
+      "sha256": "bc34f4d7c4f52a85aea7b71a942cf0ea89224773ed32ef659def8ae2390472b0"
+    }
+  ]
+}

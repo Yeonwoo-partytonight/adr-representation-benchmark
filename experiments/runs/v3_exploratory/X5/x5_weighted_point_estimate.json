@@ -1,0 +1,18 @@
+{
+  "_doc": "블록 CN X5-② — size_weighted 재표집이 함의하는 가중을 반영한 **가중 점추정**. bootstrap 아님(결정적) · p-value 0.",
+  "definition_formula": "size_weighted 추출에서 cluster i 의 기대 등장 횟수는 G·s_i/Σs 이므로 replicate 안 cluster i 의 기대 행 수 = G·s_i²/Σs → 약물 1행의 기대 가중 w_j = s_{c(j)}. 이를 결정적으로 실현한 평가셋은 각 cluster 의 행을 s_i 번 복제한 집합이며(총 Σs_i² 행), 그 위에서 Δ_w = macroAP(M2b) − macroAP(M1b) (sap/metrics.py:macro_ap, eligible 370 고정).",
+  "n_clusters": 732,
+  "sum_sizes": 1092,
+  "sum_sizes_squared": 13972,
+  "n_expanded_rows": 13972,
+  "n_eff_clusters_kish": 85.34669338677355,
+  "weighted_macro_ap_M1b": 0.11781199704808638,
+  "weighted_macro_ap_M2b": 0.12561858987472385,
+  "weighted_delta": 0.007806592826637468,
+  "unweighted_delta_obs_recorded": -0.006324167855457974,
+  "size_weighted_percentile_ci_recorded": [
+    0.0054142690067430655,
+    0.010192215823900916
+  ],
+  "weighted_delta_inside_recorded_percentile_ci": true
+}

@@ -4,19 +4,23 @@ message: >-
   Source code is released under the MIT licence; data, predictions, results and
   records of the v3 release are released under CC BY-SA 4.0 — see LICENSE-DATA.md.
 title: >-
-  Testing mean-pooled protein language model target embeddings beyond target
-  identity in drug-label adverse drug reaction annotation: a preregistered
-  controlled representation study
+  Mean-pooled protein language model target embeddings add no predictive
+  information beyond target identity in random-forest annotation of drug-label
+  adverse drug reactions: a preregistered controlled study
 authors:
   - family-names: Bae
     given-names: Yeonwoo
     affiliation: Department of Medical IT, Inje University
     orcid: https://orcid.org/0009-0003-4032-9927
+  - family-names: Choi
+    given-names: Hoan-suk
+    affiliation: College of AI·Software Convergence, Kyungnam University
+    orcid: https://orcid.org/0009-0005-3233-7016
   - family-names: Yang
     given-names: Jinhong
     affiliation: Department of Medical IT, Inje University
     orcid: https://orcid.org/0000-0002-7756-0263
-version: v3-plosone-v1.0
+version: v3-plosone-v1.1
 doi: 10.5281/zenodo.23345216
 license:
   - MIT

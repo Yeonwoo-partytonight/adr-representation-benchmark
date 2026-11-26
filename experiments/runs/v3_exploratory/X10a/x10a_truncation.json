@@ -1,0 +1,62 @@
+{
+  "_doc": "블록 CN X10a — 주 분석 human target 1,191 기준 510 잔기 초과 비율 + 4개 심장/수송체 표적 포함 여부. 네트워크 0 · 봉인 0 · p-value 0.",
+  "source": "experiments/audits/A4_bseq_truncation_audit.csv (preconfirm_hardening.a4_bseq_truncation 산출)",
+  "n_embedded_targets_all": 1920,
+  "n_main_analysis_targets": 1191,
+  "n_seq_len_gt_510": 619,
+  "frac_seq_len_gt_510": 0.5197313182199832,
+  "n_truncated_flag": 619,
+  "truncated_flag_equals_gt510": true,
+  "truncation_rule": "ProtBERT max_length 512 → 유효 잔기 510 · 앞쪽 510 잔기만 사용 (docs/20 §1-②)",
+  "all_embedded_truncation": {
+    "n": 1920,
+    "n_truncated": 940,
+    "frac": 0.4895833333333333,
+    "docs20_reported": "940/1920 = 49.0%"
+  },
+  "gene_accessions": {
+    "KCNH2": "Q12809",
+    "SCN5A": "Q14524",
+    "CACNA1C": "Q13936",
+    "ABCB1": "P08183"
+  },
+  "gene_accession_provenance": "로컬 ChEMBL 캐시 응답의 target_component_synonyms ↔ accession 대응으로 확인 (data/processed/target_mapping/_cache/, _a5_mechanism_cache/json/). 네트워크 0.",
+  "ion_channel_table": [
+    {
+      "gene": "ABCB1",
+      "uniprot": "P08183",
+      "seq_len": 1280,
+      "truncated": 1,
+      "in_human_primary": 1,
+      "in_main_analysis": "yes",
+      "chembl_family": "Primary active transporter"
+    },
+    {
+      "gene": "CACNA1C",
+      "uniprot": "Q13936",
+      "seq_len": 2221,
+      "truncated": 1,
+      "in_human_primary": 1,
+      "in_main_analysis": "yes",
+      "chembl_family": "Voltage-gated ion channel"
+    },
+    {
+      "gene": "KCNH2",
+      "uniprot": "Q12809",
+      "seq_len": 1159,
+      "truncated": 1,
+      "in_human_primary": 1,
+      "in_main_analysis": "yes",
+      "chembl_family": "Voltage-gated ion channel"
+    },
+    {
+      "gene": "SCN5A",
+      "uniprot": "Q14524",
+      "seq_len": 2016,
+      "truncated": 1,
+      "in_human_primary": 1,
+      "in_main_analysis": "yes",
+      "chembl_family": "Voltage-gated ion channel"
+    }
+  ]
+}

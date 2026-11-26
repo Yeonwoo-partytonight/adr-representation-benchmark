@@ -1,0 +1,56 @@
+{
+  "_doc": "블록 CN — 봉인 단계 가드. mtime 불변 + access.log append 목록.",
+  "mtime_guard_targets": [
+    "paper",
+    "v3_Multimodal/src/sap",
+    "v3_Multimodal/src/unblinding_run.py"
+  ],
+  "n_files_watched": 189,
+  "mtime_drift": [],
+  "mtime_drift_count": 0,
+  "access_log_appends": [
+    {
+      "access_log": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log",
+      "line": "2026-11-10 01:45:30 KST | OPEN sealed/consensus_M0.npz | accessor=block_CN_docs153_exploratory",
+      "for_file": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M0.npz"
+    },
+    {
+      "access_log": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log",
+      "line": "2026-11-10 01:45:30 KST | OPEN sealed/consensus_M1.npz | accessor=block_CN_docs153_exploratory",
+      "for_file": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_M1.npz"
+    },
+    {
+      "access_log": "experiments/runs/v3_consensus_rep123/_sealed/access.log",
+      "line": "2026-11-10 01:45:30 KST | OPEN sealed/consensus_M1b.npz | accessor=block_CN_docs153_exploratory",
+      "for_file": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M1b.npz"
+    },
+    {
+      "access_log": "experiments/runs/v3_consensus_rep123/_sealed/access.log",
+      "line": "2026-11-10 01:45:30 KST | OPEN sealed/consensus_M2b.npz | accessor=block_CN_docs153_exploratory",
+      "for_file": "experiments/runs/v3_consensus_rep123/_sealed/consensus_M2b.npz"
+    },
+    {
+      "access_log": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log",
+      "line": "2026-11-10 01:45:30 KST | OPEN sealed/consensus_P-ID.npz | accessor=block_CN_docs153_exploratory",
+      "for_file": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-ID.npz"
+    },
+    {
+      "access_log": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log",
+      "line": "2026-11-10 01:45:30 KST | OPEN sealed/consensus_P-FAM.npz | accessor=block_CN_docs153_exploratory",
+      "for_file": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_P-FAM.npz"
+    },
+    {
+      "access_log": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/access.log",
+      "line": "2026-11-10 01:45:30 KST | OPEN sealed/consensus_C-CAP.npz | accessor=block_CN_docs153_exploratory",
+      "for_file": "experiments/runs/v3_confirm_rest_consensus_rep123/_sealed/consensus_C-CAP.npz"
+    },
+    {
+      "access_log": "experiments/runs/v3_null_MAIN/_sealed/access.log",
+      "line": "2026-11-10 01:45:32 KST | OPEN sealed/checkpoint.jsonl | accessor=block_CN_docs153_exploratory",
+      "for_file": "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl"
+    }
+  ],
+  "n_access_log_appends_this_launch": 8,
+  "power": "Now drawing from 'AC Power' | Wattage = 94W Current = 4690mA Voltage = 20000mV AdapterID = 28674 Manufacturer = Apple Inc. Family Code = 0xe000400a Serial String = <DEVICE-SERIAL> Adapter Name = 96W USB-C Power Adapter Hardware Version = 1.0 Firmware Version = 01090058",
+  "finished_at_kst": "2026-11-10 03:33:54 KST"
+}

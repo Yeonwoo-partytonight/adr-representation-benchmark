@@ -1,0 +1,29 @@
+{
+  "_doc": "블록 CN A5 — ChEMBL release · UniProt 조회일 복원(조사만). 네트워크 0.",
+  "search_order_per_instruction": [
+    "캐시된 API 응답",
+    "/status 응답",
+    "HTTP 헤더",
+    "파일 mtime",
+    "fetch_* 로그"
+  ],
+  "n_cache_files_scanned": 11506,
+  "release_version_evidence": [],
+  "release_version_verdict": "근거 없음 — 캐시된 응답·헤더에 ChEMBL release 번호나 /status 응답이 보존돼 있지 않다.",
+  "fetch_log_candidates": [
+    "scripts/fetch_pubchem_smiles.py"
+  ],
+  "retrieval_window_by_mtime": {
+    "chembl_uniprot_cache": {
+      "n_files": 11506,
+      "min": "2026-07-14 13:40:54 KST",
+      "max": "2026-08-07 11:12:53 KST"
+    },
+    "pipeline_step_outputs": {
+      "n_files": 6,
+      "min": "2026-07-14 13:47:08 KST",
+      "max": "2026-07-15 10:52:38 KST"
+    }
+  },
+  "reportable_statement": "release 번호는 복원 불가 → 원고에는 retrieval 기간(파일 mtime 범위)만 기재한다."
+}

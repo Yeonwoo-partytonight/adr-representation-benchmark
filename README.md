@@ -68,12 +68,15 @@ ladder with identity and family controls, repeated scaffold splits, confirmatory
 (OOF) prediction, a sign-flip null, and a frozen statistical analysis plan (SAP) that was
 registered before any confirmatory result was read.
 
-- Manuscript: *Testing mean-pooled protein language model target embeddings beyond target
-  identity in drug-label adverse drug reaction annotation: a preregistered controlled
-  representation study.*
+- Manuscript: *Mean-pooled protein language model target embeddings add no predictive
+  information beyond target identity in random-forest annotation of drug-label adverse drug
+  reactions: a preregistered controlled study.*
 - Preregistration (OSF): <https://osf.io/5w2uv>
 - Archived release (Zenodo): version DOI <https://doi.org/10.5281/zenodo.23345217>
   (tag `v3-plosone-v1.0`); concept DOI for all versions <https://doi.org/10.5281/zenodo.23345216>
+- Release `v3-plosone-v1.1` adds the post hoc exploratory analyses reported in Table 4 and
+  S5 Table (`experiments/runs/v3_exploratory/`, not preregistered); everything in
+  `v3-plosone-v1.0` is unchanged. Its version DOI is listed under the concept DOI.
 
 Numeric results are **not** reproduced in this README. The manuscript is the authoritative
 record of every reported value.
@@ -90,6 +93,8 @@ experiments/runs/<run>/      per-run logs, environment fingerprints, public summ
 experiments/sap/            frozen SAP manifest and hash registry
 experiments/rqint/          RQ-int calibration and second-party replication packages
 experiments/provenance/     integrity ledger, sign-disclosure matrix, unblinding records
+experiments/runs/v3_exploratory/  post hoc exploratory analyses (v1.1; not preregistered)
+experiments/audits/         target-sequence truncation audit (input to the v1.1 analyses)
 data/processed/             derived labels, structures, target mapping, ProtBERT embeddings, splits
 docs/                       research records (Korean; whitelisted file by file)
 ```
@@ -141,7 +146,7 @@ and sequence records are re-queried from PubChem, ChEMBL and UniProtKB by the sc
   `experiments/runs/v3_unblinding/results/results_full.json`) are released instead. The reason
   is size and the fact that these intermediates are fully summarised by the released
   aggregates; nothing reported in the manuscript depends on the raw realisations.
-- **Not released** — the journal supplementary tables (submitted as S1–S3 Tables), the internal
+- **Not released** — the journal supplementary tables (submitted as Supporting Information), the internal
   working-instruction documents, the pilot-ladder prediction arrays, and the second-party
   transfer archives whose plain-text trees are already released.
 
@@ -167,6 +172,8 @@ non-authors were replaced; author names were not. Replacement tokens:
 | other absolute paths under the user home directory | `<HOME>/` |
 | operating-system account name, where it survives outside a path | `<USER>` |
 | Gmail message / thread identifier | `<GMAIL-MSGID>` |
+| archive path outside the repository (v1.1) | `<OUTSIDE-REPO>` |
+| power-adapter serial number (v1.1) | `<DEVICE-SERIAL>` |
 
 `masking_map.csv` lists every masked file with the pattern applied, the number of
 replacements, and the SHA-256 digest **before and after** masking.
@@ -223,7 +230,8 @@ is marked `"ledger_origin": "public_only_no_sealed_ledger"`.
 ### Citation
 
 See `CITATION.cff`. Cite the manuscript and, where the archived snapshot matters, the Zenodo
-DOI for tag `v3-plosone-v1.0` (<https://doi.org/10.5281/zenodo.23345217>). The concept DOI
+DOI of the version used: tag `v3-plosone-v1.0` (<https://doi.org/10.5281/zenodo.23345217>) or
+`v3-plosone-v1.1` (listed under the concept DOI). The concept DOI
 <https://doi.org/10.5281/zenodo.23345216> resolves to the latest archived version.
 
 ### Licensing (v3)

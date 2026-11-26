@@ -1,0 +1,83 @@
+{
+  "_doc": "블록 CN X1 — RF consensus 성분 분해 점추정. 비등록·탐색적. p-value 0.",
+  "source": [
+    "experiments/runs/v3_unblinding/results/sealed_publish/experiments__runs__v3_consensus_rep123___sealed__metrics_full.json",
+    "experiments/runs/v3_unblinding/results/sealed_publish/experiments__runs__v3_confirm_rest_consensus_rep123___sealed__metrics_full.json"
+  ],
+  "note": "공개 metrics 의 arm 별 절대 macro AP 차이. 봉인 OOF 미접근.",
+  "arm_absolute_macro_ap": {
+    "M1b": 0.13903309407053444,
+    "M2b": 0.13270892621507646,
+    "M0": 0.12722572104619892,
+    "M1": 0.1302199061574569,
+    "M2": 0.12808960582340306,
+    "P-ID": 0.15130678153408225,
+    "P-FAM": 0.1410814559555412,
+    "C-CAP": 0.10894192039586054
+  },
+  "contrasts": {
+    "C-CAP - M1b": {
+      "delta_point": -0.0300911736746739,
+      "treat_arm": "C-CAP",
+      "base_arm": "M1b",
+      "treat_macro_ap": 0.10894192039586054,
+      "base_macro_ap": 0.13903309407053444,
+      "instruction_expected_rounded": -0.0301,
+      "within_1e-4_of_expected": true
+    },
+    "P-ID - M1b": {
+      "delta_point": 0.012273687463547817,
+      "treat_arm": "P-ID",
+      "base_arm": "M1b",
+      "treat_macro_ap": 0.15130678153408225,
+      "base_macro_ap": 0.13903309407053444,
+      "instruction_expected_rounded": 0.0123,
+      "within_1e-4_of_expected": true
+    },
+    "P-FAM - M1b": {
+      "delta_point": 0.002048361885006761,
+      "treat_arm": "P-FAM",
+      "base_arm": "M1b",
+      "treat_macro_ap": 0.1410814559555412,
+      "base_macro_ap": 0.13903309407053444,
+      "instruction_expected_rounded": 0.0021,
+      "within_1e-4_of_expected": true
+    },
+    "M1b - M0": {
+      "delta_point": 0.011807373024335516,
+      "treat_arm": "M1b",
+      "base_arm": "M0",
+      "treat_macro_ap": 0.13903309407053444,
+      "base_macro_ap": 0.12722572104619892,
+      "instruction_expected_rounded": null,
+      "within_1e-4_of_expected": null
+    },
+    "M1b - M1": {
+      "delta_point": 0.00881318791307753,
+      "treat_arm": "M1b",
+      "base_arm": "M1",
+      "treat_macro_ap": 0.13903309407053444,
+      "base_macro_ap": 0.1302199061574569,
+      "instruction_expected_rounded": 0.0088,
+      "within_1e-4_of_expected": true
+    },
+    "M1 - M0": {
+      "delta_point": 0.0029941851112579854,
+      "treat_arm": "M1",
+      "base_arm": "M0",
+      "treat_macro_ap": 0.1302199061574569,
+      "base_macro_ap": 0.12722572104619892,
+      "instruction_expected_rounded": 0.003,
+      "within_1e-4_of_expected": true
+    },
+    "M2b - M1b": {
+      "delta_point": -0.006324167855457974,
+      "treat_arm": "M2b",
+      "base_arm": "M1b",
+      "treat_macro_ap": 0.13270892621507646,
+      "base_macro_ap": 0.13903309407053444,
+      "instruction_expected_rounded": null,
+      "within_1e-4_of_expected": null
+    }
+  }
+}

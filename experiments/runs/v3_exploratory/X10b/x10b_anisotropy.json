@@ -1,0 +1,61 @@
+{
+  "_doc": "블록 CN X10b — 확증 입력 drug-level mean-pooled 1024-d 이방성. 0 벡터(unmapped) 제외. 봉인 0 · p-value 0.",
+  "definition": "쌍 cosine = L2 정규화 후 상삼각 전쌍 평균 · PCA = 열 중심화 후 SVD 특이값² 비율(np.linalg.svd) · PCA-64 = 누적 상위 64",
+  "pilot_claim": {
+    "values": {
+      "pairwise_cosine_mean": 0.913,
+      "pc1_evr": 0.486,
+      "n_dims_90pct": 18,
+      "per_dim_std": 0.021
+    },
+    "cited_in": [
+      "v3_Multimodal/src/train_ladder.py:620",
+      "docs/22_v3_ladder_report.md:68",
+      "docs/21_v3_model_ladder_prompt.md:5,20,21"
+    ],
+    "code_definition_available_locally": false,
+    "provenance_note": "train_ladder.py:620 은 보고 문장이며 계산 코드가 아니다. 값의 출처는 docs/21 머리말의 'cowork 사전 진단' 으로, 계산 스크립트가 저장소에 없다. 따라서 '같은 정의인지' 는 코드 대조가 불가하고, 본 블록은 정의를 명시해 재계산하고 수치 일치/불일치만 보고한다."
+  },
+  "results": {
+    "confirmatory_input_meanpool": {
+      "file": "data/processed/drug_target_emb_meanpool.npy",
+      "shape": [
+        1092,
+        1024
+      ],
+      "n_nonzero_rows": 847,
+      "n_zero_rows": 245,
+      "nonzero_equals_mask": true,
+      "n_vectors": 847,
+      "n_pairs": 358281,
+      "pairwise_cosine_mean": 0.9344735010223998,
+      "pairwise_cosine_median": 0.9528108977916412,
+      "pairwise_cosine_min": 0.3294161484190865,
+      "pairwise_cosine_max": 1.000000000000001,
+      "pc1_explained_variance_ratio": 0.47282272630801936,
+      "pca64_cumulative_explained_variance": 0.970461269509594,
+      "n_dims_for_90pct_variance": 18,
+      "per_dim_std_mean": 0.018180930694809222
+    },
+    "pilot_era_topk_weighted": {
+      "file": "data/processed/drug_target_emb.npy",
+      "shape": [
+        1092,
+        1024
+      ],
+      "n_nonzero_rows": 847,
+      "n_zero_rows": 245,
+      "nonzero_equals_mask": true,
+      "n_vectors": 847,
+      "n_pairs": 358281,
+      "pairwise_cosine_mean": 0.9125184898250628,
+      "pairwise_cosine_median": 0.9300821866485999,
+      "pairwise_cosine_min": 0.3294161484190865,
+      "pairwise_cosine_max": 1.0000000000000009,
+      "pc1_explained_variance_ratio": 0.4859965481556746,
+      "pca64_cumulative_explained_variance": 0.9680020360766196,
+      "n_dims_for_90pct_variance": 18,
+      "per_dim_std_mean": 0.020968795932383787
+    }
+  }
+}

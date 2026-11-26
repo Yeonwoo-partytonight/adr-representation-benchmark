@@ -1,0 +1,151 @@
+{
+  "_doc": "블록 CN A6 — 공개 배포본에 drug-target mapping 표(InChIKey→ChEMBL ID→UniProt · 기록 유형 · pChEMBL)가 있는지 확인. zip 수정 0 · 네트워크 0 · git 쓰기 0(ls-tree 판독만).",
+  "finding_zip": {
+    "verdict": "Zenodo 업로드용 zip 은 로컬에 없다 — 아래 zip 8종 중 mapping 표를 담은 것은 없다. 공개 배포는 git 태그에서 생성됐으므로(블록 BS) 확인 대상은 커밋 트리다.",
+    "search_roots": [
+      "<REPO_ROOT>",
+      "<HOME>/Desktop/Papers"
+    ],
+    "keyword_filter": [
+      "inchikey",
+      "chembl",
+      "uniprot",
+      "target",
+      "mapping",
+      "pchembl"
+    ],
+    "n_zips_found": 8,
+    "zips": [
+      {
+        "zip": "DTI_ADR_Prediction/experiments/rqint/r2_freeze/_rollback/r3_package.zip",
+        "size_bytes": 72281,
+        "sha256": "fcbcaeea6c6158de8bbe7da60fe7d5410e15db9a97f6e804a26c62cc146e9351",
+        "n_entries": 19,
+        "mapping_candidate_entries": [
+          "r3_package/sap/unseen_target.py"
+        ],
+        "n_mapping_candidates": 1
+      },
+      {
+        "zip": "DTI_ADR_Prediction/experiments/rqint/r2_freeze_2/_rollback/r3_package.zip",
+        "size_bytes": 72281,
+        "sha256": "fcbcaeea6c6158de8bbe7da60fe7d5410e15db9a97f6e804a26c62cc146e9351",
+        "n_entries": 19,
+        "mapping_candidate_entries": [
+          "r3_package/sap/unseen_target.py"
+        ],
+        "n_mapping_candidates": 1
+      },
+      {
+        "zip": "DTI_ADR_Prediction/experiments/rqint/r2_freeze_3/_rollback/r3_package.zip",
+        "size_bytes": 72281,
+        "sha256": "fcbcaeea6c6158de8bbe7da60fe7d5410e15db9a97f6e804a26c62cc146e9351",
+        "n_entries": 19,
+        "mapping_candidate_entries": [
+          "r3_package/sap/unseen_target.py"
+        ],
+        "n_mapping_candidates": 1
+      },
+      {
+        "zip": "DTI_ADR_Prediction/experiments/rqint/r3_main_package.zip",
+        "size_bytes": 73746,
+        "sha256": "4b474b3d7f098c67fa3bae1c1d8a9dadb0bce3ad7f978ae911ad450307999948",
+        "n_entries": 20,
+        "mapping_candidate_entries": [
+          "r3_main_package/v3_Multimodal/src/sap/unseen_target.py"
+        ],
+        "n_mapping_candidates": 1
+      },
+      {
+        "zip": "DTI_ADR_Prediction/experiments/rqint/r3_package.zip",
+        "size_bytes": 72280,
+        "sha256": "a94b04f53ba5e392fad4e51c82fb6be1ca2ae0aace0e69554625eca60645c4ca",
+        "n_entries": 19,
+        "mapping_candidate_entries": [
+          "r3_package/sap/unseen_target.py"
+        ],
+        "n_mapping_candidates": 1
+      },
+      {
+        "zip": "<OUTSIDE-REPO>",
+        "size_bytes": 7881,
+        "sha256": "25f487324dc5712108d3be40d4d03c93f19cbfd257ad6eec5c00abd5fd9ed77b",
+        "n_entries": 2,
+        "mapping_candidate_entries": [],
+        "n_mapping_candidates": 0
+      },
+      {
+        "zip": "<OUTSIDE-REPO>",
+        "size_bytes": 13237266,
+        "sha256": "f9b491c051c62a4f8baa644868c5bd7c6164990e4fdad53f14494524c034d5ea",
+        "n_entries": 6,
+        "mapping_candidate_entries": [],
+        "n_mapping_candidates": 0
+      },
+      {
+        "zip": "<OUTSIDE-REPO>",
+        "size_bytes": 15902,
+        "sha256": "fe2c67c09c52dbf33cafc351b8057a13218ca7ac64798dc1d077d6ee1fa0db89",
+        "n_entries": 21,
+        "mapping_candidate_entries": [],
+        "n_mapping_candidates": 0
+      }
+    ]
+  },
+  "finding_release_tree": {
+    "refs_checked": {
+      "release_commit": "8e5ff6a",
+      "tag_commit": "22813e5d"
+    },
+    "refs_provenance": "메모리 기록(v3 공개 릴리스 종결, 2026-10-14 블록 BS)",
+    "expected_mapping_files": {
+      "01_inchikey.csv": "cid, smiles, inchikey, ok — SMILES→InChIKey",
+      "02_chembl.csv": "cid, inchikey, chembl_id, matched — InChIKey→ChEMBL ID",
+      "03_targets.csv": "cid, inchikey, chembl_id, target_chembl_id, uniprot, organism, target_type, source, n_targets_per_drug — ChEMBL ID→UniProt 본표",
+      "04_sequences.csv": "uniprot, seq_len, has_seq",
+      "05_affinity.csv": "inchikey, uniprot, has_affinity, value_type — 기록 유형(assay value_type)",
+      "05b_affinity_values.csv": "chembl_id, uniprot, pchembl_median, n_records, value_types, organism — **pChEMBL**",
+      "06_targets_human.csv": "cid, chembl_id, target_chembl_id, uniprot, organism — 주 분석 집합",
+      "a5_mechanism_targets.csv": "cid, chembl_id, target_chembl_id, uniprot, action_type, mechanism_of_action, resolution_source — 기록 유형(mechanism)",
+      "audit/audit_binding_vs_mechanism.csv": "binding evidence vs mechanism 축 집계"
+    },
+    "trees": {
+      "8e5ff6a": {
+        "n_entries_under_target_mapping": 2892,
+        "mapping_files_present": {
+          "01_inchikey.csv": true,
+          "02_chembl.csv": true,
+          "03_targets.csv": true,
+          "04_sequences.csv": true,
+          "05_affinity.csv": true,
+          "05b_affinity_values.csv": true,
+          "06_targets_human.csv": true,
+          "a5_mechanism_targets.csv": true,
+          "audit/audit_binding_vs_mechanism.csv": true
+        },
+        "all_present": true
+      },
+      "22813e5d": {
+        "n_entries_under_target_mapping": 2892,
+        "mapping_files_present": {
+          "01_inchikey.csv": true,
+          "02_chembl.csv": true,
+          "03_targets.csv": true,
+          "04_sequences.csv": true,
+          "05_affinity.csv": true,
+          "05b_affinity_values.csv": true,
+          "06_targets_human.csv": true,
+          "a5_mechanism_targets.csv": true,
+          "audit/audit_binding_vs_mechanism.csv": true
+        },
+        "all_present": true
+      }
+    },
+    "verdict": "포함 — 두 커밋 트리 모두에 위 9개 파일이 전부 존재한다. 하나의 통합 표가 아니라 파이프라인 단계별 CSV 로 분할돼 있으며, InChIKey→ChEMBL→UniProt 연결은 03_targets.csv 한 파일에서 완결되고, pChEMBL 은 05b_affinity_values.csv, 기록 유형은 05_affinity.csv(value_type)·a5_mechanism_targets.csv(action_type/mechanism_of_action)에 있다."
+  },
+  "release_filelist_crosscheck": {
+    "file": "docs/131_v3_release_filelist.csv",
+    "n_rows": 3807,
+    "note": "블록 131 이 커밋한 공개 파일 목록. target_mapping CSV 들이 sha256 과 함께 등재돼 있다."
+  }
+}

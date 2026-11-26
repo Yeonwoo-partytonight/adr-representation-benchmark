@@ -1,0 +1,75 @@
+{
+  "_doc": "블록 CN X5-① — sap/bootstrap.py size_weighted 재표집의 성격 판독. 계산 0.",
+  "file": "v3_Multimodal/src/sap/bootstrap.py",
+  "cited_lines": {
+    "docstring_unit_size_weighted": {
+      "line": 20,
+      "text": "  - \"size_weighted\"    : sensitivity — cluster를 크기 비례 확률로 복원추출(jackknife=scaffold delete-one)."
+    },
+    "estimand_A6_pooled_ap": {
+      "line": 40,
+      "text": "            \"A6: cluster 복원추출→멤버 약물행 복제→pooled AP = drug-weighted macro AP.\")"
+    },
+    "delta_obs_on_all_rows": {
+      "line": 142,
+      "text": "    delta_obs, _, _ = _delta_on_rows(consensus_M1b, consensus_M2b, y, all_rows, eligible_pt)"
+    },
+    "probs_size_proportional": {
+      "line": 168,
+      "text": "            probs = sizes / sizes.sum()"
+    },
+    "probs_uniform_primary": {
+      "line": 170,
+      "text": "            probs = None  # 균등"
+    },
+    "draw_clusters": {
+      "line": 175,
+      "text": "            picks = rng.choice(idx_range, size=n_clusters, replace=True, p=probs)"
+    },
+    "rows_concatenate": {
+      "line": 176,
+      "text": "            rows = np.concatenate([rows_by_cluster[i] for i in picks])"
+    },
+    "jackknife_scaffold_delete_one": {
+      "line": 193,
+      "text": "            keep = np.concatenate([rows_by_cluster[k] for k in range(n_clusters) if k != i])"
+    }
+  },
+  "reading": "표집 확률만 바뀌는 것이 아니라 **replicate 의 기대 구성 자체**가 바뀐다. L168 에서 cluster i 가 크기 비례 확률 p_i = s_i/Σs 로 뽑히고 L175 에서 n_clusters 회 복원추출되므로 cluster i 의 기대 등장 횟수는 n_clusters·s_i/Σs, 따라서 replicate 안의 기대 행 수는 n_clusters·s_i²/Σs — 즉 **약물 1행의 기대 가중이 자기 cluster 크기 s_i 에 비례**한다. L40(A6) 이 못박은 대로 replicate 안의 집계는 drug-weighted pooled macro AP 이므로, 가중이 바뀌면 추정 대상(estimand) 자체가 '큰 cluster 과대가중 macro AP 차이'로 이동한다. primary(L170, 균등)는 cluster 균등 가중이라 이 이동이 없다.",
+  "asymmetry_observed": "delta_obs 는 L142 에서 전체 행에 대해 한 번만 계산되므로 unit 과 무관하게 동일(-0.006324167855457974). 반면 size_weighted bootstrap 분포는 평균 +0.0077993 (sd 0.0012240) 로 **관찰 점추정의 반대 부호 쪽에 놓여 있다**. 그래서 L83 의 prop = mean(boot < theta_hat) 가 0 에 붙고 L84-85 가 z0 축퇴로 BCa 를 불능 처리했다(기록된 bca_status = bca_failed_z0_degenerate).",
+  "recorded_values": {
+    "primary_scaffold_cluster": {
+      "delta_obs": -0.006324167855457974,
+      "ci_bca": {
+        "low": -0.01631979733530217,
+        "high": 0.0005022188133184531,
+        "status": "bca"
+      },
+      "ci_percentile": {
+        "low": -0.013897921438544198,
+        "high": 0.002425356321094594
+      },
+      "boot_summary": {
+        "mean": -0.00561540841245852,
+        "sd": 0.004158098205633198
+      }
+    },
+    "size_weighted": {
+      "delta_obs": -0.006324167855457974,
+      "ci_bca": {
+        "low": null,
+        "high": null,
+        "status": "bca_failed_z0_degenerate"
+      },
+      "ci_percentile": {
+        "low": 0.0054142690067430655,
+        "high": 0.010192215823900916
+      },
+      "boot_summary": {
+        "mean": 0.007799333892364386,
+        "sd": 0.0012240323849439761
+      }
+    }
+  },
+  "source": "experiments/runs/v3_unblinding/results/results_full.json items.{C1,S-unit-sw}.bootstrap"
+}

@@ -1,0 +1,61 @@
+{
+  "source": "experiments/runs/v3_null_MAIN/_sealed/checkpoint.jsonl",
+  "modes": {
+    "global": {
+      "n_realizations": 1000,
+      "null_mean": 0.12338309204438275,
+      "null_median": 0.12339327077814899,
+      "null_sd": 0.0013227834637267813,
+      "null_min": 0.11939326883864439,
+      "null_max": 0.1281351085960563,
+      "T_obs": 0.12442103231007945,
+      "n_below_obs": 786,
+      "frac_below_obs": 0.786,
+      "n_ge_obs": 214,
+      "frac_ge_obs": 0.214,
+      "enters_p_emp": true
+    },
+    "family": {
+      "n_realizations": 1000,
+      "null_mean": 0.12675374808866124,
+      "null_median": 0.12681059317617754,
+      "null_sd": 0.001304531343303527,
+      "null_min": 0.1219082274927087,
+      "null_max": 0.131301986398657,
+      "T_obs": 0.12442103231007945,
+      "n_below_obs": 35,
+      "frac_below_obs": 0.035,
+      "n_ge_obs": 965,
+      "frac_ge_obs": 0.965,
+      "enters_p_emp": true
+    },
+    "global_ALT": {
+      "n_realizations": 10,
+      "null_mean": 0.1224506879118592,
+      "null_median": 0.12216516608851247,
+      "null_sd": 0.0014293748816992602,
+      "null_min": 0.12004232401469866,
+      "null_max": 0.12499722380940836,
+      "T_obs": 0.12442103231007945,
+      "n_below_obs": 9,
+      "frac_below_obs": 0.9,
+      "n_ge_obs": 1,
+      "frac_ge_obs": 0.1,
+      "enters_p_emp": false
+    },
+    "family_ALT": {
+      "n_realizations": 100,
+      "null_mean": 0.12660561521088398,
+      "null_median": 0.12663652848786533,
+      "null_sd": 0.0012407126318415773,
+      "null_min": 0.12355012685452109,
+      "null_max": 0.12999884627586938,
+      "T_obs": 0.12442103231007945,
+      "n_below_obs": 5,
+      "frac_below_obs": 0.05,
+      "n_ge_obs": 95,
+      "frac_ge_obs": 0.95,
+      "enters_p_emp": false
+    }
+  }
+}

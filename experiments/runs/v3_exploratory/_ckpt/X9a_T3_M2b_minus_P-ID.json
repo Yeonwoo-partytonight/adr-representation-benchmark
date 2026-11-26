@@ -1,0 +1,79 @@
+{
+  "estimand": "conditional OOF evaluation — 고정된 consensus OOF 예측 위에서의 macro AP Δ. 모델 재학습 미포함(예측을 고정한 조건부 평가). A6: cluster 복원추출→멤버 약물행 복제→pooled AP = drug-weighted macro AP.",
+  "unit": "scaffold_cluster",
+  "delta_obs": -0.022613213314990083,
+  "B": 10000,
+  "seed": 6001,
+  "alpha": 0.05,
+  "n_clusters": 238,
+  "n_eff_clusters": 97.37280701754386,
+  "cluster_size": {
+    "median": 1.0,
+    "max": 23,
+    "min": 1
+  },
+  "ci_bca": {
+    "low": -0.033594463660921094,
+    "high": -0.01481828630323309,
+    "status": "bca",
+    "jackknife_unit": "scaffold delete-one"
+  },
+  "ci_percentile": {
+    "low": -0.030596881781183305,
+    "high": -0.01271807093019905,
+    "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+  },
+  "primary_ci_method": "BCa",
+  "ci_primary": {
+    "low": -0.033594463660921094,
+    "high": -0.01481828630323309,
+    "status": "estimable",
+    "bca_status": "bca"
+  },
+  "boot_summary": {
+    "mean": -0.021887771284719408,
+    "sd": 0.00465949180360103
+  },
+  "undefined_ap_exclusion": {
+    "mean_frac": 0.03345918918918919,
+    "max_frac": 0.0891891891891892,
+    "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+  },
+  "pt_diagnostics": {
+    "n_eligible_pt": 370,
+    "included_pt_per_replicate": {
+      "min": 337,
+      "median": 358.0,
+      "max": 368
+    },
+    "pt_undefined_replicate_frac": {
+      "min": 0.0,
+      "median": 0.0005,
+      "max": 1.0
+    },
+    "n_pt_ever_undefined": 214,
+    "frac_replicates_excluding_ge1_pt": 1.0
+  },
+  "bca_diagnostics": {
+    "acceleration": -0.08700504744031111,
+    "acceleration_finite": true,
+    "z0": -0.11985249072800212,
+    "adj_quantile_low": 0.00391667167427981,
+    "adj_quantile_high": 0.9287187772583684,
+    "adj_quantile_saturated_01": false
+  },
+  "fixed_intersection_sensitivity": {
+    "n_pt_always_defined": 156,
+    "macro_delta_fixed_intersection": -0.015572096590241502,
+    "note": "모든 replicate에서 정의된 PT로만 계산한 Δ — variable-domain 안정성 점검용. primary는 고정 370 eligible PT 불변."
+  },
+  "_id": "X9a_T3_M2b_minus_P-ID",
+  "_treat_arm": "M2b",
+  "_base_arm": "P-ID",
+  "_n_rows_evaluated": 298,
+  "_subset": "subset",
+  "_meta": {
+    "purpose": "X9a — target 수 3분위 3",
+    "n_rows": 298
+  }
+}

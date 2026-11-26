@@ -1,0 +1,29 @@
+{
+  "_doc": "블록 CN X4(공개 부분) — RQ4 null 하위 꼬리 비율. 비등록·탐색적. p-value 계산 0 (기록된 p_emp 는 확증 산출물의 전재이며 본 블록이 계산한 값이 아니다).",
+  "source": "experiments/runs/v3_unblinding/results/sealed_publish/experiments__runs__v3_null_MAIN___sealed__null_result.json",
+  "T_obs": 0.12442103231007945,
+  "T_definition": "observed M2b macro AP (rep1 seed201 절차와 동일: eligible=370 PT 전체)",
+  "sidedness_of_registered_test": "one-sided-upper",
+  "instruction_expected": {
+    "family": 0.035,
+    "global": 0.786
+  },
+  "tails": {
+    "global": {
+      "B": 1000,
+      "n_ge_obs": 214,
+      "frac_ge_obs": 0.214,
+      "frac_below_obs": 0.786,
+      "n_below_obs": 786,
+      "note": "frac_below_obs = 1 - n_ge_obs/B. 실현값 평균·중앙값은 봉인 checkpoint.jsonl 필요 → sealed.py 에서 산출. D-3 에 따라 확증 p_emp 는 본 산출물에 전재하지 않는다(필요 시 공개 null_result.json 참조)."
+    },
+    "family": {
+      "B": 1000,
+      "n_ge_obs": 965,
+      "frac_ge_obs": 0.965,
+      "frac_below_obs": 0.035,
+      "n_below_obs": 35,
+      "note": "frac_below_obs = 1 - n_ge_obs/B. 실현값 평균·중앙값은 봉인 checkpoint.jsonl 필요 → sealed.py 에서 산출. D-3 에 따라 확증 p_emp 는 본 산출물에 전재하지 않는다(필요 시 공개 null_result.json 참조)."
+    }
+  }
+}

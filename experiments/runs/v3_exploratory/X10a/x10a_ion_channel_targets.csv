@@ -1,0 +1,5 @@
+gene,uniprot,seq_len,truncated,in_human_primary,in_main_analysis,chembl_family
+ABCB1,P08183,1280,1,1,yes,Primary active transporter
+CACNA1C,Q13936,2221,1,1,yes,Voltage-gated ion channel
+KCNH2,Q12809,1159,1,1,yes,Voltage-gated ion channel
+SCN5A,Q14524,2016,1,1,yes,Voltage-gated ion channel

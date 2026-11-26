@@ -1,0 +1,49 @@
+{
+  "_doc": "블록 CN X1 추가 — C-CAP 노이즈 블록이 unmapped drug(245)에서 0 인지 코드 근거로 확인. 계산 재실행 0 · 봉인 0.",
+  "method": "동결 소스 정적 판독(실행 0) — 파일·행 번호·원문 인용",
+  "file": "v3_Multimodal/src/ladder_confirmatory.py",
+  "class_CcapBlock": {
+    "first_line": 263,
+    "last_line": 314
+  },
+  "verdict": "확인 — unmapped 행은 transform() 반환 직전에 명시적으로 0.0 으로 재설정된다. 따라서 C-CAP 의 합성 노이즈는 245 unmapped drug 에서 정확히 0 이고, B_seq 와 동일한 mask sparsity 를 갖는다.",
+  "cited_lines": {
+    "docstring_same_missing_pattern": [
+      {
+        "line": 266,
+        "text": "    B_seq가 비매핑 약물을 0으로 두므로 C-CAP도 비매핑은 0(같은 결측패턴) → B_seq와의 유일한 차이는"
+      },
+      {
+        "line": 267,
+        "text": "    '매핑 약물의 값이 실제 서열임베딩 vs 표적무관 노이즈'뿐(공정 용량통제)."
+      }
+    ],
+    "docstring_construction_refit_zero": {
+      "line": 270,
+      "text": "         → x = mean + z·Lᵀ, 이후 비매핑 행 재-0. fit은 B_seq fit 후 그 매핑 train 출력의 2차 통계만(train-only).\"\"\""
+    },
+    "transform_signature": {
+      "line": 300,
+      "text": "    def transform(self, idx):"
+    },
+    "unmapped_definition": [
+      {
+        "line": 304,
+        "text": "        unmapped = ~self.seq.mask[idx]                                 # ★ B_seq와 동일 mask sparsity"
+      }
+    ],
+    "zero_assignment": [
+      {
+        "line": 305,
+        "text": "        out[unmapped] = 0.0"
+      }
+    ]
+  },
+  "mask_file_crosscheck": {
+    "file": "data/processed/drug_target_mask_meanpool.npy",
+    "n_rows": 1092,
+    "n_mapped_mask_true": 847,
+    "n_unmapped_mask_false": 245,
+    "note": "transform() 의 unmapped = ~self.seq.mask → 이 파일의 False 행 245개가 0 으로 재설정되는 대상."
+  }
+}

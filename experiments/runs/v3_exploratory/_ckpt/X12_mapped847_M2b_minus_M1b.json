@@ -1,0 +1,79 @@
+{
+  "estimand": "conditional OOF evaluation — 고정된 consensus OOF 예측 위에서의 macro AP Δ. 모델 재학습 미포함(예측을 고정한 조건부 평가). A6: cluster 복원추출→멤버 약물행 복제→pooled AP = drug-weighted macro AP.",
+  "unit": "scaffold_cluster",
+  "delta_obs": -0.003943195854496928,
+  "B": 10000,
+  "seed": 6001,
+  "alpha": 0.05,
+  "n_clusters": 589,
+  "n_eff_clusters": 100.18279569892474,
+  "cluster_size": {
+    "median": 1.0,
+    "max": 65,
+    "min": 1
+  },
+  "ci_bca": {
+    "low": -0.013932950419289348,
+    "high": 0.0032447516693327847,
+    "status": "bca",
+    "jackknife_unit": "scaffold delete-one"
+  },
+  "ci_percentile": {
+    "low": -0.011549641343484048,
+    "high": 0.005369805179995653,
+    "note": "sensitivity 보고용 — 성공판정에 사용하지 않음(A1)"
+  },
+  "primary_ci_method": "BCa",
+  "ci_primary": {
+    "low": -0.013932950419289348,
+    "high": 0.0032447516693327847,
+    "status": "estimable",
+    "bca_status": "bca"
+  },
+  "boot_summary": {
+    "mean": -0.0030309868723616793,
+    "sd": 0.004327262453648932
+  },
+  "undefined_ap_exclusion": {
+    "mean_frac": 0.00029405405405405407,
+    "max_frac": 0.013513513513513514,
+    "rule": "replicate test-positive 0 PT는 그 replicate macro에서 제외(분모 변동 허용)"
+  },
+  "pt_diagnostics": {
+    "n_eligible_pt": 370,
+    "included_pt_per_replicate": {
+      "min": 365,
+      "median": 370.0,
+      "max": 370
+    },
+    "pt_undefined_replicate_frac": {
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.048
+    },
+    "n_pt_ever_undefined": 76,
+    "frac_replicates_excluding_ge1_pt": 0.0997
+  },
+  "bca_diagnostics": {
+    "acceleration": -0.024602745760534825,
+    "acceleration_finite": true,
+    "z0": -0.21572771038644759,
+    "adj_quantile_low": 0.005960635470005527,
+    "adj_quantile_high": 0.9274056472817847,
+    "adj_quantile_saturated_01": false
+  },
+  "fixed_intersection_sensitivity": {
+    "n_pt_always_defined": 294,
+    "macro_delta_fixed_intersection": -0.004231546735107977,
+    "note": "모든 replicate에서 정의된 PT로만 계산한 Δ — variable-domain 안정성 점검용. primary는 고정 370 eligible PT 불변."
+  },
+  "_id": "X12_mapped847_M2b_minus_M1b",
+  "_treat_arm": "M2b",
+  "_base_arm": "M1b",
+  "_n_rows_evaluated": 847,
+  "_subset": "subset",
+  "_meta": {
+    "purpose": "X12 — mapped 847 subset",
+    "n_rows": 847
+  }
+}
